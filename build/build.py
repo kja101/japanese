@@ -280,7 +280,7 @@ for t in topics:
     t["sents"] = []
 tix = {t["id"]: t for t in topics}
 for sb_topic, sents in SB.items():
-    tix[sit["sb_map"][sb_topic]]["sents"] += [{k: s[k] for k in ("kj", "kn", "rj", "en", "why")} for s in sents]
+    tix[sit["sb_map"][sb_topic]]["sents"] += [{k: s[k] for k in ("kj", "kn", "rj", "en", "why", "roles")} for s in sents]
 for topic, sents in EXTRA.items():
     tix[topic]["sents"] += [{"n": s["n"], "en": s["en"], "why": s["why"]} for s in sents]
 K = {r["k"]: r for t in topics for g in t["groups"] for r in g["rows"]}

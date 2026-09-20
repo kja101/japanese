@@ -179,7 +179,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 
 </style>
 </head>
-<body>
+<body class="jb-page">
 <header class="top">
   <h1>場面の漢字</h1>
   <p class="sub">The N4 kanji sorted by where you'll actually meet them: the restaurant, the bar, the pharmacy, the station, the office. Each situation has example sentences, then its kanji as cards with their parts, a story, where you'll see them, and every word that uses them from N5 up to N2.</p>
@@ -189,11 +189,12 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
     <input class="search" id="search" type="search" placeholder="Search kanji, words, kana, rōmaji or English" aria-label="Search">
     <div class="segs"><div class="seg" role="group" aria-label="Vocabulary level, including easier levels"><span class="seglab">Words</span>
       <button data-vtier="5" aria-pressed="false">N5</button><button data-vtier="4" aria-pressed="true">N4</button><button data-vtier="3" aria-pressed="false">N3</button><button data-vtier="2" aria-pressed="false">N2</button></div>
-    <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
+    <div class="seg" role="group" aria-label="Grammar blocks"><button data-jb="on" aria-pressed="true">Grammar blocks</button><button data-jb="off" aria-pressed="false">Off</button></div><div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
     <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="meaning" aria-pressed="false">Hide meaning</button><button data-hide="readings" aria-pressed="false">Hide readings</button></div>
     <div class="seg" role="group" aria-label="Reading colours"><button data-rdcol="on" aria-pressed="true">On/kun colours</button><button data-rdcol="off" aria-pressed="false">Off</button></div></div>
   </div>
   <div class="rd-legend"><span><span class="rd rd-on"><span class="rb sw">音</span></span>On<span class="rdl"> reading, from Chinese</span></span><span><span class="rd rd-kun"><span class="rb sw">訓</span></span>Kun<span class="rdl"> reading, native Japanese</span></span><span><span class="rd rd-sp"><span class="rb sw">特</span></span>Special<span class="rdl"> reading: learn the whole word</span></span></div>
+  <div id="kb"></div>
   <nav class="topics" id="nav"></nav>
 </div>
 <main id="main"></main>
@@ -229,14 +230,13 @@ function chips(w,r,self){
 // ---------- sentences ----------
 function sentHtml(s,i){ if(i>=6) s={...s,extra:true};
   let jp, rj;
-  if(s.kj){ jp=s.kj.map((k,i)=>/[\u4e00-\u9fff]/.test(k)?linkify(rdWord(k,s.kn[i],"ruby"),"",""):esc(k)).join(" "); rj=s.rj.join(" "); }
-  else { const toks=s.n.split(" ");
-    jp=toks.map(t=>{ let o="",last=0; t.replace(NOTE,(m,b,r,off)=>{ o+=esc(t.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return linkify(o+esc(t.slice(last)),"",""); }).join(" ");
-    rj=toks.map(t=>romajiToken(t.replace(NOTE,"$2"))).join(" ").replace(/ ,/g,","); }
+  const lk=h=>linkify(h,"","");
+  if(s.kj){ jp=jpBlocksChunks(s.kj,s.kn,s.roles,lk); rj=s.rj.map((r,i)=>s.roles&&s.roles[i]?jpWrap(s.roles[i],esc(r)):esc(r)).join(" "); }
+  else { jp=jpBlocksLine(s.n,lk); rj=jpBlocksRom(s.n); }
   const ks=[...(s.kj?s.kj.join(""):s.n)].filter(c=>/[\u4e00-\u9fff]/.test(c));
   const lv=Math.min(5,...ks.map(c=>LV[c]||1));
   const sayText=s.kj?s.kj.join(""):s.n.replace(NOTE,"$1").replace(/ /g,"");
-  return `<li${s.extra?' class="extra"':""}><div class="sj">${jp}${sayBtn(sayText)}${lv<4?`<span class="lvb">${lv<2?"N1 kanji":"N"+lv+" kanji"}</span>`:""}</div><div class="sr">${esc(rj)}</div><div class="se">${esc(s.en)}</div>${s.why?`<div class="sn">${esc(s.why)}</div>`:""}</li>`;
+  return `<li${s.extra?' class="extra"':""}><div class="sj">${jp}${sayBtn(sayText)}${lv<4?`<span class="lvb">${lv<2?"N1 kanji":"N"+lv+" kanji"}</span>`:""}</div><div class="sr">${rj}</div><div class="se">${esc(s.en)}</div>${s.why?`<div class="sn">${esc(s.why)}</div>`:""}</li>`;
 }
 // ---------- cards ----------
 const TAGNAME={tK:"kanji",tO:"kanji + kana",tC:"compounds only",tX:"rare",tR:"radical"};
@@ -341,6 +341,11 @@ document.addEventListener("click",e=>{ const j=e.target.closest("[data-jump]"); 
 main.addEventListener("click",e=>{ const m=e.target.closest("[data-more]"); if(m){ const d=m.closest("details"); const on=d.classList.toggle("all"); m.textContent=on?"Show fewer":`Show all ${d.querySelectorAll(".sl li").length} sentences`; return; } const c=e.target.closest(".kc"); if(c&&state.hide!=="none") c.classList.add("revealed"); });
 document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a[href^='#']"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); scrollToEl(el); });
 render();
+function applyBlocks(){ const on=blocksOn(); document.body.classList.toggle("jb-on",on); document.querySelectorAll("[data-jb]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.jb==="on")===on)); }
+document.getElementById("kb").innerHTML=jpKeybar();
+document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.dataset.jb==="on"); applyBlocks(); });
+applyBlocks(); initParticlePopup();
+
 (function(){ let v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
   const set=x=>{ v=x; document.body.classList.toggle("no-rdcol",v==="off");
     document.querySelectorAll("[data-rdcol]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rdcol===v));

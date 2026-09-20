@@ -98,20 +98,22 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 <link rel="apple-touch-icon" href="../assets/icons/icon-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
-<body>
+<body class="jb-page">
 <header class="top">
   <h1>文法</h1>
-  <p class="sub">The grammar patterns from N5 to N2 you need to build your own sentences. The level switch includes every easier level, so N3 shows N5, N4 and N3: what each one means, how to form it, and real examples you can listen to. For how the parts of a sentence fit together, see the <a href="../words/sentence-builder.html">sentence builder</a>; for ready-made phrases, the <a href="../words/phrasebook.html">phrasebook</a>.</p>
+  <p class="sub">The grammar patterns from N5 to N2 you need to build your own sentences. The examples are coloured by grammar block, as in the sentence builder, so you can see which part of the Japanese does which job; tap a grey particle to see what it does. The level switch includes every easier level, so N3 shows N5, N4 and N3: what each one means, how to form it, and real examples you can listen to. For how the parts of a sentence fit together, see the <a href="../words/sentence-builder.html">sentence builder</a>; for ready-made phrases, the <a href="../words/phrasebook.html">phrasebook</a>.</p>
 </header>
 <div class="controls">
   <div class="controls-inner">
     <input class="search" id="search" type="search" placeholder="Search patterns, Japanese, rōmaji or English" aria-label="Search">
     <div class="segs">
       <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Level</span><button data-tier="5" aria-pressed="false">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3" aria-pressed="false">N3</button><button data-tier="2" aria-pressed="false">N2</button></div>
+      <div class="seg" role="group" aria-label="Grammar blocks"><button data-jb="on" aria-pressed="true">Grammar blocks</button><button data-jb="off" aria-pressed="false">Off</button></div>
       <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
       <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="en" aria-pressed="false">Hide English</button><button data-hide="kana" aria-pressed="false">Hide Japanese</button></div>
     </div>
   </div>
+  <div id="kb"></div>
   <nav class="topics" id="nav"></nav>
 </div>
 <main id="main"></main>
@@ -138,7 +140,7 @@ function render(){
       <div class="gh"><span class="gp">${ruby(g.pat)}</span><span class="gm">${esc(g.mean)}</span><span class="lvb">N${g.l}</span></div>
       <p class="gf"><b>HOW TO FORM IT</b><span class="j">${ruby(g.form)}</span></p>
       ${g.note?`<p class="gn">${ruby(g.note)}</p>`:""}
-      <ul class="gx">${g.ex.map((e,i)=>`<li data-id="${g.id}-${i}"><span class="j">${e.n.split(" ").map(ruby).join(" ")}</span>${sayBtn(plainOf(e.n).replace(/ /g,""))}<span class="r">${esc(romLine(e.n))}</span><span class="t">${esc(e.en)}</span></li>`).join("")}</ul></article>`).join("")}</section>`; });
+      <ul class="gx">${g.ex.map((e,i)=>`<li data-id="${g.id}-${i}"><span class="j">${jpBlocksLine(e.n,linkK)}</span>${sayBtn(plainOf(e.n).replace(/ /g,""))}<span class="r">${jpBlocksRom(e.n)}</span><span class="t">${esc(e.en)}</span></li>`).join("")}</ul></article>`).join("")}</section>`; });
   document.getElementById("main").innerHTML=h+`<div class="noresult" id="noresult">Nothing matches that.</div>`;
   document.getElementById("nav").innerHTML=groups.filter(gr=>document.getElementById("g-"+gr.replace(/\W+/g,"-"))).map(gr=>`<a href="#g-${gr.replace(/\W+/g,"-")}">${esc(gr)}</a>`).join("");
   apply(); doSearch();
@@ -162,6 +164,10 @@ document.getElementById("main").addEventListener("click",e=>{ const li=e.target.
 document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
 try{ if(localStorage.getItem("rdcol")==="off") document.body.classList.add("no-rdcol"); }catch(e){}
 render();
+function applyBlocks(){ const on=blocksOn(); document.body.classList.toggle("jb-on",on); document.querySelectorAll("[data-jb]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.jb==="on")===on)); }
+document.getElementById("kb").innerHTML=jpKeybar();
+document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.dataset.jb==="on"); applyBlocks(); });
+applyBlocks(); initParticlePopup();
 initReturnLinks("gr-return",".gx li","data-id","iflash");
 </script>
 </body>

@@ -210,9 +210,11 @@ body.h-romaji .fx-r{display:none}
   });
  });
  var cb=document.getElementById('colourbtn');
+ if(typeof blocksOn==="function"&&!blocksOn()){ b.classList.add('no-colour'); cb.setAttribute('aria-pressed','false'); }
  cb.addEventListener('click',function(){
   var on=!b.classList.toggle('no-colour');
   cb.setAttribute('aria-pressed',on?'true':'false');
+  if(typeof setBlocks==="function") setBlocks(on);   // shared with the other sentence pages
  });
  var cards=[].slice.call(document.querySelectorAll('.card:not(.key)'));
  q.addEventListener('input',function(){
@@ -268,6 +270,7 @@ function renderParts(parts,mode,role){
   });
 })();
 initParticlePopup();
+if(!blocksOn()){ document.body.classList.add("no-colour"); const cb=document.getElementById("colourbtn"); if(cb) cb.setAttribute("aria-pressed","false"); }
 linkKanaWords(document.querySelectorAll(".lay-kanji .kpl, .lay-kanji .kfu"),__KANA_WORDS__,"../kana/","sb");
 initReturnLinks("sb-return",".sent","data-idx","sflash");
 

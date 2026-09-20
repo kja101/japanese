@@ -191,40 +191,7 @@ const sbParts=jpChunkParts;
 const KSET=new Set(__KANJI_SET__);
 const KANA_WORDS=__KANA_WORDS__;
 const linkKana=root=>{ if(state.script!=="kana") linkKanaWords(root.querySelectorAll(".jpl .hx"),KANA_WORDS,"../kana/","pb"); };
-const PARTS=new Set(["は","が","を","に","で","へ","と","も","の","か","から","まで","や","ね","よ","には","では","にも","でも"]);
-const TIMEW=/[時日週月年今朝夜晩曜昼]|いつ|何時|あした|きょう/;
-const PLACEW=/^(ここ|そこ|あそこ|どこ|この 近く|近く)$|[駅店家館院局港場所屋社]/;
-const QWORD={"どこ":"P","どちら":"P","いつ":"T","何時{なんじ}":"T","何{なに}":"O","何{なん}":"O","誰{だれ}":"W","どう":"H","どうして":"H","いくら":"O","どれ":"O","どの":"O","いくつ":"O","何人{なんにん}":"O","何名様{なんめいさま}":"O","何番線{なんばんせん}":"O","何分{なんぷん}":"T","何曜日{なんようび}":"T","何日{なんにち}":"T"};
-const ADV=new Set(["もう","少{すこ}し","ちょっと","ゆっくり","まっすぐ","もっと","とても","あまり","一緒{いっしょ}に","また","すぐ","まだ"]);
-function rolesFor(toks){
-  // returns [{t, r, p}] ; r role letter, p = particle flag
-  const out=[]; let buf=[];
-  const flush=(role)=>{ buf.forEach(t=>out.push({t,r:role})); buf=[]; };
-  toks.forEach((t,i)=>{
-    const bare=t.replace(/[、。]$/,"");
-    if(PARTS.has(bare)&&buf.length){
-      const txt=buf.join(" ");
-      let r="V";
-      if(bare==="も"&&/[てで]$/.test(kanaOf(buf[buf.length-1]))) r="V";
-      else if(["は","が","も"].includes(bare)) r="W";
-      else if(bare==="を") r="O";
-      else if(bare==="に"||bare==="には"||bare==="にも") r=TIMEW.test(txt)?"T":"P";
-      else if(bare==="で"||bare==="では"||bare==="でも") r=PLACEW.test(txt)?"P":"H";
-      else if(bare==="へ"||bare==="まで") r="P";
-      else if(bare==="から") r=TIMEW.test(txt)?"T":"P";
-      else if(bare==="と") r="H";
-      else if(bare==="の"){ buf.push(t); out.push(...[]); return; }
-      else if(bare==="か"){ flush("V"); out.push({t,r:"Q",p:true}); return; }
-      flush(r); out.push({t,r,p:true}); return;
-    }
-    if(bare==="か"&&i===toks.length-1){ flush("V"); out.push({t,r:"Q",p:true}); return; }
-    buf.push(t);
-  });
-  // tail: predicate, with question words and adverbs picked out
-  buf.forEach(t=>{ const b=t.replace(/[、。]$/,""); out.push({t,r:b==="___"?"O":/^[一二三四五六七八九十何]\{[^}]*\}つ$|^[一二三四五六七八九十]\{[^}]*\}(人|枚|本|杯)/.test(b)?"O":QWORD[b]||(ADV.has(b)?"H":"V")}); });
-  // mark の inside chunks as particle (keep chunk role)
-  return out.map(x=>x.t==="の"?{...x,p:true}:x);
-}
+const rolesFor=jpRolesFor;
 const kl=c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=pb#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c;
 const linkK=html=>html.replace(/[\u4e00-\u9fff]/g,kl);
 const pbtn=(t,r)=>`<button type="button" class="pt" data-p="${esc(t)}" data-role="${r||""}">${esc(t)}</button>`;
@@ -250,6 +217,7 @@ function tokenRom(ph,word){ return rolesFor(ph.split(" ")).map(x=>wrapR(x.r,tokR
 // ---------- state ----------
 let state={view:"all",script:"ruby",romaji:"on",blocks:"on",hide:"none"};
 try{Object.assign(state,JSON.parse(localStorage.getItem("phrasebook")||"{}"));}catch(e){}
+state.blocks=blocksOn()?"on":"off";   // shared with the other sentence pages
 let STARS=new Set(); try{STARS=new Set(JSON.parse(localStorage.getItem("phrasebook-stars")||"[]"));}catch(e){}
 const save=()=>{try{localStorage.setItem("phrasebook",JSON.stringify(state));localStorage.setItem("phrasebook-stars",JSON.stringify([...STARS]));}catch(e){}};
 const picked={};
@@ -331,7 +299,7 @@ function doSearch(){
   document.querySelectorAll("section.ch").forEach(s=>s.style.display=!q||[...s.querySelectorAll(".it")].some(x=>x.style.display!=="none")?"":"none");
 }
 document.getElementById("search").addEventListener("input",doSearch);
-["view","script","blocks"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); const y=window.scrollY; render(); if(k!=="view") window.scrollTo(0,y); else window.scrollTo(0,0); }));
+["view","script","blocks"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); if(k==="blocks") setBlocks(state.blocks==="on"); const y=window.scrollY; render(); if(k!=="view") window.scrollTo(0,y); else window.scrollTo(0,0); }));
 ["romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); apply(); }));
 main.addEventListener("click",e=>{
   const ms=e.target.closest("[data-moresents]"); if(ms){ const blk=ms.closest(".blk"); const on=blk.classList.toggle("all"); ms.textContent=on?"Show fewer":`Show all ${blk.querySelectorAll(".it").length} sentences`; return; }

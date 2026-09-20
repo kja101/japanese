@@ -256,6 +256,96 @@ function linkKanaWords(roots,words,base,from){
 }
 (function(){ const st=document.createElement("style"); st.textContent=`a.kw{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}a.kw:hover{background:rgba(127,127,127,.15);border-radius:2px}`; document.head.appendChild(st); })();
 
+// ---------- grammar blocks: colour each part of a sentence by its job ----------
+// One setting for every page (the phrasebook, sentence builder, grammar and situation pages).
+const JP_NOTE=/([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}/g;
+const jpKanaOf=s=>s.replace(JP_NOTE,"$2"), jpPlainOf=s=>s.replace(JP_NOTE,"$1");
+function blocksOn(){ try{ return localStorage.getItem("blocks")!=="off"; }catch(e){ return true; } }
+function setBlocks(on){ try{ localStorage.setItem("blocks",on?"on":"off"); }catch(e){} }
+const JP_ROLE={W:"--rW",T:"--rT",P:"--rP",H:"--rH",O:"--rO",V:"--rV",Q:"--rQ"};
+const JP_PARTS=new Set(["は","が","を","に","で","へ","と","も","の","か","から","まで","や","ね","よ","には","では","にも","でも"]);
+const JP_TIMEW=/[時日週月年今朝夜晩曜昼]|いつ|何時|あした|きょう/;
+const JP_PLACEW=/^(ここ|そこ|あそこ|どこ|この 近く|近く)$|[駅店家館院局港場所屋社]/;
+const JP_QWORD={"どこ":"P","どちら":"P","いつ":"T","何時{なんじ}":"T","何{なに}":"O","何{なん}":"O","誰{だれ}":"W","どう":"H","どうして":"H","いくら":"O","どれ":"O","どの":"O","いくつ":"O","何人{なんにん}":"O","何名様{なんめいさま}":"O","何番線{なんばんせん}":"O","何分{なんぷん}":"T","何曜日{なんようび}":"T","何日{なんにち}":"T"};
+const JP_ADV=new Set(["もう","少{すこ}し","ちょっと","ゆっくり","まっすぐ","もっと","とても","あまり","一緒{いっしょ}に","また","すぐ","まだ"]);
+function jpRolesFor(toks){
+  // returns [{t, r, p}] ; r role letter, p = particle flag
+  const out=[]; let buf=[];
+  const flush=(role)=>{ buf.forEach(t=>out.push({t,r:role})); buf=[]; };
+  toks.forEach((t,i)=>{
+    const bare=t.replace(/[、。]$/,"");
+    if(JP_PARTS.has(bare)&&buf.length){
+      const txt=buf.join(" ");
+      let r="V";
+      if(bare==="も"&&/[てで]$/.test(jpKanaOf(buf[buf.length-1]))) r="V";
+      else if(["は","が","も"].includes(bare)) r="W";
+      else if(bare==="を") r="O";
+      else if(bare==="に"||bare==="には"||bare==="にも") r=JP_TIMEW.test(txt)?"T":"P";
+      else if(bare==="で"||bare==="では"||bare==="でも") r=JP_PLACEW.test(txt)?"P":"H";
+      else if(bare==="へ"||bare==="まで") r="P";
+      else if(bare==="から") r=JP_TIMEW.test(txt)?"T":"P";
+      else if(bare==="と") r="H";
+      else if(bare==="の"){ buf.push(t); out.push(...[]); return; }
+      else if(bare==="か"){ flush("V"); out.push({t,r:"Q",p:true}); return; }
+      flush(r); out.push({t,r,p:true}); return;
+    }
+    if(bare==="か"&&i===toks.length-1){ flush("V"); out.push({t,r:"Q",p:true}); return; }
+    buf.push(t);
+  });
+  // tail: predicate, with question words and adverbs picked out
+  buf.forEach(t=>{ const b=t.replace(/[、。]$/,""); out.push({t,r:b==="___"?"O":/^[一二三四五六七八九十何]\{[^}]*\}つ$|^[一二三四五六七八九十]\{[^}]*\}(人|枚|本|杯)/.test(b)?"O":JP_QWORD[b]||(JP_ADV.has(b)?"H":"V")}); });
+  // mark の inside chunks as particle (keep chunk role)
+  return out.map(x=>x.t==="の"?{...x,p:true}:x);
+}
+
+const jpPbtn=(t,r,cls="")=>`<button type="button" class="pt${cls}" data-p="${jpEsc(t)}" data-role="${r||""}">${jpEsc(t)}</button>`;
+const jpWrap=(r,inner)=>`<span class="ck" data-r="${r}" style="--c:var(${JP_ROLE[r]})">${inner}</span>`;
+// a sentence written as space-separated tokens with 漢字{かんじ} readings
+function jpBlocksLine(n,link){
+  const L=link||(h=>h);
+  const ruby=t=>{ let o="",last=0; t.replace(JP_NOTE,(m,b,r,off)=>{ o+=jpEsc(t.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return L(o+jpEsc(t.slice(last))); };
+  return jpRolesFor(n.split(" ")).map(x=>{
+    if(x.p) return jpWrap(x.r,jpPbtn(x.t.replace(/[、。]$/,""),x.r)+(/[、。]$/.test(x.t)?x.t.slice(-1):""));
+    const m=x.r==="V"&&x.t.length>2&&x.t.match(/^(.*[すんた])か$/);
+    if(m) return jpWrap("V",ruby(m[1]))+jpWrap("Q",jpPbtn("か","Q"));
+    return jpWrap(x.r,ruby(x.t)); }).join(" ");
+}
+function jpBlocksRom(n){
+  return jpRolesFor(n.split(" ")).map(x=>{ const r=jpRomajiToken(jpKanaOf(x.t));
+    if(x.p) return jpWrap(x.r,jpPbtn(x.t.replace(/[、。]$/,""),x.r," pr").replace(/>[^<]*<\/button>/,">"+jpEsc(r.replace(/,\s*$/,""))+"</button>")+(/、$/.test(x.t)?",":""));
+    const m=x.r==="V"&&r.match(/^(.*) ka$/); if(m) return jpWrap("V",jpEsc(m[1]))+" "+jpWrap("Q",'<button type="button" class="pt pr" data-p="か" data-role="Q">ka</button>');
+    return jpWrap(x.r,jpEsc(r)); }).join(" ").replace(/ ,/g,",");
+}
+// a sentence-builder sentence: chunks with their roles
+function jpBlocksChunks(kj,kn,roles,link){
+  const L=link||(h=>h);
+  return kj.map((k,i)=>{ const r=roles&&roles[i]; const parts=jpChunkParts(k,kn[i],r); let vf=false;
+    const inner=parts.map(p=>{ if(p.p) return jpPbtn(p.t,r); if(p.r!=null){ const x=rdRuby(p.t,p.r,vf); vf=true; return L(x); } return jpEsc(p.t); }).join("");
+    return r?jpWrap(r,inner):`<span class="ck">${inner}</span>`; }).join(" ");
+}
+function jpKeybar(){ return `<div class="keybar" aria-label="Block colours"><span style="--c:var(--rW)">WHO / TOPIC<small>は・が</small></span><span style="--c:var(--rT)">TIME<small>に</small></span><span style="--c:var(--rP)">PLACE<small>で・に・へ・から・まで</small></span><span style="--c:var(--rH)">HOW / WITH<small>と・で</small></span><span style="--c:var(--rO)">WHAT<small>を</small></span><span style="--c:var(--rV)">VERB / です</span><span style="--c:var(--rQ)">QUESTION<small>か</small></span><span class="kp">particle<small>tap one</small></span></div>`; }
+(function(){ const st=document.createElement("style"); st.textContent=`
+:root{--rW:#e8384f;--rT:#12a5c9;--rP:#22a36b;--rH:#d99a00;--rO:#ef7020;--rV:#7b3fa0;--rQ:#dd3b8c}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rW:#ff6b7d;--rT:#4fc6e6;--rP:#4fcf92;--rH:#f0c040;--rO:#ff9a52;--rV:#b184d6;--rQ:#f06db0}}
+body.jb-on .ck[data-r]{color:var(--c)}
+body.jb-on .keybar{display:flex}
+.jb-page .keybar{display:none;gap:5px;overflow-x:auto;scrollbar-width:none;padding:0 1.25rem .5rem;margin:0 auto}
+.jb-page .keybar span{flex:1 0 auto;background:var(--c);color:#fff;border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700;text-align:center;white-space:nowrap;font-family:system-ui,sans-serif}
+.jb-page .keybar span small{font-weight:500;opacity:.9;margin-left:4px}
+.jb-page .keybar span.kp{background:rgba(127,127,127,.2);color:inherit}
+.jb-page .pt{font:inherit;font-weight:700;color:inherit;background:rgba(127,127,127,.18);border:0;border-radius:4px;padding:0 .18em;margin:0 .04em;cursor:pointer;line-height:inherit}
+.jb-page .pt.pr{font-style:normal}
+.jb-page .ppop{position:absolute;z-index:60;background:var(--sheet,#fff);color:var(--ink,#111);border:1px solid rgba(127,127,127,.35);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.2);padding:10px 12px;font-size:.92rem;line-height:1.5}
+.jb-page .ppop[hidden]{display:none}
+.jb-page .pp-h{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.jb-page .pp-p{font-size:1.5rem;font-weight:700}
+.jb-page .pp-r{font-style:italic;opacity:.7}
+.jb-page .pp-n{font-weight:600}
+.jb-page .pp-x{margin-left:auto;border:0;background:none;font-size:1.3rem;line-height:1;cursor:pointer;color:inherit;opacity:.6}
+.jb-page .ppop p{margin:4px 0}
+.jb-page .pp-c{background:rgba(127,127,127,.12);border-radius:4px;padding:4px 8px}
+.jb-page .pp-e{opacity:.75;font-size:.85rem}`; document.head.appendChild(st); })();
+
 // ---------- offline support: register the service worker at the site root ----------
 (function(){ if(!("serviceWorker" in navigator)||location.protocol==="file:") return;
   const me=document.currentScript&&document.currentScript.src; if(!me) return;

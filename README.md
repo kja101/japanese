@@ -19,7 +19,7 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `kana/katakana-words.html` | 340 N5–N2 loanwords by topic, with notes on false friends and non-English origins, and example sentences. |
 | `kana/kana-sounds.html` | Kana by sign family, by sound, and same-sound words with pitch patterns. |
 
-Every page can read the Japanese aloud with the browser's built-in Japanese voice (the ▶ buttons). All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
+Sentences on the phrasebook, sentence builder, grammar and situation pages are coloured by grammar block (who, time, place, how, what, verb, question), with one on/off setting shared by all four. Every page can read the Japanese aloud with the browser's built-in Japanese voice (the ▶ buttons). All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
 
 ## Offline
 
