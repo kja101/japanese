@@ -11,7 +11,237 @@
     "en": "Greetings & politeness",
     "note": "",
     "items": "\nおはよう ございます|Good morning\nこんにちは|Hello / good afternoon\nこんばんは|Good evening\nおやすみ なさい|Good night\nさようなら|Goodbye|Sounds final; friends say また ね\nありがとう ございます|Thank you very much\nどうも ありがとう|Thanks a lot|Casual\nどう いたしまして|You're welcome\nすみません|Excuse me / sorry / thanks for the trouble\nごめん なさい|I'm sorry\nお願{ねが}い します|Please\n初{はじ}めまして|Nice to meet you\nよろしく お願{ねが}い します|Pleased to meet you / thanks in advance\nお元気{げんき} ですか|How are you?\n元気{げんき} です|I'm well\n大丈夫{だいじょうぶ} です|It's okay / I'm fine\nいただきます|Said before eating\nごちそうさま でした|Thank you for the meal (after eating)\n失礼{しつれい} します|Excuse me (entering or leaving a room)\nお疲{つか}れ様{さま} でした|Thanks for your hard work\n行{い}って きます|I'm off (leaving home)\nいってらっしゃい|Have a good day (to someone leaving)\nただいま|I'm home\nお帰{かえ}り なさい|Welcome back\nまた ね|See you|Casual\nじゃあ また|See you later|Casual\n",
-    "words": ""
+    "words": "",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "Good morning"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "Hello / good afternoon"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Good evening"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "Good night"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "Goodbye"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "Thank you very much"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "Thanks a lot"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "V",
+        "どういたしまして"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "You're welcome"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "V",
+        "Excuse me / sorry / thanks for the trouble"
+       ]
+      ]
+     },
+     "9": {
+      "er": [
+       [
+        "V",
+        "I'm sorry"
+       ]
+      ]
+     },
+     "10": {
+      "er": [
+       [
+        "V",
+        "Please"
+       ]
+      ]
+     },
+     "11": {
+      "er": [
+       [
+        "V",
+        "Nice to meet you"
+       ]
+      ]
+     },
+     "12": {
+      "er": [
+       [
+        "V",
+        "Pleased to meet you / thanks in advance"
+       ]
+      ]
+     },
+     "13": {
+      "er": [
+       [
+        "V",
+        "How are you?"
+       ]
+      ]
+     },
+     "14": {
+      "er": [
+       [
+        "V",
+        "I'm well"
+       ]
+      ]
+     },
+     "15": {
+      "er": [
+       [
+        "V",
+        "It's okay / I'm fine"
+       ]
+      ]
+     },
+     "16": {
+      "er": [
+       [
+        "V",
+        "Said before eating"
+       ]
+      ]
+     },
+     "17": {
+      "er": [
+       [
+        "V",
+        "Thank you for the meal (after eating)"
+       ]
+      ]
+     },
+     "18": {
+      "er": [
+       [
+        "V",
+        "Excuse me (entering or leaving a room)"
+       ]
+      ]
+     },
+     "19": {
+      "er": [
+       [
+        "V",
+        "Thanks for your hard work"
+       ]
+      ]
+     },
+     "20": {
+      "er": [
+       [
+        "V",
+        "I'm off (leaving home)"
+       ]
+      ]
+     },
+     "21": {
+      "er": [
+       [
+        "V",
+        "Have a good day (to someone leaving)"
+       ]
+      ]
+     },
+     "22": {
+      "er": [
+       [
+        "V",
+        "I'm home"
+       ]
+      ]
+     },
+     "23": {
+      "er": [
+       [
+        "V",
+        "Welcome back"
+       ]
+      ]
+     },
+     "24": {
+      "er": [
+       [
+        "V",
+        "See you"
+       ]
+      ]
+     },
+     "25": {
+      "jr": [
+       [
+        "H",
+        "じゃあ"
+       ],
+       [
+        "V",
+        "また"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "See you"
+       ],
+       [
+        "H",
+        "later"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [],
@@ -30,7 +260,207 @@
     "en": "Essential survival Japanese",
     "note": "",
     "items": "\nはい|Yes\nいいえ|No\nそう です|That's right\n違{ちが}います|That's not right\n分{わ}かります|I understand\n分{わ}かりません|I don't understand\n分{わ}かりました|Understood / got it\n知{し}りません|I don't know\nもう 一度{いちど} お願{ねが}い します|One more time, please\nゆっくり 話{はな}して ください|Please speak slowly\nもっと 簡単{かんたん} に お願{ねが}い します|More simply, please\n日本語{にほんご} が 分{わ}かりません|I don't understand Japanese\n少{すこ}し 分{わ}かります|I understand a little\n英語{えいご} を 話{はな}せますか|Do you speak English?\nちょっと 待{ま}って ください|Please wait a moment\nここ に 書{か}いて ください|Please write it here\n大丈夫{だいじょうぶ} ですか|Are you okay? / Is that okay?\n",
-    "words": ""
+    "words": "",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "Yes"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "No"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "That's right"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "That's not right"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "I understand"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "I don't understand"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "Understood / got it"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "V",
+        "I don't know"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "H",
+        "もう一度"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "One more time"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "9": {
+      "er": [
+       [
+        "V",
+        "Please speak"
+       ],
+       [
+        "H",
+        "slowly"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "H",
+        "もっと簡単に"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "More simply"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "O",
+        "日本語が"
+       ],
+       [
+        "V",
+        "分かりません"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I don't understand"
+       ],
+       [
+        "O",
+        "Japanese"
+       ]
+      ]
+     },
+     "12": {
+      "er": [
+       [
+        "V",
+        "I understand"
+       ],
+       [
+        "H",
+        "a little"
+       ]
+      ]
+     },
+     "13": {
+      "er": [
+       [
+        "V",
+        "Do you speak"
+       ],
+       [
+        "O",
+        "English"
+       ]
+      ]
+     },
+     "14": {
+      "er": [
+       [
+        "V",
+        "Please wait"
+       ],
+       [
+        "H",
+        "a moment"
+       ]
+      ]
+     },
+     "15": {
+      "er": [
+       [
+        "V",
+        "Please write it"
+       ],
+       [
+        "P",
+        "here"
+       ]
+      ]
+     },
+     "16": {
+      "er": [
+       [
+        "V",
+        "Are you okay? / Is that okay?"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "language",
@@ -38,7 +468,249 @@
     "en": "Language learning",
     "note": "",
     "items": "\n___ が 分{わ}かります|I understand ___\n___ が 分{わ}かりません|I don't understand ___\n___ は どう いう 意味{いみ} ですか|What does ___ mean?\n___ は 日本語{にほんご} で 何{なん} ですか|What is ___ in Japanese?\n___ は 英語{えいご} で 何{なん} ですか|What is ___ in English?\nどう 読{よ}みますか|How do you read this?\nどう 言{い}いますか|How do you say it?\n漢字{かんじ} で どう 書{か}きますか|How do you write it in kanji?\n日本語{にほんご} を 勉強{べんきょう} して います|I'm studying Japanese\n日本語{にほんご} は まだ 下手{へた} です|My Japanese is still poor\n",
-    "words": "\n日本語{にほんご}|Japanese\n英語{えいご}|English\n言葉{ことば}|word\n意味{いみ}|meaning\n漢字{かんじ}|kanji\nひらがな|hiragana\nカタカナ|katakana\n"
+    "words": "\n日本語{にほんご}|Japanese\n英語{えいご}|English\n言葉{ことば}|word\n意味{いみ}|meaning\n漢字{かんじ}|kanji\nひらがな|hiragana\nカタカナ|katakana\n",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "分かります"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I understand"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "分かりません"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I don't understand"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "W",
+        "___は"
+       ],
+       [
+        "Q",
+        "どういう意味"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "Q",
+        "What"
+       ],
+       [
+        "V",
+        "does"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "mean"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "W",
+        "___は"
+       ],
+       [
+        "H",
+        "日本語で"
+       ],
+       [
+        "O",
+        "何"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "H",
+        "in Japanese"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "W",
+        "___は"
+       ],
+       [
+        "H",
+        "英語で"
+       ],
+       [
+        "O",
+        "何"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "H",
+        "in English"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "H",
+        "How"
+       ],
+       [
+        "V",
+        "do you read this"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "H",
+        "How"
+       ],
+       [
+        "V",
+        "do you say it"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "H",
+        "漢字で"
+       ],
+       [
+        "H",
+        "どう"
+       ],
+       [
+        "V",
+        "書きますか"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "How"
+       ],
+       [
+        "V",
+        "do you write it"
+       ],
+       [
+        "H",
+        "in kanji"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "V",
+        "I'm studying"
+       ],
+       [
+        "O",
+        "Japanese"
+       ]
+      ]
+     },
+     "9": {
+      "er": [
+       [
+        "W",
+        "My Japanese"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "H",
+        "still"
+       ],
+       [
+        "V",
+        "poor"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [],
@@ -57,7 +729,141 @@
     "en": "Talking about yourself",
     "note": "Foreign names are written in katakana: Kevin becomes ケビン.",
     "items": "\n私{わたし} は ___ です|I am ___\n私{わたし} の 名前{なまえ} は ___ です|My name is ___\n___ から 来{き}ました|I came from ___\n___ に 住{す}んで います|I live in ___\n___ を 勉強{べんきょう} して います|I'm studying ___\n___ の 仕事{しごと} を して います|I work in ___\n趣味{しゅみ} は ___ です|My hobby is ___\n___ が 好{す}き です|I like ___\n",
-    "words": "\nケビン|Kevin\nイギリス|Britain\nイギリス人{じん}|British (person)\nロンドン|London\n日本語{にほんご}|Japanese\n英語{えいご}|English\n音楽{おんがく}|music\n旅行{りょこう}|travel\n"
+    "words": "\nケビン|Kevin\nイギリス|Britain\nイギリス人{じん}|British (person)\nロンドン|London\n日本語{にほんご}|Japanese\n英語{えいご}|English\n音楽{おんがく}|music\n旅行{りょこう}|travel\n",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "W",
+        "私は"
+       ],
+       [
+        "O",
+        "___"
+       ],
+       [
+        "V",
+        "です"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "I"
+       ],
+       [
+        "V",
+        "am"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "W",
+        "My name"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "I came"
+       ],
+       [
+        "P",
+        "from ___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "I live"
+       ],
+       [
+        "P",
+        "in ___"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "I'm studying"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "I work"
+       ],
+       [
+        "O",
+        "in ___"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "W",
+        "My hobby"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "好きです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I like"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "social",
@@ -65,7 +871,157 @@
     "en": "Social conversation",
     "note": "",
     "items": "\n___ が 好{す}き ですか|Do you like ___?\n___ は どう ですか|What do you think of ___?\n___ を 食{た}べますか|Do you eat ___?\n___ を 飲{の}みますか|Do you drink ___?\n何{なに} が 好{す}き ですか|What do you like?\nどこ から 来{き}ましたか|Where are you from?\nお仕事{しごと} は 何{なん} ですか|What do you do for work?\n日本{にほん} は 初{はじ}めて ですか|Is this your first time in Japan?|hear\n趣味{しゅみ} は 何{なん} ですか|What are your hobbies?\n楽{たの}しかった です|That was fun\n",
-    "words": "\n音楽{おんがく}|music\n映画{えいが}|films\n旅行{りょこう}|travel\n日本{にほん}|Japan\nお酒{さけ}|alcohol\n寿司{すし}|sushi\nスポーツ|sport\n"
+    "words": "\n音楽{おんがく}|music\n映画{えいが}|films\n旅行{りょこう}|travel\n日本{にほん}|Japan\nお酒{さけ}|alcohol\n寿司{すし}|sushi\nスポーツ|sport\n",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "好きですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you like"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "H",
+        "What"
+       ],
+       [
+        "V",
+        "do you think of"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Do you eat"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "Do you drink"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "何が"
+       ],
+       [
+        "V",
+        "好きですか"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "do you like"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "are you from"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "do you do"
+       ],
+       [
+        "W",
+        "for work"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "V",
+        "Is this your first time"
+       ],
+       [
+        "W",
+        "in Japan"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "are"
+       ],
+       [
+        "W",
+        "your hobbies"
+       ]
+      ]
+     },
+     "9": {
+      "er": [
+       [
+        "V",
+        "That was fun"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -88,7 +1044,153 @@
     "en": "Finding places",
     "note": "",
     "items": "\n___ は どこ ですか|Where is ___?\n___ は 近{ちか}い ですか|Is ___ nearby?\n___ は 遠{とお}い ですか|Is ___ far?\nこの 近{ちか}く に ___ は ありますか|Is there a ___ near here?\n___ まで どう 行{い}きますか|How do I get to ___?\n___ まで 歩{ある}いて 行{い}けますか|Can I walk to ___?\nここ は ___ ですか|Is this ___?\n___ は どちら ですか|Which way is ___?\n地図{ちず} で 教{おし}えて ください|Please show me on the map\n道{みち} に 迷{まよ}いました|I'm lost\n",
-    "words": "\n駅{えき}|station\n入口{いりぐち}|entrance\n出口{でぐち}|exit\nお手洗{てあら}い|toilet (polite)\nトイレ|toilet\n店{みせ}|shop\n公園{こうえん}|park\n病院{びょういん}|hospital\n銀行{ぎんこう}|bank\n郵便局{ゆうびんきょく}|post office\n交番{こうばん}|police box\n空港{くうこう}|airport\nバス停{てい}|bus stop\nホテル|hotel\nレストラン|restaurant\nコンビニ|convenience store\n"
+    "words": "\n駅{えき}|station\n入口{いりぐち}|entrance\n出口{でぐち}|exit\nお手洗{てあら}い|toilet (polite)\nトイレ|toilet\n店{みせ}|shop\n公園{こうえん}|park\n病院{びょういん}|hospital\n銀行{ぎんこう}|bank\n郵便局{ゆうびんきょく}|post office\n交番{こうばん}|police box\n空港{くうこう}|airport\nバス停{てい}|bus stop\nホテル|hotel\nレストラン|restaurant\nコンビニ|convenience store\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "nearby"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "far"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "Is there"
+       ],
+       [
+        "W",
+        "a ___"
+       ],
+       [
+        "P",
+        "near here"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "H",
+        "How"
+       ],
+       [
+        "V",
+        "do I get"
+       ],
+       [
+        "P",
+        "to ___"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "Can I walk"
+       ],
+       [
+        "P",
+        "to ___"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "this"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "P",
+        "Which way"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "V",
+        "Please show me"
+       ],
+       [
+        "H",
+        "on the map"
+       ]
+      ]
+     },
+     "9": {
+      "er": [
+       [
+        "V",
+        "I'm lost"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "directions",
@@ -96,7 +1198,133 @@
     "en": "Directions",
     "note": "",
     "items": "\nまっすぐ 行{い}って ください|Go straight on\n右{みぎ} に 曲{ま}がって ください|Turn right\n左{ひだり} に 曲{ま}がって ください|Turn left\n次{つぎ} の 角{かど} を 右{みぎ} です|Right at the next corner|hear\n信号{しんごう} を 渡{わた}って ください|Cross at the lights|hear\nここ から 遠{とお}い ですか|Is it far from here?\n歩{ある}いて 何分{なんぷん} ですか|How many minutes on foot?\nすぐ そこ です|It's just there|hear\n",
-    "words": "\n右{みぎ}|right\n左{ひだり}|left\nまっすぐ|straight ahead\n前{まえ}|in front\n後{うし}ろ|behind\n隣{となり}|next to\n向{む}かい|opposite\n角{かど}|corner\n信号{しんごう}|traffic lights\n"
+    "words": "\n右{みぎ}|right\n左{ひだり}|left\nまっすぐ|straight ahead\n前{まえ}|in front\n後{うし}ろ|behind\n隣{となり}|next to\n向{む}かい|opposite\n角{かど}|corner\n信号{しんごう}|traffic lights\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "Go"
+       ],
+       [
+        "H",
+        "straight on"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "Turn"
+       ],
+       [
+        "P",
+        "right"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Turn"
+       ],
+       [
+        "P",
+        "left"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "P",
+        "次の角を"
+       ],
+       [
+        "V",
+        "右です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Right"
+       ],
+       [
+        "P",
+        "at the next corner"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "Cross"
+       ],
+       [
+        "O",
+        "at the lights"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "Is it far"
+       ],
+       [
+        "P",
+        "from here"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "H",
+        "歩いて"
+       ],
+       [
+        "T",
+        "何分"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "How many minutes"
+       ],
+       [
+        "H",
+        "on foot"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "V",
+        "It's"
+       ],
+       [
+        "H",
+        "just"
+       ],
+       [
+        "V",
+        "there"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "going",
@@ -104,7 +1332,119 @@
     "en": "Going somewhere",
     "note": "",
     "items": "\n___ に 行{い}きたい です|I want to go to ___\n___ に 行{い}きます|I'm going to ___\n___ まで お願{ねが}い します|To ___, please (taxi)\n___ に 行{い}きますか|Does this go to ___?\n次{つぎ} は ___ ですか|Is ___ next?\n___ まで どの くらい ですか|How long / far is it to ___?\n___ まで いくら ですか|How much is it to ___?\n",
-    "words": "\n駅{えき}|station\n空港{くうこう}|airport\n町{まち}|town\n海{うみ}|sea\n山{やま}|mountain\n家{いえ}|home\nホテル|hotel\n東京{とうきょう}|Tokyo\n京都{きょうと}|Kyoto\n大阪{おおさか}|Osaka\n"
+    "words": "\n駅{えき}|station\n空港{くうこう}|airport\n町{まち}|town\n海{うみ}|sea\n山{やま}|mountain\n家{いえ}|home\nホテル|hotel\n東京{とうきょう}|Tokyo\n京都{きょうと}|Kyoto\n大阪{おおさか}|Osaka\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "I want to go"
+       ],
+       [
+        "P",
+        "to ___"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "I'm going"
+       ],
+       [
+        "P",
+        "to ___"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "P",
+        "To ___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "Does this go"
+       ],
+       [
+        "P",
+        "to ___"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "O",
+        "___"
+       ],
+       [
+        "W",
+        "next"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "P",
+        "___まで"
+       ],
+       [
+        "O",
+        "どのくらい"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "How long / far"
+       ],
+       [
+        "V",
+        "is it"
+       ],
+       [
+        "P",
+        "to ___"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "O",
+        "How much"
+       ],
+       [
+        "V",
+        "is it"
+       ],
+       [
+        "P",
+        "to ___"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "transport",
@@ -112,7 +1452,173 @@
     "en": "Transport",
     "note": "",
     "items": "\nこれ は ___ に 行{い}きますか|Does this go to ___?\n___ は 何時{なんじ} に 出{で}ますか|What time does ___ leave?\n___ は 何時{なんじ} に 着{つ}きますか|What time does ___ arrive?\n次{つぎ} の ___ は 何時{なんじ} ですか|When is the next ___?\n乗{の}り場{ば} は どこ ですか|Where do I board?\n何番線{なんばんせん} ですか|Which platform number?\n乗{の}り換{か}え は どこ ですか|Where do I change?\n切符{きっぷ} は どこ で 買{か}えますか|Where can I buy a ticket?\nこの 席{せき} は 空{あ}いて いますか|Is this seat free?\nここ で 降{お}ります|I'll get off here\nここ で 止{と}めて ください|Please stop here (taxi)\n",
-    "words": "\n電車{でんしゃ}|train\n新幹線{しんかんせん}|bullet train\n地下鉄{ちかてつ}|subway\nバス|bus\nタクシー|taxi\n切符{きっぷ}|ticket\n乗{の}り場{ば}|boarding place\n片道{かたみち}|one-way\n往復{おうふく}|return\n席{せき}|seat\n"
+    "words": "\n電車{でんしゃ}|train\n新幹線{しんかんせん}|bullet train\n地下鉄{ちかてつ}|subway\nバス|bus\nタクシー|taxi\n切符{きっぷ}|ticket\n乗{の}り場{ば}|boarding place\n片道{かたみち}|one-way\n往復{おうふく}|return\n席{せき}|seat\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "Does"
+       ],
+       [
+        "W",
+        "this"
+       ],
+       [
+        "V",
+        "go"
+       ],
+       [
+        "P",
+        "to ___"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "does"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "leave"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "does"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "arrive"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "T",
+        "When"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "the next ___"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "do I board"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "O",
+        "Which platform number"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "do I change"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "can I buy"
+       ],
+       [
+        "W",
+        "a ticket"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "this seat"
+       ],
+       [
+        "V",
+        "free"
+       ]
+      ]
+     },
+     "9": {
+      "er": [
+       [
+        "V",
+        "I'll get off"
+       ],
+       [
+        "P",
+        "here"
+       ]
+      ]
+     },
+     "10": {
+      "er": [
+       [
+        "V",
+        "Please stop"
+       ],
+       [
+        "P",
+        "here"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -135,7 +1641,193 @@
     "en": "Restaurants & ordering",
     "note": "",
     "items": "\nいらっしゃいませ|Welcome (in shops and restaurants)|hear\n何名様{なんめいさま} ですか|How many people?|hear\n二人{ふたり} です|Two people\nメニュー を お願{ねが}い します|The menu, please\n英語{えいご} の メニュー は ありますか|Is there an English menu?\n___ を お願{ねが}い します|___, please\n___ を ください|Please give me ___\n___ を 食{た}べたい です|I want to eat ___\n___ を 飲{の}みたい です|I want to drink ___\nこれ に します|I'll have this\nおすすめ は 何{なん} ですか|What do you recommend?\nもう 一{ひと}つ ください|One more, please\nおいしい です|It's delicious\nお会計{かいけい} お願{ねが}い します|The bill, please\nごちそうさま でした|Thank you for the meal\n",
-    "words": "\nご飯{はん}|rice / meal\n肉{にく}|meat\n牛肉{ぎゅうにく}|beef\n豚肉{ぶたにく}|pork\n鶏肉{とりにく}|chicken\n魚{さかな}|fish\n卵{たまご}|egg\n野菜{やさい}|vegetables\n果物{くだもの}|fruit\n寿司{すし}|sushi\nラーメン|ramen\nパン|bread\n水{みず}|water\nお茶{ちゃ}|tea\nコーヒー|coffee\nジュース|juice\nビール|beer\n"
+    "words": "\nご飯{はん}|rice / meal\n肉{にく}|meat\n牛肉{ぎゅうにく}|beef\n豚肉{ぶたにく}|pork\n鶏肉{とりにく}|chicken\n魚{さかな}|fish\n卵{たまご}|egg\n野菜{やさい}|vegetables\n果物{くだもの}|fruit\n寿司{すし}|sushi\nラーメン|ramen\nパン|bread\n水{みず}|water\nお茶{ちゃ}|tea\nコーヒー|coffee\nジュース|juice\nビール|beer\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "Welcome (in shops and restaurants)"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "O",
+        "How many people"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Two people"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "O",
+        "The menu"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "Is there"
+       ],
+       [
+        "W",
+        "an English menu"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "O",
+        "___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "Please give me"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "V",
+        "I want to eat"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "V",
+        "I want to drink"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "O",
+        "これに"
+       ],
+       [
+        "V",
+        "します"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'll have"
+       ],
+       [
+        "O",
+        "this"
+       ]
+      ]
+     },
+     "10": {
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "do you recommend"
+       ]
+      ]
+     },
+     "11": {
+      "er": [
+       [
+        "O",
+        "One"
+       ],
+       [
+        "H",
+        "more"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "12": {
+      "er": [
+       [
+        "V",
+        "It's delicious"
+       ]
+      ]
+     },
+     "13": {
+      "jr": [
+       [
+        "O",
+        "お会計"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "The bill"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "14": {
+      "er": [
+       [
+        "V",
+        "Thank you for the meal"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "diet",
@@ -143,7 +1835,103 @@
     "en": "Food requirements",
     "note": "",
     "items": "\n___ なし で お願{ねが}い します|Without ___, please\n___ は 入{はい}って いますか|Does it contain ___?\n___ は 食{た}べません|I don't eat ___\n___ は 大丈夫{だいじょうぶ} です|___ is okay\n___ アレルギー が あります|I have a ___ allergy\nこれ は 辛{から}い ですか|Is this spicy?\nベジタリアン です|I'm vegetarian\n",
-    "words": "\n肉{にく}|meat\n魚{さかな}|fish\n卵{たまご}|egg\n牛肉{ぎゅうにく}|beef\n豚肉{ぶたにく}|pork\nえび|prawns\nナッツ|nuts\n小麦{こむぎ}|wheat\n乳製品{にゅうせいひん}|dairy\n"
+    "words": "\n肉{にく}|meat\n魚{さかな}|fish\n卵{たまご}|egg\n牛肉{ぎゅうにく}|beef\n豚肉{ぶたにく}|pork\nえび|prawns\nナッツ|nuts\n小麦{こむぎ}|wheat\n乳製品{にゅうせいひん}|dairy\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "H",
+        "Without ___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "Does it contain"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "___は"
+       ],
+       [
+        "V",
+        "食べません"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I don't eat"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is okay"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "a ___ allergy"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "this"
+       ],
+       [
+        "V",
+        "spicy"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "I'm vegetarian"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -180,7 +1968,159 @@
     "en": "Shopping",
     "note": "",
     "items": "\n___ は いくら ですか|How much is ___?\nこれ は いくら ですか|How much is this?\n___ を 見{み}せて ください|Please show me ___\n___ は ありますか|Do you have ___?\nもっと 大{おお}きい ___ は ありますか|Do you have a bigger ___?\nもっと 小{ちい}さい ___ は ありますか|Do you have a smaller ___?\n他{ほか} の 色{いろ} は ありますか|Do you have other colours?\n試着{しちゃく} して も いい ですか|May I try it on?\n見{み}て いる だけ です|I'm just looking\nこれ が いい です|I'd like this one\nこれ を 買{か}います|I'll buy this\n免税{めんぜい} できますか|Can I buy this tax-free?\n",
-    "words": "\nかばん|bag\n靴{くつ}|shoes\n傘{かさ}|umbrella\n服{ふく}|clothes\n帽子{ぼうし}|hat\n財布{さいふ}|wallet\nお土産{みやげ}|souvenir\nプレゼント|gift\nシャツ|shirt\nジャケット|jacket\nサイズ|size\n"
+    "words": "\nかばん|bag\n靴{くつ}|shoes\n傘{かさ}|umbrella\n服{ふく}|clothes\n帽子{ぼうし}|hat\n財布{さいふ}|wallet\nお土産{みやげ}|souvenir\nプレゼント|gift\nシャツ|shirt\nジャケット|jacket\nサイズ|size\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "O",
+        "How much"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "O",
+        "How much"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "this"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Please show me"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "W",
+        "a bigger ___"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "W",
+        "a smaller ___"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "W",
+        "other colours"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "V",
+        "May I try it on?"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "V",
+        "I'm just looking"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "O",
+        "これが"
+       ],
+       [
+        "V",
+        "いいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'd like"
+       ],
+       [
+        "O",
+        "this one"
+       ]
+      ]
+     },
+     "10": {
+      "er": [
+       [
+        "V",
+        "I'll buy"
+       ],
+       [
+        "O",
+        "this"
+       ]
+      ]
+     },
+     "11": {
+      "er": [
+       [
+        "V",
+        "Can I buy this tax-free?"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "konbini",
@@ -188,7 +2128,93 @@
     "en": "At the till & convenience store",
     "note": "",
     "items": "\n温{あたた}めますか|Shall I heat it up?|hear\nはい、お願{ねが}い します|Yes, please\n袋{ふくろ} は ご利用{りよう} ですか|Do you need a bag?|hear\n袋{ふくろ} は 大丈夫{だいじょうぶ} です|No bag, thanks\nポイントカード は お持{も}ち ですか|Do you have a points card?|hear\nいいえ、ない です|No, I don't\nお箸{はし} を ください|Chopsticks, please\nレシート を ください|Receipt, please\n",
-    "words": ""
+    "words": "",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "Shall I heat it up?"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "Yes, please"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Do you need"
+       ],
+       [
+        "W",
+        "a bag"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "W",
+        "No bag"
+       ],
+       [
+        "V",
+        "thanks"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "W",
+        "a points card"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "No, I don't"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "O",
+        "Chopsticks"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "O",
+        "Receipt"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "money",
@@ -196,7 +2222,81 @@
     "en": "Paying & money",
     "note": "",
     "items": "\n全部{ぜんぶ} で いくら ですか|How much altogether?\n___ は 使{つか}えますか|Can I use ___?\n___ で 払{はら}えますか|Can I pay by ___?\n現金{げんきん} だけ ですか|Is it cash only?\n領収書{りょうしゅうしょ} を ください|A receipt, please\n両替{りょうがえ} は どこ で できますか|Where can I change money?\n",
-    "words": "\nカード|card\n現金{げんきん}|cash\nスマホ|smartphone\n円{えん}|yen\nお釣{つ}り|change\nレシート|receipt\n"
+    "words": "\nカード|card\n現金{げんきん}|cash\nスマホ|smartphone\n円{えん}|yen\nお釣{つ}り|change\nレシート|receipt\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "O",
+        "How much"
+       ],
+       [
+        "H",
+        "altogether"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "Can I use"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Can I pay"
+       ],
+       [
+        "H",
+        "by ___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "Is it cash only?"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "O",
+        "A receipt"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "can I change"
+       ],
+       [
+        "W",
+        "money"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "numbers",
@@ -204,7 +2304,53 @@
     "en": "Numbers & counting",
     "note": "",
     "items": "\nいくつ ですか|How many?\n何人{なんにん} ですか|How many people?\n___ ください|___, please (quantity)\n全部{ぜんぶ} で ___ です|That's ___ altogether\n",
-    "words": "\n一{ひと}つ|one (thing)\n二{ふた}つ|two (things)\n三{みっ}つ|three (things)\n四{よっ}つ|four (things)\n五{いつ}つ|five (things)\n一人{ひとり}|one person\n二人{ふたり}|two people\n三人{さんにん}|three people\n一{いち}|1\n二{に}|2\n三{さん}|3\n四{よん}|4\n五{ご}|5\n六{ろく}|6\n七{なな}|7\n八{はち}|8\n九{きゅう}|9\n十{じゅう}|10\n百{ひゃく}|100\n千{せん}|1,000\n一万{いちまん}|10,000\n"
+    "words": "\n一{ひと}つ|one (thing)\n二{ふた}つ|two (things)\n三{みっ}つ|three (things)\n四{よっ}つ|four (things)\n五{いつ}つ|five (things)\n一人{ひとり}|one person\n二人{ふたり}|two people\n三人{さんにん}|three people\n一{いち}|1\n二{に}|2\n三{さん}|3\n四{よん}|4\n五{ご}|5\n六{ろく}|6\n七{なな}|7\n八{はち}|8\n九{きゅう}|9\n十{じゅう}|10\n百{ひゃく}|100\n千{せん}|1,000\n一万{いちまん}|10,000\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "O",
+        "How many"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "O",
+        "How many people"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "O",
+        "___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "That's"
+       ],
+       [
+        "O",
+        "___"
+       ],
+       [
+        "H",
+        "altogether"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -227,7 +2373,187 @@
     "en": "Hotel",
     "note": "",
     "items": "\n予約{よやく} が あります|I have a reservation\nチェックイン を お願{ねが}い します|Check-in, please\nチェックアウト は 何時{なんじ} ですか|What time is check-out?\n朝食{ちょうしょく} は 何時{なんじ} から ですか|What time is breakfast from?\n___ は どこ ですか|Where is ___?\n___ が 必要{ひつよう} です|I need ___\n___ を ください|Please give me ___\n___ が ありません|There's no ___\n___ が 動{うご}きません|___ isn't working\n___ を もう 一{ひと}つ ください|Another ___, please\n荷物{にもつ} を 預{あず}かって もらえますか|Could you keep my luggage?\nワイファイ の パスワード は 何{なん} ですか|What's the Wi-Fi password?\n",
-    "words": "\n部屋{へや}|room\n鍵{かぎ}|key\nフロント|front desk\n受付{うけつけ}|reception\nお手洗{てあら}い|toilet\nベッド|bed\nタオル|towel\nシャワー|shower\nエアコン|air conditioning\nエレベーター|lift\n"
+    "words": "\n部屋{へや}|room\n鍵{かぎ}|key\nフロント|front desk\n受付{うけつけ}|reception\nお手洗{てあら}い|toilet\nベッド|bed\nタオル|towel\nシャワー|shower\nエアコン|air conditioning\nエレベーター|lift\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "a reservation"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "O",
+        "Check-in"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "check-out"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "breakfast"
+       ],
+       [
+        "T",
+        "from"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "必要です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I need"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "Please give me"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "V",
+        "There's no"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "isn't working"
+       ]
+      ]
+     },
+     "9": {
+      "er": [
+       [
+        "H",
+        "Another"
+       ],
+       [
+        "O",
+        "___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "10": {
+      "er": [
+       [
+        "V",
+        "Could you keep"
+       ],
+       [
+        "O",
+        "my luggage"
+       ]
+      ]
+     },
+     "11": {
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "'s"
+       ],
+       [
+        "W",
+        "the Wi-Fi password"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -251,7 +2577,119 @@
     "en": "Health",
     "note": "",
     "items": "\n___ が 痛{いた}い です|My ___ hurts\n気分{きぶん} が 悪{わる}い です|I feel unwell\n熱{ねつ} が あります|I have a fever\n風邪{かぜ} を ひきました|I've caught a cold\n薬{くすり} が 必要{ひつよう} です|I need medicine\n薬局{やっきょく} は どこ ですか|Where's a pharmacy?\n病院{びょういん} は どこ ですか|Where is the hospital?\n医者{いしゃ} に 行{い}きたい です|I want to see a doctor\n",
-    "words": "\n頭{あたま}|head\n目{め}|eye\n耳{みみ}|ear\n鼻{はな}|nose\n口{くち}|mouth\n歯{は}|tooth\n喉{のど}|throat\nお腹{なか}|stomach\n背中{せなか}|back\n手{て}|hand\n足{あし}|leg / foot\n"
+    "words": "\n頭{あたま}|head\n目{め}|eye\n耳{みみ}|ear\n鼻{はな}|nose\n口{くち}|mouth\n歯{は}|tooth\n喉{のど}|throat\nお腹{なか}|stomach\n背中{せなか}|back\n手{て}|hand\n足{あし}|leg / foot\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "W",
+        "My ___"
+       ],
+       [
+        "V",
+        "hurts"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "I feel unwell"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "a fever"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "I've caught"
+       ],
+       [
+        "O",
+        "a cold"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "薬が"
+       ],
+       [
+        "V",
+        "必要です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I need"
+       ],
+       [
+        "O",
+        "medicine"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "'s"
+       ],
+       [
+        "W",
+        "a pharmacy"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "the hospital"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "V",
+        "I want to see"
+       ],
+       [
+        "P",
+        "a doctor"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -274,7 +2712,85 @@
     "en": "Problems",
     "note": "",
     "items": "\n___ が ありません|I don't have ___ / ___ is missing\n___ が 動{うご}きません|___ doesn't work\n___ を なくしました|I've lost ___\n___ を 探{さが}して います|I'm looking for ___\n___ を 盗{ぬす}まれました|My ___ was stolen\n困{こま}って います|I'm in trouble\n助{たす}けて ください|Please help me\n",
-    "words": "\n鍵{かぎ}|key\n財布{さいふ}|wallet\nかばん|bag\n切符{きっぷ}|ticket\n携帯{けいたい}|mobile phone\nスマホ|smartphone\nパスポート|passport\n"
+    "words": "\n鍵{かぎ}|key\n財布{さいふ}|wallet\nかばん|bag\n切符{きっぷ}|ticket\n携帯{けいたい}|mobile phone\nスマホ|smartphone\nパスポート|passport\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "I don't have"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "doesn't work"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "I've lost"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "I'm looking for"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "O",
+        "My ___"
+       ],
+       [
+        "V",
+        "was stolen"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "I'm in trouble"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "Please help me"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "emergency",
@@ -282,7 +2798,73 @@
     "en": "Emergencies",
     "note": "",
     "items": "\n救急車{きゅうきゅうしゃ} を 呼{よ}んで ください|Please call an ambulance\n警察{けいさつ} を 呼{よ}んで ください|Please call the police\n火事{かじ} です|Fire!\n危{あぶ}ない|Watch out!\n英語{えいご} が 話{はな}せる 人{ひと} は いますか|Is there anyone who speaks English?\n大使館{たいしかん} に 連絡{れんらく} したい です|I want to contact the embassy\n",
-    "words": ""
+    "words": "",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "Please call"
+       ],
+       [
+        "O",
+        "an ambulance"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "Please call"
+       ],
+       [
+        "O",
+        "the police"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Fire!"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "Watch out!"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "Is there"
+       ],
+       [
+        "W",
+        "anyone who speaks English"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "I want to contact"
+       ],
+       [
+        "P",
+        "the embassy"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -305,7 +2887,123 @@
     "en": "Time",
     "note": "",
     "items": "\n今{いま} 何時{なんじ} ですか|What time is it now?\n___ は 何時{なんじ} ですか|What time is ___?\n___ は いつ ですか|When is ___?\n今日{きょう} は 何曜日{なんようび} ですか|What day is it today?\n今日{きょう} は 何日{なんにち} ですか|What's the date today?\n明日{あした} です|It's tomorrow\n今日{きょう} です|It's today\n",
-    "words": "\n今{いま}|now\n今日{きょう}|today\n明日{あした}|tomorrow\n昨日{きのう}|yesterday\n朝{あさ}|morning\n昼{ひる}|midday\n夜{よる}|night\n午前{ごぜん}|a.m.\n午後{ごご}|p.m.\n週末{しゅうまつ}|the weekend\n"
+    "words": "\n今{いま}|now\n今日{きょう}|today\n明日{あした}|tomorrow\n昨日{きのう}|yesterday\n朝{あさ}|morning\n昼{ひる}|midday\n夜{よる}|night\n午前{ごぜん}|a.m.\n午後{ごご}|p.m.\n週末{しゅうまつ}|the weekend\n",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "T",
+        "今"
+       ],
+       [
+        "T",
+        "何時"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "is it"
+       ],
+       [
+        "T",
+        "now"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "T",
+        "When"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "T",
+        "What day"
+       ],
+       [
+        "V",
+        "is it"
+       ],
+       [
+        "W",
+        "today"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "T",
+        "What's the date"
+       ],
+       [
+        "W",
+        "today"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "It's"
+       ],
+       [
+        "T",
+        "tomorrow"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "It's"
+       ],
+       [
+        "T",
+        "today"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "plans",
@@ -313,7 +3011,143 @@
     "en": "Making plans",
     "note": "",
     "items": "\n___ に 行{い}きませんか|Shall we go to ___?\n一緒{いっしょ} に 行{い}きませんか|Shall we go together?\n___ で 会{あ}いましょう|Let's meet at ___\n何時{なんじ} に 会{あ}いますか|What time shall we meet?\n___ は 大丈夫{だいじょうぶ} ですか|Is ___ okay for you?\n___ に しましょう|Let's make it ___\nいい です ね|Sounds good\nちょっと 難{むずか}しい です|That's a bit difficult (polite no)\nまた 明日{あした}|See you tomorrow\n",
-    "words": "\n駅{えき}|the station\nカフェ|a café\n明日{あした}|tomorrow\n今晩{こんばん}|this evening\n週末{しゅうまつ}|the weekend\n七時{しちじ}|7 o'clock\n"
+    "words": "\n駅{えき}|the station\nカフェ|a café\n明日{あした}|tomorrow\n今晩{こんばん}|this evening\n週末{しゅうまつ}|the weekend\n七時{しちじ}|7 o'clock\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "Shall we go"
+       ],
+       [
+        "P",
+        "to ___"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "H",
+        "一緒に"
+       ],
+       [
+        "V",
+        "行きませんか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Shall we go"
+       ],
+       [
+        "H",
+        "together"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "P",
+        "___で"
+       ],
+       [
+        "V",
+        "会いましょう"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Let's meet"
+       ],
+       [
+        "P",
+        "at ___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "shall we meet"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "okay for you"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "Let's make it"
+       ],
+       [
+        "P",
+        "___"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "Sounds good"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "V",
+        "That's"
+       ],
+       [
+        "H",
+        "a bit"
+       ],
+       [
+        "V",
+        "difficult"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "T",
+        "また明日"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "See you tomorrow"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -350,7 +3184,147 @@
     "en": "Likes & dislikes",
     "note": "",
     "items": "\n___ が 好{す}き です|I like ___\n___ が 大好{だいす}き です|I really like ___\n___ は 好{す}き ですか|Do you like ___?\n___ は あまり 好{す}き じゃ ない です|I don't really like ___\n___ が 嫌{きら}い です|I dislike ___\n___ に 興味{きょうみ} が あります|I'm interested in ___\n",
-    "words": "\n音楽{おんがく}|music\n映画{えいが}|films\n旅行{りょこう}|travel\n料理{りょうり}|cooking\n食{た}べ物{もの}|food\n猫{ねこ}|cats\n犬{いぬ}|dogs\n日本{にほん}|Japan\n本{ほん}|books\nスポーツ|sport\n"
+    "words": "\n音楽{おんがく}|music\n映画{えいが}|films\n旅行{りょこう}|travel\n料理{りょうり}|cooking\n食{た}べ物{もの}|food\n猫{ねこ}|cats\n犬{いぬ}|dogs\n日本{にほん}|Japan\n本{ほん}|books\nスポーツ|sport\n",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "好きです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I like"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "大好きです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I really like"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "___は"
+       ],
+       [
+        "V",
+        "好きですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you like"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "O",
+        "___は"
+       ],
+       [
+        "H",
+        "あまり"
+       ],
+       [
+        "V",
+        "好きじゃないです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I don't"
+       ],
+       [
+        "H",
+        "really"
+       ],
+       [
+        "V",
+        "like"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "嫌いです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I dislike"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "I'm"
+       ],
+       [
+        "W",
+        "interested"
+       ],
+       [
+        "P",
+        "in ___"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "feelings",
@@ -358,7 +3332,89 @@
     "en": "Feelings & reactions",
     "note": "",
     "items": "\n嬉{うれ}しい です|I'm happy\n楽{たの}しい です|It's fun\n疲{つか}れました|I'm tired\nお腹{なか} が 空{す}きました|I'm hungry\n喉{のど} が 渇{かわ}きました|I'm thirsty\n眠{ねむ}い です|I'm sleepy\nすごい|Amazing!\nよかった|Great / what a relief\n残念{ざんねん} です|That's a shame\n",
-    "words": ""
+    "words": "",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "I'm happy"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "It's fun"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "I'm tired"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "W",
+        "I'm"
+       ],
+       [
+        "V",
+        "hungry"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "W",
+        "I'm"
+       ],
+       [
+        "V",
+        "thirsty"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "I'm sleepy"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "Amazing!"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "V",
+        "Great / what a relief"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "V",
+        "That's a shame"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "weather",
@@ -366,7 +3422,71 @@
     "en": "Weather & small talk",
     "note": "",
     "items": "\nいい 天気{てんき} です ね|Nice weather, isn't it?\n暑{あつ}い です ね|It's hot, isn't it?\n寒{さむ}い です ね|It's cold, isn't it?\n雨{あめ} です ね|It's raining, isn't it?\n明日{あした} は 雨{あめ} ですか|Will it rain tomorrow?\nそう です ね|Yes, it is (agreeing)\n",
-    "words": ""
+    "words": "",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "V",
+        "Nice weather, isn't it?"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "It's hot, isn't it?"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "It's cold, isn't it?"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "V",
+        "It's raining, isn't it?"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "T",
+        "明日は"
+       ],
+       [
+        "V",
+        "雨ですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Will it rain"
+       ],
+       [
+        "T",
+        "tomorrow"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "V",
+        "Yes, it is (agreeing)"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "describing",
@@ -374,7 +3494,165 @@
     "en": "Describing things",
     "note": "",
     "items": "\n___ は 大{おお}きい です|___ is big\n___ は 小{ちい}さい です|___ is small\n___ は 高{たか}い です|___ is expensive / high\n___ は 安{やす}い です|___ is cheap\n___ は おいしい です|___ is delicious\n___ は 辛{から}い です|___ is spicy\n___ は 暑{あつ}い です|___ is hot (weather, room)\n___ は 熱{あつ}い です|___ is hot (to touch)\n___ は 寒{さむ}い です|___ is cold (weather, room)\n___ は 冷{つめ}たい です|___ is cold (to touch)\n___ は 新{あたら}しい です|___ is new\n___ は 静{しず}か です|___ is quiet\n___ は 便利{べんり} です|___ is convenient\n",
-    "words": "\nこれ|this\n部屋{へや}|the room\nこの 店{みせ}|this shop\n料理{りょうり}|the food\nお茶{ちゃ}|the tea\n駅{えき}|the station\n"
+    "words": "\nこれ|this\n部屋{へや}|the room\nこの 店{みせ}|this shop\n料理{りょうり}|the food\nお茶{ちゃ}|the tea\n駅{えき}|the station\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is big"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is small"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is expensive / high"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is cheap"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is delicious"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is spicy"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is hot"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is hot"
+       ]
+      ]
+     },
+     "8": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is cold"
+       ]
+      ]
+     },
+     "9": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is cold"
+       ]
+      ]
+     },
+     "10": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is new"
+       ]
+      ]
+     },
+     "11": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is quiet"
+       ]
+      ]
+     },
+     "12": {
+      "er": [
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "is convenient"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -398,7 +3676,117 @@
     "en": "Asking for something",
     "note": "",
     "items": "\n___ お願{ねが}い します|___, please\n___ を ください|Please give me ___\n___ が 欲{ほ}しい です|I want ___\n___ が 必要{ひつよう} です|I need ___\n___ は ありますか|Do you have ___?\n___ を もう 一{ひと}つ ください|One more ___, please\n___ を 借{か}りて も いい ですか|May I borrow ___?\n",
-    "words": "\n水{みず}|water\n傘{かさ}|umbrella\n鍵{かぎ}|key\nかばん|bag\n本{ほん}|book\n地図{ちず}|map\nタオル|towel\nペン|pen\nチケット|ticket\n"
+    "words": "\n水{みず}|water\n傘{かさ}|umbrella\n鍵{かぎ}|key\nかばん|bag\n本{ほん}|book\n地図{ちず}|map\nタオル|towel\nペン|pen\nチケット|ticket\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "O",
+        "___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "Please give me"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "欲しいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I want"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "必要です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I need"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "H",
+        "One more"
+       ],
+       [
+        "O",
+        "___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "V",
+        "May I borrow"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "wants",
@@ -406,7 +3794,119 @@
     "en": "Wants & needs",
     "note": "",
     "items": "\n___ が 欲{ほ}しい です|I want ___\n___ が 必要{ひつよう} です|I need ___\n___ が いい です|I'd prefer ___\n___ は いりません|I don't need ___\nもっと ___ が 欲{ほ}しい です|I want more ___\n",
-    "words": "\n水{みず}|water\nご飯{はん}|meal\n部屋{へや}|room\n鍵{かぎ}|key\n傘{かさ}|umbrella\n時間{じかん}|time\nタオル|towel\n"
+    "words": "\n水{みず}|water\nご飯{はん}|meal\n部屋{へや}|room\n鍵{かぎ}|key\n傘{かさ}|umbrella\n時間{じかん}|time\nタオル|towel\n",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "欲しいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I want"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "必要です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I need"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "いいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'd prefer"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "O",
+        "___は"
+       ],
+       [
+        "V",
+        "いりません"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I don't need"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "もっと___が"
+       ],
+       [
+        "V",
+        "欲しいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I want"
+       ],
+       [
+        "O",
+        "more ___"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "questions",
@@ -414,7 +3914,173 @@
     "en": "Asking questions",
     "note": "",
     "items": "\n___ は 何{なん} ですか|What is ___?\n___ は 誰{だれ} ですか|Who is ___?\n___ は どこ ですか|Where is ___?\n___ は いつ ですか|When is ___?\n___ は 何時{なんじ} ですか|What time is ___?\n___ は どう ですか|How is ___?\nどれ ですか|Which one?\nどうして ですか|Why?\nどの くらい かかりますか|How long does it take?\n本当{ほんとう} ですか|Really?\nいい ですか|Is it okay?\n",
-    "words": "\nこれ|this\nそれ|that\nあれ|that over there\nあの 人{ひと}|that person\n次{つぎ} の 電車{でんしゃ}|the next train\nパーティー|the party\n"
+    "words": "\nこれ|this\nそれ|that\nあれ|that over there\nあの 人{ひと}|that person\n次{つぎ} の 電車{でんしゃ}|the next train\nパーティー|the party\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "W",
+        "___は"
+       ],
+       [
+        "O",
+        "誰"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "Who"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "T",
+        "When"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "4": {
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "5": {
+      "er": [
+       [
+        "H",
+        "How"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "O",
+        "Which one"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "H",
+        "Why?"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "H",
+        "どのくらい"
+       ],
+       [
+        "V",
+        "かかりますか"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "How long"
+       ],
+       [
+        "V",
+        "does it take"
+       ]
+      ]
+     },
+     "9": {
+      "er": [
+       [
+        "V",
+        "Really?"
+       ]
+      ]
+     },
+     "10": {
+      "er": [
+       [
+        "V",
+        "Is it okay?"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "pointing",
@@ -422,7 +4088,75 @@
     "en": "Pointing at things",
     "note": "",
     "items": "\n___ は 何{なん} ですか|What is ___?\n___ を ください|___, please\n___ が いい です|I'd like ___\n___ は いくら ですか|How much is ___?\n",
-    "words": "\nこれ|this (near me)\nそれ|that (near you)\nあれ|that over there\nここ|here\nそこ|there\nあそこ|over there\nどれ|which one?\nどこ|where?\n"
+    "words": "\nこれ|this (near me)\nそれ|that (near you)\nあれ|that over there\nここ|here\nそこ|there\nあそこ|over there\nどれ|which one?\nどこ|where?\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "O",
+        "___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "いいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'd like"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "O",
+        "How much"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "permission",
@@ -430,7 +4164,79 @@
     "en": "Asking permission",
     "note": "The slot takes the te-form of a verb (食べる becomes 食べて).",
     "items": "\n___ も いい ですか|May I ___?\nここ で ___ も いい ですか|May I ___ here?\n___ は だめ ですか|Is ___ not allowed?\n",
-    "words": "\n座{すわ}って|sit (座る)\n食{た}べて|eat (食べる)\n飲{の}んで|drink (飲む)\n見{み}て|look (見る)\n入{はい}って|enter (入る)\n使{つか}って|use (使う)\n写真{しゃしん} を 撮{と}って|take a photo (撮る)\n"
+    "words": "\n座{すわ}って|sit (座る)\n食{た}べて|eat (食べる)\n飲{の}んで|drink (飲む)\n見{み}て|look (見る)\n入{はい}って|enter (入る)\n使{つか}って|use (使う)\n写真{しゃしん} を 撮{と}って|take a photo (撮る)\n",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "V",
+        "___も"
+       ],
+       [
+        "V",
+        "いいですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "May I ___"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "P",
+        "ここで"
+       ],
+       [
+        "V",
+        "___も"
+       ],
+       [
+        "V",
+        "いいですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "May I ___"
+       ],
+       [
+        "P",
+        "here"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "W",
+        "___は"
+       ],
+       [
+        "V",
+        "だめですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "not allowed"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "requests",
@@ -438,7 +4244,45 @@
     "en": "Asking someone to do something",
     "note": "The slot takes the te-form of a verb.",
     "items": "\n___ ください|Please ___\n___ いただけますか|Could you please ___? (more polite)\n",
-    "words": "\n待{ま}って|wait\n見{み}せて|show me\n教{おし}えて|tell me / teach me\n手伝{てつだ}って|help me\nゆっくり 話{はな}して|speak slowly\nここ に 書{か}いて|write it here\nもう 一度{いちど} 言{い}って|say it again\n写真{しゃしん} を 撮{と}って|take a photo\n"
+    "words": "\n待{ま}って|wait\n見{み}せて|show me\n教{おし}えて|tell me / teach me\n手伝{てつだ}って|help me\nゆっくり 話{はな}して|speak slowly\nここ に 書{か}いて|write it here\nもう 一度{いちど} 言{い}って|say it again\n写真{しゃしん} を 撮{と}って|take a photo\n",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "V",
+        "___"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please ___"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "V",
+        "___"
+       ],
+       [
+        "V",
+        "いただけますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could you please ___"
+       ]
+      ]
+     }
+    }
    },
    {
     "id": "core",
@@ -446,7 +4290,201 @@
     "en": "Highest-value patterns",
     "note": "Learn the frame first, then swap words into it. Tap a word to try it in every frame.",
     "items": "\n___ は どこ ですか|Where is ___?\n___ は ありますか|Do you have ___? / Is there ___?\n___ を ください|Please give me ___\n___ お願{ねが}い します|___, please\n___ が 欲{ほ}しい です|I want ___\n___ が 必要{ひつよう} です|I need ___\n___ は いくら ですか|How much is ___?\n___ は 何{なん} ですか|What is ___?\n___ が 好{す}き です|I like ___\n___ が 分{わ}かりません|I don't understand ___\n___ を 探{さが}して います|I'm looking for ___\n",
-    "words": "\n駅{えき}|station\nお手洗{てあら}い|toilet\n水{みず}|water\n切符{きっぷ}|ticket\nこれ|this\nホテル|hotel\n"
+    "words": "\n駅{えき}|station\nお手洗{てあら}い|toilet\n水{みず}|water\n切符{きっぷ}|ticket\nこれ|this\nホテル|hotel\n",
+    "marks": {
+     "0": {
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "1": {
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "/ Is there"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "2": {
+      "er": [
+       [
+        "V",
+        "Please give me"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "3": {
+      "er": [
+       [
+        "O",
+        "___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "欲しいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I want"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "必要です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I need"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "6": {
+      "er": [
+       [
+        "O",
+        "How much"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "7": {
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "___"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "好きです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I like"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "O",
+        "___が"
+       ],
+       [
+        "V",
+        "分かりません"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I don't understand"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "10": {
+      "er": [
+       [
+        "V",
+        "I'm looking for"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [],

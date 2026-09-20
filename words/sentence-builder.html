@@ -153,6 +153,26 @@ table.fx{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
 .fx tr.trap .fx-n{color:#c0392b;font-weight:600}
 .fx tr.trap td:first-child{box-shadow:inset 3px 0 0 #c0392b}
 body.h-romaji .fx-r{display:none}
+
+/* ---- site theme: same background and colours as the other pages, with dark mode ---- */
+:root{--bg:#F4F5F1;--paper:#FFFFFF;--ink:#1D2433;--mute:#646B78;--line:#DCDFE5;--navy:#2C3E73;--chip:#E7E9EF}
+body{background:var(--bg);color:var(--ink)}
+.bar{background:var(--bg);border-bottom-color:var(--line)}
+.bar input,.toggles button,.noresult,.endnote,.ppop{background:var(--paper);color:var(--ink);border-color:var(--line)}
+.toggles button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.kanjinote,.order,.pp-c{background:var(--chip);border-color:var(--line)}
+.snum{background:var(--chip);color:var(--mute)}
+.sent{border-top-color:var(--line)}
+.pt,.keybar span.kp{background:var(--chip)}
+.olab,.onote,.wl,.rd-legend{color:var(--mute)}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#15181F;--paper:#1C2029;--ink:#E6E8EE;--mute:#9AA1AD;--line:#2E3340;--navy:#8FA6E8;--chip:#262B36;--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
+  .toggles button[aria-pressed="true"]{color:#15181F}
+  .masthead{background:#232B40}
+  .order.reord{background:#3A3020;border-color:#5a4a2a}
+  .pt:hover,.pt:focus-visible{background:var(--ink);color:var(--bg)!important}
+  a.kl:hover{background:rgba(255,255,255,.08)}
+}
 </style><link rel="manifest" href="../manifest.webmanifest">
 <meta name="theme-color" content="#B3261E">
 <link rel="apple-touch-icon" href="../assets/icons/icon-180.png">

@@ -82,6 +82,7 @@ section.ch{margin:2.4rem 0 0;scroll-margin-top:150px}
 .ck{margin-right:.35em}
 .blocks .ck[data-r]{color:var(--c)}
 .enc .ck{margin-right:.3em}
+.enl .ck{margin-right:0}
 .blocks .enc .ck[data-r]{color:var(--c);font-weight:600}
 .legend-b{display:none!important;flex-wrap:wrap;gap:.3rem .8rem;margin:.5rem 0 .2rem;font-size:.78rem;font-weight:600}
 .blocks .legend-b{display:flex}
@@ -211,8 +212,8 @@ function tokRom(x,word){
   return esc(r);
 }
 const wrapR=(r,inner)=>`<span class="ck" data-r="${r}" style="--c:var(${ROLE[r]})">${inner}</span>`;
-function tokenLine(ph,word,mode){ return rolesFor(ph.split(" ")).map(x=>wrapR(x.r,tokHtml(x,mode,word))).join(" "); }
-function tokenRom(ph,word){ return rolesFor(ph.split(" ")).map(x=>wrapR(x.r,tokRom(x,word))).join(" ").replace(/ ,/g,","); }
+function tokenLine(ph,word,mode,roles){ return jpRolesWith(ph,roles).map(x=>wrapR(x.r,tokHtml(x,mode,word))).join(" "); }
+function tokenRom(ph,word,roles){ return jpRolesWith(ph,roles).map(x=>wrapR(x.r,tokRom(x,word))).join(" ").replace(/ ,/g,","); }
 
 // ---------- state ----------
 let state={view:"all",script:"ruby",romaji:"on",blocks:"on",hide:"none"};
@@ -223,17 +224,20 @@ const save=()=>{try{localStorage.setItem("phrasebook",JSON.stringify(state));loc
 const picked={};
 const spaced=()=>true;
 // ---------- render pieces ----------
-function jpFrame(ph,word,mode){ return tokenLine(ph,word,mode); }
+function jpFrame(ph,word,mode,roles){ return tokenLine(ph,word,mode,roles); }
 function jpFrameOld(ph,word,mode){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${word.split(" ").map(w=>form(w,mode)).join(" ")}</span>`:`<span class="slot">&nbsp;</span>`):form(t,mode)).join(" "); }
-function romFrame(ph,word){ return tokenRom(ph,word); }
+function romFrame(ph,word,roles){ return tokenRom(ph,word,roles); }
 function romFrameOld(ph,word){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${esc(kanaOf(word).split(" ").map(romajiToken).join(" "))}</span>`:`<span class="slot">&nbsp;</span>`):esc(romajiToken(kanaOf(t)))).join(" ").replace(/ ,/g,","); }
-const enFill=(en,w)=>esc(en).replace("___",w?`<span class="slot filled">${esc(w)}</span>`:"___");
+const enFill=(en,w,enb)=>{ const slot=w?`<span class="slot filled">${esc(w)}</span>`:"___";
+  if(enb&&state.blocks==="on") return enb.map(([r,t])=>{ const h=esc(t).replace("___",slot); return r?`<span class="ck" data-r="${r}" style="--c:var(${ROLE[r]})">${h}</span>`:h; }).join("");
+  return esc(en).replace("___",slot); };
 const starBtn=id=>`<button class="star" data-star="${id}" aria-pressed="${STARS.has(id)}" aria-label="Star">★</button>`;
 function phraseItem(secId,i,p,word,wordEn){
+  const mk=(CH.flatMap(c=>c.phr).find(s=>s.id===secId)||{marks:{}}).marks[i]||{};
   const id=`p:${secId}:${i}`, tag=p.tag==="hear"?`<span class="tagl hear">You'll hear this</span>`:p.tag?`<span class="tagl">${esc(p.tag)}</span>`:"";
   const s=(plainOf(p.jp)+kanaOf(p.jp)+p.jp.split(" ").map(t=>romajiToken(kanaOf(t))).join(" ")+p.en).toLowerCase();
   const sayText=p.jp.split(" ").map(t=>t==="___"?(word?plainOf(word).replace(/ /g,""):""):plainOf(t)).join("");
-  return `<div class="it" data-id="${id}" data-s="${esc(s)}"><div><span class="jpl"><span class="hx">${jpFrame(p.jp,word,state.script)}</span>${sayBtn(sayText)}</span><span class="rom">${romFrame(p.jp,word)}</span></div><div class="enl"><span class="hx">${enFill(p.en,wordEn)}</span>${tag}</div>${starBtn(id)}</div>`;
+  return `<div class="it" data-id="${id}" data-s="${esc(s)}"><div><span class="jpl"><span class="hx">${jpFrame(p.jp,word,state.script,mk.roles)}</span>${sayBtn(sayText)}</span><span class="rom">${romFrame(p.jp,word,mk.roles)}</span></div><div class="enl"><span class="hx">${enFill(p.en,wordEn,mk.enb)}</span>${tag}</div>${starBtn(id)}</div>`;
 }
 function sentItem(s){
   let jp,rom,enc="";

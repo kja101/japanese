@@ -356,6 +356,13 @@ write("kanji/kanji-by-situation.html",
 # ---------------------------------------------------------------- phrasebook
 chapters = load("phrasebook.json")
 for c in chapters:
+    for sec in c["phr"]:                       # hand-marked blocks → roles per token and coloured English
+        lines = sec["items"].strip().split("\n")
+        sec["marks"] = {i: mark({"n": lines[int(i)].split("|")[0], "en": lines[int(i)].split("|")[1], **m})
+                        for i, m in sec.get("marks", {}).items()}
+        for m in sec["marks"].values():
+            m.pop("n", None); m.pop("en", None)
+for c in chapters:
     c["sents"] = [s for t in c.pop("sb") for s in SB.get(t, [])] + [s for t in c.pop("extra") for s in EXTRA.get(t, [])]
     c.pop("_count_check", None)
 write("words/phrasebook.html", fill("phrasebook.html", DATA=dump(chapters), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))

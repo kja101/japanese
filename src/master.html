@@ -272,6 +272,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
       <button data-test="off" aria-pressed="true">Show all</button>
       <button data-test="on" aria-pressed="false">Test me</button>
     </div>
+    <div class="seg" role="group" aria-label="Grammar blocks"><button data-jb="on" aria-pressed="true">Grammar blocks</button><button data-jb="off" aria-pressed="false">Off</button></div>
     <div class="seg" role="group" aria-label="Reading colours">
       <button data-rdcol="on" aria-pressed="true">On/kun colours</button>
       <button data-rdcol="off" aria-pressed="false">Off</button>
@@ -618,7 +619,9 @@ main.addEventListener("change",e=>{ if(e.target.id!=="impStories") return; const
   f.text().then(t=>{ try{ const d=JSON.parse(t); Object.assign(STORIES,d.stories||{}); (d.known||[]).forEach(k=>known.add(k)); saveStories(); saveKnown(); main.dataset.course=""; render(); alert("Imported."); }catch(err){ alert("That file isn't an export from this deck."); } }); });
 main.addEventListener("click",e=>{const h=e.target.closest(".hideable");if(h&&state.test==="on")h.classList.add("shown");});
 main.addEventListener("keydown",e=>{const h=e.target.closest(".hideable");if(h&&state.test==="on"&&(e.key==="Enter"||e.key===" ")){e.preventDefault();h.classList.add("shown");}});
-if(blocksOn()) document.body.classList.add("jb-on");   // grammar colours follow the setting shared with the sentence pages
+function applyBlocks(){ const on=blocksOn(); document.body.classList.toggle("jb-on",on); document.querySelectorAll("[data-jb]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.jb==="on")===on)); }
+document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.dataset.jb==="on"); applyBlocks(); });
+applyBlocks();   // grammar colours: one setting shared with every page that shows sentences
 initParticlePopup();
 if(state.mode==="cards") resetDeck(false);
 render();
