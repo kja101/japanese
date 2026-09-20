@@ -253,6 +253,9 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 .results button .g{font-family:var(--jp);font-size:1.25rem}
 .results button small{color:var(--muted)}
 .results .rnone{color:var(--muted);font-size:.9rem;padding:.3rem 0}
+a.jk{color:inherit;text-decoration:none;cursor:pointer;border-radius:2px}
+a.jk:hover,a.jk:focus-visible{background:var(--indigo-wash)}
+@media (hover:none){a.jk:active{background:var(--indigo-wash)}}
 </style>
 </head>
 <body class="jb-page">
@@ -310,6 +313,7 @@ function romaji(k){ return krRomaji(k); }
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rubyNote=s=>{ let o="",last=0; s.replace(/([\u4e00-\u9fff々]+)\{([^}]+)\}/g,(m,b,r,off)=>{ o+=esc(s.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return o+esc(s.slice(last)); };
 const kanaOfNote=s=>s.replace(/([\u4e00-\u9fff々]+)\{([^}]+)\}/g,"$2");
+const prose=(html,self)=>html.replace(/[\u4e00-\u9fff]/g,c=>(K[c]&&c!==self)?`<a class="jk" href="#k-${c}" data-jump="${c}" data-w="" data-from="${self||""}" title="Open ${c}">${c}</a>`:c);
 const wordHtml=(w,kana)=>/[\u4e00-\u9fff]/.test(w)?`<span class="word">${linkify(rdWord(w,kana,"ruby"),"",w)}</span>`:`<span class="word">${esc(w)}</span>`;
 const lvBadge=k=>{const l=LV[k];return l?`<span class="lvb">N${l}</span>`:`<span class="lvb n3">N1</span>`;};
 const T=()=>+state.tier; const vis=k=>!!K[k]&&K[k].l>=T(); const TN=()=>"N"+state.tier;
@@ -322,7 +326,8 @@ const WD=D.W, PR=D.P;
 const partR=g=>{ const p=PR[g]||(RD[g]?{r:(RD[g][0][0]||RD[g][1][0]||""),t:RD[g][0].length?"on":"kun"}:null); return p&&p.r?`<small class="pr ${p.t==="on"?"rdv-on":"rdv-kun"}">${esc(p.r)}</small>`:""; };
 const partHtml=(g,m)=>`<span class="part"><b>${esc(g)}</b><small>${esc(m)}</small>${[...g].length===1?partR(g):""}</span>`;
 const labelHtml=r=>r.t==="on"?`${esc(r.label)}<span class="rj">${romaji(r.label)}</span>`:r.label.split("、").map(f=>{const[a,b]=f.split(".");return `${esc(a)}${b?`<span class="ok">${esc(b)}</span>`:""}`;}).join("、")+`<span class="rj">${romaji(r.label.split("、")[0].replace(".",""))}</span>`;
-const linkify=(html,self,w)=>html.replace(/[\u4e00-\u9fff]/g,c=>vis(c)?`<a class="jk" href="#k-${c}" data-jump="${c}" data-w="${esc(w)}" data-from="${self||""}" title="Open ${c}">${c}</a>`:c);
+// every kanji that has a card links to it, whatever level it is: the jump raises the level if it has to
+const linkify=(html,self,w)=>html.replace(/[\u4e00-\u9fff]/g,c=>K[c]?`<a class="jk" href="#k-${c}" data-jump="${c}" data-w="${esc(w)}" data-from="${self||""}" title="Open ${c}${vis(c)?"":" (N"+K[c].l+")"}">${c}</a>`:c);
 const toKata=s=>s.replace(/[\u3041-\u3096]/g,c=>String.fromCharCode(c.charCodeAt(0)+0x60));
 function breakdown(w,r,self){
   const a=rdAlign(w,String(r)); if(!a) return "";
@@ -363,7 +368,7 @@ function headPron(x){
 }
 function storyHtml(x){
   const mine=STORIES[x.k];
-  const base=x.story?H(esc(x.story),"p","story")
+  const base=x.story?H(prose(esc(x.story),x.k),"p","story")
     :`<p class="story starter">${x.parts.map(([g,m])=>`<span class="sg">${esc(g)}</span> ${esc(m||"shape")}`).join(" + ")} → <b>${esc(x.m)}</b></p><p class="starthint">No story yet. Picture these parts together in one vivid scene that means “${esc(x.m)}”, then save it below.</p>`;
   return base+`<div class="mystory" data-k="${x.k}">${mine?`<p class="my"><span class="mylab">My story</span>${H(esc(mine))}</p>`:""}<button class="linkbtn" data-edit="${x.k}">${mine?"Edit my story":"Write my own story"}</button></div>`;
 }
@@ -392,16 +397,16 @@ function introCard(ch){
    <div class="ihead"><span class="g">${esc(m.shape)}</span><div><div class="kw">${esc(m.keyword)}<span class="tier">Master shape</span></div><div class="mv">${esc(m.variants)}</div></div></div>
    <div class="step s1"><div class="stag"><i>1</i>Master shape</div><div class="sbody"><div class="facts">
      <div><h4>Meaning</h4>${H(esc(m.meaning),"p")}</div>
-     <div><h4>Variant forms</h4><p>${esc(m.variant)}</p></div>
-     <div><h4>Memory hook</h4>${H(esc(m.clue),"p")}</div>
+     <div><h4>Variant forms</h4><p>${prose(esc(m.variant),m.shape)}</p></div>
+     <div><h4>Memory hook</h4>${H(prose(esc(m.clue),m.shape),"p")}</div>
      <div><h4>Core vocabulary</h4>${m.vocab.map(([w,k,e])=>`<p>${wordHtml(w,k)}<span class="rj">${romaji(k)}</span> ${H(esc(e))}</p>`).join("")}</div>
    </div></div></div>
    <div class="step s2"><div class="stag"><i>2</i>${esc(m.s2t)}</div><div class="sbody"><div class="cousins">
-     ${m.s2.map(([g,kw,clue,[w,k,e]])=>`<div class="cousin"><div class="g">${esc(g)}${lvBadge(g)}${PR[g]?`<span class="cpr ${PR[g].t==="on"?"rdv-on":"rdv-kun"}">${esc(PR[g].r)}</span>`:""}</div>${H(esc(kw),"div","kw")}${H(esc(clue),"p")}<div class="word-line">${wordHtml(w,k)}<span class="rj">${romaji(k)}</span> ${esc(e)}</div></div>`).join("")}
-   </div><div class="xnote"><b>${esc(m.s2x[0])}</b>${esc(m.s2x[1])}</div></div></div>
+     ${m.s2.map(([g,kw,clue,[w,k,e]])=>`<div class="cousin"><div class="g">${esc(g)}${lvBadge(g)}${PR[g]?`<span class="cpr ${PR[g].t==="on"?"rdv-on":"rdv-kun"}">${esc(PR[g].r)}</span>`:""}</div>${H(esc(kw),"div","kw")}${H(prose(esc(clue),g),"p")}<div class="word-line">${wordHtml(w,k)}<span class="rj">${romaji(k)}</span> ${esc(e)}</div></div>`).join("")}
+   </div><div class="xnote"><b>${esc(m.s2x[0])}</b>${prose(esc(m.s2x[1]),m.shape)}</div></div></div>
    <div class="step s3"><div class="stag"><i>3</i>Combinations with a story</div><div class="sbody">
      ${m.s3.map(([g,parts,mean,story,[w,k,e]])=>`<div class="combo"><div class="eq"><span class="part big"><b>${esc(g)}</b><small>${lvBadge(g)}</small></span><span class="op">=</span>${parts.map(([p,l])=>partHtml(p,l)).join('<span class="op">+</span>')}</div>
-       <div><div><b>${H(esc(mean))}</b></div>${H(esc(story),"p","story")}<div class="word-line">${wordHtml(w,k)}<span class="rj">${romaji(k)}</span> ${esc(e)}</div></div></div>`).join("")}
+       <div><div><b>${H(esc(mean))}</b></div>${H(prose(esc(story),g),"p","story")}<div class="word-line">${wordHtml(w,k)}<span class="rj">${romaji(k)}</span> ${esc(e)}</div></div></div>`).join("")}
    </div></div>
    <div class="roster"><h4>${TIERTXT[T()]} kanji that contain ${esc(m.shape)}</h4><div class="r">${rosterFor(m).map(k=>`<a href="#k-${k}" data-jump="${k}">${k}</a>`).join(" ")}</div></div>
    <div class="ifoot">${esc(m.footer)}</div>
