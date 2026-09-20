@@ -2873,5 +2873,256 @@
     "dinner"
    ]
   ]
+ },
+ {
+  "id": "L4-89",
+  "topic": "t3",
+  "n": "あかい 車{くるま} が 好{す}き です",
+  "en": "I like red cars",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "あかい車が"
+   ],
+   [
+    "V",
+    "好きです"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I like"
+   ],
+   [
+    "O",
+    "red cars"
+   ]
+  ]
+ },
+ {
+  "id": "L4-90",
+  "topic": "t3",
+  "n": "この シャツ は あおい です",
+  "en": "This shirt is blue",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "このシャツは"
+   ],
+   [
+    "V",
+    "あおいです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This shirt"
+   ],
+   [
+    "V",
+    "is blue"
+   ]
+  ]
+ },
+ {
+  "id": "L4-91",
+  "topic": "t3",
+  "n": "しろい 靴{くつ} を 買{か}いました",
+  "en": "I bought white shoes",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "しろい靴を"
+   ],
+   [
+    "V",
+    "買いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I bought"
+   ],
+   [
+    "O",
+    "white shoes"
+   ]
+  ]
+ },
+ {
+  "id": "L4-92",
+  "topic": "t3",
+  "n": "くろい かばん を 探{さが}して います",
+  "en": "I'm looking for a black bag",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "くろいかばんを"
+   ],
+   [
+    "V",
+    "探しています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm looking for"
+   ],
+   [
+    "O",
+    "a black bag"
+   ]
+  ]
+ },
+ {
+  "id": "L4-93",
+  "topic": "t11",
+  "n": "きいろ の 花{はな} が 咲{さ}いて います",
+  "en": "Yellow flowers are in bloom",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "きいろの花が"
+   ],
+   [
+    "V",
+    "咲いています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Yellow flowers"
+   ],
+   [
+    "V",
+    "are in bloom"
+   ]
+  ]
+ },
+ {
+  "id": "L4-94",
+  "topic": "t11",
+  "n": "山{やま} の みどり が きれい です",
+  "en": "The green of the mountains is beautiful",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "山のみどりが"
+   ],
+   [
+    "V",
+    "きれいです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The green of the mountains"
+   ],
+   [
+    "V",
+    "is beautiful"
+   ]
+  ]
+ },
+ {
+  "id": "L4-95",
+  "topic": "t3",
+  "n": "ピンク の シャツ が 似合{にあ}います ね",
+  "en": "That pink shirt suits you",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "ピンクのシャツが"
+   ],
+   [
+    "V",
+    "似合いますね"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "That pink shirt"
+   ],
+   [
+    "V",
+    "suits you"
+   ]
+  ]
+ },
+ {
+  "id": "L4-96",
+  "topic": "t3",
+  "n": "あか と あお、 どちら が 好{す}き ですか",
+  "en": "Red or blue, which do you like?",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "あかとあお、"
+   ],
+   [
+    "O",
+    "どちらが"
+   ],
+   [
+    "V",
+    "好きですか"
+   ]
+  ],
+  "er": [
+   [
+    "O",
+    "Red or blue"
+   ],
+   [
+    "O",
+    "which"
+   ],
+   [
+    "V",
+    "do you like"
+   ]
+  ]
+ },
+ {
+  "id": "L4-97",
+  "topic": "t3",
+  "n": "くろ に します",
+  "en": "I'll take the black one",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "くろに"
+   ],
+   [
+    "V",
+    "します"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'll take"
+   ],
+   [
+    "O",
+    "the black one"
+   ]
+  ]
  }
 ]

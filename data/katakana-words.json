@@ -19,6 +19,12 @@
    ""
   ],
   [
+   "colour",
+   "色",
+   "Colours",
+   "Loanword colours. Japanese has its own words for the basic colours (赤, 青, 白, 黒), but these are everywhere in shops, design and sport."
+  ],
+  [
    "home",
    "家",
    "Home and everyday things",
@@ -94,7 +100,7 @@
  "parts": [
   [
    "Food and home",
-   "food kitchen clothes home"
+   "food kitchen clothes colour home"
   ],
   [
    "Out and about",
@@ -2016,7 +2022,7 @@
    "w": "ピンク",
    "en": "pink",
    "l": 2,
-   "g": "ideas"
+   "g": "colour"
   },
   {
    "w": "ファスナー",
@@ -2208,6 +2214,84 @@
    "en": "tennis court",
    "l": 2,
    "g": "fun"
+  },
+  {
+   "w": "オレンジ",
+   "en": "orange (colour, or the fruit)",
+   "l": 4,
+   "g": "colour"
+  },
+  {
+   "w": "グレー",
+   "en": "grey",
+   "l": 3,
+   "g": "colour"
+  },
+  {
+   "w": "ブルー",
+   "en": "blue; also down, gloomy",
+   "l": 3,
+   "g": "colour"
+  },
+  {
+   "w": "グリーン",
+   "en": "green",
+   "l": 3,
+   "g": "colour"
+  },
+  {
+   "w": "レッド",
+   "en": "red",
+   "l": 2,
+   "g": "colour"
+  },
+  {
+   "w": "イエロー",
+   "en": "yellow",
+   "l": 2,
+   "g": "colour"
+  },
+  {
+   "w": "ブラウン",
+   "en": "brown",
+   "l": 2,
+   "g": "colour"
+  },
+  {
+   "w": "ベージュ",
+   "en": "beige (from French)",
+   "l": 2,
+   "g": "colour"
+  },
+  {
+   "w": "パープル",
+   "en": "purple",
+   "l": 2,
+   "g": "colour"
+  },
+  {
+   "w": "ホワイト",
+   "en": "white",
+   "l": 2,
+   "g": "colour"
+  },
+  {
+   "w": "ブラック",
+   "en": "black; black coffee",
+   "l": 2,
+   "g": "colour"
+  },
+  {
+   "w": "シルバー",
+   "en": "silver; also for the elderly (シルバーシート)",
+   "l": 2,
+   "g": "colour"
+  },
+  {
+   "w": "ゴールド",
+   "en": "gold",
+   "l": 2,
+   "g": "colour"
   }
  ]
 }

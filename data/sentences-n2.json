@@ -15907,5 +15907,175 @@
     "is soft"
    ]
   ]
+ },
+ {
+  "id": "L2-507",
+  "topic": "t3",
+  "n": "この 車{くるま} は ホワイト と ブラック が あります",
+  "en": "This car comes in white and black",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この車は"
+   ],
+   [
+    "W",
+    "ホワイトとブラックが"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This car"
+   ],
+   [
+    "V",
+    "comes in"
+   ],
+   [
+    "W",
+    "white and black"
+   ]
+  ]
+ },
+ {
+  "id": "L2-508",
+  "topic": "t9",
+  "n": "グリーン の 服{ふく} が 好{す}き です",
+  "en": "I like green clothes",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "グリーンの服が"
+   ],
+   [
+    "V",
+    "好きです"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I like"
+   ],
+   [
+    "O",
+    "green clothes"
+   ]
+  ]
+ },
+ {
+  "id": "L2-509",
+  "topic": "t3",
+  "n": "ベージュ の コート を 買{か}いました",
+  "en": "I bought a beige coat",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "ベージュのコートを"
+   ],
+   [
+    "V",
+    "買いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I bought"
+   ],
+   [
+    "O",
+    "a beige coat"
+   ]
+  ]
+ },
+ {
+  "id": "L2-510",
+  "topic": "t3",
+  "n": "パープル の ネックレス を もらいました",
+  "en": "I was given a purple necklace",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "パープルのネックレスを"
+   ],
+   [
+    "V",
+    "もらいました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I was given"
+   ],
+   [
+    "O",
+    "a purple necklace"
+   ]
+  ]
+ },
+ {
+  "id": "L2-511",
+  "topic": "t9",
+  "n": "レッド と イエロー の チーム が あります",
+  "en": "There are red and yellow teams",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "レッドとイエローのチームが"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There are"
+   ],
+   [
+    "W",
+    "red and yellow teams"
+   ]
+  ]
+ },
+ {
+  "id": "L2-512",
+  "topic": "t3",
+  "n": "ブラウン の 靴{くつ} を はいて います",
+  "en": "I'm wearing brown shoes",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "ブラウンの靴を"
+   ],
+   [
+    "V",
+    "はいています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm wearing"
+   ],
+   [
+    "O",
+    "brown shoes"
+   ]
+  ]
  }
 ]

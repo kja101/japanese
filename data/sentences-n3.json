@@ -11790,5 +11790,237 @@
     "today"
    ]
   ]
+ },
+ {
+  "id": "L3-376",
+  "topic": "t3",
+  "n": "ちゃいろ の ベルト は ありますか",
+  "en": "Do you have a brown belt?",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "ちゃいろのベルトは"
+   ],
+   [
+    "V",
+    "ありますか"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Do you have"
+   ],
+   [
+    "W",
+    "a brown belt"
+   ]
+  ]
+ },
+ {
+  "id": "L3-377",
+  "topic": "t3",
+  "n": "むらさき の 花{はな} が 好{す}き です",
+  "en": "I like purple flowers",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "むらさきの花が"
+   ],
+   [
+    "V",
+    "好きです"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I like"
+   ],
+   [
+    "O",
+    "purple flowers"
+   ]
+  ]
+ },
+ {
+  "id": "L3-378",
+  "topic": "t3",
+  "n": "はいいろ の スーツ を 着{き}て います",
+  "en": "He's wearing a grey suit",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "はいいろのスーツを"
+   ],
+   [
+    "V",
+    "着ています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "He's wearing"
+   ],
+   [
+    "O",
+    "a grey suit"
+   ]
+  ]
+ },
+ {
+  "id": "L3-379",
+  "topic": "t3",
+  "n": "ももいろ の リボン を 付{つ}けました",
+  "en": "I put on a pink ribbon",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "ももいろのリボンを"
+   ],
+   [
+    "V",
+    "付けました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I put on"
+   ],
+   [
+    "O",
+    "a pink ribbon"
+   ]
+  ]
+ },
+ {
+  "id": "L3-380",
+  "topic": "t3",
+  "n": "オレンジ の セーター を 探{さが}して います",
+  "en": "I'm looking for an orange sweater",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "オレンジのセーターを"
+   ],
+   [
+    "V",
+    "探しています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm looking for"
+   ],
+   [
+    "O",
+    "an orange sweater"
+   ]
+  ]
+ },
+ {
+  "id": "L3-381",
+  "topic": "t3",
+  "n": "グレー と ブルー、 どちら に しますか",
+  "en": "Grey or blue, which will you have?",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "グレーとブルー、"
+   ],
+   [
+    "O",
+    "どちらに"
+   ],
+   [
+    "V",
+    "しますか"
+   ]
+  ],
+  "er": [
+   [
+    "O",
+    "Grey or blue"
+   ],
+   [
+    "O",
+    "which"
+   ],
+   [
+    "V",
+    "will you have"
+   ]
+  ]
+ },
+ {
+  "id": "L3-382",
+  "topic": "t3",
+  "n": "シルバー と ゴールド、 どちら が いい ですか",
+  "en": "Silver or gold, which is better?",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "シルバーとゴールド、"
+   ],
+   [
+    "O",
+    "どちらが"
+   ],
+   [
+    "V",
+    "いいですか"
+   ]
+  ],
+  "er": [
+   [
+    "O",
+    "Silver or gold"
+   ],
+   [
+    "O",
+    "which"
+   ],
+   [
+    "V",
+    "is better"
+   ]
+  ]
+ },
+ {
+  "id": "L3-383",
+  "topic": "t13",
+  "n": "きんいろ と ぎんいろ の 紙{かみ} を 使{つか}います",
+  "en": "I'll use gold and silver paper",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "きんいろとぎんいろの紙を"
+   ],
+   [
+    "V",
+    "使います"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'll use"
+   ],
+   [
+    "O",
+    "gold and silver paper"
+   ]
+  ]
  }
 ]
