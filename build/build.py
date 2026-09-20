@@ -32,7 +32,11 @@ HEAD_EXTRA = ('<link rel="manifest" href="{r}manifest.webmanifest">\n<meta name=
               '<link rel="apple-touch-icon" href="{r}assets/icons/icon-180.png">\n<meta name="apple-mobile-web-app-capable" content="yes">\n')
 WRITTEN = []
 
+COMMON_VERSION = ""   # set once assets/common.js is written; pages load common.js?v=<version> so a page and its script always match
+
 def write(rel, text):
+    if rel.endswith(".html") and COMMON_VERSION:
+        text = text.replace('assets/common.js"', 'assets/common.js?v=' + COMMON_VERSION + '"')
     if rel.endswith(".html") and 'rel="manifest"' not in text:
         depth = "../" * rel.count("/")
         text = text.replace("</head>", HEAD_EXTRA.format(r=depth) + "</head>", 1)
@@ -244,7 +248,10 @@ def study_data():
 
 print("Building:")
 # ---------------------------------------------------------------- shared script
-write("assets/common.js", (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings)))
+_common = (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings))
+write("assets/common.js", _common)
+import hashlib as _h
+COMMON_VERSION = _h.sha1(_common.encode("utf-8")).hexdigest()[:10]
 
 # ---------------------------------------------------------------- master deck
 def kanji_sentences(limit=3):
