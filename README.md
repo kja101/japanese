@@ -2,23 +2,23 @@
 
 Free, open, browser-based tools for learning Japanese, from kana to the JLPT N2 kanji.
 Every tool is a single self-contained HTML file: no build step, no server, no account.
-Open `index.html` locally or visit the GitHub Pages site.
+Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/>
 
 ## The tools
 
-| File | What it is |
+| Page | What it is |
 |---|---|
-| `kanji/master-kanji-shapes.html` | **Start here.** All 981 N5–N2 kanji in shape families, with a cumulative level switch (N5, N4, N3, N2). Each card: parts and story, look-alikes, and readings split into on and kun with real words. Every compound is listed on the card of each kanji in it and links between them. Chapter sound maps, a sound index, flashcards and your own stories. |
-| `kanji/learn-n5-n4.html` | The learning method, plus spaced-repetition flashcards for the 284 N5/N4 kanji. |
-| `kanji/kanji-by-shape-sound-topic.html` | The N5/N4 kanji by shape family, by sound (including sound-giving parts) and by topic. |
-| `kanji/kanji-by-situation.html` | N4 kanji grouped by real-world situation. |
-| `kanji/master-kanji-shapes-n5-n4.html` | The earlier N5/N4-only edition of the shapes deck. |
-| `words/vocab-sheets.html` | Vocabulary by topic, grouped by shared kanji. |
-| `words/phrase-guide.html` | Phrase frames with swap-in words. |
-| `words/sentence-builder.html` | 120 sentences in colour-coded grammar blocks. |
-| `kana/kana-sounds.html` | Kana by sign, by sound, and same-sound words. |
+| `kanji/master-kanji-shapes.html` | **Start here.** The main deck: all 981 N5–N2 kanji in 61 shape families, with a cumulative level switch (N5, N4, N3, N2). Each card: parts and story, look-alikes, and every word grouped by on and kun reading, with compounds listed on and linked to each kanji in them. Chapter sound maps, a sound index, flashcards, and your own stories. |
+| `kanji/learn-n5-n4.html` | Daily study plan: how to learn kanji fastest, plus spaced-repetition flashcards for the 284 N5/N4 kanji in 29 lessons, parts before the kanji built from them. |
+| `kanji/kanji-by-situation.html` | 200 N4 kanji in 13 real-life situations, with 222 example sentences, where you meet each kanji, and N5–N2 word lists. |
+| `kanji/kanji-by-shape-sound-topic.html` | The 284 N5/N4 kanji by shape family, by sound (including sound-giving parts) and by topic, each with N5–N2 words by reading. |
+| `kanji/master-kanji-shapes-n5-n4.html` | Classic edition of the shapes deck: N5/N4 kanji and words only. Superseded by the N5–N2 deck. |
+| `words/sentence-builder.html` | 120 everyday sentences in 12 situations, in colour-coded grammar blocks. |
+| `words/phrase-guide.html` | About 285 phrases in 32 sections, as frames with swap-in words. |
+| `words/vocab-sheets.html` | About 390 common words across 11 topics, grouped by shared kanji. |
+| `kana/kana-sounds.html` | Kana by sign family, by sound, and same-sound words with pitch patterns. |
 
-All tools share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
+All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
 
 ## Your data stays on your device
 
@@ -27,7 +27,7 @@ Progress, flashcard status and the stories you write are saved in your browser's
 ## Run locally
 
 ```sh
-git clone https://github.com/<your-username>/japanese.git
+git clone https://github.com/kja101/japanese.git
 open japanese/index.html
 ```
 
