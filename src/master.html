@@ -196,7 +196,9 @@ details.smap summary{cursor:pointer;font-weight:600;font-size:.95rem}
 .exl{margin-top:.4rem}
 .exl .word{font-size:1.2rem}
 .exl .e{color:var(--muted);margin-left:.4rem}
-.testing .hideable:not(.shown){color:transparent !important;background:var(--chip);border-radius:4px;cursor:pointer;user-select:none}
+.testing .hideable:not(.shown){color:transparent !important;background:var(--chip);border-radius:4px;cursor:pointer;user-select:none;box-shadow:inset 0 0 0 1px var(--rule)}
+.testhint{display:none;max-width:1000px;margin:0 auto;padding:.1rem 1.25rem .5rem;font-size:.85rem;color:var(--muted)}
+.testing .testhint{display:block}
 .testing .hideable:not(.shown) *{visibility:hidden}
 
 /* flashcards */
@@ -279,6 +281,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
     </div>
   </div>
   <div class="rd-legend"><span><span class="rd rd-on"><span class="rb sw">音</span></span>On<span class="rdl"> reading, from Chinese</span></span><span><span class="rd rd-kun"><span class="rb sw">訓</span></span>Kun<span class="rdl"> reading, native Japanese</span></span><span><span class="rd rd-sp"><span class="rb sw">特</span></span>Special<span class="rdl"> reading: learn the whole word</span></span></div>
+  <p class="testhint">Test me is on: meanings are hidden. Tap a grey box to reveal it, or press Show all.</p>
   <nav class="chaps" id="nav"></nav>
 </div>
 <main id="main"></main>
@@ -339,7 +342,7 @@ function sentencesHtml(x){
   const ss=((D.S||{})[x.k]||[]).filter(s=>s.lv>=T()).slice(0,2);
   if(!ss.length) return "";
   return `<div class="ksent"><h5>In a sentence</h5>${ss.map(s=>{ const S=jpSentence(s,h=>linkify(h,x.k,""));
-    return `<p><span class="kj">${S.jp}</span>${sayBtn(S.say)}<span class="rj">${S.rom}</span><span class="ke">${S.en}</span></p>`; }).join("")}</div>`;
+    return `<p><span class="kj">${S.jp}</span>${sayBtn(S.say)}<span class="rj">${S.rom}</span>${H(S.en,"span","ke")}</p>`; }).join("")}</div>`;
 }
 function headPron(x){
   const a=WD[x.k].alone, p=PR[x.k]; const src=a||p; if(!src||!src.r) return "";
