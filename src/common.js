@@ -354,6 +354,25 @@ body.jb-on .keybar{display:flex}
 .jb-page .pp-c{background:rgba(127,127,127,.12);border-radius:4px;padding:4px 8px}
 .jb-page .pp-e{opacity:.75;font-size:.85rem}`; document.head.appendChild(st); })();
 
+// ---------- a link back to the home page, on every page ----------
+(function(){
+  const me=document.currentScript&&document.currentScript.src; if(!me) return;
+  const root=me.replace(/assets\/common\.js.*$/,"");
+  const st=document.createElement("style");
+  st.textContent=`.homelink{display:block;max-width:1000px;margin:0 auto;padding:calc(.6rem + env(safe-area-inset-top,0px)) 1.25rem .2rem;font:600 .85rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:inherit;opacity:.65;text-decoration:none;letter-spacing:.01em}
+.homelink:hover,.homelink:focus-visible{opacity:1;text-decoration:underline}
+.homelink .jp{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;margin-left:.3em}
+header.top,header.masthead,.masthead{padding-top:.6rem}`;
+  document.head.appendChild(st);
+  document.addEventListener("DOMContentLoaded",()=>{
+    if(document.querySelector(".homelink")) return;
+    const a=document.createElement("a");
+    a.className="homelink"; a.href=root+"index.html";
+    a.innerHTML='← All pages<span class="jp">日本語</span>';
+    document.body.insertBefore(a,document.body.firstChild);
+  });
+})();
+
 // ---------- offline support: register the service worker at the site root ----------
 (function(){ if(!("serviceWorker" in navigator)||location.protocol==="file:") return;
   const me=document.currentScript&&document.currentScript.src; if(!me) return;
