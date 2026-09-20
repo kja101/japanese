@@ -602,21 +602,38 @@ function buildIndex(){
     const words=(w.readings||[]).flatMap(r=>(r.words||[]).map(z=>z[0]+" "+z[1]+" "+romaji(z[1])+" "+z[2])).join(" ");
     const sp=(w.sp||[]).map(z=>(z[0]||"")+" "+(z[1]||"")+" "+(z[2]||"")).join(" ");
     const read=[...(x.on||[]),...(x.kun||[])].join(" ");
-    return {k, s:jpSearchKey(jpSearchable(k,x.m,read,romaji(read),(x.parts||[]).map(p=>p[1]).join(" "),words,sp))};
+    return {k, m:jpSearchKey(x.m), r:jpSearchKey(read+" "+romaji(read)),
+            p:jpSearchKey((x.parts||[]).map(z=>z[1]).join(" ")), w:jpSearchKey(words+" "+sp)};
   });
   return SEARCH;
 }
+// how well an entry matches: the kanji itself first, then its keyword, its readings, its parts, its words
+function score(x,q){
+  if(x.k===q) return 0;
+  const m=x.m.split(/[,;]\s*|\s+/);
+  if(m.includes(q)) return 1;
+  if(m.some(t=>t.startsWith(q))) return 2;
+  if(x.m.includes(q)) return 3;
+  if(x.r.split(/\s+/).includes(q)) return 4;
+  if(x.r.includes(q)) return 5;
+  if(x.p.includes(q)) return 6;
+  if(x.w.includes(q)) return 7;
+  return 99;
+}
+let searching=false;
 function doSearch(){
   const box=document.getElementById("search"), res=document.getElementById("results");
   const q=jpSearchKey(box.value).trim();
-  if(!q){ res.hidden=true; res.innerHTML=""; return; }
-  const hits=buildIndex().filter(x=>x.s.includes(q));
-  hits.sort((a,b)=>(K[b.k].l-K[a.k].l)||(K[a.k].n-K[b.k].n));
+  if(!q){ res.hidden=true; res.innerHTML=""; if(searching){ searching=false; main.dataset.course=""; render(); } return; }
+  const hits=buildIndex().map(x=>({x,sc:score(x,q)})).filter(h=>h.sc<99)
+    .sort((a,b)=>(a.sc-b.sc)||(K[b.x.k].l-K[a.x.k].l)||(K[a.x.k].n-K[b.x.k].n)).map(h=>h.x);
+  searching=true; main.dataset.course="";
+  const shown=hits.slice(0,60);
   res.hidden=false;
-  res.innerHTML=hits.length
-    ? hits.slice(0,40).map(x=>`<button type="button" data-k="${x.k}"><span class="g">${x.k}</span><small>${esc(K[x.k].m.split(",")[0])} · N${K[x.k].l}</small></button>`).join("")
-      +(hits.length>40?`<span class="rnone">${hits.length-40} more — narrow the search</span>`:"")
-    : `<span class="rnone">No kanji matches that. Try a meaning, a reading, rōmaji or a word.</span>`;
+  res.innerHTML=hits.length?`<span class="rnone">${hits.length} kanji match “${esc(box.value.trim())}”${hits.length>60?" — showing the first 60":""}. Clear the box to go back to the course.</span>`
+    :`<span class="rnone">No kanji matches that. Try a meaning, a reading, rōmaji, a kanji or a word.</span>`;
+  main.innerHTML=shown.length?`<section class="chapter">${shown.map(x=>kanjiCard(K[x.k])).join("")}</section>`:"";
+  window.scrollTo({top:0,behavior:"instant"});
 }
 function jumpTo(c,w,from){
   if(!K[c]) return;
@@ -695,7 +712,7 @@ render();
   set(v); })();
 
 document.getElementById("search").addEventListener("input",doSearch);
-document.getElementById("results").addEventListener("click",e=>{ const b=e.target.closest("[data-k]"); if(b) jumpTo(b.dataset.k,null,null); });
+document.querySelectorAll("[data-mode],[data-tier]").forEach(b=>b.addEventListener("click",()=>{ const s=document.getElementById("search"); if(s.value){ s.value=""; searching=false; } }));
 </script>
 </body>
 </html>
