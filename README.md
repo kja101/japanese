@@ -8,11 +8,9 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 
 | Page | What it is |
 |---|---|
-| `kanji/master-kanji-shapes.html` | **Start here.** The main deck: all 981 N5–N2 kanji in 61 shape families, with a cumulative level switch (N5, N4, N3, N2). Each card: parts and story, look-alikes, and every word grouped by on and kun reading, with compounds listed on and linked to each kanji in them. Chapter sound maps, a sound index, flashcards, and your own stories. |
-| `kanji/learn-n5-n4.html` | Daily study plan: how to learn kanji fastest, plus spaced-repetition flashcards for the 284 N5/N4 kanji in 29 lessons, parts before the kanji built from them. |
-| `kanji/kanji-by-situation.html` | 200 N4 kanji in 13 real-life situations, with 222 example sentences, where you meet each kanji, and N5–N2 word lists. |
-| `kanji/kanji-by-shape-sound-topic.html` | The 284 N5/N4 kanji by shape family, by sound (including sound-giving parts) and by topic, each with N5–N2 words by reading. |
-| `kanji/master-kanji-shapes-n5-n4.html` | Classic edition of the shapes deck: N5/N4 kanji and words only. Superseded by the N5–N2 deck. |
+| `kanji/master-kanji-shapes.html` | **Look up and explore.** Every kanji from N5 to N2 (981), with a cumulative level switch. Each card: parts and story, look-alikes, and every word grouped by on and kun reading, linked to the other kanji in it. Four views: Course (shape families), Flashcards, Sound index (parts that give the sound, shared readings) and By topic. Your own stories. |
+| `kanji/learn-n5-n4.html` | **Learn day by day.** Daily study plan: how to learn kanji fastest, plus spaced-repetition flashcards for the 284 N5/N4 kanji in 29 lessons, parts before the kanji built from them. |
+| `kanji/kanji-by-situation.html` | **See them in use.** 200 N4 kanji in 13 real-life situations, with 222 example sentences, where you meet each kanji, and N5–N2 word lists. |
 | `words/phrasebook.html` | Interactive phrasebook: about 500 phrases and sentences in 14 situations, with swap-in words, grammar-block colouring and a starred personal list. |
 | `words/sentence-builder.html` | The grammar lesson behind the phrasebook: 120 sentences in colour-coded blocks, plus every N5/N4 verb and adjective by type with its main forms and traps. |
 | `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work. |
