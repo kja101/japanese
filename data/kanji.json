@@ -143,8 +143,8 @@
    "exEn": "the fifth (of the month)",
    "parts": [
     [
-     "five",
-     ""
+     "",
+     "five"
     ]
    ],
    "story": "Two lines with a frame between them: five.",
@@ -198,8 +198,8 @@
    "exEn": "July",
    "parts": [
     [
-     "a",
-     "cross with a tail"
+     "",
+     "a cross with a tail"
     ]
    ],
    "story": "A cross whose foot kicks to the right: seven.",
@@ -245,8 +245,8 @@
    "exEn": "greengrocer",
    "parts": [
     [
-     "two",
-     "strokes spreading"
+     "",
+     "two strokes spreading"
     ]
    ],
    "story": "Two strokes spreading apart: eight, and dividing.",
@@ -277,8 +277,8 @@
    "exEn": "nine o'clock",
    "parts": [
     [
-     "a",
-     "bent arm"
+     "",
+     "a bent arm"
     ]
    ],
    "story": "An arm crooked at the elbow: nine.",
@@ -445,8 +445,8 @@
    "exEn": "100 yen",
    "parts": [
     [
-     "a",
-     "circle made square"
+     "",
+     "a circle made square"
     ]
    ],
    "story": "A round coin stamped into a box: yen, circle.",
@@ -479,8 +479,8 @@
      "king"
     ],
     [
-     "nuggets",
-     ""
+     "",
+     "two nuggets either side"
     ]
    ],
    "story": "Nuggets buried under the king's roof: gold, money.",
@@ -965,8 +965,8 @@
    "exEn": "last year",
    "parts": [
     [
-     "a",
-     "person carrying grain"
+     "",
+     "a person carrying grain"
     ]
    ],
    "story": "A farmer carrying the harvest: a year.",
@@ -1037,8 +1037,8 @@
    "exEn": "today",
    "parts": [
     [
-     "𠆢",
-     "umbrella"
+     "",
+     "𠆢 umbrella"
     ],
     [
      "一",
@@ -1084,8 +1084,8 @@
    "exEn": "p.m.",
    "parts": [
     [
-     "a",
-     "pestle"
+     "",
+     "a pestle"
     ]
    ],
    "story": "A pestle standing straight up, like the sun at midday: noon.",
@@ -1115,8 +1115,12 @@
    "exEn": "half",
    "parts": [
     [
-     "a",
-     "cut down the middle"
+     "丷",
+     "horns"
+    ],
+    [
+     "牛",
+     "cow"
     ]
    ],
    "story": "A cow split down the middle: half.",
@@ -1185,8 +1189,8 @@
    "exEn": "every morning",
    "parts": [
     [
-     "𠂉",
-     "hat"
+     "",
+     "𠂉 hat"
     ],
     [
      "母",
@@ -1294,8 +1298,8 @@
      "earth"
     ],
     [
-     "ム",
-     "private"
+     "",
+     "ム private"
     ]
    ],
    "story": "Leaving your own plot of earth behind: to leave, the past.",
@@ -1397,8 +1401,16 @@
    "exEn": "breakfast",
    "parts": [
     [
-     "十日十",
-     ""
+     "十",
+     "ten"
+    ],
+    [
+     "日",
+     "sun"
+    ],
+    [
+     "十",
+     "ten"
     ],
     [
      "月",
@@ -1442,8 +1454,8 @@
    "exEn": "evening",
    "parts": [
     [
-     "a",
-     "crescent moon"
+     "",
+     "a crescent moon"
     ]
    ],
    "story": "A crescent moon just rising: evening.",
@@ -1631,8 +1643,8 @@
    "exEn": "father",
    "parts": [
     [
-     "crossed",
-     "axes"
+     "",
+     "crossed axes"
     ]
    ],
    "story": "Two crossed axes, the tools of a father: father.",
@@ -1694,8 +1706,8 @@
    "exEn": "child",
    "parts": [
     [
-     "a",
-     "baby"
+     "",
+     "a baby"
     ]
    ],
    "story": "A baby wrapped up with its arms out: child.",
@@ -1720,8 +1732,8 @@
    "exEn": "girl",
    "parts": [
     [
-     "a",
-     "woman kneeling"
+     "",
+     "a woman kneeling"
     ]
    ],
    "story": "A woman kneeling with her arms crossed: woman.",
@@ -1775,8 +1787,8 @@
    "exEn": "friend",
    "parts": [
     [
-     "𠂇",
-     "hand"
+     "",
+     "𠂇 hand"
     ],
     [
      "又",
@@ -1835,8 +1847,8 @@
    "exEn": "company",
    "parts": [
     [
-     "𠆢",
-     "umbrella"
+     "",
+     "𠆢 umbrella"
     ],
     [
      "云",
@@ -1911,8 +1923,16 @@
    "exEn": "siblings",
    "parts": [
     [
-     "a",
-     "bow wound with cord"
+     "丷",
+     "horns"
+    ],
+    [
+     "弓",
+     "bow"
+    ],
+    [
+     "丿",
+     "cord"
     ]
    ],
    "story": "A small bow tied with cord for the youngest: younger brother.",
@@ -2014,8 +2034,8 @@
      "grain"
     ],
     [
-     "ム",
-     "private"
+     "",
+     "ム private"
     ]
    ],
    "story": "Grain kept for yourself: I, private.",
@@ -2167,8 +2187,8 @@
      "flag"
     ],
     [
-     "𠂉",
-     ""
+     "",
+     "𠂉"
     ],
     [
      "矢",
@@ -2207,8 +2227,8 @@
    "exEn": "citizens",
    "parts": [
     [
-     "a",
-     "closed eye"
+     "",
+     "a closed eye"
     ]
    ],
    "story": "People with their eyes closed: the people, the nation.",
@@ -2373,11 +2393,11 @@
    "parts": [
     [
      "口",
-     ""
+     "mouth"
     ],
     [
-     "止-ish",
-     "foot"
+     "止",
+     "stop, foot"
     ]
    ],
    "story": "A kneecap over a foot: leg, foot, and to be enough.",
@@ -2900,8 +2920,8 @@
      "steam"
     ],
     [
-     "メ",
-     ""
+     "",
+     "メ"
     ]
    ],
    "story": "Steam rising: spirit, air, mood.",
@@ -3492,8 +3512,8 @@
    "exEn": "spring holiday",
    "parts": [
     [
-     "𡗗",
-     "three people"
+     "",
+     "𡗗 three people"
     ],
     [
      "日",
@@ -3674,8 +3694,8 @@
      "roof"
     ],
     [
-     "ice",
-     "below"
+     "",
+     "ice below"
     ]
    ],
    "story": "A roof with ice gathering underneath: cold.",
@@ -3777,8 +3797,8 @@
    "exEn": "skilful",
    "parts": [
     [
-     "a",
-     "mark above the line"
+     "",
+     "a mark above the line"
     ]
    ],
    "story": "A mark standing above the ground line: up, above.",
@@ -3810,8 +3830,8 @@
    "exEn": "subway",
    "parts": [
     [
-     "a",
-     "mark below the line"
+     "",
+     "a mark below the line"
     ]
    ],
    "story": "A mark hanging under the ceiling line: down, below.",
@@ -3835,8 +3855,8 @@
    "exEn": "left hand",
    "parts": [
     [
-     "𠂇",
-     "hand"
+     "",
+     "𠂇 hand"
     ],
     [
      "工",
@@ -3871,8 +3891,8 @@
    "exEn": "right hand",
    "parts": [
     [
-     "𠂇",
-     "hand"
+     "",
+     "𠂇 hand"
     ],
     [
      "口",
@@ -4097,8 +4117,8 @@
    "exEn": "Kansai",
    "parts": [
     [
-     "a",
-     "basket"
+     "",
+     "a basket"
     ]
    ],
    "story": "A basket over a wall, where the sun sets: west.",
@@ -4129,15 +4149,15 @@
    "parts": [
     [
      "十",
-     ""
+     "ten"
     ],
     [
      "冂",
-     ""
+     "frame"
     ],
     [
-     "a",
-     "bell"
+     "",
+     "a bell inside"
     ]
    ],
    "story": "A cross over a hanging bell, ringing in the warm south.",
@@ -4197,8 +4217,8 @@
    "exEn": "north exit",
    "parts": [
     [
-     "two",
-     "people back to back"
+     "",
+     "two people back to back"
     ]
    ],
    "story": "Two people turning their backs on the cold: north.",
@@ -4532,8 +4552,8 @@
      "box"
     ],
     [
-     "メ",
-     ""
+     "",
+     "メ"
     ]
    ],
    "story": "A box with a cross inside: a ward, a district.",
@@ -5034,8 +5054,8 @@
    "exEn": "kitchen",
    "parts": [
     [
-     "ム",
-     "private"
+     "",
+     "ム private"
     ],
     [
      "口",
@@ -5233,11 +5253,11 @@
     ],
     [
      "𠂉",
-     ""
+     "hair"
     ],
     [
-     "people",
-     ""
+     "",
+     "two people following"
     ]
    ],
    "story": "People following a flag: to travel.",
@@ -5267,8 +5287,8 @@
    "exEn": "boarding place",
    "parts": [
     [
-     "a",
-     "person in a tree"
+     "",
+     "a person in a tree"
     ]
    ],
    "story": "A person climbing a tree: to ride.",
@@ -5563,8 +5583,8 @@
    "exEn": "teacher",
    "parts": [
     [
-     "a",
-     "sprout from the soil"
+     "",
+     "a sprout from the soil"
     ]
    ],
    "story": "A plant springing up from the soil: life, birth.",
@@ -5826,8 +5846,8 @@
    "exEn": "culture",
    "parts": [
     [
-     "a",
-     "crossed pattern"
+     "",
+     "a crossed pattern"
     ]
    ],
    "story": "A pattern on someone's chest: writing.",
@@ -6267,8 +6287,8 @@
      "enclosure"
     ],
     [
-     "a",
-     "sketch"
+     "",
+     "a sketch"
     ]
    ],
    "story": "A frame drawn around a sketch: a map, a plan.",
@@ -6340,8 +6360,8 @@
    "exEn": "lesson",
    "parts": [
     [
-     "a",
-     "musical stand"
+     "",
+     "a musical stand, heavy with ornament"
     ]
    ],
    "story": "A bell stand, the work of a craftsman: business, work.",
@@ -6509,8 +6529,8 @@
    "exEn": "canteen",
    "parts": [
     [
-     "𠆢",
-     "lid"
+     "",
+     "𠆢 lid"
     ],
     [
      "良",
@@ -6652,8 +6672,8 @@
    "exEn": "chicken",
    "parts": [
     [
-     "a",
-     "cut of meat"
+     "",
+     "a cut of meat"
     ]
    ],
    "story": "Ribs on a slab: meat.",
@@ -6715,8 +6735,8 @@
      "grass"
     ],
     [
-     "𠆢",
-     ""
+     "",
+     "𠆢"
     ],
     [
      "木",
@@ -7459,8 +7479,8 @@
      "samurai"
     ],
     [
-     "尸-shape",
-     ""
+     "尸",
+     "flag shape"
     ]
    ],
    "story": "A samurai shouting from the gate: voice.",
@@ -7521,8 +7541,8 @@
    "exEn": "next week",
    "parts": [
     [
-     "a",
-     "tree heavy with grain"
+     "",
+     "a tree heavy with grain"
     ]
    ],
    "story": "A tree bent with fruit that is about to come: to come.",
@@ -8399,8 +8419,8 @@
    "exEn": "university",
    "parts": [
     [
-     "a",
-     "person with arms out"
+     "",
+     "a person with arms out"
     ]
    ],
    "story": "A person who has stopped walking and thrown both arms wide: big.",
@@ -8425,8 +8445,8 @@
    "exEn": "primary school",
    "parts": [
     [
-     "small",
-     "bits"
+     "",
+     "small bits"
     ]
    ],
    "story": "A small stroke with two crumbs falling off: small.",
@@ -8450,8 +8470,8 @@
    "exEn": "high school",
    "parts": [
     [
-     "a",
-     "tall tower"
+     "",
+     "a tall tower"
     ]
    ],
    "story": "A tower with windows on every floor: high, and so expensive.",
@@ -8504,8 +8524,8 @@
    "exEn": "company president",
    "parts": [
     [
-     "long",
-     "hair"
+     "",
+     "long hair"
     ]
    ],
    "story": "An old man with long hair flowing: long, chief.",
@@ -8791,8 +8811,8 @@
      "bow"
     ],
     [
-     "ム",
-     ""
+     "",
+     "ム"
     ],
     [
      "虫",
@@ -8914,8 +8934,8 @@
      "lean-to"
     ],
     [
-     "ム",
-     "private"
+     "",
+     "ム private"
     ]
    ],
    "story": "A lean-to with space for your own things: wide.",
@@ -9141,8 +9161,8 @@
      "earth"
     ],
     [
-     "fire",
-     "below"
+     "",
+     "fire below"
     ]
    ],
    "story": "Earth glowing over a fire: red.",
@@ -9277,11 +9297,11 @@
    "parts": [
     [
      "一",
-     ""
+     "one"
     ],
     [
-     "a",
-     "sprout"
+     "",
+     "a sprout blocked"
     ]
    ],
    "story": "A sprout pushing up and blocked by the ground: not.",
@@ -9303,8 +9323,8 @@
    "exEn": "or more",
    "parts": [
     [
-     "a",
-     "plough"
+     "",
+     "a plough"
     ]
    ],
    "story": "A plough blade and a person: by means of.",
@@ -9453,8 +9473,8 @@
    "exEn": "match, game",
    "parts": [
     [
-     "𠆢",
-     "lid"
+     "",
+     "𠆢 lid"
     ],
     [
      "一",
@@ -9587,8 +9607,8 @@
    "exEn": "meal",
    "parts": [
     [
-     "a",
-     "hand holding a flag"
+     "",
+     "a hand holding a flag"
     ]
    ],
    "story": "A hand holding a tool at work: a matter, a thing.",
@@ -9620,8 +9640,8 @@
      ""
     ],
     [
-     "legs",
-     ""
+     "",
+     "legs"
     ]
    ],
    "story": "Ten eyes looking straight at it: true.",
@@ -9676,8 +9696,8 @@
    "exEn": "world",
    "parts": [
     [
-     "three",
-     "tens"
+     "",
+     "three tens"
     ]
    ],
    "story": "Thirty years: a generation, the world.",
@@ -9877,8 +9897,8 @@
    "exEn": "special",
    "parts": [
     [
-     "another",
-     ""
+     "",
+     "another"
     ],
     [
      "刂",
@@ -9948,8 +9968,8 @@
    "exEn": "famous",
    "parts": [
     [
-     "𠂇",
-     "hand"
+     "",
+     "𠂇 hand"
     ],
     [
      "月",
@@ -9977,8 +9997,8 @@
    "exEn": "errand",
    "parts": [
     [
-     "a",
-     "fence"
+     "",
+     "a fence"
     ]
    ],
    "story": "A bucket in a frame: to use.",
@@ -25554,8 +25574,8 @@
      "stick"
     ],
     [
-     "ユ",
-     "shape"
+     "",
+     "ユ shape"
     ],
     [
      "矢",

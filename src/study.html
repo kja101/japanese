@@ -302,12 +302,12 @@ function pendingLearning(){ const t=Date.now(); let min=Infinity; for(const c of
 // ---------- card rendering ----------
 function storyBlock(k){
   const x=K[k], mine=storyGet(k);
-  const base=x.story?`<p class="story">${esc(x.story)}</p>`:`<p class="story starter">${x.parts.map(([g,m])=>esc(g)+" "+esc(m||"shape")).join(" + ")} → <b>${esc(x.m)}</b><br><span class="muted small">No story yet: picture the parts in one vivid scene, then save it below.</span></p>`;
+  const base=x.story?`<p class="story">${esc(x.story)}</p>`:`<p class="story starter">${x.parts.map(([g,m])=>(g?esc(g)+" ":"")+esc(m||"shape")).join(" + ")} → <b>${esc(x.m)}</b><br><span class="muted small">No story yet: picture the parts in one vivid scene, then save it below.</span></p>`;
   return `${base}<div class="mystory" data-k="${k}">${mine?`<p class="my"><span class="mylab">My story</span>${esc(mine)}</p>`:""}<button class="linkbtn" data-edit="${k}">${mine?"Edit my story":"Write my own story"}</button></div>`;
 }
 function detail(k){
   const x=K[k];
-  const parts=x.parts.map(([g,m])=>`<span class="part"><b>${esc(g)}</b><small>${esc(m)}</small></span>`).join('<span class="op">+</span>');
+  const parts=x.parts.map(([g,m])=>g?`<span class="part"><b>${esc(g)}</b><small>${esc(m)}</small></span>`:`<span class="part"><small>${esc(m)}</small></span>`).join('<span class="op">+</span>');
   return `<div class="det">
    <div class="dhead"><span class="g">${k}</span><div><div class="kw">${esc(x.m)}</div><div class="meta"><span class="lvb">N${x.l}</span> ${esc(CHT[k]||"")}</div></div></div>
    <div class="blk s1"><h4>Shape</h4><div class="eq">${parts}</div>${storyBlock(k)}</div>
