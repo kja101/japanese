@@ -63,6 +63,7 @@ a.kl{color:inherit;text-decoration:none;cursor:pointer}
 a.kl:hover{background:var(--indigo-wash);border-radius:2px}
 @keyframes iflash{0%{box-shadow:0 0 0 3px var(--seal)}100%{box-shadow:0 0 0 3px transparent}}
 .iflash{animation:iflash 2.4s ease-out}
+.backbtn{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;font:inherit;font-weight:600;border:0;border-radius:8px;padding:.6rem 1rem;background:var(--ink);color:var(--paper);box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
 .noresult{display:none;text-align:center;color:var(--muted);padding:2rem}
 .noresult.show{display:block}
 body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
@@ -120,7 +121,7 @@ function render(){
       const ws=D.words.filter(w=>w.g===id&&w.l>=t).sort((a,b)=>b.l-a.l);
       if(!ws.length) return "";
       return `<section class="grp" id="g-${id}"><div class="ghead"><h3><span class="jp">${esc(jp)}</span>${esc(en)} <small>${ws.length} words</small></h3>${blurb?`<p>${esc(blurb)}</p>`:""}${id==="point"?KOSO:""}</div>
-        <div class="cards">${ws.map(w=>`<article class="wc" data-w="${esc(w.w)}" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span>${sayBtn(w.w.replace(/[～〜]/g,""))}<span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${w.note?`<div class="wn">${esc(w.note)}</div>`:""}${exHtml(w)}</article>`).join("")}</div></section>`;
+        <div class="cards">${ws.map(w=>`<article class="wc" id="w-${esc(w.w)}" data-w="${esc(w.w)}" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span>${sayBtn(w.w.replace(/[～〜]/g,""))}<span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${w.note?`<div class="wn">${esc(w.note)}</div>`:""}${exHtml(w)}</article>`).join("")}</div></section>`;
     }).join("");
     if(blocks) h+=`<h2 class="part">${title}</h2>`+blocks;
   });
@@ -149,6 +150,19 @@ document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.cl
 try{ if(localStorage.getItem("rdcol")==="off") document.body.classList.add("no-rdcol"); }catch(e){}
 render();
 initReturnLinks("__FROM__-return",".wc","data-w","iflash");
+// opened from a link such as kana-words.html?from=pb#w-もう: show that word and offer a way back
+(function(){
+  const m=location.hash.match(/^#w-(.+)$/); if(!m) return;
+  const w=decodeURIComponent(m[1]); const x=D.words.find(z=>z.w===w); if(!x) return;
+  if(x.l<+state.tier){ state.tier=String(x.l); save(); render(); }
+  const go=()=>{ const el=document.getElementById("w-"+w); if(!el) return; const c=document.querySelector(".controls");
+    window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12); el.classList.remove("iflash"); void el.offsetWidth; el.classList.add("iflash"); };
+  go(); setTimeout(go,150);
+  const src=(location.search.match(/[?&]from=(\w+)/)||[])[1];
+  const SRC={pb:"← Back to the phrasebook",sb:"← Back to the sentence"}[src];
+  if(SRC){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=SRC; document.body.appendChild(b);
+    b.onclick=()=>{ if(history.length>1) history.back(); else location.href=src==="pb"?"../words/phrasebook.html":"../words/sentence-builder.html"; }; }
+})();
 </script>
 </body>
 </html>

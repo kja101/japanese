@@ -204,7 +204,7 @@ function initParticlePopup(){
 // ---------- kanji links that remember where you left off ----------
 // On a click of a.kl, remember the enclosing item; on coming back with the Back button, scroll to it and flash it.
 function initReturnLinks(storeKey,itemSel,idAttr,flashClass){
-  document.addEventListener("click",e=>{ const a=e.target.closest("a.kl"); if(!a) return; const it=a.closest(itemSel);
+  document.addEventListener("click",e=>{ const a=e.target.closest("a.kl,a.kw"); if(!a) return; const it=a.closest(itemSel);
     try{ sessionStorage.setItem(storeKey,JSON.stringify({id:it?it.getAttribute(idAttr):null,y:window.scrollY})); }catch(err){} });
   let ret=null; try{ ret=JSON.parse(sessionStorage.getItem(storeKey)||"null"); }catch(e){}
   if(!ret) return;
@@ -220,6 +220,41 @@ function initReturnLinks(storeKey,itemSel,idAttr,flashClass){
 const JP_PARTICLE={"は":"wa","を":"o","へ":"e"}, JP_SPECIAL={"こんにちは":"konnichiwa","こんばんは":"konbanwa"};
 function jpRomajiToken(t){ if(JP_PARTICLE[t]) return JP_PARTICLE[t]; if(JP_SPECIAL[t]) return JP_SPECIAL[t];
   if(t.length>2&&t.endsWith("か")&&/[すんた]/.test(t[t.length-2])) return krRomaji(t.slice(0,-1))+" ka"; return krRomaji(t); }
+
+// ---------- kana word links: hiragana and katakana words that have a card on the kana word pages ----------
+// words: {word: "h" | "k"}; base: path to the kana folder; from: short name of this page for the back button.
+const JP_PART_CHARS="はがをにでへともかやねよの";
+function linkKanaWords(roots,words,base,from){
+  const list=Object.keys(words).filter(w=>w.length>=2).sort((a,b)=>b.length-a.length);
+  if(!list.length) return;
+  const isHira=c=>c>="\u3041"&&c<="\u309f", isKata=c=>(c>="\u30a0"&&c<="\u30ff")||c==="ー", isKan=c=>/[\u4e00-\u9fff々]/.test(c);
+  const re=new RegExp(list.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|"),"g");
+  const ok=(text,i,w,prevCh,nextCh)=>{
+    const kata=isKata(w[0]);
+    if(kata) return !isKata(prevCh||"")&&!isKata(nextCh||"");
+    if(prevCh&&(isHira(prevCh)||isKan(prevCh))) return false;   // not okurigana or the middle of a word
+    if(nextCh&&isHira(nextCh)&&!JP_PART_CHARS.includes(nextCh)&&!/^(です|でした|ます|ください|だ|な|に)/.test(text.slice(i+w.length))) return false;
+    return true;
+  };
+  [].forEach.call(roots,root=>{
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest("rt,a,button,.slot")?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
+    const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n=>{
+      const t=n.nodeValue; let m, last=0, out=[]; re.lastIndex=0;
+      const prevText=()=>{ let p=n.previousSibling; while(p&&!p.textContent) p=p.previousSibling; return p?p.textContent.slice(-1):""; };
+      const nextText=()=>{ let p=n.nextSibling; while(p&&!p.textContent) p=p.nextSibling; return p?p.textContent[0]:""; };
+      while((m=re.exec(t))){ const i=m.index, w=m[0];
+        const prevCh=i>0?t[i-1]:prevText(), nextCh=i+w.length<t.length?t[i+w.length]:nextText();
+        if(!ok(t,i,w,prevCh,nextCh)) { re.lastIndex=i+1; continue; }
+        out.push(document.createTextNode(t.slice(last,i)));
+        const a=document.createElement("a"); a.className="kw"; a.textContent=w; a.title="Open "+w+" in "+(words[w]==="k"?"katakana":"kana")+" words";
+        a.href=`${base}${words[w]==="k"?"katakana-words":"kana-words"}.html?from=${from}#w-${encodeURIComponent(w)}`;
+        out.push(a); last=i+w.length; }
+      if(out.length){ out.push(document.createTextNode(t.slice(last))); n.replaceWith(...out); }
+    });
+  });
+}
+(function(){ const st=document.createElement("style"); st.textContent=`a.kw{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}a.kw:hover{background:rgba(127,127,127,.15);border-radius:2px}`; document.head.appendChild(st); })();
 
 // ---------- offline support: register the service worker at the site root ----------
 (function(){ if(!("serviceWorker" in navigator)||location.protocol==="file:") return;

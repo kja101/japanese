@@ -186,6 +186,8 @@ const ROLE={W:"--rW",T:"--rT",P:"--rP",H:"--rH",O:"--rO",V:"--rV",Q:"--rQ"};
 // ---------- blocks, particles and kanji links ----------
 const sbParts=jpChunkParts;
 const KSET=new Set(__KANJI_SET__);
+const KANA_WORDS=__KANA_WORDS__;
+const linkKana=root=>{ if(state.script!=="kana") linkKanaWords(root.querySelectorAll(".jpl .hx"),KANA_WORDS,"../kana/","pb"); };
 const PARTS=new Set(["は","が","を","に","で","へ","と","も","の","か","から","まで","や","ね","よ","には","では","にも","でも"]);
 const TIMEW=/[時日週月年今朝夜晩曜昼]|いつ|何時|あした|きょう/;
 const PLACEW=/^(ここ|そこ|あそこ|どこ|この 近く|近く)$|[駅店家館院局港場所屋社]/;
@@ -308,7 +310,7 @@ function render(){
       return `<section class="ch" id="ch-${c.id}"><div class="chead"><div class="cnum">${i+1}</div><h2><span class="jp">${esc(c.jp)}</span>${esc(c.en)}</h2><div class="cnt">${n?`${n} phrases`:""}${n&&c.sents.length?" · ":""}${c.sents.length?`${c.sents.length} sentences`:""}</div><p>${esc(c.blurb)}</p></div>${c.phr.map(phraseBlock).join("")}${sentBlock(c)}</section>`; }).join("");
   }
   document.getElementById("nav").innerHTML=CH.map(c=>`<a href="#ch-${c.id}"><span class="j">${esc(c.jp)}</span>${esc(c.en)}</a>`).join("");
-  apply(); doSearch();
+  apply(); doSearch(); linkKana(main);
 }
 function apply(){
   document.body.classList.toggle("no-romaji",state.romaji==="off");
@@ -330,7 +332,7 @@ document.getElementById("search").addEventListener("input",doSearch);
 main.addEventListener("click",e=>{
   const st=e.target.closest("[data-star]"); if(st){ const id=st.dataset.star; STARS.has(id)?STARS.delete(id):STARS.add(id); save(); document.querySelectorAll(`[data-star="${CSS.escape(id)}"]`).forEach(b=>b.setAttribute("aria-pressed",STARS.has(id))); if(state.view==="mine") render(); return; }
   const chip=e.target.closest(".chip[data-sec]"); if(chip){ const id=chip.dataset.sec, i=+chip.dataset.i; picked[id]=picked[id]===i?null:i;
-    const sec=CH.flatMap(c=>c.phr).find(s=>s.id===id); const el=document.querySelector(`.blk[data-sec="${id}"]`); const tmp=document.createElement("div"); tmp.innerHTML=phraseBlock(sec); el.replaceWith(tmp.firstElementChild); apply(); doSearch();
+    const sec=CH.flatMap(c=>c.phr).find(s=>s.id===id); const el=document.querySelector(`.blk[data-sec="${id}"]`); const tmp=document.createElement("div"); tmp.innerHTML=phraseBlock(sec); const nb=tmp.firstElementChild; el.replaceWith(nb); apply(); doSearch(); linkKana(nb);
     const again=document.querySelector(`.chip[data-sec="${id}"][data-i="${i}"]`); if(again) again.focus(); return; }
   const it=e.target.closest(".it"); if(it&&state.hide!=="none") it.classList.add("shown");
 });

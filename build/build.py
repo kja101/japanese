@@ -50,6 +50,20 @@ extra = load("sentences-extra.json")  # sentences written for the situation page
 natural_en = load("sentence-builder-english.json")
 KANJI_SET = dump("".join(kanji["K"].keys()))
 
+def kana_word_map():
+    """Hiragana and katakana words that have their own card, for linking from sentences."""
+    out = {}
+    for name, tag in (("kana-words.json", "h"), ("katakana-words.json", "k")):
+        for w in load(name)["words"]:
+            if w.get("g") == "parts":
+                continue
+            key = w["w"].strip("～〜")
+            key = key[:-2] if key.endswith("する") and tag == "k" else key
+            if len(key) >= 2 and "～" not in key and "〜" not in key:
+                out.setdefault(key, tag)
+    return dump(out)
+KANA_WORDS = kana_word_map()
+
 def sentence_builder_sentences():
     """Parse the 120 sentences out of the sentence builder page (its HTML is their source)."""
     page = (SRC / "sentence-builder.html").read_text(encoding="utf-8")
@@ -198,10 +212,10 @@ chapters = load("phrasebook.json")
 for c in chapters:
     c["sents"] = [s for t in c.pop("sb") for s in SB.get(t, [])] + [s for t in c.pop("extra") for s in EXTRA.get(t, [])]
     c.pop("_count_check", None)
-write("words/phrasebook.html", fill("phrasebook.html", DATA=dump(chapters), KANJI_SET=KANJI_SET))
+write("words/phrasebook.html", fill("phrasebook.html", DATA=dump(chapters), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 
 # ---------------------------------------------------------------- sentence builder
-write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET))
+write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 
 # ---------------------------------------------------------------- study plan
 write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
