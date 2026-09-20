@@ -237,10 +237,12 @@ def sentence_records(include_phrases=True, include_grammar=False):
     if include_phrases:
         for c in load("phrasebook.json"):
             for sec in c["phr"]:
-                for line in sec["items"].strip().split("\n"):
+                marks = sec.get("marks", {})
+                for i, line in enumerate(sec["items"].strip().split("\n")):
                     jp, en = line.split("|")[:2]
                     if "___" not in jp:
-                        recs.append(({"n": jp, "en": en}, " ".join(NOTE_RE.sub(r"\1", t) for t in jp.split(" "))))
+                        r = mark({"n": jp, "en": en, **marks.get(str(i), {})})
+                        recs.append((r, " ".join(NOTE_RE.sub(r"\1", t) for t in jp.split(" "))))
     return recs
 
 def kana_words(name="kana-words.json"):
