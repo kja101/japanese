@@ -229,11 +229,13 @@ function linkKanaWords(roots,words,base,from){
   if(!list.length) return;
   const isHira=c=>c>="\u3041"&&c<="\u309f", isKata=c=>(c>="\u30a0"&&c<="\u30ff")||c==="ー", isKan=c=>/[\u4e00-\u9fff々]/.test(c);
   const re=new RegExp(list.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|"),"g");
+  const set=new Set(list);
   const ok=(text,i,w,prevCh,nextCh)=>{
     const kata=isKata(w[0]);
     if(kata) return !isKata(prevCh||"")&&!isKata(nextCh||"");
-    if(prevCh&&(isHira(prevCh)||isKan(prevCh))) return false;   // not okurigana or the middle of a word
-    if(nextCh&&isHira(nextCh)&&!JP_PART_CHARS.includes(nextCh)&&!/^(です|でした|ます|ください|だ|な|に)/.test(text.slice(i+w.length))) return false;
+    if(prevCh&&isKan(prevCh)) return false;                     // okurigana: the tail of a kanji word
+    for(let k=1;k<=3&&i-k>=0;k++){ if(set.has(text.slice(i-k,i+w.length))) return false; }   // inside a longer word
+    if(nextCh&&isHira(nextCh)&&!JP_PART_CHARS.includes(nextCh)&&!/^(です|でした|ます|ました|ません|ください|だ|な|に|て|で)/.test(text.slice(i+w.length))) return false;
     return true;
   };
   [].forEach.call(roots,root=>{

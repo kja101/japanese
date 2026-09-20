@@ -2659,6 +2659,60 @@
    "en": "irresponsible utterance, nonsense",
    "l": 2,
    "g": "desc"
+  },
+  {
+   "w": "ください",
+   "en": "please give me; please do (after a て-form)",
+   "l": 5,
+   "g": "expr"
+  },
+  {
+   "w": "すみません",
+   "en": "excuse me; sorry; thank you",
+   "l": 5,
+   "g": "greet"
+  },
+  {
+   "w": "おやすみなさい",
+   "en": "good night",
+   "l": 5,
+   "g": "greet"
+  },
+  {
+   "w": "いらっしゃいませ",
+   "en": "welcome (said by shop staff)",
+   "l": 4,
+   "g": "greet"
+  },
+  {
+   "w": "たくさん",
+   "en": "a lot, plenty",
+   "l": 5,
+   "g": "degree"
+  },
+  {
+   "w": "すぐ",
+   "en": "at once, right away",
+   "l": 5,
+   "g": "time"
+  },
+  {
+   "w": "など",
+   "en": "and so on, et cetera",
+   "l": 4,
+   "g": "link"
+  },
+  {
+   "w": "だいたい",
+   "en": "roughly, more or less",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "ぜひ",
+   "en": "by all means, do (please)",
+   "l": 4,
+   "g": "manner"
   }
  ],
  "parts": [
