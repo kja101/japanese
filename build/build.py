@@ -47,6 +47,9 @@ kanji = load("kanji.json")            # K, CH, LV, P for all N5-N2 kanji
 words = load("kanji-words.json")      # words for every kanji, grouped by reading
 readings = load("readings.json")      # reading dictionary for the on/kun engine
 extra = load("sentences-extra.json")  # sentences written for the situation page
+for _lv in (5, 4, 3, 2):                  # sentences written to cover words and kanji, level by level
+    if (DATA / f"sentences-n{_lv}.json").exists():
+        extra += load(f"sentences-n{_lv}.json")
 natural_en = load("sentence-builder-english.json")
 KANJI_SET = dump("".join(kanji["K"].keys()))
 
@@ -100,6 +103,56 @@ def words_for(k):
     return {"r": [[x["t"], x["label"], x["words"]] for x in w["readings"]], "sp": w["sp"],
             "al": [al["w"], al["r"], al["t"]] if al else None}
 
+I_ROW = "いきしちにひみりぎじびぴ"
+E_ROW = "えけせてねへめれげぜべぺ"
+
+GODAN = {"う": ("い", "わ", "っ"), "く": ("き", "か", "い"), "ぐ": ("ぎ", "が", "い"), "す": ("し", "さ", "し"), "つ": ("ち", "た", "っ"),
+         "ぬ": ("に", "な", "ん"), "ぶ": ("び", "ば", "ん"), "む": ("み", "ま", "ん"), "る": ("り", "ら", "っ")}
+END = r"(?![\u3041-\u309f])|(?=[はがをにでへともかやねよの][^\u3041-\u309f]|です|でした|ので|のに|と)"
+
+HONORIFIC_I = {"いらっしゃる", "なさる", "くださる", "おっしゃる"}   # ます-stem in い: いらっしゃいます
+
+def word_pattern(key, group):
+    """A regex that finds a kana word in a sentence, including the usual conjugated forms of verbs and adjectives."""
+    r = word_regex(key, group)
+    return re.compile(r)
+
+def spaced(s):
+    """Escape a word so it still matches when learner spacing splits it (おいでに なります)."""
+    return r"\s?".join(re.escape(c) for c in s)
+
+def word_regex(key, group):
+    kata = r"[\u30a0-\u30ffー]"
+    # not straight after a kanji or inside a hiragana word, but fine after a particle or a て-form (…は とても, …て もう)
+    before = r"(?<![\u4e00-\u9fff" + "".join(c for c in map(chr, range(0x3041, 0x30a0)) if c not in "はがをにでへともかやねよのてた、。") + r"])"
+    if key.endswith("する"):                                  # する, コピーする, びっくりする
+        stem = key[:-2]
+        edge = r"(?<!" + kata + ")" if stem and re.match(kata, stem[0]) else before[:-2] + r"\u30a0-\u30ffー])"
+        return (edge + spaced(stem) + r"\s*(?:する|します|しま|した|して|しない|させ|される|しよう|すれ)")
+    if re.fullmatch(kata + "+", key):                          # katakana: whole words only (カー is not in カード)
+        return (r"(?<!" + kata + ")" + re.escape(key) + r"(?!" + kata + ")")
+    if group == "verb" and key[-1] in GODAN:
+        stem = spaced(key[:-1])
+        if key[-1] == "る" and len(key) >= 3 and key[-2] in I_ROW + E_ROW:   # る-verb
+            forms = r"(?:る|ます|まし|ません|て|た|ない|なかっ|られ|よう|れば)"
+            return (before + stem + forms)
+        i, a, t = GODAN[key[-1]]
+        if key in HONORIFIC_I:
+            i = "い"
+        te = ("て" if t in "いし" else "で") if key[-1] in "ぐぬぶむ" else "て"
+        ta = "だ" if key[-1] in "ぐぬぶむ" else "た"
+        forms = r"(?:" + "|".join([i + "ま", i + "たい", i + "ながら", t + te, t + ta, a + "な", a + "れ", a + "せ", re.escape(key[-1]) + "(?:" + END + ")"]) + ")"
+        if key == "いく" or key == "行く":
+            forms = forms.replace("いて", "って").replace("いた", "った")
+        return (before + stem + forms)
+    if group == "desc" and key.endswith("い") and len(key) >= 3:        # い-adjective
+        return (before + spaced(key[:-1]) + r"(?:くな|かっ|くて|ければ|い(?:" + END + "))")
+    if len(key) <= 2:                                                   # short words: must stand alone
+        return (before + spaced(key) + r"(?:" + END + ")")
+    if len(key) >= 3:
+        return (before + spaced(key))
+    return (before + spaced(key) + r"(?:" + END + ")")
+
 def kana_words(name="kana-words.json"):
     """Kana words plus one example sentence each, found in the site's own sentences."""
     data = load(name)
@@ -119,15 +172,19 @@ def kana_words(name="kana-words.json"):
                 if "___" in jp:
                     continue
                 corpus.append(([(plain(t), kana(t)) for t in jp.split(" ")], en))
+    allkeys = [w["w"].strip("～〜") for w in data["words"]]
     for w in data["words"]:
         key = w["w"].strip("～〜")
         if len(key) < 2:
             continue
-        if re.fullmatch(r"[\u30a0-\u30ffー]+", key):   # katakana: match whole words only (カー is not in カード)
-            pat = re.compile(r"(?<![\u30a0-\u30ffー])" + re.escape(key) + r"(?![\u30a0-\u30ffー])")
-        else:
-            pat = re.compile(r"(?<![\u4e00-\u9fff])" + re.escape(key))
-        hits = [(p, en) for p, en in corpus if pat.search("".join(k for k, _ in p))]
+        pat = word_pattern(key, w.get("g", ""))
+        longer = [o for o in allkeys if len(o) > len(key) and o.startswith(key)]
+        def found(text):
+            for m in pat.finditer(text):
+                if not any(text.startswith(o, m.start()) for o in longer):   # いつ is not the いつ in いつも
+                    return True
+            return False
+        hits = [(p, en) for p, en in corpus if found(" ".join(k for k, _ in p))]
         if hits:
             p, en = min(hits, key=lambda h: len("".join(k for k, _ in h[0])))
             w["ex"] = {"p": p, "en": en}
@@ -189,8 +246,31 @@ print("Building:")
 write("assets/common.js", (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings)))
 
 # ---------------------------------------------------------------- master deck
+def kanji_sentences(limit=3):
+    """Up to three short sentences for each kanji, easiest first, from all the site's sentences."""
+    NOTE = re.compile(r"([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}")
+    LV = kanji["LV"]
+    corpus = []
+    for sents in SB.values():
+        for s in sents:
+            corpus.append((list(zip(s["kj"], s["kn"])), s["en"], " ".join(s["rj"])))
+    for s in extra:
+        corpus.append(([(NOTE.sub(r"\1", t), NOTE.sub(r"\2", t)) for t in s["n"].split(" ")], s["en"], ""))
+    for g in load("grammar.json"):
+        for e in g["ex"]:
+            corpus.append(([(NOTE.sub(r"\1", t), NOTE.sub(r"\2", t)) for t in e["n"].split(" ")], e["en"], ""))
+    out = {}
+    for p, en, rom in corpus:
+        text = "".join(k for k, _ in p)
+        ks = [c for c in text if "\u4e00" <= c <= "\u9fff"]
+        lvl = min([LV.get(c, 1) for c in ks] or [5])
+        for c in set(ks):
+            if c in LV:
+                out.setdefault(c, []).append((lvl, len(text), p, en, rom))
+    return {k: [[p, en, lvl, rom] for lvl, _, p, en, rom in sorted(v, key=lambda x: (-x[0], x[1]))[:limit]] for k, v in out.items()}
+
 write("kanji/master-kanji-shapes.html",
-      fill("master.html", DATA=dump({"K": kanji["K"], "CH": kanji["CH"], "LV": kanji["LV"], "W": words, "P": kanji["P"]})))
+      fill("master.html", DATA=dump({"K": kanji["K"], "CH": kanji["CH"], "LV": kanji["LV"], "W": words, "P": kanji["P"], "S": kanji_sentences()})))
 
 # ---------------------------------------------------------------- kanji by situation
 sit = load("situation.json")

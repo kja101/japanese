@@ -1,0 +1,471 @@
+[
+ {
+  "id": "L5-0",
+  "topic": "t10",
+  "n": "四月{しがつ} から 大学{だいがく} の クラス が 始{はじ}まります",
+  "en": "Classes at university start in April",
+  "why": ""
+ },
+ {
+  "id": "L5-1",
+  "topic": "t10",
+  "n": "毎朝{まいあさ} 八時{はちじ} に 家{いえ} を 出{で}ます",
+  "en": "I leave home at eight every morning",
+  "why": ""
+ },
+ {
+  "id": "L5-2",
+  "topic": "t3",
+  "n": "この ペン は 百円{ひゃくえん} です",
+  "en": "This pen is 100 yen",
+  "why": ""
+ },
+ {
+  "id": "L5-3",
+  "topic": "t3",
+  "n": "この 時計{とけい} は 一万円{いちまんえん} です",
+  "en": "This watch is 10,000 yen",
+  "why": ""
+ },
+ {
+  "id": "L5-4",
+  "topic": "t10",
+  "n": "午後{ごご} 三時{さんじ} に 会{あ}いましょう",
+  "en": "Let's meet at 3 p.m.",
+  "why": ""
+ },
+ {
+  "id": "L5-5",
+  "topic": "t10",
+  "n": "今{いま} 四時{よじ} 半{はん} です",
+  "en": "It's half past four",
+  "why": ""
+ },
+ {
+  "id": "L5-6",
+  "topic": "t8",
+  "n": "あの 男{おとこ} の 人{ひと} は だれ ですか",
+  "en": "Who is that man?",
+  "why": ""
+ },
+ {
+  "id": "L5-7",
+  "topic": "t4",
+  "n": "口{くち} を 大{おお}きく 開{あ}けて ください",
+  "en": "Please open your mouth wide",
+  "why": ""
+ },
+ {
+  "id": "L5-8",
+  "topic": "t4",
+  "n": "目{め} が 痛{いた}い です",
+  "en": "My eyes hurt",
+  "why": ""
+ },
+ {
+  "id": "L5-9",
+  "topic": "t4",
+  "n": "おじいさん は 耳{みみ} が 少{すこ}し 遠{とお}い です",
+  "en": "My grandfather is a little hard of hearing",
+  "why": ""
+ },
+ {
+  "id": "L5-10",
+  "topic": "t11",
+  "n": "庭{にわ} に 大{おお}きな 木{き} が あります",
+  "en": "There's a big tree in the garden",
+  "why": ""
+ },
+ {
+  "id": "L5-11",
+  "topic": "t10",
+  "n": "土曜日{どようび} は 学校{がっこう} が 休{やす}み です",
+  "en": "School is off on Saturdays",
+  "why": ""
+ },
+ {
+  "id": "L5-12",
+  "topic": "t6",
+  "n": "外{そと} は 寒{さむ}い です から、 セーター を 着{き}て ください",
+  "en": "It's cold outside, so put a sweater on",
+  "why": ""
+ },
+ {
+  "id": "L5-13",
+  "topic": "t12",
+  "n": "駅{えき} の 西口{にしぐち} で 待{ま}って います",
+  "en": "I'll wait at the west exit of the station",
+  "why": ""
+ },
+ {
+  "id": "L5-14",
+  "topic": "t11",
+  "n": "南{みなみ} の 島{しま} へ 行{い}きたい です",
+  "en": "I want to go to a southern island",
+  "why": ""
+ },
+ {
+  "id": "L5-15",
+  "topic": "t12",
+  "n": "北{きた} は あっち です",
+  "en": "North is that way",
+  "why": ""
+ },
+ {
+  "id": "L5-16",
+  "topic": "t9",
+  "n": "ああ、 そう です か",
+  "en": "Oh, is that so?",
+  "why": ""
+ },
+ {
+  "id": "L5-17",
+  "topic": "t12",
+  "n": "お手洗{てあら}い は あちら です",
+  "en": "The toilets are that way",
+  "why": ""
+ },
+ {
+  "id": "L5-18",
+  "topic": "t12",
+  "n": "あれ は 何{なん} の 建物{たてもの} ですか",
+  "en": "What's that building over there?",
+  "why": ""
+ },
+ {
+  "id": "L5-19",
+  "topic": "t1",
+  "n": "コーヒー は いかが ですか",
+  "en": "Would you like some coffee?",
+  "why": ""
+ },
+ {
+  "id": "L5-20",
+  "topic": "t10",
+  "n": "誕生日{たんじょうび} は いつ ですか",
+  "en": "When is your birthday?",
+  "why": ""
+ },
+ {
+  "id": "L5-21",
+  "topic": "t6",
+  "n": "うち に 来{き}ませんか",
+  "en": "Why don't you come round to my place?",
+  "why": ""
+ },
+ {
+  "id": "L5-22",
+  "topic": "t9",
+  "n": "ええ、 いい です よ",
+  "en": "Yes, that's fine",
+  "why": ""
+ },
+ {
+  "id": "L5-23",
+  "topic": "t8",
+  "n": "おばあさん は 毎日{まいにち} 散歩{さんぽ} を します",
+  "en": "My grandmother goes for a walk every day",
+  "why": ""
+ },
+ {
+  "id": "L5-24",
+  "topic": "t10",
+  "n": "おととし 日本{にほん} へ 行{い}きました",
+  "en": "I went to Japan the year before last",
+  "why": ""
+ },
+ {
+  "id": "L5-25",
+  "topic": "t12",
+  "n": "おまわりさん に 道{みち} を 聞{き}きました",
+  "en": "I asked a police officer the way",
+  "why": ""
+ },
+ {
+  "id": "L5-26",
+  "topic": "t5",
+  "n": "駅{えき} まで 十分{じゅっぷん} かかります",
+  "en": "It takes ten minutes to the station",
+  "why": ""
+ },
+ {
+  "id": "L5-27",
+  "topic": "t8",
+  "n": "友達{ともだち} に 電話{でんわ} を かけました",
+  "en": "I called my friend",
+  "why": ""
+ },
+ {
+  "id": "L5-28",
+  "topic": "t3",
+  "n": "この かばん は 重{おも}い です",
+  "en": "This bag is heavy",
+  "why": ""
+ },
+ {
+  "id": "L5-29",
+  "topic": "t3",
+  "n": "帽子{ぼうし} を かぶって ください",
+  "en": "Please put your hat on",
+  "why": ""
+ },
+ {
+  "id": "L5-30",
+  "topic": "t12",
+  "n": "こっち へ 来{き}て ください",
+  "en": "Come over here, please",
+  "why": ""
+ },
+ {
+  "id": "L5-31",
+  "topic": "t9",
+  "n": "こんな 所{ところ} に 店{みせ} が あります ね",
+  "en": "Fancy a shop in a place like this",
+  "why": ""
+ },
+ {
+  "id": "L5-32",
+  "topic": "t9",
+  "n": "さあ、 行{い}きましょう",
+  "en": "Right, let's go",
+  "why": ""
+ },
+ {
+  "id": "L5-33",
+  "topic": "t9",
+  "n": "安{やす}い です。 しかし、 あまり おいしく ない です",
+  "en": "It's cheap. However, it isn't very tasty",
+  "why": ""
+ },
+ {
+  "id": "L5-34",
+  "topic": "t12",
+  "n": "トイレ は そこ です",
+  "en": "The toilet is there",
+  "why": ""
+ },
+ {
+  "id": "L5-35",
+  "topic": "t12",
+  "n": "そちら は 雨{あめ} ですか",
+  "en": "Is it raining where you are?",
+  "why": ""
+ },
+ {
+  "id": "L5-36",
+  "topic": "t12",
+  "n": "そっち の 方{ほう} が 近{ちか}い です",
+  "en": "That way is closer",
+  "why": ""
+ },
+ {
+  "id": "L5-37",
+  "topic": "t12",
+  "n": "駅{えき} の そば に 銀行{ぎんこう} が あります",
+  "en": "There's a bank near the station",
+  "why": ""
+ },
+ {
+  "id": "L5-38",
+  "topic": "t10",
+  "n": "朝{あさ}ご飯{はん} を 食{た}べて、 それから 学校{がっこう} へ 行{い}きます",
+  "en": "I have breakfast and then go to school",
+  "why": ""
+ },
+ {
+  "id": "L5-39",
+  "topic": "t9",
+  "n": "それでは、 また 明日{あした}",
+  "en": "Well then, see you tomorrow",
+  "why": ""
+ },
+ {
+  "id": "L5-40",
+  "topic": "t9",
+  "n": "では、 始{はじ}めましょう",
+  "en": "Right then, let's begin",
+  "why": ""
+ },
+ {
+  "id": "L5-41",
+  "topic": "t12",
+  "n": "駅{えき} は どっち ですか",
+  "en": "Which way is the station?",
+  "why": ""
+ },
+ {
+  "id": "L5-42",
+  "topic": "t8",
+  "n": "どなた ですか",
+  "en": "Who is it? (polite)",
+  "why": ""
+ },
+ {
+  "id": "L5-43",
+  "topic": "t9",
+  "n": "なぜ 日本語{にほんご} を 勉強{べんきょう} して いますか",
+  "en": "Why are you studying Japanese?",
+  "why": ""
+ },
+ {
+  "id": "L5-44",
+  "topic": "t3",
+  "n": "新{あたら}しい ズボン を はきました",
+  "en": "I put on my new trousers",
+  "why": ""
+ },
+ {
+  "id": "L5-45",
+  "topic": "t1",
+  "n": "この 店{みせ} の ラーメン は まずい です",
+  "en": "The ramen at this shop is awful",
+  "why": ""
+ },
+ {
+  "id": "L5-46",
+  "topic": "t8",
+  "n": "もしもし、 田中{たなか} です",
+  "en": "Hello, this is Tanaka (on the phone)",
+  "why": ""
+ },
+ {
+  "id": "L5-47",
+  "topic": "t7",
+  "n": "宿題{しゅくだい} を やりました か",
+  "en": "Did you do your homework?",
+  "why": ""
+ },
+ {
+  "id": "L5-48",
+  "topic": "t9",
+  "n": "ゆっくりと 話{はな}して ください",
+  "en": "Please speak slowly",
+  "why": ""
+ },
+ {
+  "id": "L5-49",
+  "topic": "t12",
+  "n": "りっぱ な お寺{てら} です ね",
+  "en": "What a splendid temple",
+  "why": ""
+ },
+ {
+  "id": "L5-50",
+  "topic": "t1",
+  "n": "カップ に お茶{ちゃ} を 入{い}れます",
+  "en": "I pour tea into a cup",
+  "why": ""
+ },
+ {
+  "id": "L5-51",
+  "topic": "t1",
+  "n": "コップ に 水{みず} を ください",
+  "en": "A glass of water, please",
+  "why": ""
+ },
+ {
+  "id": "L5-52",
+  "topic": "t3",
+  "n": "肉{にく} を 三百{さんびゃく} グラム ください",
+  "en": "300 grams of meat, please",
+  "why": ""
+ },
+ {
+  "id": "L5-53",
+  "topic": "t9",
+  "n": "好{す}き な スポーツ は 何{なん} ですか",
+  "en": "What's your favourite sport?",
+  "why": ""
+ },
+ {
+  "id": "L5-54",
+  "topic": "t13",
+  "n": "ゼロ から 始{はじ}めましょう",
+  "en": "Let's start from zero",
+  "why": ""
+ },
+ {
+  "id": "L5-55",
+  "topic": "t6",
+  "n": "テーブル の 上{うえ} に 新聞{しんぶん} が あります",
+  "en": "There's a newspaper on the table",
+  "why": ""
+ },
+ {
+  "id": "L5-56",
+  "topic": "t9",
+  "n": "古{ふる}い テープ と レコード が たくさん あります",
+  "en": "I have lots of old tapes and records",
+  "why": ""
+ },
+ {
+  "id": "L5-57",
+  "topic": "t9",
+  "n": "昔{むかし} は テープレコーダー で 音楽{おんがく} を 聞{き}きました",
+  "en": "I used to listen to music on a tape recorder",
+  "why": ""
+ },
+ {
+  "id": "L5-58",
+  "topic": "t9",
+  "n": "カメラ に フィルム を 入{い}れました",
+  "en": "I put film in the camera",
+  "why": ""
+ },
+ {
+  "id": "L5-59",
+  "topic": "t7",
+  "n": "十{じゅう} ページ まで 読{よ}んで ください",
+  "en": "Please read up to page 10",
+  "why": ""
+ },
+ {
+  "id": "L5-60",
+  "topic": "t7",
+  "n": "ボールペン で 名前{なまえ} を 書{か}いて ください",
+  "en": "Please write your name in ballpoint pen",
+  "why": ""
+ },
+ {
+  "id": "L5-61",
+  "topic": "t3",
+  "n": "シャツ の ボタン が 取{と}れました",
+  "en": "A button has come off my shirt",
+  "why": ""
+ },
+ {
+  "id": "L5-62",
+  "topic": "t2",
+  "n": "マッチ で ろうそく に 火{ひ} を つけました",
+  "en": "I lit the candle with a match",
+  "why": ""
+ },
+ {
+  "id": "L5-63",
+  "topic": "t11",
+  "n": "この プール は 五十{ごじゅう} メートル です",
+  "en": "This pool is 50 metres long",
+  "why": ""
+ },
+ {
+  "id": "L5-64",
+  "topic": "t7",
+  "n": "会社{かいしゃ} に 白{しろ}い ワイシャツ を 着{き}て 行{い}きます",
+  "en": "I wear a white shirt to work",
+  "why": ""
+ },
+ {
+  "id": "L5-65",
+  "topic": "t5",
+  "n": "左{ひだり} に 曲{ま}がって ください",
+  "en": "Please turn left",
+  "why": ""
+ },
+ {
+  "id": "L5-66",
+  "topic": "t4",
+  "n": "右{みぎ} の 手{て} を 上{あ}げて ください",
+  "en": "Please raise your right hand",
+  "why": ""
+ }
+]

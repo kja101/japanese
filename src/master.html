@@ -119,6 +119,13 @@ a.bdk:hover,a.bdk:focus-visible{border-color:var(--indigo);outline:none}
 .bdk.self{background:var(--indigo-wash)}
 .bd .op{font-size:.8rem}
 details.more summary{cursor:pointer;font-size:.85rem;color:var(--indigo);margin:.1rem 0 .3rem}
+.ksent{margin-top:.8rem;padding-top:.5rem;border-top:1px dashed var(--rule)}
+.ksent h5{margin:0 0 .2rem;font-size:.85rem;color:var(--muted)}
+.ksent p{margin:.25rem 0}
+.ksent .kj{font-family:var(--jp);font-size:1.12rem;line-height:2}
+.ksent .kj rt{font-size:.5em}
+.ksent .rj{display:block;margin:0}
+.ksent .ke{display:block;color:var(--muted);font-size:.93rem}
 .jhint{margin:.2rem 0 0;font-size:.82rem;color:var(--muted)}
 @keyframes flash{0%{background:var(--seal-wash)}100%{background:transparent}}
 .flash{animation:flash 2.2s ease-out}
@@ -327,6 +334,12 @@ function readingsHtml(x){
     <p class="jhint">Each compound is listed on the card of every kanji in it. The line under a word shows which reading each kanji takes; tap any kanji there, or in the word, to flip to that kanji's card at the same word.</p>
     ${rare.length?`<p class="rare">Also: ${rare.slice(0,6).map(r=>`<span class="${r.t==="on"?"rdv-on":"rdv-kun"}">${esc(r.label)}</span>${later(r)}`).join("、")}${rare.some(r=>!later(r))?" (rare)":""}</p>`:""}`;
 }
+function sentencesHtml(x){
+  const ss=((D.S||{})[x.k]||[]).filter(s=>s[2]>=T()).slice(0,2);
+  if(!ss.length) return "";
+  return `<div class="ksent"><h5>In a sentence</h5>${ss.map(([p,en,lv,rom])=>{ const jp=p.map(([k,kn])=>/[\u4e00-\u9fff]/.test(k)?linkify(rdWord(k,kn,"ruby"),x.k,""):esc(k)).join(" ");
+    return `<p><span class="kj">${jp}</span>${sayBtn(p.map(q=>q[0]).join(""))}<span class="rj">${esc(rom||p.map(q=>jpRomajiToken(q[1])).join(" ").replace(/ ,/g,","))}</span>${H(esc(en),"span","ke")}</p>`; }).join("")}</div>`;
+}
 function headPron(x){
   const a=WD[x.k].alone, p=PR[x.k]; const src=a||p; if(!src||!src.r) return "";
   const cls=src.t==="on"?"rdv-on":"rdv-kun";
@@ -344,7 +357,7 @@ function kanjiSteps(x){
   return `
   <div class="step s1"><div class="stag"><i>1</i>Shape</div><div class="sbody">${eq}${storyHtml(x)}</div></div>
   <div class="step s2"><div class="stag"><i>2</i>Look-alikes</div><div class="sbody">${(()=>{ const tr=x.traps.filter(z=>(z[2]||5)>=T()); return tr.length?`<div class="traps">${tr.map(([g,n])=>`<div class="trap">${vis(g)?`<a class="g" href="#k-${g}" data-jump="${g}" data-from="${x.k}">${esc(g)}</a>`:`<span class="g">${esc(g)}</span>`}<span>${esc(n)}</span></div>`).join("")}</div>`:`<span class="none">No close look-alikes at this level.</span>`; })()}</div></div>
-  <div class="step s3"><div class="stag"><i>3</i>Readings and words</div><div class="sbody">${readingsHtml(x)}</div></div>`;
+  <div class="step s3"><div class="stag"><i>3</i>Readings and words</div><div class="sbody">${readingsHtml(x)}${sentencesHtml(x)}</div></div>`;
 }
 function kanjiCard(x){
   return `<article class="kc" id="k-${x.k}" data-l="${x.l}">
