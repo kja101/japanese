@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Japanese study tools: kanji, vocabulary and sentences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F5F1;--sheet:#FFFFFF;--ink:#1D2433;--muted:#646B78;--rule:#DCDFE5;--seal:#B3261E;--indigo:#2C3E73;--indigo-wash:#E9EDF7;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;--en:"Source Sans 3","Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme: dark){:root{--paper:#15181F;--sheet:#1C2029;--ink:#E6E8EE;--muted:#9AA1AD;--rule:#2E3340;--seal:#F2837B;--indigo:#8FA6E8;--indigo-wash:#232B40}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+main{max-width:900px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2.2rem,7vw,3.6rem);margin:0;line-height:1.1}
+.sub{color:var(--muted);max-width:62ch;margin:.7rem 0 0}
+h2{font-size:1.15rem;margin:2.4rem 0 .8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem}
+a.card{display:block;text-decoration:none;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:1rem 1.1rem}
+a.card:hover,a.card:focus-visible{border-color:var(--indigo);outline:none}
+a.card.start{border-color:var(--seal);border-width:2px}
+.card .jp{font-family:var(--jp);font-size:1.6rem;line-height:1.2;display:block}
+.card b{display:block;margin:.3rem 0 .2rem}
+.card span.d{color:var(--muted);font-size:.93rem}
+.tag{display:inline-block;font-size:.72rem;color:var(--seal);border:1px solid var(--seal);border-radius:3px;padding:0 .35rem;margin-left:.3rem;vertical-align:.15em}
+footer{max-width:900px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);font-size:.88rem}
+footer p{max-width:70ch}
+footer a{color:var(--indigo)}
+</style>
+</head>
+<body>
+<main>
+  <h1>日本語</h1>
+  <p class="sub">Free, open study tools for Japanese, from first kana to the N2 kanji. Everything runs in the browser, works offline once loaded, and saves your progress on your own device.</p>
+
+  <h2>Kanji</h2>
+  <div class="grid">
+    <a class="card start" href="kanji/master-kanji-shapes.html"><span class="jp">マスター漢字</span><b>Master kanji shapes, N5 to N2 <span class="tag">Start here</span></b><span class="d">All 981 kanji in shape families, with a level switch. Stories, look-alikes, on and kun readings with real words, sound maps and flashcards.</span></a>
+    <a class="card" href="kanji/learn-n5-n4.html"><span class="jp">学習</span><b>Learn N5 and N4 with spaced repetition</b><span class="d">The method explained, plus flashcards that schedule every review for you. 10 new kanji a day.</span></a>
+    <a class="card" href="kanji/kanji-by-shape-sound-topic.html"><span class="jp">漢字</span><b>N5 and N4 by shape, sound and topic</b><span class="d">The same 284 kanji sorted three ways, including the parts that give away the sound.</span></a>
+    <a class="card" href="kanji/kanji-by-situation.html"><span class="jp">場面</span><b>Kanji by situation</b><span class="d">N4 kanji grouped by where you meet them: the restaurant, the station, the pharmacy.</span></a>
+    <a class="card" href="kanji/master-kanji-shapes-n5-n4.html"><span class="jp">基本</span><b>Master kanji shapes, N5 and N4 only</b><span class="d">The earlier, lighter edition of the shapes deck.</span></a>
+  </div>
+
+  <h2>Words and sentences</h2>
+  <div class="grid">
+    <a class="card" href="words/vocab-sheets.html"><span class="jp">単語</span><b>Vocabulary sheets</b><span class="d">Common nouns, verbs and adjectives by topic, grouped by shared kanji.</span></a>
+    <a class="card" href="words/phrase-guide.html"><span class="jp">フレーズ</span><b>Phrase guide</b><span class="d">Travel and everyday phrases as frames: tap a word and it drops into every slot.</span></a>
+    <a class="card" href="words/sentence-builder.html"><span class="jp">文</span><b>Sentence builder</b><span class="d">120 sentences broken into colour-coded blocks, so you can see how Japanese word order works.</span></a>
+  </div>
+
+  <h2>Kana</h2>
+  <div class="grid">
+    <a class="card" href="kana/kana-sounds.html"><span class="jp">かな</span><b>Kana sounds</b><span class="d">Every sign and the signs built from it, the ones that sound the same, and words that share a sound.</span></a>
+  </div>
+</main>
+<footer>
+  <p>Readings are colour-coded the same way everywhere: indigo for on readings (from Chinese), green for kun readings (native Japanese), red dotted for special whole-word readings.</p>
+  <p>Data sources and licences are listed in the repository README. JLPT has not published official lists since 2010, so every level here is a guide.</p>
+</footer>
+</body>
+</html>

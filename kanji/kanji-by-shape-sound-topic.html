@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N5 and N4 kanji: by shape, by sound, by topic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F5F1; --sheet:#FFFFFF; --ink:#1D2433; --muted:#646B78; --rule:#DCDFE5;
+  --seal:#B3261E; --seal-wash:#FBEDEC; --chip:#E7E9EF; --indigo:#2C3E73; --indigo-wash:#E9EDF7;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --en:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+    --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+  --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.45}
+header{max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem 1rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2.2rem,7vw,3.6rem);margin:0;line-height:1.1;letter-spacing:.02em}
+.sub{margin:.6rem 0 0;color:var(--muted);max-width:64ch}
+.controls{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+.controls-inner{max-width:1040px;margin:0 auto;padding:.6rem 1.25rem;display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:center}
+.seg{display:flex;background:var(--chip);border-radius:8px;padding:3px}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.9rem;padding:.3rem .65rem;border-radius:6px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);font-weight:600;box-shadow:0 0 0 1px var(--rule)}
+nav.topics{max-width:1040px;margin:0 auto;padding:0 1.25rem .6rem;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+nav.topics a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.88rem;padding:.25rem .65rem;border:1px solid var(--rule);border-radius:999px;background:var(--sheet)}
+nav.topics a .j{font-family:var(--jp);margin-right:.3rem}
+button:focus-visible,a:focus-visible,.card:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+main{max-width:1040px;margin:0 auto;padding:1rem 1.25rem 4rem}
+h2.part{font-family:var(--jp);font-weight:600;font-size:1.6rem;margin:2rem 0 .2rem}
+h2.part span{font-family:var(--en);font-weight:400;font-size:1rem;color:var(--muted);margin-left:.6rem}
+p.partnote{margin:0 0 .6rem;color:var(--muted);max-width:64ch}
+section.sheet{background:var(--sheet);border:1px solid var(--rule);border-radius:4px;margin:1.1rem 0;padding:1.3rem 1.4rem 1.2rem;scroll-margin-top:110px}
+.shead{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.seal{font-family:var(--jp);font-size:2.2rem;line-height:1;min-width:3.4rem;height:3.4rem;padding:0 .35rem;display:grid;place-items:center;border:2px solid var(--seal);color:var(--seal);border-radius:6px}
+.shead .t{display:flex;flex-direction:column}
+.shead .t b{font-size:1.15rem}
+.shead .t span{color:var(--muted);font-size:.9rem}
+.tier{font-size:.78rem;color:var(--indigo);background:var(--indigo-wash);border-radius:4px;padding:.05rem .4rem;margin-left:.4rem;font-weight:400}
+.fnote{margin:.6rem 0 0;font-size:.9rem;color:var(--seal);max-width:64ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.6rem;margin-top:1rem}
+.card{border:1px solid var(--rule);border-radius:6px;background:var(--paper);padding:.65rem .75rem;display:grid;grid-template-columns:auto 1fr;column-gap:.7rem;align-content:start}
+.card .kj{font-family:var(--jp);font-size:2.7rem;line-height:1.05;grid-row:span 2}
+.card .mean{font-weight:600;line-height:1.25}
+.lvl{font-size:.72rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted);justify-self:start;align-self:start;margin-top:.2rem}
+.reads{grid-column:1/-1;margin-top:.45rem;font-size:.95rem;display:grid;grid-template-columns:auto 1fr;gap:.1rem .5rem;align-items:baseline}
+.reads .lab{font-size:.72rem;color:var(--muted)}
+.reads .v{font-family:var(--jp)}
+.reads .ok{color:var(--muted);opacity:.8}
+.reads .rj{font-family:var(--en);font-style:italic;color:var(--muted);font-size:.8rem;margin-left:.2rem}
+.no-romaji .rj{display:none}
+.ex{grid-column:1/-1;margin-top:.4rem;padding-top:.35rem;border-top:1px dashed var(--rule);font-size:.9rem}
+.ex .w{font-family:var(--jp);font-size:1.05rem}
+.ex .w rt{font-size:.55em;color:var(--muted)}
+.ex .e{color:var(--muted);margin-left:.3rem}
+.hide-meaning .card:not(.revealed) .mean,.hide-meaning .card:not(.revealed) .ex .e,
+.hide-readings .card:not(.revealed) .reads .v,.hide-readings .card:not(.revealed) .ex rt,.hide-readings .card:not(.revealed) .rj{background:var(--chip);color:transparent;border-radius:3px}
+.hide-meaning .card:not(.revealed),.hide-readings .card:not(.revealed){cursor:pointer}
+.n5only [data-l="4"]{display:none}
+.n5only .empty5{display:none}
+/* sound view */
+.pgroup{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--rule)}
+.pgroup:last-child{border-bottom:0}
+.pgroup .rd{font-family:var(--jp);font-size:1.5rem;line-height:1.2}
+.pgroup .rd .rj{display:block;font-family:var(--en);font-style:italic;font-size:.95rem;color:var(--muted)}
+.pgroup .rd .cnt{display:block;font-size:.8rem;color:var(--muted)}
+.minis{display:flex;flex-wrap:wrap;gap:.4rem}
+.mini{border:1px solid var(--rule);border-radius:6px;background:var(--paper);padding:.3rem .55rem;display:flex;align-items:baseline;gap:.45rem}
+.mini .k{font-family:var(--jp);font-size:1.6rem;line-height:1.2}
+.mini .m{font-size:.85rem;color:var(--muted)}
+.mini .k.odd{color:var(--seal)}
+.mini.odd{border-style:dashed;border-color:var(--seal)}
+.pnote{grid-column:2;font-size:.88rem;color:var(--muted);margin:.1rem 0 0;max-width:62ch}
+footer{max-width:1040px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);font-size:.85rem}
+footer p{max-width:72ch}
+@media (max-width:620px){
+  section.sheet{padding:1.1rem 1rem 1rem;scroll-margin-top:190px}
+  .cards{grid-template-columns:1fr 1fr}
+  .card{grid-template-columns:1fr}
+  .card .kj{grid-row:auto;font-size:2.4rem}
+  .reads{grid-template-columns:1fr}
+  .pgroup{grid-template-columns:1fr;gap:.5rem}
+  .pnote{grid-column:1}
+}
+@media (max-width:370px){ .cards{grid-template-columns:1fr} }
+@media print{ .controls{display:none} body{background:#fff} section.sheet{border:0;padding:0;break-inside:avoid-page} }
+:root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+:root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
+.rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
+body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
+body:not(.no-rdcol) .rd .rb,body:not(.no-rdcol) span.rd:not(.kana){text-decoration:underline 2px var(--rc);text-underline-offset:.22em;text-decoration-skip-ink:none}
+body:not(.no-rdcol) .rd-sp .rb,body:not(.no-rdcol) span.rd-sp:not(.kana){text-decoration-style:dotted}
+body:not(.no-rdcol) .rd.kana{color:var(--rc)}
+.rd-legend{max-width:var(--rd-max,980px);margin:0 auto;padding:0 1.25rem .55rem;display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.85rem;color:var(--muted)}
+.rd-legend .sw{font-family:var(--jp);font-size:1rem;margin-right:.25rem}
+.no-rdcol .rd-legend{display:none}
+@media (max-width:620px){.rd-legend .rdl{display:none}.rd-legend{gap:.3rem .9rem}}
+.rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
+.no-rdcol .rdv-on,.no-rdcol .rdv-kun{color:inherit}
+</style>
+</head>
+<body>
+<header>
+  <h1>漢字 N5・N4</h1>
+  <p class="sub">All 284 kanji for JLPT N5 and N4, seen three ways: grouped by the shape they are built from, by the sound they make, and by topic. Each card shows the on reading (from Chinese, in katakana), the kun reading (native Japanese, in hiragana) and a common word.</p>
+</header>
+<div class="controls">
+  <div class="controls-inner">
+    <div class="seg" role="group" aria-label="View">
+      <button data-view="shape" aria-pressed="true">By shape</button>
+      <button data-view="sound" aria-pressed="false">By sound</button>
+      <button data-view="topic" aria-pressed="false">By topic</button>
+    </div>
+    <div class="seg" role="group" aria-label="Level">
+      <button data-level="all" aria-pressed="true">N5 + N4</button>
+      <button data-level="n5" aria-pressed="false">N5 only</button>
+    </div>
+    <div class="seg" role="group" aria-label="Romaji">
+      <button data-romaji="on" aria-pressed="true">Romaji on</button>
+      <button data-romaji="off" aria-pressed="false">Off</button>
+    </div>
+    <div class="seg" role="group" aria-label="Test yourself">
+      <button data-hide="none" aria-pressed="true">Show all</button>
+      <button data-hide="meaning" aria-pressed="false">Hide meaning</button>
+      <button data-hide="readings" aria-pressed="false">Hide readings</button>
+    </div>
+    <div class="seg" role="group" aria-label="Reading colours">
+      <button data-rdcol="on" aria-pressed="true">On/kun colours</button>
+      <button data-rdcol="off" aria-pressed="false">Off</button>
+    </div>
+  </div>
+  <div class="rd-legend"><span><span class="rd rd-on"><span class="rb sw">音</span></span>On<span class="rdl"> reading, from Chinese</span></span><span><span class="rd rd-kun"><span class="rb sw">訓</span></span>Kun<span class="rdl"> reading, native Japanese</span></span><span><span class="rd rd-sp"><span class="rb sw">特</span></span>Special<span class="rdl"> reading: learn the whole word</span></span></div>
+  <nav class="topics" id="nav"></nav>
+</div>
+<main id="main"></main>
+<footer>
+  <p>Kun readings show okurigana (the kana that follow the kanji) in a lighter tone: た.べる means the kanji is read た and followed by べる. Only the most common readings are listed. JLPT has not published official kanji lists since 2010, so the N5 and N4 split follows the widely used community lists. In test mode, tap a card to reveal it.</p>
+</footer>
+<script>
+
+// ---------- on/kun reading colours ----------
+const RD = {"一": [["いち", "いつ"], ["ひと", "ひとち"]], "二": [["に"], ["ふた", "ふたち"]], "三": [["さん"], ["みっ", "みっち"]], "四": [["し"], ["よ", "よん", "よっ", "よっち"]], "五": [["ご"], ["いつ", "いつち"]], "六": [["ろく"], ["むっ", "むっち"]], "七": [["しち"], ["なな", "なな", "ななち"]], "八": [["はち"], ["や", "やっ", "やっち"]], "九": [["きゅう", "く"], ["ここの", "ここのち"]], "十": [["じゅう", "じゅっ", "じっ"], ["とお"]], "百": [["ひゃく"], []], "千": [["せん"], ["ち"]], "万": [["まん", "ばん"], []], "円": [["えん"], ["まる"]], "金": [["きん", "こん"], ["かね", "かな"]], "銀": [["ぎん"], []], "買": [["ばい"], ["か", "かい"]], "売": [["ばい"], ["う", "うり"]], "借": [["しゃく"], ["か", "かり", "かりり"]], "貸": [["たい"], ["か", "かし"]], "代": [["だい", "たい"], ["か", "かわ", "かわり"]], "品": [["ひん"], ["しな"]], "物": [["ぶつ", "もつ"], ["もの"]], "服": [["ふく"], []], "日": [["にち", "じつ", "に"], ["ひ", "か"]], "月": [["げつ", "がつ"], ["つき"]], "曜": [["よう"], []], "年": [["ねん"], ["とし"]], "時": [["じ"], ["とき"]], "今": [["こん", "きん"], ["いま"]], "午": [["ご"], []], "半": [["はん"], ["なか"]], "分": [["ぶん", "ふん", "ぶ"], ["わ", "わか", "わかり"]], "毎": [["まい"], []], "週": [["しゅう"], []], "間": [["かん", "けん"], ["あいだ", "ま"]], "去": [["きょ", "こ"], ["さ", "さり"]], "早": [["そう"], ["はや"]], "昼": [["ちゅう"], ["ひる"]], "朝": [["ちょう"], ["あさ"]], "夕": [["せき"], ["ゆう"]], "夜": [["や"], ["よる"]], "始": [["し"], ["はじ", "はじ", "はじめ", "はじめり", "はじま", "はじまり"]], "終": [["しゅう"], ["お", "おわ", "おわり"]], "計": [["けい"], ["はか", "はかり"]], "人": [["じん", "にん"], ["ひと", "と"]], "父": [["ふ"], ["ちち"]], "母": [["ぼ"], ["はは"]], "子": [["し", "す"], ["こ"]], "女": [["じょ", "にょ"], ["おんな"]], "男": [["だん", "なん"], ["おとこ"]], "友": [["ゆう"], ["とも"]], "名": [["めい", "みょう"], ["な"]], "会": [["かい", "え"], ["あ", "あい"]], "兄": [["けい", "きょう"], ["あに"]], "弟": [["だい", "てい"], ["おとうと"]], "姉": [["し"], ["あね"]], "妹": [["まい"], ["いもうと"]], "私": [["し"], ["わたし"]], "者": [["しゃ"], ["もの"]], "主": [["しゅ"], ["ぬし", "おも"]], "親": [["しん"], ["おや", "した"]], "族": [["ぞく"], []], "民": [["みん"], ["たみ"]], "口": [["こう", "く"], ["くち"]], "目": [["もく"], ["め"]], "耳": [["じ"], ["みみ"]], "手": [["しゅ"], ["て", "た"]], "足": [["そく"], ["あし", "た", "たり", "たりり"]], "体": [["たい"], ["からだ"]], "顔": [["がん"], ["かお"]], "頭": [["とう", "ず"], ["あたま"]], "首": [["しゅ"], ["くび"]], "心": [["しん"], ["こころ"]], "医": [["い"], []], "病": [["びょう"], ["やまい"]], "薬": [["やく"], ["くすり"]], "死": [["し"], ["し", "しに"]], "力": [["りょく", "りき"], ["ちから"]], "山": [["さん"], ["やま"]], "川": [["せん"], ["かわ"]], "田": [["でん"], ["た"]], "天": [["てん"], ["あめ", "あま"]], "気": [["き", "け"], []], "雨": [["う"], ["あめ", "あま"]], "花": [["か"], ["はな"]], "空": [["くう"], ["そら", "あ", "から", "あき", "す"]], "火": [["か"], ["ひ"]], "水": [["すい"], ["みず"]], "木": [["もく", "ぼく"], ["き", "こ"]], "土": [["ど", "と"], ["つち"]], "海": [["かい"], ["うみ"]], "池": [["ち"], ["いけ"]], "地": [["ち", "じ"], []], "森": [["しん"], ["もり"]], "林": [["りん"], ["はやし"]], "野": [["や"], ["の"]], "光": [["こう"], ["ひかり", "ひか"]], "風": [["ふう", "ふ"], ["かぜ", "かざ"]], "春": [["しゅん"], ["はる"]], "夏": [["か"], ["なつ"]], "秋": [["しゅう"], ["あき"]], "冬": [["とう"], ["ふゆ"]], "暑": [["しょ"], ["あつ"]], "寒": [["かん"], ["さむ"]], "犬": [["けん"], ["いぬ"]], "鳥": [["ちょう"], ["とり"]], "上": [["じょう"], ["うえ", "あ", "のぼ", "かみ", "あが", "あがり"]], "下": [["か", "げ"], ["した", "さ", "くだ", "お", "しも", "さが", "さがり"]], "左": [["さ"], ["ひだり"]], "右": [["う", "ゆう"], ["みぎ"]], "中": [["ちゅう"], ["なか"]], "外": [["がい", "げ"], ["そと", "ほか", "はず"]], "前": [["ぜん"], ["まえ"]], "後": [["ご", "こう"], ["うし", "あと", "のち"]], "東": [["とう"], ["ひがし"]], "西": [["せい", "さい"], ["にし"]], "南": [["なん"], ["みなみ"]], "北": [["ほく"], ["きた"]], "方": [["ほう"], ["かた"]], "国": [["こく"], ["くに"]], "店": [["てん"], ["みせ"]], "社": [["しゃ"], ["やしろ"]], "院": [["いん"], []], "屋": [["おく"], ["や"]], "家": [["か", "け"], ["いえ", "や"]], "館": [["かん"], []], "京": [["きょう", "けい"], []], "区": [["く"], []], "県": [["けん"], []], "建": [["けん"], ["た", "たて", "たてり"]], "市": [["し"], ["いち"]], "室": [["しつ"], []], "住": [["じゅう"], ["す", "すみ"]], "所": [["しょ"], ["ところ"]], "場": [["じょう"], ["ば"]], "村": [["そん"], ["むら"]], "町": [["ちょう"], ["まち"]], "都": [["と", "つ"], ["みやこ"]], "堂": [["どう"], []], "門": [["もん"], ["かど"]], "台": [["だい", "たい"], []], "車": [["しゃ"], ["くるま"]], "電": [["でん"], []], "道": [["どう"], ["みち"]], "駅": [["えき"], []], "運": [["うん"], ["はこ", "はこび"]], "旅": [["りょ"], ["たび"]], "乗": [["じょう"], ["の", "のり"]], "通": [["つう"], ["とお", "かよ", "とおり", "かよい"]], "転": [["てん"], ["ころ", "ころび"]], "発": [["はつ"], []], "着": [["ちゃく"], ["き", "つ", "きり", "つき"]], "学": [["がく"], ["まな", "まなび"]], "校": [["こう"], []], "先": [["せん"], ["さき"]], "生": [["せい", "しょう"], ["い", "う", "なま", "いき", "いきり", "うまれ", "うまれり"]], "本": [["ほん"], ["もと"]], "語": [["ご"], ["かた", "かたり"]], "読": [["どく"], ["よ", "よみ"]], "書": [["しょ"], ["か", "かき"]], "英": [["えい"], []], "漢": [["かん"], []], "字": [["じ"], []], "文": [["ぶん", "もん"], ["ふみ"]], "紙": [["し"], ["かみ"]], "教": [["きょう"], ["おし", "おしえ", "おしえり"]], "習": [["しゅう"], ["なら", "ならい"]], "勉": [["べん"], []], "試": [["し"], ["ため", "ためし"]], "験": [["けん"], []], "研": [["けん"], ["と", "とぎ"]], "究": [["きゅう"], ["きわ", "きわめ", "きわめり"]], "題": [["だい"], []], "問": [["もん"], ["と", "とい"]], "答": [["とう"], ["こた", "こたえ", "こたえり"]], "質": [["しつ"], []], "図": [["ず", "と"], ["はか", "はかり"]], "仕": [["し"], ["つか", "つかえ", "つかえり"]], "業": [["ぎょう"], []], "員": [["いん"], []], "働": [["どう"], ["はたら", "はたらき"]], "工": [["こう", "く"], []], "理": [["り"], []], "食": [["しょく"], ["た", "く", "たべ", "たべり"]], "飲": [["いん"], ["の", "のみ"]], "魚": [["ぎょ"], ["さかな", "うお"]], "牛": [["ぎゅう"], ["うし"]], "肉": [["にく"], []], "菜": [["さい"], ["な"]], "茶": [["ちゃ", "さ"], []], "飯": [["はん"], ["めし"]], "味": [["み"], ["あじ"]], "料": [["りょう"], []], "洋": [["よう"], []], "映": [["えい"], ["うつ", "うつり"]], "画": [["が", "かく"], []], "音": [["おん"], ["おと", "ね"]], "楽": [["がく", "らく"], ["たの"]], "歌": [["か"], ["うた"]], "写": [["しゃ"], ["うつ", "うつし"]], "見": [["けん"], ["み", "みり"]], "言": [["げん", "ごん"], ["い", "こと", "いい"]], "話": [["わ"], ["はな", "はなし"]], "聞": [["ぶん", "もん"], ["き", "きき"]], "知": [["ち"], ["し", "しり"]], "思": [["し"], ["おも", "おもい"]], "考": [["こう"], ["かんが", "かんがえ", "かんがえり"]], "説": [["せつ"], ["と", "とき"]], "声": [["せい"], ["こえ"]], "行": [["こう", "ぎょう"], ["い", "おこな", "ゆ", "いき", "おこない"]], "来": [["らい"], ["く", "き", "こ", "くり"]], "出": [["しゅつ"], ["で", "だ", "でり", "だし"]], "入": [["にゅう"], ["はい", "い", "はいり", "いれ", "いれり", "いり"]], "帰": [["き"], ["かえ", "かえり"]], "急": [["きゅう"], ["いそ", "いそぎ"]], "止": [["し"], ["と", "と", "とま", "とまり", "とめ", "とめり"]], "走": [["そう"], ["はし", "はしり"]], "歩": [["ほ", "ぽ", "ぶ"], ["ある", "あゆ", "あるき"]], "進": [["しん"], ["すす", "すすみ"]], "動": [["どう"], ["うご", "うごき"]], "近": [["きん"], ["ちか"]], "遠": [["えん"], ["とお"]], "送": [["そう"], ["おく", "おくり"]], "休": [["きゅう"], ["やす", "やすみ"]], "立": [["りつ"], ["た", "たち"]], "引": [["いん"], ["ひ", "ひき"]], "開": [["かい"], ["ひら", "あ", "あ", "ひらき", "あけ", "あけり", "あき"]], "起": [["き"], ["お", "おき", "おきり"]], "作": [["さく", "さ"], ["つく", "つくり"]], "使": [["し"], ["つか", "つかい"]], "持": [["じ"], ["も", "もち"]], "集": [["しゅう"], ["あつ", "あつ", "あつま", "あつまり", "あつめ", "あつめり"]], "切": [["せつ"], ["き", "きり"]], "洗": [["せん"], ["あら", "あらい"]], "待": [["たい"], ["ま", "まち"]], "大": [["だい", "たい"], ["おお"]], "小": [["しょう"], ["ちい", "こ", "お"]], "高": [["こう"], ["たか"]], "安": [["あん"], ["やす"]], "長": [["ちょう"], ["なが"]], "新": [["しん"], ["あたら"]], "古": [["こ"], ["ふる"]], "多": [["た"], ["おお"]], "少": [["しょう"], ["すく", "すこ"]], "白": [["はく"], ["しろ"]], "悪": [["あく"], ["わる"]], "暗": [["あん"], ["くら"]], "明": [["めい", "みょう"], ["あか", "あ", "あけ", "あけり"]], "強": [["きょう"], ["つよ"]], "弱": [["じゃく"], ["よわ"]], "軽": [["けい"], ["かる"]], "重": [["じゅう", "ちょう"], ["おも", "かさ"]], "広": [["こう"], ["ひろ"]], "好": [["こう"], ["す"]], "太": [["たい"], ["ふと"]], "短": [["たん"], ["みじか"]], "低": [["てい"], ["ひく"]], "青": [["せい"], ["あお"]], "赤": [["せき"], ["あか"]], "黒": [["こく"], ["くろ"]], "色": [["しょく", "しき"], ["いろ"]], "何": [["か"], ["なに", "なん"]], "不": [["ふ", "ぶ"], []], "以": [["い"], []], "意": [["い"], []], "回": [["かい"], ["まわ", "まわり"]], "界": [["かい"], []], "元": [["げん", "がん"], ["もと"]], "合": [["ごう"], ["あ", "あい", "あい"]], "産": [["さん"], ["う", "うみ"]], "自": [["じ", "し"], ["みずか"]], "事": [["じ"], ["こと"]], "真": [["しん"], ["ま"]], "正": [["せい", "しょう"], ["ただ", "まさ"]], "世": [["せ", "せい"], ["よ"]], "注": [["ちゅう"], ["そそ", "そそぎ"]], "度": [["ど"], ["たび"]], "同": [["どう"], ["おな"]], "特": [["とく"], []], "別": [["べつ"], ["わか", "わかれ", "わかれり"]], "便": [["べん", "びん"], ["たよ"]], "有": [["ゆう", "う"], ["あ", "あり"]], "用": [["よう"], ["もち", "もちい", "もちいり"]], "丈": [["じょう"], ["たけ"]], "両": [["りょう"], []], "乳": [["にゅう"], ["ちち"]], "予": [["よ"], []], "交": [["こう"], ["まじ", "か"]], "介": [["かい"], []], "他": [["た"], ["ほか"]], "付": [["ふ"], ["つ", "つけ"]], "伝": [["でん"], ["つた"]], "供": [["きょう", "く"], ["とも", "そな"]], "係": [["けい"], ["かかり", "かか"]], "信": [["しん"], []], "停": [["てい"], []], "健": [["けん"], ["すこ"]], "傘": [["さん"], ["かさ"]], "優": [["ゆう"], ["やさ", "すぐ"]], "免": [["めん"], ["まぬか"]], "全": [["ぜん"], ["まった", "すべ"]], "公": [["こう"], ["おおやけ"]], "内": [["ない"], ["うち"]], "冷": [["れい"], ["つめ", "ひ", "さ"]], "刀": [["とう"], ["かたな"]], "初": [["しょ"], ["はじ", "はつ"]], "利": [["り"], ["き"]], "到": [["とう"], []], "制": [["せい"], []], "助": [["じょ"], ["たす"]], "努": [["ど"], ["つと"]], "労": [["ろう"], []], "化": [["か", "け"], ["ば"]], "単": [["たん"], []], "危": [["き"], ["あぶ", "あや"]], "卵": [["らん"], ["たまご"]], "収": [["しゅう"], ["おさ"]], "取": [["しゅ"], ["と"]], "受": [["じゅ"], ["う", "うけ"]], "可": [["か"], []], "号": [["ごう"], []], "司": [["し"], []], "向": [["こう"], ["む"]], "吹": [["すい"], ["ふ"]], "呂": [["ろ"], []], "呼": [["こ"], ["よ"]], "和": [["わ"], ["やわ", "なご"]], "咲": [["しょう"], ["さ"]], "喉": [["こう"], ["のど"]], "喫": [["きつ"], []], "困": [["こん"], ["こま"]], "園": [["えん"], ["その"]], "型": [["けい"], ["かた"]], "基": [["き"], ["もと"]], "士": [["し"], []], "変": [["へん"], ["か"]], "夫": [["ふ", "ふう"], ["おっと"]], "失": [["しつ"], ["うしな"]], "婚": [["こん"], []], "嫌": [["けん"], ["きら", "いや"]], "嬉": [["き"], ["うれ"]], "定": [["てい"], ["さだ"]], "容": [["よう"], []], "宿": [["しゅく"], ["やど"]], "富": [["ふ", "ふう"], ["とみ", "と"]], "寝": [["しん"], ["ね"]], "察": [["さつ"], []], "寿": [["じゅ"], ["ことぶき"]], "専": [["せん"], ["もっぱ"]], "局": [["きょく"], []], "島": [["とう"], ["しま"]], "己": [["こ", "き"], ["おのれ"]], "布": [["ふ"], ["ぬの"]], "席": [["せき"], []], "帯": [["たい"], ["おび"]], "帽": [["ぼう"], []], "幹": [["かん"], ["みき"]], "座": [["ざ"], ["すわ"]], "庫": [["こ"], []], "康": [["こう"], []], "当": [["とう"], ["あ"]], "役": [["やく"], []], "往": [["おう"], []], "復": [["ふく"], []], "必": [["ひつ"], ["かなら"]], "忘": [["ぼう"], ["わす"]], "忙": [["ぼう"], ["いそが"]], "念": [["ねん"], []], "愛": [["あい"], []], "払": [["ふつ"], ["はら"]], "押": [["おう"], ["お"]], "拶": [["さつ"], []], "指": [["し"], ["ゆび", "さ"]], "挨": [["あい"], []], "掃": [["そう"], ["は"]], "授": [["じゅ"], ["さず"]], "探": [["たん"], ["さが"]], "描": [["びょう"], ["か", "えが"]], "換": [["かん"], ["か"]], "携": [["けい"], ["たずさ"]], "撮": [["さつ"], ["と"]], "救": [["きゅう"], ["すく"]], "散": [["さん"], ["ち"]], "数": [["すう"], ["かず", "かぞ"]], "敵": [["てき"], ["かたき"]], "易": [["えき", "い"], ["やさ"]], "昨": [["さく"], []], "晩": [["ばん"], []], "景": [["けい"], []], "晴": [["せい"], ["は"]], "暇": [["か"], ["ひま"]], "暖": [["だん"], ["あたた"]], "曇": [["どん"], ["くも"]], "曲": [["きょく"], ["ま"]], "替": [["たい"], ["か", "かえ"]], "最": [["さい"], ["もっと"]], "未": [["み"], []], "末": [["まつ"], ["すえ"]], "机": [["き"], ["つくえ"]], "果": [["か"], ["は"]], "案": [["あん"], []], "椅": [["い"], []], "様": [["よう"], ["さま"]], "機": [["き"], ["はた"]], "次": [["じ"], ["つぎ", "つ"]], "欲": [["よく"], ["ほ"]], "歯": [["し"], ["は"]], "残": [["ざん"], ["のこ"]], "毛": [["もう"], ["け"]], "氷": [["ひょう"], ["こおり"]], "永": [["えい"], ["なが"]], "求": [["きゅう"], ["もと"]], "汚": [["お"], ["きたな", "よご"]], "泊": [["はく"], ["と"]], "泳": [["えい"], ["およ"]], "浴": [["よく"], ["あ"]], "涼": [["りょう"], ["すず"]], "渇": [["かつ"], ["かわ"]], "渡": [["と"], ["わた"]], "温": [["おん"], ["あたた"]], "港": [["こう"], ["みなと"]], "濯": [["たく"], []], "無": [["む", "ぶ"], ["な"]], "焼": [["しょう"], ["や"]], "熱": [["ねつ"], ["あつ"]], "片": [["へん"], ["かた"]], "狭": [["きょう"], ["せま"]], "猫": [["びょう"], ["ねこ"]], "現": [["げん"], ["あらわ"]], "甘": [["かん"], ["あま"]], "番": [["ばん"], []], "疲": [["ひ"], ["つか"]], "痛": [["つう"], ["いた"]], "皿": [[], ["さら"]], "盗": [["とう"], ["ぬす"]], "眠": [["みん"], ["ねむ"]], "眼": [["がん"], ["まなこ"]], "礼": [["れい"], []], "神": [["しん", "じん"], ["かみ"]], "税": [["ぜい"], []], "窓": [["そう"], ["まど"]], "笑": [["しょう"], ["わら", "え"]], "符": [["ふ"], []], "筆": [["ひつ"], ["ふで"]], "箸": [[], ["はし"]], "簡": [["かん"], []], "米": [["べい", "まい"], ["こめ"]], "糸": [["し"], ["いと"]], "系": [["けい"], []], "約": [["やく"], []], "素": [["そ", "す"], []], "細": [["さい"], ["ほそ", "こま"]], "紹": [["しょう"], []], "経": [["けい"], ["へ"]], "結": [["けつ"], ["むす"]], "絡": [["らく"], ["から"]], "絵": [["かい", "え"], []], "綺": [["き"], []], "緊": [["きん"], []], "緒": [["しょ", "ちょ"], ["お"]], "線": [["せん"], []], "練": [["れん"], ["ね"]], "置": [["ち"], ["お"]], "美": [["び"], ["うつく"]], "育": [["いく"], ["そだ"]], "背": [["はい"], ["せ", "せい"]], "脱": [["だつ"], ["ぬ"]], "腹": [["ふく"], ["はら"]], "興": [["きょう"], []], "舌": [["ぜつ"], ["した"]], "良": [["りょう"], ["よ", "い"]], "若": [["じゃく"], ["わか"]], "荷": [["か"], ["に"]], "葉": [["よう"], ["は"]], "蔵": [["ぞう"], ["くら"]], "袋": [["たい"], ["ふくろ"]], "製": [["せい"], []], "要": [["よう"], ["い"]], "覚": [["かく"], ["おぼ"]], "角": [["かく"], ["かど", "つの"]], "記": [["き"], []], "許": [["きょ"], ["ゆる"]], "誕": [["たん"], []], "誰": [[], ["だれ"]], "警": [["けい"], []], "議": [["ぎ"], []], "豚": [["とん"], ["ぶた"]], "財": [["ざい", "さい"], []], "貰": [[], ["もら"]], "賑": [[], ["にぎ"]], "趣": [["しゅ"], ["おもむき"]], "辛": [["しん"], ["から"]], "辞": [["じ"], ["や"]], "辺": [["へん"], ["あた"]], "込": [[], ["こ"]], "返": [["へん"], ["かえ"]], "迷": [["めい"], ["まよ"]], "速": [["そく"], ["はや"]], "連": [["れん"], ["つ"]], "遅": [["ち"], ["おそ", "おく"]], "遊": [["ゆう"], ["あそ"]], "達": [["たつ"], ["たち"]], "違": [["い"], ["ちが"]], "選": [["せん"], ["えら"]], "邪": [["じゃ"], []], "部": [["ぶ"], []], "郵": [["ゆう"], []], "酒": [["しゅ"], ["さけ", "さか"]], "釣": [["ちょう"], ["つ"]], "鉄": [["てつ"], []], "鉛": [["えん"], ["なまり"]], "鍵": [["けん"], ["かぎ"]], "鏡": [["きょう"], ["かがみ"]], "閉": [["へい"], ["し", "と"]], "関": [["かん"], ["せき"]], "阪": [["はん"], ["さか"]], "降": [["こう"], ["お", "ふ"]], "限": [["げん"], ["かぎ"]], "除": [["じょ", "じ"], ["のぞ"]], "陽": [["よう"], []], "隣": [["りん"], ["となり"]], "難": [["なん"], ["むずか", "かた"]], "雪": [["せつ"], ["ゆき"]], "静": [["せい"], ["しず"]], "面": [["めん"], ["おも"]], "靴": [["か"], ["くつ"]], "鞄": [["ほう"], ["かばん"]], "預": [["よ"], ["あず"]], "領": [["りょう"], []], "頼": [["らい"], ["たの"]], "願": [["がん"], ["ねが"]], "飛": [["ひ"], ["と"]], "鶏": [["けい"], ["にわとり", "とり"]], "麗": [["れい"], []], "麦": [["ばく"], ["むぎ"]], "黄": [["こう", "おう"], ["き"]], "鼻": [["び"], ["はな"]], "血": [["けつ"], ["ち"]], "縮": [["しゅく"], ["ちぢ"]], "続": [["ぞく"], ["つづ"]], "由": [["ゆう", "ゆ"], ["よし"]], "蛙": [["あ"], ["かえる"]], "芽": [["が"], ["め"]], "厚": [["こう"], ["あつ"]], "飴": [["い"], ["あめ"]], "鮭": [["けい"], ["さけ"]], "端": [["たん"], ["はし", "はた", "は"]], "橋": [["きょう"], ["はし"]], "飼": [["し"], ["か"]], "効": [["こう"], ["き"]], "髪": [["はつ"], ["かみ"]]};
+const RD_V={か:"が",き:"ぎ",く:"ぐ",け:"げ",こ:"ご",さ:"ざ",し:"じ",す:"ず",せ:"ぜ",そ:"ぞ",た:"だ",ち:"ぢ",つ:"づ",て:"で",と:"ど",は:"ば",ひ:"び",ふ:"ぶ",へ:"べ",ほ:"ぼ"};
+const RD_H={は:"ぱ",ひ:"ぴ",ふ:"ぷ",へ:"ぺ",ほ:"ぽ"};
+function rdVariants(r,first,last){
+  let out=[[r,0]];
+  if(!first){ const f=r[0], rest=r.slice(1);
+    if(RD_V[f]) out.push([RD_V[f]+rest,1]); if(RD_H[f]) out.push([RD_H[f]+rest,1]);
+    if(f==="ち") out.push(["じ"+rest,1]); if(f==="つ") out.push(["ず"+rest,1]); }
+  if(!last){ const more=[]; out.forEach(([s,c])=>{ if(/[つちくき]$/.test(s)) more.push([s.length===1?s+"っ":s.slice(0,-1)+"っ",c+1]); }); out=out.concat(more); }
+  return out;
+}
+const rdHira=s=>s.replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
+function rdSeg(run,reading){
+  const ks=[...run], rd=rdHira(reading), n=ks.length, sols=[];
+  const expect = n>=2 ? "on" : "kun";
+  (function dfs(i,pos,acc,cost){
+    if(sols.length>60) return;
+    if(i===n){ if(pos===rd.length) sols.push({acc:acc.slice(),cost}); return; }
+    let k=ks[i]; const key = k==="々" && i>0 ? ks[i-1] : k;
+    const e=RD[key]; if(!e) return;
+    const cands=[]; e[0].forEach(r=>cands.push([r,"on"])); e[1].forEach(r=>cands.push([r,"kun"]));
+    for(const [r,t] of cands) for(const [s,c] of rdVariants(r,i===0,i===n-1)){
+      if(s && rd.startsWith(s,pos)){ acc.push({k,r:reading.slice(pos,pos+s.length),t}); dfs(i+1,pos+s.length,acc,cost+c+(t===expect?0:0.6)); acc.pop(); }
+    }
+  })(0,0,[],0);
+  if(!sols.length) return null;
+  sols.sort((a,b)=>a.cost-b.cost);
+  return sols[0].acc;
+}
+function rdAlign(word,reading){
+  const parts=word.match(/[\u4e00-\u9fff々]+|[^\u4e00-\u9fff々]+/g)||[];
+  const esc2=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  const re=new RegExp("^"+parts.map(p=>/[\u4e00-\u9fff]/.test(p)?"(.+?)":esc2(rdHira(p)))+"$".replace(/,/g,""));
+  const m=rdHira(reading).match(new RegExp("^"+parts.map(p=>/[\u4e00-\u9fff]/.test(p)?"(.+?)":esc2(rdHira(p))).join("")+"$"));
+  if(!m) return null;
+  let g=1; return parts.map(p=>/[\u4e00-\u9fff]/.test(p)?{t:p,r:m[g++]}:{t:p,r:null});
+}
+const rdE=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function rdRuby(run,reading){
+  const s=rdSeg(run,reading);
+  if(!s) return `<ruby class="rd rd-sp"><span class="rb">${rdE(run)}</span><rt>${rdE(reading)}</rt></ruby>`;
+  return s.map(x=>`<ruby class="rd rd-${x.t}"><span class="rb">${rdE(x.k)}</span><rt>${rdE(x.r)}</rt></ruby>`).join("");
+}
+function rdKanji(run,reading){
+  const s=rdSeg(run,reading);
+  if(!s) return `<span class="rd rd-sp">${rdE(run)}</span>`;
+  return s.map(x=>`<span class="rd rd-${x.t}">${rdE(x.k)}</span>`).join("");
+}
+function rdKana(run,reading){
+  const s=rdSeg(run,reading);
+  if(!s) return `<span class="rd kana rd-sp">${rdE(reading)}</span>`;
+  return s.map(x=>`<span class="rd kana rd-${x.t}">${rdE(x.r)}</span>`).join("");
+}
+// whole word (kanji + kana mixed) with a separate reading
+function rdWord(word,reading,mode){
+  const a=rdAlign(word,String(reading).replace(/ /g,""));
+  if(!a) return mode==="kana"?rdE(reading):rdE(word);
+  return a.map(p=>p.r==null?rdE(p.t):(mode==="ruby"?rdRuby(p.t,p.r):mode==="kana"?rdKana(p.t,p.r):rdKanji(p.t,p.r))).join("");
+}
+
+// kanji | meaning | on | kun | level | topic | shape family | example | example meaning
+const RAW = `一|one|イチ、イツ|ひと.つ|5|num|一|一{ひと}つ|one (thing)
+二|two|ニ|ふた.つ|5|num|一|二人{ふたり}|two people
+三|three|サン|みっ.つ|5|num|一|三月{さんがつ}|March
+四|four|シ|よ、よん、よっ.つ|5|num|口|四月{しがつ}|April
+五|five|ゴ|いつ.つ|5|num|一|五日{いつか}|the fifth (of the month)
+六|six|ロク|むっ.つ|5|num|八|六時{ろくじ}|six o'clock
+七|seven|シチ|なな、なな.つ|5|num|一|七月{しちがつ}|July
+八|eight|ハチ|や、やっ.つ|5|num|八|八百屋{やおや}|greengrocer
+九|nine|キュウ、ク|ここの.つ|5|num|一|九時{くじ}|nine o'clock
+十|ten|ジュウ|とお|5|num|十|十日{とおか}|the tenth (of the month)
+百|hundred|ヒャク||5|num|白|三百{さんびゃく}|three hundred
+千|thousand|セン|ち|5|num|十|千円{せんえん}|1,000 yen
+万|ten thousand|マン、バン||5|num|一|一万円{いちまんえん}|10,000 yen
+円|yen, circle|エン|まる.い|5|num|other|百円{ひゃくえん}|100 yen
+金|gold, money|キン、コン|かね|5|num|金|お金{かね}|money
+銀|silver|ギン||4|num|金|銀行{ぎんこう}|bank
+買|buy|バイ|か.う|5|num|貝|買{か}い物{もの}|shopping
+売|sell|バイ|う.る|4|num|土|売{う}り場{ば}|sales counter
+借|borrow|シャク|か.りる|4|num|人|借金{しゃっきん}|debt
+貸|lend|タイ|か.す|4|num|貝|貸{か}し出{だ}し|lending
+代|fee, generation|ダイ、タイ|か.わる|4|num|人|電気代{でんきだい}|electricity bill
+品|goods|ヒン|しな|4|num|口|食品{しょくひん}|food products
+物|thing|ブツ、モツ|もの|4|num|牛|荷物{にもつ}|luggage
+服|clothes|フク||4|num|月|洋服{ようふく}|Western clothes
+日|day, sun|ニチ、ジツ|ひ、か|5|time|日|毎日{まいにち}|every day
+月|month, moon|ゲツ、ガツ|つき|5|time|月|今月{こんげつ}|this month
+曜|weekday|ヨウ||4|time|日|日曜日{にちようび}|Sunday
+年|year|ネン|とし|5|time|other|去年{きょねん}|last year
+時|time, hour|ジ|とき|5|time|日|時間{じかん}|time
+今|now|コン、キン|いま|5|time|人|今日{きょう}|today
+午|noon|ゴ||5|time|十|午後{ごご}|p.m.
+半|half|ハン|なか.ば|5|time|十|半分{はんぶん}|half
+分|minute, part|ブン、フン、ブ|わ.かる|5|time|刀|五分{ごふん}|five minutes
+毎|every|マイ||5|time|母|毎朝{まいあさ}|every morning
+週|week|シュウ||5|time|辶|今週{こんしゅう}|this week
+間|interval, between|カン、ケン|あいだ、ま|5|time|門|時間{じかん}|time, hours
+去|past, leave|キョ、コ|さ.る|4|time|土|去年{きょねん}|last year
+早|early|ソウ|はや.い|4|time|日|早朝{そうちょう}|early morning
+昼|daytime|チュウ|ひる|4|time|日|昼{ひる}ご飯{はん}|lunch
+朝|morning|チョウ|あさ|4|time|月|朝{あさ}ご飯{はん}|breakfast
+夕|evening|セキ|ゆう|4|time|夕|夕方{ゆうがた}|evening
+夜|night|ヤ|よる|4|time|夕|今夜{こんや}|tonight
+始|begin|シ|はじ.める、はじ.まる|4|time|女|開始{かいし}|start
+終|end|シュウ|お.わる|4|time|糸|終電{しゅうでん}|last train
+計|measure|ケイ|はか.る|4|time|言|時計{とけい}|clock
+人|person|ジン、ニン|ひと|5|people|人|日本人{にほんじん}|Japanese person
+父|father|フ|ちち|5|people|other|お父{とう}さん|father
+母|mother|ボ|はは|5|people|母|お母{かあ}さん|mother
+子|child|シ、ス|こ|5|people|子|子供{こども}|child
+女|woman|ジョ、ニョ|おんな|5|people|女|女{おんな}の子{こ}|girl
+男|man|ダン、ナン|おとこ|5|people|力|男{おとこ}の子{こ}|boy
+友|friend|ユウ|とも|5|people|other|友達{ともだち}|friend
+名|name|メイ、ミョウ|な|5|people|夕|名前{なまえ}|name
+会|meet|カイ、エ|あ.う|5|people|人|会社{かいしゃ}|company
+兄|older brother|ケイ、キョウ|あに|4|people|儿|兄弟{きょうだい}|siblings
+弟|younger brother|ダイ、テイ|おとうと|4|people|弓|兄弟{きょうだい}|siblings
+姉|older sister|シ|あね|4|people|女|お姉{ねえ}さん|older sister
+妹|younger sister|マイ|いもうと|4|people|女|姉妹{しまい}|sisters
+私|I, private|シ|わたし|4|people|禾|私立{しりつ}|private (school)
+者|person (who does)|シャ|もの|4|people|耂|医者{いしゃ}|doctor
+主|master, main|シュ|ぬし、おも|4|people|主|主人{しゅじん}|husband, owner
+親|parent|シン|おや、した.しい|4|people|立|両親{りょうしん}|parents
+族|tribe, family|ゾク||4|people|方|家族{かぞく}|family
+民|people, nation|ミン|たみ|4|people|other|国民{こくみん}|citizens
+口|mouth|コウ、ク|くち|5|body|口|入口{いりぐち}|entrance
+目|eye|モク|め|5|body|目|二{ふた}つ目{め}|the second one
+耳|ear|ジ|みみ|5|body|other|耳{みみ}|ear
+手|hand|シュ|て|5|body|手|上手{じょうず}|skilful
+足|foot, leg|ソク|あし、た.りる|5|body|other|足{た}りる|to be enough
+体|body|タイ|からだ|4|body|人|体育{たいいく}|PE
+顔|face|ガン|かお|4|body|頁|笑顔{えがお}|smile
+頭|head|トウ、ズ|あたま|4|body|頁|頭痛{ずつう}|headache
+首|neck|シュ|くび|4|body|目|首都{しゅと}|capital city
+心|heart|シン|こころ|4|body|心|安心{あんしん}|relief
+医|medicine|イ||4|body|other|医者{いしゃ}|doctor
+病|illness|ビョウ|やまい|4|body|广|病院{びょういん}|hospital
+薬|medicine, drug|ヤク|くすり|4|body|艹|薬局{やっきょく}|pharmacy
+死|death|シ|し.ぬ|4|body|other|死{し}ぬ|to die
+力|power|リョク、リキ|ちから|4|body|力|力{ちから}|strength
+山|mountain|サン|やま|5|nature|山|富士山{ふじさん}|Mount Fuji
+川|river|セン|かわ|5|nature|other|小川{おがわ}|stream
+田|rice field|デン|た|4|nature|田|田中{たなか}さん|Mr or Ms Tanaka
+天|heaven, sky|テン|あめ|5|nature|大|天気{てんき}|weather
+気|spirit, air|キ、ケ||5|nature|other|元気{げんき}|well, lively
+雨|rain|ウ|あめ|5|nature|雨|大雨{おおあめ}|heavy rain
+花|flower|カ|はな|5|nature|艹|花火{はなび}|fireworks
+空|sky, empty|クウ|そら、あ.く、から|5|nature|工|空港{くうこう}|airport
+火|fire|カ|ひ|5|nature|other|火曜日{かようび}|Tuesday
+水|water|スイ|みず|5|nature|水|水曜日{すいようび}|Wednesday
+木|tree|モク、ボク|き|5|nature|木|木曜日{もくようび}|Thursday
+土|earth, soil|ド、ト|つち|5|nature|土|土曜日{どようび}|Saturday
+海|sea|カイ|うみ|4|nature|水|海外{かいがい}|overseas
+池|pond|チ|いけ|4|nature|水|電池{でんち}|battery
+地|ground|チ、ジ||4|nature|土|地図{ちず}|map
+森|forest|シン|もり|4|nature|木|森林{しんりん}|woodland
+林|grove|リン|はやし|4|nature|木|林{はやし}|small wood
+野|field|ヤ|の|4|nature|田|野菜{やさい}|vegetables
+光|light|コウ|ひかり、ひか.る|4|nature|儿|日光{にっこう}|sunlight
+風|wind|フウ、フ|かぜ|4|nature|other|台風{たいふう}|typhoon
+春|spring|シュン|はる|4|nature|日|春休{はるやす}み|spring holiday
+夏|summer|カ|なつ|4|nature|夂|夏休{なつやす}み|summer holiday
+秋|autumn|シュウ|あき|4|nature|禾|秋{あき}|autumn
+冬|winter|トウ|ふゆ|4|nature|夂|冬休{ふゆやす}み|winter holiday
+暑|hot (weather)|ショ|あつ.い|4|nature|日|暑{あつ}い|hot
+寒|cold|カン|さむ.い|4|nature|宀|寒{さむ}い|cold
+犬|dog|ケン|いぬ|4|nature|大|子犬{こいぬ}|puppy
+鳥|bird|チョウ|とり|4|nature|other|焼{や}き鳥{とり}|grilled chicken
+上|up, above|ジョウ|うえ、あ.がる|5|dir|一|上手{じょうず}|skilful
+下|down, below|カ、ゲ|した、さ.がる|5|dir|一|地下鉄{ちかてつ}|subway
+左|left|サ|ひだり|5|dir|工|左手{ひだりて}|left hand
+右|right|ウ、ユウ|みぎ|5|dir|口|右手{みぎて}|right hand
+中|middle, inside|チュウ|なか|5|dir|口|中国{ちゅうごく}|China
+外|outside|ガイ、ゲ|そと、ほか|5|dir|夕|外国{がいこく}|foreign country
+前|before, front|ゼン|まえ|5|dir|刀|午前{ごぜん}|a.m.
+後|after, behind|ゴ、コウ|うし.ろ、あと|5|dir|彳|午後{ごご}|p.m.
+東|east|トウ|ひがし|5|dir|木|東京{とうきょう}|Tokyo
+西|west|セイ、サイ|にし|5|dir|other|関西{かんさい}|Kansai
+南|south|ナン|みなみ|5|dir|十|南口{みなみぐち}|south exit
+北|north|ホク|きた|5|dir|other|北口{きたぐち}|north exit
+方|direction, way|ホウ|かた|4|dir|方|夕方{ゆうがた}|evening
+国|country|コク|くに|5|places|口|外国{がいこく}|foreign country
+店|shop|テン|みせ|5|places|广|書店{しょてん}|bookshop
+社|company, shrine|シャ|やしろ|5|places|土|神社{じんじゃ}|shrine
+院|institution|イン||4|places|宀|病院{びょういん}|hospital
+屋|shop, roof|オク|や|4|places|other|部屋{へや}|room
+家|house|カ、ケ|いえ、や|4|places|宀|家族{かぞく}|family
+館|hall, building|カン||4|places|食|図書館{としょかん}|library
+京|capital|キョウ、ケイ||4|places|other|東京{とうきょう}|Tokyo
+区|ward|ク||4|places|other|区役所{くやくしょ}|ward office
+県|prefecture|ケン||4|places|目|県立{けんりつ}|prefectural
+建|build|ケン|た.てる|4|places|other|建物{たてもの}|building
+市|city, market|シ|いち|4|places|other|市場{いちば}|market
+室|room|シツ||4|places|宀|和室{わしつ}|Japanese-style room
+住|live|ジュウ|す.む|4|places|主|住所{じゅうしょ}|address
+所|place|ショ|ところ|4|places|other|台所{だいどころ}|kitchen
+場|place|ジョウ|ば|4|places|土|場所{ばしょ}|place
+村|village|ソン|むら|4|places|木|村{むら}|village
+町|town|チョウ|まち|4|places|田|町{まち}|town
+都|capital|ト、ツ|みやこ|4|places|耂|京都{きょうと}|Kyoto
+堂|hall|ドウ||4|places|土|食堂{しょくどう}|canteen
+門|gate|モン|かど|4|places|門|専門{せんもん}|specialism
+台|stand, platform|ダイ、タイ||4|places|口|台所{だいどころ}|kitchen
+車|vehicle|シャ|くるま|5|travel|車|電車{でんしゃ}|train
+電|electricity|デン||5|travel|雨|電気{でんき}|electricity, light
+道|road, way|ドウ|みち|5|travel|辶|水道{すいどう}|water supply
+駅|station|エキ||5|travel|馬|駅員{えきいん}|station staff
+運|carry, luck|ウン|はこ.ぶ|4|travel|辶|運転{うんてん}|driving
+旅|travel|リョ|たび|4|travel|方|旅行{りょこう}|travel
+乗|ride|ジョウ|の.る|4|travel|other|乗{の}り場{ば}|boarding place
+通|pass through|ツウ|とお.る、かよ.う|4|travel|辶|交通{こうつう}|traffic
+転|revolve|テン|ころ.ぶ|4|travel|車|自転車{じてんしゃ}|bicycle
+発|depart, emit|ハツ||4|travel|other|出発{しゅっぱつ}|departure
+着|wear, arrive|チャク|き.る、つ.く|4|travel|目|到着{とうちゃく}|arrival
+学|study|ガク|まな.ぶ|5|school|子|学生{がくせい}|student
+校|school|コウ||5|school|木|学校{がっこう}|school
+先|ahead, previous|セン|さき|5|school|儿|先生{せんせい}|teacher
+生|life, birth|セイ、ショウ|い.きる、う.まれる|5|school|other|先生{せんせい}|teacher
+本|book, origin|ホン|もと|5|school|木|日本{にほん}|Japan
+語|language|ゴ|かた.る|5|school|言|日本語{にほんご}|Japanese
+読|read|ドク|よ.む|5|school|言|読書{どくしょ}|reading
+書|write|ショ|か.く|5|school|日|辞書{じしょ}|dictionary
+英|England|エイ||4|school|艹|英語{えいご}|English
+漢|China (Han)|カン||4|school|水|漢字{かんじ}|kanji
+字|character|ジ||4|school|子|漢字{かんじ}|kanji
+文|writing|ブン、モン|ふみ|4|school|other|文化{ぶんか}|culture
+紙|paper|シ|かみ|4|school|糸|手紙{てがみ}|letter
+教|teach|キョウ|おし.える|4|school|耂|教室{きょうしつ}|classroom
+習|learn|シュウ|なら.う|4|school|白|練習{れんしゅう}|practice
+勉|exertion|ベン||4|school|力|勉強{べんきょう}|study
+試|test, try|シ|ため.す|4|school|言|試験{しけん}|exam
+験|verify|ケン||4|school|馬|経験{けいけん}|experience
+研|polish, study|ケン|と.ぐ|4|school|other|研究{けんきゅう}|research
+究|research|キュウ|きわ.める|4|school|宀|研究{けんきゅう}|research
+題|topic|ダイ||4|school|頁|問題{もんだい}|problem
+問|question|モン|と.う|4|school|門|質問{しつもん}|question
+答|answer|トウ|こた.える|4|school|other|答{こた}え|answer
+質|quality|シツ||4|school|貝|質問{しつもん}|question
+図|drawing, map|ズ、ト|はか.る|4|school|口|図書館{としょかん}|library
+仕|serve|シ|つか.える|4|school|人|仕事{しごと}|work
+業|business|ギョウ||4|school|other|授業{じゅぎょう}|lesson
+員|member|イン||4|school|貝|会社員{かいしゃいん}|office worker
+働|work|ドウ|はたら.く|4|school|力|労働{ろうどう}|labour
+工|craft|コウ、ク||4|school|工|工場{こうじょう}|factory
+理|logic|リ||4|school|田|料理{りょうり}|cooking
+食|eat|ショク|た.べる|5|food|食|食堂{しょくどう}|canteen
+飲|drink|イン|の.む|5|food|食|飲{の}み物{もの}|drink
+魚|fish|ギョ|さかな、うお|5|food|田|金魚{きんぎょ}|goldfish
+牛|cow|ギュウ|うし|4|food|牛|牛肉{ぎゅうにく}|beef
+肉|meat|ニク||4|food|other|鶏肉{とりにく}|chicken
+菜|vegetable|サイ|な|4|food|艹|野菜{やさい}|vegetables
+茶|tea|チャ、サ||4|food|艹|お茶{ちゃ}|tea
+飯|meal, rice|ハン|めし|4|food|食|ご飯{はん}|rice, meal
+味|taste|ミ|あじ|4|food|口|意味{いみ}|meaning
+料|fee, material|リョウ||4|food|other|料理{りょうり}|cooking
+洋|ocean, Western|ヨウ||4|food|水|洋食{ようしょく}|Western food
+映|reflect|エイ|うつ.る|4|fun|日|映画{えいが}|film
+画|picture|ガ、カク||4|fun|田|映画{えいが}|film
+音|sound|オン|おと、ね|4|fun|立|音楽{おんがく}|music
+楽|fun, music|ガク、ラク|たの.しい|4|fun|木|楽{たの}しい|fun
+歌|song|カ|うた|4|fun|other|歌手{かしゅ}|singer
+写|copy, photograph|シャ|うつ.す|4|fun|other|写真{しゃしん}|photo
+見|see|ケン|み.る|5|talk|目|見物{けんぶつ}|sightseeing
+言|say|ゲン、ゴン|い.う|5|talk|言|言葉{ことば}|word
+話|talk|ワ|はな.す、はなし|5|talk|言|電話{でんわ}|telephone
+聞|hear, ask|ブン、モン|き.く|5|talk|門|新聞{しんぶん}|newspaper
+知|know|チ|し.る|4|talk|矢|知{し}り合{あ}い|acquaintance
+思|think|シ|おも.う|4|talk|心|思{おも}い出{で}|memory
+考|think, consider|コウ|かんが.える|4|talk|耂|考{かんが}え|idea
+説|explain|セツ|と.く|4|talk|言|小説{しょうせつ}|novel
+声|voice|セイ|こえ|4|talk|土|大声{おおごえ}|loud voice
+行|go|コウ、ギョウ|い.く、おこな.う|5|move|彳|旅行{りょこう}|travel
+来|come|ライ|く.る|5|move|木|来週{らいしゅう}|next week
+出|go out|シュツ|で.る、だ.す|5|move|山|出口{でぐち}|exit
+入|enter|ニュウ|はい.る、い.れる|5|move|人|入口{いりぐち}|entrance
+帰|return|キ|かえ.る|4|move|other|帰国{きこく}|returning home
+急|hurry|キュウ|いそ.ぐ|4|move|心|急行{きゅうこう}|express train
+止|stop|シ|と.まる、と.める|4|move|止|中止{ちゅうし}|cancellation
+走|run|ソウ|はし.る|4|move|走|走{はし}る|to run
+歩|walk|ホ|ある.く|4|move|止|散歩{さんぽ}|a walk
+進|advance|シン|すす.む|4|move|辶|進{すす}む|to advance
+動|move|ドウ|うご.く|4|move|力|自動車{じどうしゃ}|car
+近|near|キン|ちか.い|4|move|辶|近所{きんじょ}|neighbourhood
+遠|far|エン|とお.い|4|move|辶|遠足{えんそく}|school outing
+送|send|ソウ|おく.る|4|move|辶|送料{そうりょう}|postage
+休|rest|キュウ|やす.む|5|do|人|休{やす}み|holiday
+立|stand|リツ|た.つ|5|do|立|国立{こくりつ}|national
+引|pull|イン|ひ.く|4|do|弓|引{ひ}き出{だ}し|drawer
+開|open|カイ|ひら.く、あ.ける、あ.く|4|do|門|開店{かいてん}|shop opening
+起|rise, wake|キ|お.きる|4|do|走|起{お}きる|to get up
+作|make|サク、サ|つく.る|4|do|人|作文{さくぶん}|essay
+使|use|シ|つか.う|4|do|人|使用{しよう}|use
+持|hold|ジ|も.つ|4|do|手|金持{かねも}ち|rich person
+集|gather|シュウ|あつ.まる、あつ.める|4|do|木|集{あつ}まる|to gather
+切|cut|セツ|き.る|4|do|刀|大切{たいせつ}|important
+洗|wash|セン|あら.う|4|do|水|洗濯{せんたく}|laundry
+待|wait|タイ|ま.つ|4|do|彳|待{ま}つ|to wait
+大|big|ダイ、タイ|おお.きい|5|desc|大|大学{だいがく}|university
+小|small|ショウ|ちい.さい、こ|5|desc|小|小学校{しょうがっこう}|primary school
+高|high, expensive|コウ|たか.い|5|desc|口|高校{こうこう}|high school
+安|cheap, calm|アン|やす.い|5|desc|宀|安全{あんぜん}|safe
+長|long, chief|チョウ|なが.い|5|desc|other|社長{しゃちょう}|company president
+新|new|シン|あたら.しい|5|desc|立|新聞{しんぶん}|newspaper
+古|old|コ|ふる.い|5|desc|十|中古{ちゅうこ}|second-hand
+多|many|タ|おお.い|5|desc|夕|多分{たぶん}|probably
+少|few, a little|ショウ|すく.ない、すこ.し|5|desc|小|少{すこ}し|a little
+白|white|ハク|しろ|5|desc|白|面白{おもしろ}い|interesting
+悪|bad|アク|わる.い|4|desc|心|悪{わる}い|bad
+暗|dark|アン|くら.い|4|desc|日|暗記{あんき}|memorisation
+明|bright|メイ、ミョウ|あか.るい、あ.ける|4|desc|日|説明{せつめい}|explanation
+強|strong|キョウ|つよ.い|4|desc|弓|勉強{べんきょう}|study
+弱|weak|ジャク|よわ.い|4|desc|弓|弱{よわ}い|weak
+軽|light (weight)|ケイ|かる.い|4|desc|車|手軽{てがる}|easy, handy
+重|heavy|ジュウ、チョウ|おも.い|4|desc|other|体重{たいじゅう}|body weight
+広|wide|コウ|ひろ.い|4|desc|广|広島{ひろしま}|Hiroshima
+好|like|コウ|す.き|4|desc|女|大好{だいす}き|love
+太|fat, thick|タイ|ふと.い|4|desc|大|太陽{たいよう}|the sun
+短|short|タン|みじか.い|4|desc|矢|短{みじか}い|short
+低|low|テイ|ひく.い|4|desc|人|最低{さいてい}|the worst
+青|blue|セイ|あお|4|desc|月|青{あお}い|blue
+赤|red|セキ|あか|4|desc|土|赤{あか}ちゃん|baby
+黒|black|コク|くろ|4|desc|other|黒{くろ}い|black
+色|colour|ショク、シキ|いろ|4|desc|other|景色{けしき}|scenery
+何|what|カ|なに、なん|5|abstract|人|何時{なんじ}|what time
+不|not, un-|フ、ブ||4|abstract|一|不便{ふべん}|inconvenient
+以|by means of|イ||4|abstract|other|以上{いじょう}|or more
+意|mind, meaning|イ||4|abstract|心|意味{いみ}|meaning
+回|times, turn|カイ|まわ.る|4|abstract|口|一回{いっかい}|once
+界|world|カイ||4|abstract|田|世界{せかい}|world
+元|origin|ゲン、ガン|もと|4|abstract|儿|元気{げんき}|well, lively
+合|fit, join|ゴウ|あ.う|4|abstract|人|試合{しあい}|match, game
+産|produce|サン|う.む|4|abstract|立|お土産{みやげ}|souvenir
+自|self|ジ、シ|みずか.ら|4|abstract|目|自分{じぶん}|oneself
+事|thing, matter|ジ|こと|4|abstract|other|食事{しょくじ}|meal
+真|true|シン|ま|4|abstract|目|写真{しゃしん}|photo
+正|correct|セイ、ショウ|ただ.しい|4|abstract|止|正月{しょうがつ}|New Year
+世|world, generation|セ、セイ|よ|4|abstract|other|世界{せかい}|world
+注|pour, attention|チュウ|そそ.ぐ|4|abstract|主|注意{ちゅうい}|caution
+度|degree, times|ド|たび|4|abstract|广|今度{こんど}|next time
+同|same|ドウ|おな.じ|4|abstract|口|同{おな}じ|same
+特|special|トク||4|abstract|牛|特{とく}に|especially
+別|separate|ベツ|わか.れる|4|abstract|刀|特別{とくべつ}|special
+便|convenience, mail|ベン、ビン|たよ.り|4|abstract|人|便利{べんり}|convenient
+有|have, exist|ユウ、ウ|あ.る|4|abstract|月|有名{ゆうめい}|famous
+用|use, business|ヨウ|もち.いる|4|abstract|other|用事{ようじ}|errand`;
+const K = RAW.trim().split("\n").map(l=>{ const [k,m,on,kun,l5,t,f,ex,exEn]=l.split("|");
+  return {k,m,on:on?on.split("、"):[],kun:kun?kun.split("、"):[],l:l5,t,f,ex,exEn}; });
+const BY = Object.fromEntries(K.map(x=>[x.k,x]));
+
+const FAMS = [
+ ["人","人 亻","person","master","入 looks like 人 with the strokes reversed; it belongs to a different family but sits here as a warning."],
+ ["口","口 囗","mouth; a big box means an enclosure","master"],
+ ["日","日","sun, day","master"],
+ ["木","木","tree","master","来 and 東 hide a 木 inside them."],
+ ["水","水 氵","water; three drops on the left","master"],
+ ["手","手 扌","hand","master"],
+ ["心","心 忄","heart, feelings","master"],
+ ["言","言 訁","say, words","master"],
+ ["糸","糸","thread","master"],
+ ["門","門","gate","master","What sits inside the gate changes the meaning: a sun (間), an ear (聞), a mouth (問)."],
+ ["辶","辶","movement, road","master"],
+ ["力","力","power, strength","master"],
+ ["一","一","basic strokes: numbers and positions"],
+ ["十","十","ten, a cross"],
+ ["八","八","eight, dividing"],
+ ["刀","刀 刂","sword, cutting"],
+ ["夕","夕","evening"],
+ ["大","大","big; a person with arms out"],
+ ["小","小","small"],
+ ["子","子","child"],
+ ["女","女","woman"],
+ ["儿","儿","legs"],
+ ["工","工","craft, construction"],
+ ["母","母","mother","", "毎 is 母 with a hat, and 海 adds water to 毎."],
+ ["立","立","stand"],
+ ["土","土 士","earth; the samurai 士 looks almost the same"],
+ ["宀","宀","roof"],
+ ["艹","艹","grass, plants"],
+ ["广","广 疒","a lean-to; with drips it becomes sickness"],
+ ["彳","彳","step, going"],
+ ["食","食 飠","eat"],
+ ["金","金 釒","metal, money"],
+ ["貝","貝","shell; money in ancient China"],
+ ["月","月","moon; also flesh in body kanji"],
+ ["田","田 里","rice field; 里 (village) is built on it"],
+ ["車","車","vehicle"],
+ ["雨","雨 ⻗","rain, weather"],
+ ["目","目","eye","", "自 (self) and 首 (neck) contain a 目-like shape."],
+ ["耂","耂","old man"],
+ ["弓","弓","bow"],
+ ["止","止","stop, footprint"],
+ ["方","方","direction; a flag"],
+ ["走","走","run"],
+ ["主","主","master","", "Also a sound family: 主 シュ, 住 ジュウ, 注 チュウ."],
+ ["牛","牛","cow"],
+ ["頁","頁","head, page"],
+ ["矢","矢","arrow"],
+ ["夂","夂","walking legs, from behind"],
+ ["馬","馬","horse"],
+ ["禾","禾","grain"],
+ ["山","山","mountain","", "出 is two mountains stacked."],
+ ["白","白","white"],
+ ["other","","Standalone shapes","","These don't share a building block with another N5 or N4 kanji. Learn them as shapes of their own."]
+];
+
+// ---------- romaji ----------
+const BASE={あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",や:"ya",ゆ:"yu",よ:"yo",ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po"};
+const SMALL_Y={ゃ:"a",ゅ:"u",ょ:"o"};
+const toHira=s=>s.replace(/[\u30A1-\u30F6]/g,ch=>String.fromCharCode(ch.charCodeAt(0)-0x60));
+function romaji(kana){ const s=toHira(kana); let out="",i=0;
+  while(i<s.length){ const ch=s[i],nx=s[i+1];
+    if(ch==="っ"){ const r=romaji(s.slice(i+1,i+3)); out+=r.startsWith("ch")?"t":(r[0]||""); i++; continue; }
+    if(ch==="ー"){ out+=out.slice(-1); i++; continue; }
+    if(nx&&SMALL_Y[nx]&&BASE[ch]){ const b=BASE[ch]; out+=(["shi","chi","ji"].includes(b)?b.slice(0,-1):b.slice(0,-1)+"y")+SMALL_Y[nx]; i+=2; continue; }
+    if(ch==="ん"){ out+=(nx&&/[あいうえおやゆよ]/.test(nx))?"n'":"n"; i++; continue; }
+    out+=BASE[ch]!==undefined?BASE[ch]:ch; i++; }
+  return out; }
+const esc=s=>s.replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+const ruby=s=>{ let o="",last=0; s.replace(/([\u4e00-\u9fff々]+)\{([^}]+)\}/g,(m,b,r,off)=>{ o+=esc(s.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return o+esc(s.slice(last)); };
+const kunHtml=r=>{ const [a,b]=r.split("."); return `${a}${b?`<span class="ok">${b}</span>`:""}<span class="rj">${romaji(r.replace(".",""))}</span>`; };
+const onHtml=r=>`${r}<span class="rj">${romaji(r)}</span>`;
+
+function card(x){
+  return `<div class="card" data-l="${x.l}" tabindex="-1">
+    <span class="kj">${x.k}</span><span class="mean">${esc(x.m)}</span><span class="lvl">N${x.l}</span>
+    <div class="reads">${x.on.length?`<span class="lab">On</span><span class="v rdv-on">${x.on.map(onHtml).join("、")}</span>`:""}${x.kun.length?`<span class="lab">Kun</span><span class="v rdv-kun">${x.kun.map(kunHtml).join("、")}</span>`:""}</div>
+    <div class="ex"><span class="w">${ruby(x.ex)}</span><span class="e">${esc(x.exEn)}</span></div>
+  </div>`;
+}
+const mini=(k,odd)=>{ const x=BY[k]; return `<span class="mini${odd?" odd":""}"${x?` data-l="${x.l}"`:""}><span class="k${odd?" odd":""}">${k}</span><span class="m">${x?esc(x.m):""}</span></span>`; };
+const n5flag = list => list.some(x=>x.l==="5") ? "" : " empty5";
+
+// ---------- view: shape ----------
+function shapeView(){
+  let h="", lastTier=null;
+  FAMS.forEach(([key,glyph,mean,tier,note])=>{
+    const list=K.filter(x=>x.f===key).sort((a,b)=>((b.k===key)-(a.k===key))||(b.l-a.l)); if(!list.length) return;
+    if(lastTier!==(tier==="master")){ lastTier=(tier==="master");
+      h+= lastTier ? `<h2 class="part">基本の形<span>Master shapes</span></h2><p class="partnote">The twelve building blocks that make up the most N5 and N4 kanji. Learn these and a large share of the rest falls into place.</p>`
+                   : `<h2 class="part">他の形<span>More shape families</span></h2>`; }
+    h+=`<section class="sheet${n5flag(list)}" id="f-${key}"><div class="shead">${key==="other"?"":`<span class="seal">${glyph}</span>`}<div class="t"><b>${esc(mean)}${tier==="master"?`<span class="tier">Master shape</span>`:""}</b><span>${list.length} kanji</span></div></div>
+      ${note?`<p class="fnote">${esc(note)}</p>`:""}<div class="cards">${list.map(card).join("")}</div></section>`;
+  });
+  return h;
+}
+// ---------- view: sound ----------
+const PHON = [
+ ["寺","ジ",["時","持"],["待","特"],"時 and 持 keep 寺's sound. 待 (タイ) and 特 (トク) use the same part but drifted, a reminder that the sound part is a strong hint, not a law."],
+ ["主","シュ・ジュウ・チュウ",["主","住","注"],[],"Close cousins of one sound."],
+ ["可","カ",["何","歌"],[],"歌 has 可 twice."],
+ ["化","カ",["花"],[],""],
+ ["交","コウ",["校"],[],""],
+ ["反","ハン",["飯"],[],""],
+ ["羊","ヨウ",["洋"],[],""],
+ ["白","ハク・ヒャク",["白","百"],[],""],
+ ["門","モン",["門","問","聞"],[],"聞 is usually ブン, but モン also appears in some words."],
+ ["重","ドウ",["動","働"],[],"動 and 働 share ドウ; 重 itself is ジュウ."],
+ ["氏","シ",["紙"],[],""],
+ ["士","シ",["仕"],[],""],
+ ["占","テン",["店"],[],""],
+ ["者","シャ・ショ・ト",["者","暑","都"],[],"The sound shifts but stays recognisable."],
+ ["里","リ",["理"],["野"],"野 (ヤ) breaks the pattern."],
+ ["青","セイ",["青"],[],"At N3 you'll meet 晴, 静 and 精, which all share this part and the sound セイ."]
+];
+function soundView(){
+  let h=`<h2 class="part">音の部品<span>The shape gives the sound</span></h2><p class="partnote">Many kanji have a part that hints at the on reading. Spot the part and you can often guess how a new kanji is read.</p>
+  <section class="sheet" id="phonetic">`+PHON.map(([c,r,mem,odd,note])=>`<div class="pgroup${n5flag([...mem,...odd].map(k=>BY[k]).filter(Boolean))}">
+     <div class="rd"><span class="seal">${c}</span><span class="rj">${r.split("・").map(romaji).join(" / ")}</span></div>
+     <div class="minis">${mem.map(k=>mini(k)).join("")}${odd.map(k=>mini(k,true)).join("")}</div>
+     ${note?`<p class="pnote">${esc(note)}</p>`:""}</div>`).join("")+`</section>`;
+  const onMap={}; K.forEach(x=>x.on.forEach(r=>(onMap[r]=onMap[r]||[]).push(x)));
+  const groups=Object.entries(onMap).filter(([,v])=>v.length>=3).sort((a,b)=>b[1].length-a[1].length||a[0].localeCompare(b[0],"ja"));
+  h+=`<h2 class="part">同じ音読み<span>Same on reading, different shapes</span></h2><p class="partnote">These share an on reading but not a shape. In a compound word the other kanji and the context tell them apart.</p>
+  <section class="sheet" id="on">`+groups.map(([r,v])=>`<div class="pgroup${n5flag(v)}"><div class="rd">${r}<span class="rj">${romaji(r)}</span><span class="cnt">${v.length} kanji</span></div>
+     <div class="minis">${v.map(x=>mini(x.k)).join("")}</div></div>`).join("")+`</section>`;
+  const kunMap={}; K.forEach(x=>x.kun.forEach(r=>{ const key=r.replace(".",""); (kunMap[key]=kunMap[key]||[]).push(x); }));
+  const kg=Object.entries(kunMap).filter(([,v])=>v.length>=2).sort((a,b)=>a[0].localeCompare(b[0],"ja"));
+  h+=`<h2 class="part">同じ訓読み<span>Same kun reading, different kanji</span></h2><p class="partnote">Native Japanese words that sound the same but are written with different kanji, because the meanings differ.</p>
+  <section class="sheet" id="kun">`+kg.map(([r,v])=>`<div class="pgroup${n5flag(v)}"><div class="rd">${r}<span class="rj">${romaji(r)}</span></div>
+     <div class="minis">${v.map(x=>mini(x.k)).join("")}</div></div>`).join("")+`</section>`;
+  return h;
+}
+// ---------- view: topic ----------
+const TOPICS=[["num","数とお金","Numbers & money"],["time","時間","Time & calendar"],["people","人","People & family"],["body","体","Body & health"],["nature","自然","Nature & weather"],["dir","方向","Directions & position"],["places","町","Town & buildings"],["travel","交通","Travel & transport"],["school","学校と仕事","School, work & language"],["food","食べ物","Food & drink"],["fun","趣味","Leisure & arts"],["talk","見る・話す","Seeing, speaking & thinking"],["move","行く・来る","Coming & going"],["do","動作","Everyday actions"],["desc","形容","Describing words"],["abstract","大事な言葉","Useful building blocks"]];
+function topicView(){
+  return TOPICS.map(([id,jp,en])=>{ const list=K.filter(x=>x.t===id);
+    return `<section class="sheet${n5flag(list)}" id="t-${id}"><div class="shead"><div class="t"><b><span style="font-family:var(--jp);font-size:1.6rem;margin-right:.6rem">${jp}</span>${en}</b><span>${list.length} kanji</span></div></div><div class="cards">${list.map(card).join("")}</div></section>`; }).join("");
+}
+// ---------- state ----------
+let state={view:"shape",level:"all",romaji:"on",hide:"none"};
+try{ const s=JSON.parse(localStorage.getItem("kanji-n5n4")||"null"); if(s) Object.assign(state,s); }catch(e){}
+const save=()=>{ try{ localStorage.setItem("kanji-n5n4",JSON.stringify(state)); }catch(e){} };
+const main=document.getElementById("main"), nav=document.getElementById("nav");
+function render(){
+  if(state.view==="shape"){ main.innerHTML=shapeView(); nav.innerHTML=FAMS.filter(f=>K.some(x=>x.f===f[0])).map(f=>`<a href="#f-${f[0]}">${f[0]==="other"?"Standalone":`<span class="j">${f[1]}</span>`}</a>`).join(""); }
+  else if(state.view==="sound"){ main.innerHTML=soundView(); nav.innerHTML=`<a href="#phonetic">Shape gives the sound</a><a href="#on">Same on reading</a><a href="#kun">Same kun reading</a>`; }
+  else { main.innerHTML=topicView(); nav.innerHTML=TOPICS.map(([id,jp,en])=>`<a href="#t-${id}"><span class="j">${jp}</span>${en}</a>`).join(""); }
+  apply();
+}
+function apply(){
+  document.body.classList.toggle("no-romaji",state.romaji==="off");
+  document.body.classList.toggle("n5only",state.level==="n5");
+  document.body.classList.toggle("hide-meaning",state.hide==="meaning");
+  document.body.classList.toggle("hide-readings",state.hide==="readings");
+  document.querySelectorAll(".card").forEach(c=>{ c.classList.remove("revealed"); c.tabIndex = state.hide==="none" ? -1 : 0; });
+  ["view","level","romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset[k]===state[k])));
+}
+document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;save();render();window.scrollTo(0,0);});
+["level","romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{state[k]=b.dataset[k];save();apply();}));
+main.addEventListener("click",e=>{ const c=e.target.closest(".card"); if(c&&state.hide!=="none") c.classList.add("revealed"); });
+main.addEventListener("keydown",e=>{ const c=e.target.closest(".card"); if(c&&(e.key==="Enter"||e.key===" ")&&state.hide!=="none"){ e.preventDefault(); c.classList.add("revealed"); } });
+render();
+
+(function(){ let v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
+  const set=x=>{ v=x; document.body.classList.toggle("no-rdcol",v==="off");
+    document.querySelectorAll("[data-rdcol]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rdcol===v));
+    try{ localStorage.setItem("rdcol",v); }catch(e){} };
+  document.querySelectorAll("[data-rdcol]").forEach(b=>b.addEventListener("click",()=>set(b.dataset.rdcol)));
+  set(v); })();
+</script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kana sounds: by sign, by sound, by topic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F5F1; --sheet:#FFFFFF; --ink:#1D2433; --muted:#646B78; --rule:#DCDFE5;
+  --seal:#B3261E; --seal-wash:#FBEDEC; --chip:#E7E9EF; --indigo:#2C3E73; --indigo-wash:#E9EDF7;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --en:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+    --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+  --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.45}
+header{max-width:960px;margin:0 auto;padding:2.5rem 1.25rem 1rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2.2rem,7vw,3.6rem);margin:0;line-height:1.1;letter-spacing:.02em}
+.sub{margin:.6rem 0 0;color:var(--muted);max-width:62ch}
+.controls{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+.controls-inner{max-width:960px;margin:0 auto;padding:.6rem 1.25rem;display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:center}
+.seg{display:flex;background:var(--chip);border-radius:8px;padding:3px}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.9rem;padding:.3rem .65rem;border-radius:6px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);font-weight:600;box-shadow:0 0 0 1px var(--rule)}
+nav.topics{max-width:960px;margin:0 auto;padding:0 1.25rem .6rem;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+nav.topics:empty{display:none}
+nav.topics a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.88rem;padding:.25rem .65rem;border:1px solid var(--rule);border-radius:999px;background:var(--sheet)}
+nav.topics a .j{font-family:var(--jp);margin-right:.3rem}
+button:focus-visible,a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+main{max-width:960px;margin:0 auto;padding:1rem 1.25rem 4rem}
+section.sheet{background:var(--sheet);border:1px solid var(--rule);border-radius:4px;margin:1.5rem 0;padding:1.5rem 1.5rem 1.2rem;scroll-margin-top:110px}
+.sheet h2{margin:0;display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap}
+.sheet h2 .jp{font-family:var(--jp);font-weight:600;font-size:1.9rem}
+.sheet h2 .en{font-size:1.05rem;color:var(--muted);font-weight:400}
+.intro{margin:.5rem 0 0;color:var(--muted);font-size:.95rem;max-width:64ch}
+.no-romaji .rj{display:none}
+.no-kata .kt{display:none}
+
+/* primary-sign view */
+.fams{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:.7rem;margin-top:1rem}
+.fam{border:1px solid var(--rule);border-radius:6px;padding:.7rem .8rem;background:var(--paper)}
+.fam.flag{border-color:var(--seal)}
+.prime{display:flex;align-items:baseline;gap:.45rem}
+.prime .hg{font-family:var(--jp);font-size:2.6rem;line-height:1.1}
+.prime .kt{font-family:var(--jp);font-size:1.5rem;color:var(--muted)}
+.prime .rj{font-style:italic;color:var(--muted);margin-left:auto}
+.derived{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.45rem}
+.dk{display:inline-flex;align-items:baseline;gap:.25rem;background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:.1rem .4rem}
+.dk.same{border-color:var(--seal);background:var(--seal-wash)}
+.dk .h{font-family:var(--jp);font-size:1.15rem}
+.dk .kt{font-family:var(--jp);font-size:.9rem;color:var(--muted)}
+.dk .rj{font-style:italic;font-size:.8rem;color:var(--muted)}
+.dlabel{font-size:.75rem;color:var(--muted);margin-top:.45rem}
+.fnote{font-size:.82rem;color:var(--seal);margin-top:.4rem}
+
+/* sound view */
+.sgroup{padding:1rem 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:8.5rem 1fr;gap:1.2rem}
+.sgroup:last-child{border-bottom:0}
+.sound{font-size:1.5rem;font-style:italic;font-weight:600;line-height:1.2}
+.signs{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem}
+.sign{font-family:var(--jp);font-size:1.6rem;line-height:1.2;border:1.5px solid var(--seal);color:var(--seal);border-radius:5px;padding:0 .35rem}
+.sign.rare{border-style:dashed;opacity:.85}
+.sign small{font-family:var(--en);font-size:.7rem;display:block;text-align:center;color:var(--muted);line-height:1.1;padding-bottom:.15rem}
+.why{margin:0 0 .5rem;max-width:62ch}
+.ex{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.1rem 1rem;padding:.3rem 0;align-items:baseline}
+.ex .k{font-family:var(--jp);font-size:1.25rem}
+.ex .k mark{background:var(--seal-wash);color:var(--seal);border-radius:3px;padding:0 .1em}
+.ex .k .kj{font-size:.85rem;color:var(--muted);margin-left:.4rem}
+.ex .m .rj{display:block;font-style:italic;color:var(--muted);font-size:.88rem}
+h3.part{font-family:var(--jp);font-weight:600;font-size:1.5rem;margin:2.2rem 0 0}
+h3.part span{font-family:var(--en);font-weight:400;font-size:1rem;color:var(--muted);margin-left:.6rem}
+
+/* homophones */
+.hset{padding:1rem 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:8.5rem 1fr;gap:1.2rem}
+.hset:last-child{border-bottom:0}
+.hkey{font-family:var(--jp);font-size:2rem;line-height:1.1}
+.hkey .rj{display:block;font-family:var(--en);font-style:italic;font-size:.95rem;color:var(--muted)}
+.htopic{display:inline-block;margin-top:.4rem;font-size:.78rem;color:var(--indigo);background:var(--indigo-wash);border-radius:4px;padding:.05rem .4rem}
+.hwords{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.5rem}
+.hw{border:1px solid var(--rule);border-radius:6px;padding:.5rem .7rem;background:var(--paper)}
+.hw .kj{font-family:var(--jp);font-size:1.7rem;line-height:1.2}
+.hw .me{display:block}
+.hw .pitch{display:inline-block;margin-top:.45rem;font-family:var(--jp);font-size:1.25rem;line-height:1.3}
+.pitch .m{display:inline-block;padding:0 .05em;border-top:2px solid transparent;border-bottom:2px solid var(--muted)}
+.pitch .m.hi{border-top-color:var(--indigo);border-bottom-color:transparent;color:var(--indigo)}
+.pitch .m.pt{opacity:.6}
+.pitch-key{font-size:.8rem;color:var(--muted);margin:.35rem 0 0}
+.hnote{grid-column:1/-1;font-size:.85rem;color:var(--seal);margin:.1rem 0 0}
+footer{max-width:960px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);font-size:.85rem}
+footer p{max-width:70ch}
+@media (max-width:620px){
+  section.sheet{padding:1.1rem 1rem .8rem;scroll-margin-top:180px}
+  .sgroup,.hset{grid-template-columns:1fr;gap:.5rem}
+  .fams{grid-template-columns:repeat(auto-fill,minmax(145px,1fr))}
+  .ex{grid-template-columns:1fr}
+}
+@media print{ .controls{display:none} body{background:#fff} section.sheet{border:0;padding:0;break-inside:avoid-page} }
+:root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+:root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
+.rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
+body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
+body:not(.no-rdcol) .rd .rb,body:not(.no-rdcol) span.rd:not(.kana){text-decoration:underline 2px var(--rc);text-underline-offset:.22em;text-decoration-skip-ink:none}
+body:not(.no-rdcol) .rd-sp .rb,body:not(.no-rdcol) span.rd-sp:not(.kana){text-decoration-style:dotted}
+body:not(.no-rdcol) .rd.kana{color:var(--rc)}
+.rd-legend{max-width:var(--rd-max,980px);margin:0 auto;padding:0 1.25rem .55rem;display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.85rem;color:var(--muted)}
+.rd-legend .sw{font-family:var(--jp);font-size:1rem;margin-right:.25rem}
+.no-rdcol .rd-legend{display:none}
+@media (max-width:620px){.rd-legend .rdl{display:none}.rd-legend{gap:.3rem .9rem}}
+.rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
+.no-rdcol .rdv-on,.no-rdcol .rdv-kun{color:inherit}
+</style>
+</head>
+<body>
+<header>
+  <h1>かなの音</h1>
+  <p class="sub">The kana and the sounds they make. See them three ways: each primary sign with the signs built from it, the signs and spellings that sound the same, and the words that sound the same, grouped by topic.</p>
+</header>
+<div class="controls">
+  <div class="controls-inner">
+    <div class="seg" role="group" aria-label="View">
+      <button data-view="sign" aria-pressed="true">By primary sign</button>
+      <button data-view="sound" aria-pressed="false">By sound</button>
+      <button data-view="topic" aria-pressed="false">By topic</button>
+    </div>
+    <div class="seg" role="group" aria-label="Romaji">
+      <button data-romaji="on" aria-pressed="true">Romaji on</button>
+      <button data-romaji="off" aria-pressed="false">Off</button>
+    </div>
+    <div class="seg" role="group" aria-label="Katakana">
+      <button data-kata="on" aria-pressed="true">Katakana on</button>
+      <button data-kata="off" aria-pressed="false">Off</button>
+    </div>
+    <div class="seg" role="group" aria-label="Reading colours">
+      <button data-rdcol="on" aria-pressed="true">On/kun colours</button>
+      <button data-rdcol="off" aria-pressed="false">Off</button>
+    </div>
+  </div>
+  <div class="rd-legend"><span><span class="rd rd-on"><span class="rb sw">音</span></span>On<span class="rdl"> reading, from Chinese</span></span><span><span class="rd rd-kun"><span class="rb sw">訓</span></span>Kun<span class="rdl"> reading, native Japanese</span></span><span><span class="rd rd-sp"><span class="rb sw">特</span></span>Special<span class="rdl"> reading: learn the whole word</span></span></div>
+  <nav class="topics" id="nav"></nav>
+</div>
+<main id="main"></main>
+<footer>
+  <p>Romaji uses Hepburn with long vowels written out. Pitch patterns are standard Tokyo Japanese: a line above a kana means a high note, a line below means low, and the faded が shows what happens to a particle after the word. Regional accents differ.</p>
+</footer>
+<script>
+
+// ---------- on/kun reading colours ----------
+const RD = {"一": [["いち", "いつ"], ["ひと", "ひとち"]], "二": [["に"], ["ふた", "ふたち"]], "三": [["さん"], ["みっ", "みっち"]], "四": [["し"], ["よ", "よん", "よっ", "よっち"]], "五": [["ご"], ["いつ", "いつち"]], "六": [["ろく"], ["むっ", "むっち"]], "七": [["しち"], ["なな", "なな", "ななち"]], "八": [["はち"], ["や", "やっ", "やっち"]], "九": [["きゅう", "く"], ["ここの", "ここのち"]], "十": [["じゅう", "じゅっ", "じっ"], ["とお"]], "百": [["ひゃく"], []], "千": [["せん"], ["ち"]], "万": [["まん", "ばん"], []], "円": [["えん"], ["まる"]], "金": [["きん", "こん"], ["かね", "かな"]], "銀": [["ぎん"], []], "買": [["ばい"], ["か", "かい"]], "売": [["ばい"], ["う", "うり"]], "借": [["しゃく"], ["か", "かり", "かりり"]], "貸": [["たい"], ["か", "かし"]], "代": [["だい", "たい"], ["か", "かわ", "かわり"]], "品": [["ひん"], ["しな"]], "物": [["ぶつ", "もつ"], ["もの"]], "服": [["ふく"], []], "日": [["にち", "じつ", "に"], ["ひ", "か"]], "月": [["げつ", "がつ"], ["つき"]], "曜": [["よう"], []], "年": [["ねん"], ["とし"]], "時": [["じ"], ["とき"]], "今": [["こん", "きん"], ["いま"]], "午": [["ご"], []], "半": [["はん"], ["なか"]], "分": [["ぶん", "ふん", "ぶ"], ["わ", "わか", "わかり"]], "毎": [["まい"], []], "週": [["しゅう"], []], "間": [["かん", "けん"], ["あいだ", "ま"]], "去": [["きょ", "こ"], ["さ", "さり"]], "早": [["そう"], ["はや"]], "昼": [["ちゅう"], ["ひる"]], "朝": [["ちょう"], ["あさ"]], "夕": [["せき"], ["ゆう"]], "夜": [["や"], ["よる"]], "始": [["し"], ["はじ", "はじ", "はじめ", "はじめり", "はじま", "はじまり"]], "終": [["しゅう"], ["お", "おわ", "おわり"]], "計": [["けい"], ["はか", "はかり"]], "人": [["じん", "にん"], ["ひと", "と"]], "父": [["ふ"], ["ちち"]], "母": [["ぼ"], ["はは"]], "子": [["し", "す"], ["こ"]], "女": [["じょ", "にょ"], ["おんな"]], "男": [["だん", "なん"], ["おとこ"]], "友": [["ゆう"], ["とも"]], "名": [["めい", "みょう"], ["な"]], "会": [["かい", "え"], ["あ", "あい"]], "兄": [["けい", "きょう"], ["あに"]], "弟": [["だい", "てい"], ["おとうと"]], "姉": [["し"], ["あね"]], "妹": [["まい"], ["いもうと"]], "私": [["し"], ["わたし"]], "者": [["しゃ"], ["もの"]], "主": [["しゅ"], ["ぬし", "おも"]], "親": [["しん"], ["おや", "した"]], "族": [["ぞく"], []], "民": [["みん"], ["たみ"]], "口": [["こう", "く"], ["くち"]], "目": [["もく"], ["め"]], "耳": [["じ"], ["みみ"]], "手": [["しゅ"], ["て", "た"]], "足": [["そく"], ["あし", "た", "たり", "たりり"]], "体": [["たい"], ["からだ"]], "顔": [["がん"], ["かお"]], "頭": [["とう", "ず"], ["あたま"]], "首": [["しゅ"], ["くび"]], "心": [["しん"], ["こころ"]], "医": [["い"], []], "病": [["びょう"], ["やまい"]], "薬": [["やく"], ["くすり"]], "死": [["し"], ["し", "しに"]], "力": [["りょく", "りき"], ["ちから"]], "山": [["さん"], ["やま"]], "川": [["せん"], ["かわ"]], "田": [["でん"], ["た"]], "天": [["てん"], ["あめ", "あま"]], "気": [["き", "け"], []], "雨": [["う"], ["あめ", "あま"]], "花": [["か"], ["はな"]], "空": [["くう"], ["そら", "あ", "から", "あき", "す"]], "火": [["か"], ["ひ"]], "水": [["すい"], ["みず"]], "木": [["もく", "ぼく"], ["き", "こ"]], "土": [["ど", "と"], ["つち"]], "海": [["かい"], ["うみ"]], "池": [["ち"], ["いけ"]], "地": [["ち", "じ"], []], "森": [["しん"], ["もり"]], "林": [["りん"], ["はやし"]], "野": [["や"], ["の"]], "光": [["こう"], ["ひかり", "ひか"]], "風": [["ふう", "ふ"], ["かぜ", "かざ"]], "春": [["しゅん"], ["はる"]], "夏": [["か"], ["なつ"]], "秋": [["しゅう"], ["あき"]], "冬": [["とう"], ["ふゆ"]], "暑": [["しょ"], ["あつ"]], "寒": [["かん"], ["さむ"]], "犬": [["けん"], ["いぬ"]], "鳥": [["ちょう"], ["とり"]], "上": [["じょう"], ["うえ", "あ", "のぼ", "かみ", "あが", "あがり"]], "下": [["か", "げ"], ["した", "さ", "くだ", "お", "しも", "さが", "さがり"]], "左": [["さ"], ["ひだり"]], "右": [["う", "ゆう"], ["みぎ"]], "中": [["ちゅう"], ["なか"]], "外": [["がい", "げ"], ["そと", "ほか", "はず"]], "前": [["ぜん"], ["まえ"]], "後": [["ご", "こう"], ["うし", "あと", "のち"]], "東": [["とう"], ["ひがし"]], "西": [["せい", "さい"], ["にし"]], "南": [["なん"], ["みなみ"]], "北": [["ほく"], ["きた"]], "方": [["ほう"], ["かた"]], "国": [["こく"], ["くに"]], "店": [["てん"], ["みせ"]], "社": [["しゃ"], ["やしろ"]], "院": [["いん"], []], "屋": [["おく"], ["や"]], "家": [["か", "け"], ["いえ", "や"]], "館": [["かん"], []], "京": [["きょう", "けい"], []], "区": [["く"], []], "県": [["けん"], []], "建": [["けん"], ["た", "たて", "たてり"]], "市": [["し"], ["いち"]], "室": [["しつ"], []], "住": [["じゅう"], ["す", "すみ"]], "所": [["しょ"], ["ところ"]], "場": [["じょう"], ["ば"]], "村": [["そん"], ["むら"]], "町": [["ちょう"], ["まち"]], "都": [["と", "つ"], ["みやこ"]], "堂": [["どう"], []], "門": [["もん"], ["かど"]], "台": [["だい", "たい"], []], "車": [["しゃ"], ["くるま"]], "電": [["でん"], []], "道": [["どう"], ["みち"]], "駅": [["えき"], []], "運": [["うん"], ["はこ", "はこび"]], "旅": [["りょ"], ["たび"]], "乗": [["じょう"], ["の", "のり"]], "通": [["つう"], ["とお", "かよ", "とおり", "かよい"]], "転": [["てん"], ["ころ", "ころび"]], "発": [["はつ"], []], "着": [["ちゃく"], ["き", "つ", "きり", "つき"]], "学": [["がく"], ["まな", "まなび"]], "校": [["こう"], []], "先": [["せん"], ["さき"]], "生": [["せい", "しょう"], ["い", "う", "なま", "いき", "いきり", "うまれ", "うまれり"]], "本": [["ほん"], ["もと"]], "語": [["ご"], ["かた", "かたり"]], "読": [["どく"], ["よ", "よみ"]], "書": [["しょ"], ["か", "かき"]], "英": [["えい"], []], "漢": [["かん"], []], "字": [["じ"], []], "文": [["ぶん", "もん"], ["ふみ"]], "紙": [["し"], ["かみ"]], "教": [["きょう"], ["おし", "おしえ", "おしえり"]], "習": [["しゅう"], ["なら", "ならい"]], "勉": [["べん"], []], "試": [["し"], ["ため", "ためし"]], "験": [["けん"], []], "研": [["けん"], ["と", "とぎ"]], "究": [["きゅう"], ["きわ", "きわめ", "きわめり"]], "題": [["だい"], []], "問": [["もん"], ["と", "とい"]], "答": [["とう"], ["こた", "こたえ", "こたえり"]], "質": [["しつ"], []], "図": [["ず", "と"], ["はか", "はかり"]], "仕": [["し"], ["つか", "つかえ", "つかえり"]], "業": [["ぎょう"], []], "員": [["いん"], []], "働": [["どう"], ["はたら", "はたらき"]], "工": [["こう", "く"], []], "理": [["り"], []], "食": [["しょく"], ["た", "く", "たべ", "たべり"]], "飲": [["いん"], ["の", "のみ"]], "魚": [["ぎょ"], ["さかな", "うお"]], "牛": [["ぎゅう"], ["うし"]], "肉": [["にく"], []], "菜": [["さい"], ["な"]], "茶": [["ちゃ", "さ"], []], "飯": [["はん"], ["めし"]], "味": [["み"], ["あじ"]], "料": [["りょう"], []], "洋": [["よう"], []], "映": [["えい"], ["うつ", "うつり"]], "画": [["が", "かく"], []], "音": [["おん"], ["おと", "ね"]], "楽": [["がく", "らく"], ["たの"]], "歌": [["か"], ["うた"]], "写": [["しゃ"], ["うつ", "うつし"]], "見": [["けん"], ["み", "みり"]], "言": [["げん", "ごん"], ["い", "こと", "いい"]], "話": [["わ"], ["はな", "はなし"]], "聞": [["ぶん", "もん"], ["き", "きき"]], "知": [["ち"], ["し", "しり"]], "思": [["し"], ["おも", "おもい"]], "考": [["こう"], ["かんが", "かんがえ", "かんがえり"]], "説": [["せつ"], ["と", "とき"]], "声": [["せい"], ["こえ"]], "行": [["こう", "ぎょう"], ["い", "おこな", "ゆ", "いき", "おこない"]], "来": [["らい"], ["く", "き", "こ", "くり"]], "出": [["しゅつ"], ["で", "だ", "でり", "だし"]], "入": [["にゅう"], ["はい", "い", "はいり", "いれ", "いれり", "いり"]], "帰": [["き"], ["かえ", "かえり"]], "急": [["きゅう"], ["いそ", "いそぎ"]], "止": [["し"], ["と", "と", "とま", "とまり", "とめ", "とめり"]], "走": [["そう"], ["はし", "はしり"]], "歩": [["ほ", "ぽ", "ぶ"], ["ある", "あゆ", "あるき"]], "進": [["しん"], ["すす", "すすみ"]], "動": [["どう"], ["うご", "うごき"]], "近": [["きん"], ["ちか"]], "遠": [["えん"], ["とお"]], "送": [["そう"], ["おく", "おくり"]], "休": [["きゅう"], ["やす", "やすみ"]], "立": [["りつ"], ["た", "たち"]], "引": [["いん"], ["ひ", "ひき"]], "開": [["かい"], ["ひら", "あ", "あ", "ひらき", "あけ", "あけり", "あき"]], "起": [["き"], ["お", "おき", "おきり"]], "作": [["さく", "さ"], ["つく", "つくり"]], "使": [["し"], ["つか", "つかい"]], "持": [["じ"], ["も", "もち"]], "集": [["しゅう"], ["あつ", "あつ", "あつま", "あつまり", "あつめ", "あつめり"]], "切": [["せつ"], ["き", "きり"]], "洗": [["せん"], ["あら", "あらい"]], "待": [["たい"], ["ま", "まち"]], "大": [["だい", "たい"], ["おお"]], "小": [["しょう"], ["ちい", "こ", "お"]], "高": [["こう"], ["たか"]], "安": [["あん"], ["やす"]], "長": [["ちょう"], ["なが"]], "新": [["しん"], ["あたら"]], "古": [["こ"], ["ふる"]], "多": [["た"], ["おお"]], "少": [["しょう"], ["すく", "すこ"]], "白": [["はく"], ["しろ"]], "悪": [["あく"], ["わる"]], "暗": [["あん"], ["くら"]], "明": [["めい", "みょう"], ["あか", "あ", "あけ", "あけり"]], "強": [["きょう"], ["つよ"]], "弱": [["じゃく"], ["よわ"]], "軽": [["けい"], ["かる"]], "重": [["じゅう", "ちょう"], ["おも", "かさ"]], "広": [["こう"], ["ひろ"]], "好": [["こう"], ["す"]], "太": [["たい"], ["ふと"]], "短": [["たん"], ["みじか"]], "低": [["てい"], ["ひく"]], "青": [["せい"], ["あお"]], "赤": [["せき"], ["あか"]], "黒": [["こく"], ["くろ"]], "色": [["しょく", "しき"], ["いろ"]], "何": [["か"], ["なに", "なん"]], "不": [["ふ", "ぶ"], []], "以": [["い"], []], "意": [["い"], []], "回": [["かい"], ["まわ", "まわり"]], "界": [["かい"], []], "元": [["げん", "がん"], ["もと"]], "合": [["ごう"], ["あ", "あい", "あい"]], "産": [["さん"], ["う", "うみ"]], "自": [["じ", "し"], ["みずか"]], "事": [["じ"], ["こと"]], "真": [["しん"], ["ま"]], "正": [["せい", "しょう"], ["ただ", "まさ"]], "世": [["せ", "せい"], ["よ"]], "注": [["ちゅう"], ["そそ", "そそぎ"]], "度": [["ど"], ["たび"]], "同": [["どう"], ["おな"]], "特": [["とく"], []], "別": [["べつ"], ["わか", "わかれ", "わかれり"]], "便": [["べん", "びん"], ["たよ"]], "有": [["ゆう", "う"], ["あ", "あり"]], "用": [["よう"], ["もち", "もちい", "もちいり"]], "丈": [["じょう"], ["たけ"]], "両": [["りょう"], []], "乳": [["にゅう"], ["ちち"]], "予": [["よ"], []], "交": [["こう"], ["まじ", "か"]], "介": [["かい"], []], "他": [["た"], ["ほか"]], "付": [["ふ"], ["つ", "つけ"]], "伝": [["でん"], ["つた"]], "供": [["きょう", "く"], ["とも", "そな"]], "係": [["けい"], ["かかり", "かか"]], "信": [["しん"], []], "停": [["てい"], []], "健": [["けん"], ["すこ"]], "傘": [["さん"], ["かさ"]], "優": [["ゆう"], ["やさ", "すぐ"]], "免": [["めん"], ["まぬか"]], "全": [["ぜん"], ["まった", "すべ"]], "公": [["こう"], ["おおやけ"]], "内": [["ない"], ["うち"]], "冷": [["れい"], ["つめ", "ひ", "さ"]], "刀": [["とう"], ["かたな"]], "初": [["しょ"], ["はじ", "はつ"]], "利": [["り"], ["き"]], "到": [["とう"], []], "制": [["せい"], []], "助": [["じょ"], ["たす"]], "努": [["ど"], ["つと"]], "労": [["ろう"], []], "化": [["か", "け"], ["ば"]], "単": [["たん"], []], "危": [["き"], ["あぶ", "あや"]], "卵": [["らん"], ["たまご"]], "収": [["しゅう"], ["おさ"]], "取": [["しゅ"], ["と"]], "受": [["じゅ"], ["う", "うけ"]], "可": [["か"], []], "号": [["ごう"], []], "司": [["し"], []], "向": [["こう"], ["む"]], "吹": [["すい"], ["ふ"]], "呂": [["ろ"], []], "呼": [["こ"], ["よ"]], "和": [["わ"], ["やわ", "なご"]], "咲": [["しょう"], ["さ"]], "喉": [["こう"], ["のど"]], "喫": [["きつ"], []], "困": [["こん"], ["こま"]], "園": [["えん"], ["その"]], "型": [["けい"], ["かた"]], "基": [["き"], ["もと"]], "士": [["し"], []], "変": [["へん"], ["か"]], "夫": [["ふ", "ふう"], ["おっと"]], "失": [["しつ"], ["うしな"]], "婚": [["こん"], []], "嫌": [["けん"], ["きら", "いや"]], "嬉": [["き"], ["うれ"]], "定": [["てい"], ["さだ"]], "容": [["よう"], []], "宿": [["しゅく"], ["やど"]], "富": [["ふ", "ふう"], ["とみ", "と"]], "寝": [["しん"], ["ね"]], "察": [["さつ"], []], "寿": [["じゅ"], ["ことぶき"]], "専": [["せん"], ["もっぱ"]], "局": [["きょく"], []], "島": [["とう"], ["しま"]], "己": [["こ", "き"], ["おのれ"]], "布": [["ふ"], ["ぬの"]], "席": [["せき"], []], "帯": [["たい"], ["おび"]], "帽": [["ぼう"], []], "幹": [["かん"], ["みき"]], "座": [["ざ"], ["すわ"]], "庫": [["こ"], []], "康": [["こう"], []], "当": [["とう"], ["あ"]], "役": [["やく"], []], "往": [["おう"], []], "復": [["ふく"], []], "必": [["ひつ"], ["かなら"]], "忘": [["ぼう"], ["わす"]], "忙": [["ぼう"], ["いそが"]], "念": [["ねん"], []], "愛": [["あい"], []], "払": [["ふつ"], ["はら"]], "押": [["おう"], ["お"]], "拶": [["さつ"], []], "指": [["し"], ["ゆび", "さ"]], "挨": [["あい"], []], "掃": [["そう"], ["は"]], "授": [["じゅ"], ["さず"]], "探": [["たん"], ["さが"]], "描": [["びょう"], ["か", "えが"]], "換": [["かん"], ["か"]], "携": [["けい"], ["たずさ"]], "撮": [["さつ"], ["と"]], "救": [["きゅう"], ["すく"]], "散": [["さん"], ["ち"]], "数": [["すう"], ["かず", "かぞ"]], "敵": [["てき"], ["かたき"]], "易": [["えき", "い"], ["やさ"]], "昨": [["さく"], []], "晩": [["ばん"], []], "景": [["けい"], []], "晴": [["せい"], ["は"]], "暇": [["か"], ["ひま"]], "暖": [["だん"], ["あたた"]], "曇": [["どん"], ["くも"]], "曲": [["きょく"], ["ま"]], "替": [["たい"], ["か", "かえ"]], "最": [["さい"], ["もっと"]], "未": [["み"], []], "末": [["まつ"], ["すえ"]], "机": [["き"], ["つくえ"]], "果": [["か"], ["は"]], "案": [["あん"], []], "椅": [["い"], []], "様": [["よう"], ["さま"]], "機": [["き"], ["はた"]], "次": [["じ"], ["つぎ", "つ"]], "欲": [["よく"], ["ほ"]], "歯": [["し"], ["は"]], "残": [["ざん"], ["のこ"]], "毛": [["もう"], ["け"]], "氷": [["ひょう"], ["こおり"]], "永": [["えい"], ["なが"]], "求": [["きゅう"], ["もと"]], "汚": [["お"], ["きたな", "よご"]], "泊": [["はく"], ["と"]], "泳": [["えい"], ["およ"]], "浴": [["よく"], ["あ"]], "涼": [["りょう"], ["すず"]], "渇": [["かつ"], ["かわ"]], "渡": [["と"], ["わた"]], "温": [["おん"], ["あたた"]], "港": [["こう"], ["みなと"]], "濯": [["たく"], []], "無": [["む", "ぶ"], ["な"]], "焼": [["しょう"], ["や"]], "熱": [["ねつ"], ["あつ"]], "片": [["へん"], ["かた"]], "狭": [["きょう"], ["せま"]], "猫": [["びょう"], ["ねこ"]], "現": [["げん"], ["あらわ"]], "甘": [["かん"], ["あま"]], "番": [["ばん"], []], "疲": [["ひ"], ["つか"]], "痛": [["つう"], ["いた"]], "皿": [[], ["さら"]], "盗": [["とう"], ["ぬす"]], "眠": [["みん"], ["ねむ"]], "眼": [["がん"], ["まなこ"]], "礼": [["れい"], []], "神": [["しん", "じん"], ["かみ"]], "税": [["ぜい"], []], "窓": [["そう"], ["まど"]], "笑": [["しょう"], ["わら", "え"]], "符": [["ふ"], []], "筆": [["ひつ"], ["ふで"]], "箸": [[], ["はし"]], "簡": [["かん"], []], "米": [["べい", "まい"], ["こめ"]], "糸": [["し"], ["いと"]], "系": [["けい"], []], "約": [["やく"], []], "素": [["そ", "す"], []], "細": [["さい"], ["ほそ", "こま"]], "紹": [["しょう"], []], "経": [["けい"], ["へ"]], "結": [["けつ"], ["むす"]], "絡": [["らく"], ["から"]], "絵": [["かい", "え"], []], "綺": [["き"], []], "緊": [["きん"], []], "緒": [["しょ", "ちょ"], ["お"]], "線": [["せん"], []], "練": [["れん"], ["ね"]], "置": [["ち"], ["お"]], "美": [["び"], ["うつく"]], "育": [["いく"], ["そだ"]], "背": [["はい"], ["せ", "せい"]], "脱": [["だつ"], ["ぬ"]], "腹": [["ふく"], ["はら"]], "興": [["きょう"], []], "舌": [["ぜつ"], ["した"]], "良": [["りょう"], ["よ", "い"]], "若": [["じゃく"], ["わか"]], "荷": [["か"], ["に"]], "葉": [["よう"], ["は"]], "蔵": [["ぞう"], ["くら"]], "袋": [["たい"], ["ふくろ"]], "製": [["せい"], []], "要": [["よう"], ["い"]], "覚": [["かく"], ["おぼ"]], "角": [["かく"], ["かど", "つの"]], "記": [["き"], []], "許": [["きょ"], ["ゆる"]], "誕": [["たん"], []], "誰": [[], ["だれ"]], "警": [["けい"], []], "議": [["ぎ"], []], "豚": [["とん"], ["ぶた"]], "財": [["ざい", "さい"], []], "貰": [[], ["もら"]], "賑": [[], ["にぎ"]], "趣": [["しゅ"], ["おもむき"]], "辛": [["しん"], ["から"]], "辞": [["じ"], ["や"]], "辺": [["へん"], ["あた"]], "込": [[], ["こ"]], "返": [["へん"], ["かえ"]], "迷": [["めい"], ["まよ"]], "速": [["そく"], ["はや"]], "連": [["れん"], ["つ"]], "遅": [["ち"], ["おそ", "おく"]], "遊": [["ゆう"], ["あそ"]], "達": [["たつ"], ["たち"]], "違": [["い"], ["ちが"]], "選": [["せん"], ["えら"]], "邪": [["じゃ"], []], "部": [["ぶ"], []], "郵": [["ゆう"], []], "酒": [["しゅ"], ["さけ", "さか"]], "釣": [["ちょう"], ["つ"]], "鉄": [["てつ"], []], "鉛": [["えん"], ["なまり"]], "鍵": [["けん"], ["かぎ"]], "鏡": [["きょう"], ["かがみ"]], "閉": [["へい"], ["し", "と"]], "関": [["かん"], ["せき"]], "阪": [["はん"], ["さか"]], "降": [["こう"], ["お", "ふ"]], "限": [["げん"], ["かぎ"]], "除": [["じょ", "じ"], ["のぞ"]], "陽": [["よう"], []], "隣": [["りん"], ["となり"]], "難": [["なん"], ["むずか", "かた"]], "雪": [["せつ"], ["ゆき"]], "静": [["せい"], ["しず"]], "面": [["めん"], ["おも"]], "靴": [["か"], ["くつ"]], "鞄": [["ほう"], ["かばん"]], "預": [["よ"], ["あず"]], "領": [["りょう"], []], "頼": [["らい"], ["たの"]], "願": [["がん"], ["ねが"]], "飛": [["ひ"], ["と"]], "鶏": [["けい"], ["にわとり", "とり"]], "麗": [["れい"], []], "麦": [["ばく"], ["むぎ"]], "黄": [["こう", "おう"], ["き"]], "鼻": [["び"], ["はな"]], "血": [["けつ"], ["ち"]], "縮": [["しゅく"], ["ちぢ"]], "続": [["ぞく"], ["つづ"]], "由": [["ゆう", "ゆ"], ["よし"]], "蛙": [["あ"], ["かえる"]], "芽": [["が"], ["め"]], "厚": [["こう"], ["あつ"]], "飴": [["い"], ["あめ"]], "鮭": [["けい"], ["さけ"]], "端": [["たん"], ["はし", "はた", "は"]], "橋": [["きょう"], ["はし"]], "飼": [["し"], ["か"]], "効": [["こう"], ["き"]], "髪": [["はつ"], ["かみ"]]};
+const RD_V={か:"が",き:"ぎ",く:"ぐ",け:"げ",こ:"ご",さ:"ざ",し:"じ",す:"ず",せ:"ぜ",そ:"ぞ",た:"だ",ち:"ぢ",つ:"づ",て:"で",と:"ど",は:"ば",ひ:"び",ふ:"ぶ",へ:"べ",ほ:"ぼ"};
+const RD_H={は:"ぱ",ひ:"ぴ",ふ:"ぷ",へ:"ぺ",ほ:"ぽ"};
+function rdVariants(r,first,last){
+  let out=[[r,0]];
+  if(!first){ const f=r[0], rest=r.slice(1);
+    if(RD_V[f]) out.push([RD_V[f]+rest,1]); if(RD_H[f]) out.push([RD_H[f]+rest,1]);
+    if(f==="ち") out.push(["じ"+rest,1]); if(f==="つ") out.push(["ず"+rest,1]); }
+  if(!last){ const more=[]; out.forEach(([s,c])=>{ if(/[つちくき]$/.test(s)) more.push([s.length===1?s+"っ":s.slice(0,-1)+"っ",c+1]); }); out=out.concat(more); }
+  return out;
+}
+const rdHira=s=>s.replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
+function rdSeg(run,reading){
+  const ks=[...run], rd=rdHira(reading), n=ks.length, sols=[];
+  const expect = n>=2 ? "on" : "kun";
+  (function dfs(i,pos,acc,cost){
+    if(sols.length>60) return;
+    if(i===n){ if(pos===rd.length) sols.push({acc:acc.slice(),cost}); return; }
+    let k=ks[i]; const key = k==="々" && i>0 ? ks[i-1] : k;
+    const e=RD[key]; if(!e) return;
+    const cands=[]; e[0].forEach(r=>cands.push([r,"on"])); e[1].forEach(r=>cands.push([r,"kun"]));
+    for(const [r,t] of cands) for(const [s,c] of rdVariants(r,i===0,i===n-1)){
+      if(s && rd.startsWith(s,pos)){ acc.push({k,r:reading.slice(pos,pos+s.length),t}); dfs(i+1,pos+s.length,acc,cost+c+(t===expect?0:0.6)); acc.pop(); }
+    }
+  })(0,0,[],0);
+  if(!sols.length) return null;
+  sols.sort((a,b)=>a.cost-b.cost);
+  return sols[0].acc;
+}
+function rdAlign(word,reading){
+  const parts=word.match(/[\u4e00-\u9fff々]+|[^\u4e00-\u9fff々]+/g)||[];
+  const esc2=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  const re=new RegExp("^"+parts.map(p=>/[\u4e00-\u9fff]/.test(p)?"(.+?)":esc2(rdHira(p)))+"$".replace(/,/g,""));
+  const m=rdHira(reading).match(new RegExp("^"+parts.map(p=>/[\u4e00-\u9fff]/.test(p)?"(.+?)":esc2(rdHira(p))).join("")+"$"));
+  if(!m) return null;
+  let g=1; return parts.map(p=>/[\u4e00-\u9fff]/.test(p)?{t:p,r:m[g++]}:{t:p,r:null});
+}
+const rdE=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function rdRuby(run,reading){
+  const s=rdSeg(run,reading);
+  if(!s) return `<ruby class="rd rd-sp"><span class="rb">${rdE(run)}</span><rt>${rdE(reading)}</rt></ruby>`;
+  return s.map(x=>`<ruby class="rd rd-${x.t}"><span class="rb">${rdE(x.k)}</span><rt>${rdE(x.r)}</rt></ruby>`).join("");
+}
+function rdKanji(run,reading){
+  const s=rdSeg(run,reading);
+  if(!s) return `<span class="rd rd-sp">${rdE(run)}</span>`;
+  return s.map(x=>`<span class="rd rd-${x.t}">${rdE(x.k)}</span>`).join("");
+}
+function rdKana(run,reading){
+  const s=rdSeg(run,reading);
+  if(!s) return `<span class="rd kana rd-sp">${rdE(reading)}</span>`;
+  return s.map(x=>`<span class="rd kana rd-${x.t}">${rdE(x.r)}</span>`).join("");
+}
+// whole word (kanji + kana mixed) with a separate reading
+function rdWord(word,reading,mode){
+  const a=rdAlign(word,String(reading).replace(/ /g,""));
+  if(!a) return mode==="kana"?rdE(reading):rdE(word);
+  return a.map(p=>p.r==null?rdE(p.t):(mode==="ruby"?rdRuby(p.t,p.r):mode==="kana"?rdKana(p.t,p.r):rdKanji(p.t,p.r))).join("");
+}
+
+// ---------- kana to romaji ----------
+const BASE = {
+ あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",
+ さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",
+ な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",
+ ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",や:"ya",ゆ:"yu",よ:"yo",
+ ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",
+ が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",
+ だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",
+ ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po"
+};
+const SMALL_Y = {ゃ:"a",ゅ:"u",ょ:"o"};
+const toHira = s => s.replace(/[\u30A1-\u30F6]/g, ch=>String.fromCharCode(ch.charCodeAt(0)-0x60));
+function romaji(kana){
+  const s = toHira(kana); let out = "", i = 0;
+  while(i < s.length){
+    const ch = s[i], nx = s[i+1];
+    if(ch==="っ"){ const r = romaji(s.slice(i+1,i+3)); out += r.startsWith("ch") ? "t" : (r[0]||""); i++; continue; }
+    if(ch==="ー"){ out += out.slice(-1); i++; continue; }
+    if(nx && SMALL_Y[nx] && BASE[ch]){ const b = BASE[ch]; out += (["shi","chi","ji"].includes(b)?b.slice(0,-1):b.slice(0,-1)+"y")+SMALL_Y[nx]; i+=2; continue; }
+    if(ch==="ん"){ out += (nx && /[あいうえおやゆよ]/.test(nx)) ? "n'" : "n"; i++; continue; }
+    out += BASE[ch] !== undefined ? BASE[ch] : (ch===" "?" ":ch); i++;
+  }
+  return out;
+}
+const esc = s => s.replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+const kata = h => h.replace(/[\u3041-\u3096]/g, ch=>String.fromCharCode(ch.charCodeAt(0)+0x60));
+const shift = (c,n) => String.fromCharCode(c.charCodeAt(0)+n);
+
+// ---------- view 1: primary signs ----------
+const ROWS = [
+ {h:"あ", en:"Vowels", signs:"あいうえお"},
+ {h:"か", en:"k row", signs:"かきくけこ", voiced:[1,"g"]},
+ {h:"さ", en:"s row", signs:"さしすせそ", voiced:[1,"z"]},
+ {h:"た", en:"t row", signs:"たちつてと", voiced:[1,"d"]},
+ {h:"な", en:"n row", signs:"なにぬねの"},
+ {h:"は", en:"h row", signs:"はひふへほ", voiced:[1,"b"], half:[2,"p"]},
+ {h:"ま", en:"m row", signs:"まみむめも"},
+ {h:"や", en:"y row", signs:"やゆよ"},
+ {h:"ら", en:"r row", signs:"らりるれろ"},
+ {h:"わ", en:"w row and ん", signs:"わをん"}
+];
+const SAME = {"ぢ":"sounds like じ","づ":"sounds like ず"};
+const PNOTE = {
+ "し":"Romaji shi, not si", "ち":"Romaji chi, not ti", "つ":"Romaji tsu, not tu", "ふ":"Soft sound between h and f",
+ "は":"Said wa when it's the topic particle", "へ":"Said e when it's the direction particle",
+ "を":"Sounds like お; used only as a particle", "ん":"n, m or ng depending on the next sound"
+};
+const YOON = "きしちにひみり";
+function chip(hg, cls=""){
+  return `<span class="dk ${cls}"><span class="h">${hg}</span><span class="kt">${kata(hg)}</span><span class="rj">${romaji(hg)}</span></span>`;
+}
+function signView(){
+  return ROWS.map(r=>{
+    const cards = [...r.signs].map(s=>{
+      const vd = r.voiced ? shift(s, r.voiced[0]) : null;
+      const hf = r.half ? shift(s, r.half[0]) : null;
+      let d = "";
+      if(vd) d += chip(vd, SAME[vd]?"same":"");
+      if(hf) d += chip(hf);
+      let y = "";
+      if(YOON.includes(s)){
+        const bases = [s]; if(vd && vd!=="ぢ") bases.push(vd); if(hf) bases.push(hf);
+        y = bases.map(b=>[..."ゃゅょ"].map(sm=>chip(b+sm)).join("")).join("");
+      }
+      const note = PNOTE[s] || (vd && SAME[vd] ? `${vd} ${SAME[vd]}` : "");
+      return `<div class="fam${note && (SAME[vd]||"はへをん".includes(s))?" flag":""}">
+        <div class="prime"><span class="hg">${s}</span><span class="kt">${kata(s)}</span><span class="rj">${romaji(s)}</span></div>
+        ${d?`<div class="dlabel">${hf?"Voiced, then p-sound":"Voiced"}</div><div class="derived">${d}</div>`:""}
+        ${y?`<div class="dlabel">With small ゃ ゅ ょ</div><div class="derived">${y}</div>`:""}
+        ${note?`<div class="fnote">${esc(note)}</div>`:""}
+      </div>`;
+    }).join("");
+    const extra = r.voiced ? `Two small strokes (dakuten) voice the sound, turning ${r.en[0]} into ${r.voiced[1]}${r.half?`. A small circle (handakuten) turns it into ${r.half[1]}`:""}.` : "";
+    return `<section class="sheet" id="row-${r.h}"><h2><span class="jp">${r.h}行</span><span class="en">${r.en}</span></h2>
+      ${extra?`<p class="intro">${extra.trim()}</p>`:""}<div class="fams">${cards}</div></section>`;
+  }).join("");
+}
+
+// ---------- view 2: same sounds ----------
+// examples: kana with [target] | kanji | English
+const SOUNDS = [
+ {s:"ji", signs:[["じ","usual"],["ぢ","rare"]], why:"Both are said ji. じ is the normal spelling. ぢ appears only when ち gets voiced inside a word, usually where two words join or a sound repeats.", ex:`
+[じ]かん|時間|time
+かん[じ]|漢字|kanji
+はな[ぢ]|鼻血|nosebleed (鼻 + 血 ち)
+ち[ぢ]む|縮む|to shrink`},
+ {s:"zu", signs:[["ず","usual"],["づ","rare"]], why:"Both are said zu. ず is the normal spelling. づ follows the same rule as ぢ: it appears when つ gets voiced inside a word.", ex:`
+み[ず]|水|water
+す[ず]しい|涼しい|cool
+つ[づ]く|続く|to continue
+みか[づ]き|三日月|crescent moon (月 つき)`},
+ {s:"o", signs:[["お","usual"],["を","particle"]], why:"を sounds exactly like お. It is only ever used as the object particle, marking what the verb acts on.", ex:`
+[お]ちゃ|お茶|tea
+パン [を] たべます|パンを食べます|I eat bread`},
+ {s:"wa", signs:[["わ","usual"],["は","particle"]], why:"は is normally ha, but as the topic particle it is said wa. The greetings こんにちは and こんばんは keep this old particle spelling.", ex:`
+[わ]たし|私|I, me
+わたし [は]|私は|as for me
+こんにち[は]|こんにちは|hello
+[は]な|花|flower (ha, not a particle)`},
+ {s:"e", signs:[["え","usual"],["へ","particle"]], why:"へ is normally he, but as the direction particle it is said e.", ex:`
+[え]き|駅|station
+えき [へ] いきます|駅へ行きます|I go to the station
+[へ]や|部屋|room (he, not a particle)`},
+ {s:"oo", signs:[["おう","usual"],["おお","some words"],["ー","katakana"]], why:"An o-sound followed by う is usually just a long o. A small set of words spell it with お instead, and katakana uses the long mark ー.", ex:`
+ありがと[う]|ありがとう|thank you
+がっこ[う]|学校|school
+お[お]きい|大きい|big
+と[お]い|遠い|far
+コ[ー]ヒ[ー]|コーヒー|coffee`},
+ {s:"ee", signs:[["えい","usual"],["ええ","few words"],["ー","katakana"]], why:"An e-sound followed by い is usually said as a long e.", ex:`
+せんせ[い]|先生|teacher
+え[い]ご|英語|English
+え[え]|ええ|yes
+ケ[ー]キ|ケーキ|cake`},
+ {s:"aa ii uu", signs:[["ああ",""],["いい",""],["うう",""],["ー","katakana"]], why:"The other long vowels are written by adding the same vowel sign. The length changes the meaning, so hold it.", ex:`
+おか[あ]さん|お母さん|mother
+おに[い]さん|お兄さん|older brother
+ゆ[う]びんきょく|郵便局|post office
+ビ[ー]ル|ビール|beer`},
+ {s:"n / m / ng", signs:[["ん","one sign"]], why:"One sign, three sounds. Before b, m or p it becomes m; before k or g it becomes ng; elsewhere it is n. Romaji keeps n.", ex:`
+さ[ん]ぽ|散歩|a walk (sampo)
+し[ん]ぶん|新聞|newspaper (shimbun)
+ぎ[ん]こう|銀行|bank (ng before k)
+ほ[ん]|本|book`},
+ {s:"small っ", signs:[["っ","pause"],["ッ","katakana"]], why:"A small っ is a short pause that doubles the next consonant. Missing it changes the word.", ex:`
+き[っ]て|切手|postage stamp
+きて|来て|come (te-form)
+き[っ]ぷ|切符|ticket
+ベ[ッ]ド|ベッド|bed`},
+ {s:"small ゃ ゅ ょ", signs:[["びょう","one beat"],["びよう","two beats"]], why:"A small ゃ ゅ ょ merges with the sign before it into one sound. The same letters at full size are said separately, and the meaning changes.", ex:`
+[びょう]いん|病院|hospital
+[びよう]いん|美容院|hair salon
+[じゅう]|十|ten
+[じゆう]|自由|freedom`},
+ {s:"two scripts", signs:[["あ",""],["ア",""]], why:"Every hiragana has a katakana twin with exactly the same sound. Katakana is used for loanwords, foreign names and emphasis.", ex:`
+[パ]ン|パン|bread
+[ケビン]|ケビン|Kevin
+[ホテル]|ホテル|hotel`}
+];
+function exRow(line){
+  const [k,kj,en] = line.split("|");
+  const plain = k.replace(/[\[\]]/g,"");
+  const marked = esc(k).replace(/\[(.+?)\]/g,"<mark>$1</mark>");
+  return `<div class="ex"><div class="k">${marked}${kj!==plain?`<span class="kj">${rdWord(kj,plain,"kanji")}</span>`:""}</div>
+    <div class="m">${esc(en)}<span class="rj">${esc(romajiPhrase(plain))}</span></div></div>`;
+}
+const PARTICLE = {"は":"wa","を":"o","へ":"e"};
+function romajiPhrase(p){
+  if(p==="こんにちは") return "konnichiwa";
+  return p.split(" ").map(t=>PARTICLE[t]||romaji(t)).join(" ");
+}
+function soundView(){
+  let h = `<section class="sheet" id="same-signs"><h2><span class="jp">同じ音</span><span class="en">Signs and spellings that sound the same</span></h2>`;
+  h += SOUNDS.map(g=>`<div class="sgroup">
+    <div><div class="sound">${esc(g.s)}</div><div class="signs">${g.signs.map(([c,l])=>`<span class="sign${l==="rare"?" rare":""}">${c}${l?`<small>${l}</small>`:""}</span>`).join("")}</div></div>
+    <div><p class="why">${esc(g.why)}</p>${g.ex.trim().split("\n").map(exRow).join("")}</div>
+  </div>`).join("") + `</section>`;
+  const sorted = [...HOMO].sort((a,b)=>a.k.localeCompare(b.k,"ja"));
+  h += `<section class="sheet" id="same-words"><h2><span class="jp">同音語</span><span class="en">Words that sound the same, in kana order</span></h2>
+    <p class="intro">Same kana, different kanji. Context usually tells them apart, and some differ in pitch.</p><p class="pitch-key">Pitch lines: a line above means a high note, a line below means a low note.</p>
+    ${sorted.map(x=>hsetHtml(x,true)).join("")}</section>`;
+  return h;
+}
+
+// ---------- view 3: homophones by topic ----------
+const TOPICS = {people:["人と家族","People & family"], time:["時間","Time & calendar"], food:["食べ物","Food & drink"], home:["家","Home & daily life"], town:["町","Places & town"], travel:["旅行","Travel & transport"], school:["学校と仕事","School & work"], body:["体","Body & health"], nature:["自然と天気","Nature & weather"], shopping:["買い物","Shopping & money"]};
+// k: kana | t: topic | w: [kanji, English, pitch accent (Tokyo, optional)] | n: note
+const HOMO = [
+ {k:"はし", t:"food", w:[["箸","chopsticks",1],["橋","bridge",2],["端","edge",0]], n:"The classic pitch example: all three are said differently."},
+ {k:"さけ", t:"food", w:[["酒","alcohol, sake",0],["鮭","salmon",1]]},
+ {k:"きる", t:"food", w:[["切る","to cut"],["着る","to wear"]], n:"切る is an う-verb (切ります); 着る is a る-verb (着ます)."},
+ {k:"あめ", t:"nature", w:[["雨","rain",1],["飴","sweet, candy",0]]},
+ {k:"はな", t:"nature", w:[["花","flower",2],["鼻","nose",0]], n:"On their own they sound alike. The particle after them shows the difference."},
+ {k:"かぜ", t:"nature", w:[["風","wind"],["風邪","a cold"]], n:"Even the kanji overlap: a cold is an 'evil wind'."},
+ {k:"あつい", t:"nature", w:[["暑い","hot (weather)"],["熱い","hot (to touch)"],["厚い","thick"]]},
+ {k:"は", t:"body", w:[["歯","tooth"],["葉","leaf"]]},
+ {k:"め", t:"body", w:[["目","eye"],["芽","bud, sprout"]]},
+ {k:"き", t:"body", w:[["気","spirit, mood"],["木","tree"]]},
+ {k:"かみ", t:"body", w:[["髪","hair",2],["紙","paper",2],["神","god",1]]},
+ {k:"はやい", t:"time", w:[["早い","early"],["速い","fast"]]},
+ {k:"あける", t:"time", w:[["開ける","to open"],["明ける","to dawn; a new year to begin"]], n:"明けまして おめでとう = Happy New Year."},
+ {k:"あく", t:"home", w:[["開く","to open (by itself)"],["空く","to become free, empty"]]},
+ {k:"いる", t:"home", w:[["いる","to be, exist (living things)"],["要る","to need"]], n:"要る is an う-verb (要ります); いる is a る-verb (います)."},
+ {k:"かえる", t:"town", w:[["帰る","to go home"],["変える","to change"],["蛙","frog"]], n:"帰る is an う-verb (帰ります); 変える is a る-verb (変えます)."},
+ {k:"あう", t:"people", w:[["会う","to meet"],["合う","to fit, to suit"]]},
+ {k:"とる", t:"travel", w:[["取る","to take"],["撮る","to take (a photo)"]]},
+ {k:"やさしい", t:"school", w:[["易しい","easy"],["優しい","kind, gentle"]]},
+ {k:"かく", t:"school", w:[["書く","to write"],["描く","to draw"]]},
+ {k:"きく", t:"school", w:[["聞く","to listen; to ask"],["効く","to work (e.g. medicine)"]]},
+ {k:"かう", t:"shopping", w:[["買う","to buy"],["飼う","to keep (a pet)"]]}
+];
+function morae(k){ const m=[]; for(const c of k){ if("ゃゅょぁぃぅぇぉ".includes(c)&&m.length) m[m.length-1]+=c; else m.push(c);} return m; }
+function pitchHtml(k,a){
+  const m = morae(k), n = m.length;
+  const hi = i => a===0 ? i>0 : a===1 ? i===0 : (i>0 && i<a);
+  const particleHi = a===0;
+  return `<span class="pitch" aria-label="pitch pattern">${m.map((x,i)=>`<span class="m${hi(i)?" hi":""}">${x}</span>`).join("")}<span class="m pt${particleHi?" hi":""}">が</span></span>`;
+}
+function hsetHtml(x, showTopic){
+  return `<div class="hset"><div class="hkey">${x.k}<span class="rj">${romaji(x.k)}</span>${showTopic?`<span class="htopic">${TOPICS[x.t][1]}</span>`:""}</div>
+    <div class="hwords">${x.w.map(([kj,en,p])=>`<div class="hw"><span class="kj">${rdWord(kj,x.k,"kanji")}</span><span class="me">${esc(en)}</span>${p!=null?pitchHtml(x.k,p):""}</div>`).join("")}</div>
+    ${x.n?`<p class="hnote">${esc(x.n)}</p>`:""}</div>`;
+}
+function topicView(){
+  return Object.entries(TOPICS).filter(([id])=>HOMO.some(x=>x.t===id)).map(([id,[jp,en]])=>
+    `<section class="sheet" id="t-${id}"><h2><span class="jp">${jp}</span><span class="en">${en}</span></h2>
+     ${HOMO.some(x=>x.t===id && x.w.some(w=>w[2]!=null))?`<p class="pitch-key">Pitch lines: a line above means a high note, a line below means a low note.</p>`:""}
+     ${HOMO.filter(x=>x.t===id).map(x=>hsetHtml(x,false)).join("")}</section>`).join("");
+}
+
+// ---------- state ----------
+let state = {view:"sign", romaji:"on", kata:"on"};
+try{ const s = JSON.parse(localStorage.getItem("kana-sounds")||"null"); if(s) Object.assign(state,s); }catch(e){}
+const save = () => { try{ localStorage.setItem("kana-sounds", JSON.stringify(state)); }catch(e){} };
+const main = document.getElementById("main"), nav = document.getElementById("nav");
+function render(){
+  if(state.view==="sign"){
+    main.innerHTML = signView();
+    nav.innerHTML = ROWS.map(r=>`<a href="#row-${r.h}"><span class="j">${r.h}行</span>${r.en}</a>`).join("");
+  } else if(state.view==="sound"){
+    main.innerHTML = soundView();
+    nav.innerHTML = `<a href="#same-signs">Same-sound signs</a><a href="#same-words">Same-sound words</a>`;
+  } else {
+    main.innerHTML = topicView();
+    nav.innerHTML = Object.entries(TOPICS).filter(([id])=>HOMO.some(x=>x.t===id)).map(([id,[jp,en]])=>`<a href="#t-${id}"><span class="j">${jp}</span>${en}</a>`).join("");
+  }
+  apply();
+}
+function apply(){
+  document.body.classList.toggle("no-romaji", state.romaji==="off");
+  document.body.classList.toggle("no-kata", state.kata==="off");
+  ["view","romaji","kata"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed", b.dataset[k]===state[k])));
+}
+document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;save();render();window.scrollTo(0,0);});
+["romaji","kata"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{state[k]=b.dataset[k];save();apply();}));
+render();
+
+(function(){ let v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
+  const set=x=>{ v=x; document.body.classList.toggle("no-rdcol",v==="off");
+    document.querySelectorAll("[data-rdcol]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rdcol===v));
+    try{ localStorage.setItem("rdcol",v); }catch(e){} };
+  document.querySelectorAll("[data-rdcol]").forEach(b=>b.addEventListener("click",()=>set(b.dataset.rdcol)));
+  set(v); })();
+</script>
+</body>
+</html>
