@@ -373,6 +373,30 @@ header.top,header.masthead,.masthead{padding-top:.6rem}`;
   });
 })();
 
+// ---------- floating buttons: back to the top, and home ----------
+(function(){
+  const me=document.currentScript&&document.currentScript.src; if(!me) return;
+  const root=me.replace(/assets\/common\.js.*$/,"");
+  const st=document.createElement("style");
+  st.textContent=`.floatnav{position:fixed;left:.9rem;bottom:calc(.9rem + env(safe-area-inset-bottom,0px));z-index:40;display:flex;flex-direction:column;gap:.4rem;opacity:0;visibility:hidden;transition:opacity .18s}
+.floatnav.on{opacity:.92;visibility:visible}
+.floatnav a,.floatnav button{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;border:1px solid rgba(127,127,127,.35);background:var(--sheet,#fff);color:var(--ink,#1b2a3a);box-shadow:0 2px 10px rgba(0,0,0,.18);cursor:pointer;font:600 1rem/1 system-ui,sans-serif;text-decoration:none;padding:0}
+.floatnav a:hover,.floatnav button:hover,.floatnav a:focus-visible,.floatnav button:focus-visible{opacity:1;border-color:currentColor}
+@media (prefers-color-scheme: dark){.floatnav a,.floatnav button{background:#1C2029;color:#E6E8EE}}
+@media print{.floatnav{display:none}}`;
+  document.head.appendChild(st);
+  document.addEventListener("DOMContentLoaded",()=>{
+    if(document.querySelector(".floatnav")) return;
+    const nav=document.createElement("div"); nav.className="floatnav";
+    nav.innerHTML=`<a href="${root}index.html" title="Home: all pages" aria-label="Home: all pages">⌂</a>`+
+      `<button type="button" title="Back to the top" aria-label="Back to the top">↑</button>`;
+    nav.querySelector("button").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+    document.body.appendChild(nav);
+    const show=()=>nav.classList.toggle("on",window.scrollY>400);
+    window.addEventListener("scroll",show,{passive:true}); show();
+  });
+})();
+
 // ---------- offline support: register the service worker at the site root ----------
 (function(){ if(!("serviceWorker" in navigator)||location.protocol==="file:") return;
   const me=document.currentScript&&document.currentScript.src; if(!me) return;
