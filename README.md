@@ -9,7 +9,7 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | Page | What it is |
 |---|---|
 | `kanji/master-kanji-shapes.html` | **Look up and explore.** Every kanji from N5 to N2 (981), with a cumulative level switch. Each card: parts and story, look-alikes, and every word grouped by on and kun reading, linked to the other kanji in it. Four views: Course (shape families), Flashcards, Sound index (parts that give the sound, shared readings) and By topic. Your own stories. |
-| `kanji/learn-n5-n4.html` | **Learn day by day.** Daily study plan: how to learn kanji fastest, plus spaced-repetition flashcards for the 284 N5/N4 kanji in 29 lessons, parts before the kanji built from them. |
+| `kanji/learn-n5-n4.html` | **Learn day by day.** Daily study plan: how to learn kanji fastest, plus spaced-repetition flashcards from N5 up to N2 (a level setting), parts before the kanji built from them. Shares progress and your own stories with the master deck. |
 | `kanji/kanji-by-situation.html` | **See them in use.** 200 N4 kanji in 13 real-life situations, with 222 example sentences, where you meet each kanji, and N5–N2 word lists. |
 | `words/phrasebook.html` | Interactive phrasebook: about 500 phrases and sentences in 14 situations, with swap-in words, grammar-block colouring and a starred personal list. |
 | `words/sentence-builder.html` | The grammar lesson behind the phrasebook: 120 sentences in colour-coded blocks, plus every N5/N4 verb and adjective by type with its main forms and traps. |
@@ -17,7 +17,7 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `kana/kana-words.html` | About 425 N5–N2 words written in kana, grouped by use (greetings, question and pointing words, linking words, adverbs, sound words, verbs, nouns by topic), with example sentences. |
 | `kana/kana-sounds.html` | Kana by sign family, by sound, and same-sound words with pitch patterns. |
 
-All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
+Every page can read the Japanese aloud with the browser's built-in Japanese voice (the ▶ buttons). All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
 
 ## Your data stays on your device
 
@@ -38,7 +38,7 @@ The pages in `kanji/`, `words/` and `kana/` are generated. Don't edit them direc
 src/      page templates (HTML), plus src/common.js
 data/     the content, as JSON
 build/    build.py, which puts the two together
-assets/   common.js, the shared reading engine used by every page (generated)
+assets/   common.js, shared by every page: reading engine, audio, particles, progress and stories (generated)
 ```
 
 To rebuild after a change (Python 3, no packages needed):
@@ -62,7 +62,7 @@ Then commit both the source change and the rebuilt pages, because GitHub Pages s
 | Phrasebook sections and swap-in words | `data/phrasebook.json` |
 | Situation topics, kanji rows and notes | `data/situation.json` |
 | Kana words and their groups | `data/kana-words.json` |
-| The daily study plan's data | `data/study.json` |
+| The daily study plan's order for N5/N4 (N3 and N2 are added automatically) | `data/study.json` |
 | Page layout or behaviour | the matching file in `src/` |
 
 ## Sources and credits

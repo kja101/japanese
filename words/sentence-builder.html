@@ -234,58 +234,6 @@ body.h-romaji .fx-r{display:none}
 
 // ---------- particles, kanji links and reading colours for the sentence builder ----------
 const KSET=new Set("一二三四五六七八九十百千万円金銀買売借貸代品物服日月曜年時今午半分毎週間去早昼朝夕夜始終計人父母子女男友名会兄弟姉妹私者主親族民口目耳手足体顔頭首心医病薬死力山川田天気雨花空火水木土海池地森林野光風春夏秋冬暑寒犬鳥上下左右中外前後東西南北方国店社院屋家館京区県建市室住所場村町都堂門台車電道駅運旅乗通転発着学校先生本語読書英漢字文紙教習勉試験研究題問答質図仕業員働工理食飲魚牛肉菜茶飯味料洋映画音楽歌写見言話聞知思考説声行来出入帰急止走歩進動近遠送休立引開起作使持集切洗待大小高安長新古多少白悪暗明強弱軽重広好太短低青赤黒色何不以意回界元合産自事真正世注度同特別便有用了丸才王玉石久公内戸毛他号央平打氷申皮皿礼竹糸虫貝交当米羽形角谷麦草化両全向州曲次血直星活点科欠由札辺付失必未末記組船雪黄支助君対局役投決馬番絵雲数具受和定実泳苦表部客相美負談要勝速配酒落葉路農鉄算鳴線横調最争仲伝共成老位初利努労命岸放昔波育拾指神秒追戦競良令庭息根流消倍島祭章商深球童陽階悲期植歯温港湯登泉亡予反返宿想感様橋福緑練億殺然熱課賞輪選願像情疑皆例卒協参周囲固季完希念折望材束残求約芸性技格能術骨寺岩晴列坂式信勇単変夫昨毒法浅軍仏築晩猫園係取守幸箱荷面喜府治浴笑辞関政留険危存専原細鼻側兵塩席敗果栄因常識非干官察底愛署警恋覚訓告種達類報祈等焼座忘胸脳許枚静禁喫煙加減順容布易財若詞歴冊宇忙団暴混乱徒得改続連困絡比機飛害余難被震械確個圧在夢倒厚妻議犯罪防論経史済委判制務査総設資権件断任責省増税解際認過寝各置費勢営示領副観値吸域状収停革職規割演律師準則備導優宅現乳呼城担額違輸燃祝届肩腕腰触層型庁差管象量境武述供販限与含況渡景抜補候構捕効慣豊満巻捜掛替居造印復筆貯刺郵針突菓河汗再接占招段胃腹痛退悩迷訪怒昇眠靴濃極途給逆巨庫児冷凍幼処清録券婦移程精絶並杯乾欧積臣略航寄板娘怖恐詰婚遊照快版貧適預延翌押更浮符越背盗編普除幾掃泥棒孫帯散粉貨陸似均富探迎採永液祖績複雑賛党卵捨込汚欲机簡閉誌窓否宝尊敬暮灰砂著蒸蔵装裏諸誤臓降純紅拝劇勤承損枝刻遅測破講紹介互彼恥湖銅払油旧姓貿将伸幅甘換療舞般頼依漁募患戻湾爆跡香兆抱齢刊傾奥緒贈逃超雇片群埋御駐柱吹鋭殿薄伺炭包衣鉱到双床掘泊荒袋珍籍刷封筒柔沈辛匹叫髪涙缶粒塔肌舟曇疲磨湿硬鈍歳涼零綿帽憎滴畳畜溶踊賢灯咲塗偶偉頂召挟枯沸濯燥瓶耕肯脂膚軒軟郊隅隻");
-const PINFO={
- "は":["wa","Topic","Marks what the sentence is about: \"as for …\". Written は but said wa.","私は学生です: as for me, I'm a student."],
- "が":["ga","Subject","Picks out who or what does something, or is new information. Also used with 好き, 分かる, 欲しい and ある.","頭が痛いです: my head hurts."],
- "を":["o","Object","Marks the thing acted on by the verb. Written を, said o, and only ever a particle.","コーヒーを飲みます: I drink coffee."],
- "に":["ni","Time, destination or target","A point in time (七時に), where something goes or exists (日本に), or who receives something.","六時に会いましょう: let's meet at six."],
- "で":["de","Place of action, or means","Where an action happens (カフェで), or how it's done (電車で, カードで).","電車で行きます: I go by train."],
- "へ":["e","Direction","Towards a place. Written へ but said e. Close to に for destinations.","日本へ行きます: I'm going to Japan."],
- "と":["to","With, and, or a quote","With someone (友達と), and between nouns (パンと水), or before 思う and 言う to quote.","友達と行きます: I'll go with a friend."],
- "から":["kara","From, or because","Starting point in place or time, or a reason after a sentence.","駅から歩きます: I'll walk from the station."],
- "まで":["made","Until, as far as","The end point in place or time.","京都までお願いします: to Kyoto, please."],
- "の":["no","Of, 's","Joins two nouns: the first describes or owns the second.","私の家: my house."],
- "も":["mo","Also, too","Replaces は, が or を to add \"too\".","私も行きます: I'm going too."],
- "か":["ka","Question","Turns the sentence into a question. No question mark needed in Japanese.","駅はどこですか: where is the station?"],
- "ね":["ne","Isn't it?","Asks for agreement or softens a statement.","いい天気ですね: nice weather, isn't it?"],
- "よ":["yo","You know","Tells the listener something new, with emphasis.","おいしいですよ: it's delicious, you know."],
- "や":["ya","And (among others)","Lists examples, implying there are more.","パンや水: bread, water and so on."],
- "には":["ni wa","に + は","に with extra focus or contrast: \"as for at / in …\".",""],"では":["de wa","で + は","で with extra focus or contrast.",""],
- "にも":["ni mo","に + も","\"To … too\" or \"at … too\".",""],"でも":["de mo","で + も","\"At … too\", or \"even\".",""],"とは":["to wa","と + は","と with extra focus.",""],"へは":["e wa","へ + は","へ with extra focus.",""]
-};
-const ROLEHINT={W:"who or topic",T:"time",P:"place",H:"how or with",O:"what",V:"verb",Q:"question"};
-const PEND=/(から|まで|には|では|へは|とは|にも|でも|は|が|を|に|で|へ|と|も|の|か|ね|よ|や)$/;
-const isKK=c=>!!c&&/[\u4e00-\u9fff\u30a0-\u30ff々]/.test(c);
-function chunkParts(k,kn,role){
-  // parts: {t, r (reading or null), p (particle flag)}
-  let a=/[\u4e00-\u9fff]/.test(k)?rdAlign(k,kn.replace(/ /g,"")):null;
-  if(!a) a=[{t:k,r:null}];
-  const out=[];
-  a.forEach((p,idx)=>{
-    if(p.r!=null){ out.push({t:p.t,r:p.r}); return; }
-    const s=p.t; let buf="";
-    for(let i=0;i<s.length;i++){
-      const c=s[i], prev=i>0?s[i-1]:(idx>0?a[idx-1].t.slice(-1):""), next=i<s.length-1?s[i+1]:(idx<a.length-1?a[idx+1].t[0]:"");
-      const before=(idx>0&&i===0?a[idx-1].t:"")+s.slice(0,i);
-      let isP=false;
-      if(c==="を") isP=true;
-      else if(c==="の"&&next&&isKK(next)&&(isKK(prev)||/(これ|それ|あれ|私|あなた)$/.test(before))) isP=true;
-      if(isP){ if(buf) out.push({t:buf,r:null}); buf=""; out.push({t:c,r:null,p:true}); }
-      else buf+=c;
-    }
-    if(buf) out.push({t:buf,r:null});
-  });
-  // trailing particle
-  const last=out[out.length-1];
-  if(last&&last.r==null&&!last.p&&role!=="V"){
-    const m=last.t.match(PEND);
-    if(m&&(last.t.length>m[1].length||out.length>1||role==="Q")){
-      const rest=last.t.slice(0,-m[1].length);
-      out.pop(); if(rest) out.push({t:rest,r:null}); out.push({t:m[1],r:null,p:true});
-    }
-  }
-  return out;
-}
 const escH=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const kl=c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=sb#k-${encodeURIComponent(c)}" data-k="${c}" title="Open ${c} in the kanji deck">${c}</a>`:c;
 function runHtml(t,r,vf,mode){
@@ -302,10 +250,12 @@ function renderParts(parts,mode,role){
   [].forEach.call(document.querySelectorAll('.sent'),function(sent,si){
     sent.dataset.idx=si;
     const kc=sent.querySelectorAll('.lay-kanji .ck'), nc=sent.querySelectorAll('.lay-kana .ck'), rc=sent.querySelectorAll('.lay-romaji .ck');
+    const whole=[].map.call(kc,c=>c.textContent).join("");
+    const kline=sent.querySelector('.lay-kanji'); if(kline) kline.insertAdjacentHTML("beforeend",sayBtn(whole));
     [].forEach.call(kc,function(c,i){
       const n=nc[i]; if(!n) return;
       const role=c.dataset.r||"", kt=c.textContent, nt=n.textContent;
-      const parts=chunkParts(kt,nt,role);
+      const parts=jpChunkParts(kt,nt,role);
       c.innerHTML=`<span class="kpl">${renderParts(parts,"kanji",role)}</span><span class="kfu">${renderParts(parts,"ruby",role)}</span>`;
       // kana line: readings for kanji runs, same particles
       let vf=false;
@@ -317,44 +267,9 @@ function renderParts(parts,mode,role){
     });
   });
 })();
-// ---------- particle pop-up ----------
-(function(){
-  const pop=document.createElement("div"); pop.className="ppop"; pop.hidden=true; document.body.appendChild(pop);
-  let cur=null;
-  function show(b){
-    const p=b.dataset.p, info=PINFO[p]||[p,"Particle","",""], role=b.dataset.role;
-    let ctx="";
-    if(p==="に"&&role) ctx=role==="T"?"Here it marks a <b>time</b>.":role==="P"?"Here it marks a <b>destination or place</b>.":role==="H"?"Here it turns the word before it into an adverb (別々に, 一緒に).":"";
-    if(p==="で"&&role) ctx=role==="P"?"Here it marks <b>where the action happens</b>.":role==="H"?"Here it marks <b>how</b> it's done.":role==="T"?"Here it marks <b>when</b> (after dinner).":"";
-    if(p==="と"&&role==="H"&&/高いと/.test(b.parentElement.textContent)) ctx="Here it quotes a thought before 思います.";
-    if(!ctx&&role&&ROLEHINT[role]) ctx=`It closes the <b>${ROLEHINT[role]}</b> block of this sentence.`;
-    pop.innerHTML=`<div class="pp-h"><span class="pp-p">${escH(p)}</span><span class="pp-r">${escH(info[0])}</span><span class="pp-n">${escH(info[1])}</span><button class="pp-x" aria-label="Close">×</button></div><p>${escH(info[2])}</p>${ctx?`<p class="pp-c">${ctx}</p>`:""}${info[3]?`<p class="pp-e">${escH(info[3])}</p>`:""}`;
-    pop.hidden=false;
-    const r=b.getBoundingClientRect(), w=Math.min(320,window.innerWidth-24);
-    pop.style.width=w+"px";
-    let left=Math.max(12,Math.min(r.left+window.scrollX-w/2+r.width/2,window.scrollX+window.innerWidth-w-12));
-    pop.style.left=left+"px"; pop.style.top=(r.bottom+window.scrollY+8)+"px";
-    cur=b;
-  }
-  document.addEventListener("click",e=>{
-    const b=e.target.closest(".pt"); if(b){ e.preventDefault(); if(cur===b&&!pop.hidden){ pop.hidden=true; cur=null; } else show(b); return; }
-    if(!e.target.closest(".ppop")||e.target.closest(".pp-x")){ pop.hidden=true; cur=null; }
-  });
-  document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ pop.hidden=true; cur=null; } });
-  window.addEventListener("resize",()=>{ pop.hidden=true; });
-})();
-// ---------- kanji links: remember the sentence, come back to it ----------
-(function(){
-  document.addEventListener("click",e=>{ const a=e.target.closest("a.kl"); if(!a) return; const s=a.closest(".sent");
-    try{ sessionStorage.setItem("sb-return",JSON.stringify({i:s?s.dataset.idx:null,y:window.scrollY})); }catch(err){} });
-  let ret=null; try{ ret=JSON.parse(sessionStorage.getItem("sb-return")||"null"); }catch(e){}
-  if(ret){
-    const go=()=>{ const s=ret.i!=null?document.querySelector(`.sent[data-idx="${ret.i}"]`):null;
-      if(s){ const bar=document.querySelector(".bar"); const off=(bar?bar.offsetHeight:0)+16; window.scrollTo(0,s.getBoundingClientRect().top+window.scrollY-off); s.classList.remove("sflash"); void s.offsetWidth; s.classList.add("sflash"); }
-      else window.scrollTo(0,ret.y); };
-    window.addEventListener("pageshow",ev=>{ const nav=(performance.getEntriesByType&&performance.getEntriesByType("navigation")[0])||{}; if(ev.persisted||nav.type==="back_forward"){ setTimeout(go,30); } try{ sessionStorage.removeItem("sb-return"); }catch(e){} },{once:true});
-  }
-})();
+initParticlePopup();
+initReturnLinks("sb-return",".sent","data-idx","sflash");
+
 
 (function(){ var b=document.body, v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
   function set(x){ v=x; b.classList.toggle("no-rdcol",v==="off"); var t=document.getElementById("rdbtn"); if(t) t.setAttribute("aria-pressed",v==="on"?"true":"false"); try{localStorage.setItem("rdcol",v);}catch(e){} }

@@ -108,6 +108,57 @@ def kana_words():
             w["ex"] = {"p": p, "en": en}
     return data
 
+VARIANTS = {"亻": "人", "氵": "水", "扌": "手", "忄": "心", "訁": "言", "糹": "糸", "飠": "食", "釒": "金"}
+
+def study_data():
+    """Everything the daily study plan needs, for all N5-N2 kanji, from data/kanji.json."""
+    K, CH = kanji["K"], kanji["CH"]
+    NOTE = re.compile(r"([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}")
+    chap = {k: i for i, c in enumerate(CH) for k in c["kanji"]}
+    def example(k):
+        x = K[k]
+        if x.get("ex"):                          # hand-picked word (N5 and N4)
+            return [NOTE.sub(r"\1", x["ex"]), NOTE.sub(r"\2", x["ex"]), x.get("exEn", "")]
+        w = words.get(k)
+        if not w:
+            return [k, "", ""]
+        cands = [z for r in w["readings"] for z in r["words"]]
+        al = w.get("alone")
+        if al:
+            hit = next((z for z in cands if z[0] == al["w"]), None)
+            if hit:
+                return hit[:3]
+        cands.sort(key=lambda z: (-z[3], abs(len(z[0]) - 2)))
+        return cands[0][:3] if cands else [k, "", ""]
+    def deps(k):
+        out = set()
+        for g, _ in K[k]["parts"]:
+            for c in g:
+                c = VARIANTS.get(c, c)
+                if c in K and c != k:
+                    out.add(c)
+        return out
+    base = load("study.json")
+    def extend(order):
+        done = set(order)
+        out = list(order)
+        for lv in (3, 2):
+            todo = sorted([k for k in K if K[k]["l"] == lv], key=lambda k: (chap.get(k, 999), K[k]["n"]))
+            while todo:
+                for k in todo:
+                    if all(d in done or K[d]["l"] < lv for d in deps(k)):
+                        break
+                else:
+                    k = todo[0]
+                todo.remove(k); out.append(k); done.add(k)
+        return out
+    SK = {k: {"m": x["m"], "on": x["on"], "kun": x["kun"], "l": x["l"], "parts": x["parts"],
+              "story": x.get("story", ""), "traps": x.get("traps", []), "ex": example(k)} for k, x in K.items()}
+    CHT = {k: (f"Chapter {i+1}: {c['title']}" if c["key"] != "other" else f"Chapter {i+1}: standalone shapes")
+           for i, c in enumerate(CH) for k in c["kanji"]}
+    FAM = {k: (c.get("glyph", "") if c["key"] != "other" else "") for c in CH for k in c["kanji"]}
+    return {"K": SK, "CHT": CHT, "FAM": FAM, "order": extend(base["order"]), "order_n5": extend(base["order_n5"])}
+
 print("Building:")
 # ---------------------------------------------------------------- shared script
 write("assets/common.js", (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings)))
@@ -142,7 +193,7 @@ write("words/phrasebook.html", fill("phrasebook.html", DATA=dump(chapters), KANJ
 write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET))
 
 # ---------------------------------------------------------------- study plan
-write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(load("study.json"))))
+write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
 
 # ---------------------------------------------------------------- kana
 write("kana/kana-sounds.html", (SRC / "kana-sounds.html").read_text(encoding="utf-8"))

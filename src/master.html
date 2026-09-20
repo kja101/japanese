@@ -317,7 +317,7 @@ function breakdown(w,r,self){
   return `<span class="bd">${segs.map(s=>{ const inner=`<b>${esc(s.k)}</b><span class="${cls(s.t)}">${esc(s.t==="on"?toKata(s.r):s.r)}</span>`;
     return [...s.k].length===1&&vis(s.k)?`<a class="bdk bd-${s.t}${s.k===self?" self":""}" href="#k-${s.k}" data-jump="${s.k}" data-w="${esc(w)}" data-from="${self||""}" title="${s.k===self?"This kanji":"Open "+s.k}">${inner}</a>`:`<span class="bdk bd-${s.t}">${inner}</span>`; }).join('<span class="op">+</span>')}</span>`;
 }
-const wordLi=(self)=>([w,r,en,l])=>`<li data-w="${esc(w)}"><span class="word">${linkify(rdWord(w,r,"ruby"),self,w)}</span><span class="rj">${romaji(r)}</span> ${H(esc(en),"span","e")}${l<5&&T()<4?`<span class="lvb wl${l}">N${l}</span>`:""}${breakdown(w,r,self)}</li>`;
+const wordLi=(self)=>([w,r,en,l])=>`<li data-w="${esc(w)}"><span class="word">${linkify(rdWord(w,r,"ruby"),self,w)}</span>${sayBtn(r)}<span class="rj">${romaji(r)}</span> ${H(esc(en),"span","e")}${l<5&&T()<4?`<span class="lvb wl${l}">N${l}</span>`:""}${breakdown(w,r,self)}</li>`;
 function readingsHtml(x){
   const w0=WD[x.k], t=T();
   const vw=r=>r.words.filter(z=>z[3]>=t).sort((a,b)=>b[3]-a[3]);
@@ -336,7 +336,7 @@ function headPron(x){
   const a=WD[x.k].alone, p=PR[x.k]; const src=a||p; if(!src||!src.r) return "";
   const cls=src.t==="on"?"rdv-on":"rdv-kun";
   const word=a&&a.w&&a.w!==x.k?`<span class="hw">${esc(a.w)}</span>`:"";
-  return `<span class="pron">${word}${H(`<span class="${cls}">${esc(a?a.r:src.r)}</span><span class="rj">${romaji(a?a.r:src.r)}</span>`)}${a?"":`<small>in compounds</small>`}</span>`;
+  return `<span class="pron">${word}${sayBtn(a?a.r:src.r)}${H(`<span class="${cls}">${esc(a?a.r:src.r)}</span><span class="rj">${romaji(a?a.r:src.r)}</span>`)}${a?"":`<small>in compounds</small>`}</span>`;
 }
 function storyHtml(x){
   const mine=STORIES[x.k];
@@ -451,8 +451,9 @@ function courseView(){
    <p class="credits">Sources: N5 and N4 lists follow the community (tanos) lists; N3 and N2 kanji levels follow Jonathan Waller's JLPT lists. Readings and meanings for N3 and N2 kanji come from KANJIDIC2, © the Electronic Dictionary Research and Development Group, used under its CC BY-SA licence. Shape breakdowns come from the CHISE IDS database (cjkvi-ids). Vocabulary levels come from the open JLPT word lists derived from tanos.co.uk. JLPT has not published official lists since 2010, so every level here is a guide.</p></div>`;
 }
 // ---------- flashcards ----------
-let known=new Set(); try{known=new Set(JSON.parse(localStorage.getItem("heisig-known")||"[]"));}catch(e){}
-const saveKnown=()=>{try{localStorage.setItem("heisig-known",JSON.stringify([...known]));}catch(e){}};
+// "Known" is shared with the daily study plan: it's the study plan's spaced-repetition record (see assets/common.js).
+const known={has:k=>srsKnown(k), add:k=>srsMarkKnown(k), delete:k=>srsUnmark(k), get size(){ return srsKnownList().length; }, [Symbol.iterator](){ return srsKnownList()[Symbol.iterator](); }};
+const saveKnown=()=>{};
 let fc={chap:"all",skip:false,order:[],i:0,flipped:false};
 function deckList(){
   let list=fc.chap==="all"?Object.values(K).sort((a,b)=>a.n-b.n).map(x=>x.k):CH[+fc.chap].kanji.slice();

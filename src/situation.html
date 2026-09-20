@@ -241,12 +241,13 @@ function sentHtml(s,i){ if(i>=6) s={...s,extra:true};
     rj=toks.map(t=>romajiToken(t.replace(NOTE,"$2"))).join(" ").replace(/ ,/g,","); }
   const ks=[...(s.kj?s.kj.join(""):s.n)].filter(c=>/[\u4e00-\u9fff]/.test(c));
   const lv=Math.min(5,...ks.map(c=>LV[c]||1));
-  return `<li${s.extra?' class="extra"':""}><div class="sj">${jp}${lv<4?`<span class="lvb">${lv<2?"N1 kanji":"N"+lv+" kanji"}</span>`:""}</div><div class="sr">${esc(rj)}</div><div class="se">${esc(s.en)}</div>${s.why?`<div class="sn">${esc(s.why)}</div>`:""}</li>`;
+  const sayText=s.kj?s.kj.join(""):s.n.replace(NOTE,"$1").replace(/ /g,"");
+  return `<li${s.extra?' class="extra"':""}><div class="sj">${jp}${sayBtn(sayText)}${lv<4?`<span class="lvb">${lv<2?"N1 kanji":"N"+lv+" kanji"}</span>`:""}</div><div class="sr">${esc(rj)}</div><div class="se">${esc(s.en)}</div>${s.why?`<div class="sn">${esc(s.why)}</div>`:""}</li>`;
 }
 // ---------- cards ----------
 const TAGNAME={tK:"kanji",tO:"kanji + kana",tC:"compounds only",tX:"rare",tR:"radical"};
 function wordLi(k){ return ([w,r,en,l])=>{ const multi=[...w].filter(c=>/[\u4e00-\u9fff]/.test(c)).length>1;
-  return `<li data-w="${esc(w)}"><span class="w">${linkify(rdWord(w,r,"ruby"),k,w)}</span><span class="rj">${romaji(r)}</span> <span class="e">${esc(en)}</span>${l<5&&VT()<4?`<span class="lvb">N${l}</span>`:""}${multi?chips(w,r,k):""}</li>`; }; }
+  return `<li data-w="${esc(w)}"><span class="w">${linkify(rdWord(w,r,"ruby"),k,w)}</span>${sayBtn(r)}<span class="rj">${romaji(r)}</span> <span class="e">${esc(en)}</span>${l<5&&VT()<4?`<span class="lvb">N${l}</span>`:""}${multi?chips(w,r,k):""}</li>`; }; }
 function wordsBlock(k){
   const t=VT(), d=WV[k]; if(!d) return "";
   const rs=d.r.map(([tp,label,ws])=>({tp,label,v:ws.filter(z=>z[3]>=t).sort((a,b)=>b[3]-a[3])}));
@@ -267,7 +268,7 @@ function card(x){
   return `<article class="kc" id="k-${x.k}" data-s="${esc(s)}" tabindex="-1">
     <div class="kh"><div class="gcol"><span class="g">${x.k}</span>${pron}</div>
       <div><div class="km">${esc(x.m)}</div>
-        <div class="anchor"><span class="w">${linkify(rdWord(x.w,x.r,"ruby"),x.k,x.w)}</span><span class="rj">${romaji(x.r)}</span> <span class="e">${esc(x.en)}</span>${t?`<span class="rtag ${t}">${t==="sp"?"special":t}</span>`:""}</div></div>
+        <div class="anchor"><span class="w">${linkify(rdWord(x.w,x.r,"ruby"),x.k,x.w)}</span>${sayBtn(x.r)}<span class="rj">${romaji(x.r)}</span> <span class="e">${esc(x.en)}</span>${t?`<span class="rtag ${t}">${t==="sp"?"special":t}</span>`:""}</div></div>
       <span class="lvb">${LV[x.k]?"N"+LV[x.k]:"N1"}</span></div>
     ${parts}
     <p class="story">${esc(x.story)}</p>

@@ -190,59 +190,7 @@ function form(tok,mode){ let o="",last=0; tok.replace(NOTE,(m,b,r,off)=>{ o+=esc
 const ROLE={W:"--rW",T:"--rT",P:"--rP",H:"--rH",O:"--rO",V:"--rV",Q:"--rQ"};
 
 // ---------- blocks, particles and kanji links ----------
-const PINFO={
- "は":["wa","Topic","Marks what the sentence is about: \"as for …\". Written は but said wa.","私は学生です: as for me, I'm a student."],
- "が":["ga","Subject","Picks out who or what does something, or is new information. Also used with 好き, 分かる, 欲しい and ある.","頭が痛いです: my head hurts."],
- "を":["o","Object","Marks the thing acted on by the verb. Written を, said o, and only ever a particle.","コーヒーを飲みます: I drink coffee."],
- "に":["ni","Time, destination or target","A point in time (七時に), where something goes or exists (日本に), or who receives something.","六時に会いましょう: let's meet at six."],
- "で":["de","Place of action, or means","Where an action happens (カフェで), or how it's done (電車で, カードで).","電車で行きます: I go by train."],
- "へ":["e","Direction","Towards a place. Written へ but said e. Close to に for destinations.","日本へ行きます: I'm going to Japan."],
- "と":["to","With, and, or a quote","With someone (友達と), and between nouns (パンと水), or before 思う and 言う to quote.","友達と行きます: I'll go with a friend."],
- "から":["kara","From, or because","Starting point in place or time, or a reason after a sentence.","駅から歩きます: I'll walk from the station."],
- "まで":["made","Until, as far as","The end point in place or time.","京都までお願いします: to Kyoto, please."],
- "の":["no","Of, 's","Joins two nouns: the first describes or owns the second.","私の家: my house."],
- "も":["mo","Also, too","Replaces は, が or を to add \"too\".","私も行きます: I'm going too."],
- "か":["ka","Question","Turns the sentence into a question. No question mark needed in Japanese.","駅はどこですか: where is the station?"],
- "ね":["ne","Isn't it?","Asks for agreement or softens a statement.","いい天気ですね: nice weather, isn't it?"],
- "よ":["yo","You know","Tells the listener something new, with emphasis.","おいしいですよ: it's delicious, you know."],
- "や":["ya","And (among others)","Lists examples, implying there are more.","パンや水: bread, water and so on."],
- "には":["ni wa","に + は","に with extra focus or contrast: \"as for at / in …\".",""],"では":["de wa","で + は","で with extra focus or contrast.",""],
- "にも":["ni mo","に + も","\"To … too\" or \"at … too\".",""],"でも":["de mo","で + も","\"At … too\", or \"even\".",""],"とは":["to wa","と + は","と with extra focus.",""],"へは":["e wa","へ + は","へ with extra focus.",""]
-};
-const ROLEHINT={W:"who or topic",T:"time",P:"place",H:"how or with",O:"what",V:"verb",Q:"question"};
-const PEND=/(から|まで|には|では|へは|とは|にも|でも|は|が|を|に|で|へ|と|も|の|か|ね|よ|や)$/;
-const isKK=c=>!!c&&/[\u4e00-\u9fff\u30a0-\u30ff々]/.test(c);
-function sbParts(k,kn,role){
-  // parts: {t, r (reading or null), p (particle flag)}
-  let a=/[\u4e00-\u9fff]/.test(k)?rdAlign(k,kn.replace(/ /g,"")):null;
-  if(!a) a=[{t:k,r:null}];
-  const out=[];
-  a.forEach((p,idx)=>{
-    if(p.r!=null){ out.push({t:p.t,r:p.r}); return; }
-    const s=p.t; let buf="";
-    for(let i=0;i<s.length;i++){
-      const c=s[i], prev=i>0?s[i-1]:(idx>0?a[idx-1].t.slice(-1):""), next=i<s.length-1?s[i+1]:(idx<a.length-1?a[idx+1].t[0]:"");
-      const before=(idx>0&&i===0?a[idx-1].t:"")+s.slice(0,i);
-      let isP=false;
-      if(c==="を") isP=true;
-      else if(c==="の"&&next&&isKK(next)&&(isKK(prev)||/(これ|それ|あれ|私|あなた)$/.test(before))) isP=true;
-      if(isP){ if(buf) out.push({t:buf,r:null}); buf=""; out.push({t:c,r:null,p:true}); }
-      else buf+=c;
-    }
-    if(buf) out.push({t:buf,r:null});
-  });
-  // trailing particle
-  const last=out[out.length-1];
-  if(last&&last.r==null&&!last.p&&role!=="V"){
-    const m=last.t.match(PEND);
-    if(m&&(last.t.length>m[1].length||out.length>1||role==="Q")){
-      const rest=last.t.slice(0,-m[1].length);
-      out.pop(); if(rest) out.push({t:rest,r:null}); out.push({t:m[1],r:null,p:true});
-    }
-  }
-  return out;
-}
-
+const sbParts=jpChunkParts;
 const KSET=new Set(__KANJI_SET__);
 const PARTS=new Set(["は","が","を","に","で","へ","と","も","の","か","から","まで","や","ね","よ","には","では","にも","でも"]);
 const TIMEW=/[時日週月年今朝夜晩曜昼]|いつ|何時|あした|きょう/;
@@ -317,7 +265,8 @@ const starBtn=id=>`<button class="star" data-star="${id}" aria-pressed="${STARS.
 function phraseItem(secId,i,p,word,wordEn){
   const id=`p:${secId}:${i}`, tag=p.tag==="hear"?`<span class="tagl hear">You'll hear this</span>`:p.tag?`<span class="tagl">${esc(p.tag)}</span>`:"";
   const s=(plainOf(p.jp)+kanaOf(p.jp)+p.jp.split(" ").map(t=>romajiToken(kanaOf(t))).join(" ")+p.en).toLowerCase();
-  return `<div class="it" data-id="${id}" data-s="${esc(s)}"><div><span class="jpl"><span class="hx">${jpFrame(p.jp,word,state.script)}</span></span><span class="rom">${romFrame(p.jp,word)}</span></div><div class="enl"><span class="hx">${enFill(p.en,wordEn)}</span>${tag}</div>${starBtn(id)}</div>`;
+  const sayText=p.jp.split(" ").map(t=>t==="___"?(word?plainOf(word).replace(/ /g,""):""):plainOf(t)).join("");
+  return `<div class="it" data-id="${id}" data-s="${esc(s)}"><div><span class="jpl"><span class="hx">${jpFrame(p.jp,word,state.script)}</span>${sayBtn(sayText)}</span><span class="rom">${romFrame(p.jp,word)}</span></div><div class="enl"><span class="hx">${enFill(p.en,wordEn)}</span>${tag}</div>${starBtn(id)}</div>`;
 }
 function sentItem(s){
   let jp,rom,enc="";
@@ -337,7 +286,8 @@ function sentItem(s){
   }
   const id=s.id, str=((s.kj?s.kj.join("")+s.kn.join(""):plainOf(s.n)+kanaOf(s.n))+(s.rj?s.rj.join(" "):"")+s.en).toLowerCase();
   const enHtml=state.blocks==="on"&&enc?enc:esc(s.en);
-  return `<div class="it" data-id="${id}" data-s="${esc(str)}"><div><span class="jpl"><span class="hx">${jp}</span></span><span class="rom">${rom}</span></div><div class="enl"><span class="hx">${enHtml}</span>${s.why?`<span class="why">${esc(s.why)}</span>`:""}</div>${starBtn(id)}</div>`;
+  const sayText=s.kj?s.kj.join(""):plainOf(s.n).replace(/ /g,"");
+  return `<div class="it" data-id="${id}" data-s="${esc(str)}"><div><span class="jpl"><span class="hx">${jp}</span>${sayBtn(sayText)}</span><span class="rom">${rom}</span></div><div class="enl"><span class="hx">${enHtml}</span>${s.why?`<span class="why">${esc(s.why)}</span>`:""}</div>${starBtn(id)}</div>`;
 }
 function phraseBlock(sec){
   const items=sec.items.trim().split("\n").map(l=>{ const [jp,en,tag=""]=l.split("|"); return {jp,en,tag}; });
@@ -392,43 +342,9 @@ main.addEventListener("click",e=>{
 });
 document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
 render();
-// ---------- particle pop-up ----------
-(function(){
-  const pop=document.createElement("div"); pop.className="ppop"; pop.hidden=true; document.body.appendChild(pop);
-  let cur=null;
-  function show(b){
-    const p=b.dataset.p, info=PINFO[p]||[p,"Particle","",""], role=b.dataset.role;
-    let ctx="";
-    if(p==="に"&&role) ctx=role==="T"?"Here it marks a <b>time</b>.":role==="P"?"Here it marks a <b>destination or place</b>.":role==="H"?"Here it turns the word before it into an adverb (別々に, 一緒に).":"";
-    if(p==="で"&&role) ctx=role==="P"?"Here it marks <b>where the action happens</b>.":role==="H"?"Here it marks <b>how</b> it's done.":role==="T"?"Here it marks <b>when</b> (after dinner).":"";
-    if(p==="と"&&role==="H"&&/高いと/.test(b.parentElement.textContent)) ctx="Here it quotes a thought before 思います.";
-    if(!ctx&&role&&ROLEHINT[role]) ctx=`It closes the <b>${ROLEHINT[role]}</b> block of this sentence.`;
-    pop.innerHTML=`<div class="pp-h"><span class="pp-p">${esc(p)}</span><span class="pp-r">${esc(info[0])}</span><span class="pp-n">${esc(info[1])}</span><button class="pp-x" aria-label="Close">×</button></div><p>${esc(info[2])}</p>${ctx?`<p class="pp-c">${ctx}</p>`:""}${info[3]?`<p class="pp-e">${esc(info[3])}</p>`:""}`;
-    pop.hidden=false;
-    const r=b.getBoundingClientRect(), w=Math.min(320,window.innerWidth-24);
-    pop.style.width=w+"px";
-    let left=Math.max(12,Math.min(r.left+window.scrollX-w/2+r.width/2,window.scrollX+window.innerWidth-w-12));
-    pop.style.left=left+"px"; pop.style.top=(r.bottom+window.scrollY+8)+"px";
-    cur=b;
-  }
-  document.addEventListener("click",e=>{
-    const b=e.target.closest(".pt"); if(b){ e.preventDefault(); if(cur===b&&!pop.hidden){ pop.hidden=true; cur=null; } else show(b); return; }
-    if(!e.target.closest(".ppop")||e.target.closest(".pp-x")){ pop.hidden=true; cur=null; }
-  });
-  document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ pop.hidden=true; cur=null; } });
-  window.addEventListener("resize",()=>{ pop.hidden=true; });
-})();
+initParticlePopup();
+initReturnLinks("pb-return",".it","data-id","iflash");
 
-// ---------- kanji links: remember the phrase, come back to it ----------
-(function(){
-  document.addEventListener("click",e=>{ const a=e.target.closest("a.kl"); if(!a) return; const it=a.closest(".it");
-    try{ sessionStorage.setItem("pb-return",JSON.stringify({id:it?it.dataset.id:null,y:window.scrollY})); }catch(err){} });
-  let ret=null; try{ ret=JSON.parse(sessionStorage.getItem("pb-return")||"null"); }catch(e){}
-  if(ret) window.addEventListener("pageshow",ev=>{ const nav=(performance.getEntriesByType&&performance.getEntriesByType("navigation")[0])||{};
-    if(ev.persisted||nav.type==="back_forward") setTimeout(()=>{ const el=ret.id?document.querySelector(`.it[data-id="${CSS.escape(ret.id)}"]`):null;
-      if(el){ const c=document.querySelector(".controls"); window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-16); el.classList.remove("iflash"); void el.offsetWidth; el.classList.add("iflash"); } else window.scrollTo(0,ret.y); },40);
-    try{ sessionStorage.removeItem("pb-return"); }catch(e){} },{once:true});
-})();
 (function(){ let v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
   const set=x=>{ v=x; document.body.classList.toggle("no-rdcol",v==="off");
     document.querySelectorAll("[data-rdcol]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rdcol===v));

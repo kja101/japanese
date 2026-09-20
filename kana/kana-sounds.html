@@ -226,7 +226,7 @@ function signView(){
       }
       const note = PNOTE[s] || (vd && SAME[vd] ? `${vd} ${SAME[vd]}` : "");
       return `<div class="fam${note && (SAME[vd]||"はへをん".includes(s))?" flag":""}">
-        <div class="prime"><span class="hg">${s}</span><span class="kt">${kata(s)}</span><span class="rj">${romaji(s)}</span></div>
+        <div class="prime"><span class="hg">${s}</span><span class="kt">${kata(s)}</span><span class="rj">${romaji(s)}</span>${sayBtn(s)}</div>
         ${d?`<div class="dlabel">${hf?"Voiced, then p-sound":"Voiced"}</div><div class="derived">${d}</div>`:""}
         ${y?`<div class="dlabel">With small ゃ ゅ ょ</div><div class="derived">${y}</div>`:""}
         ${note?`<div class="fnote">${esc(note)}</div>`:""}
@@ -303,7 +303,7 @@ function exRow(line){
   const [k,kj,en] = line.split("|");
   const plain = k.replace(/[\[\]]/g,"");
   const marked = esc(k).replace(/\[(.+?)\]/g,"<mark>$1</mark>");
-  return `<div class="ex"><div class="k">${marked}${kj!==plain?`<span class="kj">${rdWord(kj,plain,"kanji")}</span>`:""}</div>
+  return `<div class="ex"><div class="k">${marked}${sayBtn(plain)}${kj!==plain?`<span class="kj">${rdWord(kj,plain,"kanji")}</span>`:""}</div>
     <div class="m">${esc(en)}<span class="rj">${esc(romajiPhrase(plain))}</span></div></div>`;
 }
 const PARTICLE = {"は":"wa","を":"o","へ":"e"};
@@ -359,7 +359,7 @@ function pitchHtml(k,a){
   return `<span class="pitch" aria-label="pitch pattern">${m.map((x,i)=>`<span class="m${hi(i)?" hi":""}">${x}</span>`).join("")}<span class="m pt${particleHi?" hi":""}">が</span></span>`;
 }
 function hsetHtml(x, showTopic){
-  return `<div class="hset"><div class="hkey">${x.k}<span class="rj">${romaji(x.k)}</span>${showTopic?`<span class="htopic">${TOPICS[x.t][1]}</span>`:""}</div>
+  return `<div class="hset"><div class="hkey">${x.k}${sayBtn(x.k)}<span class="rj">${romaji(x.k)}</span>${showTopic?`<span class="htopic">${TOPICS[x.t][1]}</span>`:""}</div>
     <div class="hwords">${x.w.map(([kj,en,p])=>`<div class="hw"><span class="kj">${rdWord(kj,x.k,"kanji")}</span><span class="me">${esc(en)}</span>${p!=null?pitchHtml(x.k,p):""}</div>`).join("")}</div>
     ${x.n?`<p class="hnote">${esc(x.n)}</p>`:""}</div>`;
 }

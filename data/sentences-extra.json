@@ -712,5 +712,460 @@
   "n": "安心{あんしん} して ください",
   "en": "Don't worry",
   "why": ""
+ },
+ {
+  "id": "n102",
+  "topic": "t10",
+  "n": "いつも 七時{しちじ} に 起{お}きます",
+  "en": "I always get up at seven",
+  "why": ""
+ },
+ {
+  "id": "n103",
+  "topic": "t10",
+  "n": "まだ 宿題{しゅくだい} が 終{お}わって いません",
+  "en": "I haven't finished my homework yet",
+  "why": ""
+ },
+ {
+  "id": "n104",
+  "topic": "t10",
+  "n": "もう 昼{ひる}ご飯{はん} を 食{た}べましたか",
+  "en": "Have you had lunch already?",
+  "why": ""
+ },
+ {
+  "id": "n105",
+  "topic": "t10",
+  "n": "すぐに 戻{もど}ります",
+  "en": "I'll be right back",
+  "why": ""
+ },
+ {
+  "id": "n106",
+  "topic": "t10",
+  "n": "やっと 仕事{しごと} が 終{お}わりました",
+  "en": "Work is finally over",
+  "why": ""
+ },
+ {
+  "id": "n107",
+  "topic": "t10",
+  "n": "もうすぐ 夏休{なつやす}み です",
+  "en": "The summer holidays are nearly here",
+  "why": ""
+ },
+ {
+  "id": "n108",
+  "topic": "t10",
+  "n": "これから 買{か}い物{もの} に 行{い}きます",
+  "en": "I'm going shopping now",
+  "why": ""
+ },
+ {
+  "id": "n109",
+  "topic": "t10",
+  "n": "たまに 映画{えいが} を 見{み}ます",
+  "en": "I sometimes watch films",
+  "why": ""
+ },
+ {
+  "id": "n110",
+  "topic": "t10",
+  "n": "そろそろ 帰{かえ}りましょう",
+  "en": "Shall we start heading home?",
+  "why": ""
+ },
+ {
+  "id": "n111",
+  "topic": "t10",
+  "n": "しばらく 待{ま}って ください",
+  "en": "Please wait a while",
+  "why": ""
+ },
+ {
+  "id": "n112",
+  "topic": "t10",
+  "n": "さっき 駅{えき} で 友達{ともだち} に 会{あ}いました",
+  "en": "I just met a friend at the station",
+  "why": ""
+ },
+ {
+  "id": "n113",
+  "topic": "t10",
+  "n": "とうとう 雨{あめ} が 降{ふ}って きました",
+  "en": "It's finally started to rain",
+  "why": ""
+ },
+ {
+  "id": "n114",
+  "topic": "t9",
+  "n": "きっと 大丈夫{だいじょうぶ} です よ",
+  "en": "I'm sure it'll be fine",
+  "why": ""
+ },
+ {
+  "id": "n115",
+  "topic": "t9",
+  "n": "もちろん いい です よ",
+  "en": "Of course, that's fine",
+  "why": ""
+ },
+ {
+  "id": "n116",
+  "topic": "t9",
+  "n": "この 映画{えいが} は あまり 面白{おもしろ}くない です",
+  "en": "This film isn't very interesting",
+  "why": "あまり only means \"not very\" with a negative verb or adjective."
+ },
+ {
+  "id": "n117",
+  "topic": "t9",
+  "n": "ちっとも 分{わ}かりません",
+  "en": "I don't understand at all",
+  "why": ""
+ },
+ {
+  "id": "n118",
+  "topic": "t9",
+  "n": "ほとんど 毎日{まいにち} 走{はし}って います",
+  "en": "I run almost every day",
+  "why": ""
+ },
+ {
+  "id": "n119",
+  "topic": "t9",
+  "n": "日本語{にほんご} が かなり 上手{じょうず} に なりました",
+  "en": "Your Japanese has got quite good",
+  "why": ""
+ },
+ {
+  "id": "n120",
+  "topic": "t9",
+  "n": "なるべく 早{はや}く 来{き}て ください",
+  "en": "Please come as early as you can",
+  "why": ""
+ },
+ {
+  "id": "n121",
+  "topic": "t9",
+  "n": "できるだけ ゆっくり 話{はな}して ください",
+  "en": "Please speak as slowly as you can",
+  "why": ""
+ },
+ {
+  "id": "n122",
+  "topic": "t9",
+  "n": "はっきり 言{い}って ください",
+  "en": "Please say it clearly",
+  "why": ""
+ },
+ {
+  "id": "n123",
+  "topic": "t9",
+  "n": "名前{なまえ} を 聞{き}いて びっくり しました",
+  "en": "I was surprised when I heard the name",
+  "why": ""
+ },
+ {
+  "id": "n124",
+  "topic": "t9",
+  "n": "試験{しけん} に 落{お}ちて がっかり しました",
+  "en": "I was disappointed to fail the exam",
+  "why": ""
+ },
+ {
+  "id": "n125",
+  "topic": "t9",
+  "n": "電車{でんしゃ} が 来{こ}なくて いらいら します",
+  "en": "The train isn't coming and it's getting on my nerves",
+  "why": ""
+ },
+ {
+  "id": "n126",
+  "topic": "t9",
+  "n": "週末{しゅうまつ} は 家{いえ} で のんびり します",
+  "en": "At the weekend I relax at home",
+  "why": ""
+ },
+ {
+  "id": "n127",
+  "topic": "t9",
+  "n": "昨日{きのう} は ぐっすり 寝{ね}ました",
+  "en": "I slept soundly last night",
+  "why": ""
+ },
+ {
+  "id": "n128",
+  "topic": "t9",
+  "n": "彼女{かのじょ} は いつも にこにこ して います",
+  "en": "She's always smiling",
+  "why": ""
+ },
+ {
+  "id": "n129",
+  "topic": "t9",
+  "n": "明日{あした} の 試験{しけん} で どきどき して います",
+  "en": "I'm nervous about tomorrow's exam",
+  "why": ""
+ },
+ {
+  "id": "n130",
+  "topic": "t9",
+  "n": "この 靴{くつ} は サイズ が ぴったり です",
+  "en": "These shoes are exactly my size",
+  "why": ""
+ },
+ {
+  "id": "n131",
+  "topic": "t9",
+  "n": "雨{あめ} でした。 それで、 家{いえ} に いました",
+  "en": "It was raining. So I stayed at home",
+  "why": ""
+ },
+ {
+  "id": "n132",
+  "topic": "t9",
+  "n": "高{たか}い です。 でも、 とても おいしい です",
+  "en": "It's expensive. But it's really delicious",
+  "why": ""
+ },
+ {
+  "id": "n133",
+  "topic": "t9",
+  "n": "ところで、 お仕事{しごと} は 何{なん} ですか",
+  "en": "By the way, what do you do for work?",
+  "why": ""
+ },
+ {
+  "id": "n134",
+  "topic": "t9",
+  "n": "つまり、 明日{あした} は 休{やす}み です か",
+  "en": "So you mean tomorrow is a day off?",
+  "why": ""
+ },
+ {
+  "id": "n135",
+  "topic": "t9",
+  "n": "もし 雨{あめ} なら、 行{い}きません",
+  "en": "If it rains, I won't go",
+  "why": ""
+ },
+ {
+  "id": "n136",
+  "topic": "t9",
+  "n": "コーヒー に しますか、 それとも お茶{ちゃ} に しますか",
+  "en": "Will you have coffee, or tea?",
+  "why": ""
+ },
+ {
+  "id": "n137",
+  "topic": "t9",
+  "n": "たとえば、 すし や ラーメン が 好{す}き です",
+  "en": "For example, I like sushi and ramen",
+  "why": ""
+ },
+ {
+  "id": "n138",
+  "topic": "t9",
+  "n": "だから、 日本語{にほんご} を 勉強{べんきょう} して います",
+  "en": "That's why I'm studying Japanese",
+  "why": ""
+ },
+ {
+  "id": "n139",
+  "topic": "t9",
+  "n": "明日{あした} は 雨{あめ} かもしれません",
+  "en": "It might rain tomorrow",
+  "why": ""
+ },
+ {
+  "id": "n140",
+  "topic": "t9",
+  "n": "遅{おく}れて も しょうがない です",
+  "en": "Being late can't be helped",
+  "why": ""
+ },
+ {
+  "id": "n141",
+  "topic": "t9",
+  "n": "まだ 食{た}べられる のに、 もったいない です",
+  "en": "It's still edible, what a waste",
+  "why": ""
+ },
+ {
+  "id": "n142",
+  "topic": "t9",
+  "n": "うそ を つかないで ください",
+  "en": "Please don't lie",
+  "why": ""
+ },
+ {
+  "id": "n143",
+  "topic": "t13",
+  "n": "来年{らいねん} 日本{にほん} へ 行{い}く つもり です",
+  "en": "I'm planning to go to Japan next year",
+  "why": ""
+ },
+ {
+  "id": "n144",
+  "topic": "t13",
+  "n": "先生{せんせい} は もう 来{く}る はず です",
+  "en": "The teacher should be here by now",
+  "why": ""
+ },
+ {
+  "id": "n145",
+  "topic": "t13",
+  "n": "友達{ともだち} の おかげ で 助{たす}かりました",
+  "en": "Thanks to my friend, I was saved",
+  "why": ""
+ },
+ {
+  "id": "n146",
+  "topic": "t13",
+  "n": "すてき な かばん です ね",
+  "en": "That's a lovely bag",
+  "why": ""
+ },
+ {
+  "id": "n147",
+  "topic": "t13",
+  "n": "この 町{まち} は 夜{よる} も にぎやか です",
+  "en": "This town is lively even at night",
+  "why": ""
+ },
+ {
+  "id": "n148",
+  "topic": "t13",
+  "n": "隣{となり} の 部屋{へや} が うるさい です",
+  "en": "The next room is noisy",
+  "why": ""
+ },
+ {
+  "id": "n149",
+  "topic": "t13",
+  "n": "この 本{ほん} は つまらない です",
+  "en": "This book is boring",
+  "why": ""
+ },
+ {
+  "id": "n150",
+  "topic": "t13",
+  "n": "ここ で たばこ を 吸{す}って は だめ です",
+  "en": "You mustn't smoke here",
+  "why": ""
+ },
+ {
+  "id": "n151",
+  "topic": "t8",
+  "n": "母{はは} に 花{はな} を あげました",
+  "en": "I gave my mother flowers",
+  "why": ""
+ },
+ {
+  "id": "n152",
+  "topic": "t8",
+  "n": "友達{ともだち} が 本{ほん} を くれました",
+  "en": "A friend gave me a book",
+  "why": ""
+ },
+ {
+  "id": "n153",
+  "topic": "t8",
+  "n": "姉{あね} に 時計{とけい} を もらいました",
+  "en": "I got a watch from my sister",
+  "why": ""
+ },
+ {
+  "id": "n154",
+  "topic": "t8",
+  "n": "兄弟{きょうだい} と けんか しました",
+  "en": "I had a fight with my brother",
+  "why": ""
+ },
+ {
+  "id": "n155",
+  "topic": "t8",
+  "n": "みんな で 写真{しゃしん} を 撮{と}りましょう",
+  "en": "Let's take a photo all together",
+  "why": ""
+ },
+ {
+  "id": "n156",
+  "topic": "t3",
+  "n": "お釣{つ}り を ください",
+  "en": "My change, please",
+  "why": ""
+ },
+ {
+  "id": "n157",
+  "topic": "t6",
+  "n": "ごみ は どこ に 捨{す}てますか",
+  "en": "Where do I throw the rubbish away?",
+  "why": ""
+ },
+ {
+  "id": "n158",
+  "topic": "t6",
+  "n": "部屋{へや} を きれい に しました",
+  "en": "I tidied the room",
+  "why": ""
+ },
+ {
+  "id": "n159",
+  "topic": "t12",
+  "n": "あそこ に 郵便局{ゆうびんきょく} が あります",
+  "en": "There's a post office over there",
+  "why": ""
+ },
+ {
+  "id": "n160",
+  "topic": "t12",
+  "n": "こちら へ どうぞ",
+  "en": "This way, please",
+  "why": ""
+ },
+ {
+  "id": "n161",
+  "topic": "t12",
+  "n": "どちら から 来{き}ましたか",
+  "en": "Where are you from? (polite)",
+  "why": ""
+ },
+ {
+  "id": "n162",
+  "topic": "t12",
+  "n": "どの バス に 乗{の}れば いい ですか",
+  "en": "Which bus should I take?",
+  "why": ""
+ },
+ {
+  "id": "n163",
+  "topic": "t12",
+  "n": "だれ に 聞{き}けば いい ですか",
+  "en": "Who should I ask?",
+  "why": ""
+ },
+ {
+  "id": "n164",
+  "topic": "t12",
+  "n": "どうして 遅{おく}れた の ですか",
+  "en": "Why were you late?",
+  "why": ""
+ },
+ {
+  "id": "n165",
+  "topic": "t1",
+  "n": "どんな 料理{りょうり} が 好{す}き ですか",
+  "en": "What kind of food do you like?",
+  "why": ""
+ },
+ {
+  "id": "n166",
+  "topic": "t1",
+  "n": "りんご を いくつ 買{か}いますか",
+  "en": "How many apples will you buy?",
+  "why": ""
  }
 ]

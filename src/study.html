@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Learn the N5 and N4 kanji: method and spaced-repetition flashcards</title>
+<title>Learn the kanji, N5 to N2: method and spaced-repetition flashcards</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -101,6 +101,14 @@ select{font:inherit;padding:.4rem .5rem;border:1px solid var(--rule);border-radi
 .part small{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.2}
 .op{color:var(--muted)}
 .story{margin:.4rem 0 0;font-size:1.02rem}
+.starter{color:var(--ink)}
+.mystory{margin-top:.4rem}
+.mystory .my{margin:.2rem 0 .3rem;padding:.4rem .6rem;background:var(--indigo-wash);border-radius:6px}
+.mylab{display:block;font-size:.75rem;font-weight:600;color:var(--indigo)}
+.linkbtn{font:inherit;font-size:.88rem;background:none;border:0;padding:0;color:var(--indigo);text-decoration:underline;cursor:pointer}
+.storyedit{width:100%;font:inherit;padding:.5rem .6rem;border:1px solid var(--rule);border-radius:6px;background:var(--sheet);color:var(--ink)}
+.storybtns{display:flex;gap:.4rem;margin-top:.4rem}
+h2.lvh{font-size:1.2rem;margin:2rem 0 .2rem;color:var(--seal)}
 .trap{display:flex;gap:.6rem;align-items:baseline;margin:.15rem 0}
 .trap .tg{font-family:var(--jp);font-size:1.5rem;color:var(--seal);min-width:1.8rem}
 .none{color:var(--muted);margin:0;font-size:.93rem}
@@ -156,8 +164,8 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 </head>
 <body>
 <header class="top">
-  <h1>漢字 N5・N4 学習</h1>
-  <p class="sub">Learn all 284 N5 and N4 kanji the way the best teachers and the memory research agree on: building blocks first, one vivid story per kanji, one real word for the readings, and spaced-repetition flashcards that schedule every review for you.</p>
+  <h1>漢字 学習</h1>
+  <p class="sub">Learn the kanji from N5 up to N2 (981 in all) the way the best teachers and the memory research agree on: building blocks first, one vivid story per kanji, one real word for the readings, and spaced-repetition flashcards that schedule every review for you.</p>
 </header>
 <nav class="tabs" role="tablist">
   <button role="tab" data-tab="today" aria-selected="true">Today</button>
@@ -251,7 +259,8 @@ const save=()=>{ try{ localStorage.setItem(KEY,JSON.stringify(S)); }catch(e){} }
 const dayKey=(t=Date.now())=>{ const d=new Date(t-4*3600e3); return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); };
 function endOfDay(){ const d=new Date(Date.now()-4*3600e3); d.setHours(0,0,0,0); return d.getTime()+DAY+4*3600e3; }
 function rollDay(){ const k=dayKey(); if(S.day.key!==k){ S.day={key:k,newDone:0}; save(); } }
-const order=()=>ORD[S.settings.order]||ORD.shape;
+const upto=()=>+(S.settings.upto||4);
+const order=()=>(ORD[S.settings.order]||ORD.shape).filter(k=>K[k]&&K[k].l>=upto());
 const cardOf=id=>S.cards[id];
 const started=k=>!!S.cards["m:"+k];
 const graduated=c=>c&&c.step===-1;
@@ -296,15 +305,20 @@ function nextId(){
 }
 function pendingLearning(){ const t=Date.now(); let min=Infinity; for(const c of Object.values(S.cards)) if(c.step>=0&&c.due>t) min=Math.min(min,c.due); return min===Infinity?null:min; }
 // ---------- card rendering ----------
+function storyBlock(k){
+  const x=K[k], mine=storyGet(k);
+  const base=x.story?`<p class="story">${esc(x.story)}</p>`:`<p class="story starter">${x.parts.map(([g,m])=>esc(g)+" "+esc(m||"shape")).join(" + ")} → <b>${esc(x.m)}</b><br><span class="muted small">No story yet: picture the parts in one vivid scene, then save it below.</span></p>`;
+  return `${base}<div class="mystory" data-k="${k}">${mine?`<p class="my"><span class="mylab">My story</span>${esc(mine)}</p>`:""}<button class="linkbtn" data-edit="${k}">${mine?"Edit my story":"Write my own story"}</button></div>`;
+}
 function detail(k){
   const x=K[k];
   const parts=x.parts.map(([g,m])=>`<span class="part"><b>${esc(g)}</b><small>${esc(m)}</small></span>`).join('<span class="op">+</span>');
   return `<div class="det">
    <div class="dhead"><span class="g">${k}</span><div><div class="kw">${esc(x.m)}</div><div class="meta"><span class="lvb">N${x.l}</span> ${esc(CHT[k]||"")}</div></div></div>
-   <div class="blk s1"><h4>Shape</h4><div class="eq">${parts}</div><p class="story">${esc(x.story)}</p></div>
-   <div class="blk s2"><h4>Look-alikes</h4>${x.traps.length?x.traps.map(([g,n])=>`<div class="trap"><span class="tg">${esc(g)}</span><span>${esc(n)}</span></div>`).join(""):`<p class="none">No close look-alikes at N5 or N4.</p>`}</div>
+   <div class="blk s1"><h4>Shape</h4><div class="eq">${parts}</div>${storyBlock(k)}</div>
+   <div class="blk s2"><h4>Look-alikes</h4>${x.traps.length?x.traps.map(([g,n])=>`<div class="trap"><span class="tg">${esc(g)}</span><span>${esc(n)}</span></div>`).join(""):`<p class="none">No close look-alikes.</p>`}</div>
    <div class="blk s3"><h4>Readings</h4><div class="reads">${x.on.length?`<span class="lab">On</span><span class="v rdv-on">${x.on.map(onHtml).join("、")}</span>`:""}${x.kun.length?`<span class="lab">Kun</span><span class="v rdv-kun">${x.kun.map(kunHtml).join("、")}</span>`:""}</div>
-     <p class="exw"><span class="w">${rubyOf(x.ex)}</span><span class="rj">${romaji(kanaOf(x.ex))}</span> <span class="e">${esc(x.exEn)}</span></p></div>
+     <p class="exw"><span class="w">${rdWord(x.ex[0],x.ex[1],"ruby")}</span>${sayBtn(x.ex[1])}<span class="rj">${romaji(x.ex[1])}</span> <span class="e">${esc(x.ex[2])}</span></p></div>
   </div>`;
 }
 function front(id){
@@ -312,12 +326,12 @@ function front(id){
   const isNew=!c;
   const badge=isNew?`<span class="badge new">New ${t==="m"?"kanji":"word"}</span>`:c.step>=0?`<span class="badge lrn">Learning</span>`:`<span class="badge rev">Review</span>`;
   if(t==="m") return `${badge}<div class="fg">${k}</div><p class="prompt">${isNew?"A new kanji. Tap Show answer and read the parts and story slowly, picturing the scene.":"What's the keyword? Picture the story before you flip."}</p>`;
-  return `${badge}<div class="fw">${esc(plainOf(x.ex))}</div><p class="prompt">How is it read, and what does it mean?</p>`;
+  return `${badge}<div class="fw">${esc(x.ex[0])}</div><p class="prompt">How is it read, and what does it mean?</p>`;
 }
 function back(id){
   const [t,k]=id.split(":"), x=K[k];
   if(t==="m") return detail(k);
-  return `<div class="wback"><div class="ww">${rubyOf(x.ex)}</div><div class="wr rj">${romaji(kanaOf(x.ex))}</div><div class="we">${esc(x.exEn)}</div></div>${detail(k)}`;
+  return `<div class="wback"><div class="ww">${rdWord(x.ex[0],x.ex[1],"ruby")}${sayBtn(x.ex[1])}</div><div class="wr rj">${romaji(x.ex[1])}</div><div class="we">${esc(x.ex[2])}</div></div>${detail(k)}`;
 }
 // ---------- study view ----------
 let cur=null, shown=false;
@@ -362,10 +376,10 @@ document.addEventListener("keydown",e=>{
 // ---------- today view ----------
 function streak(){ let n=0; let t=Date.now(); if(!S.log[dayKey(t)]) t-=DAY; while(S.log[dayKey(t)]){ n++; t-=DAY; } return n; }
 function renderToday(){
-  const q=queue(), all=Object.keys(K).length;
+  const q=queue(), all=order().length;
   const intro=order().filter(k=>started(k)).length;
-  const known=Object.keys(K).filter(k=>graduated(S.cards["m:"+k])).length;
-  const mature=Object.keys(K).filter(k=>{const c=S.cards["m:"+k];return c&&c.step===-1&&c.ivl>=21;}).length;
+  const known=order().filter(k=>graduated(S.cards["m:"+k])).length;
+  const mature=order().filter(k=>{const c=S.cards["m:"+k];return c&&c.step===-1&&c.ivl>=21;}).length;
   const due=q.learn.length+q.rev.length, nw=q.wordNew.length+q.meaningNew.length;
   const leftToday=Math.max(0,S.settings.perDay-S.day.newDone);
   const upcoming=order().filter(k=>!started(k));
@@ -383,13 +397,15 @@ function renderToday(){
    ${nextK.length?`<h3>${leftToday?"Today's new kanji":"Tomorrow's new kanji"} ${S.day.newDone&&leftToday?`<span class="muted">(${S.day.newDone} already started)</span>`:""}</h3><div class="tiles">${nextK.map(k=>tile(k)).join("")}</div>`:""}
    <h3>Settings</h3>
    <div class="set"><label>New kanji a day <select id="perDay">${[5,10,15,20].map(n=>`<option ${n===S.settings.perDay?"selected":""}>${n}</option>`).join("")}</select></label>
-     <label>Order <select id="ord"><option value="shape" ${S.settings.order==="shape"?"selected":""}>Shape families (recommended)</option><option value="n5" ${S.settings.order==="n5"?"selected":""}>N5 first, then N4</option></select></label></div>
-   <p class="muted small">10 a day is the sweet spot for most people. The order only changes kanji you haven't started, and in both orders every kanji's parts come before it.</p>
+     <label>Go up to <select id="upto">${[[4,"N4 (284 kanji)"],[3,"N3 (626)"],[2,"N2 (981)"]].map(([v,t])=>`<option value="${v}" ${upto()===v?"selected":""}>${t}</option>`).join("")}</select></label>
+     <label>Order <select id="ord"><option value="shape" ${S.settings.order==="shape"?"selected":""}>Shape families (recommended)</option><option value="n5" ${S.settings.order==="n5"?"selected":""}>N5 first, then the rest level by level</option></select></label></div>
+   <p class="muted small">10 a day is the sweet spot for most people. N5 and N4 come first; raising the level adds N3 and then N2 after them, still in shape families with every kanji's parts before it. Changing the order or level only affects kanji you haven't started.</p>
    <h3>Your progress file</h3>
    <p class="muted small">Progress is saved in this browser on this device. To move it to another device or keep a backup, export it and import it there.</p>
    <div class="set"><button class="btn" id="exp">Export progress</button><label class="btn">Import progress<input type="file" id="imp" accept=".json,application/json" hidden></label><button class="btn danger" id="rst">Reset everything</button></div>`;
   document.getElementById("perDay").onchange=e=>{S.settings.perDay=+e.target.value;save();renderToday();};
   document.getElementById("ord").onchange=e=>{S.settings.order=e.target.value;save();renderToday();};
+  document.getElementById("upto").onchange=e=>{S.settings.upto=+e.target.value;save();renderToday();};
   document.getElementById("exp").onclick=()=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:"application/json"})); a.download="kanji-progress-"+dayKey()+".json"; a.click(); };
   document.getElementById("imp").onchange=e=>{ const f=e.target.files[0]; if(!f) return; f.text().then(t=>{ try{ const s=JSON.parse(t); if(!s.cards) throw 0; S=Object.assign({cards:{},day:{key:"",newDone:0},settings:{perDay:10,order:"shape"},log:{}},s); save(); renderToday(); alert("Progress imported."); }catch(err){ alert("That file isn't a progress export from this deck."); } }); };
   document.getElementById("rst").onclick=()=>{ if(confirm("Delete all progress and start again? This can't be undone.")){ S={cards:{},day:{key:"",newDone:0},settings:S.settings,log:{}}; save(); renderToday(); } };
@@ -401,10 +417,21 @@ function renderLessons(){
   const o=order(); let h=`<p class="muted">Lessons of ${LESSON}, in the order you'll meet them. Colours show progress: <span class="key st-new">not started</span> <span class="key st-lrn">learning</span> <span class="key st-rev">reviewing</span> <span class="key st-mat">well known</span>. Tap any kanji to read its card.</p>`;
   for(let i=0;i<o.length;i+=LESSON){
     const ks=o.slice(i,i+LESSON);
+    const lv=Math.min(...ks.map(k=>K[k].l)), prevLv=i?Math.min(...o.slice(i-LESSON,i).map(k=>K[k].l)):null;
+    if(i===0||lv!==prevLv) h+=`<h2 class="lvh">${lv>=4?"N5 and N4":"N"+lv}</h2>`;
     h+=`<section class="lesson"><h3>Lesson ${i/LESSON+1}<span class="fams"> ${ks.map(k=>DATA.FAM[k]).filter((v,j,a)=>v&&a.indexOf(v)===j).join(" ")}</span></h3><div class="tiles">${ks.map(tile).join("")}</div></section>`;
   }
   document.getElementById("tab-lessons").innerHTML=h;
 }
+// ---------- my stories (shared with the kanji deck) ----------
+document.addEventListener("click",e=>{
+  const ed=e.target.closest("[data-edit]"); if(ed){ const k=ed.dataset.edit, box=ed.closest(".mystory");
+    box.innerHTML=`<textarea class="storyedit" rows="3" placeholder="A short, vivid scene that joins the parts and means “${esc(K[k].m)}”">${esc(storyGet(k))}</textarea><div class="storybtns"><button class="btn primary" data-save="${k}">Save</button><button class="btn" data-cancel="${k}">Cancel</button></div>`;
+    box.querySelector("textarea").focus(); return; }
+  const sv=e.target.closest("[data-save],[data-cancel]"); if(sv){ const k=sv.dataset.save||sv.dataset.cancel, box=sv.closest(".mystory");
+    if(sv.dataset.save) storySet(k,box.querySelector("textarea").value.trim());
+    const tmp=document.createElement("div"); tmp.innerHTML=storyBlock(k); box.parentElement.querySelectorAll(".story").forEach(n=>n.remove()); box.replaceWith(...tmp.childNodes); }
+});
 // ---------- modal ----------
 const modal=document.createElement("div"); modal.className="modal"; modal.hidden=true;
 modal.innerHTML=`<div class="mbox" role="dialog" aria-modal="true"><button class="btn close" aria-label="Close">Close</button><div class="mbody"></div></div>`;

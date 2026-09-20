@@ -102,7 +102,7 @@ function exHtml(x){
   const key=x.w.replace(/[～〜]/g,"");
   const j=x.ex.p.map(([k,kn])=>{ let h=/[\u4e00-\u9fff]/.test(k)?rdWord(k,kn,"ruby"):esc(k);
     return h.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(key,`<mark>${key}</mark>`)).join(""); }).join(" ");
-  return `<div class="ex"><div class="j">${j}</div><div class="t">${esc(x.ex.en)}</div></div>`;
+  return `<div class="ex"><div class="j">${j}${sayBtn(x.ex.p.map(q=>q[0]).join(""))}</div><div class="t">${esc(x.ex.en)}</div></div>`;
 }
 function render(){
   const t=+state.tier, main=document.getElementById("main"), groups=D.groups;
@@ -113,7 +113,7 @@ function render(){
       const ws=D.words.filter(w=>w.g===id&&w.l>=t).sort((a,b)=>b.l-a.l);
       if(!ws.length) return "";
       return `<section class="grp" id="g-${id}"><div class="ghead"><h3><span class="jp">${esc(jp)}</span>${esc(en)} <small>${ws.length} words</small></h3>${blurb?`<p>${esc(blurb)}</p>`:""}${id==="point"?KOSO:""}</div>
-        <div class="cards">${ws.map(w=>`<article class="wc" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span><span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${exHtml(w)}</article>`).join("")}</div></section>`;
+        <div class="cards">${ws.map(w=>`<article class="wc" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span>${sayBtn(w.w.replace(/[～〜]/g,""))}<span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${exHtml(w)}</article>`).join("")}</div></section>`;
     }).join("");
     if(blocks) h+=`<h2 class="part">${title}</h2>`+blocks;
   });
