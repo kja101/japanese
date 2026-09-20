@@ -630,8 +630,9 @@ function doSearch(){
   searching=true; main.dataset.course="";
   const shown=hits.slice(0,60);
   res.hidden=false;
-  res.innerHTML=hits.length?`<span class="rnone">${hits.length} kanji match “${esc(box.value.trim())}”${hits.length>60?" — showing the first 60":""}. Clear the box to go back to the course.</span>`
-    :`<span class="rnone">No kanji matches that. Try a meaning, a reading, rōmaji, a kanji or a word.</span>`;
+  const other=jpElsewhere(box.value,"km","../","km");
+  res.innerHTML=(hits.length?`<span class="rnone">${hits.length} kanji match “${esc(box.value.trim())}”${hits.length>60?" — showing the first 60":""}. Clear the box to go back to the course.</span>`
+    :`<span class="rnone">No kanji matches that. Try a meaning, a reading, rōmaji, a kanji or a word.</span>`)+other;
   main.innerHTML=shown.length?`<section class="chapter">${shown.map(x=>kanjiCard(K[x.k])).join("")}</section>`:"";
   window.scrollTo({top:0,behavior:"instant"});
 }

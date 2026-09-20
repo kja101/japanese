@@ -265,6 +265,29 @@ function linkKanaWords(roots,words,base,from){
 const jpSearchKey=s=>rdHira(String(s||"")).toLowerCase();
 function jpSearchable(){ return Array.prototype.map.call(arguments,x=>Array.isArray(x)?x.join(" "):(x==null?"":x)).join(" "); }
 
+// ---------- where else a word appears: one small index of every page's entries ----------
+// [key, page, anchor, label]; pages: kw kana words, kt katakana words, km kanji deck, gr grammar, ks kana sounds
+const JP_INDEX=__INDEX__;
+const JP_PAGES={kw:["kana words","kana/kana-words.html","w-"],kt:["katakana words","kana/katakana-words.html","w-"],
+  km:["the kanji deck","kanji/master-kanji-shapes.html","k-"],gr:["grammar","words/grammar.html","p-"],
+  ks:["kana sounds","kana/kana-sounds.html",""]};
+function jpElsewhere(query,exclude,root,from){
+  const q=jpSearchKey(query||"").trim();
+  if(q.length<1) return "";
+  const hits=JP_INDEX.filter(e=>e[1]!==exclude&&e[0].includes(q));
+  if(!hits.length) return "";
+  const byPage={};
+  hits.forEach(e=>{ (byPage[e[1]]=byPage[e[1]]||[]).push(e); });
+  return `<div class="elsewhere">Also on other pages: ${Object.keys(byPage).map(p=>{
+    const [name,path,pre]=JP_PAGES[p]||[p,"index.html",""];
+    const list=byPage[p].slice(0,4).map(e=>`<a href="${root}${path}${e[2]?"?from="+(from||"")+"#"+pre+encodeURIComponent(e[2]):""}">${jpEsc(e[3])}</a>`).join(", ");
+    const more=byPage[p].length>4?` +${byPage[p].length-4}`:"";
+    return `${list}${more} <small>in ${jpEsc(name)}</small>`; }).join(" · ")}</div>`;
+}
+(function(){ const st=document.createElement("style"); st.textContent=`.elsewhere{max-width:1000px;margin:.3rem auto 0;padding:.2rem 1.25rem .4rem;font-size:.9rem;opacity:.85}
+.elsewhere a{color:inherit;font-weight:600}
+.elsewhere small{opacity:.7;font-weight:400}`; document.head.appendChild(st); })();
+
 // ---------- grammar blocks: colour each part of a sentence by its job ----------
 // One setting for every page (the phrasebook, sentence builder, grammar and situation pages).
 const JP_NOTE=/([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}/g;

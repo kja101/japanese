@@ -110,6 +110,7 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
     </div>
   </div>
   <div id="kb"></div>
+  <div id="elsewhere"></div>
   <nav class="topics" id="nav"></nav>
 </div>
 <main id="main"></main>
@@ -154,6 +155,7 @@ function doSearch(){
   const q=document.getElementById("search").value.trim().toLowerCase(); let any=false;
   document.querySelectorAll("section.grp").forEach(s=>{ let n=0; s.querySelectorAll(".gc").forEach(c=>{ const hit=!q||c.dataset.s.includes(q); c.style.display=hit?"":"none"; if(hit) n++; }); s.style.display=n?"":"none"; if(n) any=true; });
   document.getElementById("noresult").classList.toggle("show",!!q&&!any);
+  document.getElementById("elsewhere").innerHTML=jpElsewhere(document.getElementById("search").value,"gr","../","gr");
 }
 document.getElementById("search").addEventListener("input",doSearch);
 document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{ const y=window.scrollY; state.tier=b.dataset.tier; save(); render(); window.scrollTo(0,y); });

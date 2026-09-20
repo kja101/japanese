@@ -346,7 +346,44 @@ def study_data():
 
 print("Building:")
 # ---------------------------------------------------------------- shared script
-_common = (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings))
+def search_index():
+    """A compact index of every page's entries, so a search on one page can point at the others."""
+    key = lambda *parts: re.sub(r"[\u30a1-\u30f6]", lambda m: chr(ord(m.group()) - 0x60), " ".join(str(p) for p in parts if p)).lower()
+    out = []
+    for name, page in (("kana-words.json", "kw"), ("katakana-words.json", "kt")):
+        for w in load(name)["words"]:
+            if w.get("g") == "parts":
+                continue
+            out.append([key(w["w"], krRomaji(w["w"]), w["en"], w.get("note", "")), page, w["w"], w["w"]])
+    for k, x in kanji["K"].items():
+        out.append([key(k, x["m"], " ".join(x.get("on", []) + x.get("kun", [])), krRomaji(" ".join(x.get("on", []) + x.get("kun", [])))), "km", k, k + " " + x["m"].split(",")[0]])
+    for g in load("grammar.json"):
+        out.append([key(NOTE_RE.sub(r"\1", g["pat"]), g["mean"], g["group"]), "gr", g["id"], NOTE_RE.sub(r"\1", g["pat"])])
+    return out
+
+def krRomaji(kana):
+    """Rough Hepburn, only for the search index."""
+    BASE = {"あ":"a","い":"i","う":"u","え":"e","お":"o","か":"ka","き":"ki","く":"ku","け":"ke","こ":"ko","さ":"sa","し":"shi","す":"su","せ":"se","そ":"so",
+            "た":"ta","ち":"chi","つ":"tsu","て":"te","と":"to","な":"na","に":"ni","ぬ":"nu","ね":"ne","の":"no","は":"ha","ひ":"hi","ふ":"fu","へ":"he","ほ":"ho",
+            "ま":"ma","み":"mi","む":"mu","め":"me","も":"mo","や":"ya","ゆ":"yu","よ":"yo","ら":"ra","り":"ri","る":"ru","れ":"re","ろ":"ro","わ":"wa","を":"o","ん":"n",
+            "が":"ga","ぎ":"gi","ぐ":"gu","げ":"ge","ご":"go","ざ":"za","じ":"ji","ず":"zu","ぜ":"ze","ぞ":"zo","だ":"da","ぢ":"ji","づ":"zu","で":"de","ど":"do",
+            "ば":"ba","び":"bi","ぶ":"bu","べ":"be","ぼ":"bo","ぱ":"pa","ぴ":"pi","ぷ":"pu","ぺ":"pe","ぽ":"po"}
+    hira = re.sub(r"[\u30a1-\u30f6]", lambda m: chr(ord(m.group()) - 0x60), kana)
+    out, prev = [], ""
+    for ch in hira:
+        if ch in "ゃゅょ" and out:
+            out[-1] = out[-1][:-1] + {"ゃ":"ya","ゅ":"yu","ょ":"yo"}[ch] if out[-1].endswith("i") else out[-1]
+        elif ch == "ー" and out and out[-1]:
+            out.append(out[-1][-1])
+        elif ch == "っ":
+            prev = "x"
+        else:
+            out.append(BASE.get(ch, ""))
+    return "".join(out)
+
+_common = ((SRC / "common.js").read_text(encoding="utf-8")
+           .replace("__READINGS__", dump(readings))
+           .replace("__INDEX__", dump(search_index())))
 write("assets/common.js", _common)
 import hashlib as _h
 COMMON_VERSION = _h.sha1(_common.encode("utf-8")).hexdigest()[:10]
