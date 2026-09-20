@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>N5 and N4 grammar: the patterns that make sentences</title>
+<title>Grammar, N5 to N2: the patterns that make sentences</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -97,13 +97,13 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 <body>
 <header class="top">
   <h1>文法</h1>
-  <p class="sub">The N5 and N4 grammar patterns you need to build your own sentences: what each one means, how to form it, and real examples you can listen to. For how the parts of a sentence fit together, see the <a href="../words/sentence-builder.html">sentence builder</a>; for ready-made phrases, the <a href="../words/phrasebook.html">phrasebook</a>.</p>
+  <p class="sub">The grammar patterns from N5 to N2 you need to build your own sentences. The level switch includes every easier level, so N3 shows N5, N4 and N3: what each one means, how to form it, and real examples you can listen to. For how the parts of a sentence fit together, see the <a href="../words/sentence-builder.html">sentence builder</a>; for ready-made phrases, the <a href="../words/phrasebook.html">phrasebook</a>.</p>
 </header>
 <div class="controls">
   <div class="controls-inner">
     <input class="search" id="search" type="search" placeholder="Search patterns, Japanese, rōmaji or English" aria-label="Search">
     <div class="segs">
-      <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Level</span><button data-tier="5" aria-pressed="false">N5</button><button data-tier="4" aria-pressed="true">N4</button></div>
+      <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Level</span><button data-tier="5" aria-pressed="false">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3" aria-pressed="false">N3</button><button data-tier="2" aria-pressed="false">N2</button></div>
       <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
       <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="en" aria-pressed="false">Hide English</button><button data-hide="kana" aria-pressed="false">Hide Japanese</button></div>
     </div>
@@ -111,7 +111,7 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
   <nav class="topics" id="nav"></nav>
 </div>
 <main id="main"></main>
-<footer><p>Tap ▶ to hear an example, or a kanji to open it in the kanji deck (Back brings you here). Levels follow the usual N5/N4 split; JLPT publishes no official grammar lists, so they're a guide.</p></footer>
+<footer><p>Tap ▶ to hear an example, or a kanji to open it in the kanji deck (Back brings you here). Levels follow the usual community lists; JLPT publishes no official grammar lists, so they're a guide.</p></footer>
 <script src="../assets/common.js"></script>
 <script>
 const D = __DATA__;
@@ -127,6 +127,7 @@ try{Object.assign(state,JSON.parse(localStorage.getItem("grammar")||"{}"));}catc
 const save=()=>{try{localStorage.setItem("grammar",JSON.stringify(state));}catch(e){}};
 function render(){
   const t=+state.tier, groups=[...new Set(D.map(g=>g.group))];
+  D.sort((a,b)=>b.l-a.l);
   let h="";
   groups.forEach(gr=>{ const list=D.filter(g=>g.group===gr&&g.l>=t); if(!list.length) return;
     h+=`<section class="grp" id="g-${gr.replace(/\W+/g,"-")}"><h2 class="part">${esc(gr)}</h2>${list.map(g=>`<article class="gc" id="p-${g.id}" data-s="${esc((g.pat+" "+g.mean+" "+g.form+" "+g.ex.map(e=>plainOf(e.n)+kanaOf(e.n)+romLine(e.n)+e.en).join(" ")).toLowerCase())}">
