@@ -100,6 +100,7 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 <script>
 const D = __DATA__;
 const KSET=new Set(__KANJI_SET__);
+const KANA_WORDS=__KANA_WORDS__;
 const linkK=html=>html.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=__FROM__#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c)).join("");
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let state={tier:"4",romaji:"on",hide:"none"};
@@ -135,6 +136,7 @@ function render(){
   main.innerHTML=h+`<div class="noresult" id="noresult">Nothing matches that. Try kana, rōmaji or an English word.</div>`;
   document.getElementById("nav").innerHTML=groups.filter(g=>document.getElementById("g-"+g[0])).map(([id,jp,en])=>`<a href="#g-${id}"><span class="j">${esc(jp)}</span>${esc(en)}</a>`).join("");
   apply(); doSearch();
+  linkKanaWords(document.querySelectorAll(".ex .j"),KANA_WORDS,"./","__FROM__");
 }
 function apply(){
   document.body.classList.toggle("no-romaji",state.romaji==="off");
@@ -170,9 +172,9 @@ initReturnLinks("__FROM__-return",".wc","data-w","iflash");
     window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12); el.classList.remove("iflash"); void el.offsetWidth; el.classList.add("iflash"); };
   go(); setTimeout(go,150);
   const src=(location.search.match(/[?&]from=(\w+)/)||[])[1];
-  const SRC={pb:"← Back to the phrasebook",sb:"← Back to the sentence"}[src];
+  const SRC={pb:"← Back to the phrasebook",sb:"← Back to the sentence",gr:"← Back to grammar",st:"← Back to the situation",km:"← Back to the kanji deck",kw:"← Back to kana words",kt:"← Back to katakana words"}[src];
   if(SRC){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=SRC; document.body.appendChild(b);
-    b.onclick=()=>{ if(history.length>1) history.back(); else location.href=src==="pb"?"../words/phrasebook.html":"../words/sentence-builder.html"; }; }
+    b.onclick=()=>{ if(history.length>1) history.back(); else location.href={pb:"../words/phrasebook.html",sb:"../words/sentence-builder.html",gr:"../words/grammar.html",st:"../kanji/kanji-by-situation.html",km:"../kanji/master-kanji-shapes.html",kw:"kana-words.html",kt:"katakana-words.html"}[src]||"../index.html"; }; }
 })();
 </script>
 </body>

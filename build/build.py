@@ -338,7 +338,7 @@ def kanji_sentences(limit=3):
     return {k: [dict(r, lv=lvl) for lvl, _, r in sorted(v, key=lambda x: (-x[0], x[1]))[:limit]] for k, v in out.items()}
 
 write("kanji/master-kanji-shapes.html",
-      fill("master.html", DATA=dump({"K": kanji["K"], "CH": kanji["CH"], "LV": kanji["LV"], "W": words, "P": kanji["P"], "S": kanji_sentences()})))
+      fill("master.html", KANA_WORDS=KANA_WORDS, DATA=dump({"K": kanji["K"], "CH": kanji["CH"], "LV": kanji["LV"], "W": words, "P": kanji["P"], "S": kanji_sentences()})))
 
 # ---------------------------------------------------------------- kanji by situation
 sit = load("situation.json")
@@ -353,7 +353,7 @@ for topic, sents in EXTRA.items():
 K = {r["k"]: r for t in topics for g in t["groups"] for r in g["rows"]}
 W = {k: words_for(k) for k in K if words_for(k)}
 write("kanji/kanji-by-situation.html",
-      fill("situation.html", DATA=dump({"T": topics, "K": K, "W": W, "LV": kanji["LV"], "apx": sit["apx"], "lede": sit["lede"]})))
+      fill("situation.html", KANA_WORDS=KANA_WORDS, DATA=dump({"T": topics, "K": K, "W": W, "LV": kanji["LV"], "apx": sit["apx"], "lede": sit["lede"]})))
 
 # ---------------------------------------------------------------- phrasebook
 chapters = load("phrasebook.json")
@@ -400,17 +400,17 @@ write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
 
 # ---------------------------------------------------------------- kana
 write("kana/kana-sounds.html", fill("kana-sounds.html", KANJI_SET=KANJI_SET))
-write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words("kana-words.json")), KANJI_SET=KANJI_SET,
+write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words("kana-words.json")), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS,
       TITLE="Kana words: the Japanese you write without kanji", H1="かなの言葉", STORE="kana-words", FROM="kw",
       INTRO="The words you'll write in hiragana, not kanji: greetings, question words, pointing words, the little words that link sentences, adverbs, sound words, and everyday nouns and verbs. About 425 words from N5 to N2, grouped by what you use them for, each with a real example sentence where there is one. For loanwords, see <a href=\"katakana-words.html\">katakana words</a>."))
-write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("katakana-words.json")), KANJI_SET=KANJI_SET,
+write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("katakana-words.json")), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS,
       TITLE="Katakana words: loanwords by topic", H1="カタカナの言葉", STORE="katakana-words", FROM="kt",
       INTRO="340 loanwords from N5 to N2, grouped by topic, from コーヒー to パスポート. Red notes flag the ones that don't mean what English speakers expect (マンション, コンセント, スマート) and the ones borrowed from other languages (パン, アルバイト). Each has a real example sentence where there is one. For words written in hiragana, see <a href=\"kana-words.html\">kana words</a>."))
 # ---------------------------------------------------------------- grammar
 _grammar = load("grammar.json")
 for _g in _grammar:
     _g["ex"] = [mark(e) for e in _g["ex"]]
-write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET))
+write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 
 # ---------------------------------------------------------------- offline support
 import hashlib

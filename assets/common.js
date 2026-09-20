@@ -237,7 +237,7 @@ function linkKanaWords(roots,words,base,from){
     return true;
   };
   [].forEach.call(roots,root=>{
-    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest("rt,a,button,.slot")?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest("rt,a,button,.slot,mark")?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
     const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach(n=>{
       const t=n.nodeValue; let m, last=0, out=[]; re.lastIndex=0;

@@ -290,6 +290,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 
 
 const D = __DATA__;
+const KANA_WORDS=__KANA_WORDS__;
 const K = D.K, CH = D.CH, LV = D.LV;
 // ---------- helpers ----------
 const BASE={あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",や:"ya",ゆ:"yu",よ:"yo",ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po"};
@@ -625,6 +626,12 @@ main.addEventListener("keydown",e=>{const h=e.target.closest(".hideable");if(h&&
 function applyBlocks(){ const on=blocksOn(); document.body.classList.toggle("jb-on",on); document.querySelectorAll("[data-jb]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.jb==="on")===on)); }
 document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.dataset.jb==="on"); applyBlocks(); });
 applyBlocks();   // grammar colours: one setting shared with every page that shows sentences
+// kana words in the example sentences link to the kana word pages; cards render lazily, so watch for new ones
+(function(){ let t=null;
+  const run=()=>linkKanaWords(document.querySelectorAll(".ksent .kj"),KANA_WORDS,"../kana/","km");
+  new MutationObserver(()=>{ clearTimeout(t); t=setTimeout(run,60); }).observe(main,{childList:true,subtree:true});
+  run();
+})();
 initParticlePopup();
 if(state.mode==="cards") resetDeck(false);
 render();
@@ -632,7 +639,7 @@ render();
 (function(){
   const m=location.hash.match(/^#k-(.+)$/); if(!m) return;
   const k=decodeURIComponent(m[1]); const src=(location.search.match(/[?&]from=(\w+)/)||[])[1]; const fromSB=!!src;
-  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"],gr:["← Back to grammar","../words/grammar.html"],kt:["← Back to katakana words","../kana/katakana-words.html"],ks:["← Back to kana sounds","../kana/kana-sounds.html"]}[src]||["← Back","../index.html"];
+  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"],gr:["← Back to grammar","../words/grammar.html"],kt:["← Back to katakana words","../kana/katakana-words.html"],ks:["← Back to kana sounds","../kana/kana-sounds.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src]||["← Back","../index.html"];
   setTimeout(()=>{
     jumpTo(k,null,null);
     if(!fromSB) return;

@@ -118,6 +118,7 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 <script>
 const D = __DATA__;
 const KSET=new Set(__KANJI_SET__);
+const KANA_WORDS=__KANA_WORDS__;
 const esc=jpEsc;
 const NOTE=/([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}/g;
 const kanaOf=s=>s.replace(NOTE,"$2"), plainOf=s=>s.replace(NOTE,"$1");
@@ -140,6 +141,7 @@ function render(){
   document.getElementById("main").innerHTML=h+`<div class="noresult" id="noresult">Nothing matches that.</div>`;
   document.getElementById("nav").innerHTML=groups.filter(gr=>document.getElementById("g-"+gr.replace(/\W+/g,"-"))).map(gr=>`<a href="#g-${gr.replace(/\W+/g,"-")}">${esc(gr)}</a>`).join("");
   apply(); doSearch();
+  linkKanaWords(document.querySelectorAll(".gx .j"),KANA_WORDS,"../kana/","gr");
 }
 function apply(){
   document.body.classList.toggle("no-romaji",state.romaji==="off");
