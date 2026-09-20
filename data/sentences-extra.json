@@ -1167,5 +1167,369 @@
   "n": "りんご を いくつ 買{か}いますか",
   "en": "How many apples will you buy?",
   "why": ""
+ },
+ {
+  "id": "n167",
+  "topic": "t5",
+  "n": "次{つぎ} の 駅{えき} で 降{お}ります",
+  "en": "I'm getting off at the next station",
+  "why": ""
+ },
+ {
+  "id": "n168",
+  "topic": "t5",
+  "n": "この 道{みち} を まっすぐ 進{すす}んで ください",
+  "en": "Please go straight along this road",
+  "why": ""
+ },
+ {
+  "id": "n169",
+  "topic": "t5",
+  "n": "電車{でんしゃ} が 遅{おく}れて いる そう です",
+  "en": "Apparently the train is delayed",
+  "why": ""
+ },
+ {
+  "id": "n170",
+  "topic": "t5",
+  "n": "空港{くうこう} まで 荷物{にもつ} を 送{おく}りたい です",
+  "en": "I'd like to send my luggage to the airport",
+  "why": ""
+ },
+ {
+  "id": "n171",
+  "topic": "t5",
+  "n": "乗{の}り換{か}え は どこ ですか",
+  "en": "Where do I change trains?",
+  "why": ""
+ },
+ {
+  "id": "n172",
+  "topic": "t5",
+  "n": "終点{しゅうてん} まで 行{い}きます",
+  "en": "I'm going to the last stop",
+  "why": ""
+ },
+ {
+  "id": "n173",
+  "topic": "t4",
+  "n": "昨日{きのう} から 熱{ねつ} が 続{つづ}いて います",
+  "en": "I've had a fever since yesterday",
+  "why": ""
+ },
+ {
+  "id": "n174",
+  "topic": "t4",
+  "n": "この 薬{くすり} は 一日{いちにち} 三回{さんかい} 飲{の}んで ください",
+  "en": "Take this medicine three times a day",
+  "why": ""
+ },
+ {
+  "id": "n175",
+  "topic": "t4",
+  "n": "足{あし} を 怪我{けが} しました",
+  "en": "I've hurt my leg",
+  "why": ""
+ },
+ {
+  "id": "n176",
+  "topic": "t4",
+  "n": "最近{さいきん} よく 眠{ねむ}れません",
+  "en": "I haven't been sleeping well lately",
+  "why": ""
+ },
+ {
+  "id": "n177",
+  "topic": "t4",
+  "n": "病院{びょういん} の 予約{よやく} を 取{と}りたい です",
+  "en": "I'd like to make a hospital appointment",
+  "why": ""
+ },
+ {
+  "id": "n178",
+  "topic": "t3",
+  "n": "この シャツ を 試着{しちゃく} して も いい ですか",
+  "en": "May I try this shirt on?",
+  "why": ""
+ },
+ {
+  "id": "n179",
+  "topic": "t3",
+  "n": "全部{ぜんぶ} で 三千円{さんぜんえん} に なります",
+  "en": "That comes to 3,000 yen altogether",
+  "why": ""
+ },
+ {
+  "id": "n180",
+  "topic": "t3",
+  "n": "袋{ふくろ} は 要{い}りません",
+  "en": "I don't need a bag",
+  "why": ""
+ },
+ {
+  "id": "n181",
+  "topic": "t3",
+  "n": "この 値段{ねだん} は 税込{ぜいこ}み ですか",
+  "en": "Does this price include tax?",
+  "why": ""
+ },
+ {
+  "id": "n182",
+  "topic": "t3",
+  "n": "返品{へんぴん} できますか",
+  "en": "Can I return this?",
+  "why": ""
+ },
+ {
+  "id": "n183",
+  "topic": "t1",
+  "n": "席{せき} を 予約{よやく} して います",
+  "en": "I have a table booked",
+  "why": ""
+ },
+ {
+  "id": "n184",
+  "topic": "t1",
+  "n": "辛{から}い 料理{りょうり} は 苦手{にがて} です",
+  "en": "I'm not good with spicy food",
+  "why": ""
+ },
+ {
+  "id": "n185",
+  "topic": "t1",
+  "n": "お湯{ゆ} を 一杯{いっぱい} ください",
+  "en": "A cup of hot water, please",
+  "why": ""
+ },
+ {
+  "id": "n186",
+  "topic": "t1",
+  "n": "この 店{みせ} は 魚{さかな} が 新鮮{しんせん} です",
+  "en": "The fish here is fresh",
+  "why": ""
+ },
+ {
+  "id": "n187",
+  "topic": "t7",
+  "n": "会議{かいぎ} の 資料{しりょう} を 準備{じゅんび} しました",
+  "en": "I've prepared the documents for the meeting",
+  "why": ""
+ },
+ {
+  "id": "n188",
+  "topic": "t7",
+  "n": "来週{らいしゅう} までに 報告{ほうこく} を 出{だ}して ください",
+  "en": "Please hand in the report by next week",
+  "why": ""
+ },
+ {
+  "id": "n189",
+  "topic": "t7",
+  "n": "この 問題{もんだい} に ついて 相談{そうだん} したい です",
+  "en": "I'd like to discuss this problem",
+  "why": ""
+ },
+ {
+  "id": "n190",
+  "topic": "t7",
+  "n": "試験{しけん} の 結果{けっか} は 来月{らいげつ} 分{わ}かります",
+  "en": "The exam results come out next month",
+  "why": ""
+ },
+ {
+  "id": "n191",
+  "topic": "t7",
+  "n": "毎日{まいにち} 三十分{さんじゅっぷん} 練習{れんしゅう} して います",
+  "en": "I practise for thirty minutes every day",
+  "why": ""
+ },
+ {
+  "id": "n192",
+  "topic": "t7",
+  "n": "新{あたら}しい 仕事{しごと} に 慣{な}れました",
+  "en": "I've got used to the new job",
+  "why": ""
+ },
+ {
+  "id": "n193",
+  "topic": "t8",
+  "n": "妹{いもうと} は 来年{らいねん} 結婚{けっこん} します",
+  "en": "My younger sister is getting married next year",
+  "why": ""
+ },
+ {
+  "id": "n194",
+  "topic": "t8",
+  "n": "祖父{そふ} は 九十歳{きゅうじゅっさい} です",
+  "en": "My grandfather is ninety",
+  "why": ""
+ },
+ {
+  "id": "n195",
+  "topic": "t8",
+  "n": "家族{かぞく} に 手紙{てがみ} を 書{か}きました",
+  "en": "I wrote a letter to my family",
+  "why": ""
+ },
+ {
+  "id": "n196",
+  "topic": "t8",
+  "n": "夫{おっと} は 料理{りょうり} が 得意{とくい} です",
+  "en": "My husband is good at cooking",
+  "why": ""
+ },
+ {
+  "id": "n197",
+  "topic": "t9",
+  "n": "その 意見{いけん} に 賛成{さんせい} です",
+  "en": "I agree with that opinion",
+  "why": ""
+ },
+ {
+  "id": "n198",
+  "topic": "t9",
+  "n": "残念{ざんねん} ですが、 行{い}けません",
+  "en": "Unfortunately, I can't go",
+  "why": ""
+ },
+ {
+  "id": "n199",
+  "topic": "t9",
+  "n": "心配{しんぱい} しないで ください",
+  "en": "Please don't worry",
+  "why": ""
+ },
+ {
+  "id": "n200",
+  "topic": "t9",
+  "n": "本当{ほんとう} に 感謝{かんしゃ} して います",
+  "en": "I'm truly grateful",
+  "why": ""
+ },
+ {
+  "id": "n201",
+  "topic": "t9",
+  "n": "少{すこ}し 考{かんが}えさせて ください",
+  "en": "Let me think about it a little",
+  "why": ""
+ },
+ {
+  "id": "n202",
+  "topic": "t10",
+  "n": "約束{やくそく} の 時間{じかん} に 間{ま}に合{あ}いました",
+  "en": "I made it in time for our appointment",
+  "why": ""
+ },
+ {
+  "id": "n203",
+  "topic": "t10",
+  "n": "毎年{まいとし} 夏{なつ} に 実家{じっか} へ 帰{かえ}ります",
+  "en": "I go back to my parents' home every summer",
+  "why": ""
+ },
+ {
+  "id": "n204",
+  "topic": "t10",
+  "n": "最後{さいご} の 電車{でんしゃ} は 何時{なんじ} ですか",
+  "en": "What time is the last train?",
+  "why": ""
+ },
+ {
+  "id": "n205",
+  "topic": "t11",
+  "n": "台風{たいふう} が 近{ちか}づいて います",
+  "en": "A typhoon is approaching",
+  "why": ""
+ },
+ {
+  "id": "n206",
+  "topic": "t11",
+  "n": "今日{きょう} は 湿度{しつど} が 高{たか}い です",
+  "en": "It's humid today",
+  "why": ""
+ },
+ {
+  "id": "n207",
+  "topic": "t11",
+  "n": "山{やま} の 上{うえ} から 景色{けしき} が よく 見{み}えます",
+  "en": "You can see the view well from the top of the mountain",
+  "why": ""
+ },
+ {
+  "id": "n208",
+  "topic": "t11",
+  "n": "地震{じしん} の とき は 机{つくえ} の 下{した} に 入{はい}って ください",
+  "en": "In an earthquake, get under a desk",
+  "why": ""
+ },
+ {
+  "id": "n209",
+  "topic": "t12",
+  "n": "区役所{くやくしょ} で 住所{じゅうしょ} を 登録{とうろく} しました",
+  "en": "I registered my address at the ward office",
+  "why": ""
+ },
+ {
+  "id": "n210",
+  "topic": "t12",
+  "n": "この 近{ちか}く に 郵便局{ゆうびんきょく} は ありますか",
+  "en": "Is there a post office near here?",
+  "why": ""
+ },
+ {
+  "id": "n211",
+  "topic": "t12",
+  "n": "美術館{びじゅつかん} は 月曜日{げつようび} が 休{やす}み です",
+  "en": "The art museum is closed on Mondays",
+  "why": ""
+ },
+ {
+  "id": "n212",
+  "topic": "t12",
+  "n": "交番{こうばん} で 道{みち} を 聞{き}きました",
+  "en": "I asked the way at the police box",
+  "why": ""
+ },
+ {
+  "id": "n213",
+  "topic": "t6",
+  "n": "部屋{へや} を 掃除{そうじ} しなければ なりません",
+  "en": "I have to clean my room",
+  "why": ""
+ },
+ {
+  "id": "n214",
+  "topic": "t6",
+  "n": "洗濯物{せんたくもの} を 干{ほ}して います",
+  "en": "I'm hanging out the washing",
+  "why": ""
+ },
+ {
+  "id": "n215",
+  "topic": "t6",
+  "n": "ごみ を 分{わ}けて 捨{す}てて ください",
+  "en": "Please separate the rubbish before throwing it away",
+  "why": ""
+ },
+ {
+  "id": "n216",
+  "topic": "t13",
+  "n": "この 仕事{しごと} は 経験{けいけん} が 必要{ひつよう} です",
+  "en": "This job needs experience",
+  "why": ""
+ },
+ {
+  "id": "n217",
+  "topic": "t13",
+  "n": "自分{じぶん} で 決{き}めて ください",
+  "en": "Please decide for yourself",
+  "why": ""
+ },
+ {
+  "id": "n218",
+  "topic": "t13",
+  "n": "それ は 私{わたし} の 責任{せきにん} です",
+  "en": "That's my responsibility",
+  "why": ""
  }
 ]

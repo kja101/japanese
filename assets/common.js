@@ -214,3 +214,15 @@ function initReturnLinks(storeKey,itemSel,idAttr,flashClass){
       else window.scrollTo(0,ret.y); },40);
     try{ sessionStorage.removeItem(storeKey); }catch(e){} },{once:true});
 }
+
+
+// romaji for one space-separated token of a phrase: particles は/を/へ as wa/o/e, a trailing か split off
+const JP_PARTICLE={"は":"wa","を":"o","へ":"e"}, JP_SPECIAL={"こんにちは":"konnichiwa","こんばんは":"konbanwa"};
+function jpRomajiToken(t){ if(JP_PARTICLE[t]) return JP_PARTICLE[t]; if(JP_SPECIAL[t]) return JP_SPECIAL[t];
+  if(t.length>2&&t.endsWith("か")&&/[すんた]/.test(t[t.length-2])) return krRomaji(t.slice(0,-1))+" ka"; return krRomaji(t); }
+
+// ---------- offline support: register the service worker at the site root ----------
+(function(){ if(!("serviceWorker" in navigator)||location.protocol==="file:") return;
+  const me=document.currentScript&&document.currentScript.src; if(!me) return;
+  const root=me.replace(/assets\/common\.js.*$/,"");
+  window.addEventListener("load",()=>navigator.serviceWorker.register(root+"sw.js").catch(()=>{})); })();

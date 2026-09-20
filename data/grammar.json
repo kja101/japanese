@@ -1,0 +1,659 @@
+[
+ {
+  "id": "desu",
+  "l": 5,
+  "group": "Basics",
+  "pat": "～です / ～だ",
+  "mean": "is, am, are",
+  "form": "Noun or な-adjective + です (polite) or だ (plain)",
+  "note": "です is the polite ending you'll use most. Its past is でした and its negative is じゃないです or ではありません.",
+  "ex": [
+   {
+    "n": "私{わたし} は 学生{がくせい} です",
+    "en": "I'm a student"
+   },
+   {
+    "n": "今日{きょう} は 休{やす}み でした",
+    "en": "Today was a day off"
+   },
+   {
+    "n": "これ は 私{わたし} の 本{ほん} じゃないです",
+    "en": "This isn't my book"
+   }
+  ]
+ },
+ {
+  "id": "masu",
+  "l": 5,
+  "group": "Basics",
+  "pat": "～ます",
+  "mean": "polite verb ending",
+  "form": "Verb stem + ます: 食{た}べる → 食{た}べます, 飲{の}む → 飲{の}みます",
+  "note": "The ます form is the safe, polite way to use any verb. Past: ～ました. Negative: ～ません. Past negative: ～ませんでした.",
+  "ex": [
+   {
+    "n": "毎朝{まいあさ} コーヒー を 飲{の}みます",
+    "en": "I drink coffee every morning"
+   },
+   {
+    "n": "昨日{きのう} 映画{えいが} を 見{み}ました",
+    "en": "I watched a film yesterday"
+   },
+   {
+    "n": "肉{にく} は 食{た}べません",
+    "en": "I don't eat meat"
+   }
+  ]
+ },
+ {
+  "id": "aru-iru",
+  "l": 5,
+  "group": "Basics",
+  "pat": "～が あります / います",
+  "mean": "there is, to have",
+  "form": "Thing + が あります; person or animal + が います",
+  "note": "あります is for things and plants, います for people and animals.",
+  "ex": [
+   {
+    "n": "駅{えき} の 前{まえ} に 銀行{ぎんこう} が あります",
+    "en": "There's a bank in front of the station"
+   },
+   {
+    "n": "兄弟{きょうだい} が 二人{ふたり} います",
+    "en": "I have two brothers and sisters"
+   }
+  ]
+ },
+ {
+  "id": "adj",
+  "l": 5,
+  "group": "Basics",
+  "pat": "い- and な-adjectives",
+  "mean": "describing words",
+  "form": "い-adjective: 高{たか}い → 高{たか}くない (not), 高{たか}かった (was). な-adjective: 静{しず}か → 静{しず}か じゃない, 静{しず}か だった; 静{しず}か な 部屋{へや} before a noun",
+  "note": "いい is irregular: よくない, よかった.",
+  "ex": [
+   {
+    "n": "この 部屋{へや} は 広{ひろ}くない です",
+    "en": "This room isn't big"
+   },
+   {
+    "n": "旅行{りょこう} は 楽{たの}しかった です",
+    "en": "The trip was fun"
+   },
+   {
+    "n": "静{しず}か な 町{まち} が 好{す}き です",
+    "en": "I like quiet towns"
+   }
+  ]
+ },
+ {
+  "id": "no",
+  "l": 5,
+  "group": "Basics",
+  "pat": "AのB",
+  "mean": "B of A, A's B",
+  "form": "Noun + の + noun",
+  "note": "の joins two nouns; the first one describes or owns the second.",
+  "ex": [
+   {
+    "n": "これ は 母{はは} の かばん です",
+    "en": "This is my mother's bag"
+   },
+   {
+    "n": "日本語{にほんご} の 先生{せんせい} は やさしい です",
+    "en": "The Japanese teacher is kind"
+   }
+  ]
+ },
+ {
+  "id": "mashou",
+  "l": 5,
+  "group": "Asking and offering",
+  "pat": "～ましょう / ～ましょうか",
+  "mean": "let's …, shall I …?",
+  "form": "Verb stem + ましょう; add か to offer or suggest",
+  "note": "～ましょうか on its own offers help: 持{も}ちましょうか (shall I carry it?).",
+  "ex": [
+   {
+    "n": "一緒{いっしょ} に 行{い}きましょう",
+    "en": "Let's go together"
+   },
+   {
+    "n": "窓{まど} を 開{あ}けましょうか",
+    "en": "Shall I open the window?"
+   }
+  ]
+ },
+ {
+  "id": "masenka",
+  "l": 5,
+  "group": "Asking and offering",
+  "pat": "～ませんか",
+  "mean": "won't you …? (an invitation)",
+  "form": "Verb stem + ませんか",
+  "note": "A softer invitation than ～ましょう: it leaves room to say no.",
+  "ex": [
+   {
+    "n": "週末{しゅうまつ} 映画{えいが} を 見{み}ませんか",
+    "en": "Would you like to see a film at the weekend?"
+   }
+  ]
+ },
+ {
+  "id": "tai",
+  "l": 5,
+  "group": "Wanting",
+  "pat": "～たい",
+  "mean": "want to …",
+  "form": "Verb stem + たい: 行{い}く → 行{い}きたい",
+  "note": "～たい works like an い-adjective: 行{い}きたくない (don't want to go), 行{い}きたかった (wanted to go). Use it about yourself; for others say ～たがっています.",
+  "ex": [
+   {
+    "n": "日本{にほん} へ 行{い}きたい です",
+    "en": "I want to go to Japan"
+   },
+   {
+    "n": "今日{きょう} は 何{なに} も 食{た}べたくない です",
+    "en": "I don't want to eat anything today"
+   }
+  ]
+ },
+ {
+  "id": "hoshii",
+  "l": 5,
+  "group": "Wanting",
+  "pat": "～が ほしい",
+  "mean": "want (a thing)",
+  "form": "Noun + が ほしい です",
+  "note": "For things. For actions use ～たい.",
+  "ex": [
+   {
+    "n": "新{あたら}しい 靴{くつ} が ほしい です",
+    "en": "I want new shoes"
+   }
+  ]
+ },
+ {
+  "id": "ni-iku",
+  "l": 5,
+  "group": "Wanting",
+  "pat": "～に 行{い}く",
+  "mean": "go (somewhere) to do …",
+  "form": "Verb stem + に 行{い}く / 来{く}る / 帰{かえ}る",
+  "note": "The に marks the purpose of the trip.",
+  "ex": [
+   {
+    "n": "デパート へ 服{ふく} を 買{か}い に 行{い}きます",
+    "en": "I'm going to the department store to buy clothes"
+   }
+  ]
+ },
+ {
+  "id": "tekudasai",
+  "l": 5,
+  "group": "Asking and offering",
+  "pat": "～て ください",
+  "mean": "please (do)",
+  "form": "て-form + ください",
+  "note": "The standard polite request. Add もう 少{すこ}し or ゆっくり to soften or slow it down.",
+  "ex": [
+   {
+    "n": "ゆっくり 話{はな}して ください",
+    "en": "Please speak slowly"
+   },
+   {
+    "n": "ここ に 名前{なまえ} を 書{か}いて ください",
+    "en": "Please write your name here"
+   }
+  ]
+ },
+ {
+  "id": "teiru",
+  "l": 5,
+  "group": "Actions",
+  "pat": "～て いる",
+  "mean": "is …ing; is in a state",
+  "form": "て-form + いる (います)",
+  "note": "Two uses: an action going on now (食{た}べています, is eating), or a state that lasts (結婚{けっこん}しています, is married; 住{す}んでいます, lives).",
+  "ex": [
+   {
+    "n": "今{いま} 雨{あめ} が 降{ふ}って います",
+    "en": "It's raining now"
+   },
+   {
+    "n": "東京{とうきょう} に 住{す}んで います",
+    "en": "I live in Tokyo"
+   }
+  ]
+ },
+ {
+  "id": "temoii",
+  "l": 5,
+  "group": "Permission",
+  "pat": "～ても いい",
+  "mean": "may, it's all right to …",
+  "form": "て-form + も いい です(か)",
+  "note": "Ask permission with ～ても いい ですか; answer はい、どうぞ.",
+  "ex": [
+   {
+    "n": "写真{しゃしん} を 撮{と}っても いい ですか",
+    "en": "May I take a photo?"
+   }
+  ]
+ },
+ {
+  "id": "tewaikenai",
+  "l": 5,
+  "group": "Permission",
+  "pat": "～ては いけない",
+  "mean": "must not …",
+  "form": "て-form + は いけません",
+  "note": "Common on signs and from staff. The casual form is ～ちゃ だめ.",
+  "ex": [
+   {
+    "n": "ここ で たばこ を 吸{す}っては いけません",
+    "en": "You mustn't smoke here"
+   }
+  ]
+ },
+ {
+  "id": "kara",
+  "l": 5,
+  "group": "Joining sentences",
+  "pat": "～から",
+  "mean": "because, so",
+  "form": "Reason + から, result",
+  "note": "The reason comes first, the opposite of English \"because\".",
+  "ex": [
+   {
+    "n": "雨{あめ} です から、家{いえ} に います",
+    "en": "It's raining, so I'm staying at home"
+   }
+  ]
+ },
+ {
+  "id": "ga-but",
+  "l": 5,
+  "group": "Joining sentences",
+  "pat": "～が",
+  "mean": "but",
+  "form": "Sentence + が, sentence",
+  "note": "Polite and a little formal; でも starts a new sentence instead.",
+  "ex": [
+   {
+    "n": "高{たか}い です が、おいしい です",
+    "en": "It's expensive, but delicious"
+   }
+  ]
+ },
+ {
+  "id": "mae-ato",
+  "l": 5,
+  "group": "Time",
+  "pat": "～前{まえ} に / ～後{あと} で",
+  "mean": "before …, after …",
+  "form": "Dictionary form + 前{まえ} に; た-form + 後{あと} で; noun + の 前{まえ} に / の 後{あと} で",
+  "note": "Note the verb forms: before takes the dictionary form, after takes the past.",
+  "ex": [
+   {
+    "n": "寝{ね}る 前{まえ} に 本{ほん} を 読{よ}みます",
+    "en": "I read before I go to sleep"
+   },
+   {
+    "n": "仕事{しごと} の 後{あと} で 会{あ}いましょう",
+    "en": "Let's meet after work"
+   }
+  ]
+ },
+ {
+  "id": "toki",
+  "l": 5,
+  "group": "Time",
+  "pat": "～とき",
+  "mean": "when …",
+  "form": "Plain form or noun + の + とき",
+  "note": "A time clause that sits before the main sentence.",
+  "ex": [
+   {
+    "n": "子供{こども} の とき、ロンドン に 住{す}んで いました",
+    "en": "When I was a child, I lived in London"
+   }
+  ]
+ },
+ {
+  "id": "hikaku",
+  "l": 5,
+  "group": "Comparing",
+  "pat": "AよりBの方{ほう}が",
+  "mean": "B is more … than A",
+  "form": "A より B の 方{ほう} が + adjective",
+  "note": "一番{いちばん} makes the top of the scale: 何{なに} が 一番{いちばん} 好{す}き ですか.",
+  "ex": [
+   {
+    "n": "電車{でんしゃ} は バス より 速{はや}い です",
+    "en": "Trains are faster than buses"
+   },
+   {
+    "n": "夏{なつ} より 冬{ふゆ} の 方{ほう} が 好{す}き です",
+    "en": "I prefer winter to summer"
+   }
+  ]
+ },
+ {
+  "id": "takotogaaru",
+  "l": 4,
+  "group": "Experience",
+  "pat": "～た ことが ある",
+  "mean": "have (ever) done",
+  "form": "た-form + ことが あります",
+  "note": "Talks about experience, not a specific time.",
+  "ex": [
+   {
+    "n": "日本{にほん} へ 行{い}った ことが あります か",
+    "en": "Have you ever been to Japan?"
+   }
+  ]
+ },
+ {
+  "id": "tari",
+  "l": 4,
+  "group": "Actions",
+  "pat": "～たり ～たり する",
+  "mean": "do things like … and …",
+  "form": "た-form + り, た-form + り + する",
+  "note": "Gives a couple of examples from a longer list.",
+  "ex": [
+   {
+    "n": "週末{しゅうまつ} は 本{ほん} を 読{よ}んだり、映画{えいが} を 見{み}たり します",
+    "en": "At weekends I do things like read and watch films"
+   }
+  ]
+ },
+ {
+  "id": "potential",
+  "l": 4,
+  "group": "Ability",
+  "pat": "～られる / ～える (can)",
+  "mean": "can …",
+  "form": "る-verbs: 食{た}べる → 食{た}べられる. う-verbs: 書{か}く → 書{か}ける. する → できる, 来{く}る → 来{こ}られる",
+  "note": "The thing you can do usually takes が: 日本語{にほんご} が 話{はな}せます.",
+  "ex": [
+   {
+    "n": "漢字{かんじ} が 少{すこ}し 読{よ}めます",
+    "en": "I can read a little kanji"
+   },
+   {
+    "n": "辛{から}い 物{もの} は 食{た}べられません",
+    "en": "I can't eat spicy food"
+   }
+  ]
+ },
+ {
+  "id": "kotogadekiru",
+  "l": 4,
+  "group": "Ability",
+  "pat": "～ことが できる",
+  "mean": "can, be able to",
+  "form": "Dictionary form + ことが できる",
+  "note": "More formal than the potential form, with the same meaning.",
+  "ex": [
+   {
+    "n": "ここ で 泳{およ}ぐ ことが できます",
+    "en": "You can swim here"
+   }
+  ]
+ },
+ {
+  "id": "nakereba",
+  "l": 4,
+  "group": "Obligation",
+  "pat": "～なければ ならない",
+  "mean": "must, have to",
+  "form": "ない-form minus い + ければ なりません",
+  "note": "In speech it shortens to ～なきゃ.",
+  "ex": [
+   {
+    "n": "明日{あした} は 早{はや}く 起{お}きなければ なりません",
+    "en": "I have to get up early tomorrow"
+   }
+  ]
+ },
+ {
+  "id": "nakutemoii",
+  "l": 4,
+  "group": "Obligation",
+  "pat": "～なくても いい",
+  "mean": "don't have to",
+  "form": "ない-form minus い + くても いい です",
+  "note": "The opposite of ～なければ ならない.",
+  "ex": [
+   {
+    "n": "明日{あした} は 来{こ}なくても いい です",
+    "en": "You don't need to come tomorrow"
+   }
+  ]
+ },
+ {
+  "id": "tara",
+  "l": 4,
+  "group": "If and when",
+  "pat": "～たら",
+  "mean": "if, when",
+  "form": "た-form + ら: 雨{あめ} が 降{ふ}ったら",
+  "note": "The most flexible \"if\": it also means \"when this has happened\".",
+  "ex": [
+   {
+    "n": "駅{えき} に 着{つ}いたら、電話{でんわ} して ください",
+    "en": "Call me when you get to the station"
+   }
+  ]
+ },
+ {
+  "id": "ba",
+  "l": 4,
+  "group": "If and when",
+  "pat": "～ば",
+  "mean": "if",
+  "form": "う-verbs: 行{い}く → 行{い}けば. い-adjectives: 安{やす}い → 安{やす}ければ",
+  "note": "Stresses the condition: \"only if\".",
+  "ex": [
+   {
+    "n": "安{やす}ければ 買{か}います",
+    "en": "If it's cheap, I'll buy it"
+   }
+  ]
+ },
+ {
+  "id": "to-if",
+  "l": 4,
+  "group": "If and when",
+  "pat": "～と",
+  "mean": "whenever, if (always)",
+  "form": "Dictionary form + と",
+  "note": "For things that always follow: directions, machines, nature.",
+  "ex": [
+   {
+    "n": "この ボタン を 押{お}す と、ドア が 開{あ}きます",
+    "en": "Press this button and the door opens"
+   }
+  ]
+ },
+ {
+  "id": "tsumori",
+  "l": 4,
+  "group": "Plans",
+  "pat": "～つもり",
+  "mean": "intend to, plan to",
+  "form": "Dictionary form + つもり です",
+  "note": "予定{よてい} is for fixed arrangements; つもり is your own intention.",
+  "ex": [
+   {
+    "n": "来年{らいねん} 日本{にほん} で 働{はたら}く つもり です",
+    "en": "I'm planning to work in Japan next year"
+   }
+  ]
+ },
+ {
+  "id": "temiru",
+  "l": 4,
+  "group": "Actions",
+  "pat": "～て みる",
+  "mean": "try (doing)",
+  "form": "て-form + みる",
+  "note": "\"Try and see what it's like\", not \"attempt something hard\".",
+  "ex": [
+   {
+    "n": "この 料理{りょうり} を 食{た}べて みて ください",
+    "en": "Try this dish"
+   }
+  ]
+ },
+ {
+  "id": "teshimau",
+  "l": 4,
+  "group": "Actions",
+  "pat": "～て しまう",
+  "mean": "finish, or end up doing (by mistake)",
+  "form": "て-form + しまう",
+  "note": "Often carries regret. In speech it becomes ～ちゃう.",
+  "ex": [
+   {
+    "n": "電車{でんしゃ} に 傘{かさ} を 忘{わす}れて しまいました",
+    "en": "I went and left my umbrella on the train"
+   }
+  ]
+ },
+ {
+  "id": "teoku",
+  "l": 4,
+  "group": "Actions",
+  "pat": "～て おく",
+  "mean": "do in advance",
+  "form": "て-form + おく",
+  "note": "Prepares for later. In speech it becomes ～とく.",
+  "ex": [
+   {
+    "n": "ホテル を 予約{よやく} して おきました",
+    "en": "I booked the hotel in advance"
+   }
+  ]
+ },
+ {
+  "id": "nagara",
+  "l": 4,
+  "group": "Actions",
+  "pat": "～ながら",
+  "mean": "while …ing",
+  "form": "Verb stem + ながら",
+  "note": "Both actions by the same person; the main one comes last.",
+  "ex": [
+   {
+    "n": "音楽{おんがく} を 聞{き}きながら 勉強{べんきょう} します",
+    "en": "I study while listening to music"
+   }
+  ]
+ },
+ {
+  "id": "sugiru",
+  "l": 4,
+  "group": "Describing",
+  "pat": "～すぎる",
+  "mean": "too (much)",
+  "form": "Verb stem or adjective stem + すぎる: 高{たか}すぎる, 食{た}べすぎる",
+  "note": "",
+  "ex": [
+   {
+    "n": "この かばん は 高{たか}すぎます",
+    "en": "This bag is too expensive"
+   },
+   {
+    "n": "昨日{きのう} は 飲{の}みすぎました",
+    "en": "I drank too much yesterday"
+   }
+  ]
+ },
+ {
+  "id": "yasui",
+  "l": 4,
+  "group": "Describing",
+  "pat": "～やすい / ～にくい",
+  "mean": "easy to / hard to",
+  "form": "Verb stem + やすい / にくい",
+  "note": "They work like い-adjectives.",
+  "ex": [
+   {
+    "n": "この ペン は 書{か}きやすい です",
+    "en": "This pen is easy to write with"
+   }
+  ]
+ },
+ {
+  "id": "sou",
+  "l": 4,
+  "group": "Guessing",
+  "pat": "～そう",
+  "mean": "looks like, seems",
+  "form": "Adjective stem or verb stem + そう: おいしそう, 雨{あめ} が 降{ふ}りそう",
+  "note": "Based on what you see. いい → よさそう.",
+  "ex": [
+   {
+    "n": "この ケーキ は おいしそう です ね",
+    "en": "This cake looks delicious"
+   },
+   {
+    "n": "雨{あめ} が 降{ふ}りそう です",
+    "en": "It looks like rain"
+   }
+  ]
+ },
+ {
+  "id": "mitai",
+  "l": 4,
+  "group": "Guessing",
+  "pat": "～みたい / ～らしい",
+  "mean": "seems, apparently",
+  "form": "Plain form + みたい (casual) or らしい (from what you've heard)",
+  "note": "みたい also means \"like\": 夢{ゆめ} みたい (like a dream).",
+  "ex": [
+   {
+    "n": "田中{たなか}さん は 風邪{かぜ} を ひいた みたい です",
+    "en": "Mr Tanaka seems to have a cold"
+   }
+  ]
+ },
+ {
+  "id": "shi",
+  "l": 4,
+  "group": "Joining sentences",
+  "pat": "～し、～し",
+  "mean": "and what's more (giving reasons)",
+  "form": "Plain form + し",
+  "note": "Stacks up reasons.",
+  "ex": [
+   {
+    "n": "この 店{みせ} は 安{やす}い し、おいしい し、よく 来{き}ます",
+    "en": "This place is cheap and good, so I come here often"
+   }
+  ]
+ },
+ {
+  "id": "ageru",
+  "l": 4,
+  "group": "Giving and receiving",
+  "pat": "あげる / くれる / もらう",
+  "mean": "give / give (to me) / receive",
+  "form": "あげる: I give out. くれる: someone gives to me or my side. もらう: I receive",
+  "note": "With て-form they mean doing someone a favour: 教{おし}えて くれました (they kindly taught me).",
+  "ex": [
+   {
+    "n": "友達{ともだち} が 本{ほん} を くれました",
+    "en": "A friend gave me a book"
+   },
+   {
+    "n": "先生{せんせい} に 日本語{にほんご} を 教{おし}えて もらいました",
+    "en": "The teacher taught me Japanese (for me)"
+   }
+  ]
+ }
+]

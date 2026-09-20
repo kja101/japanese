@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>N5 and N4 grammar: the patterns that make sentences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F5F1;--sheet:#FFFFFF;--ink:#1D2433;--muted:#646B78;--rule:#DCDFE5;--seal:#B3261E;--seal-wash:#FBEDEC;--chip:#E7E9EF;--indigo:#2C3E73;--indigo-wash:#E9EDF7;
+  --rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;--en:"Source Sans 3","Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#15181F;--sheet:#1C2029;--ink:#E6E8EE;--muted:#9AA1AD;--rule:#2E3340;--seal:#F2837B;--seal-wash:#3A2224;--chip:#262B36;--indigo:#8FA6E8;--indigo-wash:#232B40;--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom,0px)}
+header.top{max-width:1000px;margin:0 auto;padding:calc(2.2rem + env(safe-area-inset-top,0px)) 1.25rem .8rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2.1rem,6.5vw,3.4rem);margin:0;line-height:1.15}
+.sub{margin:.6rem 0 0;color:var(--muted);max-width:66ch}
+.controls{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);padding-top:env(safe-area-inset-top,0px)}
+.controls-inner{max-width:1000px;margin:0 auto;padding:.6rem 1.25rem .4rem;display:flex;flex-wrap:wrap;gap:.5rem .7rem;align-items:center}
+.search{flex:1 1 220px;min-width:0;font:inherit;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;background:var(--sheet);color:var(--ink)}
+.segs{display:flex;flex-wrap:wrap;gap:.5rem .7rem}
+.seg{display:flex;background:var(--chip);border-radius:8px;padding:3px;align-items:center;flex:0 0 auto}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.9rem;padding:.3rem .6rem;border-radius:6px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);font-weight:600;box-shadow:0 0 0 1px var(--rule)}
+.seglab{font-size:.8rem;color:var(--muted);padding:0 .35rem 0 .45rem}
+nav.topics{max-width:1000px;margin:0 auto;padding:0 1.25rem .6rem;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+nav.topics a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.86rem;padding:.25rem .65rem;border:1px solid var(--rule);border-radius:999px;background:var(--sheet)}
+nav.topics a .j{font-family:var(--jp);margin-right:.3rem}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+main{max-width:1000px;margin:0 auto;padding:.5rem 1.25rem 4rem}
+h2.part{font-size:1.05rem;color:var(--muted);margin:2.2rem 0 0;font-weight:600}
+section.grp{margin:1.2rem 0 0;scroll-margin-top:150px}
+.ghead{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.9rem 1.1rem}
+.ghead h3{margin:0;font-size:1.25rem;display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap}
+.ghead h3 .jp{font-family:var(--jp);font-size:1.5rem}
+.ghead h3 small{font-weight:400;color:var(--muted);font-size:.9rem}
+.ghead p{margin:.3rem 0 0;max-width:72ch}
+.koso{border-collapse:collapse;margin:.7rem 0 .1rem;font-size:.95rem;width:100%;max-width:620px}
+.koso th,.koso td{border:1px solid var(--rule);padding:.3rem .45rem;text-align:center}
+.koso th{font-size:.78rem;color:var(--muted);font-weight:600}
+.koso td{font-family:var(--jp);font-size:1.05rem;white-space:nowrap}
+.koso-wrap{overflow-x:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:.6rem;margin-top:.6rem}
+.wc{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.7rem .9rem}
+.wh{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+.ww{font-family:var(--jp);font-size:1.6rem;line-height:1.25}
+.rj{font-style:italic;color:var(--muted);font-size:.9rem}
+.no-romaji .rj{display:none}
+.lvb{margin-left:auto;font-size:.7rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted)}
+.we{margin-top:.1rem}
+.ex{margin-top:.45rem;padding-top:.4rem;border-top:1px dashed var(--rule);font-size:.92rem}
+.ex .j{font-family:var(--jp);font-size:1.05rem;line-height:1.95}
+.ex .j rt{font-size:.5em}
+.ex mark{background:var(--seal-wash);color:inherit;border-radius:3px;padding:0 .1em}
+.ex .t{color:var(--muted)}
+.hide-en .wc:not(.shown) .we,.hide-en .wc:not(.shown) .ex .t{background:var(--chip);color:transparent;border-radius:3px}
+.hide-kana .wc:not(.shown) .ww,.hide-kana .wc:not(.shown) .rj{background:var(--chip);color:transparent;border-radius:3px}
+.hide-en .wc,.hide-kana .wc{cursor:pointer}
+a.kl{color:inherit;text-decoration:none;cursor:pointer}
+a.kl:hover{background:var(--indigo-wash);border-radius:2px}
+@keyframes iflash{0%{box-shadow:0 0 0 3px var(--seal)}100%{box-shadow:0 0 0 3px transparent}}
+.iflash{animation:iflash 2.4s ease-out}
+.noresult{display:none;text-align:center;color:var(--muted);padding:2rem}
+.noresult.show{display:block}
+body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
+.rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
+body:not(.no-rdcol) .rd .rb{text-decoration:underline 2px var(--rc);text-underline-offset:.22em;text-decoration-skip-ink:none}
+body:not(.no-rdcol) .rd-sp .rb{text-decoration-style:dotted}
+footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);font-size:.85rem}
+@media (max-width:640px){ .search{flex-basis:100%} .segs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%} .cards{grid-template-columns:1fr} section.grp{scroll-margin-top:170px} }
+
+.gc{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.9rem 1.05rem;margin-top:.6rem;scroll-margin-top:150px}
+.gh{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.gp{font-family:var(--jp);font-size:1.5rem;font-weight:600;line-height:1.5}
+.gp rt{font-size:.45em;font-weight:400}
+.gm{font-weight:600}
+.gf{margin:.4rem 0 0;font-size:.95rem}
+.gf b{font-size:.72rem;color:var(--seal);letter-spacing:.03em;margin-right:.4rem}
+.gf .j{font-family:var(--jp)}
+.gn{margin:.35rem 0 0;color:var(--muted);font-size:.93rem;max-width:70ch}
+.gx{list-style:none;margin:.5rem 0 0;padding:0;border-top:1px dashed var(--rule)}
+.gx li{padding:.45rem 0;border-bottom:1px dashed var(--rule)}
+.gx li:last-child{border-bottom:0}
+.gx .j{font-family:var(--jp);font-size:1.15rem;line-height:2}
+.gx .j rt{font-size:.5em}
+.gx .r{display:block;font-style:italic;color:var(--muted);font-size:.88rem}
+.no-romaji .gx .r{display:none}
+.gx .t{display:block}
+.hide-en .gx li:not(.shown) .t,.hide-en .gc:not(.shown) .gm{background:var(--chip);color:transparent;border-radius:3px}
+.hide-kana .gx li:not(.shown) .j,.hide-kana .gx li:not(.shown) .r{background:var(--chip);color:transparent;border-radius:3px}
+.hide-kana .gx li:not(.shown) rt{visibility:hidden}
+.hide-en .gx li,.hide-kana .gx li{cursor:pointer}
+</style>
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#B3261E">
+<link rel="apple-touch-icon" href="../assets/icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+<header class="top">
+  <h1>文法</h1>
+  <p class="sub">The N5 and N4 grammar patterns you need to build your own sentences: what each one means, how to form it, and real examples you can listen to. For how the parts of a sentence fit together, see the <a href="../words/sentence-builder.html">sentence builder</a>; for ready-made phrases, the <a href="../words/phrasebook.html">phrasebook</a>.</p>
+</header>
+<div class="controls">
+  <div class="controls-inner">
+    <input class="search" id="search" type="search" placeholder="Search patterns, Japanese, rōmaji or English" aria-label="Search">
+    <div class="segs">
+      <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Level</span><button data-tier="5" aria-pressed="false">N5</button><button data-tier="4" aria-pressed="true">N4</button></div>
+      <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
+      <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="en" aria-pressed="false">Hide English</button><button data-hide="kana" aria-pressed="false">Hide Japanese</button></div>
+    </div>
+  </div>
+  <nav class="topics" id="nav"></nav>
+</div>
+<main id="main"></main>
+<footer><p>Tap ▶ to hear an example, or a kanji to open it in the kanji deck (Back brings you here). Levels follow the usual N5/N4 split; JLPT publishes no official grammar lists, so they're a guide.</p></footer>
+<script src="../assets/common.js"></script>
+<script>
+const D = [{"id":"desu","l":5,"group":"Basics","pat":"～です / ～だ","mean":"is, am, are","form":"Noun or な-adjective + です (polite) or だ (plain)","note":"です is the polite ending you'll use most. Its past is でした and its negative is じゃないです or ではありません.","ex":[{"n":"私{わたし} は 学生{がくせい} です","en":"I'm a student"},{"n":"今日{きょう} は 休{やす}み でした","en":"Today was a day off"},{"n":"これ は 私{わたし} の 本{ほん} じゃないです","en":"This isn't my book"}]},{"id":"masu","l":5,"group":"Basics","pat":"～ます","mean":"polite verb ending","form":"Verb stem + ます: 食{た}べる → 食{た}べます, 飲{の}む → 飲{の}みます","note":"The ます form is the safe, polite way to use any verb. Past: ～ました. Negative: ～ません. Past negative: ～ませんでした.","ex":[{"n":"毎朝{まいあさ} コーヒー を 飲{の}みます","en":"I drink coffee every morning"},{"n":"昨日{きのう} 映画{えいが} を 見{み}ました","en":"I watched a film yesterday"},{"n":"肉{にく} は 食{た}べません","en":"I don't eat meat"}]},{"id":"aru-iru","l":5,"group":"Basics","pat":"～が あります / います","mean":"there is, to have","form":"Thing + が あります; person or animal + が います","note":"あります is for things and plants, います for people and animals.","ex":[{"n":"駅{えき} の 前{まえ} に 銀行{ぎんこう} が あります","en":"There's a bank in front of the station"},{"n":"兄弟{きょうだい} が 二人{ふたり} います","en":"I have two brothers and sisters"}]},{"id":"adj","l":5,"group":"Basics","pat":"い- and な-adjectives","mean":"describing words","form":"い-adjective: 高{たか}い → 高{たか}くない (not), 高{たか}かった (was). な-adjective: 静{しず}か → 静{しず}か じゃない, 静{しず}か だった; 静{しず}か な 部屋{へや} before a noun","note":"いい is irregular: よくない, よかった.","ex":[{"n":"この 部屋{へや} は 広{ひろ}くない です","en":"This room isn't big"},{"n":"旅行{りょこう} は 楽{たの}しかった です","en":"The trip was fun"},{"n":"静{しず}か な 町{まち} が 好{す}き です","en":"I like quiet towns"}]},{"id":"no","l":5,"group":"Basics","pat":"AのB","mean":"B of A, A's B","form":"Noun + の + noun","note":"の joins two nouns; the first one describes or owns the second.","ex":[{"n":"これ は 母{はは} の かばん です","en":"This is my mother's bag"},{"n":"日本語{にほんご} の 先生{せんせい} は やさしい です","en":"The Japanese teacher is kind"}]},{"id":"mashou","l":5,"group":"Asking and offering","pat":"～ましょう / ～ましょうか","mean":"let's …, shall I …?","form":"Verb stem + ましょう; add か to offer or suggest","note":"～ましょうか on its own offers help: 持{も}ちましょうか (shall I carry it?).","ex":[{"n":"一緒{いっしょ} に 行{い}きましょう","en":"Let's go together"},{"n":"窓{まど} を 開{あ}けましょうか","en":"Shall I open the window?"}]},{"id":"masenka","l":5,"group":"Asking and offering","pat":"～ませんか","mean":"won't you …? (an invitation)","form":"Verb stem + ませんか","note":"A softer invitation than ～ましょう: it leaves room to say no.","ex":[{"n":"週末{しゅうまつ} 映画{えいが} を 見{み}ませんか","en":"Would you like to see a film at the weekend?"}]},{"id":"tai","l":5,"group":"Wanting","pat":"～たい","mean":"want to …","form":"Verb stem + たい: 行{い}く → 行{い}きたい","note":"～たい works like an い-adjective: 行{い}きたくない (don't want to go), 行{い}きたかった (wanted to go). Use it about yourself; for others say ～たがっています.","ex":[{"n":"日本{にほん} へ 行{い}きたい です","en":"I want to go to Japan"},{"n":"今日{きょう} は 何{なに} も 食{た}べたくない です","en":"I don't want to eat anything today"}]},{"id":"hoshii","l":5,"group":"Wanting","pat":"～が ほしい","mean":"want (a thing)","form":"Noun + が ほしい です","note":"For things. For actions use ～たい.","ex":[{"n":"新{あたら}しい 靴{くつ} が ほしい です","en":"I want new shoes"}]},{"id":"ni-iku","l":5,"group":"Wanting","pat":"～に 行{い}く","mean":"go (somewhere) to do …","form":"Verb stem + に 行{い}く / 来{く}る / 帰{かえ}る","note":"The に marks the purpose of the trip.","ex":[{"n":"デパート へ 服{ふく} を 買{か}い に 行{い}きます","en":"I'm going to the department store to buy clothes"}]},{"id":"tekudasai","l":5,"group":"Asking and offering","pat":"～て ください","mean":"please (do)","form":"て-form + ください","note":"The standard polite request. Add もう 少{すこ}し or ゆっくり to soften or slow it down.","ex":[{"n":"ゆっくり 話{はな}して ください","en":"Please speak slowly"},{"n":"ここ に 名前{なまえ} を 書{か}いて ください","en":"Please write your name here"}]},{"id":"teiru","l":5,"group":"Actions","pat":"～て いる","mean":"is …ing; is in a state","form":"て-form + いる (います)","note":"Two uses: an action going on now (食{た}べています, is eating), or a state that lasts (結婚{けっこん}しています, is married; 住{す}んでいます, lives).","ex":[{"n":"今{いま} 雨{あめ} が 降{ふ}って います","en":"It's raining now"},{"n":"東京{とうきょう} に 住{す}んで います","en":"I live in Tokyo"}]},{"id":"temoii","l":5,"group":"Permission","pat":"～ても いい","mean":"may, it's all right to …","form":"て-form + も いい です(か)","note":"Ask permission with ～ても いい ですか; answer はい、どうぞ.","ex":[{"n":"写真{しゃしん} を 撮{と}っても いい ですか","en":"May I take a photo?"}]},{"id":"tewaikenai","l":5,"group":"Permission","pat":"～ては いけない","mean":"must not …","form":"て-form + は いけません","note":"Common on signs and from staff. The casual form is ～ちゃ だめ.","ex":[{"n":"ここ で たばこ を 吸{す}っては いけません","en":"You mustn't smoke here"}]},{"id":"kara","l":5,"group":"Joining sentences","pat":"～から","mean":"because, so","form":"Reason + から, result","note":"The reason comes first, the opposite of English \"because\".","ex":[{"n":"雨{あめ} です から、家{いえ} に います","en":"It's raining, so I'm staying at home"}]},{"id":"ga-but","l":5,"group":"Joining sentences","pat":"～が","mean":"but","form":"Sentence + が, sentence","note":"Polite and a little formal; でも starts a new sentence instead.","ex":[{"n":"高{たか}い です が、おいしい です","en":"It's expensive, but delicious"}]},{"id":"mae-ato","l":5,"group":"Time","pat":"～前{まえ} に / ～後{あと} で","mean":"before …, after …","form":"Dictionary form + 前{まえ} に; た-form + 後{あと} で; noun + の 前{まえ} に / の 後{あと} で","note":"Note the verb forms: before takes the dictionary form, after takes the past.","ex":[{"n":"寝{ね}る 前{まえ} に 本{ほん} を 読{よ}みます","en":"I read before I go to sleep"},{"n":"仕事{しごと} の 後{あと} で 会{あ}いましょう","en":"Let's meet after work"}]},{"id":"toki","l":5,"group":"Time","pat":"～とき","mean":"when …","form":"Plain form or noun + の + とき","note":"A time clause that sits before the main sentence.","ex":[{"n":"子供{こども} の とき、ロンドン に 住{す}んで いました","en":"When I was a child, I lived in London"}]},{"id":"hikaku","l":5,"group":"Comparing","pat":"AよりBの方{ほう}が","mean":"B is more … than A","form":"A より B の 方{ほう} が + adjective","note":"一番{いちばん} makes the top of the scale: 何{なに} が 一番{いちばん} 好{す}き ですか.","ex":[{"n":"電車{でんしゃ} は バス より 速{はや}い です","en":"Trains are faster than buses"},{"n":"夏{なつ} より 冬{ふゆ} の 方{ほう} が 好{す}き です","en":"I prefer winter to summer"}]},{"id":"takotogaaru","l":4,"group":"Experience","pat":"～た ことが ある","mean":"have (ever) done","form":"た-form + ことが あります","note":"Talks about experience, not a specific time.","ex":[{"n":"日本{にほん} へ 行{い}った ことが あります か","en":"Have you ever been to Japan?"}]},{"id":"tari","l":4,"group":"Actions","pat":"～たり ～たり する","mean":"do things like … and …","form":"た-form + り, た-form + り + する","note":"Gives a couple of examples from a longer list.","ex":[{"n":"週末{しゅうまつ} は 本{ほん} を 読{よ}んだり、映画{えいが} を 見{み}たり します","en":"At weekends I do things like read and watch films"}]},{"id":"potential","l":4,"group":"Ability","pat":"～られる / ～える (can)","mean":"can …","form":"る-verbs: 食{た}べる → 食{た}べられる. う-verbs: 書{か}く → 書{か}ける. する → できる, 来{く}る → 来{こ}られる","note":"The thing you can do usually takes が: 日本語{にほんご} が 話{はな}せます.","ex":[{"n":"漢字{かんじ} が 少{すこ}し 読{よ}めます","en":"I can read a little kanji"},{"n":"辛{から}い 物{もの} は 食{た}べられません","en":"I can't eat spicy food"}]},{"id":"kotogadekiru","l":4,"group":"Ability","pat":"～ことが できる","mean":"can, be able to","form":"Dictionary form + ことが できる","note":"More formal than the potential form, with the same meaning.","ex":[{"n":"ここ で 泳{およ}ぐ ことが できます","en":"You can swim here"}]},{"id":"nakereba","l":4,"group":"Obligation","pat":"～なければ ならない","mean":"must, have to","form":"ない-form minus い + ければ なりません","note":"In speech it shortens to ～なきゃ.","ex":[{"n":"明日{あした} は 早{はや}く 起{お}きなければ なりません","en":"I have to get up early tomorrow"}]},{"id":"nakutemoii","l":4,"group":"Obligation","pat":"～なくても いい","mean":"don't have to","form":"ない-form minus い + くても いい です","note":"The opposite of ～なければ ならない.","ex":[{"n":"明日{あした} は 来{こ}なくても いい です","en":"You don't need to come tomorrow"}]},{"id":"tara","l":4,"group":"If and when","pat":"～たら","mean":"if, when","form":"た-form + ら: 雨{あめ} が 降{ふ}ったら","note":"The most flexible \"if\": it also means \"when this has happened\".","ex":[{"n":"駅{えき} に 着{つ}いたら、電話{でんわ} して ください","en":"Call me when you get to the station"}]},{"id":"ba","l":4,"group":"If and when","pat":"～ば","mean":"if","form":"う-verbs: 行{い}く → 行{い}けば. い-adjectives: 安{やす}い → 安{やす}ければ","note":"Stresses the condition: \"only if\".","ex":[{"n":"安{やす}ければ 買{か}います","en":"If it's cheap, I'll buy it"}]},{"id":"to-if","l":4,"group":"If and when","pat":"～と","mean":"whenever, if (always)","form":"Dictionary form + と","note":"For things that always follow: directions, machines, nature.","ex":[{"n":"この ボタン を 押{お}す と、ドア が 開{あ}きます","en":"Press this button and the door opens"}]},{"id":"tsumori","l":4,"group":"Plans","pat":"～つもり","mean":"intend to, plan to","form":"Dictionary form + つもり です","note":"予定{よてい} is for fixed arrangements; つもり is your own intention.","ex":[{"n":"来年{らいねん} 日本{にほん} で 働{はたら}く つもり です","en":"I'm planning to work in Japan next year"}]},{"id":"temiru","l":4,"group":"Actions","pat":"～て みる","mean":"try (doing)","form":"て-form + みる","note":"\"Try and see what it's like\", not \"attempt something hard\".","ex":[{"n":"この 料理{りょうり} を 食{た}べて みて ください","en":"Try this dish"}]},{"id":"teshimau","l":4,"group":"Actions","pat":"～て しまう","mean":"finish, or end up doing (by mistake)","form":"て-form + しまう","note":"Often carries regret. In speech it becomes ～ちゃう.","ex":[{"n":"電車{でんしゃ} に 傘{かさ} を 忘{わす}れて しまいました","en":"I went and left my umbrella on the train"}]},{"id":"teoku","l":4,"group":"Actions","pat":"～て おく","mean":"do in advance","form":"て-form + おく","note":"Prepares for later. In speech it becomes ～とく.","ex":[{"n":"ホテル を 予約{よやく} して おきました","en":"I booked the hotel in advance"}]},{"id":"nagara","l":4,"group":"Actions","pat":"～ながら","mean":"while …ing","form":"Verb stem + ながら","note":"Both actions by the same person; the main one comes last.","ex":[{"n":"音楽{おんがく} を 聞{き}きながら 勉強{べんきょう} します","en":"I study while listening to music"}]},{"id":"sugiru","l":4,"group":"Describing","pat":"～すぎる","mean":"too (much)","form":"Verb stem or adjective stem + すぎる: 高{たか}すぎる, 食{た}べすぎる","note":"","ex":[{"n":"この かばん は 高{たか}すぎます","en":"This bag is too expensive"},{"n":"昨日{きのう} は 飲{の}みすぎました","en":"I drank too much yesterday"}]},{"id":"yasui","l":4,"group":"Describing","pat":"～やすい / ～にくい","mean":"easy to / hard to","form":"Verb stem + やすい / にくい","note":"They work like い-adjectives.","ex":[{"n":"この ペン は 書{か}きやすい です","en":"This pen is easy to write with"}]},{"id":"sou","l":4,"group":"Guessing","pat":"～そう","mean":"looks like, seems","form":"Adjective stem or verb stem + そう: おいしそう, 雨{あめ} が 降{ふ}りそう","note":"Based on what you see. いい → よさそう.","ex":[{"n":"この ケーキ は おいしそう です ね","en":"This cake looks delicious"},{"n":"雨{あめ} が 降{ふ}りそう です","en":"It looks like rain"}]},{"id":"mitai","l":4,"group":"Guessing","pat":"～みたい / ～らしい","mean":"seems, apparently","form":"Plain form + みたい (casual) or らしい (from what you've heard)","note":"みたい also means \"like\": 夢{ゆめ} みたい (like a dream).","ex":[{"n":"田中{たなか}さん は 風邪{かぜ} を ひいた みたい です","en":"Mr Tanaka seems to have a cold"}]},{"id":"shi","l":4,"group":"Joining sentences","pat":"～し、～し","mean":"and what's more (giving reasons)","form":"Plain form + し","note":"Stacks up reasons.","ex":[{"n":"この 店{みせ} は 安{やす}い し、おいしい し、よく 来{き}ます","en":"This place is cheap and good, so I come here often"}]},{"id":"ageru","l":4,"group":"Giving and receiving","pat":"あげる / くれる / もらう","mean":"give / give (to me) / receive","form":"あげる: I give out. くれる: someone gives to me or my side. もらう: I receive","note":"With て-form they mean doing someone a favour: 教{おし}えて くれました (they kindly taught me).","ex":[{"n":"友達{ともだち} が 本{ほん} を くれました","en":"A friend gave me a book"},{"n":"先生{せんせい} に 日本語{にほんご} を 教{おし}えて もらいました","en":"The teacher taught me Japanese (for me)"}]}];
+const KSET=new Set("一二三四五六七八九十百千万円金銀買売借貸代品物服日月曜年時今午半分毎週間去早昼朝夕夜始終計人父母子女男友名会兄弟姉妹私者主親族民口目耳手足体顔頭首心医病薬死力山川田天気雨花空火水木土海池地森林野光風春夏秋冬暑寒犬鳥上下左右中外前後東西南北方国店社院屋家館京区県建市室住所場村町都堂門台車電道駅運旅乗通転発着学校先生本語読書英漢字文紙教習勉試験研究題問答質図仕業員働工理食飲魚牛肉菜茶飯味料洋映画音楽歌写見言話聞知思考説声行来出入帰急止走歩進動近遠送休立引開起作使持集切洗待大小高安長新古多少白悪暗明強弱軽重広好太短低青赤黒色何不以意回界元合産自事真正世注度同特別便有用了丸才王玉石久公内戸毛他号央平打氷申皮皿礼竹糸虫貝交当米羽形角谷麦草化両全向州曲次血直星活点科欠由札辺付失必未末記組船雪黄支助君対局役投決馬番絵雲数具受和定実泳苦表部客相美負談要勝速配酒落葉路農鉄算鳴線横調最争仲伝共成老位初利努労命岸放昔波育拾指神秒追戦競良令庭息根流消倍島祭章商深球童陽階悲期植歯温港湯登泉亡予反返宿想感様橋福緑練億殺然熱課賞輪選願像情疑皆例卒協参周囲固季完希念折望材束残求約芸性技格能術骨寺岩晴列坂式信勇単変夫昨毒法浅軍仏築晩猫園係取守幸箱荷面喜府治浴笑辞関政留険危存専原細鼻側兵塩席敗果栄因常識非干官察底愛署警恋覚訓告種達類報祈等焼座忘胸脳許枚静禁喫煙加減順容布易財若詞歴冊宇忙団暴混乱徒得改続連困絡比機飛害余難被震械確個圧在夢倒厚妻議犯罪防論経史済委判制務査総設資権件断任責省増税解際認過寝各置費勢営示領副観値吸域状収停革職規割演律師準則備導優宅現乳呼城担額違輸燃祝届肩腕腰触層型庁差管象量境武述供販限与含況渡景抜補候構捕効慣豊満巻捜掛替居造印復筆貯刺郵針突菓河汗再接占招段胃腹痛退悩迷訪怒昇眠靴濃極途給逆巨庫児冷凍幼処清録券婦移程精絶並杯乾欧積臣略航寄板娘怖恐詰婚遊照快版貧適預延翌押更浮符越背盗編普除幾掃泥棒孫帯散粉貨陸似均富探迎採永液祖績複雑賛党卵捨込汚欲机簡閉誌窓否宝尊敬暮灰砂著蒸蔵装裏諸誤臓降純紅拝劇勤承損枝刻遅測破講紹介互彼恥湖銅払油旧姓貿将伸幅甘換療舞般頼依漁募患戻湾爆跡香兆抱齢刊傾奥緒贈逃超雇片群埋御駐柱吹鋭殿薄伺炭包衣鉱到双床掘泊荒袋珍籍刷封筒柔沈辛匹叫髪涙缶粒塔肌舟曇疲磨湿硬鈍歳涼零綿帽憎滴畳畜溶踊賢灯咲塗偶偉頂召挟枯沸濯燥瓶耕肯脂膚軒軟郊隅隻");
+const esc=jpEsc;
+const NOTE=/([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}/g;
+const kanaOf=s=>s.replace(NOTE,"$2"), plainOf=s=>s.replace(NOTE,"$1");
+const linkK=html=>html.split(/(<rt>.*?<\/rt>)/).map(p=>p.startsWith("<rt>")?p:p.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=gr#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c)).join("");
+function ruby(s){ let o="",last=0; s.replace(NOTE,(m,b,r,off)=>{ o+=esc(s.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return linkK(o+esc(s.slice(last))); }
+const romLine=n=>n.split(" ").map(t=>jpRomajiToken(kanaOf(t))).join(" ").replace(/ ,/g,",");
+let state={tier:"4",romaji:"on",hide:"none"};
+try{Object.assign(state,JSON.parse(localStorage.getItem("grammar")||"{}"));}catch(e){}
+const save=()=>{try{localStorage.setItem("grammar",JSON.stringify(state));}catch(e){}};
+function render(){
+  const t=+state.tier, groups=[...new Set(D.map(g=>g.group))];
+  let h="";
+  groups.forEach(gr=>{ const list=D.filter(g=>g.group===gr&&g.l>=t); if(!list.length) return;
+    h+=`<section class="grp" id="g-${gr.replace(/\W+/g,"-")}"><h2 class="part">${esc(gr)}</h2>${list.map(g=>`<article class="gc" id="p-${g.id}" data-s="${esc((g.pat+" "+g.mean+" "+g.form+" "+g.ex.map(e=>plainOf(e.n)+kanaOf(e.n)+romLine(e.n)+e.en).join(" ")).toLowerCase())}">
+      <div class="gh"><span class="gp">${ruby(g.pat)}</span><span class="gm">${esc(g.mean)}</span><span class="lvb">N${g.l}</span></div>
+      <p class="gf"><b>HOW TO FORM IT</b><span class="j">${ruby(g.form)}</span></p>
+      ${g.note?`<p class="gn">${ruby(g.note)}</p>`:""}
+      <ul class="gx">${g.ex.map((e,i)=>`<li data-id="${g.id}-${i}"><span class="j">${e.n.split(" ").map(ruby).join(" ")}</span>${sayBtn(plainOf(e.n).replace(/ /g,""))}<span class="r">${esc(romLine(e.n))}</span><span class="t">${esc(e.en)}</span></li>`).join("")}</ul></article>`).join("")}</section>`; });
+  document.getElementById("main").innerHTML=h+`<div class="noresult" id="noresult">Nothing matches that.</div>`;
+  document.getElementById("nav").innerHTML=groups.filter(gr=>document.getElementById("g-"+gr.replace(/\W+/g,"-"))).map(gr=>`<a href="#g-${gr.replace(/\W+/g,"-")}">${esc(gr)}</a>`).join("");
+  apply(); doSearch();
+}
+function apply(){
+  document.body.classList.toggle("no-romaji",state.romaji==="off");
+  document.body.classList.toggle("hide-en",state.hide==="en");
+  document.body.classList.toggle("hide-kana",state.hide==="kana");
+  document.querySelectorAll(".shown").forEach(c=>c.classList.remove("shown"));
+  ["tier","romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset[k]===state[k])));
+}
+function doSearch(){
+  const q=document.getElementById("search").value.trim().toLowerCase(); let any=false;
+  document.querySelectorAll("section.grp").forEach(s=>{ let n=0; s.querySelectorAll(".gc").forEach(c=>{ const hit=!q||c.dataset.s.includes(q); c.style.display=hit?"":"none"; if(hit) n++; }); s.style.display=n?"":"none"; if(n) any=true; });
+  document.getElementById("noresult").classList.toggle("show",!!q&&!any);
+}
+document.getElementById("search").addEventListener("input",doSearch);
+document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{ const y=window.scrollY; state.tier=b.dataset.tier; save(); render(); window.scrollTo(0,y); });
+["romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); apply(); }));
+document.getElementById("main").addEventListener("click",e=>{ const li=e.target.closest(".gx li"); if(li&&state.hide!=="none") li.classList.add("shown"); const gc=e.target.closest(".gc"); if(gc&&state.hide==="en") gc.classList.add("shown"); });
+document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
+try{ if(localStorage.getItem("rdcol")==="off") document.body.classList.add("no-rdcol"); }catch(e){}
+render();
+initReturnLinks("gr-return",".gx li","data-id","iflash");
+</script>
+</body>
+</html>

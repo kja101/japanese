@@ -122,6 +122,10 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 .rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
 .no-rdcol .rdv-on,.no-rdcol .rdv-kun{color:inherit}
 </style>
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#B3261E">
+<link rel="apple-touch-icon" href="../assets/icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 <header>
@@ -172,18 +176,7 @@ const BASE = {
 };
 const SMALL_Y = {ゃ:"a",ゅ:"u",ょ:"o"};
 const toHira = s => s.replace(/[\u30A1-\u30F6]/g, ch=>String.fromCharCode(ch.charCodeAt(0)-0x60));
-function romaji(kana){
-  const s = toHira(kana); let out = "", i = 0;
-  while(i < s.length){
-    const ch = s[i], nx = s[i+1];
-    if(ch==="っ"){ const r = romaji(s.slice(i+1,i+3)); out += r.startsWith("ch") ? "t" : (r[0]||""); i++; continue; }
-    if(ch==="ー"){ out += out.slice(-1); i++; continue; }
-    if(nx && SMALL_Y[nx] && BASE[ch]){ const b = BASE[ch]; out += (["shi","chi","ji"].includes(b)?b.slice(0,-1):b.slice(0,-1)+"y")+SMALL_Y[nx]; i+=2; continue; }
-    if(ch==="ん"){ out += (nx && /[あいうえおやゆよ]/.test(nx)) ? "n'" : "n"; i++; continue; }
-    out += BASE[ch] !== undefined ? BASE[ch] : (ch===" "?" ":ch); i++;
-  }
-  return out;
-}
+function romaji(k){ return krRomaji(k); }
 const esc = s => s.replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
 const kata = h => h.replace(/[\u3041-\u3096]/g, ch=>String.fromCharCode(ch.charCodeAt(0)+0x60));
 const shift = (c,n) => String.fromCharCode(c.charCodeAt(0)+n);

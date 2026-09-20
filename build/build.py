@@ -28,7 +28,15 @@ def fill(template, **values):
         text = text.replace(token, val)
     return text
 
+HEAD_EXTRA = ('<link rel="manifest" href="{r}manifest.webmanifest">\n<meta name="theme-color" content="#B3261E">\n'
+              '<link rel="apple-touch-icon" href="{r}assets/icons/icon-180.png">\n<meta name="apple-mobile-web-app-capable" content="yes">\n')
+WRITTEN = []
+
 def write(rel, text):
+    if rel.endswith(".html") and 'rel="manifest"' not in text:
+        depth = "../" * rel.count("/")
+        text = text.replace("</head>", HEAD_EXTRA.format(r=depth) + "</head>", 1)
+    WRITTEN.append(rel)
     path = ROOT / rel
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
@@ -198,4 +206,16 @@ write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
 # ---------------------------------------------------------------- kana
 write("kana/kana-sounds.html", (SRC / "kana-sounds.html").read_text(encoding="utf-8"))
 write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words()), KANJI_SET=KANJI_SET))
+# ---------------------------------------------------------------- grammar
+write("words/grammar.html", fill("grammar.html", DATA=dump(load("grammar.json")), KANJI_SET=KANJI_SET))
+
+# ---------------------------------------------------------------- offline support
+import hashlib
+files = ["index.html", "manifest.webmanifest", "assets/icons/icon-192.png", "assets/icons/icon-512.png", "assets/icons/icon-180.png"] + WRITTEN
+digest = hashlib.sha1()
+for f in files:
+    digest.update((ROOT / f).read_bytes())
+sw = (SRC / "sw.js").read_text(encoding="utf-8").replace("__VERSION__", digest.hexdigest()[:10]).replace("__FILES__", dump(["./" + f for f in files]))
+(ROOT / "sw.js").write_text(sw, encoding="utf-8")
+print("  sw.js")
 print("Done.")

@@ -284,12 +284,7 @@ const K = D.K, CH = D.CH, LV = D.LV;
 const BASE={あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",や:"ya",ゆ:"yu",よ:"yo",ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po"};
 const SY={ゃ:"a",ゅ:"u",ょ:"o"};
 const toHira=s=>s.replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
-function romaji(k){const s=toHira(k);let o="",i=0;while(i<s.length){const c=s[i],n=s[i+1];
- if(c==="っ"){const r=romaji(s.slice(i+1,i+3));o+=r.startsWith("ch")?"t":(r[0]||"");i++;continue;}
- if(c==="ー"){o+=o.slice(-1);i++;continue;}
- if(n&&SY[n]&&BASE[c]){const b=BASE[c];o+=(["shi","chi","ji"].includes(b)?b.slice(0,-1):b.slice(0,-1)+"y")+SY[n];i+=2;continue;}
- if(c==="ん"){o+=(n&&/[あいうえおやゆよ]/.test(n))?"n'":"n";i++;continue;}
- o+=BASE[c]!==undefined?BASE[c]:c;i++;}return o;}
+function romaji(k){ return krRomaji(k); }
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rubyNote=s=>{ let o="",last=0; s.replace(/([\u4e00-\u9fff々]+)\{([^}]+)\}/g,(m,b,r,off)=>{ o+=esc(s.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return o+esc(s.slice(last)); };
 const kanaOfNote=s=>s.replace(/([\u4e00-\u9fff々]+)\{([^}]+)\}/g,"$2");
@@ -446,7 +441,7 @@ function courseView(){
    <p>Work one chapter at a time. Read the shape and the story, check the look-alikes, then say the example word out loud. The next day, switch to Flashcards for that chapter and mark the ones you know.</p>
    <p>Heisig's own method has you write your own story for each kanji, because a story you invent sticks far harder than one you are handed. Treat every story here as a starting point and overwrite any that doesn't land. The stories are memory devices, not etymology.</p>
    <p>Readings are included because this is a study aid for the JLPT, not a pure Heisig course; Heisig withholds readings in book one. For the strict version, use Test me and reveal only the keyword and story.</p>
-   <p>The N5 and N4 cards have hand-written stories and look-alikes. The N3 and N2 cards show the parts and a starter line instead, because the method works best with stories you write yourself: tap Write my own story on any card and it's saved in this browser. Look-alikes for N3 and N2 are found automatically from shared parts.</p>
+   <p>Every card has a story. The method still works best with stories you write yourself, so tap Write my own story on any card; it's saved in this browser and shown in the daily study plan too. Look-alikes for N3 and N2 are found automatically from shared parts.</p>
    <p><b>Your stories and progress</b> are stored in this browser only. <button class="linkbtn" id="expStories">Export them</button> to back them up or move them to another device, and <label class="linkbtn">import a file<input type="file" id="impStories" accept=".json,application/json" hidden></label> there.</p>
    <p class="credits">Sources: N5 and N4 lists follow the community (tanos) lists; N3 and N2 kanji levels follow Jonathan Waller's JLPT lists. Readings and meanings for N3 and N2 kanji come from KANJIDIC2, © the Electronic Dictionary Research and Development Group, used under its CC BY-SA licence. Shape breakdowns come from the CHISE IDS database (cjkvi-ids). Vocabulary levels come from the open JLPT word lists derived from tanos.co.uk. JLPT has not published official lists since 2010, so every level here is a guide.</p></div>`;
 }
@@ -616,7 +611,7 @@ render();
 (function(){
   const m=location.hash.match(/^#k-(.+)$/); if(!m) return;
   const k=decodeURIComponent(m[1]); const src=(location.search.match(/[?&]from=(\w+)/)||[])[1]; const fromSB=!!src;
-  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"]}[src]||["← Back","../index.html"];
+  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"],gr:["← Back to grammar","../words/grammar.html"]}[src]||["← Back","../index.html"];
   setTimeout(()=>{
     jumpTo(k,null,null);
     if(!fromSB) return;
