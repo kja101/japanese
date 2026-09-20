@@ -689,16 +689,17 @@ render();
 // open a card from a link such as master-kanji-shapes.html?from=sb#k-時
 (function(){
   const m=location.hash.match(/^#k-(.+)$/); if(!m) return;
-  const k=decodeURIComponent(m[1]); const fromSB=/[?&]from=sb\b/.test(location.search);
+  const k=decodeURIComponent(m[1]); const src=(location.search.match(/[?&]from=(\w+)/)||[])[1]; const fromSB=!!src;
+  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"]}[src]||["← Back","../index.html"];
   setTimeout(()=>{
     jumpTo(k,null,null);
     if(!fromSB) return;
     jumpStack.length=0;
     const inner=backBtn.onclick;
-    const toSentence=()=>{ backBtn.textContent="← Back to the sentence"; backBtn.hidden=false; };
+    const toSentence=()=>{ backBtn.textContent=SRC[0]; backBtn.hidden=false; };
     toSentence();
     backBtn.onclick=()=>{ if(jumpStack.length){ inner(); if(!jumpStack.length) toSentence(); return; }
-      if(history.length>1) history.back(); else location.href="../words/sentence-builder.html"; };
+      if(history.length>1) history.back(); else location.href=SRC[1]; };
   },0);
 })();
 

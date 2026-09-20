@@ -78,10 +78,9 @@ section.ch{margin:2.4rem 0 0;scroll-margin-top:150px}
 .chip .ce{display:block;font-size:.84rem;color:var(--muted)}
 .ck{margin-right:.35em}
 .blocks .ck[data-r]{color:var(--c)}
-.blocks .ck[data-r] rt{color:var(--c)!important}
 .enc .ck{margin-right:.3em}
 .blocks .enc .ck[data-r]{color:var(--c);font-weight:600}
-.legend-b{display:none;flex-wrap:wrap;gap:.3rem .8rem;margin:.5rem 0 .2rem;font-size:.78rem;font-weight:600}
+.legend-b{display:none!important;flex-wrap:wrap;gap:.3rem .8rem;margin:.5rem 0 .2rem;font-size:.78rem;font-weight:600}
 .blocks .legend-b{display:flex}
 .legend-b span{color:var(--c)}
 .hidden-en .enl .hx,.hidden-jp .jpl .hx,.hidden-jp .rom{background:var(--chip);color:transparent!important;border-radius:4px;cursor:pointer}
@@ -101,6 +100,29 @@ footer{max-width:960px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);f
   section.ch{scroll-margin-top:170px}
   .chips{grid-template-columns:repeat(auto-fill,minmax(125px,1fr))}
 }
+
+.keybar{display:none;gap:5px;max-width:960px;margin:0 auto;padding:0 1.25rem .5rem;overflow-x:auto;scrollbar-width:none}
+.blocks .keybar{display:flex}
+.keybar span{flex:1 0 auto;background:var(--c);color:#fff;border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700;letter-spacing:.02em;text-align:center;white-space:nowrap}
+.keybar span small{font-weight:500;opacity:.9;margin-left:4px}
+.keybar span.kp{background:var(--chip);color:var(--ink)}
+.pt{font:inherit;font-weight:700;color:inherit;background:var(--chip);border:0;border-radius:4px;padding:0 .18em;margin:0 .04em;cursor:pointer;line-height:inherit}
+.pt:hover,.pt:focus-visible{background:var(--ink);color:var(--paper);outline:none}
+.pt.pr{font-style:normal}
+a.kl{color:inherit;text-decoration:none;cursor:pointer}
+a.kl:hover{background:var(--indigo-wash);border-radius:2px}
+.ppop{position:absolute;z-index:60;background:var(--sheet);color:var(--ink);border:1px solid var(--rule);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.2);padding:10px 12px;font-size:.92rem;line-height:1.5}
+.ppop[hidden]{display:none}
+.pp-h{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.pp-p{font-family:var(--jp);font-size:1.5rem;font-weight:700}
+.pp-r{font-style:italic;color:var(--muted)}
+.pp-n{font-weight:600}
+.pp-x{margin-left:auto;border:0;background:none;font-size:1.3rem;line-height:1;cursor:pointer;color:var(--muted)}
+.ppop p{margin:4px 0}
+.pp-c{background:var(--chip);border-radius:4px;padding:4px 8px}
+.pp-e{color:var(--muted);font-size:.85rem}
+@keyframes iflash{0%{box-shadow:0 0 0 3px var(--seal)}100%{box-shadow:0 0 0 3px transparent}}
+.iflash{animation:iflash 2.4s ease-out;border-radius:6px}
 :root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
 :root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
@@ -124,7 +146,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 <body>
 <header class="top">
   <h1>旅の会話帳</h1>
-  <p class="sub">An interactive phrasebook: about 500 phrases and sentences in 14 situations, from greetings to emergencies. Phrases with a slot take a word: tap one of the words under them and it drops into every slot. Star anything you want to keep, and it goes into My phrasebook.</p>
+  <p class="sub">An interactive phrasebook: about 500 phrases and sentences in 14 situations, from greetings to emergencies. Colours show each part's job, as in the key. Tap a grey particle to see what it does, or a kanji to open it in the kanji deck (Back brings you straight back here). Phrases with a slot take a word: tap one of the words under them. Star anything you want to keep.</p>
 </header>
 <div class="controls">
   <div class="controls-inner">
@@ -133,12 +155,13 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
       <div class="seg" role="group" aria-label="View"><button data-view="all" aria-pressed="true">All</button><button data-view="mine" aria-pressed="false">★ My phrasebook</button></div>
       <div class="seg" role="group" aria-label="Japanese script"><button data-script="ruby" aria-pressed="true">Kanji + furigana</button><button data-script="kanji" aria-pressed="false">Kanji</button><button data-script="kana" aria-pressed="false">Hiragana</button></div>
       <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
-      <div class="seg" role="group" aria-label="Grammar blocks"><button data-blocks="on" aria-pressed="false">Grammar blocks</button><button data-blocks="off" aria-pressed="true">Off</button></div>
+      <div class="seg" role="group" aria-label="Grammar blocks"><button data-blocks="on" aria-pressed="true">Grammar blocks</button><button data-blocks="off" aria-pressed="false">Off</button></div>
       <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="en" aria-pressed="false">Hide English</button><button data-hide="jp" aria-pressed="false">Hide Japanese</button></div>
       <div class="seg" role="group" aria-label="Reading colours"><button data-rdcol="on" aria-pressed="true">On/kun colours</button><button data-rdcol="off" aria-pressed="false">Off</button></div>
     </div>
   </div>
   <div class="rd-legend"><span><span class="rd rd-on"><span class="rb sw">音</span></span>On<span class="rdl"> reading, from Chinese</span></span><span><span class="rd rd-kun"><span class="rb sw">訓</span></span>Kun<span class="rdl"> reading, native Japanese</span></span><span><span class="rd rd-sp"><span class="rb sw">特</span></span>Special<span class="rdl"> reading: learn the whole word</span></span></div>
+  <div class="keybar" aria-label="Block colours"><span style="--c:var(--rW)">WHO / TOPIC<small>は・が</small></span><span style="--c:var(--rT)">TIME<small>に</small></span><span style="--c:var(--rP)">PLACE<small>で・に・へ・から・まで</small></span><span style="--c:var(--rH)">HOW / WITH<small>と・で</small></span><span style="--c:var(--rO)">WHAT<small>を</small></span><span style="--c:var(--rV)">VERB / です</span><span style="--c:var(--rQ)">QUESTION<small>か</small></span><span class="kp">particle<small>tap one</small></span></div>
   <nav class="topics" id="nav"></nav>
 </div>
 <main id="main"></main>
@@ -240,34 +263,152 @@ const NOTE=/([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}/g;
 const kanaOf=s=>s.replace(NOTE,"$2"), plainOf=s=>s.replace(NOTE,"$1");
 function form(tok,mode){ let o="",last=0; tok.replace(NOTE,(m,b,r,off)=>{ o+=esc(tok.slice(last,off))+(mode==="kana"?rdKana(b,r):mode==="kanji"?rdKanji(b,r):rdRuby(b,r)); last=off+m.length; return m; }); return o+esc(tok.slice(last)); }
 const ROLE={W:"--rW",T:"--rT",P:"--rP",H:"--rH",O:"--rO",V:"--rV",Q:"--rQ"};
+
+// ---------- blocks, particles and kanji links ----------
+const PINFO={
+ "は":["wa","Topic","Marks what the sentence is about: \"as for …\". Written は but said wa.","私は学生です: as for me, I'm a student."],
+ "が":["ga","Subject","Picks out who or what does something, or is new information. Also used with 好き, 分かる, 欲しい and ある.","頭が痛いです: my head hurts."],
+ "を":["o","Object","Marks the thing acted on by the verb. Written を, said o, and only ever a particle.","コーヒーを飲みます: I drink coffee."],
+ "に":["ni","Time, destination or target","A point in time (七時に), where something goes or exists (日本に), or who receives something.","六時に会いましょう: let's meet at six."],
+ "で":["de","Place of action, or means","Where an action happens (カフェで), or how it's done (電車で, カードで).","電車で行きます: I go by train."],
+ "へ":["e","Direction","Towards a place. Written へ but said e. Close to に for destinations.","日本へ行きます: I'm going to Japan."],
+ "と":["to","With, and, or a quote","With someone (友達と), and between nouns (パンと水), or before 思う and 言う to quote.","友達と行きます: I'll go with a friend."],
+ "から":["kara","From, or because","Starting point in place or time, or a reason after a sentence.","駅から歩きます: I'll walk from the station."],
+ "まで":["made","Until, as far as","The end point in place or time.","京都までお願いします: to Kyoto, please."],
+ "の":["no","Of, 's","Joins two nouns: the first describes or owns the second.","私の家: my house."],
+ "も":["mo","Also, too","Replaces は, が or を to add \"too\".","私も行きます: I'm going too."],
+ "か":["ka","Question","Turns the sentence into a question. No question mark needed in Japanese.","駅はどこですか: where is the station?"],
+ "ね":["ne","Isn't it?","Asks for agreement or softens a statement.","いい天気ですね: nice weather, isn't it?"],
+ "よ":["yo","You know","Tells the listener something new, with emphasis.","おいしいですよ: it's delicious, you know."],
+ "や":["ya","And (among others)","Lists examples, implying there are more.","パンや水: bread, water and so on."],
+ "には":["ni wa","に + は","に with extra focus or contrast: \"as for at / in …\".",""],"では":["de wa","で + は","で with extra focus or contrast.",""],
+ "にも":["ni mo","に + も","\"To … too\" or \"at … too\".",""],"でも":["de mo","で + も","\"At … too\", or \"even\".",""],"とは":["to wa","と + は","と with extra focus.",""],"へは":["e wa","へ + は","へ with extra focus.",""]
+};
+const ROLEHINT={W:"who or topic",T:"time",P:"place",H:"how or with",O:"what",V:"verb",Q:"question"};
+const PEND=/(から|まで|には|では|へは|とは|にも|でも|は|が|を|に|で|へ|と|も|の|か|ね|よ|や)$/;
+const isKK=c=>!!c&&/[\u4e00-\u9fff\u30a0-\u30ff々]/.test(c);
+function sbParts(k,kn,role){
+  // parts: {t, r (reading or null), p (particle flag)}
+  let a=/[\u4e00-\u9fff]/.test(k)?rdAlign(k,kn.replace(/ /g,"")):null;
+  if(!a) a=[{t:k,r:null}];
+  const out=[];
+  a.forEach((p,idx)=>{
+    if(p.r!=null){ out.push({t:p.t,r:p.r}); return; }
+    const s=p.t; let buf="";
+    for(let i=0;i<s.length;i++){
+      const c=s[i], prev=i>0?s[i-1]:(idx>0?a[idx-1].t.slice(-1):""), next=i<s.length-1?s[i+1]:(idx<a.length-1?a[idx+1].t[0]:"");
+      const before=(idx>0&&i===0?a[idx-1].t:"")+s.slice(0,i);
+      let isP=false;
+      if(c==="を") isP=true;
+      else if(c==="の"&&next&&isKK(next)&&(isKK(prev)||/(これ|それ|あれ|私|あなた)$/.test(before))) isP=true;
+      if(isP){ if(buf) out.push({t:buf,r:null}); buf=""; out.push({t:c,r:null,p:true}); }
+      else buf+=c;
+    }
+    if(buf) out.push({t:buf,r:null});
+  });
+  // trailing particle
+  const last=out[out.length-1];
+  if(last&&last.r==null&&!last.p&&role!=="V"){
+    const m=last.t.match(PEND);
+    if(m&&(last.t.length>m[1].length||out.length>1||role==="Q")){
+      const rest=last.t.slice(0,-m[1].length);
+      out.pop(); if(rest) out.push({t:rest,r:null}); out.push({t:m[1],r:null,p:true});
+    }
+  }
+  return out;
+}
+
+const KSET=new Set("一二三四五六七八九十百千万円金銀買売借貸代品物服日月曜年時今午半分毎週間去早昼朝夕夜始終計人父母子女男友名会兄弟姉妹私者主親族民口目耳手足体顔頭首心医病薬死力山川田天気雨花空火水木土海池地森林野光風春夏秋冬暑寒犬鳥上下左右中外前後東西南北方国店社院屋家館京区県建市室住所場村町都堂門台車電道駅運旅乗通転発着学校先生本語読書英漢字文紙教習勉試験研究題問答質図仕業員働工理食飲魚牛肉菜茶飯味料洋映画音楽歌写見言話聞知思考説声行来出入帰急止走歩進動近遠送休立引開起作使持集切洗待大小高安長新古多少白悪暗明強弱軽重広好太短低青赤黒色何不以意回界元合産自事真正世注度同特別便有用了丸才王玉石久公内戸毛他号央平打氷申皮皿礼竹糸虫貝交当米羽形角谷麦草化両全向州曲次血直星活点科欠由札辺付失必未末記組船雪黄支助君対局役投決馬番絵雲数具受和定実泳苦表部客相美負談要勝速配酒落葉路農鉄算鳴線横調最争仲伝共成老位初利努労命岸放昔波育拾指神秒追戦競良令庭息根流消倍島祭章商深球童陽階悲期植歯温港湯登泉亡予反返宿想感様橋福緑練億殺然熱課賞輪選願像情疑皆例卒協参周囲固季完希念折望材束残求約芸性技格能術骨寺岩晴列坂式信勇単変夫昨毒法浅軍仏築晩猫園係取守幸箱荷面喜府治浴笑辞関政留険危存専原細鼻側兵塩席敗果栄因常識非干官察底愛署警恋覚訓告種達類報祈等焼座忘胸脳許枚静禁喫煙加減順容布易財若詞歴冊宇忙団暴混乱徒得改続連困絡比機飛害余難被震械確個圧在夢倒厚妻議犯罪防論経史済委判制務査総設資権件断任責省増税解際認過寝各置費勢営示領副観値吸域状収停革職規割演律師準則備導優宅現乳呼城担額違輸燃祝届肩腕腰触層型庁差管象量境武述供販限与含況渡景抜補候構捕効慣豊満巻捜掛替居造印復筆貯刺郵針突菓河汗再接占招段胃腹痛退悩迷訪怒昇眠靴濃極途給逆巨庫児冷凍幼処清録券婦移程精絶並杯乾欧積臣略航寄板娘怖恐詰婚遊照快版貧適預延翌押更浮符越背盗編普除幾掃泥棒孫帯散粉貨陸似均富探迎採永液祖績複雑賛党卵捨込汚欲机簡閉誌窓否宝尊敬暮灰砂著蒸蔵装裏諸誤臓降純紅拝劇勤承損枝刻遅測破講紹介互彼恥湖銅払油旧姓貿将伸幅甘換療舞般頼依漁募患戻湾爆跡香兆抱齢刊傾奥緒贈逃超雇片群埋御駐柱吹鋭殿薄伺炭包衣鉱到双床掘泊荒袋珍籍刷封筒柔沈辛匹叫髪涙缶粒塔肌舟曇疲磨湿硬鈍歳涼零綿帽憎滴畳畜溶踊賢灯咲塗偶偉頂召挟枯沸濯燥瓶耕肯脂膚軒軟郊隅隻");
+const PARTS=new Set(["は","が","を","に","で","へ","と","も","の","か","から","まで","や","ね","よ","には","では","にも","でも"]);
+const TIMEW=/[時日週月年今朝夜晩曜昼]|いつ|何時|あした|きょう/;
+const PLACEW=/^(ここ|そこ|あそこ|どこ|この 近く|近く)$|[駅店家館院局港場所屋社]/;
+const QWORD={"どこ":"P","どちら":"P","いつ":"T","何時{なんじ}":"T","何{なに}":"O","何{なん}":"O","誰{だれ}":"W","どう":"H","どうして":"H","いくら":"O","どれ":"O","どの":"O","いくつ":"O","何人{なんにん}":"O","何名様{なんめいさま}":"O","何番線{なんばんせん}":"O","何分{なんぷん}":"T","何曜日{なんようび}":"T","何日{なんにち}":"T"};
+const ADV=new Set(["もう","少{すこ}し","ちょっと","ゆっくり","まっすぐ","もっと","とても","あまり","一緒{いっしょ}に","また","すぐ","まだ"]);
+function rolesFor(toks){
+  // returns [{t, r, p}] ; r role letter, p = particle flag
+  const out=[]; let buf=[];
+  const flush=(role)=>{ buf.forEach(t=>out.push({t,r:role})); buf=[]; };
+  toks.forEach((t,i)=>{
+    const bare=t.replace(/[、。]$/,"");
+    if(PARTS.has(bare)&&buf.length){
+      const txt=buf.join(" ");
+      let r="V";
+      if(bare==="も"&&/[てで]$/.test(kanaOf(buf[buf.length-1]))) r="V";
+      else if(["は","が","も"].includes(bare)) r="W";
+      else if(bare==="を") r="O";
+      else if(bare==="に"||bare==="には"||bare==="にも") r=TIMEW.test(txt)?"T":"P";
+      else if(bare==="で"||bare==="では"||bare==="でも") r=PLACEW.test(txt)?"P":"H";
+      else if(bare==="へ"||bare==="まで") r="P";
+      else if(bare==="から") r=TIMEW.test(txt)?"T":"P";
+      else if(bare==="と") r="H";
+      else if(bare==="の"){ buf.push(t); out.push(...[]); return; }
+      else if(bare==="か"){ flush("V"); out.push({t,r:"Q",p:true}); return; }
+      flush(r); out.push({t,r,p:true}); return;
+    }
+    if(bare==="か"&&i===toks.length-1){ flush("V"); out.push({t,r:"Q",p:true}); return; }
+    buf.push(t);
+  });
+  // tail: predicate, with question words and adverbs picked out
+  buf.forEach(t=>{ const b=t.replace(/[、。]$/,""); out.push({t,r:b==="___"?"O":/^[一二三四五六七八九十何]\{[^}]*\}つ$|^[一二三四五六七八九十]\{[^}]*\}(人|枚|本|杯)/.test(b)?"O":QWORD[b]||(ADV.has(b)?"H":"V")}); });
+  // mark の inside chunks as particle (keep chunk role)
+  return out.map(x=>x.t==="の"?{...x,p:true}:x);
+}
+const kl=c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=pb#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c;
+const linkK=html=>html.replace(/[\u4e00-\u9fff]/g,kl);
+const pbtn=(t,r)=>`<button type="button" class="pt" data-p="${esc(t)}" data-role="${r||""}">${esc(t)}</button>`;
+function tokHtml(x,mode,word){
+  if(x.t==="___") return word?`<span class="slot filled">${word.split(" ").map(w=>linkK(form(w,mode))).join(" ")}</span>`:`<span class="slot">&nbsp;</span>`;
+  if(x.p) return pbtn(x.t.replace(/[、。]$/,""),x.r)+(/[、。]$/.test(x.t)?x.t.slice(-1):"");
+  // split a trailing か off ですか / ますか / ませんか
+  const m=x.r==="V"&&x.t.match(/^(.*[すんた])か$/);
+  if(m&&x.t.length>2) return `<span class="ck" data-r="V" style="--c:var(--rV)">${linkK(form(m[1],mode))}</span><span class="ck" data-r="Q" style="--c:var(--rQ)">${pbtn("か","Q")}</span>`;
+  return linkK(form(x.t,mode));
+}
+function tokRom(x,word){
+  if(x.t==="___") return word?`<span class="slot filled">${esc(kanaOf(word).split(" ").map(romajiToken).join(" "))}</span>`:`<span class="slot">&nbsp;</span>`;
+  const r=romajiToken(kanaOf(x.t));
+  if(x.p) return `<button type="button" class="pt pr" data-p="${esc(x.t.replace(/[、。]$/,""))}" data-role="${x.r}">${esc(r.replace(/,\s*$/,""))}</button>${/、$/.test(x.t)?",":""}`;
+  const m=r.match(/^(.*) ka$/); if(m&&x.r==="V") return `<span class="ck" data-r="V" style="--c:var(--rV)">${esc(m[1])}</span> <span class="ck" data-r="Q" style="--c:var(--rQ)"><button type="button" class="pt pr" data-p="か" data-role="Q">ka</button></span>`;
+  return esc(r);
+}
+const wrapR=(r,inner)=>`<span class="ck" data-r="${r}" style="--c:var(${ROLE[r]})">${inner}</span>`;
+function tokenLine(ph,word,mode){ return rolesFor(ph.split(" ")).map(x=>wrapR(x.r,tokHtml(x,mode,word))).join(" "); }
+function tokenRom(ph,word){ return rolesFor(ph.split(" ")).map(x=>wrapR(x.r,tokRom(x,word))).join(" ").replace(/ ,/g,","); }
+
 // ---------- state ----------
-let state={view:"all",script:"ruby",romaji:"on",blocks:"off",hide:"none"};
+let state={view:"all",script:"ruby",romaji:"on",blocks:"on",hide:"none"};
 try{Object.assign(state,JSON.parse(localStorage.getItem("phrasebook")||"{}"));}catch(e){}
 let STARS=new Set(); try{STARS=new Set(JSON.parse(localStorage.getItem("phrasebook-stars")||"[]"));}catch(e){}
 const save=()=>{try{localStorage.setItem("phrasebook",JSON.stringify(state));localStorage.setItem("phrasebook-stars",JSON.stringify([...STARS]));}catch(e){}};
 const picked={};
 const spaced=()=>true;
 // ---------- render pieces ----------
-function jpFrame(ph,word,mode){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${word.split(" ").map(w=>form(w,mode)).join(" ")}</span>`:`<span class="slot">&nbsp;</span>`):form(t,mode)).join(" "); }
-function romFrame(ph,word){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${esc(kanaOf(word).split(" ").map(romajiToken).join(" "))}</span>`:`<span class="slot">&nbsp;</span>`):esc(romajiToken(kanaOf(t)))).join(" ").replace(/ ,/g,","); }
+function jpFrame(ph,word,mode){ return tokenLine(ph,word,mode); }
+function jpFrameOld(ph,word,mode){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${word.split(" ").map(w=>form(w,mode)).join(" ")}</span>`:`<span class="slot">&nbsp;</span>`):form(t,mode)).join(" "); }
+function romFrame(ph,word){ return tokenRom(ph,word); }
+function romFrameOld(ph,word){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${esc(kanaOf(word).split(" ").map(romajiToken).join(" "))}</span>`:`<span class="slot">&nbsp;</span>`):esc(romajiToken(kanaOf(t)))).join(" ").replace(/ ,/g,","); }
 const enFill=(en,w)=>esc(en).replace("___",w?`<span class="slot filled">${esc(w)}</span>`:"___");
 const starBtn=id=>`<button class="star" data-star="${id}" aria-pressed="${STARS.has(id)}" aria-label="Star">★</button>`;
 function phraseItem(secId,i,p,word,wordEn){
   const id=`p:${secId}:${i}`, tag=p.tag==="hear"?`<span class="tagl hear">You'll hear this</span>`:p.tag?`<span class="tagl">${esc(p.tag)}</span>`:"";
-  const s=(plainOf(p.jp)+kanaOf(p.jp)+romFrame(p.jp,null)+p.en).toLowerCase();
+  const s=(plainOf(p.jp)+kanaOf(p.jp)+p.jp.split(" ").map(t=>romajiToken(kanaOf(t))).join(" ")+p.en).toLowerCase();
   return `<div class="it" data-id="${id}" data-s="${esc(s)}"><div><span class="jpl"><span class="hx">${jpFrame(p.jp,word,state.script)}</span></span><span class="rom">${romFrame(p.jp,word)}</span></div><div class="enl"><span class="hx">${enFill(p.en,wordEn)}</span>${tag}</div>${starBtn(id)}</div>`;
 }
 function sentItem(s){
   let jp,rom,enc="";
   if(s.kj){
-    jp=s.kj.map((k,i)=>{ const inner=/[\u4e00-\u9fff]/.test(k)?rdWord(k,s.kn[i],state.script==="kana"?"kana":state.script==="kanji"?"kanji":"ruby"):esc(state.script==="kana"?s.kn[i]:k); const r=s.roles&&s.roles[i]; return `<span class="ck"${r?` data-r="${r}" style="--c:var(${ROLE[r]})"`:""}>${inner}</span>`; }).join("");
-    rom=s.rj.map((r,i)=>`<span class="ck"${s.roles&&s.roles[i]?` data-r="${s.roles[i]}" style="--c:var(${ROLE[s.roles[i]]})"`:""}>${esc(r)}</span>`).join("");
+    const mode=state.script==="kana"?"kana":state.script==="kanji"?"kanji":"ruby";
+    jp=s.kj.map((k,i)=>{ const r=s.roles&&s.roles[i]; const parts=sbParts(k,s.kn[i],r); let vf=false;
+      const inner=parts.map(p=>{ if(p.p) return pbtn(p.t,r); if(p.r!=null){ const x=(mode==="kana"?rdKana(p.t,p.r,vf):mode==="kanji"?rdKanji(p.t,p.r,vf):rdRuby(p.t,p.r,vf)); vf=true; return linkK(x); } return esc(p.t); }).join("");
+      return `<span class="ck"${r?` data-r="${r}" style="--c:var(${ROLE[r]})"`:""}>${inner}</span>`; }).join("");
+    rom=s.rj.map((r,i)=>{ const ro=s.roles&&s.roles[i]; const want=sbParts(s.kj[i],s.kn[i],ro).filter(p=>p.p).map(p=>romajiToken(p.t)); let wi=0;
+      const inner=r.split(" ").map(t=>{ if(wi<want.length&&t===want[wi]){ const pt=sbParts(s.kj[i],s.kn[i],ro).filter(p=>p.p)[wi].t; wi++; return `<button type="button" class="pt pr" data-p="${pt}" data-role="${ro||""}">${esc(t)}</button>`; } return esc(t); }).join(" ");
+      return `<span class="ck"${ro?` data-r="${ro}" style="--c:var(${ROLE[ro]})"`:""}>${inner}</span>`; }).join("");
     const punct=(s.en.match(/[?!.]$/)||[""])[0];
     if(s.enc&&s.enc.length) enc=`<span class="enc">${s.enc.map(([c,r,t],j)=>(j===s.enc.length-1&&punct&&!/[?!.]$/.test(t)?[c,r,t+punct]:[c,r,t])).map(([c,r,t])=>`<span class="ck" data-r="${r}" style="--c:var(${ROLE[r]})">${esc(t)}</span>`).join("")}</span>`;
   } else {
-    const toks=s.n.split(" ");
-    jp=toks.map(t=>form(t,state.script)).join(" ");
-    rom=esc(toks.map(t=>romajiToken(kanaOf(t))).join(" ").replace(/ ,/g,","));
+    jp=tokenLine(s.n,null,state.script);
+    rom=tokenRom(s.n,null);
   }
   const id=s.id, str=((s.kj?s.kj.join("")+s.kn.join(""):plainOf(s.n)+kanaOf(s.n))+(s.rj?s.rj.join(" "):"")+s.en).toLowerCase();
   const enHtml=state.blocks==="on"&&enc?enc:esc(s.en);
@@ -326,6 +467,43 @@ main.addEventListener("click",e=>{
 });
 document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
 render();
+// ---------- particle pop-up ----------
+(function(){
+  const pop=document.createElement("div"); pop.className="ppop"; pop.hidden=true; document.body.appendChild(pop);
+  let cur=null;
+  function show(b){
+    const p=b.dataset.p, info=PINFO[p]||[p,"Particle","",""], role=b.dataset.role;
+    let ctx="";
+    if(p==="に"&&role) ctx=role==="T"?"Here it marks a <b>time</b>.":role==="P"?"Here it marks a <b>destination or place</b>.":role==="H"?"Here it turns the word before it into an adverb (別々に, 一緒に).":"";
+    if(p==="で"&&role) ctx=role==="P"?"Here it marks <b>where the action happens</b>.":role==="H"?"Here it marks <b>how</b> it's done.":role==="T"?"Here it marks <b>when</b> (after dinner).":"";
+    if(p==="と"&&role==="H"&&/高いと/.test(b.parentElement.textContent)) ctx="Here it quotes a thought before 思います.";
+    if(!ctx&&role&&ROLEHINT[role]) ctx=`It closes the <b>${ROLEHINT[role]}</b> block of this sentence.`;
+    pop.innerHTML=`<div class="pp-h"><span class="pp-p">${esc(p)}</span><span class="pp-r">${esc(info[0])}</span><span class="pp-n">${esc(info[1])}</span><button class="pp-x" aria-label="Close">×</button></div><p>${esc(info[2])}</p>${ctx?`<p class="pp-c">${ctx}</p>`:""}${info[3]?`<p class="pp-e">${esc(info[3])}</p>`:""}`;
+    pop.hidden=false;
+    const r=b.getBoundingClientRect(), w=Math.min(320,window.innerWidth-24);
+    pop.style.width=w+"px";
+    let left=Math.max(12,Math.min(r.left+window.scrollX-w/2+r.width/2,window.scrollX+window.innerWidth-w-12));
+    pop.style.left=left+"px"; pop.style.top=(r.bottom+window.scrollY+8)+"px";
+    cur=b;
+  }
+  document.addEventListener("click",e=>{
+    const b=e.target.closest(".pt"); if(b){ e.preventDefault(); if(cur===b&&!pop.hidden){ pop.hidden=true; cur=null; } else show(b); return; }
+    if(!e.target.closest(".ppop")||e.target.closest(".pp-x")){ pop.hidden=true; cur=null; }
+  });
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ pop.hidden=true; cur=null; } });
+  window.addEventListener("resize",()=>{ pop.hidden=true; });
+})();
+
+// ---------- kanji links: remember the phrase, come back to it ----------
+(function(){
+  document.addEventListener("click",e=>{ const a=e.target.closest("a.kl"); if(!a) return; const it=a.closest(".it");
+    try{ sessionStorage.setItem("pb-return",JSON.stringify({id:it?it.dataset.id:null,y:window.scrollY})); }catch(err){} });
+  let ret=null; try{ ret=JSON.parse(sessionStorage.getItem("pb-return")||"null"); }catch(e){}
+  if(ret) window.addEventListener("pageshow",ev=>{ const nav=(performance.getEntriesByType&&performance.getEntriesByType("navigation")[0])||{};
+    if(ev.persisted||nav.type==="back_forward") setTimeout(()=>{ const el=ret.id?document.querySelector(`.it[data-id="${CSS.escape(ret.id)}"]`):null;
+      if(el){ const c=document.querySelector(".controls"); window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-16); el.classList.remove("iflash"); void el.offsetWidth; el.classList.add("iflash"); } else window.scrollTo(0,ret.y); },40);
+    try{ sessionStorage.removeItem("pb-return"); }catch(e){} },{once:true});
+})();
 (function(){ let v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
   const set=x=>{ v=x; document.body.classList.toggle("no-rdcol",v==="off");
     document.querySelectorAll("[data-rdcol]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rdcol===v));
