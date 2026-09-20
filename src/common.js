@@ -225,6 +225,7 @@ function jpRomajiToken(t){ if(JP_PARTICLE[t]) return JP_PARTICLE[t]; if(JP_SPECI
 // words: {word: "h" | "k"}; base: path to the kana folder; from: short name of this page for the back button.
 const JP_PART_CHARS="はがをにでへともかやねよの";
 function linkKanaWords(roots,words,base,from){
+  const baseOf=w=>Array.isArray(words[w])?words[w][1]:w, tagOf=w=>Array.isArray(words[w])?words[w][0]:words[w];
   const list=Object.keys(words).filter(w=>w.length>=2).sort((a,b)=>b.length-a.length);
   if(!list.length) return;
   const isHira=c=>c>="\u3041"&&c<="\u309f", isKata=c=>(c>="\u30a0"&&c<="\u30ff")||c==="ー", isKan=c=>/[\u4e00-\u9fff々]/.test(c);
@@ -249,8 +250,10 @@ function linkKanaWords(roots,words,base,from){
         const prevCh=i>0?t[i-1]:prevText(), nextCh=i+w.length<t.length?t[i+w.length]:nextText();
         if(!ok(t,i,w,prevCh,nextCh)) { re.lastIndex=i+1; continue; }
         out.push(document.createTextNode(t.slice(last,i)));
-        const a=document.createElement("a"); a.className="kw"; a.textContent=w; a.title="Open "+w+" in "+(words[w]==="k"?"katakana":"kana")+" words";
-        a.href=`${base}${words[w]==="k"?"katakana-words":"kana-words"}.html?from=${from}#w-${encodeURIComponent(w)}`;
+        const bw=baseOf(w), kata=tagOf(w)==="k";
+        const a=document.createElement("a"); a.className="kw"; a.textContent=w;
+        a.title=(bw===w?"Open "+w:w+" is "+bw+": open it")+" in "+(kata?"katakana":"kana")+" words";
+        a.href=`${base}${kata?"katakana-words":"kana-words"}.html?from=${from}#w-${encodeURIComponent(bw)}`;
         out.push(a); last=i+w.length; }
       if(out.length){ out.push(document.createTextNode(t.slice(last))); n.replaceWith(...out); }
     });

@@ -2713,6 +2713,30 @@
    "en": "by all means, do (please)",
    "l": 4,
    "g": "manner"
+  },
+  {
+   "w": "いる",
+   "en": "to be, to be there (people and animals)",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "ある",
+   "en": "to be, to have (things)",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "いい",
+   "en": "good, fine",
+   "l": 5,
+   "g": "desc"
+  },
+  {
+   "w": "ほしい",
+   "en": "want (a thing)",
+   "l": 5,
+   "g": "desc"
   }
  ],
  "parts": [

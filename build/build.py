@@ -57,17 +57,54 @@ for _lv in (5, 4, 3, 2):                  # sentences written to cover words and
 natural_en = load("sentence-builder-english.json")
 KANJI_SET = dump("".join(kanji["K"].keys()))
 
+I_ROW = "いきしちにひみりぎじびぴ"
+E_ROW = "えけせてねへめれげぜべぺ"
+
+GODAN = {"う": ("い", "わ", "っ"), "く": ("き", "か", "い"), "ぐ": ("ぎ", "が", "い"), "す": ("し", "さ", "し"), "つ": ("ち", "た", "っ"),
+         "ぬ": ("に", "な", "ん"), "ぶ": ("び", "ば", "ん"), "む": ("み", "ま", "ん"), "る": ("り", "ら", "っ")}
+END = r"(?![\u3041-\u309f])|(?=[はがをにでへともかやねよの][^\u3041-\u309f]|です|でした|ので|のに|と)"
+
+GODAN_RU = {"かじる", "ちぎる", "しゃべる", "かえる", "はいる", "しる", "きる", "はしる", "へる", "すべる", "ける", "にぎる"}   # look like る-verbs but aren't
+HONORIFIC_I = {"いらっしゃる", "なさる", "くださる", "おっしゃる"}   # ます-stem in い: いらっしゃいます
+
+def word_forms(key, group):
+    """The everyday written forms of a kana verb or adjective, so 食べて-style endings link to the dictionary word."""
+    if key.endswith("する"):
+        s = key[:-2]
+        return [s + x for x in ("する", "します", "しました", "しません", "して", "した", "しない", "しよう")]
+    if group == "verb" and key[-1] in GODAN:
+        if key[-1] == "る" and len(key) >= 2 and key[-2] in I_ROW + E_ROW and key not in GODAN_RU:
+            s = key[:-1]
+            return [s + x for x in ("る", "ます", "ました", "ません", "て", "た", "ない", "なかった", "られる", "よう", "れば")]
+        i, a, t = GODAN[key[-1]]
+        if key in HONORIFIC_I:
+            i = "い"
+        s, voiced = key[:-1], key[-1] in "ぐぬぶむ"
+        te, ta = ("で", "だ") if voiced else ("て", "た")
+        return [key] + [s + x for x in (i + "ます", i + "ました", i + "ません", i + "たい", t + te, t + ta,
+                                        a + "ない", a + "なかった", a + "れる", a + "せる")]
+    if group == "desc" and key.endswith("い") and len(key) >= 3:
+        s = key[:-1]
+        return [key] + [s + x for x in ("く", "くない", "かった", "くて", "ければ")]
+    return [key]
+
 def kana_word_map():
-    """Hiragana and katakana words that have their own card, for linking from sentences."""
+    """Every written form that should link to a kana word card: {form: [h|k, the word's own spelling]}."""
     out = {}
     for name, tag in (("kana-words.json", "h"), ("katakana-words.json", "k")):
         for w in load(name)["words"]:
             if w.get("g") == "parts":
                 continue
             key = w["w"].strip("～〜")
+            if "～" in key or "〜" in key:
+                continue
             key = key[:-2] if key.endswith("する") and tag == "k" else key
-            if len(key) >= 2 and "～" not in key and "〜" not in key:
-                out.setdefault(key, tag)
+            if len(key) < 2:
+                continue
+            out.setdefault(key, [tag, key])
+            for form in word_forms(key, w.get("g", "")):
+                if len(form) >= 2:
+                    out.setdefault(form, [tag, key])
     return dump(out)
 KANA_WORDS = kana_word_map()
 
@@ -168,16 +205,6 @@ def words_for(k):
     al = w.get("alone")
     return {"r": [[x["t"], x["label"], x["words"]] for x in w["readings"]], "sp": w["sp"],
             "al": [al["w"], al["r"], al["t"]] if al else None}
-
-I_ROW = "いきしちにひみりぎじびぴ"
-E_ROW = "えけせてねへめれげぜべぺ"
-
-GODAN = {"う": ("い", "わ", "っ"), "く": ("き", "か", "い"), "ぐ": ("ぎ", "が", "い"), "す": ("し", "さ", "し"), "つ": ("ち", "た", "っ"),
-         "ぬ": ("に", "な", "ん"), "ぶ": ("び", "ば", "ん"), "む": ("み", "ま", "ん"), "る": ("り", "ら", "っ")}
-END = r"(?![\u3041-\u309f])|(?=[はがをにでへともかやねよの][^\u3041-\u309f]|です|でした|ので|のに|と)"
-
-GODAN_RU = {"かじる", "ちぎる", "しゃべる", "かえる", "はいる", "しる", "きる", "はしる", "いる", "へる", "すべる", "ける", "にぎる"}   # look like る-verbs but aren't
-HONORIFIC_I = {"いらっしゃる", "なさる", "くださる", "おっしゃる"}   # ます-stem in い: いらっしゃいます
 
 def word_pattern(key, group):
     """A regex that finds a kana word in a sentence, including the usual conjugated forms of verbs and adjectives."""
