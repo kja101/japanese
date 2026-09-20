@@ -56,6 +56,8 @@ section.grp{margin:1.2rem 0 0;scroll-margin-top:150px}
 .ex .j rt{font-size:.5em}
 .ex mark{background:var(--seal-wash);color:inherit;border-radius:3px;padding:0 .1em}
 .ex .t{color:var(--muted)}
+.ex .exr{display:block;margin:0;font-size:.85rem}
+.hide-kana .wc:not(.shown) .exr{background:var(--chip);color:transparent;border-radius:3px}
 .hide-en .wc:not(.shown) .we,.hide-en .wc:not(.shown) .ex .t{background:var(--chip);color:transparent;border-radius:3px}
 .hide-kana .wc:not(.shown) .ww,.hide-kana .wc:not(.shown) .rj{background:var(--chip);color:transparent;border-radius:3px}
 .hide-en .wc,.hide-kana .wc{cursor:pointer}
@@ -74,7 +76,7 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 @media (max-width:640px){ .search{flex-basis:100%} .segs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%} .cards{grid-template-columns:1fr} section.grp{scroll-margin-top:170px} }
 </style>
 </head>
-<body>
+<body class="jb-page">
 <header class="top">
   <h1>__H1__</h1>
   <p class="sub">__INTRO__</p>
@@ -84,10 +86,12 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
     <input class="search" id="search" type="search" placeholder="Search kana, rōmaji or English" aria-label="Search">
     <div class="segs">
       <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Words</span><button data-tier="5" aria-pressed="false">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3" aria-pressed="false">N3</button><button data-tier="2" aria-pressed="false">N2</button></div>
+      <div class="seg" role="group" aria-label="Grammar blocks"><button data-jb="on" aria-pressed="true">Grammar blocks</button><button data-jb="off" aria-pressed="false">Off</button></div>
       <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
       <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="en" aria-pressed="false">Hide English</button><button data-hide="kana" aria-pressed="false">Hide Japanese</button></div>
     </div>
   </div>
+  <div id="kb"></div>
   <nav class="topics" id="nav"></nav>
 </div>
 <main id="main"></main>
@@ -105,12 +109,15 @@ const PARTS=D.parts;
 const KOSO=`<div class="koso-wrap"><table class="koso"><tr><th></th><th>こ<br>near me</th><th>そ<br>near you</th><th>あ<br>over there</th><th>ど<br>which?</th></tr>
 <tr><th>thing</th><td>これ</td><td>それ</td><td>あれ</td><td>どれ</td></tr><tr><th>place</th><td>ここ</td><td>そこ</td><td>あそこ</td><td>どこ</td></tr>
 <tr><th>direction, polite</th><td>こちら</td><td>そちら</td><td>あちら</td><td>どちら</td></tr><tr><th>+ noun</th><td>この</td><td>その</td><td>あの</td><td>どの</td></tr><tr><th>this kind of</th><td>こんな</td><td>そんな</td><td>あんな</td><td>どんな</td></tr></table></div>`;
+function markWord(html,key){   // highlight the word in the text parts of the html, not inside tags or furigana
+  let inRt=false, done=false;
+  return html.replace(/(<[^>]+>)|([^<]+)/g,(m,tag,text)=>{ if(tag){ if(/^<rt/.test(tag)) inRt=true; if(/^<\/rt/.test(tag)) inRt=false; return tag; }
+    if(inRt||done||!text.includes(key)) return text; done=true; return text.replace(key,`<mark>${key}</mark>`); });
+}
 function exHtml(x){
   if(!x.ex) return "";
-  const key=x.w.replace(/[～〜]/g,"");
-  const j=x.ex.p.map(([k,kn])=>{ let h=/[\u4e00-\u9fff]/.test(k)?rdWord(k,kn,"ruby"):esc(k);
-    return linkK(h.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(key,`<mark>${key}</mark>`)).join("")); }).join(" ");
-  return `<div class="ex"><div class="j">${j}${sayBtn(x.ex.p.map(q=>q[0]).join(""))}</div><div class="t">${esc(x.ex.en)}</div></div>`;
+  const S=jpSentence(x.ex,linkK);
+  return `<div class="ex"><div class="j">${markWord(S.jp,x.w.replace(/[～〜]/g,""))}${sayBtn(S.say)}</div><div class="rj exr">${S.rom}</div><div class="t">${S.en}</div></div>`;
 }
 function render(){
   const t=+state.tier, main=document.getElementById("main"), groups=D.groups;
@@ -149,6 +156,10 @@ document.getElementById("main").addEventListener("click",e=>{ const c=e.target.c
 document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
 try{ if(localStorage.getItem("rdcol")==="off") document.body.classList.add("no-rdcol"); }catch(e){}
 render();
+function applyBlocks(){ const on=blocksOn(); document.body.classList.toggle("jb-on",on); document.querySelectorAll("[data-jb]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.jb==="on")===on)); }
+document.getElementById("kb").innerHTML=jpKeybar();
+document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.dataset.jb==="on"); applyBlocks(); });
+applyBlocks(); initParticlePopup();
 initReturnLinks("__FROM__-return",".wc","data-w","iflash");
 // opened from a link such as kana-words.html?from=pb#w-もう: show that word and offer a way back
 (function(){

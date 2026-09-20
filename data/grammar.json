@@ -10,15 +10,75 @@
   "ex": [
    {
     "n": "私{わたし} は 学生{がくせい} です",
-    "en": "I'm a student"
+    "en": "I'm a student",
+    "jr": [
+     [
+      "W",
+      "私は"
+     ],
+     [
+      "V",
+      "学生です"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "I"
+     ],
+     [
+      "V",
+      "'m a student"
+     ]
+    ]
    },
    {
     "n": "今日{きょう} は 休{やす}み でした",
-    "en": "Today was a day off"
+    "en": "Today was a day off",
+    "jr": [
+     [
+      "T",
+      "今日は"
+     ],
+     [
+      "V",
+      "休みでした"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "Today"
+     ],
+     [
+      "V",
+      "was a day off"
+     ]
+    ]
    },
    {
     "n": "これ は 私{わたし} の 本{ほん} じゃないです",
-    "en": "This isn't my book"
+    "en": "This isn't my book",
+    "jr": [
+     [
+      "W",
+      "これは"
+     ],
+     [
+      "V",
+      "私の本じゃないです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "This"
+     ],
+     [
+      "V",
+      "isn't my book"
+     ]
+    ]
    }
   ]
  },
@@ -33,15 +93,91 @@
   "ex": [
    {
     "n": "毎朝{まいあさ} コーヒー を 飲{の}みます",
-    "en": "I drink coffee every morning"
+    "en": "I drink coffee every morning",
+    "jr": [
+     [
+      "T",
+      "毎朝"
+     ],
+     [
+      "O",
+      "コーヒーを"
+     ],
+     [
+      "V",
+      "飲みます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I drink"
+     ],
+     [
+      "O",
+      "coffee"
+     ],
+     [
+      "T",
+      "every morning"
+     ]
+    ]
    },
    {
     "n": "昨日{きのう} 映画{えいが} を 見{み}ました",
-    "en": "I watched a film yesterday"
+    "en": "I watched a film yesterday",
+    "jr": [
+     [
+      "T",
+      "昨日"
+     ],
+     [
+      "O",
+      "映画を"
+     ],
+     [
+      "V",
+      "見ました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I watched"
+     ],
+     [
+      "O",
+      "a film"
+     ],
+     [
+      "T",
+      "yesterday"
+     ]
+    ]
    },
    {
     "n": "肉{にく} は 食{た}べません",
-    "en": "I don't eat meat"
+    "en": "I don't eat meat",
+    "jr": [
+     [
+      "O",
+      "肉は"
+     ],
+     [
+      "V",
+      "食べません"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I don't eat"
+     ],
+     [
+      "O",
+      "meat"
+     ]
+    ]
    }
   ]
  },
@@ -56,11 +192,59 @@
   "ex": [
    {
     "n": "駅{えき} の 前{まえ} に 銀行{ぎんこう} が あります",
-    "en": "There's a bank in front of the station"
+    "en": "There's a bank in front of the station",
+    "jr": [
+     [
+      "P",
+      "駅の前に"
+     ],
+     [
+      "W",
+      "銀行が"
+     ],
+     [
+      "V",
+      "あります"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "There's"
+     ],
+     [
+      "W",
+      "a bank"
+     ],
+     [
+      "P",
+      "in front of the station"
+     ]
+    ]
    },
    {
     "n": "兄弟{きょうだい} が 二人{ふたり} います",
-    "en": "I have two brothers and sisters"
+    "en": "I have two brothers and sisters",
+    "jr": [
+     [
+      "W",
+      "兄弟が"
+     ],
+     [
+      "V",
+      "二人います"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I have two"
+     ],
+     [
+      "W",
+      "brothers and sisters"
+     ]
+    ]
    }
   ]
  },
@@ -75,15 +259,75 @@
   "ex": [
    {
     "n": "この 部屋{へや} は 広{ひろ}くない です",
-    "en": "This room isn't big"
+    "en": "This room isn't big",
+    "jr": [
+     [
+      "W",
+      "この部屋は"
+     ],
+     [
+      "V",
+      "広くないです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "This room"
+     ],
+     [
+      "V",
+      "isn't big"
+     ]
+    ]
    },
    {
     "n": "旅行{りょこう} は 楽{たの}しかった です",
-    "en": "The trip was fun"
+    "en": "The trip was fun",
+    "jr": [
+     [
+      "W",
+      "旅行は"
+     ],
+     [
+      "V",
+      "楽しかったです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "The trip"
+     ],
+     [
+      "V",
+      "was fun"
+     ]
+    ]
    },
    {
     "n": "静{しず}か な 町{まち} が 好{す}き です",
-    "en": "I like quiet towns"
+    "en": "I like quiet towns",
+    "jr": [
+     [
+      "O",
+      "静かな町が"
+     ],
+     [
+      "V",
+      "好きです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I like"
+     ],
+     [
+      "O",
+      "quiet towns"
+     ]
+    ]
    }
   ]
  },
@@ -98,11 +342,51 @@
   "ex": [
    {
     "n": "これ は 母{はは} の かばん です",
-    "en": "This is my mother's bag"
+    "en": "This is my mother's bag",
+    "jr": [
+     [
+      "W",
+      "これは"
+     ],
+     [
+      "V",
+      "母のかばんです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "This"
+     ],
+     [
+      "V",
+      "is my mother's bag"
+     ]
+    ]
    },
    {
     "n": "日本語{にほんご} の 先生{せんせい} は やさしい です",
-    "en": "The Japanese teacher is kind"
+    "en": "The Japanese teacher is kind",
+    "jr": [
+     [
+      "W",
+      "日本語の先生は"
+     ],
+     [
+      "V",
+      "やさしいです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "The Japanese teacher"
+     ],
+     [
+      "V",
+      "is kind"
+     ]
+    ]
    }
   ]
  },
@@ -117,11 +401,51 @@
   "ex": [
    {
     "n": "一緒{いっしょ} に 行{い}きましょう",
-    "en": "Let's go together"
+    "en": "Let's go together",
+    "jr": [
+     [
+      "H",
+      "一緒に"
+     ],
+     [
+      "V",
+      "行きましょう"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Let's go"
+     ],
+     [
+      "H",
+      "together"
+     ]
+    ]
    },
    {
     "n": "窓{まど} を 開{あ}けましょうか",
-    "en": "Shall I open the window?"
+    "en": "Shall I open the window?",
+    "jr": [
+     [
+      "O",
+      "窓を"
+     ],
+     [
+      "V",
+      "開けましょうか"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Shall I open"
+     ],
+     [
+      "O",
+      "the window"
+     ]
+    ]
    }
   ]
  },
@@ -136,7 +460,35 @@
   "ex": [
    {
     "n": "週末{しゅうまつ} 映画{えいが} を 見{み}ませんか",
-    "en": "Would you like to see a film at the weekend?"
+    "en": "Would you like to see a film at the weekend?",
+    "jr": [
+     [
+      "T",
+      "週末"
+     ],
+     [
+      "O",
+      "映画を"
+     ],
+     [
+      "V",
+      "見ませんか"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Would you like to see"
+     ],
+     [
+      "O",
+      "a film"
+     ],
+     [
+      "T",
+      "at the weekend"
+     ]
+    ]
    }
   ]
  },
@@ -151,11 +503,59 @@
   "ex": [
    {
     "n": "日本{にほん} へ 行{い}きたい です",
-    "en": "I want to go to Japan"
+    "en": "I want to go to Japan",
+    "jr": [
+     [
+      "P",
+      "日本へ"
+     ],
+     [
+      "V",
+      "行きたいです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I want to go"
+     ],
+     [
+      "P",
+      "to Japan"
+     ]
+    ]
    },
    {
     "n": "今日{きょう} は 何{なに} も 食{た}べたくない です",
-    "en": "I don't want to eat anything today"
+    "en": "I don't want to eat anything today",
+    "jr": [
+     [
+      "T",
+      "今日は"
+     ],
+     [
+      "O",
+      "何も"
+     ],
+     [
+      "V",
+      "食べたくないです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I don't want to eat"
+     ],
+     [
+      "O",
+      "anything"
+     ],
+     [
+      "T",
+      "today"
+     ]
+    ]
    }
   ]
  },
@@ -170,7 +570,27 @@
   "ex": [
    {
     "n": "新{あたら}しい 靴{くつ} が ほしい です",
-    "en": "I want new shoes"
+    "en": "I want new shoes",
+    "jr": [
+     [
+      "O",
+      "新しい靴が"
+     ],
+     [
+      "V",
+      "ほしいです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I want"
+     ],
+     [
+      "O",
+      "new shoes"
+     ]
+    ]
    }
   ]
  },
@@ -185,7 +605,43 @@
   "ex": [
    {
     "n": "デパート へ 服{ふく} を 買{か}い に 行{い}きます",
-    "en": "I'm going to the department store to buy clothes"
+    "en": "I'm going to the department store to buy clothes",
+    "jr": [
+     [
+      "P",
+      "デパートへ"
+     ],
+     [
+      "O",
+      "服を"
+     ],
+     [
+      "H",
+      "買いに"
+     ],
+     [
+      "V",
+      "行きます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'm going"
+     ],
+     [
+      "P",
+      "to the department store"
+     ],
+     [
+      "H",
+      "to buy"
+     ],
+     [
+      "O",
+      "clothes"
+     ]
+    ]
    }
   ]
  },
@@ -200,11 +656,59 @@
   "ex": [
    {
     "n": "ゆっくり 話{はな}して ください",
-    "en": "Please speak slowly"
+    "en": "Please speak slowly",
+    "jr": [
+     [
+      "H",
+      "ゆっくり"
+     ],
+     [
+      "V",
+      "話してください"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Please speak"
+     ],
+     [
+      "H",
+      "slowly"
+     ]
+    ]
    },
    {
     "n": "ここ に 名前{なまえ} を 書{か}いて ください",
-    "en": "Please write your name here"
+    "en": "Please write your name here",
+    "jr": [
+     [
+      "P",
+      "ここに"
+     ],
+     [
+      "O",
+      "名前を"
+     ],
+     [
+      "V",
+      "書いてください"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Please write"
+     ],
+     [
+      "O",
+      "your name"
+     ],
+     [
+      "P",
+      "here"
+     ]
+    ]
    }
   ]
  },
@@ -219,11 +723,59 @@
   "ex": [
    {
     "n": "今{いま} 雨{あめ} が 降{ふ}って います",
-    "en": "It's raining now"
+    "en": "It's raining now",
+    "jr": [
+     [
+      "T",
+      "今"
+     ],
+     [
+      "W",
+      "雨が"
+     ],
+     [
+      "V",
+      "降っています"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "It"
+     ],
+     [
+      "V",
+      "'s raining"
+     ],
+     [
+      "T",
+      "now"
+     ]
+    ]
    },
    {
     "n": "東京{とうきょう} に 住{す}んで います",
-    "en": "I live in Tokyo"
+    "en": "I live in Tokyo",
+    "jr": [
+     [
+      "P",
+      "東京に"
+     ],
+     [
+      "V",
+      "住んでいます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I live"
+     ],
+     [
+      "P",
+      "in Tokyo"
+     ]
+    ]
    }
   ]
  },
@@ -238,7 +790,27 @@
   "ex": [
    {
     "n": "写真{しゃしん} を 撮{と}っても いい ですか",
-    "en": "May I take a photo?"
+    "en": "May I take a photo?",
+    "jr": [
+     [
+      "O",
+      "写真を"
+     ],
+     [
+      "V",
+      "撮ってもいいですか"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "May I take"
+     ],
+     [
+      "O",
+      "a photo"
+     ]
+    ]
    }
   ]
  },
@@ -253,7 +825,31 @@
   "ex": [
    {
     "n": "ここ で たばこ を 吸{す}っては いけません",
-    "en": "You mustn't smoke here"
+    "en": "You mustn't smoke here",
+    "jr": [
+     [
+      "P",
+      "ここで"
+     ],
+     [
+      "O",
+      "たばこを"
+     ],
+     [
+      "V",
+      "吸ってはいけません"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "You mustn't smoke"
+     ],
+     [
+      "P",
+      "here"
+     ]
+    ]
    }
   ]
  },
@@ -268,7 +864,35 @@
   "ex": [
    {
     "n": "雨{あめ} です から、家{いえ} に います",
-    "en": "It's raining, so I'm staying at home"
+    "en": "It's raining, so I'm staying at home",
+    "jr": [
+     [
+      "H",
+      "雨ですから、"
+     ],
+     [
+      "P",
+      "家に"
+     ],
+     [
+      "V",
+      "います"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "It's raining, so"
+     ],
+     [
+      "V",
+      "I'm staying"
+     ],
+     [
+      "P",
+      "at home"
+     ]
+    ]
    }
   ]
  },
@@ -283,7 +907,19 @@
   "ex": [
    {
     "n": "高{たか}い です が、おいしい です",
-    "en": "It's expensive, but delicious"
+    "en": "It's expensive, but delicious",
+    "jr": [
+     [
+      "V",
+      "高いですが、おいしいです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "It's expensive, but delicious"
+     ]
+    ]
    }
   ]
  },
@@ -298,11 +934,55 @@
   "ex": [
    {
     "n": "寝{ね}る 前{まえ} に 本{ほん} を 読{よ}みます",
-    "en": "I read before I go to sleep"
+    "en": "I read before I go to sleep",
+    "jr": [
+     [
+      "T",
+      "寝る前に"
+     ],
+     [
+      "O",
+      "本を"
+     ],
+     [
+      "V",
+      "読みます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I read"
+     ],
+     [
+      "T",
+      "before I go to sleep"
+     ]
+    ]
    },
    {
     "n": "仕事{しごと} の 後{あと} で 会{あ}いましょう",
-    "en": "Let's meet after work"
+    "en": "Let's meet after work",
+    "jr": [
+     [
+      "T",
+      "仕事の後で"
+     ],
+     [
+      "V",
+      "会いましょう"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Let's meet"
+     ],
+     [
+      "T",
+      "after work"
+     ]
+    ]
    }
   ]
  },
@@ -317,7 +997,35 @@
   "ex": [
    {
     "n": "子供{こども} の とき、ロンドン に 住{す}んで いました",
-    "en": "When I was a child, I lived in London"
+    "en": "When I was a child, I lived in London",
+    "jr": [
+     [
+      "T",
+      "子供のとき、"
+     ],
+     [
+      "P",
+      "ロンドンに"
+     ],
+     [
+      "V",
+      "住んでいました"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "When I was a child"
+     ],
+     [
+      "V",
+      "I lived"
+     ],
+     [
+      "P",
+      "in London"
+     ]
+    ]
    }
   ]
  },
@@ -332,11 +1040,67 @@
   "ex": [
    {
     "n": "電車{でんしゃ} は バス より 速{はや}い です",
-    "en": "Trains are faster than buses"
+    "en": "Trains are faster than buses",
+    "jr": [
+     [
+      "W",
+      "電車は"
+     ],
+     [
+      "H",
+      "バスより"
+     ],
+     [
+      "V",
+      "速いです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "Trains"
+     ],
+     [
+      "V",
+      "are faster"
+     ],
+     [
+      "H",
+      "than buses"
+     ]
+    ]
    },
    {
     "n": "夏{なつ} より 冬{ふゆ} の 方{ほう} が 好{す}き です",
-    "en": "I prefer winter to summer"
+    "en": "I prefer winter to summer",
+    "jr": [
+     [
+      "H",
+      "夏より"
+     ],
+     [
+      "O",
+      "冬の方が"
+     ],
+     [
+      "V",
+      "好きです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I prefer"
+     ],
+     [
+      "O",
+      "winter"
+     ],
+     [
+      "H",
+      "to summer"
+     ]
+    ]
    }
   ]
  },
@@ -351,7 +1115,35 @@
   "ex": [
    {
     "n": "日本{にほん} へ 行{い}った ことが あります か",
-    "en": "Have you ever been to Japan?"
+    "en": "Have you ever been to Japan?",
+    "jr": [
+     [
+      "P",
+      "日本へ"
+     ],
+     [
+      "V",
+      "行ったことがあります"
+     ],
+     [
+      "Q",
+      "か"
+     ]
+    ],
+    "er": [
+     [
+      "Q",
+      "Have"
+     ],
+     [
+      "V",
+      "you ever been"
+     ],
+     [
+      "P",
+      "to Japan"
+     ]
+    ]
    }
   ]
  },
@@ -366,7 +1158,47 @@
   "ex": [
    {
     "n": "週末{しゅうまつ} は 本{ほん} を 読{よ}んだり、映画{えいが} を 見{み}たり します",
-    "en": "At weekends I do things like read and watch films"
+    "en": "At weekends I do things like read and watch films",
+    "jr": [
+     [
+      "T",
+      "週末は"
+     ],
+     [
+      "O",
+      "本を"
+     ],
+     [
+      "V",
+      "読んだり、"
+     ],
+     [
+      "O",
+      "映画を"
+     ],
+     [
+      "V",
+      "見たりします"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "At weekends"
+     ],
+     [
+      "V",
+      "I do things like read"
+     ],
+     [
+      "V",
+      "and watch"
+     ],
+     [
+      "O",
+      "films"
+     ]
+    ]
    }
   ]
  },
@@ -381,11 +1213,59 @@
   "ex": [
    {
     "n": "漢字{かんじ} が 少{すこ}し 読{よ}めます",
-    "en": "I can read a little kanji"
+    "en": "I can read a little kanji",
+    "jr": [
+     [
+      "O",
+      "漢字が"
+     ],
+     [
+      "H",
+      "少し"
+     ],
+     [
+      "V",
+      "読めます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I can read"
+     ],
+     [
+      "H",
+      "a little"
+     ],
+     [
+      "O",
+      "kanji"
+     ]
+    ]
    },
    {
     "n": "辛{から}い 物{もの} は 食{た}べられません",
-    "en": "I can't eat spicy food"
+    "en": "I can't eat spicy food",
+    "jr": [
+     [
+      "O",
+      "辛い物は"
+     ],
+     [
+      "V",
+      "食べられません"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I can't eat"
+     ],
+     [
+      "O",
+      "spicy food"
+     ]
+    ]
    }
   ]
  },
@@ -400,7 +1280,27 @@
   "ex": [
    {
     "n": "ここ で 泳{およ}ぐ ことが できます",
-    "en": "You can swim here"
+    "en": "You can swim here",
+    "jr": [
+     [
+      "P",
+      "ここで"
+     ],
+     [
+      "V",
+      "泳ぐことができます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "You can swim"
+     ],
+     [
+      "P",
+      "here"
+     ]
+    ]
    }
   ]
  },
@@ -415,7 +1315,35 @@
   "ex": [
    {
     "n": "明日{あした} は 早{はや}く 起{お}きなければ なりません",
-    "en": "I have to get up early tomorrow"
+    "en": "I have to get up early tomorrow",
+    "jr": [
+     [
+      "T",
+      "明日は"
+     ],
+     [
+      "H",
+      "早く"
+     ],
+     [
+      "V",
+      "起きなければなりません"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I have to get up"
+     ],
+     [
+      "H",
+      "early"
+     ],
+     [
+      "T",
+      "tomorrow"
+     ]
+    ]
    }
   ]
  },
@@ -430,7 +1358,27 @@
   "ex": [
    {
     "n": "明日{あした} は 来{こ}なくても いい です",
-    "en": "You don't need to come tomorrow"
+    "en": "You don't need to come tomorrow",
+    "jr": [
+     [
+      "T",
+      "明日は"
+     ],
+     [
+      "V",
+      "来なくてもいいです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "You don't need to come"
+     ],
+     [
+      "T",
+      "tomorrow"
+     ]
+    ]
    }
   ]
  },
@@ -445,7 +1393,35 @@
   "ex": [
    {
     "n": "駅{えき} に 着{つ}いたら、電話{でんわ} して ください",
-    "en": "Call me when you get to the station"
+    "en": "Call me when you get to the station",
+    "jr": [
+     [
+      "P",
+      "駅に"
+     ],
+     [
+      "H",
+      "着いたら、"
+     ],
+     [
+      "V",
+      "電話してください"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Call me"
+     ],
+     [
+      "H",
+      "when you get"
+     ],
+     [
+      "P",
+      "to the station"
+     ]
+    ]
    }
   ]
  },
@@ -460,7 +1436,27 @@
   "ex": [
    {
     "n": "安{やす}ければ 買{か}います",
-    "en": "If it's cheap, I'll buy it"
+    "en": "If it's cheap, I'll buy it",
+    "jr": [
+     [
+      "H",
+      "安ければ"
+     ],
+     [
+      "V",
+      "買います"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "If it's cheap"
+     ],
+     [
+      "V",
+      "I'll buy it"
+     ]
+    ]
    }
   ]
  },
@@ -475,7 +1471,43 @@
   "ex": [
    {
     "n": "この ボタン を 押{お}す と、ドア が 開{あ}きます",
-    "en": "Press this button and the door opens"
+    "en": "Press this button and the door opens",
+    "jr": [
+     [
+      "O",
+      "このボタンを"
+     ],
+     [
+      "H",
+      "押すと、"
+     ],
+     [
+      "W",
+      "ドアが"
+     ],
+     [
+      "V",
+      "開きます"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "Press"
+     ],
+     [
+      "O",
+      "this button"
+     ],
+     [
+      "W",
+      "the door"
+     ],
+     [
+      "V",
+      "opens"
+     ]
+    ]
    }
   ]
  },
@@ -490,7 +1522,35 @@
   "ex": [
    {
     "n": "来年{らいねん} 日本{にほん} で 働{はたら}く つもり です",
-    "en": "I'm planning to work in Japan next year"
+    "en": "I'm planning to work in Japan next year",
+    "jr": [
+     [
+      "T",
+      "来年"
+     ],
+     [
+      "P",
+      "日本で"
+     ],
+     [
+      "V",
+      "働くつもりです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'm planning to work"
+     ],
+     [
+      "P",
+      "in Japan"
+     ],
+     [
+      "T",
+      "next year"
+     ]
+    ]
    }
   ]
  },
@@ -505,7 +1565,27 @@
   "ex": [
    {
     "n": "この 料理{りょうり} を 食{た}べて みて ください",
-    "en": "Try this dish"
+    "en": "Try this dish",
+    "jr": [
+     [
+      "O",
+      "この料理を"
+     ],
+     [
+      "V",
+      "食べてみてください"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Try"
+     ],
+     [
+      "O",
+      "this dish"
+     ]
+    ]
    }
   ]
  },
@@ -520,7 +1600,35 @@
   "ex": [
    {
     "n": "電車{でんしゃ} に 傘{かさ} を 忘{わす}れて しまいました",
-    "en": "I went and left my umbrella on the train"
+    "en": "I went and left my umbrella on the train",
+    "jr": [
+     [
+      "P",
+      "電車に"
+     ],
+     [
+      "O",
+      "傘を"
+     ],
+     [
+      "V",
+      "忘れてしまいました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I went and left"
+     ],
+     [
+      "O",
+      "my umbrella"
+     ],
+     [
+      "P",
+      "on the train"
+     ]
+    ]
    }
   ]
  },
@@ -535,7 +1643,31 @@
   "ex": [
    {
     "n": "ホテル を 予約{よやく} して おきました",
-    "en": "I booked the hotel in advance"
+    "en": "I booked the hotel in advance",
+    "jr": [
+     [
+      "O",
+      "ホテルを"
+     ],
+     [
+      "V",
+      "予約しておきました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I booked"
+     ],
+     [
+      "O",
+      "the hotel"
+     ],
+     [
+      "H",
+      "in advance"
+     ]
+    ]
    }
   ]
  },
@@ -550,7 +1682,35 @@
   "ex": [
    {
     "n": "音楽{おんがく} を 聞{き}きながら 勉強{べんきょう} します",
-    "en": "I study while listening to music"
+    "en": "I study while listening to music",
+    "jr": [
+     [
+      "O",
+      "音楽を"
+     ],
+     [
+      "H",
+      "聞きながら"
+     ],
+     [
+      "V",
+      "勉強します"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I study"
+     ],
+     [
+      "H",
+      "while listening"
+     ],
+     [
+      "O",
+      "to music"
+     ]
+    ]
    }
   ]
  },
@@ -565,11 +1725,51 @@
   "ex": [
    {
     "n": "この かばん は 高{たか}すぎます",
-    "en": "This bag is too expensive"
+    "en": "This bag is too expensive",
+    "jr": [
+     [
+      "W",
+      "このかばんは"
+     ],
+     [
+      "V",
+      "高すぎます"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "This bag"
+     ],
+     [
+      "V",
+      "is too expensive"
+     ]
+    ]
    },
    {
     "n": "昨日{きのう} は 飲{の}みすぎました",
-    "en": "I drank too much yesterday"
+    "en": "I drank too much yesterday",
+    "jr": [
+     [
+      "T",
+      "昨日は"
+     ],
+     [
+      "V",
+      "飲みすぎました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I drank too much"
+     ],
+     [
+      "T",
+      "yesterday"
+     ]
+    ]
    }
   ]
  },
@@ -584,7 +1784,27 @@
   "ex": [
    {
     "n": "この ペン は 書{か}きやすい です",
-    "en": "This pen is easy to write with"
+    "en": "This pen is easy to write with",
+    "jr": [
+     [
+      "W",
+      "このペンは"
+     ],
+     [
+      "V",
+      "書きやすいです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "This pen"
+     ],
+     [
+      "V",
+      "is easy to write with"
+     ]
+    ]
    }
   ]
  },
@@ -599,11 +1819,51 @@
   "ex": [
    {
     "n": "この ケーキ は おいしそう です ね",
-    "en": "This cake looks delicious"
+    "en": "This cake looks delicious",
+    "jr": [
+     [
+      "W",
+      "このケーキは"
+     ],
+     [
+      "V",
+      "おいしそうですね"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "This cake"
+     ],
+     [
+      "V",
+      "looks delicious"
+     ]
+    ]
    },
    {
     "n": "雨{あめ} が 降{ふ}りそう です",
-    "en": "It looks like rain"
+    "en": "It looks like rain",
+    "jr": [
+     [
+      "W",
+      "雨が"
+     ],
+     [
+      "V",
+      "降りそうです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "It looks like"
+     ],
+     [
+      "W",
+      "rain"
+     ]
+    ]
    }
   ]
  },
@@ -618,7 +1878,35 @@
   "ex": [
    {
     "n": "田中{たなか}さん は 風邪{かぜ} を ひいた みたい です",
-    "en": "Mr Tanaka seems to have a cold"
+    "en": "Mr Tanaka seems to have a cold",
+    "jr": [
+     [
+      "W",
+      "田中さんは"
+     ],
+     [
+      "O",
+      "風邪を"
+     ],
+     [
+      "V",
+      "ひいたみたいです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "Mr Tanaka"
+     ],
+     [
+      "V",
+      "seems to have"
+     ],
+     [
+      "O",
+      "a cold"
+     ]
+    ]
    }
   ]
  },
@@ -633,7 +1921,43 @@
   "ex": [
    {
     "n": "この 店{みせ} は 安{やす}い し、おいしい し、よく 来{き}ます",
-    "en": "This place is cheap and good, so I come here often"
+    "en": "This place is cheap and good, so I come here often",
+    "jr": [
+     [
+      "W",
+      "この店は"
+     ],
+     [
+      "H",
+      "安いし、おいしいし、"
+     ],
+     [
+      "H",
+      "よく"
+     ],
+     [
+      "V",
+      "来ます"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "This place"
+     ],
+     [
+      "H",
+      "is cheap and good"
+     ],
+     [
+      "V",
+      "I come here"
+     ],
+     [
+      "H",
+      "often"
+     ]
+    ]
    }
   ]
  },
@@ -648,11 +1972,67 @@
   "ex": [
    {
     "n": "友達{ともだち} が 本{ほん} を くれました",
-    "en": "A friend gave me a book"
+    "en": "A friend gave me a book",
+    "jr": [
+     [
+      "W",
+      "友達が"
+     ],
+     [
+      "O",
+      "本を"
+     ],
+     [
+      "V",
+      "くれました"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "A friend"
+     ],
+     [
+      "V",
+      "gave me"
+     ],
+     [
+      "O",
+      "a book"
+     ]
+    ]
    },
    {
     "n": "先生{せんせい} に 日本語{にほんご} を 教{おし}えて もらいました",
-    "en": "The teacher taught me Japanese (for me)"
+    "en": "The teacher taught me Japanese (for me)",
+    "jr": [
+     [
+      "W",
+      "先生に"
+     ],
+     [
+      "O",
+      "日本語を"
+     ],
+     [
+      "V",
+      "教えてもらいました"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "The teacher"
+     ],
+     [
+      "V",
+      "taught me"
+     ],
+     [
+      "O",
+      "Japanese"
+     ]
+    ]
    }
   ]
  },
@@ -667,7 +2047,35 @@
   "ex": [
    {
     "n": "毎日{まいにち} 野菜{やさい} を 食{た}べる ように して います",
-    "en": "I make a point of eating vegetables every day"
+    "en": "I make a point of eating vegetables every day",
+    "jr": [
+     [
+      "T",
+      "毎日"
+     ],
+     [
+      "O",
+      "野菜を"
+     ],
+     [
+      "V",
+      "食べるようにしています"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I make a point of eating"
+     ],
+     [
+      "O",
+      "vegetables"
+     ],
+     [
+      "T",
+      "every day"
+     ]
+    ]
    }
   ]
  },
@@ -682,7 +2090,27 @@
   "ex": [
    {
     "n": "日本語{にほんご} の 新聞{しんぶん} が 読{よ}める ように なりました",
-    "en": "I've got to the point where I can read Japanese newspapers"
+    "en": "I've got to the point where I can read Japanese newspapers",
+    "jr": [
+     [
+      "O",
+      "日本語の新聞が"
+     ],
+     [
+      "V",
+      "読めるようになりました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I've got to the point where I can read"
+     ],
+     [
+      "O",
+      "Japanese newspapers"
+     ]
+    ]
    }
   ]
  },
@@ -697,7 +2125,27 @@
   "ex": [
    {
     "n": "忘{わす}れない ように メモ します",
-    "en": "I'll write it down so I don't forget"
+    "en": "I'll write it down so I don't forget",
+    "jr": [
+     [
+      "H",
+      "忘れないように"
+     ],
+     [
+      "V",
+      "メモします"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'll write it down"
+     ],
+     [
+      "H",
+      "so I don't forget"
+     ]
+    ]
    }
   ]
  },
@@ -712,11 +2160,59 @@
   "ex": [
    {
     "n": "日本{にほん} で 働{はたら}く ために 勉強{べんきょう} して います",
-    "en": "I'm studying in order to work in Japan"
+    "en": "I'm studying in order to work in Japan",
+    "jr": [
+     [
+      "H",
+      "日本で働くために"
+     ],
+     [
+      "V",
+      "勉強しています"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'm studying"
+     ],
+     [
+      "H",
+      "in order to work in Japan"
+     ]
+    ]
    },
    {
     "n": "事故{じこ} の ために 電車{でんしゃ} が 止{と}まりました",
-    "en": "The trains stopped because of an accident"
+    "en": "The trains stopped because of an accident",
+    "jr": [
+     [
+      "H",
+      "事故のために"
+     ],
+     [
+      "W",
+      "電車が"
+     ],
+     [
+      "V",
+      "止まりました"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "The trains"
+     ],
+     [
+      "V",
+      "stopped"
+     ],
+     [
+      "H",
+      "because of an accident"
+     ]
+    ]
    }
   ]
  },
@@ -731,11 +2227,59 @@
   "ex": [
    {
     "n": "来年{らいねん} 留学{りゅうがく} する ことに しました",
-    "en": "I've decided to study abroad next year"
+    "en": "I've decided to study abroad next year",
+    "jr": [
+     [
+      "T",
+      "来年"
+     ],
+     [
+      "V",
+      "留学することにしました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I've decided to study abroad"
+     ],
+     [
+      "T",
+      "next year"
+     ]
+    ]
    },
    {
     "n": "来月{らいげつ} 大阪{おおさか} へ 転勤{てんきん} する ことに なりました",
-    "en": "I'm being transferred to Osaka next month"
+    "en": "I'm being transferred to Osaka next month",
+    "jr": [
+     [
+      "T",
+      "来月"
+     ],
+     [
+      "P",
+      "大阪へ"
+     ],
+     [
+      "V",
+      "転勤することになりました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'm being transferred"
+     ],
+     [
+      "P",
+      "to Osaka"
+     ],
+     [
+      "T",
+      "next month"
+     ]
+    ]
    }
   ]
  },
@@ -750,7 +2294,27 @@
   "ex": [
    {
     "n": "日本{にほん} に 来{き}た ばかり です",
-    "en": "I've only just come to Japan"
+    "en": "I've only just come to Japan",
+    "jr": [
+     [
+      "P",
+      "日本に"
+     ],
+     [
+      "V",
+      "来たばかりです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I've only just come"
+     ],
+     [
+      "P",
+      "to Japan"
+     ]
+    ]
    }
   ]
  },
@@ -765,11 +2329,51 @@
   "ex": [
    {
     "n": "今{いま} 出{で}かける ところ です",
-    "en": "I'm just about to go out"
+    "en": "I'm just about to go out",
+    "jr": [
+     [
+      "T",
+      "今"
+     ],
+     [
+      "V",
+      "出かけるところです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'm just about to go out"
+     ]
+    ]
    },
    {
     "n": "今{いま} 晩{ばん}ご飯{はん} を 食{た}べて いる ところ です",
-    "en": "I'm in the middle of dinner"
+    "en": "I'm in the middle of dinner",
+    "jr": [
+     [
+      "T",
+      "今"
+     ],
+     [
+      "O",
+      "晩ご飯を"
+     ],
+     [
+      "V",
+      "食べているところです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'm in the middle of"
+     ],
+     [
+      "O",
+      "dinner"
+     ]
+    ]
    }
   ]
  },
@@ -784,7 +2388,27 @@
   "ex": [
    {
     "n": "温{あたた}かい うちに 食{た}べて ください",
-    "en": "Eat it while it's hot"
+    "en": "Eat it while it's hot",
+    "jr": [
+     [
+      "H",
+      "温かいうちに"
+     ],
+     [
+      "V",
+      "食べてください"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Eat it"
+     ],
+     [
+      "H",
+      "while it's hot"
+     ]
+    ]
    }
   ]
  },
@@ -799,7 +2423,35 @@
   "ex": [
    {
     "n": "この 歌{うた} を 聞{き}く たびに 学生{がくせい} の ころ を 思{おも}い出{だ}します",
-    "en": "Every time I hear this song, I remember my student days"
+    "en": "Every time I hear this song, I remember my student days",
+    "jr": [
+     [
+      "T",
+      "この歌を聞くたびに"
+     ],
+     [
+      "O",
+      "学生のころを"
+     ],
+     [
+      "V",
+      "思い出します"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "Every time I hear this song"
+     ],
+     [
+      "V",
+      "I remember"
+     ],
+     [
+      "O",
+      "my student days"
+     ]
+    ]
    }
   ]
  },
@@ -814,7 +2466,27 @@
   "ex": [
    {
     "n": "窓{まど} を 開{あ}けた まま 寝{ね}て しまいました",
-    "en": "I fell asleep with the window open"
+    "en": "I fell asleep with the window open",
+    "jr": [
+     [
+      "H",
+      "窓を開けたまま"
+     ],
+     [
+      "V",
+      "寝てしまいました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I fell asleep"
+     ],
+     [
+      "H",
+      "with the window open"
+     ]
+    ]
    }
   ]
  },
@@ -829,7 +2501,35 @@
   "ex": [
    {
     "n": "約束{やくそく} した のに、彼{かれ} は 来{き}ません でした",
-    "en": "He didn't come, even though he promised"
+    "en": "He didn't come, even though he promised",
+    "jr": [
+     [
+      "H",
+      "約束したのに、"
+     ],
+     [
+      "W",
+      "彼は"
+     ],
+     [
+      "V",
+      "来ませんでした"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "He"
+     ],
+     [
+      "V",
+      "didn't come"
+     ],
+     [
+      "H",
+      "even though he promised"
+     ]
+    ]
    }
   ]
  },
@@ -844,7 +2544,27 @@
   "ex": [
    {
     "n": "雨{あめ} が 降{ふ}っても 行{い}きます",
-    "en": "I'll go even if it rains"
+    "en": "I'll go even if it rains",
+    "jr": [
+     [
+      "H",
+      "雨が降っても"
+     ],
+     [
+      "V",
+      "行きます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'll go"
+     ],
+     [
+      "H",
+      "even if it rains"
+     ]
+    ]
    }
   ]
  },
@@ -859,7 +2579,39 @@
   "ex": [
    {
     "n": "熱{ねつ} が ある ので、今日{きょう} は 休{やす}みます",
-    "en": "I have a fever, so I'll take today off"
+    "en": "I have a fever, so I'll take today off",
+    "jr": [
+     [
+      "H",
+      "熱があるので、"
+     ],
+     [
+      "T",
+      "今日は"
+     ],
+     [
+      "V",
+      "休みます"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "I have a fever, so"
+     ],
+     [
+      "V",
+      "I'll take"
+     ],
+     [
+      "T",
+      "today"
+     ],
+     [
+      "V",
+      "off"
+     ]
+    ]
    }
   ]
  },
@@ -874,11 +2626,59 @@
   "ex": [
    {
     "n": "先生{せんせい} の おかげで 合格{ごうかく} しました",
-    "en": "I passed thanks to my teacher"
+    "en": "I passed thanks to my teacher",
+    "jr": [
+     [
+      "H",
+      "先生のおかげで"
+     ],
+     [
+      "V",
+      "合格しました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I passed"
+     ],
+     [
+      "H",
+      "thanks to my teacher"
+     ]
+    ]
    },
    {
     "n": "雨{あめ} の せいで 試合{しあい} が 中止{ちゅうし} に なりました",
-    "en": "The match was cancelled because of the rain"
+    "en": "The match was cancelled because of the rain",
+    "jr": [
+     [
+      "H",
+      "雨のせいで"
+     ],
+     [
+      "W",
+      "試合が"
+     ],
+     [
+      "V",
+      "中止になりました"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "The match"
+     ],
+     [
+      "V",
+      "was cancelled"
+     ],
+     [
+      "H",
+      "because of the rain"
+     ]
+    ]
    }
   ]
  },
@@ -893,7 +2693,39 @@
   "ex": [
    {
     "n": "十年{じゅうねん} も 住{す}んで いた の です か。日本語{にほんご} が 上手{じょうず} な わけ です ね",
-    "en": "You lived there ten years? No wonder your Japanese is good"
+    "en": "You lived there ten years? No wonder your Japanese is good",
+    "jr": [
+     [
+      "H",
+      "十年も住んでいたのですか。"
+     ],
+     [
+      "W",
+      "日本語が"
+     ],
+     [
+      "V",
+      "上手なわけですね"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "You lived there ten years?"
+     ],
+     [
+      "V",
+      "No wonder"
+     ],
+     [
+      "W",
+      "your Japanese"
+     ],
+     [
+      "V",
+      "is good"
+     ]
+    ]
    }
   ]
  },
@@ -908,7 +2740,27 @@
   "ex": [
    {
     "n": "肉{にく} が 嫌{きら}い な わけでは ありません",
-    "en": "It's not that I dislike meat"
+    "en": "It's not that I dislike meat",
+    "jr": [
+     [
+      "O",
+      "肉が"
+     ],
+     [
+      "V",
+      "嫌いなわけではありません"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "It's not that I dislike"
+     ],
+     [
+      "O",
+      "meat"
+     ]
+    ]
    }
   ]
  },
@@ -923,11 +2775,67 @@
   "ex": [
    {
     "n": "会議{かいぎ} は 三時{さんじ} に 終{お}わる はず です",
-    "en": "The meeting should finish at three"
+    "en": "The meeting should finish at three",
+    "jr": [
+     [
+      "W",
+      "会議は"
+     ],
+     [
+      "T",
+      "三時に"
+     ],
+     [
+      "V",
+      "終わるはずです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "The meeting"
+     ],
+     [
+      "V",
+      "should finish"
+     ],
+     [
+      "T",
+      "at three"
+     ]
+    ]
    },
    {
     "n": "彼{かれ} が そんな こと を 言{い}う はずが ありません",
-    "en": "He can't possibly have said that"
+    "en": "He can't possibly have said that",
+    "jr": [
+     [
+      "W",
+      "彼が"
+     ],
+     [
+      "O",
+      "そんなことを"
+     ],
+     [
+      "V",
+      "言うはずがありません"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "He"
+     ],
+     [
+      "V",
+      "can't possibly have said"
+     ],
+     [
+      "O",
+      "that"
+     ]
+    ]
    }
   ]
  },
@@ -942,7 +2850,27 @@
   "ex": [
    {
     "n": "約束{やくそく} は 守{まも}る べき です",
-    "en": "You ought to keep your promises"
+    "en": "You ought to keep your promises",
+    "jr": [
+     [
+      "O",
+      "約束は"
+     ],
+     [
+      "V",
+      "守るべきです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "You ought to keep"
+     ],
+     [
+      "O",
+      "your promises"
+     ]
+    ]
    }
   ]
  },
@@ -957,7 +2885,31 @@
   "ex": [
    {
     "n": "誰{だれ} も いない ようです",
-    "en": "It seems nobody's here"
+    "en": "It seems nobody's here",
+    "jr": [
+     [
+      "W",
+      "誰も"
+     ],
+     [
+      "V",
+      "いないようです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "It seems"
+     ],
+     [
+      "W",
+      "nobody"
+     ],
+     [
+      "V",
+      "'s here"
+     ]
+    ]
    }
   ]
  },
@@ -972,7 +2924,27 @@
   "ex": [
    {
     "n": "今日{きょう} は 春{はる} らしい 天気{てんき} です",
-    "en": "Today is real spring weather"
+    "en": "Today is real spring weather",
+    "jr": [
+     [
+      "T",
+      "今日は"
+     ],
+     [
+      "V",
+      "春らしい天気です"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "Today"
+     ],
+     [
+      "V",
+      "is real spring weather"
+     ]
+    ]
    }
   ]
  },
@@ -987,7 +2959,35 @@
   "ex": [
    {
     "n": "明日{あした} は 雪{ゆき} が 降{ふ}る そう です",
-    "en": "I hear it's going to snow tomorrow"
+    "en": "I hear it's going to snow tomorrow",
+    "jr": [
+     [
+      "T",
+      "明日は"
+     ],
+     [
+      "W",
+      "雪が"
+     ],
+     [
+      "V",
+      "降るそうです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I hear it's going to"
+     ],
+     [
+      "W",
+      "snow"
+     ],
+     [
+      "T",
+      "tomorrow"
+     ]
+    ]
    }
   ]
  },
@@ -1002,11 +3002,59 @@
   "ex": [
    {
     "n": "先生{せんせい} に 褒{ほ}められました",
-    "en": "I was praised by the teacher"
+    "en": "I was praised by the teacher",
+    "jr": [
+     [
+      "W",
+      "先生に"
+     ],
+     [
+      "V",
+      "褒められました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I was praised"
+     ],
+     [
+      "W",
+      "by the teacher"
+     ]
+    ]
    },
    {
     "n": "電車{でんしゃ} で 足{あし} を 踏{ふ}まれました",
-    "en": "Someone trod on my foot on the train"
+    "en": "Someone trod on my foot on the train",
+    "jr": [
+     [
+      "P",
+      "電車で"
+     ],
+     [
+      "O",
+      "足を"
+     ],
+     [
+      "V",
+      "踏まれました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Someone trod on"
+     ],
+     [
+      "O",
+      "my foot"
+     ],
+     [
+      "P",
+      "on the train"
+     ]
+    ]
    }
   ]
  },
@@ -1021,11 +3069,71 @@
   "ex": [
    {
     "n": "母{はは} は 弟{おとうと} に 野菜{やさい} を 食{た}べさせました",
-    "en": "Mother made my brother eat his vegetables"
+    "en": "Mother made my brother eat his vegetables",
+    "jr": [
+     [
+      "W",
+      "母は"
+     ],
+     [
+      "O",
+      "弟に"
+     ],
+     [
+      "O",
+      "野菜を"
+     ],
+     [
+      "V",
+      "食べさせました"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "Mother"
+     ],
+     [
+      "V",
+      "made"
+     ],
+     [
+      "O",
+      "my brother"
+     ],
+     [
+      "V",
+      "eat"
+     ],
+     [
+      "O",
+      "his vegetables"
+     ]
+    ]
    },
    {
     "n": "少{すこ}し 考{かんが}えさせて ください",
-    "en": "Please let me think about it"
+    "en": "Please let me think about it a little",
+    "jr": [
+     [
+      "H",
+      "少し"
+     ],
+     [
+      "V",
+      "考えさせてください"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Please let me think about it"
+     ],
+     [
+      "H",
+      "a little"
+     ]
+    ]
    }
   ]
  },
@@ -1040,7 +3148,39 @@
   "ex": [
    {
     "n": "子供{こども} の とき、ピアノ を 習{なら}わされました",
-    "en": "As a child I was made to take piano lessons"
+    "en": "As a child I was made to take piano lessons",
+    "jr": [
+     [
+      "T",
+      "子供のとき、"
+     ],
+     [
+      "O",
+      "ピアノを"
+     ],
+     [
+      "V",
+      "習わされました"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "As a child"
+     ],
+     [
+      "V",
+      "I was made to take"
+     ],
+     [
+      "O",
+      "piano"
+     ],
+     [
+      "V",
+      "lessons"
+     ]
+    ]
    }
   ]
  },
@@ -1055,7 +3195,27 @@
   "ex": [
    {
     "n": "もっと ゆっくり 話{はな}して ほしい です",
-    "en": "I'd like you to speak more slowly"
+    "en": "I'd like you to speak more slowly",
+    "jr": [
+     [
+      "H",
+      "もっとゆっくり"
+     ],
+     [
+      "V",
+      "話してほしいです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'd like you to speak"
+     ],
+     [
+      "H",
+      "more slowly"
+     ]
+    ]
    }
   ]
  },
@@ -1070,7 +3230,27 @@
   "ex": [
    {
     "n": "写真{しゃしん} を 撮{と}って いただけませんか",
-    "en": "Could you possibly take a photo for us?"
+    "en": "Could you possibly take a photo for us?",
+    "jr": [
+     [
+      "O",
+      "写真を"
+     ],
+     [
+      "V",
+      "撮っていただけませんか"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Could you possibly take"
+     ],
+     [
+      "O",
+      "a photo"
+     ]
+    ]
    }
   ]
  },
@@ -1085,11 +3265,55 @@
   "ex": [
    {
     "n": "社長{しゃちょう} は いらっしゃいますか",
-    "en": "Is the company president in?"
+    "en": "Is the company president in?",
+    "jr": [
+     [
+      "W",
+      "社長は"
+     ],
+     [
+      "V",
+      "いらっしゃいますか"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Is"
+     ],
+     [
+      "W",
+      "the company president"
+     ],
+     [
+      "V",
+      "in"
+     ]
+    ]
    },
    {
     "n": "田中{たなか} と 申{もう}します",
-    "en": "My name is Tanaka (humble)"
+    "en": "My name is Tanaka (humble)",
+    "jr": [
+     [
+      "H",
+      "田中と"
+     ],
+     [
+      "V",
+      "申します"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "My name is"
+     ],
+     [
+      "H",
+      "Tanaka"
+     ]
+    ]
    }
   ]
  },
@@ -1104,11 +3328,51 @@
   "ex": [
    {
     "n": "こちら で お待{ま}ち ください",
-    "en": "Please wait here"
+    "en": "Please wait here",
+    "jr": [
+     [
+      "P",
+      "こちらで"
+     ],
+     [
+      "V",
+      "お待ちください"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Please wait"
+     ],
+     [
+      "P",
+      "here"
+     ]
+    ]
    },
    {
     "n": "お荷物{にもつ} を お持{も}ち します",
-    "en": "I'll carry your bag for you"
+    "en": "I'll carry your bag for you",
+    "jr": [
+     [
+      "O",
+      "お荷物を"
+     ],
+     [
+      "V",
+      "お持ちします"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'll carry"
+     ],
+     [
+      "O",
+      "your bag"
+     ]
+    ]
    }
   ]
  },
@@ -1123,7 +3387,27 @@
   "ex": [
    {
     "n": "日本{にほん} の 歴史{れきし} に ついて 調{しら}べて います",
-    "en": "I'm researching Japanese history"
+    "en": "I'm researching Japanese history",
+    "jr": [
+     [
+      "O",
+      "日本の歴史について"
+     ],
+     [
+      "V",
+      "調べています"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'm researching"
+     ],
+     [
+      "O",
+      "Japanese history"
+     ]
+    ]
    }
   ]
  },
@@ -1138,7 +3422,35 @@
   "ex": [
    {
     "n": "人{ひと} に よって 考{かんが}え方{かた} が 違{ちが}います",
-    "en": "The way people think differs from person to person"
+    "en": "The way people think differs from person to person",
+    "jr": [
+     [
+      "H",
+      "人によって"
+     ],
+     [
+      "W",
+      "考え方が"
+     ],
+     [
+      "V",
+      "違います"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "The way people think"
+     ],
+     [
+      "V",
+      "differs"
+     ],
+     [
+      "H",
+      "from person to person"
+     ]
+    ]
    }
   ]
  },
@@ -1153,7 +3465,27 @@
   "ex": [
    {
     "n": "通訳{つうやく} として 働{はたら}いて います",
-    "en": "I work as an interpreter"
+    "en": "I work as an interpreter",
+    "jr": [
+     [
+      "H",
+      "通訳として"
+     ],
+     [
+      "V",
+      "働いています"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I work"
+     ],
+     [
+      "H",
+      "as an interpreter"
+     ]
+    ]
    }
   ]
  },
@@ -1168,7 +3500,27 @@
   "ex": [
    {
     "n": "説明書{せつめいしょ} の とおり に 作{つく}って ください",
-    "en": "Please make it as the instructions say"
+    "en": "Please make it as the instructions say",
+    "jr": [
+     [
+      "H",
+      "説明書のとおりに"
+     ],
+     [
+      "V",
+      "作ってください"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Please make it"
+     ],
+     [
+      "H",
+      "as the instructions say"
+     ]
+    ]
    }
   ]
  },
@@ -1183,7 +3535,27 @@
   "ex": [
    {
     "n": "練習{れんしゅう} すれば する ほど 上手{じょうず} に なります",
-    "en": "The more you practise, the better you get"
+    "en": "The more you practise, the better you get",
+    "jr": [
+     [
+      "H",
+      "練習すればするほど"
+     ],
+     [
+      "V",
+      "上手になります"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "The more you practise"
+     ],
+     [
+      "V",
+      "the better you get"
+     ]
+    ]
    }
   ]
  },
@@ -1198,7 +3570,35 @@
   "ex": [
    {
     "n": "朝{あさ}ご飯{はん} を 食{た}べずに 家{いえ} を 出{で}ました",
-    "en": "I left home without eating breakfast"
+    "en": "I left home without eating breakfast",
+    "jr": [
+     [
+      "H",
+      "朝ご飯を食べずに"
+     ],
+     [
+      "O",
+      "家を"
+     ],
+     [
+      "V",
+      "出ました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I left"
+     ],
+     [
+      "O",
+      "home"
+     ],
+     [
+      "H",
+      "without eating breakfast"
+     ]
+    ]
    }
   ]
  },
@@ -1213,7 +3613,27 @@
   "ex": [
    {
     "n": "最近{さいきん} 忘{わす}れっぽく なりました",
-    "en": "I've become forgetful lately"
+    "en": "I've become forgetful lately",
+    "jr": [
+     [
+      "T",
+      "最近"
+     ],
+     [
+      "V",
+      "忘れっぽくなりました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I've become forgetful"
+     ],
+     [
+      "T",
+      "lately"
+     ]
+    ]
    }
   ]
  },
@@ -1228,7 +3648,35 @@
   "ex": [
    {
     "n": "冬{ふゆ} は 風邪{かぜ} を ひき がち です",
-    "en": "I tend to catch colds in winter"
+    "en": "I tend to catch colds in winter",
+    "jr": [
+     [
+      "T",
+      "冬は"
+     ],
+     [
+      "O",
+      "風邪を"
+     ],
+     [
+      "V",
+      "ひきがちです"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I tend to catch"
+     ],
+     [
+      "O",
+      "colds"
+     ],
+     [
+      "T",
+      "in winter"
+     ]
+    ]
    }
   ]
  },
@@ -1243,7 +3691,27 @@
   "ex": [
    {
     "n": "明日{あした} 行{い}ける か どうか 分{わ}かりません",
-    "en": "I don't know whether I can go tomorrow"
+    "en": "I don't know whether I can go tomorrow",
+    "jr": [
+     [
+      "O",
+      "明日行けるかどうか"
+     ],
+     [
+      "V",
+      "分かりません"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I don't know"
+     ],
+     [
+      "O",
+      "whether I can go tomorrow"
+     ]
+    ]
    }
   ]
  },
@@ -1258,7 +3726,27 @@
   "ex": [
    {
     "n": "「さくら」 と いう 店{みせ} を 知{し}って いますか",
-    "en": "Do you know a shop called Sakura?"
+    "en": "Do you know a shop called Sakura?",
+    "jr": [
+     [
+      "O",
+      "「さくら」という店を"
+     ],
+     [
+      "V",
+      "知っていますか"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Do you know"
+     ],
+     [
+      "O",
+      "a shop called Sakura"
+     ]
+    ]
    }
   ]
  },
@@ -1273,7 +3761,27 @@
   "ex": [
    {
     "n": "大事{だいじ} な 会議{かいぎ} なので、休{やす}む わけには いきません",
-    "en": "It's an important meeting, so I can't very well take the day off"
+    "en": "It's an important meeting, so I can't very well take the day off",
+    "jr": [
+     [
+      "H",
+      "大事な会議なので、"
+     ],
+     [
+      "V",
+      "休むわけにはいきません"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "It's an important meeting, so"
+     ],
+     [
+      "V",
+      "I can't very well take the day off"
+     ]
+    ]
    }
   ]
  },
@@ -1288,7 +3796,27 @@
   "ex": [
    {
     "n": "雨{あめ} が ひどい ので、中止{ちゅうし} せざるを 得{え}ません",
-    "en": "The rain is so heavy we have no choice but to cancel"
+    "en": "The rain is so heavy we have no choice but to cancel",
+    "jr": [
+     [
+      "H",
+      "雨がひどいので、"
+     ],
+     [
+      "V",
+      "中止せざるを得ません"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "The rain is so heavy"
+     ],
+     [
+      "V",
+      "we have no choice but to cancel"
+     ]
+    ]
    }
   ]
  },
@@ -1303,7 +3831,35 @@
   "ex": [
    {
     "n": "電気{でんき} が ついて いる から、家{いえ} に いる に 違{ちが}いない",
-    "en": "The lights are on, so they must be at home"
+    "en": "The lights are on, so they must be at home",
+    "jr": [
+     [
+      "H",
+      "電気がついているから、"
+     ],
+     [
+      "P",
+      "家に"
+     ],
+     [
+      "V",
+      "いるに違いない"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "The lights are on, so"
+     ],
+     [
+      "V",
+      "they must be"
+     ],
+     [
+      "P",
+      "at home"
+     ]
+    ]
    }
   ]
  },
@@ -1318,7 +3874,35 @@
   "ex": [
    {
     "n": "それ は うわさ に 過{す}ぎません",
-    "en": "That's nothing more than a rumour"
+    "en": "That's nothing more than a rumour",
+    "jr": [
+     [
+      "W",
+      "それは"
+     ],
+     [
+      "O",
+      "うわさに"
+     ],
+     [
+      "V",
+      "過ぎません"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "That"
+     ],
+     [
+      "V",
+      "'s nothing more than"
+     ],
+     [
+      "O",
+      "a rumour"
+     ]
+    ]
    }
   ]
  },
@@ -1333,7 +3917,27 @@
   "ex": [
    {
     "n": "そんな に 飲{の}んだら、病気{びょうき} に なり かねません",
-    "en": "Drink like that and you could well get ill"
+    "en": "Drink like that and you could well get ill",
+    "jr": [
+     [
+      "H",
+      "そんなに飲んだら、"
+     ],
+     [
+      "V",
+      "病気になりかねません"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "Drink like that"
+     ],
+     [
+      "V",
+      "and you could well get ill"
+     ]
+    ]
    }
   ]
  },
@@ -1348,7 +3952,27 @@
   "ex": [
    {
     "n": "その 質問{しつもん} に は お答{こた}え し かねます",
-    "en": "I'm afraid I can't answer that question"
+    "en": "I'm afraid I can't answer that question",
+    "jr": [
+     [
+      "O",
+      "その質問には"
+     ],
+     [
+      "V",
+      "お答えしかねます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'm afraid I can't answer"
+     ],
+     [
+      "O",
+      "that question"
+     ]
+    ]
    }
   ]
  },
@@ -1363,7 +3987,27 @@
   "ex": [
    {
     "n": "彼{かれ} の 話{はなし} は 信{しん}じ がたい です",
-    "en": "His story is hard to believe"
+    "en": "His story is hard to believe",
+    "jr": [
+     [
+      "W",
+      "彼の話は"
+     ],
+     [
+      "V",
+      "信じがたいです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "His story"
+     ],
+     [
+      "V",
+      "is hard to believe"
+     ]
+    ]
    }
   ]
  },
@@ -1378,7 +4022,27 @@
   "ex": [
    {
     "n": "連絡先{れんらくさき} が 分{わ}からない ので、連絡{れんらく} し ようが ありません",
-    "en": "I don't know their contact details, so there's no way to reach them"
+    "en": "I don't know their contact details, so there's no way to reach them",
+    "jr": [
+     [
+      "H",
+      "連絡先が分からないので、"
+     ],
+     [
+      "V",
+      "連絡しようがありません"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "I don't know their contact details, so"
+     ],
+     [
+      "V",
+      "there's no way to reach them"
+     ]
+    ]
    }
   ]
  },
@@ -1393,7 +4057,27 @@
   "ex": [
    {
     "n": "高{たか}い 物{もの} が いい とは 限{かぎ}りません",
-    "en": "Expensive things aren't necessarily good"
+    "en": "Expensive things aren't necessarily good",
+    "jr": [
+     [
+      "W",
+      "高い物が"
+     ],
+     [
+      "V",
+      "いいとは限りません"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "Expensive things"
+     ],
+     [
+      "V",
+      "aren't necessarily good"
+     ]
+    ]
    }
   ]
  },
@@ -1408,7 +4092,27 @@
   "ex": [
    {
     "n": "お客様{きゃくさま} に 対{たい}して 失礼{しつれい} です",
-    "en": "That's rude to a customer"
+    "en": "That's rude to a customer",
+    "jr": [
+     [
+      "O",
+      "お客様に対して"
+     ],
+     [
+      "V",
+      "失礼です"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "That's rude"
+     ],
+     [
+      "O",
+      "to a customer"
+     ]
+    ]
    }
   ]
  },
@@ -1423,7 +4127,35 @@
   "ex": [
    {
     "n": "この 件{けん} に 関{かん}して 質問{しつもん} が あります",
-    "en": "I have a question regarding this matter"
+    "en": "I have a question regarding this matter",
+    "jr": [
+     [
+      "O",
+      "この件に関して"
+     ],
+     [
+      "W",
+      "質問が"
+     ],
+     [
+      "V",
+      "あります"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I have"
+     ],
+     [
+      "W",
+      "a question"
+     ],
+     [
+      "O",
+      "regarding this matter"
+     ]
+    ]
    }
   ]
  },
@@ -1438,7 +4170,35 @@
   "ex": [
    {
     "n": "私{わたし} に とって 家族{かぞく} が 一番{いちばん} 大切{たいせつ} です",
-    "en": "For me, family matters most"
+    "en": "For me, family matters most",
+    "jr": [
+     [
+      "H",
+      "私にとって"
+     ],
+     [
+      "W",
+      "家族が"
+     ],
+     [
+      "V",
+      "一番大切です"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "For me"
+     ],
+     [
+      "W",
+      "family"
+     ],
+     [
+      "V",
+      "matters most"
+     ]
+    ]
    }
   ]
  },
@@ -1453,7 +4213,35 @@
   "ex": [
    {
     "n": "去年{きょねん} に 比{くら}べて 今年{ことし} は 暑{あつ}い です",
-    "en": "This year is hot compared with last year"
+    "en": "This year is hot compared with last year",
+    "jr": [
+     [
+      "H",
+      "去年に比べて"
+     ],
+     [
+      "T",
+      "今年は"
+     ],
+     [
+      "V",
+      "暑いです"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "This year"
+     ],
+     [
+      "V",
+      "is hot"
+     ],
+     [
+      "H",
+      "compared with last year"
+     ]
+    ]
    }
   ]
  },
@@ -1468,7 +4256,35 @@
   "ex": [
    {
     "n": "データ に 基{もと}づいて 計画{けいかく} を 立{た}てました",
-    "en": "We made the plan based on the data"
+    "en": "We made the plan based on the data",
+    "jr": [
+     [
+      "H",
+      "データに基づいて"
+     ],
+     [
+      "O",
+      "計画を"
+     ],
+     [
+      "V",
+      "立てました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "We made"
+     ],
+     [
+      "O",
+      "the plan"
+     ],
+     [
+      "H",
+      "based on the data"
+     ]
+    ]
    }
   ]
  },
@@ -1483,7 +4299,35 @@
   "ex": [
    {
     "n": "雨{あめ} にも かかわらず、大勢{おおぜい} の 人{ひと} が 来{き}ました",
-    "en": "Despite the rain, lots of people came"
+    "en": "Despite the rain, lots of people came",
+    "jr": [
+     [
+      "H",
+      "雨にもかかわらず、"
+     ],
+     [
+      "W",
+      "大勢の人が"
+     ],
+     [
+      "V",
+      "来ました"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "Despite the rain"
+     ],
+     [
+      "W",
+      "lots of people"
+     ],
+     [
+      "V",
+      "came"
+     ]
+    ]
    }
   ]
  },
@@ -1498,7 +4342,35 @@
   "ex": [
    {
     "n": "買{か}った ものの、まだ 一度{いちど} も 使{つか}って いません",
-    "en": "I bought it, but I haven't used it once"
+    "en": "I bought it, but I haven't used it once",
+    "jr": [
+     [
+      "H",
+      "買ったものの、"
+     ],
+     [
+      "H",
+      "まだ一度も"
+     ],
+     [
+      "V",
+      "使っていません"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "I bought it, but"
+     ],
+     [
+      "V",
+      "I haven't used it"
+     ],
+     [
+      "H",
+      "once"
+     ]
+    ]
    }
   ]
  },
@@ -1513,7 +4385,27 @@
   "ex": [
    {
     "n": "知{し}って いる くせに、教{おし}えて くれません",
-    "en": "He knows, but he won't tell me"
+    "en": "He knows, but he won't tell me",
+    "jr": [
+     [
+      "H",
+      "知っているくせに、"
+     ],
+     [
+      "V",
+      "教えてくれません"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "He knows, but"
+     ],
+     [
+      "V",
+      "he won't tell me"
+     ]
+    ]
    }
   ]
  },
@@ -1528,7 +4420,35 @@
   "ex": [
    {
     "n": "好{す}き だ から こそ、厳{きび}しく 言{い}う の です",
-    "en": "It's precisely because I care that I'm strict"
+    "en": "It's precisely because I care that I'm strict",
+    "jr": [
+     [
+      "H",
+      "好きだからこそ、"
+     ],
+     [
+      "H",
+      "厳しく"
+     ],
+     [
+      "V",
+      "言うのです"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "It's precisely because I care"
+     ],
+     [
+      "V",
+      "that I'm"
+     ],
+     [
+      "H",
+      "strict"
+     ]
+    ]
    }
   ]
  },
@@ -1543,7 +4463,27 @@
   "ex": [
    {
     "n": "約束{やくそく} した から には、守{まも}ります",
-    "en": "Now that I've promised, I'll keep it"
+    "en": "Now that I've promised, I'll keep it",
+    "jr": [
+     [
+      "H",
+      "約束したからには、"
+     ],
+     [
+      "V",
+      "守ります"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "Now that I've promised"
+     ],
+     [
+      "V",
+      "I'll keep it"
+     ]
+    ]
    }
   ]
  },
@@ -1558,7 +4498,27 @@
   "ex": [
    {
     "n": "よく 考{かんが}えた 上{うえ} で 決{き}めます",
-    "en": "I'll decide after thinking it over carefully"
+    "en": "I'll decide after thinking it over carefully",
+    "jr": [
+     [
+      "H",
+      "よく考えた上で"
+     ],
+     [
+      "V",
+      "決めます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I'll decide"
+     ],
+     [
+      "H",
+      "after thinking it over carefully"
+     ]
+    ]
    }
   ]
  },
@@ -1573,7 +4533,27 @@
   "ex": [
    {
     "n": "準備{じゅんび} が でき 次第{しだい}、出発{しゅっぱつ} します",
-    "en": "We'll set off as soon as we're ready"
+    "en": "We'll set off as soon as we're ready",
+    "jr": [
+     [
+      "H",
+      "準備ができ次第、"
+     ],
+     [
+      "V",
+      "出発します"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "We'll set off"
+     ],
+     [
+      "H",
+      "as soon as we're ready"
+     ]
+    ]
    }
   ]
  },
@@ -1588,7 +4568,35 @@
   "ex": [
    {
     "n": "立{た}ち上{あ}がった とたん、めまい が しました",
-    "en": "The moment I stood up, I felt dizzy"
+    "en": "The moment I stood up, I felt dizzy",
+    "jr": [
+     [
+      "T",
+      "立ち上がったとたん、"
+     ],
+     [
+      "W",
+      "めまいが"
+     ],
+     [
+      "V",
+      "しました"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "The moment I stood up"
+     ],
+     [
+      "V",
+      "I felt"
+     ],
+     [
+      "W",
+      "dizzy"
+     ]
+    ]
    }
   ]
  },
@@ -1603,7 +4611,27 @@
   "ex": [
    {
     "n": "物価{ぶっか} は 上{あ}がる 一方{いっぽう} です",
-    "en": "Prices just keep going up"
+    "en": "Prices just keep going up",
+    "jr": [
+     [
+      "W",
+      "物価は"
+     ],
+     [
+      "V",
+      "上がる一方です"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "Prices"
+     ],
+     [
+      "V",
+      "just keep going up"
+     ]
+    ]
    }
   ]
  },
@@ -1618,7 +4646,27 @@
   "ex": [
    {
     "n": "町{まち} の 様子{ようす} は 変{か}わり つつ あります",
-    "en": "The town is in the middle of changing"
+    "en": "The town is in the middle of changing",
+    "jr": [
+     [
+      "W",
+      "町の様子は"
+     ],
+     [
+      "V",
+      "変わりつつあります"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "The town"
+     ],
+     [
+      "V",
+      "is in the middle of changing"
+     ]
+    ]
    }
   ]
  },
@@ -1633,7 +4681,19 @@
   "ex": [
    {
     "n": "心配{しんぱい} する ことは ありません",
-    "en": "There's no need to worry"
+    "en": "There's no need to worry",
+    "jr": [
+     [
+      "V",
+      "心配することはありません"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "There's no need to worry"
+     ]
+    ]
    }
   ]
  },
@@ -1648,7 +4708,47 @@
   "ex": [
    {
     "n": "子供{こども} の ころ、よく この 川{かわ} で 遊{あそ}んだ もの です",
-    "en": "As a child I often used to play in this river"
+    "en": "As a child I often used to play in this river",
+    "jr": [
+     [
+      "T",
+      "子供のころ、"
+     ],
+     [
+      "H",
+      "よく"
+     ],
+     [
+      "P",
+      "この川で"
+     ],
+     [
+      "V",
+      "遊んだものです"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "As a child"
+     ],
+     [
+      "V",
+      "I"
+     ],
+     [
+      "H",
+      "often"
+     ],
+     [
+      "V",
+      "used to play"
+     ],
+     [
+      "P",
+      "in this river"
+     ]
+    ]
    }
   ]
  },
@@ -1663,7 +4763,47 @@
   "ex": [
    {
     "n": "彼{かれ} は 英語{えいご} ばかりか 中国語{ちゅうごくご} も 話{はな}せます",
-    "en": "Not only does he speak English, he speaks Chinese too"
+    "en": "Not only does he speak English, he speaks Chinese too",
+    "jr": [
+     [
+      "W",
+      "彼は"
+     ],
+     [
+      "O",
+      "英語ばかりか中国語も"
+     ],
+     [
+      "V",
+      "話せます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "Not only does"
+     ],
+     [
+      "W",
+      "he"
+     ],
+     [
+      "V",
+      "speak"
+     ],
+     [
+      "O",
+      "English"
+     ],
+     [
+      "V",
+      "he speaks"
+     ],
+     [
+      "O",
+      "Chinese too"
+     ]
+    ]
    }
   ]
  },
@@ -1678,7 +4818,35 @@
   "ex": [
    {
     "n": "休{やす}む どころか、寝{ね}る 時間{じかん} も ありません",
-    "en": "Far from resting, I don't even have time to sleep"
+    "en": "Far from resting, I don't even have time to sleep",
+    "jr": [
+     [
+      "H",
+      "休むどころか、"
+     ],
+     [
+      "W",
+      "寝る時間も"
+     ],
+     [
+      "V",
+      "ありません"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "Far from resting"
+     ],
+     [
+      "V",
+      "I don't even have"
+     ],
+     [
+      "W",
+      "time to sleep"
+     ]
+    ]
    }
   ]
  },
@@ -1693,7 +4861,27 @@
   "ex": [
    {
     "n": "疲{つか}れた とき は 寝{ね}る に 限{かぎ}ります",
-    "en": "When you're tired, sleep is the best thing"
+    "en": "When you're tired, sleep is the best thing",
+    "jr": [
+     [
+      "T",
+      "疲れたときは"
+     ],
+     [
+      "V",
+      "寝るに限ります"
+     ]
+    ],
+    "er": [
+     [
+      "T",
+      "When you're tired"
+     ],
+     [
+      "V",
+      "sleep is the best thing"
+     ]
+    ]
    }
   ]
  },
@@ -1708,7 +4896,35 @@
   "ex": [
    {
     "n": "この 店{みせ} は 値段{ねだん} の わりに おいしい です",
-    "en": "This place is good for the price"
+    "en": "This place is good for the price",
+    "jr": [
+     [
+      "W",
+      "この店は"
+     ],
+     [
+      "H",
+      "値段のわりに"
+     ],
+     [
+      "V",
+      "おいしいです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "This place"
+     ],
+     [
+      "V",
+      "is good"
+     ],
+     [
+      "H",
+      "for the price"
+     ]
+    ]
    }
   ]
  },
@@ -1723,7 +4939,35 @@
   "ex": [
    {
     "n": "買{か}い物{もの} の ついでに 銀行{ぎんこう} に 寄{よ}りました",
-    "en": "I dropped in at the bank while I was out shopping"
+    "en": "I dropped in at the bank while I was out shopping",
+    "jr": [
+     [
+      "H",
+      "買い物のついでに"
+     ],
+     [
+      "P",
+      "銀行に"
+     ],
+     [
+      "V",
+      "寄りました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I dropped in"
+     ],
+     [
+      "P",
+      "at the bank"
+     ],
+     [
+      "H",
+      "while I was out shopping"
+     ]
+    ]
    }
   ]
  },
@@ -1738,7 +4982,35 @@
   "ex": [
    {
     "n": "時間{じかん} さえ あれば、旅行{りょこう} に 行{い}けます",
-    "en": "If only I had the time, I could go travelling"
+    "en": "If only I had the time, I could go travelling",
+    "jr": [
+     [
+      "H",
+      "時間さえあれば、"
+     ],
+     [
+      "P",
+      "旅行に"
+     ],
+     [
+      "V",
+      "行けます"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "If only I had the time"
+     ],
+     [
+      "V",
+      "I could go"
+     ],
+     [
+      "P",
+      "travelling"
+     ]
+    ]
    }
   ]
  },
@@ -1753,7 +5025,27 @@
   "ex": [
    {
     "n": "そんな 難{むずか}しい 問題{もんだい}、分{わ}かりっこない よ",
-    "en": "There's no way I can work out a problem that hard"
+    "en": "There's no way I can work out a problem that hard",
+    "jr": [
+     [
+      "O",
+      "そんな難しい問題、"
+     ],
+     [
+      "V",
+      "分かりっこないよ"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "There's no way I can work out"
+     ],
+     [
+      "O",
+      "a problem that hard"
+     ]
+    ]
    }
   ]
  },
@@ -1768,7 +5060,35 @@
   "ex": [
    {
     "n": "東京{とうきょう} を はじめ、大{おお}きな 町{まち} は 物価{ぶっか} が 高{たか}い です",
-    "en": "Big cities, starting with Tokyo, are expensive"
+    "en": "Big cities, starting with Tokyo, are expensive",
+    "jr": [
+     [
+      "H",
+      "東京をはじめ、"
+     ],
+     [
+      "W",
+      "大きな町は"
+     ],
+     [
+      "V",
+      "物価が高いです"
+     ]
+    ],
+    "er": [
+     [
+      "W",
+      "Big cities"
+     ],
+     [
+      "H",
+      "starting with Tokyo"
+     ],
+     [
+      "V",
+      "are expensive"
+     ]
+    ]
    }
   ]
  },
@@ -1783,7 +5103,39 @@
   "ex": [
    {
     "n": "冗談{じょうだん} 抜{ぬ}き で、本当{ほんとう} に 困{こま}って います",
-    "en": "Joking aside, I'm really in trouble"
+    "en": "Joking aside, I'm really in trouble",
+    "jr": [
+     [
+      "H",
+      "冗談抜きで、"
+     ],
+     [
+      "H",
+      "本当に"
+     ],
+     [
+      "V",
+      "困っています"
+     ]
+    ],
+    "er": [
+     [
+      "H",
+      "Joking aside"
+     ],
+     [
+      "V",
+      "I'm"
+     ],
+     [
+      "H",
+      "really"
+     ],
+     [
+      "V",
+      "in trouble"
+     ]
+    ]
    }
   ]
  }

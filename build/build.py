@@ -71,6 +71,66 @@ def kana_word_map():
     return dump(out)
 KANA_WORDS = kana_word_map()
 
+NOTE_RE = re.compile(r"([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}")
+
+def token_roles(n, jr):
+    """Hand-marked blocks [[role, text], ...] → one role per space-separated token of the sentence."""
+    toks = n.split(" ")
+    plains = [NOTE_RE.sub(r"\1", t) for t in toks]
+    full = "".join(plains)
+    marked = "".join(t for _, t in jr).replace(" ", "")
+    if marked != full:
+        raise SystemExit(f"block marking doesn't match the sentence:\n  {full}\n  {marked}")
+    bounds, pos = [], 0
+    for r, t in jr:
+        t = t.replace(" ", "")
+        bounds.append((pos, pos + len(t), r)); pos += len(t)
+    out, pos = [], 0
+    for p in plains:
+        out.append(next((r for a, z, r in bounds if a <= pos < z), "V")); pos += len(p)
+    return out
+
+def english_blocks(en, er):
+    """Colour the English: find each marked phrase (or, failing that, its words) and tag it with its block."""
+    low = en.lower()
+    mask = [""] * len(en)
+    def place(t, r):
+        t = t.strip().lower()
+        if not t:
+            return False
+        start = 0
+        while True:
+            k = low.find(t, start)
+            if k < 0:
+                return False
+            if all(m == "" for m in mask[k:k + len(t)]):
+                for q in range(k, k + len(t)):
+                    mask[q] = r
+                return True
+            start = k + 1
+    for r, t in er:
+        if not place(t, r):                       # reordered English: colour the words that are there
+            for word in re.findall(r"[\w']+|[?!]", t):
+                if len(word) > 1 or word in "?!":
+                    place(word, r)
+    segs = []
+    for ch, r in zip(en, mask):
+        if segs and segs[-1][0] == r:
+            segs[-1][1] += ch
+        else:
+            segs.append([r, ch])
+    return segs
+
+def mark(s):
+    """Add token roles and coloured English to a sentence that has hand-marked blocks."""
+    s = dict(s)
+    if s.get("jr") and s.get("n"):
+        s["roles"] = token_roles(s["n"], s["jr"])
+    if s.get("er"):
+        s["enb"] = english_blocks(s["en"], s["er"])
+    s.pop("jr", None); s.pop("er", None)
+    return s
+
 def sentence_builder_sentences():
     """Parse the 120 sentences out of the sentence builder page (its HTML is their source)."""
     page = (SRC / "sentence-builder.html").read_text(encoding="utf-8")
@@ -92,6 +152,8 @@ def sentence_builder_sentences():
                 "enc": [[c, r, txt(t)] for c, r, t in en],
                 "en": natural_en.get(sid) or " ".join(txt(x[2]) for x in en),
                 "why": txt(why.group(1)) if why else ""})
+            s_ = out[tid][-1]
+            s_["enb"] = english_blocks(s_["en"], [[r, txt(t)] for c, r, t in en])
     return out
 
 SB = sentence_builder_sentences()
@@ -158,25 +220,33 @@ def word_regex(key, group):
         return (before + spaced(key))
     return (before + spaced(key) + r"(?:" + END + ")")
 
+def sentence_records(include_phrases=True, include_grammar=False):
+    """Every sentence on the site as (record, plain text with spaces between chunks). A record is what the pages render."""
+    recs = []
+    for sents in SB.values():
+        for s in sents:
+            recs.append(({k: s[k] for k in ("kj", "kn", "rj", "roles", "en", "enb")}, " ".join(s["kj"])))
+    for s in extra:
+        r = mark({k: v for k, v in s.items() if k in ("n", "en", "jr", "er")})
+        recs.append((r, " ".join(NOTE_RE.sub(r"\1", t) for t in s["n"].split(" "))))
+    if include_grammar:
+        for g in load("grammar.json"):
+            for e in g["ex"]:
+                r = mark(e)
+                recs.append((r, " ".join(NOTE_RE.sub(r"\1", t) for t in e["n"].split(" "))))
+    if include_phrases:
+        for c in load("phrasebook.json"):
+            for sec in c["phr"]:
+                for line in sec["items"].strip().split("\n"):
+                    jp, en = line.split("|")[:2]
+                    if "___" not in jp:
+                        recs.append(({"n": jp, "en": en}, " ".join(NOTE_RE.sub(r"\1", t) for t in jp.split(" "))))
+    return recs
+
 def kana_words(name="kana-words.json"):
     """Kana words plus one example sentence each, found in the site's own sentences."""
     data = load(name)
-    NOTE = re.compile(r"([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}")
-    plain = lambda s: NOTE.sub(r"\1", s)
-    kana = lambda s: NOTE.sub(r"\2", s)
-    corpus = []
-    for sents in SB.values():
-        for s in sents:
-            corpus.append((list(zip(s["kj"], s["kn"])), s["en"]))
-    for s in extra:
-        corpus.append(([(plain(t), kana(t)) for t in s["n"].split(" ")], s["en"]))
-    for c in load("phrasebook.json"):
-        for sec in c["phr"]:
-            for line in sec["items"].strip().split("\n"):
-                jp, en = line.split("|")[:2]
-                if "___" in jp:
-                    continue
-                corpus.append(([(plain(t), kana(t)) for t in jp.split(" ")], en))
+    corpus = sentence_records()
     allkeys = [w["w"].strip("～〜") for w in data["words"]]
     for w in data["words"]:
         key = w["w"].strip("～〜")
@@ -189,10 +259,9 @@ def kana_words(name="kana-words.json"):
                 if not any(text.startswith(o, m.start()) for o in longer):   # いつ is not the いつ in いつも
                     return True
             return False
-        hits = [(p, en) for p, en in corpus if found(" ".join(k for k, _ in p))]
+        hits = [(r, t) for r, t in corpus if found(t)]
         if hits:
-            p, en = min(hits, key=lambda h: len("".join(k for k, _ in h[0])))
-            w["ex"] = {"p": p, "en": en}
+            w["ex"] = min(hits, key=lambda h: len(h[1].replace(" ", "")))[0]
     return data
 
 VARIANTS = {"亻": "人", "氵": "水", "扌": "手", "忄": "心", "訁": "言", "糹": "糸", "飠": "食", "釒": "金"}
@@ -256,26 +325,15 @@ COMMON_VERSION = _h.sha1(_common.encode("utf-8")).hexdigest()[:10]
 # ---------------------------------------------------------------- master deck
 def kanji_sentences(limit=3):
     """Up to three short sentences for each kanji, easiest first, from all the site's sentences."""
-    NOTE = re.compile(r"([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}")
     LV = kanji["LV"]
-    corpus = []
-    for sents in SB.values():
-        for s in sents:
-            corpus.append((list(zip(s["kj"], s["kn"])), s["en"], " ".join(s["rj"])))
-    for s in extra:
-        corpus.append(([(NOTE.sub(r"\1", t), NOTE.sub(r"\2", t)) for t in s["n"].split(" ")], s["en"], ""))
-    for g in load("grammar.json"):
-        for e in g["ex"]:
-            corpus.append(([(NOTE.sub(r"\1", t), NOTE.sub(r"\2", t)) for t in e["n"].split(" ")], e["en"], ""))
     out = {}
-    for p, en, rom in corpus:
-        text = "".join(k for k, _ in p)
+    for r, text in sentence_records(include_phrases=False, include_grammar=True):
         ks = [c for c in text if "\u4e00" <= c <= "\u9fff"]
         lvl = min([LV.get(c, 1) for c in ks] or [5])
         for c in set(ks):
             if c in LV:
-                out.setdefault(c, []).append((lvl, len(text), p, en, rom))
-    return {k: [[p, en, lvl, rom] for lvl, _, p, en, rom in sorted(v, key=lambda x: (-x[0], x[1]))[:limit]] for k, v in out.items()}
+                out.setdefault(c, []).append((lvl, len(text), r))
+    return {k: [dict(r, lv=lvl) for lvl, _, r in sorted(v, key=lambda x: (-x[0], x[1]))[:limit]] for k, v in out.items()}
 
 write("kanji/master-kanji-shapes.html",
       fill("master.html", DATA=dump({"K": kanji["K"], "CH": kanji["CH"], "LV": kanji["LV"], "W": words, "P": kanji["P"], "S": kanji_sentences()})))
@@ -287,7 +345,7 @@ for t in topics:
     t["sents"] = []
 tix = {t["id"]: t for t in topics}
 for sb_topic, sents in SB.items():
-    tix[sit["sb_map"][sb_topic]]["sents"] += [{k: s[k] for k in ("kj", "kn", "rj", "en", "why", "roles")} for s in sents]
+    tix[sit["sb_map"][sb_topic]]["sents"] += [{k: s[k] for k in ("kj", "kn", "rj", "en", "why", "roles", "enb")} for s in sents]
 for topic, sents in EXTRA.items():
     tix[topic]["sents"] += [{"n": s["n"], "en": s["en"], "why": s["why"]} for s in sents]
 K = {r["k"]: r for t in topics for g in t["groups"] for r in g["rows"]}
@@ -317,7 +375,10 @@ write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("
       TITLE="Katakana words: loanwords by topic", H1="カタカナの言葉", STORE="katakana-words", FROM="kt",
       INTRO="340 loanwords from N5 to N2, grouped by topic, from コーヒー to パスポート. Red notes flag the ones that don't mean what English speakers expect (マンション, コンセント, スマート) and the ones borrowed from other languages (パン, アルバイト). Each has a real example sentence where there is one. For words written in hiragana, see <a href=\"kana-words.html\">kana words</a>."))
 # ---------------------------------------------------------------- grammar
-write("words/grammar.html", fill("grammar.html", DATA=dump(load("grammar.json")), KANJI_SET=KANJI_SET))
+_grammar = load("grammar.json")
+for _g in _grammar:
+    _g["ex"] = [mark(e) for e in _g["ex"]]
+write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET))
 
 # ---------------------------------------------------------------- offline support
 import hashlib

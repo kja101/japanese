@@ -252,7 +252,7 @@ function sentItem(s){
     rom=tokenRom(s.n,null);
   }
   const id=s.id, str=((s.kj?s.kj.join("")+s.kn.join(""):plainOf(s.n)+kanaOf(s.n))+(s.rj?s.rj.join(" "):"")+s.en).toLowerCase();
-  const enHtml=state.blocks==="on"&&enc?enc:esc(s.en);
+  const enHtml=state.blocks==="on"?jpEnHtml(s):esc(s.en);
   const sayText=s.kj?s.kj.join(""):plainOf(s.n).replace(/ /g,"");
   return `<div class="it" data-id="${id}" data-s="${esc(str)}"><div><span class="jpl"><span class="hx">${jp}</span>${sayBtn(sayText)}</span><span class="rom">${rom}</span></div><div class="enl"><span class="hx">${enHtml}</span>${s.why?`<span class="why">${esc(s.why)}</span>`:""}</div>${starBtn(id)}</div>`;
 }

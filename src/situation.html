@@ -231,12 +231,11 @@ function chips(w,r,self){
 function sentHtml(s,i){ if(i>=6) s={...s,extra:true};
   let jp, rj;
   const lk=h=>linkify(h,"","");
-  if(s.kj){ jp=jpBlocksChunks(s.kj,s.kn,s.roles,lk); rj=s.rj.map((r,i)=>s.roles&&s.roles[i]?jpWrap(s.roles[i],esc(r)):esc(r)).join(" "); }
-  else { jp=jpBlocksLine(s.n,lk); rj=jpBlocksRom(s.n); }
+  const S=jpSentence(s,lk); jp=S.jp; rj=S.rom;
   const ks=[...(s.kj?s.kj.join(""):s.n)].filter(c=>/[\u4e00-\u9fff]/.test(c));
   const lv=Math.min(5,...ks.map(c=>LV[c]||1));
   const sayText=s.kj?s.kj.join(""):s.n.replace(NOTE,"$1").replace(/ /g,"");
-  return `<li${s.extra?' class="extra"':""}><div class="sj">${jp}${sayBtn(sayText)}${lv<4?`<span class="lvb">${lv<2?"N1 kanji":"N"+lv+" kanji"}</span>`:""}</div><div class="sr">${rj}</div><div class="se">${esc(s.en)}</div>${s.why?`<div class="sn">${esc(s.why)}</div>`:""}</li>`;
+  return `<li${s.extra?' class="extra"':""}><div class="sj">${jp}${sayBtn(sayText)}${lv<4?`<span class="lvb">${lv<2?"N1 kanji":"N"+lv+" kanji"}</span>`:""}</div><div class="sr">${rj}</div><div class="se">${S.en}</div>${s.why?`<div class="sn">${esc(s.why)}</div>`:""}</li>`;
 }
 // ---------- cards ----------
 const TAGNAME={tK:"kanji",tO:"kanji + kana",tC:"compounds only",tX:"rare",tR:"radical"};

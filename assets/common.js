@@ -301,17 +301,18 @@ function jpRolesFor(toks){
 const jpPbtn=(t,r,cls="")=>`<button type="button" class="pt${cls}" data-p="${jpEsc(t)}" data-role="${r||""}">${jpEsc(t)}</button>`;
 const jpWrap=(r,inner)=>`<span class="ck" data-r="${r}" style="--c:var(${JP_ROLE[r]})">${inner}</span>`;
 // a sentence written as space-separated tokens with 漢字{かんじ} readings
-function jpBlocksLine(n,link){
+function jpRolesWith(n,roles){ const R=jpRolesFor(n.split(" ")); if(roles) R.forEach((x,i)=>{ if(roles[i]) x.r=roles[i]; }); return R; }
+function jpBlocksLine(n,link,roles){
   const L=link||(h=>h);
   const ruby=t=>{ let o="",last=0; t.replace(JP_NOTE,(m,b,r,off)=>{ o+=jpEsc(t.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return L(o+jpEsc(t.slice(last))); };
-  return jpRolesFor(n.split(" ")).map(x=>{
+  return jpRolesWith(n,roles).map(x=>{
     if(x.p) return jpWrap(x.r,jpPbtn(x.t.replace(/[、。]$/,""),x.r)+(/[、。]$/.test(x.t)?x.t.slice(-1):""));
     const m=x.r==="V"&&x.t.length>2&&x.t.match(/^(.*[すんた])か$/);
     if(m) return jpWrap("V",ruby(m[1]))+jpWrap("Q",jpPbtn("か","Q"));
     return jpWrap(x.r,ruby(x.t)); }).join(" ");
 }
-function jpBlocksRom(n){
-  return jpRolesFor(n.split(" ")).map(x=>{ const r=jpRomajiToken(jpKanaOf(x.t));
+function jpBlocksRom(n,roles){
+  return jpRolesWith(n,roles).map(x=>{ const r=jpRomajiToken(jpKanaOf(x.t));
     if(x.p) return jpWrap(x.r,jpPbtn(x.t.replace(/[、。]$/,""),x.r," pr").replace(/>[^<]*<\/button>/,">"+jpEsc(r.replace(/,\s*$/,""))+"</button>")+(/、$/.test(x.t)?",":""));
     const m=x.r==="V"&&r.match(/^(.*) ka$/); if(m) return jpWrap("V",jpEsc(m[1]))+" "+jpWrap("Q",'<button type="button" class="pt pr" data-p="か" data-role="Q">ka</button>');
     return jpWrap(x.r,jpEsc(r)); }).join(" ").replace(/ ,/g,",");
@@ -322,6 +323,13 @@ function jpBlocksChunks(kj,kn,roles,link){
   return kj.map((k,i)=>{ const r=roles&&roles[i]; const parts=jpChunkParts(k,kn[i],r); let vf=false;
     const inner=parts.map(p=>{ if(p.p) return jpPbtn(p.t,r); if(p.r!=null){ const x=rdRuby(p.t,p.r,vf); vf=true; return L(x); } return jpEsc(p.t); }).join("");
     return r?jpWrap(r,inner):`<span class="ck">${inner}</span>`; }).join(" ");
+}
+// English coloured to match, when the sentence has its English marked up: [[role, text], ...]
+function jpEnHtml(s){ return s.enb&&s.enb.length?s.enb.map(([r,t])=>r?jpWrap(r,jpEsc(t)):jpEsc(t)).join(""):jpEsc(s.en); }
+// any sentence record (tokens with readings, or sentence-builder chunks) → {jp, rom, en} html
+function jpSentence(s,link){
+  if(s.kj) return {jp:jpBlocksChunks(s.kj,s.kn,s.roles,link), rom:(s.rj||[]).map((r,i)=>s.roles&&s.roles[i]?jpWrap(s.roles[i],jpEsc(r)):jpEsc(r)).join(" "), en:jpEnHtml(s), say:s.kj.join("")};
+  return {jp:jpBlocksLine(s.n,link,s.roles), rom:jpBlocksRom(s.n,s.roles), en:jpEnHtml(s), say:jpPlainOf(s.n).replace(/ /g,"")};
 }
 function jpKeybar(){ return `<div class="keybar" aria-label="Block colours"><span style="--c:var(--rW)">WHO / TOPIC<small>は・が</small></span><span style="--c:var(--rT)">TIME<small>に</small></span><span style="--c:var(--rP)">PLACE<small>で・に・へ・から・まで</small></span><span style="--c:var(--rH)">HOW / WITH<small>と・で</small></span><span style="--c:var(--rO)">WHAT<small>を</small></span><span style="--c:var(--rV)">VERB / です</span><span style="--c:var(--rQ)">QUESTION<small>か</small></span><span class="kp">particle<small>tap one</small></span></div>`; }
 (function(){ const st=document.createElement("style"); st.textContent=`

@@ -136,7 +136,7 @@ function render(){
       <div class="gh"><span class="gp">${ruby(g.pat)}</span><span class="gm">${esc(g.mean)}</span><span class="lvb">N${g.l}</span></div>
       <p class="gf"><b>HOW TO FORM IT</b><span class="j">${ruby(g.form)}</span></p>
       ${g.note?`<p class="gn">${ruby(g.note)}</p>`:""}
-      <ul class="gx">${g.ex.map((e,i)=>`<li data-id="${g.id}-${i}"><span class="j">${jpBlocksLine(e.n,linkK)}</span>${sayBtn(plainOf(e.n).replace(/ /g,""))}<span class="r">${jpBlocksRom(e.n)}</span><span class="t">${esc(e.en)}</span></li>`).join("")}</ul></article>`).join("")}</section>`; });
+      <ul class="gx">${g.ex.map((e,i)=>`<li data-id="${g.id}-${i}"><span class="j">${jpBlocksLine(e.n,linkK,e.roles)}</span>${sayBtn(plainOf(e.n).replace(/ /g,""))}<span class="r">${jpBlocksRom(e.n,e.roles)}</span><span class="t">${jpEnHtml(e)}</span></li>`).join("")}</ul></article>`).join("")}</section>`; });
   document.getElementById("main").innerHTML=h+`<div class="noresult" id="noresult">Nothing matches that.</div>`;
   document.getElementById("nav").innerHTML=groups.filter(gr=>document.getElementById("g-"+gr.replace(/\W+/g,"-"))).map(gr=>`<a href="#g-${gr.replace(/\W+/g,"-")}">${esc(gr)}</a>`).join("");
   apply(); doSearch();
