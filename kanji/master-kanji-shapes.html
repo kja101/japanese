@@ -628,7 +628,9 @@ function jumpTo(c,w,from){
   jumpStack.push({y:window.scrollY,from,w});
   const li=w?[...card.querySelectorAll("li[data-w]")].find(l=>l.dataset.w===w):null;
   if(li){ const d=li.closest("details"); if(d) d.open=true; }
-  scrollToEl(li?(li.closest(".rblk,.spb")||li):card); flash(li||card.querySelector(".khead"));
+  const tgt=li?(li.closest(".rblk,.spb")||li):card;
+  scrollToEl(tgt); flash(li||card.querySelector(".khead"));
+  [120,350,700].forEach(t=>setTimeout(()=>scrollToEl(tgt),t));
   const prev=jumpStack[jumpStack.length-1];
   backBtn.textContent=from?`← Back to ${from}`:"← Back"; backBtn.hidden=false;
 }
@@ -657,6 +659,21 @@ main.addEventListener("click",e=>{const h=e.target.closest(".hideable");if(h&&st
 main.addEventListener("keydown",e=>{const h=e.target.closest(".hideable");if(h&&state.test==="on"&&(e.key==="Enter"||e.key===" ")){e.preventDefault();h.classList.add("shown");}});
 if(state.mode==="cards") resetDeck(false);
 render();
+// open a card from a link such as master-kanji-shapes.html?from=sb#k-時
+(function(){
+  const m=location.hash.match(/^#k-(.+)$/); if(!m) return;
+  const k=decodeURIComponent(m[1]); const fromSB=/[?&]from=sb\b/.test(location.search);
+  setTimeout(()=>{
+    jumpTo(k,null,null);
+    if(!fromSB) return;
+    jumpStack.length=0;
+    const inner=backBtn.onclick;
+    const toSentence=()=>{ backBtn.textContent="← Back to the sentence"; backBtn.hidden=false; };
+    toSentence();
+    backBtn.onclick=()=>{ if(jumpStack.length){ inner(); if(!jumpStack.length) toSentence(); return; }
+      if(history.length>1) history.back(); else location.href="../words/sentence-builder.html"; };
+  },0);
+})();
 
 (function(){ let v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
   const set=x=>{ v=x; document.body.classList.toggle("no-rdcol",v==="off");
