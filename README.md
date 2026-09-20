@@ -13,8 +13,9 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `kanji/kanji-by-situation.html` | 200 N4 kanji in 13 real-life situations, with 222 example sentences, where you meet each kanji, and N5–N2 word lists. |
 | `kanji/kanji-by-shape-sound-topic.html` | The 284 N5/N4 kanji by shape family, by sound (including sound-giving parts) and by topic, each with N5–N2 words by reading. |
 | `kanji/master-kanji-shapes-n5-n4.html` | Classic edition of the shapes deck: N5/N4 kanji and words only. Superseded by the N5–N2 deck. |
-| `words/sentence-builder.html` | 120 everyday sentences in 12 situations, in colour-coded grammar blocks. |
-| `words/phrase-guide.html` | About 285 phrases in 32 sections, as frames with swap-in words. |
+| `words/phrasebook.html` | Interactive phrasebook: about 500 phrases and sentences in 14 situations, with swap-in words, grammar-block colouring and a starred personal list. |
+| `words/sentence-builder.html` | The grammar lesson behind the phrasebook: 120 sentences in colour-coded blocks. |
+| `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work. |
 | `words/vocab-sheets.html` | About 390 common words across 11 topics, grouped by shared kanji. |
 | `kana/kana-sounds.html` | Kana by sign family, by sound, and same-sound words with pitch patterns. |
 
