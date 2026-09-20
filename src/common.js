@@ -284,14 +284,14 @@ function jpSearchable(){ return Array.prototype.map.call(arguments,x=>Array.isAr
 
 // ---------- where else a word appears: one small index of every page's entries ----------
 // [key, page, anchor, label]; pages: kw kana words, kt katakana words, km kanji deck, gr grammar, ks kana sounds
-const JP_INDEX=__INDEX__;
+const jpIndex=()=>(typeof JP_SEARCH_INDEX!=="undefined"?JP_SEARCH_INDEX:[]);
 const JP_PAGES={kw:["kana words","kana/kana-words.html","w-"],kt:["katakana words","kana/katakana-words.html","w-"],
-  km:["the kanji deck","kanji/master-kanji-shapes.html","k-"],gr:["grammar","words/grammar.html","p-"],
+  km:["the kanji deck","kanji/master-kanji-shapes.html","k-"],vo:["the word list","words/vocabulary.html","w-"],gr:["grammar","words/grammar.html","p-"],
   ks:["kana sounds","kana/kana-sounds.html",""]};
 function jpElsewhere(query,exclude,root,from){
   const q=jpSearchKey(query||"").trim();
   if(q.length<1) return "";
-  const hits=JP_INDEX.filter(e=>e[1]!==exclude&&e[0].includes(q));
+  const hits=jpIndex().filter(e=>e[1]!==exclude&&e[0].includes(q));
   if(!hits.length) return "";
   const byPage={};
   hits.forEach(e=>{ (byPage[e[1]]=byPage[e[1]]||[]).push(e); });

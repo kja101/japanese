@@ -258,6 +258,8 @@ a.jk:hover,a.jk:focus-visible{background:var(--indigo-wash)}
 @media (hover:none){a.jk:active{background:var(--indigo-wash)}}
 .part.noglyph{display:inline-flex;align-items:center;min-height:2.2rem}
 .part.noglyph small{font-size:.95rem;max-width:18rem;white-space:normal;text-align:center}
+.wordlink{margin:.7rem 0 0;font-size:.92rem}
+.wordlink a{color:var(--indigo)}
 </style>
 </head>
 <body class="jb-page">
@@ -380,7 +382,8 @@ function kanjiSteps(x){
   return `
   <div class="step s1"><div class="stag"><i>1</i>Shape</div><div class="sbody">${eq}${storyHtml(x)}</div></div>
   <div class="step s2"><div class="stag"><i>2</i>Look-alikes</div><div class="sbody">${(()=>{ const tr=x.traps.filter(z=>(z[2]||5)>=T()); return tr.length?`<div class="traps">${tr.map(([g,n])=>`<div class="trap">${vis(g)?`<a class="g" href="#k-${g}" data-jump="${g}" data-from="${x.k}">${esc(g)}</a>`:`<span class="g">${esc(g)}</span>`}<span>${esc(n)}</span></div>`).join("")}</div>`:`<span class="none">No close look-alikes at this level.</span>`; })()}</div></div>
-  <div class="step s3"><div class="stag"><i>3</i>Readings and words</div><div class="sbody">${readingsHtml(x)}${sentencesHtml(x)}</div></div>`;
+  <div class="step s3"><div class="stag"><i>3</i>Readings and words</div><div class="sbody">${readingsHtml(x)}${sentencesHtml(x)}
+    <p class="wordlink"><a href="../words/vocabulary.html?k=${encodeURIComponent(x.k)}&from=km">All words with ${x.k} in the word list →</a></p></div></div>`;
 }
 function kanjiCard(x){
   return `<article class="kc" id="k-${x.k}" data-l="${x.l}">
@@ -700,7 +703,7 @@ render();
 (function(){
   const m=location.hash.match(/^#k-(.+)$/); if(!m) return;
   const k=decodeURIComponent(m[1]); const src=(location.search.match(/[?&]from=(\w+)/)||[])[1]; const fromSB=!!src;
-  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"],gr:["← Back to grammar","../words/grammar.html"],kt:["← Back to katakana words","../kana/katakana-words.html"],ks:["← Back to kana sounds","../kana/kana-sounds.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src]||["← Back","../index.html"];
+  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"],gr:["← Back to grammar","../words/grammar.html"],kt:["← Back to katakana words","../kana/katakana-words.html"],vo:["← Back to the word list","../words/vocabulary.html"],ks:["← Back to kana sounds","../kana/kana-sounds.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src]||["← Back","../index.html"];
   setTimeout(()=>{
     jumpTo(k,null,null);
     if(!fromSB) return;

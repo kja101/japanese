@@ -12,6 +12,7 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `kanji/learn-n5-n4.html` | **Learn day by day.** Daily study plan: how to learn kanji fastest, plus spaced-repetition flashcards from N5 up to N2 (a level setting), parts before the kanji built from them. Shares progress and your own stories with the master deck. |
 | `kanji/kanji-by-situation.html` | **See them in use.** 200 N4 kanji in 13 real-life situations, with 222 example sentences, where you meet each kanji, and N5–N2 word lists. |
 | `words/phrasebook.html` | Interactive phrasebook: about 500 phrases and sentences in 14 situations, with swap-in words, grammar-block colouring and a starred personal list. |
+| `words/vocabulary.html` | **Every word.** 4,077 N5–N2 words (the kanji words plus the kana lists) by type or kana order, with examples, audio and links to the kanji deck. |
 | `words/grammar.html` | 112 grammar patterns from N5 to N2, with a cumulative level switch: meaning, how to form each, usage notes, and examples with audio. |
 | `words/sentence-builder.html` | **The grammar behind it.** 1,442 sentences in colour-coded blocks with a level switch, the English order beside the Japanese, and all N5/N4 verbs and adjectives with their forms. |
 | `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work; not part of the build. |

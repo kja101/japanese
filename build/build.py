@@ -35,6 +35,9 @@ WRITTEN = []
 COMMON_VERSION = ""   # set once assets/common.js is written; pages load common.js?v=<version> so a page and its script always match
 
 def write(rel, text):
+    if rel.endswith(".html") and 'id="search"' in text and "search-index.js" not in text:
+        depth = "../" * rel.count("/")
+        text = text.replace('<script src="' + depth + 'assets/common.js', '<script src="' + depth + 'assets/search-index.js"></script>\n<script src="' + depth + 'assets/common.js', 1)
     if rel.endswith(".html") and COMMON_VERSION:
         text = text.replace('assets/common.js"', 'assets/common.js?v=' + COMMON_VERSION + '"')
     if rel.endswith(".html") and 'rel="manifest"' not in text:
@@ -49,6 +52,7 @@ def write(rel, text):
 # ---------------------------------------------------------------- data
 kanji = load("kanji.json")            # K, CH, LV, P for all N5-N2 kanji
 words = load("kanji-words.json")      # words for every kanji, grouped by reading
+words_data = words
 readings = load("readings.json")      # reading dictionary for the on/kun engine
 extra = load("sentences-extra.json")  # sentences written for the situation page
 for _lv in (5, 4, 3, 2):                  # sentences written to cover words and kanji, level by level
@@ -295,6 +299,60 @@ def kana_words(name="kana-words.json"):
 
 VARIANTS = {"亻": "人", "氵": "水", "扌": "手", "忄": "心", "訁": "言", "糹": "糸", "飠": "食", "釒": "金"}
 
+KANA_ROWS = [("あ", "あいうえお"), ("か", "かきくけこがぎぐげご"), ("さ", "さしすせそざじずぜぞ"), ("た", "たちつてとだぢづでど"),
+              ("な", "なにぬねの"), ("は", "はひふへほばびぶべぼぱぴぷぺぽ"), ("ま", "まみむめも"), ("や", "やゆよ"),
+              ("ら", "らりるれろ"), ("わ", "わをん")]
+ADVERB_EN = re.compile(r"\b(\w+ly)\b|^(very|quite|almost|always|often|sometimes|soon|already|still|again|about|roughly|at all|a little|completely|suddenly|gradually)\b", re.I)
+
+def word_pos(word, kana, en, group=""):
+    """Part of speech, worked out from the word and its English. Imperfect, but good enough to group by."""
+    if word.endswith("する") or word.endswith("する"):
+        return "suru"
+    if en.lower().startswith("to "):
+        return "verb"
+    if group in ("time", "degree", "manner", "sound"):
+        return "adverb"
+    if group in ("desc",):
+        return "adj-i" if word.endswith("い") else "adj-na"
+    if word.endswith("い") and kana.endswith("い") and len(kana) >= 3 and not en.lower().startswith(("a ", "the ")):
+        return "adj-i"
+    if ADVERB_EN.search(en):
+        return "adverb"
+    if group in ("greet", "inter", "expr", "link", "question", "point", "parts"):
+        return "phrase"
+    return "noun"
+
+def vocabulary():
+    """Every word the site knows: the kanji words from the kanji cards, plus the kana word pages."""
+    words = {}
+    for k, w in words_data.items():
+        for r in w["readings"]:
+            for z in r["words"]:
+                words.setdefault(z[0], {"w": z[0], "r": z[1], "en": z[2], "l": z[3], "kana": False})
+        for z in (w.get("sp") or []):
+            words.setdefault(z[0], {"w": z[0], "r": z[1], "en": z[2], "l": z[3] if len(z) > 3 else 2, "kana": False})
+    for name, tag in (("kana-words.json", "kw"), ("katakana-words.json", "kt")):
+        for z in load(name)["words"]:
+            key = z["w"].strip("～〜")
+            if "～" in z["w"] or "〜" in z["w"] or len(key) < 1:
+                continue
+            words.setdefault(key, {"w": key, "r": key, "en": z["en"], "l": z["l"], "kana": tag, "g": z.get("g", "")})
+    corpus = sentence_records()
+    allkeys = list(words)
+    for v in words.values():
+        v["pos"] = word_pos(v["w"], v["r"], v["en"], v.get("g", ""))
+        v.pop("g", None)
+        v["row"] = next((row for row, chars in KANA_ROWS if v["r"] and rdhira(v["r"])[0] in chars), "わ")
+        pat = word_pattern(v["w"], {"verb": "verb", "adj-i": "desc"}.get(v["pos"], ""))
+        hits = [(r, t) for r, t in corpus if pat.search(t)]
+        if hits:
+            v["ex"] = min(hits, key=lambda h: len(h[1].replace(" ", "")))[0]
+    order = {r: i for i, (r, _) in enumerate(KANA_ROWS)}
+    return sorted(words.values(), key=lambda v: (-v["l"], order.get(v["row"], 9), v["r"]))
+
+def rdhira(s):
+    return re.sub(r"[\u30a1-\u30f6]", lambda m: chr(ord(m.group()) - 0x60), s)
+
 def study_data():
     """Everything the daily study plan needs, for all N5-N2 kanji, from data/kanji.json."""
     K, CH = kanji["K"], kanji["CH"]
@@ -342,7 +400,9 @@ def study_data():
     CHT = {k: (f"Chapter {i+1}: {c['title']}" if c["key"] != "other" else f"Chapter {i+1}: standalone shapes")
            for i, c in enumerate(CH) for k in c["kanji"]}
     FAM = {k: (c.get("glyph", "") if c["key"] != "other" else "") for c in CH for k in c["kanji"]}
-    return {"K": SK, "CHT": CHT, "FAM": FAM, "order": extend(base["order"]), "order_n5": extend(base["order_n5"])}
+    VOC = [[v["w"], v["r"], v["en"], v["l"]] for v in vocabulary()]
+    return {"K": SK, "CHT": CHT, "FAM": FAM, "VOC": VOC, "order": extend(base["order"]), "order_n5": extend(base["order_n5"])}
+
 
 print("Building:")
 # ---------------------------------------------------------------- shared script
@@ -359,6 +419,10 @@ def search_index():
         out.append([key(k, x["m"], " ".join(x.get("on", []) + x.get("kun", [])), krRomaji(" ".join(x.get("on", []) + x.get("kun", [])))), "km", k, k + " " + x["m"].split(",")[0]])
     for g in load("grammar.json"):
         out.append([key(NOTE_RE.sub(r"\1", g["pat"]), g["mean"], g["group"]), "gr", g["id"], NOTE_RE.sub(r"\1", g["pat"])])
+    for v in vocabulary():
+        if v["kana"]:
+            continue                                   # the kana pages already carry these
+        out.append([key(v["w"], v["r"], v["en"]), "vo", v["w"], v["w"]])
     return out
 
 def krRomaji(kana):
@@ -381,10 +445,9 @@ def krRomaji(kana):
             out.append(BASE.get(ch, ""))
     return "".join(out)
 
-_common = ((SRC / "common.js").read_text(encoding="utf-8")
-           .replace("__READINGS__", dump(readings))
-           .replace("__INDEX__", dump(search_index())))
+_common = (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings))
 write("assets/common.js", _common)
+write("assets/search-index.js", "// Where every word, kanji and pattern lives, for the cross-page search hints.\nconst JP_SEARCH_INDEX=" + dump(search_index()) + ";\n")
 import hashlib as _h
 COMMON_VERSION = _h.sha1(_common.encode("utf-8")).hexdigest()[:10]
 
@@ -463,6 +526,9 @@ write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KAN
 write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
 
 # ---------------------------------------------------------------- kana
+_vocab = vocabulary()
+write("words/vocabulary.html", fill("vocabulary.html", DATA=dump(_vocab), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS,
+      COUNT=f"{len(_vocab):,}"))
 write("kana/kana-sounds.html", fill("kana-sounds.html", KANJI_SET=KANJI_SET))
 write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words("kana-words.json")), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS,
       TITLE="Kana words: the Japanese you write without kanji", H1="かなの言葉", STORE="kana-words", FROM="kw",
