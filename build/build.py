@@ -110,6 +110,7 @@ GODAN = {"う": ("い", "わ", "っ"), "く": ("き", "か", "い"), "ぐ": ("�
          "ぬ": ("に", "な", "ん"), "ぶ": ("び", "ば", "ん"), "む": ("み", "ま", "ん"), "る": ("り", "ら", "っ")}
 END = r"(?![\u3041-\u309f])|(?=[はがをにでへともかやねよの][^\u3041-\u309f]|です|でした|ので|のに|と)"
 
+GODAN_RU = {"しゃべる", "かえる", "はいる", "しる", "きる", "はしる", "いる", "へる", "すべる", "ける", "にぎる"}   # look like る-verbs but aren't
 HONORIFIC_I = {"いらっしゃる", "なさる", "くださる", "おっしゃる"}   # ます-stem in い: いらっしゃいます
 
 def word_pattern(key, group):
@@ -133,7 +134,7 @@ def word_regex(key, group):
         return (r"(?<!" + kata + ")" + re.escape(key) + r"(?!" + kata + ")")
     if group == "verb" and key[-1] in GODAN:
         stem = spaced(key[:-1])
-        if key[-1] == "る" and len(key) >= 3 and key[-2] in I_ROW + E_ROW:   # る-verb
+        if key[-1] == "る" and len(key) >= 3 and key[-2] in I_ROW + E_ROW and key not in GODAN_RU:   # る-verb
             forms = r"(?:る|ます|まし|ません|て|た|ない|なかっ|られ|よう|れば)"
             return (before + stem + forms)
         i, a, t = GODAN[key[-1]]

@@ -61,6 +61,9 @@ section.ch{margin:2.4rem 0 0;scroll-margin-top:150px}
 .tagl{display:block;font-size:.8rem;color:var(--muted);margin-top:.1rem}
 .tagl.hear{color:var(--indigo)}
 .why{display:block;font-size:.85rem;color:var(--muted);margin-top:.15rem}
+.it.extra{display:none!important}
+.blk.all .it.extra:not([style*="none"]),.searching .it.extra:not([style*="none"]){display:grid!important}
+.moresents{font:inherit;font-size:.9rem;border:1px solid var(--rule);background:var(--paper);color:var(--indigo);border-radius:6px;padding:.35rem .8rem;margin:.6rem 0 .2rem;cursor:pointer}
 .star{border:0;background:none;font-size:1.3rem;line-height:1;color:var(--rule);cursor:pointer;padding:.2rem .3rem;align-self:start}
 .star[aria-pressed="true"]{color:var(--gold)}
 .slot{display:inline-block;min-width:2.4em;border:1.5px dashed var(--seal);border-radius:4px;padding:0 .25em;line-height:1.45;text-align:center;color:var(--seal)}
@@ -296,7 +299,7 @@ function phraseBlock(sec){
 }
 function sentBlock(c){
   if(!c.sents.length) return "";
-  return `<div class="blk sents"><h3>Sentences <small>${c.sents.length}</small></h3><div class="legend-b"><span style="--c:var(--rW)">WHO / TOPIC</span><span style="--c:var(--rT)">TIME</span><span style="--c:var(--rP)">PLACE</span><span style="--c:var(--rH)">HOW / WITH</span><span style="--c:var(--rO)">WHAT</span><span style="--c:var(--rV)">VERB</span><span style="--c:var(--rQ)">QUESTION</span></div>${c.sents.map(sentItem).join("")}</div>`;
+  return `<div class="blk sents"><h3>Sentences <small>${c.sents.length}</small></h3><div class="legend-b"><span style="--c:var(--rW)">WHO / TOPIC</span><span style="--c:var(--rT)">TIME</span><span style="--c:var(--rP)">PLACE</span><span style="--c:var(--rH)">HOW / WITH</span><span style="--c:var(--rO)">WHAT</span><span style="--c:var(--rV)">VERB</span><span style="--c:var(--rQ)">QUESTION</span></div>${c.sents.map((s,i)=>i<12?sentItem(s):sentItem(s).replace('<div class="it"','<div class="it extra"')).join("")}${c.sents.length>12?`<button class="moresents" data-moresents>Show all ${c.sents.length} sentences</button>`:""}</div>`;
 }
 const main=document.getElementById("main");
 function allItems(){ const out=[]; CH.forEach(c=>{ c.phr.forEach(sec=>sec.items.trim().split("\n").forEach((l,i)=>{ const [jp,en,tag=""]=l.split("|"); out.push({kind:"p",sec,i,p:{jp,en,tag},id:`p:${sec.id}:${i}`,c}); })); c.sents.forEach(s=>out.push({kind:"s",s,id:s.id,c})); }); return out; }
@@ -322,6 +325,7 @@ function apply(){
 }
 function doSearch(){
   const q=document.getElementById("search").value.trim().toLowerCase();
+  document.body.classList.toggle("searching",!!q);
   document.querySelectorAll(".it").forEach(x=>x.style.display=!q||x.dataset.s.includes(q)?"":"none");
   document.querySelectorAll(".blk").forEach(b=>{ const its=b.querySelectorAll(".it"); b.style.display=!q||[...its].some(x=>x.style.display!=="none")?"":"none"; });
   document.querySelectorAll("section.ch").forEach(s=>s.style.display=!q||[...s.querySelectorAll(".it")].some(x=>x.style.display!=="none")?"":"none");
@@ -330,6 +334,7 @@ document.getElementById("search").addEventListener("input",doSearch);
 ["view","script","blocks"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); const y=window.scrollY; render(); if(k!=="view") window.scrollTo(0,y); else window.scrollTo(0,0); }));
 ["romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); apply(); }));
 main.addEventListener("click",e=>{
+  const ms=e.target.closest("[data-moresents]"); if(ms){ const blk=ms.closest(".blk"); const on=blk.classList.toggle("all"); ms.textContent=on?"Show fewer":`Show all ${blk.querySelectorAll(".it").length} sentences`; return; }
   const st=e.target.closest("[data-star]"); if(st){ const id=st.dataset.star; STARS.has(id)?STARS.delete(id):STARS.add(id); save(); document.querySelectorAll(`[data-star="${CSS.escape(id)}"]`).forEach(b=>b.setAttribute("aria-pressed",STARS.has(id))); if(state.view==="mine") render(); return; }
   const chip=e.target.closest(".chip[data-sec]"); if(chip){ const id=chip.dataset.sec, i=+chip.dataset.i; picked[id]=picked[id]===i?null:i;
     const sec=CH.flatMap(c=>c.phr).find(s=>s.id===id); const el=document.querySelector(`.blk[data-sec="${id}"]`); const tmp=document.createElement("div"); tmp.innerHTML=phraseBlock(sec); const nb=tmp.firstElementChild; el.replaceWith(nb); apply(); doSearch(); linkKana(nb);
