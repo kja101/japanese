@@ -371,29 +371,27 @@ write("words/phrasebook.html", fill("phrasebook.html", DATA=dump(chapters), KANJ
 
 # ---------------------------------------------------------------- sentence builder
 def builder_sections():
-    """The sentence builder's own 12 topics, then every other marked sentence grouped by situation."""
+    """One set of topics: the builder's own sentences first in each, then every other marked sentence."""
     LV, NOTE = kanji["LV"], NOTE_RE
     def level(text):
         ks = [c for c in text if "\u4e00" <= c <= "\u9fff"]
         return min([LV.get(c, 2) for c in ks] or [5])
-    out = []
-    for t in load("sentences-builder.json"):
-        ss = []
+    sit = load("situation.json")
+    topics = {t["id"]: {"id": t["id"], "title": t["en"], "jp": t["jp"], "blurb": t["blurb"], "sents": []} for t in sit["topics"]}
+    order = [t["id"] for t in sit["topics"]]
+    for t in load("sentences-builder.json"):                 # the 120 core sentences, in their topic's slot
+        tid = sit["sb_map"].get(t["id"], t["id"])
         for s in t["sents"]:
             s = dict(s); s["enb"] = english_blocks(" ".join(x[1] for x in s["enc"]), s["enc"]); s.pop("enc")
-            s["lv"] = level("".join(s["kj"])); ss.append(s)
-        out.append({"id": t["id"], "title": t["title"], "jp": t["jp"], "blurb": t["blurb"], "sents": ss})
-    sit = {t["id"]: t for t in load("situation.json")["topics"]}
-    groups = {}
-    for s in extra:
+            s["lv"] = level("".join(s["kj"])); s["core"] = True
+            topics[tid]["sents"].append(s)
+    for s in extra:                                           # everything else, in the same topics
         r = mark({k: v for k, v in s.items() if k in ("n", "en", "why", "jr", "er")})
         r["lv"] = level(NOTE.sub(r"\1", s["n"]))
-        groups.setdefault(s["topic"], []).append(r)
-    for tid, ss in groups.items():
-        t = sit.get(tid, {})
-        out.append({"id": "x" + tid, "title": (t.get("en") or "More sentences"), "jp": t.get("jp", ""),
-                    "blurb": "More sentences in the same blocks, from every level.", "sents": ss})
-    return out
+        topics.setdefault(s["topic"], {"id": s["topic"], "title": "More sentences", "jp": "", "blurb": "", "sents": []})["sents"].append(r)
+    for t in topics.values():                                 # core sentences first, then the rest
+        t["sents"].sort(key=lambda s: (not s.get("core"), -s["lv"]))
+    return [topics[i] for i in order if topics[i]["sents"]] + [t for i, t in topics.items() if i not in order and t["sents"]]
 
 write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, DATA=dump(builder_sections())))
 
