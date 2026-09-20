@@ -181,28 +181,16 @@ def mark(s):
     return s
 
 def sentence_builder_sentences():
-    """Parse the 120 sentences out of the sentence builder page (its HTML is their source)."""
-    page = (SRC / "sentence-builder.html").read_text(encoding="utf-8")
-    body = page[page.find("<body"):]
-    txt = lambda s: H.unescape(re.sub(r"<[^>]+>", "", s)).strip()
+    """The 120 core sentences, from data/sentences-builder.json, grouped by their topic."""
     out = {}
-    for m in re.finditer(r'<section class="card" id="(t\d+)"><header class="card-head"><h2>.*?</h2>(.*?)</section>', body, re.S):
-        tid, sec = m.group(1), m.group(2)
-        for i, s in enumerate(re.split(r'<div class="sent"', sec)[1:]):
-            def line(cls):
-                inner = re.search(r'<p class="line ' + cls + r'">(.*?)</p>', s, re.S).group(1)
-                return re.findall(r'<span class="ck" style="--c:(#[0-9a-f]+)" data-r="(\w+)">(.*?)</span>', inner)
-            kj, kn, rj, en = line("lay-kanji"), line("lay-kana"), line("lay-romaji"), line("en lay-en")
-            why = re.search(r'<p class="why lay-why"><span class="wl">Why</span>(.*?)</p>', s, re.S)
-            sid = f"{tid}-{i}"
-            out.setdefault(tid, []).append({
-                "id": "s" + sid, "kj": [txt(x[2]) for x in kj], "kn": [txt(x[2]) for x in kn],
-                "rj": [txt(x[2]) for x in rj], "roles": [x[1] for x in kj],
-                "enc": [[c, r, txt(t)] for c, r, t in en],
-                "en": natural_en.get(sid) or " ".join(txt(x[2]) for x in en),
-                "why": txt(why.group(1)) if why else ""})
-            s_ = out[tid][-1]
-            s_["enb"] = english_blocks(s_["en"], [[r, txt(t)] for c, r, t in en])
+    for t in load("sentences-builder.json"):
+        for i, s in enumerate(t["sents"]):
+            s = dict(s)
+            enc = s.pop("enc")
+            s["id"] = f"s{t['id']}-{i}"
+            s["en"] = natural_en.get(f"{t['id']}-{i}") or " ".join(x[1] for x in enc)
+            s["enb"] = english_blocks(s["en"], enc)
+            out.setdefault(t["id"], []).append(s)
     return out
 
 SB = sentence_builder_sentences()
