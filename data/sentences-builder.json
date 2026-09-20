@@ -1,0 +1,4078 @@
+[
+ {
+  "id": "t1",
+  "title": "Bars and drinks",
+  "jp": "バー・居酒屋",
+  "blurb": "Ordering, asking what's good, and getting the round in.",
+  "sents": [
+   {
+    "kj": [
+     "冷たいビールを",
+     "お願いします"
+    ],
+    "kn": [
+     "つめたいビールを",
+     "おねがいします"
+    ],
+    "rj": [
+     "tsumetai biiru o",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "A cold beer"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "〜をお願いします is the natural way to order. Saying 〜がほしいです is grammatical but blunt."
+   },
+   {
+    "kj": [
+     "ビールを二つ",
+     "お願いします"
+    ],
+    "kn": [
+     "ビールをふたつ",
+     "おねがいします"
+    ],
+    "rj": [
+     "biiru o futatsu",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "Two beers"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "The counter 二つ follows the noun and its を. Counters never take a particle of their own."
+   },
+   {
+    "kj": [
+     "ビールをもう一杯",
+     "お願いします"
+    ],
+    "kn": [
+     "ビールをもういっぱい",
+     "おねがいします"
+    ],
+    "rj": [
+     "biiru o mou ippai",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "One more beer"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "一杯 is one glassful; もう in front makes it 'another'."
+   },
+   {
+    "kj": [
+     "地ビールは",
+     "あります",
+     "か"
+    ],
+    "kn": [
+     "じビールは",
+     "あります",
+     "か"
+    ],
+    "rj": [
+     "jibiiru wa",
+     "arimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Do you have"
+     ],
+     [
+      "W",
+      "local beer"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "あります asks whether a thing exists or is in stock. Use います only for living things."
+   },
+   {
+    "kj": [
+     "何を",
+     "おすすめします",
+     "か"
+    ],
+    "kn": [
+     "なにを",
+     "おすすめします",
+     "か"
+    ],
+    "rj": [
+     "nani o",
+     "osusume shimasu",
+     "ka"
+    ],
+    "roles": [
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "O",
+      "What"
+     ],
+     [
+      "V",
+      "do you recommend"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "Question words stay in their own block: 何 is the object, so it keeps を."
+   },
+   {
+    "kj": [
+     "同じものを",
+     "お願いします"
+    ],
+    "kn": [
+     "おなじものを",
+     "おねがいします"
+    ],
+    "rj": [
+     "onaji mono o",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "The same"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "同じもの literally 'the same thing'. One of the most useful phrases at a bar."
+   },
+   {
+    "kj": [
+     "水も",
+     "お願いできます",
+     "か"
+    ],
+    "kn": [
+     "みずも",
+     "おねがいできます",
+     "か"
+    ],
+    "rj": [
+     "mizu mo",
+     "onegai dekimasu",
+     "ka"
+    ],
+    "roles": [
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Can I have"
+     ],
+     [
+      "O",
+      "water too"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "も replaces を entirely when it means 'also'. You never write をも."
+   },
+   {
+    "kj": [
+     "少し弱く",
+     "してください"
+    ],
+    "kn": [
+     "すこしよわく",
+     "してください"
+    ],
+    "rj": [
+     "sukoshi yowaku",
+     "shite kudasai"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Please make it"
+     ],
+     [
+      "H",
+      "a little weaker"
+     ]
+    ],
+    "why": "弱く is the adverb form of 弱い. Adverbs take no particle, so they sit in the HOW block."
+   },
+   {
+    "kj": [
+     "トイレは",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "トイレは",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "toire wa",
+     "doko",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "P",
+      "Where"
+     ],
+     [
+      "V",
+      "is"
+     ],
+     [
+      "W",
+      "the toilet"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "どこ needs no particle before です. You only add で or に when a verb follows."
+   },
+   {
+    "kj": [
+     "乾杯"
+    ],
+    "kn": [
+     "かんぱい"
+    ],
+    "rj": [
+     "kanpai"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Cheers!"
+     ]
+    ],
+    "why": "A fixed expression. No particles, no verb ending — just say it."
+   }
+  ]
+ },
+ {
+  "id": "t2",
+  "title": "Restaurants and food",
+  "jp": "レストラン",
+  "blurb": "Getting seated, ordering, and paying.",
+  "sents": [
+   {
+    "kj": [
+     "二人",
+     "です"
+    ],
+    "kn": [
+     "ふたり",
+     "です"
+    ],
+    "rj": [
+     "futari",
+     "desu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "A table for two"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "Stating the number is enough. 二人です on entering is what staff expect."
+   },
+   {
+    "kj": [
+     "メニューを",
+     "見せてください"
+    ],
+    "kn": [
+     "メニューを",
+     "みせてください"
+    ],
+    "rj": [
+     "menyuu o",
+     "misete kudasai"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Could I see"
+     ],
+     [
+      "O",
+      "the menu"
+     ]
+    ],
+    "why": "〜てください is the standard polite request: verb in て-form plus ください."
+   },
+   {
+    "kj": [
+     "これを",
+     "お願いします"
+    ],
+    "kn": [
+     "これを",
+     "おねがいします"
+    ],
+    "rj": [
+     "kore o",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I'll have"
+     ],
+     [
+      "O",
+      "this one"
+     ]
+    ],
+    "why": "Pointing plus これを covers most of a menu you cannot read yet."
+   },
+   {
+    "kj": [
+     "これは",
+     "辛いです",
+     "か"
+    ],
+    "kn": [
+     "これは",
+     "からいです",
+     "か"
+    ],
+    "rj": [
+     "kore wa",
+     "karai desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "W",
+      "This"
+     ],
+     [
+      "V",
+      "is spicy"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "An い-adjective plus です is already a complete predicate. Never add だ or another verb."
+   },
+   {
+    "kj": [
+     "肉が",
+     "食べられません"
+    ],
+    "kn": [
+     "にくが",
+     "たべられません"
+    ],
+    "rj": [
+     "niku ga",
+     "taberaremasen"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I can't eat"
+     ],
+     [
+      "O",
+      "meat"
+     ]
+    ],
+    "why": "Potential forms take が, not を. This trips up almost everyone at first."
+   },
+   {
+    "kj": [
+     "これは",
+     "魚が",
+     "入っています",
+     "か"
+    ],
+    "kn": [
+     "これは",
+     "さかなが",
+     "はいっています",
+     "か"
+    ],
+    "rj": [
+     "kore wa",
+     "sakana ga",
+     "haitte imasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "W",
+      "This"
+     ],
+     [
+      "V",
+      "contains"
+     ],
+     [
+      "O",
+      "fish"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "入っています = 'is in it'. The topic は and the subject が can both appear in one sentence."
+   },
+   {
+    "kj": [
+     "お会計を",
+     "お願いします"
+    ],
+    "kn": [
+     "おかいけいを",
+     "おねがいします"
+    ],
+    "rj": [
+     "okaikei o",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "The bill"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "お会計 in a restaurant. 勘定 is the older, gruffer word."
+   },
+   {
+    "kj": [
+     "別々に",
+     "お願いします"
+    ],
+    "kn": [
+     "べつべつに",
+     "おねがいします"
+    ],
+    "rj": [
+     "betsubetsu ni",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "H",
+      "Separately"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "別々に is adverbial, so it belongs in the HOW block with no を."
+   },
+   {
+    "kj": [
+     "おいしかったです"
+    ],
+    "kn": [
+     "おいしかったです"
+    ],
+    "rj": [
+     "oishikatta desu"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "It was delicious"
+     ]
+    ],
+    "why": "い-adjectives conjugate for past themselves: おいしい becomes おいしかった, then です stays unchanged."
+   },
+   {
+    "kj": [
+     "英語のメニューは",
+     "あります",
+     "か"
+    ],
+    "kn": [
+     "えいごのメニューは",
+     "あります",
+     "か"
+    ],
+    "rj": [
+     "eigo no menyuu wa",
+     "arimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Do you have"
+     ],
+     [
+      "W",
+      "an English menu"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "の joins two nouns: 英語のメニュー, an English-language menu."
+   }
+  ]
+ },
+ {
+  "id": "t3",
+  "title": "Shops and buying things",
+  "jp": "買い物",
+  "blurb": "Prices, sizes, paying, and browsing.",
+  "sents": [
+   {
+    "kj": [
+     "これは",
+     "いくら",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "これは",
+     "いくら",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "kore wa",
+     "ikura",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "O",
+      "How much"
+     ],
+     [
+      "V",
+      "is"
+     ],
+     [
+      "W",
+      "this"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "いくら is a question word, so it keeps its block but drops the particle before です."
+   },
+   {
+    "kj": [
+     "もっと大きいのは",
+     "あります",
+     "か"
+    ],
+    "kn": [
+     "もっとおおきいのは",
+     "あります",
+     "か"
+    ],
+    "rj": [
+     "motto ookii no wa",
+     "arimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Do you have"
+     ],
+     [
+      "W",
+      "a bigger one"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "の stands in for a noun you have already established — 'a bigger one'."
+   },
+   {
+    "kj": [
+     "これを",
+     "着てみてもいいです",
+     "か"
+    ],
+    "kn": [
+     "これを",
+     "きてみてもいいです",
+     "か"
+    ],
+    "rj": [
+     "kore o",
+     "kite mite mo ii desu",
+     "ka"
+    ],
+    "roles": [
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Can I try on"
+     ],
+     [
+      "O",
+      "this"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "〜てもいいですか is the standard way to ask permission for anything."
+   },
+   {
+    "kj": [
+     "これを",
+     "ください"
+    ],
+    "kn": [
+     "これを",
+     "ください"
+    ],
+    "rj": [
+     "kore o",
+     "kudasai"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I'll take"
+     ],
+     [
+      "O",
+      "this one"
+     ]
+    ],
+    "why": "ください after を means 'give me'. After a て-form verb it means 'please do'."
+   },
+   {
+    "kj": [
+     "カードで",
+     "払えます",
+     "か"
+    ],
+    "kn": [
+     "カードで",
+     "はらえます",
+     "か"
+    ],
+    "rj": [
+     "kaado de",
+     "haraemasu",
+     "ka"
+    ],
+    "roles": [
+     "H",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Can I pay"
+     ],
+     [
+      "H",
+      "by card"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "で marks the means. Payment method, transport, tools all use it."
+   },
+   {
+    "kj": [
+     "これの黒は",
+     "あります",
+     "か"
+    ],
+    "kn": [
+     "これのくろは",
+     "あります",
+     "か"
+    ],
+    "rj": [
+     "kore no kuro wa",
+     "arimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Do you have"
+     ],
+     [
+      "W",
+      "this in black"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "Colour as a noun: 黒 black, 白 white, 赤 red — all usable this way."
+   },
+   {
+    "kj": [
+     "駅は",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "えきは",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "eki wa",
+     "doko",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "P",
+      "Where"
+     ],
+     [
+      "V",
+      "is"
+     ],
+     [
+      "W",
+      "the station"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "The single most reusable sentence pattern in the language: Xはどこですか."
+   },
+   {
+    "kj": [
+     "見ているだけです"
+    ],
+    "kn": [
+     "みているだけです"
+    ],
+    "rj": [
+     "mite iru dake desu"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I'm just looking"
+     ]
+    ],
+    "why": "だけ means only. 見ている is the continuous form: currently looking."
+   },
+   {
+    "kj": [
+     "袋を",
+     "お願いします"
+    ],
+    "kn": [
+     "ふくろを",
+     "おねがいします"
+    ],
+    "rj": [
+     "fukuro o",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "A bag"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "Bags are often charged for now, so you will be asked 袋はいりますか."
+   },
+   {
+    "kj": [
+     "少し",
+     "高いです"
+    ],
+    "kn": [
+     "すこし",
+     "たかいです"
+    ],
+    "rj": [
+     "sukoshi",
+     "takai desu"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "H",
+      "A little"
+     ],
+     [
+      "V",
+      "expensive"
+     ]
+    ],
+    "why": "少し is a bare adverb: no particle, sitting just before what it softens."
+   }
+  ]
+ },
+ {
+  "id": "t4",
+  "title": "Trains and directions",
+  "jp": "電車・道",
+  "blurb": "Tickets, platforms, and finding your way.",
+  "sents": [
+   {
+    "kj": [
+     "券売機は",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "けんばいきは",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "kenbaiki wa",
+     "doko",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "P",
+      "Where"
+     ],
+     [
+      "V",
+      "is"
+     ],
+     [
+      "W",
+      "the ticket machine"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "券売機 is on the sign above the machines themselves."
+   },
+   {
+    "kj": [
+     "京都まで",
+     "切符を二枚",
+     "お願いします"
+    ],
+    "kn": [
+     "きょうとまで",
+     "きっぷをにまい",
+     "おねがいします"
+    ],
+    "rj": [
+     "Kyouto made",
+     "kippu o nimai",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "P",
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "Two tickets"
+     ],
+     [
+      "P",
+      "to Kyoto"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "まで means 'as far as'. 枚 is the counter for flat things: tickets, sheets, plates."
+   },
+   {
+    "kj": [
+     "何番線",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "なんばんせん",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "nanbansen",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "O",
+      "Which platform"
+     ],
+     [
+      "V",
+      "is it"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "何 plus a counter makes 'which/how many': 何番線, 何時, 何人."
+   },
+   {
+    "kj": [
+     "この電車は",
+     "大阪へ",
+     "行きます",
+     "か"
+    ],
+    "kn": [
+     "このでんしゃは",
+     "おおさかへ",
+     "いきます",
+     "か"
+    ],
+    "rj": [
+     "kono densha wa",
+     "Oosaka e",
+     "ikimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "W",
+      "This train"
+     ],
+     [
+      "V",
+      "goes"
+     ],
+     [
+      "P",
+      "to Osaka"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "へ is written with the hiragana he but pronounced e. One of only two particles that do this."
+   },
+   {
+    "kj": [
+     "終電は",
+     "何時に",
+     "出ます",
+     "か"
+    ],
+    "kn": [
+     "しゅうでんは",
+     "なんじに",
+     "でます",
+     "か"
+    ],
+    "rj": [
+     "shuuden wa",
+     "nanji ni",
+     "demasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "T",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "T",
+      "What time"
+     ],
+     [
+      "W",
+      "the last train"
+     ],
+     [
+      "V",
+      "leaves"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "終電 — the last train — is worth knowing before you need it."
+   },
+   {
+    "kj": [
+     "美術館へ",
+     "行きたいです"
+    ],
+    "kn": [
+     "びじゅつかんへ",
+     "いきたいです"
+    ],
+    "rj": [
+     "bijutsukan e",
+     "ikitai desu"
+    ],
+    "roles": [
+     "P",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I want to go"
+     ],
+     [
+      "P",
+      "to the museum"
+     ]
+    ],
+    "why": "Drop ます and add たいです to say you want to do something."
+   },
+   {
+    "kj": [
+     "ここから",
+     "遠いです",
+     "か"
+    ],
+    "kn": [
+     "ここから",
+     "とおいです",
+     "か"
+    ],
+    "rj": [
+     "koko kara",
+     "tooi desu",
+     "ka"
+    ],
+    "roles": [
+     "P",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Is it far"
+     ],
+     [
+      "P",
+      "from here"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "から marks the starting point. Pairs naturally with まで."
+   },
+   {
+    "kj": [
+     "道に",
+     "迷いました"
+    ],
+    "kn": [
+     "みちに",
+     "まよいました"
+    ],
+    "rj": [
+     "michi ni",
+     "mayoimashita"
+    ],
+    "roles": [
+     "P",
+     "V"
+    ],
+    "enc": [
+     [
+      "P",
+      "On the road"
+     ],
+     [
+      "V",
+      "I got lost"
+     ]
+    ],
+    "why": "迷う takes に. Said in the past tense even though you are lost right now."
+   },
+   {
+    "kj": [
+     "この住所まで",
+     "お願いします"
+    ],
+    "kn": [
+     "このじゅうしょまで",
+     "おねがいします"
+    ],
+    "rj": [
+     "kono juusho made",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "P",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Please take me"
+     ],
+     [
+      "P",
+      "to this address"
+     ]
+    ],
+    "why": "Show the address to a taxi driver and this sentence does the rest."
+   },
+   {
+    "kj": [
+     "私は",
+     "七時に",
+     "仕事へ",
+     "電車で",
+     "行きます"
+    ],
+    "kn": [
+     "わたしは",
+     "しちじに",
+     "しごとへ",
+     "でんしゃで",
+     "いきます"
+    ],
+    "rj": [
+     "watashi wa",
+     "shichiji ni",
+     "shigoto e",
+     "densha de",
+     "ikimasu"
+    ],
+    "roles": [
+     "W",
+     "T",
+     "P",
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "I"
+     ],
+     [
+      "V",
+      "go"
+     ],
+     [
+      "P",
+      "to work"
+     ],
+     [
+      "H",
+      "by train"
+     ],
+     [
+      "T",
+      "at seven"
+     ]
+    ],
+    "why": "The full chain, in order: WHO, TIME, PLACE, HOW, VERB. Every block doing its own job."
+   }
+  ]
+ },
+ {
+  "id": "t5",
+  "title": "Hotels and staying over",
+  "jp": "ホテル",
+  "blurb": "Checking in, asking for things, and leaving.",
+  "sents": [
+   {
+    "kj": [
+     "予約が",
+     "あります"
+    ],
+    "kn": [
+     "よやくが",
+     "あります"
+    ],
+    "rj": [
+     "yoyaku ga",
+     "arimasu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I have"
+     ],
+     [
+      "W",
+      "a reservation"
+     ]
+    ],
+    "why": "が, not は — you are announcing new information rather than commenting on a known topic."
+   },
+   {
+    "kj": [
+     "チェックインを",
+     "お願いします"
+    ],
+    "kn": [
+     "チェックインを",
+     "おねがいします"
+    ],
+    "rj": [
+     "chekku-in o",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "Check-in"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "Loanwords take katakana and behave as ordinary nouns."
+   },
+   {
+    "kj": [
+     "チェックアウトは",
+     "何時",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "チェックアウトは",
+     "なんじ",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "chekku-auto wa",
+     "nanji",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "T",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "T",
+      "What time"
+     ],
+     [
+      "V",
+      "is"
+     ],
+     [
+      "W",
+      "checkout"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "No に on 何時 here, because です follows rather than a verb."
+   },
+   {
+    "kj": [
+     "朝食は",
+     "付いています",
+     "か"
+    ],
+    "kn": [
+     "ちょうしょくは",
+     "ついています",
+     "か"
+    ],
+    "rj": [
+     "choushoku wa",
+     "tsuite imasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "W",
+      "Breakfast"
+     ],
+     [
+      "V",
+      "is included"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "付いています — 'is attached'. Used for anything that comes with something else."
+   },
+   {
+    "kj": [
+     "ここに",
+     "荷物を",
+     "置いてもいいです",
+     "か"
+    ],
+    "kn": [
+     "ここに",
+     "にもつを",
+     "おいてもいいです",
+     "か"
+    ],
+    "rj": [
+     "koko ni",
+     "nimotsu o",
+     "oite mo ii desu",
+     "ka"
+    ],
+    "roles": [
+     "P",
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Can I leave"
+     ],
+     [
+      "O",
+      "my luggage"
+     ],
+     [
+      "P",
+      "here"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "に marks where something ends up. で would mark where an activity happens."
+   },
+   {
+    "kj": [
+     "エアコンが",
+     "動きません"
+    ],
+    "kn": [
+     "エアコンが",
+     "うごきません"
+    ],
+    "rj": [
+     "eakon ga",
+     "ugokimasen"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "The air conditioning"
+     ],
+     [
+      "V",
+      "isn't working"
+     ]
+    ],
+    "why": "ません is the polite negative. が because you are reporting a new problem."
+   },
+   {
+    "kj": [
+     "ワイファイは",
+     "あります",
+     "か"
+    ],
+    "kn": [
+     "ワイファイは",
+     "あります",
+     "か"
+    ],
+    "rj": [
+     "waifai wa",
+     "arimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Is there"
+     ],
+     [
+      "W",
+      "wifi"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "Often written Wi-Fi in Latin script on the sign, but said this way."
+   },
+   {
+    "kj": [
+     "タオルをもう一枚",
+     "お願いします"
+    ],
+    "kn": [
+     "タオルをもういちまい",
+     "おねがいします"
+    ],
+    "rj": [
+     "taoru o mou ichimai",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "O",
+      "Another towel"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "枚 again: the counter for flat, thin things."
+   },
+   {
+    "kj": [
+     "もう一泊",
+     "したいです"
+    ],
+    "kn": [
+     "もういっぱく",
+     "したいです"
+    ],
+    "rj": [
+     "mou ippaku",
+     "shitai desu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I'd like to stay"
+     ],
+     [
+      "O",
+      "one more night"
+     ]
+    ],
+    "why": "泊 is the counter for nights of accommodation."
+   },
+   {
+    "kj": [
+     "お風呂は",
+     "何時に",
+     "閉まります",
+     "か"
+    ],
+    "kn": [
+     "おふろは",
+     "なんじに",
+     "しまります",
+     "か"
+    ],
+    "rj": [
+     "ofuro wa",
+     "nanji ni",
+     "shimarimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "T",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "T",
+      "What time"
+     ],
+     [
+      "W",
+      "the bath"
+     ],
+     [
+      "V",
+      "closes"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "閉まります is the intransitive form: the bath closes. 閉めます would mean someone closes it."
+   }
+  ]
+ },
+ {
+  "id": "t6",
+  "title": "Pharmacy and feeling unwell",
+  "jp": "薬局・病院",
+  "blurb": "Symptoms, medicine, and getting help.",
+  "sents": [
+   {
+    "kj": [
+     "頭が",
+     "痛いです"
+    ],
+    "kn": [
+     "あたまが",
+     "いたいです"
+    ],
+    "rj": [
+     "atama ga",
+     "itai desu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "My head"
+     ],
+     [
+      "V",
+      "hurts"
+     ]
+    ],
+    "why": "The body part that hurts takes が. Swap in 歯 tooth, お腹 stomach, 足 leg."
+   },
+   {
+    "kj": [
+     "風邪を",
+     "引きました"
+    ],
+    "kn": [
+     "かぜを",
+     "ひきました"
+    ],
+    "rj": [
+     "kaze o",
+     "hikimashita"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I've caught"
+     ],
+     [
+      "O",
+      "a cold"
+     ]
+    ],
+    "why": "Colds are 'pulled' in Japanese: 風邪を引く. A set phrase, not a logical one."
+   },
+   {
+    "kj": [
+     "風邪の薬は",
+     "あります",
+     "か"
+    ],
+    "kn": [
+     "かぜのくすりは",
+     "あります",
+     "か"
+    ],
+    "rj": [
+     "kaze no kusuri wa",
+     "arimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Do you have"
+     ],
+     [
+      "W",
+      "cold medicine"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "風邪の薬 — medicine of a cold. の does the work an English adjective would."
+   },
+   {
+    "kj": [
+     "卵アレルギーが",
+     "あります"
+    ],
+    "kn": [
+     "たまごアレルギーが",
+     "あります"
+    ],
+    "rj": [
+     "tamago arerugii ga",
+     "arimasu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I have"
+     ],
+     [
+      "W",
+      "an egg allergy"
+     ]
+    ],
+    "why": "Worth memorising exactly, swapping in your own allergen, before you travel."
+   },
+   {
+    "kj": [
+     "薬局は",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "やっきょくは",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "yakkyoku wa",
+     "doko",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "P",
+      "Where"
+     ],
+     [
+      "V",
+      "is"
+     ],
+     [
+      "W",
+      "the pharmacy"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "薬局 on the shopfront; ドラッグストア is the larger chain sort."
+   },
+   {
+    "kj": [
+     "ここが",
+     "痛いです"
+    ],
+    "kn": [
+     "ここが",
+     "いたいです"
+    ],
+    "rj": [
+     "koko ga",
+     "itai desu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "Here"
+     ],
+     [
+      "V",
+      "hurts"
+     ]
+    ],
+    "why": "Point as you say it. が marks the spot that is doing the hurting."
+   },
+   {
+    "kj": [
+     "気分が",
+     "悪いです"
+    ],
+    "kn": [
+     "きぶんが",
+     "わるいです"
+    ],
+    "rj": [
+     "kibun ga",
+     "warui desu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "My condition"
+     ],
+     [
+      "V",
+      "is bad"
+     ]
+    ],
+    "why": "気分が悪い is feeling ill or nauseous, not being in a bad mood."
+   },
+   {
+    "kj": [
+     "一日に",
+     "何回",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "いちにちに",
+     "なんかい",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "ichinichi ni",
+     "nankai",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "T",
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "O",
+      "How many times"
+     ],
+     [
+      "T",
+      "a day"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "一日に — 'per day'. に turns a time span into a rate."
+   },
+   {
+    "kj": [
+     "医者を",
+     "呼んでください"
+    ],
+    "kn": [
+     "いしゃを",
+     "よんでください"
+    ],
+    "rj": [
+     "isha o",
+     "yonde kudasai"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Please call"
+     ],
+     [
+      "O",
+      "a doctor"
+     ]
+    ],
+    "why": "呼ぶ is to call someone over. Phoning is 電話します."
+   },
+   {
+    "kj": [
+     "もう",
+     "大丈夫です"
+    ],
+    "kn": [
+     "もう",
+     "だいじょうぶです"
+    ],
+    "rj": [
+     "mou",
+     "daijoubu desu"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "H",
+      "Now"
+     ],
+     [
+      "V",
+      "I'm all right"
+     ]
+    ],
+    "why": "もう means 'already/now'. 大丈夫です covers everything from 'I'm fine' to 'no thanks'."
+   }
+  ]
+ },
+ {
+  "id": "t7",
+  "title": "Meeting people",
+  "jp": "初対面",
+  "blurb": "Introductions and the first five minutes of small talk.",
+  "sents": [
+   {
+    "kj": [
+     "はじめまして"
+    ],
+    "kn": [
+     "はじめまして"
+    ],
+    "rj": [
+     "hajimemashite"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Nice to meet you"
+     ]
+    ],
+    "why": "Said only on a first meeting. Usually followed by よろしくお願いします."
+   },
+   {
+    "kj": [
+     "私は",
+     "ケビンです"
+    ],
+    "kn": [
+     "わたしは",
+     "ケビンです"
+    ],
+    "rj": [
+     "watashi wa",
+     "Kebin desu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "I"
+     ],
+     [
+      "V",
+      "am Kevin"
+     ]
+    ],
+    "why": "Foreign names go in katakana. 私は is often dropped once it is obvious."
+   },
+   {
+    "kj": [
+     "私は",
+     "イギリスから",
+     "来ました"
+    ],
+    "kn": [
+     "わたしは",
+     "イギリスから",
+     "きました"
+    ],
+    "rj": [
+     "watashi wa",
+     "Igirisu kara",
+     "kimashita"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "I"
+     ],
+     [
+      "V",
+      "came"
+     ],
+     [
+      "P",
+      "from the UK"
+     ]
+    ],
+    "why": "から for origin. イギリス comes from the Portuguese for 'English', not from 'UK'."
+   },
+   {
+    "kj": [
+     "お仕事は",
+     "何",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "おしごとは",
+     "なに",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "oshigoto wa",
+     "nani",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "O",
+      "What"
+     ],
+     [
+      "V",
+      "is"
+     ],
+     [
+      "W",
+      "your work"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "The honorific お on 仕事 is because it is the other person's job, not yours."
+   },
+   {
+    "kj": [
+     "日本語を",
+     "勉強しています"
+    ],
+    "kn": [
+     "にほんごを",
+     "べんきょうしています"
+    ],
+    "rj": [
+     "nihongo o",
+     "benkyou shite imasu"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I'm studying"
+     ],
+     [
+      "O",
+      "Japanese"
+     ]
+    ],
+    "why": "〜ています for something ongoing over a long period, not just this moment."
+   },
+   {
+    "kj": [
+     "日本に",
+     "どのくらい",
+     "います",
+     "か"
+    ],
+    "kn": [
+     "にほんに",
+     "どのくらい",
+     "います",
+     "か"
+    ],
+    "rj": [
+     "Nihon ni",
+     "dono kurai",
+     "imasu",
+     "ka"
+    ],
+    "roles": [
+     "P",
+     "T",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "T",
+      "How long"
+     ],
+     [
+      "V",
+      "have you been"
+     ],
+     [
+      "P",
+      "in Japan"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "います for people and animals; あります for objects."
+   },
+   {
+    "kj": [
+     "あなたは",
+     "どこで",
+     "日本語を",
+     "勉強します",
+     "か"
+    ],
+    "kn": [
+     "あなたは",
+     "どこで",
+     "にほんごを",
+     "べんきょうします",
+     "か"
+    ],
+    "rj": [
+     "anata wa",
+     "doko de",
+     "nihongo o",
+     "benkyou shimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "P",
+      "Where"
+     ],
+     [
+      "W",
+      "do you"
+     ],
+     [
+      "V",
+      "study"
+     ],
+     [
+      "O",
+      "Japanese"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "どこ takes で here because an activity happens there. どこに would mark a destination."
+   },
+   {
+    "kj": [
+     "お酒を",
+     "飲みます",
+     "か"
+    ],
+    "kn": [
+     "おさけを",
+     "のみます",
+     "か"
+    ],
+    "rj": [
+     "osake o",
+     "nomimasu",
+     "ka"
+    ],
+    "roles": [
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Do you drink"
+     ],
+     [
+      "O",
+      "alcohol"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "The plain present tense covers habits: do you drink, as a rule."
+   },
+   {
+    "kj": [
+     "一緒に",
+     "行きましょう"
+    ],
+    "kn": [
+     "いっしょに",
+     "いきましょう"
+    ],
+    "rj": [
+     "issho ni",
+     "ikimashou"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "H",
+      "Together"
+     ],
+     [
+      "V",
+      "let's go"
+     ]
+    ],
+    "why": "ましょう is 'let's'. 一緒に is a fixed adverb meaning together."
+   },
+   {
+    "kj": [
+     "すみません、分かりません"
+    ],
+    "kn": [
+     "すみません、わかりません"
+    ],
+    "rj": [
+     "sumimasen, wakarimasen"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Sorry, I don't understand"
+     ]
+    ],
+    "why": "分かりません, not 知りません. The second sounds like refusing to engage."
+   }
+  ]
+ },
+ {
+  "id": "t8",
+  "title": "Problems and asking for help",
+  "jp": "困ったとき",
+  "blurb": "The sentences you need when something has gone wrong.",
+  "sents": [
+   {
+    "kj": [
+     "すみません"
+    ],
+    "kn": [
+     "すみません"
+    ],
+    "rj": [
+     "sumimasen"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Excuse me"
+     ]
+    ],
+    "why": "Gets attention, apologises, and thanks someone. The hardest-working word in Japanese."
+   },
+   {
+    "kj": [
+     "もう一度",
+     "お願いします"
+    ],
+    "kn": [
+     "もういちど",
+     "おねがいします"
+    ],
+    "rj": [
+     "mou ichido",
+     "onegai shimasu"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "H",
+      "Once more"
+     ],
+     [
+      "V",
+      "please"
+     ]
+    ],
+    "why": "度 is the counter for occasions. もう一度 — one more time."
+   },
+   {
+    "kj": [
+     "もっとゆっくり",
+     "話してください"
+    ],
+    "kn": [
+     "もっとゆっくり",
+     "はなしてください"
+    ],
+    "rj": [
+     "motto yukkuri",
+     "hanashite kudasai"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Please speak"
+     ],
+     [
+      "H",
+      "more slowly"
+     ]
+    ],
+    "why": "もっと makes any adverb comparative: もっとゆっくり, もっと大きく."
+   },
+   {
+    "kj": [
+     "財布を",
+     "なくしました"
+    ],
+    "kn": [
+     "さいふを",
+     "なくしました"
+    ],
+    "rj": [
+     "saifu o",
+     "nakushimashita"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I've lost"
+     ],
+     [
+      "O",
+      "my wallet"
+     ]
+    ],
+    "why": "なくす is to lose an object. 道に迷う is to lose your way."
+   },
+   {
+    "kj": [
+     "手伝ってもらえます",
+     "か"
+    ],
+    "kn": [
+     "てつだってもらえます",
+     "か"
+    ],
+    "rj": [
+     "tetsudatte moraemasu",
+     "ka"
+    ],
+    "roles": [
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Could you help me"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "〜てもらえますか is a soft request: could I receive the favour of you doing this."
+   },
+   {
+    "kj": [
+     "英語を",
+     "話せます",
+     "か"
+    ],
+    "kn": [
+     "えいごを",
+     "はなせます",
+     "か"
+    ],
+    "rj": [
+     "eigo o",
+     "hanasemasu",
+     "ka"
+    ],
+    "roles": [
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "V",
+      "Can you speak"
+     ],
+     [
+      "O",
+      "English"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "話せます is the potential form — are you able to. Many speakers say 英語が話せますか with が."
+   },
+   {
+    "kj": [
+     "書いてください"
+    ],
+    "kn": [
+     "かいてください"
+    ],
+    "rj": [
+     "kaite kudasai"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Please write it down"
+     ]
+    ],
+    "why": "Often more useful than asking someone to repeat themselves."
+   },
+   {
+    "kj": [
+     "分かりません"
+    ],
+    "kn": [
+     "わかりません"
+    ],
+    "rj": [
+     "wakarimasen"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I don't know"
+     ]
+    ],
+    "why": "Softer than it looks in English. Perfectly polite on its own."
+   },
+   {
+    "kj": [
+     "助けて"
+    ],
+    "kn": [
+     "たすけて"
+    ],
+    "rj": [
+     "tasukete"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Help!"
+     ]
+    ],
+    "why": "The bare て-form, shouted. Emergencies only."
+   },
+   {
+    "kj": [
+     "交番は",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "こうばんは",
+     "どこ",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "kouban wa",
+     "doko",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "P",
+      "Where"
+     ],
+     [
+      "V",
+      "is"
+     ],
+     [
+      "W",
+      "the police box"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "交番 are small neighbourhood police posts, and the standard place to hand in lost property."
+   }
+  ]
+ },
+ {
+  "id": "t9",
+  "title": "Time and plans",
+  "jp": "時間・予定",
+  "blurb": "Clock times, arrangements, and running late.",
+  "sents": [
+   {
+    "kj": [
+     "今",
+     "何時",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "いま",
+     "なんじ",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "ima",
+     "nanji",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "T",
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "T",
+      "Now"
+     ],
+     [
+      "O",
+      "what time"
+     ],
+     [
+      "V",
+      "is it"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "今 takes no に. Nor do あした, きょう, まいにち — only specific clock times and dates do."
+   },
+   {
+    "kj": [
+     "何時に",
+     "開きます",
+     "か"
+    ],
+    "kn": [
+     "なんじに",
+     "あきます",
+     "か"
+    ],
+    "rj": [
+     "nanji ni",
+     "akimasu",
+     "ka"
+    ],
+    "roles": [
+     "T",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "T",
+      "What time"
+     ],
+     [
+      "V",
+      "does it open"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "Here 何時 does take に, because a verb follows rather than です."
+   },
+   {
+    "kj": [
+     "明日は",
+     "暇です"
+    ],
+    "kn": [
+     "あしたは",
+     "ひまです"
+    ],
+    "rj": [
+     "ashita wa",
+     "hima desu"
+    ],
+    "roles": [
+     "T",
+     "V"
+    ],
+    "enc": [
+     [
+      "T",
+      "Tomorrow"
+     ],
+     [
+      "V",
+      "I'm free"
+     ]
+    ],
+    "why": "は on a time word contrasts it: tomorrow, as opposed to other days."
+   },
+   {
+    "kj": [
+     "六時に",
+     "会いましょう"
+    ],
+    "kn": [
+     "ろくじに",
+     "あいましょう"
+    ],
+    "rj": [
+     "rokuji ni",
+     "aimashou"
+    ],
+    "roles": [
+     "T",
+     "V"
+    ],
+    "enc": [
+     [
+      "T",
+      "At six"
+     ],
+     [
+      "V",
+      "let's meet"
+     ]
+    ],
+    "why": "会う takes に for the person met as well: 友達に会います."
+   },
+   {
+    "kj": [
+     "少し",
+     "遅れます"
+    ],
+    "kn": [
+     "すこし",
+     "おくれます"
+    ],
+    "rj": [
+     "sukoshi",
+     "okuremasu"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "H",
+      "A little"
+     ],
+     [
+      "V",
+      "I'll be late"
+     ]
+    ],
+    "why": "遅れます — I will be late. 遅いです means late in the day, or slow."
+   },
+   {
+    "kj": [
+     "今週末は",
+     "空いています",
+     "か"
+    ],
+    "kn": [
+     "こんしゅうまつは",
+     "あいています",
+     "か"
+    ],
+    "rj": [
+     "konshuumatsu wa",
+     "aite imasu",
+     "ka"
+    ],
+    "roles": [
+     "T",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "T",
+      "This weekend"
+     ],
+     [
+      "V",
+      "are you free"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "空いています — literally 'is open'. Used of schedules, seats and trains alike."
+   },
+   {
+    "kj": [
+     "来週は",
+     "忙しいです"
+    ],
+    "kn": [
+     "らいしゅうは",
+     "いそがしいです"
+    ],
+    "rj": [
+     "raishuu wa",
+     "isogashii desu"
+    ],
+    "roles": [
+     "T",
+     "V"
+    ],
+    "enc": [
+     [
+      "T",
+      "Next week"
+     ],
+     [
+      "V",
+      "I'm busy"
+     ]
+    ],
+    "why": "来 means coming: 来週 next week, 来年 next year, 来月 next month."
+   },
+   {
+    "kj": [
+     "どのくらい",
+     "かかります",
+     "か"
+    ],
+    "kn": [
+     "どのくらい",
+     "かかります",
+     "か"
+    ],
+    "rj": [
+     "dono kurai",
+     "kakarimasu",
+     "ka"
+    ],
+    "roles": [
+     "T",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "T",
+      "How long"
+     ],
+     [
+      "V",
+      "does it take"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "かかる covers both time taken and money costed."
+   },
+   {
+    "kj": [
+     "また明日"
+    ],
+    "kn": [
+     "またあした"
+    ],
+    "rj": [
+     "mata ashita"
+    ],
+    "roles": [
+     "T"
+    ],
+    "enc": [
+     [
+      "T",
+      "See you tomorrow"
+     ]
+    ],
+    "why": "No verb at all. また plus a time word is a complete goodbye."
+   },
+   {
+    "kj": [
+     "金曜日に",
+     "行きます"
+    ],
+    "kn": [
+     "きんようびに",
+     "いきます"
+    ],
+    "rj": [
+     "kinyoubi ni",
+     "ikimasu"
+    ],
+    "roles": [
+     "T",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I'll go"
+     ],
+     [
+      "T",
+      "on Friday"
+     ]
+    ],
+    "why": "Days of the week take に. 曜日 is the same 曜 in every one of them."
+   }
+  ]
+ },
+ {
+  "id": "t10",
+  "title": "Work and study",
+  "jp": "仕事・勉強",
+  "blurb": "Your job, your learning, and reading things you cannot yet read.",
+  "sents": [
+   {
+    "kj": [
+     "ロンドンの会社で",
+     "働いています"
+    ],
+    "kn": [
+     "ロンドンのかいしゃで",
+     "はたらいています"
+    ],
+    "rj": [
+     "Rondon no kaisha de",
+     "hataraite imasu"
+    ],
+    "roles": [
+     "P",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I work"
+     ],
+     [
+      "P",
+      "at a company in London"
+     ]
+    ],
+    "why": "で because the working happens there. に would just place the company on a map."
+   },
+   {
+    "kj": [
+     "私は",
+     "プログラマーです"
+    ],
+    "kn": [
+     "わたしは",
+     "プログラマーです"
+    ],
+    "rj": [
+     "watashi wa",
+     "puroguramaa desu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "I"
+     ],
+     [
+      "V",
+      "am a programmer"
+     ]
+    ],
+    "why": "Job titles borrowed from English stay in katakana."
+   },
+   {
+    "kj": [
+     "会議は",
+     "十時に",
+     "始まります"
+    ],
+    "kn": [
+     "かいぎは",
+     "じゅうじに",
+     "はじまります"
+    ],
+    "rj": [
+     "kaigi wa",
+     "juuji ni",
+     "hajimarimasu"
+    ],
+    "roles": [
+     "W",
+     "T",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "The meeting"
+     ],
+     [
+      "V",
+      "starts"
+     ],
+     [
+      "T",
+      "at ten"
+     ]
+    ],
+    "why": "始まります — it starts. 始めます would mean someone starts it."
+   },
+   {
+    "kj": [
+     "毎日",
+     "漢字を",
+     "勉強します"
+    ],
+    "kn": [
+     "まいにち",
+     "かんじを",
+     "べんきょうします"
+    ],
+    "rj": [
+     "mainichi",
+     "kanji o",
+     "benkyou shimasu"
+    ],
+    "roles": [
+     "T",
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "T",
+      "Every day"
+     ],
+     [
+      "V",
+      "I study"
+     ],
+     [
+      "O",
+      "kanji"
+     ]
+    ],
+    "why": "毎日 takes no に, the same as 今 and 明日."
+   },
+   {
+    "kj": [
+     "この漢字は",
+     "難しいです"
+    ],
+    "kn": [
+     "このかんじは",
+     "むずかしいです"
+    ],
+    "rj": [
+     "kono kanji wa",
+     "muzukashii desu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "This kanji"
+     ],
+     [
+      "V",
+      "is difficult"
+     ]
+    ],
+    "why": "この attaches to a noun; これ stands alone as one."
+   },
+   {
+    "kj": [
+     "この漢字は",
+     "どう",
+     "読みます",
+     "か"
+    ],
+    "kn": [
+     "このかんじは",
+     "どう",
+     "よみます",
+     "か"
+    ],
+    "rj": [
+     "kono kanji wa",
+     "dou",
+     "yomimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "H",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "H",
+      "How"
+     ],
+     [
+      "V",
+      "do you read"
+     ],
+     [
+      "W",
+      "this kanji"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "どう means 'how' and takes no particle, so it sits in the HOW block."
+   },
+   {
+    "kj": [
+     "メールを",
+     "送ってください"
+    ],
+    "kn": [
+     "メールを",
+     "おくってください"
+    ],
+    "rj": [
+     "meeru o",
+     "okutte kudasai"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Please send"
+     ],
+     [
+      "O",
+      "the email"
+     ]
+    ],
+    "why": "送る covers email, post and seeing someone off."
+   },
+   {
+    "kj": [
+     "まだ",
+     "習っています"
+    ],
+    "kn": [
+     "まだ",
+     "ならっています"
+    ],
+    "rj": [
+     "mada",
+     "naratte imasu"
+    ],
+    "roles": [
+     "T",
+     "V"
+    ],
+    "enc": [
+     [
+      "T",
+      "Still"
+     ],
+     [
+      "V",
+      "I'm learning"
+     ]
+    ],
+    "why": "習う is learning from a teacher; 勉強する is studying under your own steam."
+   },
+   {
+    "kj": [
+     "これは",
+     "どういう意味",
+     "です",
+     "か"
+    ],
+    "kn": [
+     "これは",
+     "どういういみ",
+     "です",
+     "か"
+    ],
+    "rj": [
+     "kore wa",
+     "dou iu imi",
+     "desu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "O",
+      "What"
+     ],
+     [
+      "V",
+      "does"
+     ],
+     [
+      "W",
+      "this"
+     ],
+     [
+      "V",
+      "mean"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "どういう意味ですか — the phrase that unlocks every other phrase."
+   },
+   {
+    "kj": [
+     "まだ",
+     "読めません"
+    ],
+    "kn": [
+     "まだ",
+     "よめません"
+    ],
+    "rj": [
+     "mada",
+     "yomemasen"
+    ],
+    "roles": [
+     "T",
+     "V"
+    ],
+    "enc": [
+     [
+      "T",
+      "Yet"
+     ],
+     [
+      "V",
+      "I can't read it"
+     ]
+    ],
+    "why": "まだ plus a negative means 'not yet' rather than 'still not'."
+   }
+  ]
+ },
+ {
+  "id": "t11",
+  "title": "Home and daily routine",
+  "jp": "家・日常",
+  "blurb": "The shape of an ordinary day.",
+  "sents": [
+   {
+    "kj": [
+     "私は",
+     "六時に",
+     "起きます"
+    ],
+    "kn": [
+     "わたしは",
+     "ろくじに",
+     "おきます"
+    ],
+    "rj": [
+     "watashi wa",
+     "rokuji ni",
+     "okimasu"
+    ],
+    "roles": [
+     "W",
+     "T",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "I"
+     ],
+     [
+      "V",
+      "get up"
+     ],
+     [
+      "T",
+      "at six"
+     ]
+    ],
+    "why": "The skeleton sentence: WHO, TIME, VERB. Everything else is an addition to this."
+   },
+   {
+    "kj": [
+     "ロンドンに",
+     "住んでいます"
+    ],
+    "kn": [
+     "ロンドンに",
+     "すんでいます"
+    ],
+    "rj": [
+     "Rondon ni",
+     "sunde imasu"
+    ],
+    "roles": [
+     "P",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I live"
+     ],
+     [
+      "P",
+      "in London"
+     ]
+    ],
+    "why": "住む always takes に, and always appears as 住んでいます rather than 住みます."
+   },
+   {
+    "kj": [
+     "私は",
+     "カフェで",
+     "友達と",
+     "コーヒーを",
+     "飲みました"
+    ],
+    "kn": [
+     "わたしは",
+     "カフェで",
+     "ともだちと",
+     "コーヒーを",
+     "のみました"
+    ],
+    "rj": [
+     "watashi wa",
+     "kafe de",
+     "tomodachi to",
+     "koohii o",
+     "nomimashita"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "H",
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "I"
+     ],
+     [
+      "V",
+      "drank"
+     ],
+     [
+      "O",
+      "coffee"
+     ],
+     [
+      "H",
+      "with my friend"
+     ],
+     [
+      "P",
+      "at a cafe"
+     ]
+    ],
+    "why": "Five blocks, five jobs, in order. で the location of the action, と the person you did it with."
+   },
+   {
+    "kj": [
+     "夕食の後で",
+     "皿を",
+     "洗います"
+    ],
+    "kn": [
+     "ゆうしょくのあとで",
+     "さらを",
+     "あらいます"
+    ],
+    "rj": [
+     "yuushoku no ato de",
+     "sara o",
+     "araimasu"
+    ],
+    "roles": [
+     "T",
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I wash"
+     ],
+     [
+      "O",
+      "the dishes"
+     ],
+     [
+      "T",
+      "after dinner"
+     ]
+    ],
+    "why": "〜の後で means 'after'. The で marks the time frame the action sits inside."
+   },
+   {
+    "kj": [
+     "私の家は",
+     "駅から",
+     "近いです"
+    ],
+    "kn": [
+     "わたしのいえは",
+     "えきから",
+     "ちかいです"
+    ],
+    "rj": [
+     "watashi no ie wa",
+     "eki kara",
+     "chikai desu"
+    ],
+    "roles": [
+     "W",
+     "P",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "My house"
+     ],
+     [
+      "V",
+      "is near"
+     ],
+     [
+      "P",
+      "the station"
+     ]
+    ],
+    "why": "近い measures from somewhere, so it pairs with から."
+   },
+   {
+    "kj": [
+     "七時に",
+     "家へ",
+     "帰ります"
+    ],
+    "kn": [
+     "しちじに",
+     "いえへ",
+     "かえります"
+    ],
+    "rj": [
+     "shichiji ni",
+     "ie e",
+     "kaerimasu"
+    ],
+    "roles": [
+     "T",
+     "P",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I go"
+     ],
+     [
+      "P",
+      "home"
+     ],
+     [
+      "T",
+      "at seven"
+     ]
+    ],
+    "why": "帰る is specifically to return home or to where you belong. 行く is just going."
+   },
+   {
+    "kj": [
+     "部屋が",
+     "暗いです"
+    ],
+    "kn": [
+     "へやが",
+     "くらいです"
+    ],
+    "rj": [
+     "heya ga",
+     "kurai desu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "The room"
+     ],
+     [
+      "V",
+      "is dark"
+     ]
+    ],
+    "why": "が rather than は: you are pointing something out, not commenting on a known topic."
+   },
+   {
+    "kj": [
+     "今",
+     "料理を",
+     "作っています"
+    ],
+    "kn": [
+     "いま",
+     "りょうりを",
+     "つくっています"
+    ],
+    "rj": [
+     "ima",
+     "ryouri o",
+     "tsukutte imasu"
+    ],
+    "roles": [
+     "T",
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "T",
+      "Right now"
+     ],
+     [
+      "V",
+      "I'm cooking"
+     ],
+     [
+      "O",
+      "food"
+     ]
+    ],
+    "why": "〜ています here is the true present continuous: happening at this moment."
+   },
+   {
+    "kj": [
+     "窓を",
+     "開けてください"
+    ],
+    "kn": [
+     "まどを",
+     "あけてください"
+    ],
+    "rj": [
+     "mado o",
+     "akete kudasai"
+    ],
+    "roles": [
+     "O",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "Please open"
+     ],
+     [
+      "O",
+      "the window"
+     ]
+    ],
+    "why": "開けます is someone opening it; 開きます is it opening by itself."
+   },
+   {
+    "kj": [
+     "あなたは",
+     "朝",
+     "何を",
+     "飲みます",
+     "か"
+    ],
+    "kn": [
+     "あなたは",
+     "あさ",
+     "なにを",
+     "のみます",
+     "か"
+    ],
+    "rj": [
+     "anata wa",
+     "asa",
+     "nani o",
+     "nomimasu",
+     "ka"
+    ],
+    "roles": [
+     "W",
+     "T",
+     "O",
+     "V",
+     "Q"
+    ],
+    "enc": [
+     [
+      "O",
+      "What"
+     ],
+     [
+      "V",
+      "do you drink"
+     ],
+     [
+      "T",
+      "in the morning"
+     ],
+     [
+      "Q",
+      "?"
+     ]
+    ],
+    "why": "朝 as a general time of day takes no に. 朝六時に would."
+   }
+  ]
+ },
+ {
+  "id": "t12",
+  "title": "Opinions and feelings",
+  "jp": "気持ち",
+  "blurb": "Liking, disliking, and saying what you think.",
+  "sents": [
+   {
+    "kj": [
+     "私も",
+     "そう思います"
+    ],
+    "kn": [
+     "わたしも",
+     "そうおもいます"
+    ],
+    "rj": [
+     "watashi mo",
+     "sou omoimasu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "I too"
+     ],
+     [
+      "V",
+      "think so"
+     ]
+    ],
+    "why": "も replaces は here. You never write 私はも."
+   },
+   {
+    "kj": [
+     "和食が",
+     "好きです"
+    ],
+    "kn": [
+     "わしょくが",
+     "すきです"
+    ],
+    "rj": [
+     "washoku ga",
+     "suki desu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I like"
+     ],
+     [
+      "W",
+      "Japanese food"
+     ]
+    ],
+    "why": "好き is an adjective, not a verb, so what you like takes が and never を."
+   },
+   {
+    "kj": [
+     "あまり",
+     "好きじゃありません"
+    ],
+    "kn": [
+     "あまり",
+     "すきじゃありません"
+    ],
+    "rj": [
+     "amari",
+     "suki ja arimasen"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I don't like it"
+     ],
+     [
+      "H",
+      "much"
+     ]
+    ],
+    "why": "あまり always pairs with a negative ending. On its own it is incomplete."
+   },
+   {
+    "kj": [
+     "それは",
+     "面白いです"
+    ],
+    "kn": [
+     "それは",
+     "おもしろいです"
+    ],
+    "rj": [
+     "sore wa",
+     "omoshiroi desu"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "That"
+     ],
+     [
+      "V",
+      "is interesting"
+     ]
+    ],
+    "why": "面白い covers interesting and funny. Context does the separating."
+   },
+   {
+    "kj": [
+     "私は",
+     "疲れました"
+    ],
+    "kn": [
+     "わたしは",
+     "つかれました"
+    ],
+    "rj": [
+     "watashi wa",
+     "tsukaremashita"
+    ],
+    "roles": [
+     "W",
+     "V"
+    ],
+    "enc": [
+     [
+      "W",
+      "I"
+     ],
+     [
+      "V",
+      "am tired"
+     ]
+    ],
+    "why": "Past tense, because the tiring already happened and you are in its result."
+   },
+   {
+    "kj": [
+     "嬉しいです"
+    ],
+    "kn": [
+     "うれしいです"
+    ],
+    "rj": [
+     "ureshii desu"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I'm glad"
+     ]
+    ],
+    "why": "嬉しい is your own feeling. For someone else's you would need 嬉しそうです."
+   },
+   {
+    "kj": [
+     "楽しかったです"
+    ],
+    "kn": [
+     "たのしかったです"
+    ],
+    "rj": [
+     "tanoshikatta desu"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "It was fun"
+     ]
+    ],
+    "why": "楽しい to 楽しかった. The い-adjective carries the past tense, not the です."
+   },
+   {
+    "kj": [
+     "少し高いと",
+     "思います"
+    ],
+    "kn": [
+     "すこしたかいと",
+     "おもいます"
+    ],
+    "rj": [
+     "sukoshi takai to",
+     "omoimasu"
+    ],
+    "roles": [
+     "H",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I think"
+     ],
+     [
+      "H",
+      "it's a bit expensive"
+     ]
+    ],
+    "why": "と quotes the thought. Everything before it is what you think."
+   },
+   {
+    "kj": [
+     "日本へ",
+     "行きたいです"
+    ],
+    "kn": [
+     "にほんへ",
+     "いきたいです"
+    ],
+    "rj": [
+     "Nihon e",
+     "ikitai desu"
+    ],
+    "roles": [
+     "P",
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "I want to go"
+     ],
+     [
+      "P",
+      "to Japan"
+     ]
+    ],
+    "why": "たい describes your own desire only. For other people, use 行きたがっています."
+   },
+   {
+    "kj": [
+     "大丈夫です"
+    ],
+    "kn": [
+     "だいじょうぶです"
+    ],
+    "rj": [
+     "daijoubu desu"
+    ],
+    "roles": [
+     "V"
+    ],
+    "enc": [
+     [
+      "V",
+      "That's fine"
+     ]
+    ],
+    "why": "Agreement, reassurance, or a polite refusal. Tone decides which."
+   }
+  ]
+ }
+]

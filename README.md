@@ -13,7 +13,7 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `kanji/kanji-by-situation.html` | **See them in use.** 200 N4 kanji in 13 real-life situations, with 222 example sentences, where you meet each kanji, and N5–N2 word lists. |
 | `words/phrasebook.html` | Interactive phrasebook: about 500 phrases and sentences in 14 situations, with swap-in words, grammar-block colouring and a starred personal list. |
 | `words/grammar.html` | 112 grammar patterns from N5 to N2, with a cumulative level switch: meaning, how to form each, usage notes, and examples with audio. |
-| `words/sentence-builder.html` | The grammar lesson behind the phrasebook: 120 sentences in colour-coded blocks, plus every N5/N4 verb and adjective by type with its main forms and traps. |
+| `words/sentence-builder.html` | **The grammar behind it.** 1,442 sentences in colour-coded blocks with a level switch, the English order beside the Japanese, and all N5/N4 verbs and adjectives with their forms. |
 | `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work; not part of the build. |
 | `kana/kana-words.html` | About 425 N5–N2 words written in kana, grouped by use (greetings, question and pointing words, linking words, adverbs, sound words, verbs, nouns by topic), with example sentences. |
 | `kana/katakana-words.html` | 340 N5–N2 loanwords by topic, with notes on false friends and non-English origins, and example sentences. |
@@ -62,7 +62,7 @@ Then commit both the source change and the rebuilt pages, because GitHub Pages s
 | A kanji's story, keyword, parts or look-alikes | `data/kanji.json` (under `K`, by kanji) |
 | The words listed on kanji cards | `data/kanji-words.json` |
 | Readings used for the on/kun colours | `data/readings.json` |
-| The 120 sentence-builder sentences | `src/sentence-builder.html` (the page is their source; the phrasebook and situation page reuse them) |
+| The 120 core sentence-builder sentences | `data/sentences-builder.json` |
 | Natural English for those sentences | `data/sentence-builder-english.json` |
 | The other example sentences | `data/sentences-extra.json` |
 | Phrasebook sections and swap-in words | `data/phrasebook.json` |

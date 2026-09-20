@@ -370,7 +370,32 @@ for c in chapters:
 write("words/phrasebook.html", fill("phrasebook.html", DATA=dump(chapters), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 
 # ---------------------------------------------------------------- sentence builder
-write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
+def builder_sections():
+    """The sentence builder's own 12 topics, then every other marked sentence grouped by situation."""
+    LV, NOTE = kanji["LV"], NOTE_RE
+    def level(text):
+        ks = [c for c in text if "\u4e00" <= c <= "\u9fff"]
+        return min([LV.get(c, 2) for c in ks] or [5])
+    out = []
+    for t in load("sentences-builder.json"):
+        ss = []
+        for s in t["sents"]:
+            s = dict(s); s["enb"] = english_blocks(" ".join(x[1] for x in s["enc"]), s["enc"]); s.pop("enc")
+            s["lv"] = level("".join(s["kj"])); ss.append(s)
+        out.append({"id": t["id"], "title": t["title"], "jp": t["jp"], "blurb": t["blurb"], "sents": ss})
+    sit = {t["id"]: t for t in load("situation.json")["topics"]}
+    groups = {}
+    for s in extra:
+        r = mark({k: v for k, v in s.items() if k in ("n", "en", "why", "jr", "er")})
+        r["lv"] = level(NOTE.sub(r"\1", s["n"]))
+        groups.setdefault(s["topic"], []).append(r)
+    for tid, ss in groups.items():
+        t = sit.get(tid, {})
+        out.append({"id": "x" + tid, "title": (t.get("en") or "More sentences"), "jp": t.get("jp", ""),
+                    "blurb": "More sentences in the same blocks, from every level.", "sents": ss})
+    return out
+
+write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, DATA=dump(builder_sections())))
 
 # ---------------------------------------------------------------- study plan
 write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
