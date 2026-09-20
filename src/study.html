@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Learn the kanji, N5 to N2: method and spaced-repetition flashcards</title>
+<title>Daily study plan: kanji and words, N5 to N2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -165,7 +165,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 <body>
 <header class="top">
   <h1>漢字 学習</h1>
-  <p class="sub">Learn the kanji from N5 up to N2 (981 in all) the way the best teachers and the memory research agree on: building blocks first, one vivid story per kanji, one real word for the readings, and spaced-repetition flashcards that schedule every review for you.</p>
+  <p class="sub">Learn the kanji from N5 up to N2 (981 in all), and their words, the way the best teachers and the memory research agree on: building blocks first, one vivid story per kanji, one real word for the readings, and spaced-repetition flashcards that schedule every review for you.</p>
 </header>
 <nav class="tabs" role="tablist">
   <button role="tab" data-tab="today" aria-selected="true">Today</button>
@@ -209,7 +209,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 <tr><td>1</td><td>The twelve master shapes and their families. Reviews are light.</td><td>about 20 min</td></tr>
 <tr><td>2 to 4</td><td>The rest of the kanji arrive, 10 a day. Reviews build up as the word cards unlock.</td><td>25 to 35 min</td></tr>
 <tr><td>5 to 7</td><td>No new cards. Reviews thin out as intervals stretch to weeks.</td><td>15 to 20 min, falling</td></tr>
-<tr><td>After that</td><td>A few minutes of reviews a day keeps all 284 alive while you move on to N3.</td><td>5 to 10 min</td></tr>
+<tr><td>After that</td><td>A few minutes of reviews a day keeps all 284 alive while you raise the level to N3 and N2, and switch on word cards.</td><td>5 to 10 min</td></tr>
 </tbody>
 </table>
 
@@ -417,7 +417,7 @@ function renderToday(){
    <h3>Settings</h3>
    <div class="set"><label>New kanji a day <select id="perDay">${[5,10,15,20].map(n=>`<option ${n===S.settings.perDay?"selected":""}>${n}</option>`).join("")}</select></label>
      <label>New words a day <select id="vPerDay">${[0,5,10,20].map(n=>`<option value="${n}" ${n===+(S.settings.vPerDay||0)?"selected":""}>${n===0?"none":n}</option>`).join("")}</select></label>
-     <label>Go up to <select id="upto">${[[4,"N4 (284 kanji)"],[3,"N3 (626)"],[2,"N2 (981)"]].map(([v,t])=>`<option value="${v}" ${upto()===v?"selected":""}>${t}</option>`).join("")}</select></label>
+     <label>Go up to <select id="upto">${[[4,"N4 (284 kanji)"],[3,"N3 (626 kanji)"],[2,"N2 (981 kanji)"]].map(([v,t])=>`<option value="${v}" ${upto()===v?"selected":""}>${t}</option>`).join("")}</select></label>
      <label>Order <select id="ord"><option value="shape" ${S.settings.order==="shape"?"selected":""}>Shape families (recommended)</option><option value="n5" ${S.settings.order==="n5"?"selected":""}>N5 first, then the rest level by level</option></select></label></div>
    <p class="muted small">10 a day is the sweet spot for most people. N5 and N4 come first; raising the level adds N3 and then N2 after them, still in shape families with every kanji's parts before it. Changing the order or level only affects kanji you haven't started.</p>
    <h3>Your progress file</h3>

@@ -9,18 +9,18 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | Page | What it is |
 |---|---|
 | `kanji/master-kanji-shapes.html` | **Look up and explore.** Every kanji from N5 to N2 (981), with a cumulative level switch. Each card: parts and story, look-alikes, and every word grouped by on and kun reading, linked to the other kanji in it. Four views: Course (shape families), Flashcards, Sound index (parts that give the sound, shared readings) and By topic. Your own stories. |
-| `kanji/learn-n5-n4.html` | **Learn day by day.** Daily study plan: how to learn kanji fastest, plus spaced-repetition flashcards from N5 up to N2 (a level setting), parts before the kanji built from them. Shares progress and your own stories with the master deck. |
-| `kanji/kanji-by-situation.html` | **See them in use.** 200 N4 kanji in 13 real-life situations, with 222 example sentences, where you meet each kanji, and N5–N2 word lists. |
-| `words/phrasebook.html` | Interactive phrasebook: about 500 phrases and sentences in 14 situations, with swap-in words, grammar-block colouring and a starred personal list. |
+| `kanji/learn.html` | **Learn day by day.** Daily study plan: how to learn kanji fastest, plus spaced-repetition flashcards from N5 up to N2, with optional word cards from the 4,077-word list. Shares progress and your own stories with the master deck. |
+| `kanji/kanji-by-situation.html` | **See them in use.** 200 N4 kanji in 13 real-life situations, with 1,465 example sentences, where you meet each kanji, and N5–N2 word lists. |
+| `words/phrasebook.html` | Interactive phrasebook: 285 phrases and 1,465 sentences in 14 situations, with swap-in words, grammar-block colouring and a starred personal list. |
 | `words/vocabulary.html` | **Every word.** 4,077 N5–N2 words (the kanji words plus the kana lists) by type or kana order, with examples, audio and links to the kanji deck. |
 | `words/grammar.html` | 112 grammar patterns from N5 to N2, with a cumulative level switch: meaning, how to form each, usage notes, and examples with audio. |
-| `words/sentence-builder.html` | **The grammar behind it.** 1,442 sentences in colour-coded blocks with a level switch, the English order beside the Japanese, and all N5/N4 verbs and adjectives with their forms. |
+| `words/sentence-builder.html` | **The grammar behind it.** 1,465 sentences in 13 situations, in colour-coded blocks with a level switch, the English order beside the Japanese, and all N5/N4 verbs and adjectives with their forms. |
 | `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work; not part of the build. |
-| `kana/kana-words.html` | About 425 N5–N2 words written in kana, grouped by use (greetings, question and pointing words, linking words, adverbs, sound words, verbs, nouns by topic), with example sentences. |
-| `kana/katakana-words.html` | 340 N5–N2 loanwords by topic, with notes on false friends and non-English origins, and example sentences. |
+| `kana/kana-words.html` | 454 N5–N2 words written in kana, grouped by use (greetings, question and pointing words, linking words, adverbs, sound words, verbs, nouns by topic), with example sentences. |
+| `kana/katakana-words.html` | 353 N5–N2 loanwords by topic, with notes on false friends and non-English origins, and example sentences. |
 | `kana/kana-sounds.html` | Kana by sign family, by sound, and same-sound words with pitch patterns. |
 
-Sentences on the phrasebook, sentence builder, grammar and situation pages are coloured by grammar block (who, time, place, how, what, verb, question), with one on/off setting shared by all four. Every page can read the Japanese aloud with the browser's built-in Japanese voice (the ▶ buttons). All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
+Sentences on the phrasebook, sentence builder, grammar, situation, word and kana pages are coloured by grammar block (who, time, place, how, what, verb, question), with one on/off setting shared by every page. Every page can read the Japanese aloud with the browser's built-in Japanese voice (the ▶ buttons). All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
 
 ## Offline
 

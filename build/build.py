@@ -523,7 +523,10 @@ def builder_sections():
 write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, DATA=dump(builder_sections())))
 
 # ---------------------------------------------------------------- study plan
-write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
+write("kanji/learn.html", fill("study.html", DATA=dump(study_data())))
+write("kanji/learn-n5-n4.html", '<!DOCTYPE html><meta charset="utf-8"><title>Moved</title>'
+      '<meta http-equiv="refresh" content="0; url=learn.html">'
+      '<p>The daily study plan now covers N5 to N2 and lives at <a href="learn.html">learn.html</a>.</p>')
 
 # ---------------------------------------------------------------- kana
 _vocab = vocabulary()
@@ -532,10 +535,10 @@ write("words/vocabulary.html", fill("vocabulary.html", DATA=dump(_vocab), KANJI_
 write("kana/kana-sounds.html", fill("kana-sounds.html", KANJI_SET=KANJI_SET))
 write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words("kana-words.json")), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS,
       TITLE="Kana words: the Japanese you write without kanji", H1="かなの言葉", STORE="kana-words", FROM="kw",
-      INTRO="The words you'll write in hiragana, not kanji: greetings, question words, pointing words, the little words that link sentences, adverbs, sound words, and everyday nouns and verbs. About 425 words from N5 to N2, grouped by what you use them for, each with a real example sentence where there is one. For loanwords, see <a href=\"katakana-words.html\">katakana words</a>."))
+      INTRO="The words you'll write in hiragana, not kanji: greetings, question words, pointing words, the little words that link sentences, adverbs, sound words, and everyday nouns and verbs. 454 words from N5 to N2, grouped by what you use them for, each with a real example sentence where there is one. For loanwords, see <a href=\"katakana-words.html\">katakana words</a>."))
 write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("katakana-words.json")), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS,
       TITLE="Katakana words: loanwords by topic", H1="カタカナの言葉", STORE="katakana-words", FROM="kt",
-      INTRO="340 loanwords from N5 to N2, grouped by topic, from コーヒー to パスポート. Red notes flag the ones that don't mean what English speakers expect (マンション, コンセント, スマート) and the ones borrowed from other languages (パン, アルバイト). Each has a real example sentence where there is one. For words written in hiragana, see <a href=\"kana-words.html\">kana words</a>."))
+      INTRO="353 loanwords from N5 to N2, grouped by topic, from コーヒー to パスポート. Red notes flag the ones that don't mean what English speakers expect (マンション, コンセント, スマート) and the ones borrowed from other languages (パン, アルバイト). Each has a real example sentence where there is one. For words written in hiragana, see <a href=\"kana-words.html\">kana words</a>."))
 # ---------------------------------------------------------------- grammar
 _grammar = load("grammar.json")
 for _g in _grammar:
