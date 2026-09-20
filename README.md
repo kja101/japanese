@@ -16,6 +16,7 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `words/sentence-builder.html` | The grammar lesson behind the phrasebook: 120 sentences in colour-coded blocks, plus every N5/N4 verb and adjective by type with its main forms and traps. |
 | `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work; not part of the build. |
 | `kana/kana-words.html` | About 425 N5–N2 words written in kana, grouped by use (greetings, question and pointing words, linking words, adverbs, sound words, verbs, nouns by topic), with example sentences. |
+| `kana/katakana-words.html` | 340 N5–N2 loanwords by topic, with notes on false friends and non-English origins, and example sentences. |
 | `kana/kana-sounds.html` | Kana by sign family, by sound, and same-sound words with pitch patterns. |
 
 Every page can read the Japanese aloud with the browser's built-in Japanese voice (the ▶ buttons). All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
@@ -66,7 +67,7 @@ Then commit both the source change and the rebuilt pages, because GitHub Pages s
 | The other example sentences | `data/sentences-extra.json` |
 | Phrasebook sections and swap-in words | `data/phrasebook.json` |
 | Situation topics, kanji rows and notes | `data/situation.json` |
-| Kana words and their groups | `data/kana-words.json` |
+| Kana words and their groups | `data/kana-words.json` (hiragana), `data/katakana-words.json` (katakana); both pages share `src/kana-words.html` |
 | Grammar patterns and examples | `data/grammar.json` |
 | Offline caching | `src/sw.js` (the build writes `sw.js` with the file list and a version) |
 | The daily study plan's order for N5/N4 (N3 and N2 are added automatically) | `data/study.json` |

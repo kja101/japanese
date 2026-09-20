@@ -86,9 +86,9 @@ def words_for(k):
     return {"r": [[x["t"], x["label"], x["words"]] for x in w["readings"]], "sp": w["sp"],
             "al": [al["w"], al["r"], al["t"]] if al else None}
 
-def kana_words():
+def kana_words(name="kana-words.json"):
     """Kana words plus one example sentence each, found in the site's own sentences."""
-    data = load("kana-words.json")
+    data = load(name)
     NOTE = re.compile(r"([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}")
     plain = lambda s: NOTE.sub(r"\1", s)
     kana = lambda s: NOTE.sub(r"\2", s)
@@ -109,7 +109,10 @@ def kana_words():
         key = w["w"].strip("～〜")
         if len(key) < 2:
             continue
-        pat = re.compile(r"(?<![\u4e00-\u9fff])" + re.escape(key))
+        if re.fullmatch(r"[\u30a0-\u30ffー]+", key):   # katakana: match whole words only (カー is not in カード)
+            pat = re.compile(r"(?<![\u30a0-\u30ffー])" + re.escape(key) + r"(?![\u30a0-\u30ffー])")
+        else:
+            pat = re.compile(r"(?<![\u4e00-\u9fff])" + re.escape(key))
         hits = [(p, en) for p, en in corpus if pat.search("".join(k for k, _ in p))]
         if hits:
             p, en = min(hits, key=lambda h: len("".join(k for k, _ in h[0])))
@@ -205,7 +208,12 @@ write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
 
 # ---------------------------------------------------------------- kana
 write("kana/kana-sounds.html", (SRC / "kana-sounds.html").read_text(encoding="utf-8"))
-write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words()), KANJI_SET=KANJI_SET))
+write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words("kana-words.json")), KANJI_SET=KANJI_SET,
+      TITLE="Kana words: the Japanese you write without kanji", H1="かなの言葉", STORE="kana-words", FROM="kw",
+      INTRO="The words you'll write in hiragana, not kanji: greetings, question words, pointing words, the little words that link sentences, adverbs, sound words, and everyday nouns and verbs. About 425 words from N5 to N2, grouped by what you use them for, each with a real example sentence where there is one. For loanwords, see <a href=\"katakana-words.html\">katakana words</a>."))
+write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("katakana-words.json")), KANJI_SET=KANJI_SET,
+      TITLE="Katakana words: loanwords by topic", H1="カタカナの言葉", STORE="katakana-words", FROM="kt",
+      INTRO="340 loanwords from N5 to N2, grouped by topic, from コーヒー to パスポート. Red notes flag the ones that don't mean what English speakers expect (マンション, コンセント, スマート) and the ones borrowed from other languages (パン, アルバイト). Each has a real example sentence where there is one. For words written in hiragana, see <a href=\"kana-words.html\">kana words</a>."))
 # ---------------------------------------------------------------- grammar
 write("words/grammar.html", fill("grammar.html", DATA=dump(load("grammar.json")), KANJI_SET=KANJI_SET))
 

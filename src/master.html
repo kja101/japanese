@@ -611,7 +611,7 @@ render();
 (function(){
   const m=location.hash.match(/^#k-(.+)$/); if(!m) return;
   const k=decodeURIComponent(m[1]); const src=(location.search.match(/[?&]from=(\w+)/)||[])[1]; const fromSB=!!src;
-  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"],gr:["← Back to grammar","../words/grammar.html"]}[src]||["← Back","../index.html"];
+  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"],gr:["← Back to grammar","../words/grammar.html"],kt:["← Back to katakana words","../kana/katakana-words.html"]}[src]||["← Back","../index.html"];
   setTimeout(()=>{
     jumpTo(k,null,null);
     if(!fromSB) return;

@@ -1531,5 +1531,453 @@
   "n": "それ は 私{わたし} の 責任{せきにん} です",
   "en": "That's my responsibility",
   "why": ""
+ },
+ {
+  "id": "n219",
+  "topic": "t1",
+  "n": "カレー と サラダ を ください",
+  "en": "Curry and a salad, please",
+  "why": ""
+ },
+ {
+  "id": "n220",
+  "topic": "t1",
+  "n": "この ケーキ は とても おいしい です",
+  "en": "This cake is really delicious",
+  "why": ""
+ },
+ {
+  "id": "n221",
+  "topic": "t1",
+  "n": "朝{あさ} は パン と バター を 食{た}べます",
+  "en": "I have bread and butter in the morning",
+  "why": ""
+ },
+ {
+  "id": "n222",
+  "topic": "t1",
+  "n": "ステーキ は よく 焼{や}いて ください",
+  "en": "I'd like the steak well done",
+  "why": ""
+ },
+ {
+  "id": "n223",
+  "topic": "t1",
+  "n": "デザート に アイスクリーム を 頼{たの}みました",
+  "en": "I ordered ice cream for dessert",
+  "why": ""
+ },
+ {
+  "id": "n224",
+  "topic": "t1",
+  "n": "スープ に スプーン が ありません",
+  "en": "There's no spoon for the soup",
+  "why": ""
+ },
+ {
+  "id": "n225",
+  "topic": "t1",
+  "n": "ナイフ と フォーク を もらえますか",
+  "en": "Could I have a knife and fork?",
+  "why": ""
+ },
+ {
+  "id": "n226",
+  "topic": "t1",
+  "n": "ランチ の メニュー は ありますか",
+  "en": "Do you have a lunch menu?",
+  "why": ""
+ },
+ {
+  "id": "n227",
+  "topic": "t2",
+  "n": "ワイン を 一杯{いっぱい} ください",
+  "en": "A glass of wine, please",
+  "why": ""
+ },
+ {
+  "id": "n228",
+  "topic": "t2",
+  "n": "チーズ と ビール が 好{す}き です",
+  "en": "I like cheese and beer",
+  "why": ""
+ },
+ {
+  "id": "n229",
+  "topic": "t2",
+  "n": "パーティー で ダンス を しました",
+  "en": "We danced at the party",
+  "why": ""
+ },
+ {
+  "id": "n230",
+  "topic": "t2",
+  "n": "週末{しゅうまつ} に コンサート へ 行{い}きます",
+  "en": "I'm going to a concert at the weekend",
+  "why": ""
+ },
+ {
+  "id": "n231",
+  "topic": "t3",
+  "n": "この シャツ は いくら ですか",
+  "en": "How much is this shirt?",
+  "why": ""
+ },
+ {
+  "id": "n232",
+  "topic": "t3",
+  "n": "赤{あか}い スカート を 買{か}いました",
+  "en": "I bought a red skirt",
+  "why": ""
+ },
+ {
+  "id": "n233",
+  "topic": "t3",
+  "n": "ネクタイ を プレゼント に します",
+  "en": "I'll give a tie as a present",
+  "why": ""
+ },
+ {
+  "id": "n234",
+  "topic": "t3",
+  "n": "ポケット に ハンカチ が あります",
+  "en": "There's a handkerchief in my pocket",
+  "why": ""
+ },
+ {
+  "id": "n235",
+  "topic": "t3",
+  "n": "レジ は どこ ですか",
+  "en": "Where's the till?",
+  "why": ""
+ },
+ {
+  "id": "n236",
+  "topic": "t3",
+  "n": "カード で 払{はら}えますか",
+  "en": "Can I pay by card?",
+  "why": ""
+ },
+ {
+  "id": "n237",
+  "topic": "t3",
+  "n": "デパート で コート を 見{み}ました",
+  "en": "I looked at coats in the department store",
+  "why": ""
+ },
+ {
+  "id": "n238",
+  "topic": "t6",
+  "n": "アパート に エレベーター が ありません",
+  "en": "My block of flats has no lift",
+  "why": ""
+ },
+ {
+  "id": "n239",
+  "topic": "t6",
+  "n": "シャワー の お湯{ゆ} が 出{で}ません",
+  "en": "There's no hot water in the shower",
+  "why": ""
+ },
+ {
+  "id": "n240",
+  "topic": "t6",
+  "n": "寒{さむ}い ので ストーブ を つけました",
+  "en": "It was cold, so I turned the heater on",
+  "why": ""
+ },
+ {
+  "id": "n241",
+  "topic": "t6",
+  "n": "ドア を 閉{し}めて ください",
+  "en": "Please close the door",
+  "why": ""
+ },
+ {
+  "id": "n242",
+  "topic": "t6",
+  "n": "ベッド の シーツ を 替{か}えました",
+  "en": "I changed the bed sheets",
+  "why": ""
+ },
+ {
+  "id": "n243",
+  "topic": "t6",
+  "n": "カーテン を 開{あ}けて ください",
+  "en": "Please open the curtains",
+  "why": ""
+ },
+ {
+  "id": "n244",
+  "topic": "t6",
+  "n": "タオル を もう 一枚{いちまい} ください",
+  "en": "Another towel, please",
+  "why": ""
+ },
+ {
+  "id": "n245",
+  "topic": "t6",
+  "n": "トイレ の 電気{でんき} の スイッチ は どこ ですか",
+  "en": "Where's the light switch for the toilet?",
+  "why": ""
+ },
+ {
+  "id": "n246",
+  "topic": "t6",
+  "n": "コンセント は ベッド の 横{よこ} に あります",
+  "en": "The power socket is next to the bed",
+  "why": ""
+ },
+ {
+  "id": "n247",
+  "topic": "t6",
+  "n": "マンション の 十階{じゅっかい} に 住{す}んで います",
+  "en": "I live on the tenth floor of a block of flats",
+  "why": ""
+ },
+ {
+  "id": "n248",
+  "topic": "t5",
+  "n": "駅{えき} まで タクシー で 行{い}きましょう",
+  "en": "Let's take a taxi to the station",
+  "why": ""
+ },
+ {
+  "id": "n249",
+  "topic": "t5",
+  "n": "バス の 時間{じかん} を 調{しら}べます",
+  "en": "I'll check the bus times",
+  "why": ""
+ },
+ {
+  "id": "n250",
+  "topic": "t5",
+  "n": "ホテル の ロビー で 会{あ}いましょう",
+  "en": "Let's meet in the hotel lobby",
+  "why": ""
+ },
+ {
+  "id": "n251",
+  "topic": "t5",
+  "n": "パスポート を 見{み}せて ください",
+  "en": "Please show me your passport",
+  "why": ""
+ },
+ {
+  "id": "n252",
+  "topic": "t5",
+  "n": "三番{さんばん} ホーム から 電車{でんしゃ} が 出{で}ます",
+  "en": "The train leaves from platform 3",
+  "why": ""
+ },
+ {
+  "id": "n253",
+  "topic": "t5",
+  "n": "スーツケース が 重{おも}い です",
+  "en": "My suitcase is heavy",
+  "why": ""
+ },
+ {
+  "id": "n254",
+  "topic": "t5",
+  "n": "ガソリンスタンド は この 先{さき} に あります",
+  "en": "There's a petrol station up ahead",
+  "why": ""
+ },
+ {
+  "id": "n255",
+  "topic": "t7",
+  "n": "テスト は 来週{らいしゅう} の 月曜日{げつようび} です",
+  "en": "The test is next Monday",
+  "why": ""
+ },
+ {
+  "id": "n256",
+  "topic": "t7",
+  "n": "ノート に メモ を 書{か}きました",
+  "en": "I wrote a note in my notebook",
+  "why": ""
+ },
+ {
+  "id": "n257",
+  "topic": "t7",
+  "n": "大学{だいがく} の 時{とき}、 アルバイト を して いました",
+  "en": "I had a part-time job at university",
+  "why": ""
+ },
+ {
+  "id": "n258",
+  "topic": "t7",
+  "n": "会議{かいぎ} の スケジュール を チェックします",
+  "en": "I'll check the meeting schedule",
+  "why": ""
+ },
+ {
+  "id": "n259",
+  "topic": "t7",
+  "n": "この 書類{しょるい} を コピーして ください",
+  "en": "Please copy this document",
+  "why": ""
+ },
+ {
+  "id": "n260",
+  "topic": "t7",
+  "n": "パソコン が 動{うご}きません",
+  "en": "My computer isn't working",
+  "why": ""
+ },
+ {
+  "id": "n261",
+  "topic": "t7",
+  "n": "父{ちち} は サラリーマン です",
+  "en": "My father is an office worker",
+  "why": ""
+ },
+ {
+  "id": "n262",
+  "topic": "t8",
+  "n": "パパ と ママ は 元気{げんき} です",
+  "en": "Mum and Dad are well",
+  "why": ""
+ },
+ {
+  "id": "n263",
+  "topic": "t8",
+  "n": "チーム の メンバー は 五人{ごにん} です",
+  "en": "There are five members in the team",
+  "why": ""
+ },
+ {
+  "id": "n264",
+  "topic": "t8",
+  "n": "猫{ねこ} を ペット に して います",
+  "en": "I have a cat as a pet",
+  "why": ""
+ },
+ {
+  "id": "n265",
+  "topic": "t9",
+  "n": "テレビ で ニュース を 見{み}ます",
+  "en": "I watch the news on TV",
+  "why": ""
+ },
+ {
+  "id": "n266",
+  "topic": "t9",
+  "n": "ラジオ で 音楽{おんがく} を 聞{き}きます",
+  "en": "I listen to music on the radio",
+  "why": ""
+ },
+ {
+  "id": "n267",
+  "topic": "t9",
+  "n": "カメラ で 写真{しゃしん} を 撮{と}りました",
+  "en": "I took a photo with my camera",
+  "why": ""
+ },
+ {
+  "id": "n268",
+  "topic": "t9",
+  "n": "日曜日{にちようび} に テニス を します",
+  "en": "I play tennis on Sundays",
+  "why": ""
+ },
+ {
+  "id": "n269",
+  "topic": "t9",
+  "n": "ピアノ と ギター が 弾{ひ}けます",
+  "en": "I can play the piano and the guitar",
+  "why": ""
+ },
+ {
+  "id": "n270",
+  "topic": "t9",
+  "n": "冬{ふゆ} は スキー に 行{い}きます",
+  "en": "In winter I go skiing",
+  "why": ""
+ },
+ {
+  "id": "n271",
+  "topic": "t9",
+  "n": "毎朝{まいあさ} ランニング を して います",
+  "en": "I go running every morning",
+  "why": ""
+ },
+ {
+  "id": "n272",
+  "topic": "t9",
+  "n": "仕事{しごと} の ストレス が 多{おお}い です",
+  "en": "There's a lot of stress at work",
+  "why": ""
+ },
+ {
+  "id": "n273",
+  "topic": "t9",
+  "n": "彼{かれ} は ハンサム な 人{ひと} です",
+  "en": "He's a handsome man",
+  "why": ""
+ },
+ {
+  "id": "n274",
+  "topic": "t10",
+  "n": "クリスマス に プレゼント を もらいました",
+  "en": "I got a present at Christmas",
+  "why": ""
+ },
+ {
+  "id": "n275",
+  "topic": "t10",
+  "n": "カレンダー に 予定{よてい} を 書{か}きます",
+  "en": "I write my plans on the calendar",
+  "why": ""
+ },
+ {
+  "id": "n276",
+  "topic": "t11",
+  "n": "プール で 泳{およ}ぎました",
+  "en": "I swam in the pool",
+  "why": ""
+ },
+ {
+  "id": "n277",
+  "topic": "t11",
+  "n": "キャンプ で テント を 張{は}りました",
+  "en": "We put up a tent at the campsite",
+  "why": ""
+ },
+ {
+  "id": "n278",
+  "topic": "t12",
+  "n": "ポスト に 手紙{てがみ} を 入{い}れました",
+  "en": "I put the letter in the postbox",
+  "why": ""
+ },
+ {
+  "id": "n279",
+  "topic": "t12",
+  "n": "この ビル の 三階{さんがい} に レストラン が あります",
+  "en": "There's a restaurant on the third floor of this building",
+  "why": ""
+ },
+ {
+  "id": "n280",
+  "topic": "t13",
+  "n": "十{じゅう} パーセント 安{やす}く なります",
+  "en": "It's ten per cent cheaper",
+  "why": ""
+ },
+ {
+  "id": "n281",
+  "topic": "t13",
+  "n": "ルール を 守{まも}って ください",
+  "en": "Please follow the rules",
+  "why": ""
+ },
+ {
+  "id": "n282",
+  "topic": "t13",
+  "n": "いい チャンス です ね",
+  "en": "That's a good opportunity",
+  "why": ""
  }
 ]

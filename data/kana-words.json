@@ -2660,5 +2660,27 @@
    "l": 2,
    "g": "desc"
   }
+ ],
+ "parts": [
+  [
+   "Use",
+   "greet inter question point link"
+  ],
+  [
+   "Adverbs",
+   "time degree manner sound"
+  ],
+  [
+   "Describing and doing",
+   "desc verb expr"
+  ],
+  [
+   "Nouns by topic",
+   "n-people n-food n-things n-body n-other"
+  ],
+  [
+   "Building words",
+   "parts"
+  ]
  ]
 }

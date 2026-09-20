@@ -1,0 +1,2213 @@
+{
+ "groups": [
+  [
+   "food",
+   "食べ物",
+   "Food and drink",
+   ""
+  ],
+  [
+   "kitchen",
+   "台所",
+   "Kitchen and table",
+   ""
+  ],
+  [
+   "clothes",
+   "服",
+   "Clothes and accessories",
+   ""
+  ],
+  [
+   "home",
+   "家",
+   "Home and everyday things",
+   ""
+  ],
+  [
+   "tech",
+   "機械",
+   "Technology and media",
+   ""
+  ],
+  [
+   "travel",
+   "旅行",
+   "Getting around and travel",
+   ""
+  ],
+  [
+   "places",
+   "町",
+   "Places and shops",
+   ""
+  ],
+  [
+   "work",
+   "仕事",
+   "Work and study",
+   ""
+  ],
+  [
+   "fun",
+   "趣味",
+   "Sport, music and free time",
+   ""
+  ],
+  [
+   "people",
+   "人",
+   "People and jobs",
+   ""
+  ],
+  [
+   "health",
+   "体",
+   "Health and feelings",
+   ""
+  ],
+  [
+   "world",
+   "世界",
+   "Places in the world",
+   ""
+  ],
+  [
+   "measure",
+   "数",
+   "Numbers and measures",
+   "Units and maths words, all borrowed from English."
+  ],
+  [
+   "ideas",
+   "考え",
+   "Ideas and describing words",
+   "Abstract words and a few adjectives. Katakana adjectives take な: ハンサム な 人, モダン な 部屋."
+  ],
+  [
+   "verb",
+   "する",
+   "Katakana verbs",
+   "Any katakana noun for an action becomes a verb with する: コピーする, チェックする."
+  ]
+ ],
+ "parts": [
+  [
+   "Food and home",
+   "food kitchen clothes home"
+  ],
+  [
+   "Out and about",
+   "travel places tech"
+  ],
+  [
+   "Work and play",
+   "work fun people health"
+  ],
+  [
+   "The rest",
+   "world measure ideas verb"
+  ]
+ ],
+ "words": [
+  {
+   "w": "アパート",
+   "en": "apartment",
+   "l": 5,
+   "g": "home"
+  },
+  {
+   "w": "エレベーター",
+   "en": "elevator",
+   "l": 5,
+   "g": "home"
+  },
+  {
+   "w": "カップ",
+   "en": "cup",
+   "l": 5,
+   "g": "kitchen"
+  },
+  {
+   "w": "カメラ",
+   "en": "camera",
+   "l": 5,
+   "g": "tech"
+  },
+  {
+   "w": "カレー",
+   "en": "curry",
+   "l": 5,
+   "g": "food"
+  },
+  {
+   "w": "カレンダー",
+   "en": "calendar",
+   "l": 5,
+   "g": "home"
+  },
+  {
+   "w": "ギター",
+   "en": "guitar",
+   "l": 5,
+   "g": "fun"
+  },
+  {
+   "w": "クラス",
+   "en": "a class",
+   "l": 5,
+   "g": "work"
+  },
+  {
+   "w": "グラム",
+   "en": "gram",
+   "l": 5,
+   "g": "measure"
+  },
+  {
+   "w": "コート",
+   "en": "coat",
+   "l": 5,
+   "g": "clothes"
+  },
+  {
+   "w": "コーヒー",
+   "en": "coffee",
+   "l": 5,
+   "g": "food"
+  },
+  {
+   "w": "コップ",
+   "en": "a tumbler",
+   "l": 5,
+   "g": "kitchen",
+   "note": "from Dutch kop"
+  },
+  {
+   "w": "コピーする",
+   "en": "to copy",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "シャツ",
+   "en": "shirt",
+   "l": 5,
+   "g": "clothes"
+  },
+  {
+   "w": "シャワー",
+   "en": "shower",
+   "l": 5,
+   "g": "home"
+  },
+  {
+   "w": "スカート",
+   "en": "skirt",
+   "l": 5,
+   "g": "clothes"
+  },
+  {
+   "w": "ストーブ",
+   "en": "heater",
+   "l": 5,
+   "g": "home",
+   "note": "a room heater"
+  },
+  {
+   "w": "スプーン",
+   "en": "spoon",
+   "l": 5,
+   "g": "kitchen"
+  },
+  {
+   "w": "スポーツ",
+   "en": "sport",
+   "l": 5,
+   "g": "fun"
+  },
+  {
+   "w": "ズボン",
+   "en": "trousers",
+   "l": 5,
+   "g": "clothes",
+   "note": "from French jupon"
+  },
+  {
+   "w": "セーター",
+   "en": "sweater",
+   "l": 5,
+   "g": "clothes"
+  },
+  {
+   "w": "ゼロ",
+   "en": "zero",
+   "l": 5,
+   "g": "measure"
+  },
+  {
+   "w": "タクシー",
+   "en": "taxi",
+   "l": 5,
+   "g": "travel"
+  },
+  {
+   "w": "テープ",
+   "en": "tape",
+   "l": 5,
+   "g": "tech"
+  },
+  {
+   "w": "テープレコーダー",
+   "en": "tape recorder",
+   "l": 5,
+   "g": "tech"
+  },
+  {
+   "w": "テーブル",
+   "en": "table",
+   "l": 5,
+   "g": "kitchen"
+  },
+  {
+   "w": "テスト",
+   "en": "test",
+   "l": 5,
+   "g": "work"
+  },
+  {
+   "w": "デパート",
+   "en": "department store",
+   "l": 5,
+   "g": "places",
+   "note": "short for \"department store\""
+  },
+  {
+   "w": "テレビ",
+   "en": "television, TV",
+   "l": 5,
+   "g": "tech"
+  },
+  {
+   "w": "ドア",
+   "en": "door",
+   "l": 5,
+   "g": "home"
+  },
+  {
+   "w": "トイレ",
+   "en": "bathroom",
+   "l": 5,
+   "g": "home"
+  },
+  {
+   "w": "ナイフ",
+   "en": "knife",
+   "l": 5,
+   "g": "kitchen"
+  },
+  {
+   "w": "ニュース",
+   "en": "news",
+   "l": 5,
+   "g": "tech"
+  },
+  {
+   "w": "ネクタイ",
+   "en": "tie, necktie",
+   "l": 5,
+   "g": "clothes"
+  },
+  {
+   "w": "ノート",
+   "en": "notebook",
+   "l": 5,
+   "g": "work"
+  },
+  {
+   "w": "パーティー",
+   "en": "a party",
+   "l": 5,
+   "g": "fun"
+  },
+  {
+   "w": "バス",
+   "en": "bus",
+   "l": 5,
+   "g": "travel"
+  },
+  {
+   "w": "バター",
+   "en": "butter",
+   "l": 5,
+   "g": "food"
+  },
+  {
+   "w": "パン",
+   "en": "bread",
+   "l": 5,
+   "g": "food",
+   "note": "from Portuguese pão"
+  },
+  {
+   "w": "ハンカチ",
+   "en": "handkerchief",
+   "l": 5,
+   "g": "clothes"
+  },
+  {
+   "w": "フィルム",
+   "en": "film",
+   "l": 5,
+   "g": "tech"
+  },
+  {
+   "w": "プール",
+   "en": "swimming pool",
+   "l": 5,
+   "g": "places"
+  },
+  {
+   "w": "フォーク",
+   "en": "fork",
+   "l": 5,
+   "g": "kitchen"
+  },
+  {
+   "w": "ページ",
+   "en": "a page",
+   "l": 5,
+   "g": "work"
+  },
+  {
+   "w": "ベッド",
+   "en": "bed",
+   "l": 5,
+   "g": "home"
+  },
+  {
+   "w": "ペット",
+   "en": "pet",
+   "l": 5,
+   "g": "fun"
+  },
+  {
+   "w": "ペン",
+   "en": "pen",
+   "l": 5,
+   "g": "work"
+  },
+  {
+   "w": "ボールペン",
+   "en": "ball-point pen",
+   "l": 5,
+   "g": "work"
+  },
+  {
+   "w": "ポケット",
+   "en": "pocket",
+   "l": 5,
+   "g": "clothes"
+  },
+  {
+   "w": "ポスト",
+   "en": "mailbox",
+   "l": 5,
+   "g": "places"
+  },
+  {
+   "w": "ボタン",
+   "en": "button",
+   "l": 5,
+   "g": "clothes"
+  },
+  {
+   "w": "ホテル",
+   "en": "hotel",
+   "l": 5,
+   "g": "travel"
+  },
+  {
+   "w": "マッチ",
+   "en": "match",
+   "l": 5,
+   "g": "home"
+  },
+  {
+   "w": "メートル",
+   "en": "meter",
+   "l": 5,
+   "g": "measure"
+  },
+  {
+   "w": "ラジオ",
+   "en": "radio",
+   "l": 5,
+   "g": "tech"
+  },
+  {
+   "w": "ラジオカセ",
+   "en": "radio cassette player",
+   "l": 5,
+   "g": "tech",
+   "note": "short for \"radio cassette player\""
+  },
+  {
+   "w": "レコード",
+   "en": "record",
+   "l": 5,
+   "g": "tech"
+  },
+  {
+   "w": "レストラン",
+   "en": "restaurant",
+   "l": 5,
+   "g": "places"
+  },
+  {
+   "w": "ワイシャツ",
+   "en": "shirt, business shirt",
+   "l": 5,
+   "g": "clothes",
+   "note": "from \"white shirt\": any business shirt"
+  },
+  {
+   "w": "ガソリン",
+   "en": "gasoline, petrol",
+   "l": 4,
+   "g": "travel"
+  },
+  {
+   "w": "ステレオ",
+   "en": "stereo",
+   "l": 4,
+   "g": "tech"
+  },
+  {
+   "w": "テキスト",
+   "en": "text",
+   "l": 4,
+   "g": "work"
+  },
+  {
+   "w": "オートバイ",
+   "en": "motorcycle)",
+   "l": 4,
+   "g": "travel",
+   "note": "made in Japan from \"auto\" + \"bicycle\""
+  },
+  {
+   "w": "アフリカ",
+   "en": "Africa",
+   "l": 4,
+   "g": "world"
+  },
+  {
+   "w": "ガラス",
+   "en": "glass, pane",
+   "l": 4,
+   "g": "home",
+   "note": "from Dutch glas"
+  },
+  {
+   "w": "エスカレーター",
+   "en": "escalator",
+   "l": 4,
+   "g": "home"
+  },
+  {
+   "w": "ガス",
+   "en": "gas",
+   "l": 4,
+   "g": "home",
+   "note": "from Dutch gas"
+  },
+  {
+   "w": "アルバイト",
+   "en": "part-time job",
+   "l": 4,
+   "g": "work",
+   "note": "from German Arbeit (work)"
+  },
+  {
+   "w": "サンドイッチ",
+   "en": "sandwich",
+   "l": 4,
+   "g": "food"
+  },
+  {
+   "w": "ビル",
+   "en": "building",
+   "l": 4,
+   "g": "places"
+  },
+  {
+   "w": "パパ",
+   "en": "papa, daddy",
+   "l": 4,
+   "g": "people"
+  },
+  {
+   "w": "ベル",
+   "en": "bell",
+   "l": 4,
+   "g": "home"
+  },
+  {
+   "w": "スクリーン",
+   "en": "screen",
+   "l": 4,
+   "g": "tech"
+  },
+  {
+   "w": "サラダ",
+   "en": "salad",
+   "l": 4,
+   "g": "food"
+  },
+  {
+   "w": "ステーキ",
+   "en": "steak",
+   "l": 4,
+   "g": "food"
+  },
+  {
+   "w": "オーバー",
+   "en": "overcoat",
+   "l": 4,
+   "g": "clothes",
+   "note": "an overcoat, or exaggerated"
+  },
+  {
+   "w": "アナウンサー",
+   "en": "announcer",
+   "l": 4,
+   "g": "tech"
+  },
+  {
+   "w": "ジャム",
+   "en": "jam",
+   "l": 4,
+   "g": "food"
+  },
+  {
+   "w": "チェックする",
+   "en": "check",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "ワープロ",
+   "en": "word processor",
+   "l": 4,
+   "g": "tech",
+   "note": "short for \"word processor\""
+  },
+  {
+   "w": "パソコン",
+   "en": "computer",
+   "l": 4,
+   "g": "tech",
+   "note": "short for \"personal computer\""
+  },
+  {
+   "w": "アメリカ",
+   "en": "America, U.S.A.",
+   "l": 4,
+   "g": "world"
+  },
+  {
+   "w": "サンダル",
+   "en": "sandal",
+   "l": 4,
+   "g": "clothes"
+  },
+  {
+   "w": "レジ",
+   "en": "register",
+   "l": 4,
+   "g": "places",
+   "note": "the till, from \"register\""
+  },
+  {
+   "w": "ハンバーグ",
+   "en": "hamburger steak",
+   "l": 4,
+   "g": "food"
+  },
+  {
+   "w": "プレゼント",
+   "en": "present, gift",
+   "l": 4,
+   "g": "fun"
+  },
+  {
+   "w": "スーツ",
+   "en": "suit",
+   "l": 4,
+   "g": "clothes"
+  },
+  {
+   "w": "ファックス",
+   "en": "fax",
+   "l": 4,
+   "g": "tech"
+  },
+  {
+   "w": "アジア",
+   "en": "Asia",
+   "l": 4,
+   "g": "world"
+  },
+  {
+   "w": "カーテン",
+   "en": "curtain",
+   "l": 4,
+   "g": "home"
+  },
+  {
+   "w": "アクセサリー",
+   "en": "accessory",
+   "l": 4,
+   "g": "clothes"
+  },
+  {
+   "w": "スーツケース",
+   "en": "suitcase",
+   "l": 4,
+   "g": "travel"
+  },
+  {
+   "w": "コンサート",
+   "en": "concert",
+   "l": 4,
+   "g": "fun"
+  },
+  {
+   "w": "ケーキ",
+   "en": "cake",
+   "l": 4,
+   "g": "food"
+  },
+  {
+   "w": "ガソリンスタンド",
+   "en": "gas station, service station",
+   "l": 4,
+   "g": "travel",
+   "note": "made in Japan: a petrol station"
+  },
+  {
+   "w": "テニス",
+   "en": "tennis",
+   "l": 4,
+   "g": "fun"
+  },
+  {
+   "w": "ピアノ",
+   "en": "piano",
+   "l": 4,
+   "g": "fun"
+  },
+  {
+   "w": "タイプ",
+   "en": "type, style",
+   "l": 4,
+   "g": "ideas"
+  },
+  {
+   "w": "アルコール",
+   "en": "alcohol",
+   "l": 4,
+   "g": "food"
+  },
+  {
+   "w": "ソフト",
+   "en": "soft",
+   "l": 4,
+   "g": "ideas",
+   "note": "soft, or software"
+  },
+  {
+   "w": "ジーンズ",
+   "en": "jeans",
+   "l": 3,
+   "g": "clothes"
+  },
+  {
+   "w": "ジュース",
+   "en": "juice, soft drink",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "スイッチ",
+   "en": "switch",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "スープ",
+   "en": "soup",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "スキー",
+   "en": "ski",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "スケート",
+   "en": "skate, skating",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "スケジュール",
+   "en": "schedule",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "スター",
+   "en": "star",
+   "l": 3,
+   "g": "people"
+  },
+  {
+   "w": "スタイル",
+   "en": "style",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "スタンド",
+   "en": "stand",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "スピーチ",
+   "en": "speech",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "セット",
+   "en": "set",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "アイスクリーム",
+   "en": "ice cream",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "アウト",
+   "en": "out",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "アルバム",
+   "en": "album",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "イメージ",
+   "en": "one's image",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "インク",
+   "en": "ink",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "インタビュー",
+   "en": "interview",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "ウイスキー",
+   "en": "whiskey",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "エネルギー",
+   "en": "energy",
+   "l": 3,
+   "g": "ideas",
+   "note": "from German Energie"
+  },
+  {
+   "w": "エンジン",
+   "en": "engine",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "オフィス",
+   "en": "office",
+   "l": 3,
+   "g": "places"
+  },
+  {
+   "w": "カー",
+   "en": "car",
+   "l": 3,
+   "g": "travel",
+   "note": "a car (in compounds)"
+  },
+  {
+   "w": "カード",
+   "en": "card, curd",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "キャプテン",
+   "en": "captain",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "キャンプ",
+   "en": "camp",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "クラシック",
+   "en": "classic",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "グラス",
+   "en": "glass",
+   "l": 3,
+   "g": "kitchen",
+   "note": "a drinking glass"
+  },
+  {
+   "w": "グランド",
+   "en": "gland, grand, ground",
+   "l": 3,
+   "g": "fun",
+   "note": "a sports ground"
+  },
+  {
+   "w": "クリーム",
+   "en": "cream",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "クリスマス",
+   "en": "Christmas",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "グループ",
+   "en": "group",
+   "l": 3,
+   "g": "people"
+  },
+  {
+   "w": "ケース",
+   "en": "case",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "ゲーム",
+   "en": "game",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "コーチ",
+   "en": "coach",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "コード",
+   "en": "code",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "ゴール",
+   "en": "goal",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "サービス",
+   "en": "service, support system",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "サイン",
+   "en": "autograph",
+   "l": 3,
+   "g": "work",
+   "note": "an autograph or signature"
+  },
+  {
+   "w": "ママ",
+   "en": "Mama",
+   "l": 3,
+   "g": "people"
+  },
+  {
+   "w": "ミス",
+   "en": "miss, Miss",
+   "l": 3,
+   "g": "people",
+   "note": "a mistake, or Miss"
+  },
+  {
+   "w": "ミルク",
+   "en": "milk",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "メモ",
+   "en": "memorandum, note",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "メンバー",
+   "en": "member",
+   "l": 3,
+   "g": "people"
+  },
+  {
+   "w": "ユーモア",
+   "en": "humor",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "ヨーロッパ",
+   "en": "Europe",
+   "l": 3,
+   "g": "world"
+  },
+  {
+   "w": "ヨット",
+   "en": "yacht",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "ライター",
+   "en": "lighter",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "ラケット",
+   "en": "racket",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "レベル",
+   "en": "level",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "ロケット",
+   "en": "locket, rocket",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "ワイン",
+   "en": "wine",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "アップ",
+   "en": "up",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "アンケート",
+   "en": "questionnaire, survey",
+   "l": 3,
+   "g": "work",
+   "note": "from French enquête"
+  },
+  {
+   "w": "コンテスト",
+   "en": "contest",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "センター",
+   "en": "center",
+   "l": 3,
+   "g": "places"
+  },
+  {
+   "w": "ソファー",
+   "en": "sofa, couch",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "タイプライター",
+   "en": "typewriter",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "ダイヤ",
+   "en": "schedule",
+   "l": 3,
+   "g": "travel",
+   "note": "a train timetable, or a diamond"
+  },
+  {
+   "w": "タオル",
+   "en": "towel",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "ダンス",
+   "en": "dance",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "チーズ",
+   "en": "cheese",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "チーム",
+   "en": "team",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "チャンス",
+   "en": "chance, opportunity",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "デート",
+   "en": "date",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "デモ",
+   "en": "demo, demonstration",
+   "l": 3,
+   "g": "ideas",
+   "note": "a protest march, or a demo"
+  },
+  {
+   "w": "テント",
+   "en": "tent",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "トップ",
+   "en": "top",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "ドライブ",
+   "en": "drive, driving",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "トラック",
+   "en": "truck",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "ドラマ",
+   "en": "drama",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "トランプ",
+   "en": "playing cards",
+   "l": 3,
+   "g": "fun",
+   "note": "playing cards"
+  },
+  {
+   "w": "トレーニング",
+   "en": "training",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "ドレス",
+   "en": "dress",
+   "l": 3,
+   "g": "clothes"
+  },
+  {
+   "w": "トン",
+   "en": "ton",
+   "l": 3,
+   "g": "measure"
+  },
+  {
+   "w": "トンネル",
+   "en": "tunnel",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "ノー",
+   "en": "no",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "ノック",
+   "en": "knock",
+   "l": 3,
+   "g": "ideas",
+   "note": "a knock at the door"
+  },
+  {
+   "w": "パーセント",
+   "en": "percent",
+   "l": 3,
+   "g": "measure"
+  },
+  {
+   "w": "バイオリン",
+   "en": "violin",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "ハイキング",
+   "en": "hiking",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "パイプ",
+   "en": "pipe",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "パイロット",
+   "en": "pilot",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "パス",
+   "en": "path, pass",
+   "l": 3,
+   "g": "ideas",
+   "note": "a pass (a ticket, or in sport)"
+  },
+  {
+   "w": "パスポート",
+   "en": "passport",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "バッグ",
+   "en": "bag",
+   "l": 3,
+   "g": "clothes"
+  },
+  {
+   "w": "バランス",
+   "en": "balance",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "ハンサム",
+   "en": "handsome",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "ビール",
+   "en": "beer",
+   "l": 3,
+   "g": "food",
+   "note": "from Dutch bier"
+  },
+  {
+   "w": "ピクニック",
+   "en": "picnic",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "ビデオ",
+   "en": "video tape",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "ピン",
+   "en": "pin",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "プラス",
+   "en": "plus",
+   "l": 3,
+   "g": "measure"
+  },
+  {
+   "w": "プラスチック",
+   "en": "plastic",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "プラン",
+   "en": "plan",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "ブレーキ",
+   "en": "a brake",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "プロ",
+   "en": "professional",
+   "l": 3,
+   "g": "people",
+   "note": "short for \"professional\""
+  },
+  {
+   "w": "ベルト",
+   "en": "Belt for western clothes",
+   "l": 3,
+   "g": "clothes"
+  },
+  {
+   "w": "ペンキ",
+   "en": "paint",
+   "l": 3,
+   "g": "home",
+   "note": "from Dutch pek"
+  },
+  {
+   "w": "ベンチ",
+   "en": "bench",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "ボーイ",
+   "en": "porter",
+   "l": 3,
+   "g": "travel",
+   "note": "a waiter or hotel porter"
+  },
+  {
+   "w": "ボート",
+   "en": "rowing boat",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "ホーム",
+   "en": "platform",
+   "l": 3,
+   "g": "travel",
+   "note": "a station platform, not home"
+  },
+  {
+   "w": "ボール",
+   "en": "ball",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "マーケット",
+   "en": "market",
+   "l": 3,
+   "g": "places"
+  },
+  {
+   "w": "マイク",
+   "en": "mic",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "マイナス",
+   "en": "minus",
+   "l": 3,
+   "g": "measure"
+  },
+  {
+   "w": "マスター",
+   "en": "bar owner, master",
+   "l": 3,
+   "g": "people",
+   "note": "the owner of a bar or café"
+  },
+  {
+   "w": "ショック",
+   "en": "shock",
+   "l": 3,
+   "g": "health"
+  },
+  {
+   "w": "ストレス",
+   "en": "stress",
+   "l": 3,
+   "g": "health"
+  },
+  {
+   "w": "タイトル",
+   "en": "title",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "ダウン",
+   "en": "down",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "チャイム",
+   "en": "chime",
+   "l": 3,
+   "g": "home"
+  },
+  {
+   "w": "データ",
+   "en": "data",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "デザイン",
+   "en": "design",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "デザート",
+   "en": "dessert",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "マスコミ",
+   "en": "mass communication",
+   "l": 3,
+   "g": "tech",
+   "note": "short for \"mass communication\": the media"
+  },
+  {
+   "w": "マッサージ",
+   "en": "massage",
+   "l": 3,
+   "g": "health"
+  },
+  {
+   "w": "メッセージ",
+   "en": "message",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "ラベル",
+   "en": "label",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "ルール",
+   "en": "rule",
+   "l": 3,
+   "g": "ideas"
+  },
+  {
+   "w": "ショップ",
+   "en": "a shop",
+   "l": 2,
+   "g": "places"
+  },
+  {
+   "w": "シリーズ",
+   "en": "series",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "スカーフ",
+   "en": "scarf",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "スクール",
+   "en": "school",
+   "l": 2,
+   "g": "places"
+  },
+  {
+   "w": "スタート",
+   "en": "start",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "スチュワーデス",
+   "en": "stewardess",
+   "l": 2,
+   "g": "travel"
+  },
+  {
+   "w": "ステージ",
+   "en": "stage",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "ストッキング",
+   "en": "stockings",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "ストップ",
+   "en": "stop",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "スピーカー",
+   "en": "speaker",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "スマート",
+   "en": "smart, stylish, slim",
+   "l": 2,
+   "g": "ideas",
+   "note": "slim or stylish, not clever"
+  },
+  {
+   "w": "スライド",
+   "en": "slide",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "スリッパ",
+   "en": "slippers",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "ゼミ",
+   "en": "seminar",
+   "l": 2,
+   "g": "work",
+   "note": "from German Seminar"
+  },
+  {
+   "w": "セメント",
+   "en": "cement",
+   "l": 2,
+   "g": "home"
+  },
+  {
+   "w": "センチ",
+   "en": "centimeter",
+   "l": 2,
+   "g": "measure"
+  },
+  {
+   "w": "タイア",
+   "en": "tire, tyre",
+   "l": 2,
+   "g": "travel",
+   "note": "a tyre"
+  },
+  {
+   "w": "ダイヤグラム",
+   "en": "diagram",
+   "l": 2,
+   "g": "travel"
+  },
+  {
+   "w": "ダイヤモンド",
+   "en": "diamond",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "ダイヤル",
+   "en": "dial",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "ダブル",
+   "en": "double",
+   "l": 2,
+   "g": "measure",
+   "note": "double"
+  },
+  {
+   "w": "ダム",
+   "en": "dam",
+   "l": 2,
+   "g": "places"
+  },
+  {
+   "w": "オーケストラ",
+   "en": "orchestra",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "オートメーション",
+   "en": "automation",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "オルガン",
+   "en": "organ",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "カーブ",
+   "en": "curve",
+   "l": 2,
+   "g": "travel"
+  },
+  {
+   "w": "カセット",
+   "en": "cassette",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "カバー",
+   "en": "cover",
+   "l": 2,
+   "g": "home"
+  },
+  {
+   "w": "ガム",
+   "en": "chewing gum",
+   "l": 2,
+   "g": "food"
+  },
+  {
+   "w": "カラー",
+   "en": "collar, color",
+   "l": 2,
+   "g": "clothes",
+   "note": "colour, or a collar"
+  },
+  {
+   "w": "カロリー",
+   "en": "calorie",
+   "l": 2,
+   "g": "food"
+  },
+  {
+   "w": "ギャング",
+   "en": "gang",
+   "l": 2,
+   "g": "people"
+  },
+  {
+   "w": "キャンパス",
+   "en": "campus",
+   "l": 2,
+   "g": "places"
+  },
+  {
+   "w": "クーラー",
+   "en": "air conditioner",
+   "l": 2,
+   "g": "home",
+   "note": "an air conditioner"
+  },
+  {
+   "w": "クリーニング",
+   "en": "cleaning, dry cleaning, laundry service",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "コース",
+   "en": "course",
+   "l": 2,
+   "g": "work"
+  },
+  {
+   "w": "コーラス",
+   "en": "chorus",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "コック",
+   "en": "cook",
+   "l": 2,
+   "g": "people",
+   "note": "a cook"
+  },
+  {
+   "w": "ゴム",
+   "en": "gum, rubber",
+   "l": 2,
+   "g": "home",
+   "note": "from Dutch gom"
+  },
+  {
+   "w": "コレクション",
+   "en": "collection",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "コンクール",
+   "en": "contest",
+   "l": 2,
+   "g": "fun",
+   "note": "from French concours"
+  },
+  {
+   "w": "コンクリート",
+   "en": "concrete",
+   "l": 2,
+   "g": "home"
+  },
+  {
+   "w": "コンセント",
+   "en": "consent",
+   "l": 2,
+   "g": "home",
+   "note": "a power socket, not consent"
+  },
+  {
+   "w": "サークル",
+   "en": "circle, sports club",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "サイレン",
+   "en": "siren",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "サラリーマン",
+   "en": "salaryman",
+   "l": 2,
+   "g": "work",
+   "note": "made in Japan: an office worker"
+  },
+  {
+   "w": "サンプル",
+   "en": "sample",
+   "l": 2,
+   "g": "work"
+  },
+  {
+   "w": "シーズン",
+   "en": "season",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "シーツ",
+   "en": "sheet",
+   "l": 2,
+   "g": "home",
+   "note": "a bed sheet"
+  },
+  {
+   "w": "ジャーナリスト",
+   "en": "journalist",
+   "l": 2,
+   "g": "people"
+  },
+  {
+   "w": "シャッター",
+   "en": "shutter",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "リズム",
+   "en": "rhythm",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "リットル",
+   "en": "liter",
+   "l": 2,
+   "g": "measure"
+  },
+  {
+   "w": "リボン",
+   "en": "ribbon",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "レインコート",
+   "en": "raincoat",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "レクリェーション",
+   "en": "recreation",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "レジャー",
+   "en": "leisure",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "リポート",
+   "en": "report, paper",
+   "l": 2,
+   "g": "work",
+   "note": "a report or essay"
+  },
+  {
+   "w": "レンズ",
+   "en": "lens",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "ロッカー",
+   "en": "locker",
+   "l": 2,
+   "g": "home"
+  },
+  {
+   "w": "ロビー",
+   "en": "lobby",
+   "l": 2,
+   "g": "travel"
+  },
+  {
+   "w": "ワンピース",
+   "en": "one-piece dress",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "アクセント",
+   "en": "accent",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "アンテナ",
+   "en": "antenna",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "イコール",
+   "en": "equal",
+   "l": 2,
+   "g": "measure"
+  },
+  {
+   "w": "インキ",
+   "en": "ink",
+   "l": 2,
+   "g": "work",
+   "note": "from Dutch inkt"
+  },
+  {
+   "w": "ウーマン",
+   "en": "woman",
+   "l": 2,
+   "g": "people",
+   "note": "a woman (in compounds)"
+  },
+  {
+   "w": "ウール",
+   "en": "wool",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "ウエートレス",
+   "en": "waitress",
+   "l": 2,
+   "g": "people"
+  },
+  {
+   "w": "エチケット",
+   "en": "etiquette",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "エプロン",
+   "en": "apron",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "オイル",
+   "en": "oil",
+   "l": 2,
+   "g": "home"
+  },
+  {
+   "w": "テンポ",
+   "en": "tempo",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "ナイロン",
+   "en": "nylon",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "ナンバー",
+   "en": "number",
+   "l": 2,
+   "g": "measure"
+  },
+  {
+   "w": "ネックレス",
+   "en": "necklace",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "バイバイ",
+   "en": "bye bye",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "バケツ",
+   "en": "bucket, pail",
+   "l": 2,
+   "g": "home"
+  },
+  {
+   "w": "パターン",
+   "en": "pattern",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "バック",
+   "en": "back",
+   "l": 2,
+   "g": "ideas",
+   "note": "back, or backing"
+  },
+  {
+   "w": "パンツ",
+   "en": "underpants",
+   "l": 2,
+   "g": "clothes",
+   "note": "underpants (trousers are ズボン)"
+  },
+  {
+   "w": "バンド",
+   "en": "band",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "ハンドル",
+   "en": "handle, steering wheel",
+   "l": 2,
+   "g": "travel",
+   "note": "a steering wheel or handlebar"
+  },
+  {
+   "w": "ピストル",
+   "en": "pistol",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "ビタミン",
+   "en": "vitamin",
+   "l": 2,
+   "g": "health"
+  },
+  {
+   "w": "ビニール",
+   "en": "vinyl",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "ビルディング",
+   "en": "building",
+   "l": 2,
+   "g": "places"
+  },
+  {
+   "w": "ピンク",
+   "en": "pink",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "ファスナー",
+   "en": "fastener, zipper",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "フライパン",
+   "en": "fry pan, frying pan",
+   "l": 2,
+   "g": "kitchen"
+  },
+  {
+   "w": "ブラウス",
+   "en": "blouse",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "ブラシ",
+   "en": "brush",
+   "l": 2,
+   "g": "home"
+  },
+  {
+   "w": "プラットホーム",
+   "en": "platform",
+   "l": 2,
+   "g": "travel"
+  },
+  {
+   "w": "フリー",
+   "en": "free",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "プリント",
+   "en": "print, handout",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "ブローチ",
+   "en": "brooch",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "プログラム",
+   "en": "program",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "ベテラン",
+   "en": "veteran",
+   "l": 2,
+   "g": "people",
+   "note": "an expert, not an ex-soldier"
+  },
+  {
+   "w": "ヘリコプター",
+   "en": "helicopter",
+   "l": 2,
+   "g": "travel"
+  },
+  {
+   "w": "ペンチ",
+   "en": "pliers",
+   "l": 2,
+   "g": "home"
+  },
+  {
+   "w": "ボーナス",
+   "en": "bonus",
+   "l": 2,
+   "g": "work"
+  },
+  {
+   "w": "ポスター",
+   "en": "poster",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "マスク",
+   "en": "mask",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "マフラー",
+   "en": "a winter scarf",
+   "l": 2,
+   "g": "clothes"
+  },
+  {
+   "w": "マラソン",
+   "en": "marathon",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "マンション",
+   "en": "multistory apartment house, condominium",
+   "l": 2,
+   "g": "home",
+   "note": "a block of flats, not a mansion"
+  },
+  {
+   "w": "ミシン",
+   "en": "sewing machine",
+   "l": 2,
+   "g": "home",
+   "note": "from \"machine\": a sewing machine"
+  },
+  {
+   "w": "メニュー",
+   "en": "menu",
+   "l": 2,
+   "g": "food"
+  },
+  {
+   "w": "モーター",
+   "en": "motor",
+   "l": 2,
+   "g": "tech"
+  },
+  {
+   "w": "モダン",
+   "en": "modern",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "モデル",
+   "en": "a fashion model",
+   "l": 2,
+   "g": "people"
+  },
+  {
+   "w": "モノレール",
+   "en": "monorail",
+   "l": 2,
+   "g": "travel"
+  },
+  {
+   "w": "ラッシュアワー",
+   "en": "rush hour",
+   "l": 2,
+   "g": "travel"
+  },
+  {
+   "w": "ランチ",
+   "en": "lunch",
+   "l": 2,
+   "g": "food"
+  },
+  {
+   "w": "ランニング",
+   "en": "running",
+   "l": 2,
+   "g": "fun"
+  },
+  {
+   "w": "チップ",
+   "en": "gratuity, tip",
+   "l": 2,
+   "g": "food",
+   "note": "a tip (for service); not usual in Japan"
+  },
+  {
+   "w": "チョーク",
+   "en": "chalk",
+   "l": 2,
+   "g": "work"
+  },
+  {
+   "w": "テーマ",
+   "en": "theme, project, topic",
+   "l": 2,
+   "g": "ideas",
+   "note": "from German Thema"
+  },
+  {
+   "w": "テニスコート",
+   "en": "tennis court",
+   "l": 2,
+   "g": "fun"
+  }
+ ]
+}

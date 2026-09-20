@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kana words: the Japanese you write without kanji</title>
+<title>__TITLE__</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -50,6 +50,7 @@ section.grp{margin:1.2rem 0 0;scroll-margin-top:150px}
 .no-romaji .rj{display:none}
 .lvb{margin-left:auto;font-size:.7rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted)}
 .we{margin-top:.1rem}
+.wn{font-size:.85rem;color:var(--seal);margin-top:.1rem}
 .ex{margin-top:.45rem;padding-top:.4rem;border-top:1px dashed var(--rule);font-size:.92rem}
 .ex .j{font-family:var(--jp);font-size:1.05rem;line-height:1.95}
 .ex .j rt{font-size:.5em}
@@ -74,8 +75,8 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 </head>
 <body>
 <header class="top">
-  <h1>かなの言葉</h1>
-  <p class="sub">The words you'll write in kana, not kanji: greetings, question words, pointing words, the little words that link sentences, adverbs, sound words, and everyday nouns and verbs. About 425 words from N5 to N2, grouped by what you use them for, each with a real example sentence where there is one.</p>
+  <h1>__H1__</h1>
+  <p class="sub">__INTRO__</p>
 </header>
 <div class="controls">
   <div class="controls-inner">
@@ -94,12 +95,12 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 <script>
 const D = __DATA__;
 const KSET=new Set(__KANJI_SET__);
-const linkK=html=>html.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=kw#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c)).join("");
+const linkK=html=>html.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=__FROM__#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c)).join("");
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let state={tier:"4",romaji:"on",hide:"none"};
-try{Object.assign(state,JSON.parse(localStorage.getItem("kana-words")||"{}"));}catch(e){}
-const save=()=>{try{localStorage.setItem("kana-words",JSON.stringify(state));}catch(e){}};
-const PARTS=[["Use","greet inter question point link"],["Adverbs","time degree manner sound"],["Describing and doing","desc verb expr"],["Nouns by topic","n-people n-food n-things n-body n-other"],["Building words","parts"]];
+try{Object.assign(state,JSON.parse(localStorage.getItem("__STORE__")||"{}"));}catch(e){}
+const save=()=>{try{localStorage.setItem("__STORE__",JSON.stringify(state));}catch(e){}};
+const PARTS=D.parts;
 const KOSO=`<div class="koso-wrap"><table class="koso"><tr><th></th><th>こ<br>near me</th><th>そ<br>near you</th><th>あ<br>over there</th><th>ど<br>which?</th></tr>
 <tr><th>thing</th><td>これ</td><td>それ</td><td>あれ</td><td>どれ</td></tr><tr><th>place</th><td>ここ</td><td>そこ</td><td>あそこ</td><td>どこ</td></tr>
 <tr><th>direction, polite</th><td>こちら</td><td>そちら</td><td>あちら</td><td>どちら</td></tr><tr><th>+ noun</th><td>この</td><td>その</td><td>あの</td><td>どの</td></tr><tr><th>this kind of</th><td>こんな</td><td>そんな</td><td>あんな</td><td>どんな</td></tr></table></div>`;
@@ -119,7 +120,7 @@ function render(){
       const ws=D.words.filter(w=>w.g===id&&w.l>=t).sort((a,b)=>b.l-a.l);
       if(!ws.length) return "";
       return `<section class="grp" id="g-${id}"><div class="ghead"><h3><span class="jp">${esc(jp)}</span>${esc(en)} <small>${ws.length} words</small></h3>${blurb?`<p>${esc(blurb)}</p>`:""}${id==="point"?KOSO:""}</div>
-        <div class="cards">${ws.map(w=>`<article class="wc" data-w="${esc(w.w)}" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span>${sayBtn(w.w.replace(/[～〜]/g,""))}<span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${exHtml(w)}</article>`).join("")}</div></section>`;
+        <div class="cards">${ws.map(w=>`<article class="wc" data-w="${esc(w.w)}" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span>${sayBtn(w.w.replace(/[～〜]/g,""))}<span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${w.note?`<div class="wn">${esc(w.note)}</div>`:""}${exHtml(w)}</article>`).join("")}</div></section>`;
     }).join("");
     if(blocks) h+=`<h2 class="part">${title}</h2>`+blocks;
   });
@@ -147,7 +148,7 @@ document.getElementById("main").addEventListener("click",e=>{ const c=e.target.c
 document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
 try{ if(localStorage.getItem("rdcol")==="off") document.body.classList.add("no-rdcol"); }catch(e){}
 render();
-initReturnLinks("kw-return",".wc","data-w","iflash");
+initReturnLinks("__FROM__-return",".wc","data-w","iflash");
 </script>
 </body>
 </html>
