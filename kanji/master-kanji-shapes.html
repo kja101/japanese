@@ -608,7 +608,34 @@ function apply(){
 buildNav();
 nav.addEventListener("click",e=>{ const a=e.target.closest("a[href^='#ch-']"); if(!a) return; e.preventDefault(); const i=+a.getAttribute("href").slice(4); fillChapter(i); scrollToEl(document.getElementById("ch-"+i)); });
 document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{state.mode=b.dataset.mode;save();if(state.mode==="cards")resetDeck(false);render();window.scrollTo(0,0);});
-document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{state.tier=b.dataset.tier;save();main.dataset.course="";if(state.mode==="cards")resetDeck(false);render();});
+let pendingAnc=null;
+function topCard(){
+  const top=offsetTop();
+  for(const c of document.querySelectorAll('.kc[id^="k-"]')){ const r=c.getBoundingClientRect(); if(r.bottom>top+4) return {k:c.id.slice(2),off:Math.max(r.top-top,-r.height)}; }
+  return null;
+}
+function nearestVisible(k){
+  if(vis(k)) return k;
+  const ord=Object.values(K).sort((x,y)=>x.n-y.n), i=ord.findIndex(x=>x.k===k);
+  const f=ord.slice(i+1).find(x=>vis(x.k))||ord.slice(0,i).reverse().find(x=>vis(x.k));
+  return f?f.k:null;
+}
+document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{
+  if(b.dataset.tier===state.tier) return;
+  const anc=state.mode==="course"?topCard():null, fcK=state.mode==="cards"&&fc.order.length?fc.order[fc.i]:null, y=window.scrollY;
+  state.tier=b.dataset.tier; save(); main.dataset.course="";
+  if(state.mode==="cards"){ resetDeck(false); const i=fcK?fc.order.indexOf(fcK):-1; if(i>=0) fc.i=i; }
+  render();
+  if(anc&&pendingAnc&&anc.k===pendingAnc.fb&&vis(pendingAnc.orig)){ anc.k=pendingAnc.orig; anc.off=pendingAnc.off; }
+  pendingAnc=null;
+  if(anc){ const k=nearestVisible(anc.k); if(!k) return; if(k!==anc.k) pendingAnc={orig:anc.k,fb:k,off:anc.off}; fillChapter(chapterOf(k));
+    const el=document.getElementById("k-"+k); if(!el) return;
+    const off=k===anc.k?anc.off:0;
+    const place=()=>window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-offsetTop()-off);
+    place(); [80,250,600].forEach(t=>setTimeout(place,t));
+    if(k!==anc.k) flash(el.querySelector(".khead"));
+  } else if(state.mode!=="cards") window.scrollTo(0,y);
+});
 document.querySelectorAll("[data-romaji]").forEach(b=>b.onclick=()=>{state.romaji=b.dataset.romaji;save();apply();});
 document.querySelectorAll("[data-test]").forEach(b=>b.onclick=()=>{state.test=b.dataset.test;save();document.querySelectorAll(".hideable.shown").forEach(h=>h.classList.remove("shown"));apply();});
 const jumpStack=[];
