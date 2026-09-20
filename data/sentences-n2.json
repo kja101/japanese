@@ -4,1785 +4,7985 @@
   "topic": "t7",
   "n": "作業{さぎょう} が 完了{かんりょう} しました",
   "en": "The work has been completed",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "作業が"
+   ],
+   [
+    "V",
+    "完了しました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The work"
+   ],
+   [
+    "V",
+    "has been completed"
+   ]
+  ]
  },
  {
   "id": "L2-1",
   "topic": "t13",
   "n": "丸{まる} い テーブル を 囲{かこ}んで 座{すわ}りました",
   "en": "We sat around a round table",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "丸いテーブルを"
+   ],
+   [
+    "H",
+    "囲んで"
+   ],
+   [
+    "V",
+    "座りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We sat"
+   ],
+   [
+    "H",
+    "around"
+   ],
+   [
+    "O",
+    "a round table"
+   ]
+  ]
  },
  {
   "id": "L2-2",
   "topic": "t1",
   "n": "玉{たま}ねぎ を 細{こま}かく 切{き}って ください",
   "en": "Please chop the onion finely",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "玉ねぎを"
+   ],
+   [
+    "H",
+    "細かく"
+   ],
+   [
+    "V",
+    "切ってください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please chop"
+   ],
+   [
+    "O",
+    "the onion"
+   ],
+   [
+    "H",
+    "finely"
+   ]
+  ]
  },
  {
   "id": "L2-3",
   "topic": "t8",
   "n": "久{ひさ}しぶり に 友達{ともだち} に 会{あ}いました",
   "en": "I saw a friend for the first time in ages",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "久しぶりに"
+   ],
+   [
+    "W",
+    "友達に"
+   ],
+   [
+    "V",
+    "会いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I saw"
+   ],
+   [
+    "W",
+    "a friend"
+   ],
+   [
+    "H",
+    "for the first time in ages"
+   ]
+  ]
  },
  {
   "id": "L2-4",
   "topic": "t6",
   "n": "雨戸{あまど} を 閉{し}めて ください",
   "en": "Please close the storm shutters",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "雨戸を"
+   ],
+   [
+    "V",
+    "閉めてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please close"
+   ],
+   [
+    "O",
+    "the storm shutters"
+   ]
+  ]
  },
  {
   "id": "L2-5",
   "topic": "t8",
   "n": "猫{ねこ} の 毛{け} が 服{ふく} に 付{つ}きました",
   "en": "Cat hair got on my clothes",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "猫の毛が"
+   ],
+   [
+    "P",
+    "服に"
+   ],
+   [
+    "V",
+    "付きました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Cat hair"
+   ],
+   [
+    "V",
+    "got"
+   ],
+   [
+    "P",
+    "on my clothes"
+   ]
+  ]
  },
  {
   "id": "L2-6",
   "topic": "t12",
   "n": "町{まち} の 中央{ちゅうおう} に 広場{ひろば} が あります",
   "en": "There's a square in the centre of the town",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "町の中央に"
+   ],
+   [
+    "W",
+    "広場が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There's"
+   ],
+   [
+    "W",
+    "a square"
+   ],
+   [
+    "P",
+    "in the centre of the town"
+   ]
+  ]
  },
  {
   "id": "L2-7",
   "topic": "t1",
   "n": "ジュース に 氷{こおり} を 入{い}れて ください",
   "en": "Please put ice in the juice",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "ジュースに"
+   ],
+   [
+    "O",
+    "氷を"
+   ],
+   [
+    "V",
+    "入れてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please put"
+   ],
+   [
+    "O",
+    "ice"
+   ],
+   [
+    "P",
+    "in the juice"
+   ]
+  ]
  },
  {
   "id": "L2-8",
   "topic": "t1",
   "n": "りんご の 皮{かわ} を むきます",
   "en": "I peel the apple",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "りんごの皮を"
+   ],
+   [
+    "V",
+    "むきます"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I peel"
+   ],
+   [
+    "O",
+    "the apple"
+   ]
+  ]
  },
  {
   "id": "L2-9",
   "topic": "t11",
   "n": "竹{たけ} の 林{はやし} を 歩{ある}きました",
   "en": "I walked through a bamboo grove",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "竹の林を"
+   ],
+   [
+    "V",
+    "歩きました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I walked"
+   ],
+   [
+    "P",
+    "through a bamboo grove"
+   ]
+  ]
  },
  {
   "id": "L2-10",
   "topic": "t6",
   "n": "針{はり} に 糸{いと} を 通{とお}して ください",
   "en": "Please thread the needle",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "針に"
+   ],
+   [
+    "O",
+    "糸を"
+   ],
+   [
+    "V",
+    "通してください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please thread"
+   ],
+   [
+    "P",
+    "the needle"
+   ]
+  ]
  },
  {
   "id": "L2-11",
   "topic": "t11",
   "n": "海岸{かいがん} で 貝{かい} を 拾{ひろ}いました",
   "en": "I picked up shells on the beach",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "海岸で"
+   ],
+   [
+    "O",
+    "貝を"
+   ],
+   [
+    "V",
+    "拾いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I picked up"
+   ],
+   [
+    "O",
+    "shells"
+   ],
+   [
+    "P",
+    "on the beach"
+   ]
+  ]
  },
  {
   "id": "L2-12",
   "topic": "t11",
   "n": "鳥{とり} の 羽{はね} が 落{お}ちて います",
   "en": "A bird's feather has fallen",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "鳥の羽が"
+   ],
+   [
+    "V",
+    "落ちています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "A bird's feather"
+   ],
+   [
+    "V",
+    "has fallen"
+   ]
+  ]
  },
  {
   "id": "L2-13",
   "topic": "t12",
   "n": "次{つぎ} の 角{かど} を 左{ひだり} に 曲{ま}がって ください",
   "en": "Please turn left at the next corner",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "次の角を"
+   ],
+   [
+    "P",
+    "左に"
+   ],
+   [
+    "V",
+    "曲がってください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please turn"
+   ],
+   [
+    "P",
+    "left"
+   ],
+   [
+    "P",
+    "at the next corner"
+   ]
+  ]
  },
  {
   "id": "L2-14",
   "topic": "t11",
   "n": "深{ふか}い 谷{たに} に 橋{はし} が かかって います",
   "en": "A bridge spans the deep valley",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "深い谷に"
+   ],
+   [
+    "W",
+    "橋が"
+   ],
+   [
+    "V",
+    "かかっています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "A bridge"
+   ],
+   [
+    "V",
+    "spans"
+   ],
+   [
+    "P",
+    "the deep valley"
+   ]
+  ]
  },
  {
   "id": "L2-15",
   "topic": "t2",
   "n": "麦茶{むぎちゃ} を 冷{つめ}たく して 飲{の}みます",
   "en": "I drink barley tea chilled",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "麦茶を"
+   ],
+   [
+    "H",
+    "冷たくして"
+   ],
+   [
+    "V",
+    "飲みます"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I drink"
+   ],
+   [
+    "O",
+    "barley tea"
+   ],
+   [
+    "H",
+    "chilled"
+   ]
+  ]
  },
  {
   "id": "L2-16",
   "topic": "t4",
   "n": "指{ゆび} から 血{ち} が 出{で}て います",
   "en": "My finger is bleeding",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "指から"
+   ],
+   [
+    "W",
+    "血が"
+   ],
+   [
+    "V",
+    "出ています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My finger"
+   ],
+   [
+    "V",
+    "is bleeding"
+   ]
+  ]
  },
  {
   "id": "L2-17",
   "topic": "t3",
   "n": "千円札{せんえんさつ} で 払{はら}います",
   "en": "I'll pay with a thousand-yen note",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "千円札で"
+   ],
+   [
+    "V",
+    "払います"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'll pay"
+   ],
+   [
+    "H",
+    "with a thousand-yen note"
+   ]
+  ]
  },
  {
   "id": "L2-18",
   "topic": "t11",
   "n": "秋{あき} に なる と 葉{は} が 黄色{きいろ} く なります",
   "en": "The leaves turn yellow in autumn",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "秋になると"
+   ],
+   [
+    "W",
+    "葉が"
+   ],
+   [
+    "V",
+    "黄色くなります"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The leaves"
+   ],
+   [
+    "V",
+    "turn yellow"
+   ],
+   [
+    "T",
+    "in autumn"
+   ]
+  ]
  },
  {
   "id": "L2-19",
   "topic": "t11",
   "n": "空{そら} に 白{しろ}い 雲{くも} が 浮{う}かんで います",
   "en": "White clouds are floating in the sky",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "空に"
+   ],
+   [
+    "W",
+    "白い雲が"
+   ],
+   [
+    "V",
+    "浮かんでいます"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "White clouds"
+   ],
+   [
+    "V",
+    "are floating"
+   ],
+   [
+    "P",
+    "in the sky"
+   ]
+  ]
  },
  {
   "id": "L2-20",
   "topic": "t12",
   "n": "この 村{むら} は 農業{のうぎょう} が 盛{さか}ん です",
   "en": "Farming is thriving in this village",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この村は"
+   ],
+   [
+    "O",
+    "農業が"
+   ],
+   [
+    "V",
+    "盛んです"
+   ]
+  ],
+  "er": [
+   [
+    "O",
+    "Farming"
+   ],
+   [
+    "V",
+    "is thriving"
+   ],
+   [
+    "W",
+    "in this village"
+   ]
+  ]
  },
  {
   "id": "L2-21",
   "topic": "t5",
   "n": "地下鉄{ちかてつ} で 行{い}きましょう",
   "en": "Let's go by underground",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "地下鉄で"
+   ],
+   [
+    "V",
+    "行きましょう"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Let's go"
+   ],
+   [
+    "H",
+    "by underground"
+   ]
+  ]
  },
  {
   "id": "L2-22",
   "topic": "t7",
   "n": "計算{けいさん} を 間違{まちが}えました",
   "en": "I made a mistake in the calculation",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "計算を"
+   ],
+   [
+    "V",
+    "間違えました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I made a mistake"
+   ],
+   [
+    "O",
+    "in the calculation"
+   ]
+  ]
  },
  {
   "id": "L2-23",
   "topic": "t11",
   "n": "川岸{かわぎし} を 散歩{さんぽ} しました",
   "en": "I took a walk along the riverbank",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "川岸を"
+   ],
+   [
+    "V",
+    "散歩しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I took a walk"
+   ],
+   [
+    "P",
+    "along the riverbank"
+   ]
+  ]
  },
  {
   "id": "L2-24",
   "topic": "t11",
   "n": "今日{きょう} は 波{なみ} が 高{たか}い です",
   "en": "The waves are high today",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "今日は"
+   ],
+   [
+    "W",
+    "波が"
+   ],
+   [
+    "V",
+    "高いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The waves"
+   ],
+   [
+    "V",
+    "are high"
+   ],
+   [
+    "T",
+    "today"
+   ]
+  ]
  },
  {
   "id": "L2-25",
   "topic": "t12",
   "n": "道{みち} で 財布{さいふ} を 拾{ひろ}いました",
   "en": "I picked up a wallet in the street",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "道で"
+   ],
+   [
+    "O",
+    "財布を"
+   ],
+   [
+    "V",
+    "拾いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I picked up"
+   ],
+   [
+    "O",
+    "a wallet"
+   ],
+   [
+    "P",
+    "in the street"
+   ]
+  ]
  },
  {
   "id": "L2-26",
   "topic": "t10",
   "n": "あと 十秒{じゅうびょう} で 始{はじ}まります",
   "en": "It starts in ten seconds",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "あと十秒で"
+   ],
+   [
+    "V",
+    "始まります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "It starts"
+   ],
+   [
+    "T",
+    "in ten seconds"
+   ]
+  ]
  },
  {
   "id": "L2-27",
   "topic": "t9",
   "n": "百{ひゃく} メートル 競走{きょうそう} で 一位{いちい} に なりました",
   "en": "I came first in the 100 metres",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "百メートル競走で"
+   ],
+   [
+    "P",
+    "一位に"
+   ],
+   [
+    "V",
+    "なりました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I came"
+   ],
+   [
+    "P",
+    "first"
+   ],
+   [
+    "P",
+    "in the 100 metres"
+   ]
+  ]
  },
  {
   "id": "L2-28",
   "topic": "t13",
   "n": "命令{めいれい} に 従{したが}って ください",
   "en": "Please follow the orders",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "命令に"
+   ],
+   [
+    "V",
+    "従ってください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please follow"
+   ],
+   [
+    "O",
+    "the orders"
+   ]
+  ]
  },
  {
   "id": "L2-29",
   "topic": "t11",
   "n": "この 木{き} は 根{ね} が 深{ふか}い です",
   "en": "This tree has deep roots",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この木は"
+   ],
+   [
+    "O",
+    "根が"
+   ],
+   [
+    "V",
+    "深いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This tree"
+   ],
+   [
+    "V",
+    "has deep"
+   ],
+   [
+    "O",
+    "roots"
+   ]
+  ]
  },
  {
   "id": "L2-30",
   "topic": "t3",
   "n": "値段{ねだん} が 二倍{にばい} に なりました",
   "en": "The price has doubled",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "値段が"
+   ],
+   [
+    "P",
+    "二倍に"
+   ],
+   [
+    "V",
+    "なりました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The price"
+   ],
+   [
+    "V",
+    "has doubled"
+   ]
+  ]
  },
  {
   "id": "L2-31",
   "topic": "t10",
   "n": "夏{なつ} に は 町{まち} の お祭{まつ}り が あります",
   "en": "The town has a festival in summer",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "夏には"
+   ],
+   [
+    "W",
+    "町のお祭りが"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The town"
+   ],
+   [
+    "V",
+    "has"
+   ],
+   [
+    "W",
+    "a festival"
+   ],
+   [
+    "T",
+    "in summer"
+   ]
+  ]
  },
  {
   "id": "L2-32",
   "topic": "t7",
   "n": "第一章{だいいっしょう} を 読{よ}んで ください",
   "en": "Please read chapter one",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "第一章を"
+   ],
+   [
+    "V",
+    "読んでください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please read"
+   ],
+   [
+    "O",
+    "chapter one"
+   ]
+  ]
  },
  {
   "id": "L2-33",
   "topic": "t8",
   "n": "童話{どうわ} を 子供{こども} に 読{よ}んで あげました",
   "en": "I read a fairy tale to the children",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "童話を"
+   ],
+   [
+    "W",
+    "子供に"
+   ],
+   [
+    "V",
+    "読んであげました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I read"
+   ],
+   [
+    "O",
+    "a fairy tale"
+   ],
+   [
+    "W",
+    "to the children"
+   ]
+  ]
  },
  {
   "id": "L2-34",
   "topic": "t11",
   "n": "庭{にわ} に 花{はな} を 植{う}えました",
   "en": "I planted flowers in the garden",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "庭に"
+   ],
+   [
+    "O",
+    "花を"
+   ],
+   [
+    "V",
+    "植えました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I planted"
+   ],
+   [
+    "O",
+    "flowers"
+   ],
+   [
+    "P",
+    "in the garden"
+   ]
+  ]
  },
  {
   "id": "L2-35",
   "topic": "t11",
   "n": "山{やま} の 中{なか} に 温泉{おんせん} が あります",
   "en": "There's a hot spring in the mountains",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "山の中に"
+   ],
+   [
+    "W",
+    "温泉が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There's"
+   ],
+   [
+    "W",
+    "a hot spring"
+   ],
+   [
+    "P",
+    "in the mountains"
+   ]
+  ]
  },
  {
   "id": "L2-36",
   "topic": "t11",
   "n": "公園{こうえん} の 緑{みどり} が きれい です",
   "en": "The greenery in the park is lovely",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "公園の緑が"
+   ],
+   [
+    "V",
+    "きれいです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The greenery in the park"
+   ],
+   [
+    "V",
+    "is lovely"
+   ]
+  ]
  },
  {
   "id": "L2-37",
   "topic": "t13",
   "n": "日本{にほん} の 人口{じんこう} は 約{やく} 一億{いちおく} 二千万人{にせんまんにん} です",
   "en": "Japan's population is about 120 million",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "日本の人口は"
+   ],
+   [
+    "H",
+    "約"
+   ],
+   [
+    "V",
+    "一億二千万人です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Japan's population"
+   ],
+   [
+    "V",
+    "is"
+   ],
+   [
+    "H",
+    "about"
+   ],
+   [
+    "V",
+    "120 million"
+   ]
+  ]
  },
  {
   "id": "L2-38",
   "topic": "t7",
   "n": "今日{きょう} の 課題{かだい} は 作文{さくぶん} です",
   "en": "Today's assignment is an essay",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "今日の課題は"
+   ],
+   [
+    "V",
+    "作文です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Today's assignment"
+   ],
+   [
+    "V",
+    "is an essay"
+   ]
+  ]
  },
  {
   "id": "L2-39",
   "topic": "t9",
   "n": "コンテスト で 賞{しょう} を もらいました",
   "en": "I won a prize in the contest",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "コンテストで"
+   ],
+   [
+    "O",
+    "賞を"
+   ],
+   [
+    "V",
+    "もらいました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I won"
+   ],
+   [
+    "O",
+    "a prize"
+   ],
+   [
+    "P",
+    "in the contest"
+   ]
+  ]
  },
  {
   "id": "L2-40",
   "topic": "t8",
   "n": "花{はな} を 一輪{いちりん} 買{か}いました",
   "en": "I bought a single flower",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "花を"
+   ],
+   [
+    "O",
+    "一輪"
+   ],
+   [
+    "V",
+    "買いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I bought"
+   ],
+   [
+    "O",
+    "a single flower"
+   ]
+  ]
  },
  {
   "id": "L2-41",
   "topic": "t7",
   "n": "来年{らいねん} 大学{だいがく} を 卒業{そつぎょう} します",
   "en": "I graduate from university next year",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "来年"
+   ],
+   [
+    "O",
+    "大学を"
+   ],
+   [
+    "V",
+    "卒業します"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I graduate"
+   ],
+   [
+    "O",
+    "from university"
+   ],
+   [
+    "T",
+    "next year"
+   ]
+  ]
  },
  {
   "id": "L2-42",
   "topic": "t7",
   "n": "皆{みな}さん の ご協力{きょうりょく} を お願{ねが}い します",
   "en": "We ask for everyone's cooperation",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "皆さんのご協力を"
+   ],
+   [
+    "V",
+    "お願いします"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We ask for"
+   ],
+   [
+    "O",
+    "everyone's cooperation"
+   ]
+  ]
  },
  {
   "id": "L2-43",
   "topic": "t12",
   "n": "湖{みずうみ} の 周{まわ}り を 歩{ある}きました",
   "en": "I walked around the lake",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "湖の周りを"
+   ],
+   [
+    "V",
+    "歩きました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I walked"
+   ],
+   [
+    "P",
+    "around the lake"
+   ]
+  ]
  },
  {
   "id": "L2-44",
   "topic": "t12",
   "n": "この 町{まち} は 山{やま} に 囲{かこ}まれて います",
   "en": "This town is surrounded by mountains",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この町は"
+   ],
+   [
+    "P",
+    "山に"
+   ],
+   [
+    "V",
+    "囲まれています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This town"
+   ],
+   [
+    "V",
+    "is surrounded"
+   ],
+   [
+    "P",
+    "by mountains"
+   ]
+  ]
  },
  {
   "id": "L2-45",
   "topic": "t1",
   "n": "チョコレート が 冷{ひ}えて 固{かた}く なりました",
   "en": "The chocolate has hardened in the cold",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "チョコレートが"
+   ],
+   [
+    "H",
+    "冷えて"
+   ],
+   [
+    "V",
+    "固くなりました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The chocolate"
+   ],
+   [
+    "V",
+    "has hardened"
+   ],
+   [
+    "H",
+    "in the cold"
+   ]
+  ]
  },
  {
   "id": "L2-46",
   "topic": "t1",
   "n": "料理{りょうり} の 材料{ざいりょう} を 買{か}って きます",
   "en": "I'll go and buy the ingredients",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "料理の材料を"
+   ],
+   [
+    "V",
+    "買ってきます"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'll go and buy"
+   ],
+   [
+    "O",
+    "the ingredients"
+   ]
+  ]
  },
  {
   "id": "L2-47",
   "topic": "t9",
   "n": "日本{にほん} の 伝統{でんとう} 芸能{げいのう} に 興味{きょうみ} が あります",
   "en": "I'm interested in traditional Japanese performing arts",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "日本の伝統芸能に"
+   ],
+   [
+    "W",
+    "興味が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm"
+   ],
+   [
+    "W",
+    "interested"
+   ],
+   [
+    "P",
+    "in traditional Japanese performing arts"
+   ]
+  ]
  },
  {
   "id": "L2-48",
   "topic": "t4",
   "n": "転{ころ}んで 足{あし} の 骨{ほね} を 折{お}りました",
   "en": "I fell and broke a bone in my leg",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "転んで"
+   ],
+   [
+    "O",
+    "足の骨を"
+   ],
+   [
+    "V",
+    "折りました"
+   ]
+  ],
+  "er": [
+   [
+    "H",
+    "I fell"
+   ],
+   [
+    "V",
+    "and broke"
+   ],
+   [
+    "O",
+    "a bone in my leg"
+   ]
+  ]
  },
  {
   "id": "L2-49",
   "topic": "t11",
   "n": "海{うみ} に 大{おお}きな 岩{いわ} が あります",
   "en": "There's a big rock in the sea",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "海に"
+   ],
+   [
+    "W",
+    "大きな岩が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There's"
+   ],
+   [
+    "W",
+    "a big rock"
+   ],
+   [
+    "P",
+    "in the sea"
+   ]
+  ]
  },
  {
   "id": "L2-50",
   "topic": "t12",
   "n": "この 坂{さか} を 上{のぼ}る と 駅{えき} です",
   "en": "The station is at the top of this slope",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "この坂を上ると"
+   ],
+   [
+    "W",
+    "駅"
+   ],
+   [
+    "V",
+    "です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The station"
+   ],
+   [
+    "V",
+    "is"
+   ],
+   [
+    "H",
+    "at the top of this slope"
+   ]
+  ]
  },
  {
   "id": "L2-51",
   "topic": "t9",
   "n": "勇気{ゆうき} を 出{だ}して 話{はな}しかけました",
   "en": "I plucked up the courage to speak to them",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "勇気を"
+   ],
+   [
+    "V",
+    "出して話しかけました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I plucked up"
+   ],
+   [
+    "O",
+    "the courage"
+   ],
+   [
+    "V",
+    "to speak to them"
+   ]
+  ]
  },
  {
   "id": "L2-52",
   "topic": "t11",
   "n": "この きのこ に は 毒{どく} が あります",
   "en": "This mushroom is poisonous",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "このきのこには"
+   ],
+   [
+    "O",
+    "毒が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This mushroom"
+   ],
+   [
+    "V",
+    "is poisonous"
+   ]
+  ]
  },
  {
   "id": "L2-53",
   "topic": "t11",
   "n": "この 川{かわ} は 浅{あさ}い です",
   "en": "This river is shallow",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この川は"
+   ],
+   [
+    "V",
+    "浅いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This river"
+   ],
+   [
+    "V",
+    "is shallow"
+   ]
+  ]
  },
  {
   "id": "L2-54",
   "topic": "t13",
   "n": "祖父{そふ} は 昔{むかし} 軍隊{ぐんたい} に いました",
   "en": "My grandfather was in the army long ago",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "祖父は"
+   ],
+   [
+    "T",
+    "昔"
+   ],
+   [
+    "P",
+    "軍隊に"
+   ],
+   [
+    "V",
+    "いました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My grandfather"
+   ],
+   [
+    "V",
+    "was"
+   ],
+   [
+    "P",
+    "in the army"
+   ],
+   [
+    "T",
+    "long ago"
+   ]
+  ]
  },
  {
   "id": "L2-55",
   "topic": "t12",
   "n": "奈良{なら} で 大{おお}きな 仏像{ぶつぞう} を 見{み}ました",
   "en": "I saw a big Buddha statue in Nara",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "奈良で"
+   ],
+   [
+    "O",
+    "大きな仏像を"
+   ],
+   [
+    "V",
+    "見ました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I saw"
+   ],
+   [
+    "O",
+    "a big Buddha statue"
+   ],
+   [
+    "P",
+    "in Nara"
+   ]
+  ]
  },
  {
   "id": "L2-56",
   "topic": "t12",
   "n": "この 家{いえ} は 築{ちく} 五十年{ごじゅうねん} です",
   "en": "This house is fifty years old",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この家は"
+   ],
+   [
+    "V",
+    "築五十年です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This house"
+   ],
+   [
+    "V",
+    "is fifty years old"
+   ]
+  ]
  },
  {
   "id": "L2-57",
   "topic": "t12",
   "n": "大阪府{おおさかふ} に 住{す}んで います",
   "en": "I live in Osaka Prefecture",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "大阪府に"
+   ],
+   [
+    "V",
+    "住んでいます"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I live"
+   ],
+   [
+    "P",
+    "in Osaka Prefecture"
+   ]
+  ]
  },
  {
   "id": "L2-58",
   "topic": "t7",
   "n": "大学{だいがく} の 専門{せんもん} は 経済{けいざい} でした",
   "en": "I majored in economics at university",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "大学の専門は"
+   ],
+   [
+    "V",
+    "経済でした"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I majored in economics"
+   ],
+   [
+    "W",
+    "at university"
+   ]
+  ]
  },
  {
   "id": "L2-59",
   "topic": "t8",
   "n": "彼女{かのじょ} は 細{ほそ}くて 背{せ} が 高{たか}い です",
   "en": "She's slim and tall",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "彼女は"
+   ],
+   [
+    "H",
+    "細くて"
+   ],
+   [
+    "O",
+    "背が"
+   ],
+   [
+    "V",
+    "高いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "She"
+   ],
+   [
+    "H",
+    "'s slim"
+   ],
+   [
+    "V",
+    "and tall"
+   ]
+  ]
  },
  {
   "id": "L2-60",
   "topic": "t4",
   "n": "風邪{かぜ} で 鼻{はな} が 詰{つ}まって います",
   "en": "My nose is blocked with a cold",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "風邪で"
+   ],
+   [
+    "W",
+    "鼻が"
+   ],
+   [
+    "V",
+    "詰まっています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My nose"
+   ],
+   [
+    "V",
+    "is blocked"
+   ],
+   [
+    "H",
+    "with a cold"
+   ]
+  ]
  },
  {
   "id": "L2-61",
   "topic": "t13",
   "n": "兵士{へいし} が 町{まち} を 守{まも}って います",
   "en": "Soldiers are guarding the town",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "兵士が"
+   ],
+   [
+    "O",
+    "町を"
+   ],
+   [
+    "V",
+    "守っています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Soldiers"
+   ],
+   [
+    "V",
+    "are guarding"
+   ],
+   [
+    "O",
+    "the town"
+   ]
+  ]
  },
  {
   "id": "L2-62",
   "topic": "t1",
   "n": "少{すこ}し 塩{しお} を 入{い}れて ください",
   "en": "Please add a little salt",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "少し"
+   ],
+   [
+    "O",
+    "塩を"
+   ],
+   [
+    "V",
+    "入れてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please add"
+   ],
+   [
+    "H",
+    "a little"
+   ],
+   [
+    "O",
+    "salt"
+   ]
+  ]
  },
  {
   "id": "L2-63",
   "topic": "t12",
   "n": "この 町{まち} は 昔{むかし} 港{みなと} で 栄{さか}えました",
   "en": "This town once prospered as a port",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この町は"
+   ],
+   [
+    "T",
+    "昔"
+   ],
+   [
+    "H",
+    "港で"
+   ],
+   [
+    "V",
+    "栄えました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This town"
+   ],
+   [
+    "T",
+    "once"
+   ],
+   [
+    "V",
+    "prospered"
+   ],
+   [
+    "H",
+    "as a port"
+   ]
+  ]
  },
  {
   "id": "L2-64",
   "topic": "t11",
   "n": "海{うみ} の 底{そこ} は 暗{くら}い です",
   "en": "It's dark at the bottom of the sea",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "海の底は"
+   ],
+   [
+    "V",
+    "暗いです"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "It's dark"
+   ],
+   [
+    "W",
+    "at the bottom of the sea"
+   ]
+  ]
  },
  {
   "id": "L2-65",
   "topic": "t12",
   "n": "警察署{けいさつしょ} は 駅{えき} の 隣{となり} です",
   "en": "The police station is next to the station",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "警察署は"
+   ],
+   [
+    "V",
+    "駅の隣です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The police station"
+   ],
+   [
+    "V",
+    "is next to the station"
+   ]
+  ]
  },
  {
   "id": "L2-66",
   "topic": "t8",
   "n": "二人{ふたり} は 恋人{こいびと} 同士{どうし} です",
   "en": "The two of them are sweethearts",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "二人は"
+   ],
+   [
+    "V",
+    "恋人同士です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The two of them"
+   ],
+   [
+    "V",
+    "are sweethearts"
+   ]
+  ]
  },
  {
   "id": "L2-67",
   "topic": "t12",
   "n": "地震{じしん} の 避難{ひなん} 訓練{くんれん} が ありました",
   "en": "We had an earthquake drill",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "地震の避難訓練が"
+   ],
+   [
+    "V",
+    "ありました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We had"
+   ],
+   [
+    "W",
+    "an earthquake drill"
+   ]
+  ]
  },
  {
   "id": "L2-68",
   "topic": "t12",
   "n": "神社{じんじゃ} で 家族{かぞく} の 健康{けんこう} を 祈{いの}りました",
   "en": "I prayed for my family's health at the shrine",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "神社で"
+   ],
+   [
+    "O",
+    "家族の健康を"
+   ],
+   [
+    "V",
+    "祈りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I prayed"
+   ],
+   [
+    "O",
+    "for my family's health"
+   ],
+   [
+    "P",
+    "at the shrine"
+   ]
+  ]
  },
  {
   "id": "L2-69",
   "topic": "t4",
   "n": "胸{むね} が 苦{くる}しい です",
   "en": "My chest feels tight",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "胸が"
+   ],
+   [
+    "V",
+    "苦しいです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My chest"
+   ],
+   [
+    "V",
+    "feels tight"
+   ]
+  ]
  },
  {
   "id": "L2-70",
   "topic": "t4",
   "n": "脳{のう} の 検査{けんさ} を 受{う}けました",
   "en": "I had a brain scan",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "脳の検査を"
+   ],
+   [
+    "V",
+    "受けました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I had"
+   ],
+   [
+    "O",
+    "a brain scan"
+   ]
+  ]
  },
  {
   "id": "L2-71",
   "topic": "t2",
   "n": "駅前{えきまえ} の 喫茶店{きっさてん} で 会{あ}いましょう",
   "en": "Let's meet at the café by the station",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "駅前の喫茶店で"
+   ],
+   [
+    "V",
+    "会いましょう"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Let's meet"
+   ],
+   [
+    "P",
+    "at the café by the station"
+   ]
+  ]
  },
  {
   "id": "L2-72",
   "topic": "t4",
   "n": "体重{たいじゅう} が 三{さん}キロ 減{へ}りました",
   "en": "I've lost three kilos",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "体重が"
+   ],
+   [
+    "V",
+    "三キロ減りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I've lost three kilos"
+   ]
+  ]
  },
  {
   "id": "L2-73",
   "topic": "t12",
   "n": "順番{じゅんばん} に 並{なら}んで ください",
   "en": "Please queue in order",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "順番に"
+   ],
+   [
+    "V",
+    "並んでください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please queue"
+   ],
+   [
+    "H",
+    "in order"
+   ]
+  ]
  },
  {
   "id": "L2-74",
   "topic": "t7",
   "n": "この 動詞{どうし} の 意味{いみ} を 教{おし}えて ください",
   "en": "Please tell me what this verb means",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "この動詞の意味を"
+   ],
+   [
+    "V",
+    "教えてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please tell me"
+   ],
+   [
+    "O",
+    "what this verb means"
+   ]
+  ]
  },
  {
   "id": "L2-75",
   "topic": "t3",
   "n": "本{ほん} を 三冊{さんさつ} 買{か}いました",
   "en": "I bought three books",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "本を"
+   ],
+   [
+    "O",
+    "三冊"
+   ],
+   [
+    "V",
+    "買いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I bought"
+   ],
+   [
+    "O",
+    "three books"
+   ]
+  ]
  },
  {
   "id": "L2-76",
   "topic": "t2",
   "n": "団体{だんたい} で 旅行{りょこう} しました",
   "en": "We travelled as a group",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "団体で"
+   ],
+   [
+    "V",
+    "旅行しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We travelled"
+   ],
+   [
+    "H",
+    "as a group"
+   ]
+  ]
  },
  {
   "id": "L2-77",
   "topic": "t13",
   "n": "暴力{ぼうりょく} は いけません",
   "en": "Violence is wrong",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "暴力は"
+   ],
+   [
+    "V",
+    "いけません"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Violence"
+   ],
+   [
+    "V",
+    "is wrong"
+   ]
+  ]
  },
  {
   "id": "L2-78",
   "topic": "t5",
   "n": "朝{あさ} の 電車{でんしゃ} は とても 混{こ}んで います",
   "en": "The morning trains are very crowded",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "朝の電車は"
+   ],
+   [
+    "H",
+    "とても"
+   ],
+   [
+    "V",
+    "混んでいます"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The morning trains"
+   ],
+   [
+    "V",
+    "are"
+   ],
+   [
+    "H",
+    "very"
+   ],
+   [
+    "V",
+    "crowded"
+   ]
+  ]
  },
  {
   "id": "L2-79",
   "topic": "t7",
   "n": "規則{きそく} が 改正{かいせい} されました",
   "en": "The rules have been revised",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "規則が"
+   ],
+   [
+    "V",
+    "改正されました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The rules"
+   ],
+   [
+    "V",
+    "have been revised"
+   ]
+  ]
  },
  {
   "id": "L2-80",
   "topic": "t3",
   "n": "個人{こじん} 情報{じょうほう} に 気{き}を つけて ください",
   "en": "Be careful with personal information",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "個人情報に"
+   ],
+   [
+    "V",
+    "気をつけてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Be careful"
+   ],
+   [
+    "P",
+    "with personal information"
+   ]
+  ]
  },
  {
   "id": "L2-81",
   "topic": "t4",
   "n": "血圧{けつあつ} を 測{はか}りましょう",
   "en": "Let's take your blood pressure",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "血圧を"
+   ],
+   [
+    "V",
+    "測りましょう"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Let's take"
+   ],
+   [
+    "O",
+    "your blood pressure"
+   ]
+  ]
  },
  {
   "id": "L2-82",
   "topic": "t3",
   "n": "厚{あつ}い コート を 買{か}いました",
   "en": "I bought a thick coat",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "厚いコートを"
+   ],
+   [
+    "V",
+    "買いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I bought"
+   ],
+   [
+    "O",
+    "a thick coat"
+   ]
+  ]
  },
  {
   "id": "L2-83",
   "topic": "t4",
   "n": "病気{びょうき} を 予防{よぼう} しましょう",
   "en": "Let's prevent illness",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "病気を"
+   ],
+   [
+    "V",
+    "予防しましょう"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Let's prevent"
+   ],
+   [
+    "O",
+    "illness"
+   ]
+  ]
  },
  {
   "id": "L2-84",
   "topic": "t7",
   "n": "委員会{いいんかい} の 会議{かいぎ} が あります",
   "en": "There's a committee meeting",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "委員会の会議が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There's"
+   ],
+   [
+    "W",
+    "a committee meeting"
+   ]
+  ]
  },
  {
   "id": "L2-85",
   "topic": "t12",
   "n": "空港{くうこう} で 荷物{にもつ} の 検査{けんさ} が あります",
   "en": "There's a baggage check at the airport",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "空港で"
+   ],
+   [
+    "W",
+    "荷物の検査が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There's"
+   ],
+   [
+    "W",
+    "a baggage check"
+   ],
+   [
+    "P",
+    "at the airport"
+   ]
+  ]
  },
  {
   "id": "L2-86",
   "topic": "t7",
   "n": "総理{そうり} 大臣{だいじん} の 話{はなし} を 聞{き}きました",
   "en": "I listened to the Prime Minister's speech",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "総理大臣の話を"
+   ],
+   [
+    "V",
+    "聞きました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I listened to"
+   ],
+   [
+    "O",
+    "the Prime Minister's speech"
+   ]
+  ]
  },
  {
   "id": "L2-87",
   "topic": "t12",
   "n": "駅{えき} に エレベーター が 設置{せっち} されました",
   "en": "A lift has been installed at the station",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "駅に"
+   ],
+   [
+    "W",
+    "エレベーターが"
+   ],
+   [
+    "V",
+    "設置されました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "A lift"
+   ],
+   [
+    "V",
+    "has been installed"
+   ],
+   [
+    "P",
+    "at the station"
+   ]
+  ]
  },
  {
   "id": "L2-88",
   "topic": "t13",
   "n": "外務省{がいむしょう} で 働{はたら}いて います",
   "en": "I work at the Foreign Ministry",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "外務省で"
+   ],
+   [
+    "V",
+    "働いています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I work"
+   ],
+   [
+    "P",
+    "at the Foreign Ministry"
+   ]
+  ]
  },
  {
   "id": "L2-89",
   "topic": "t8",
   "n": "各自{かくじ} で 昼{ひる}ご飯{はん} を 持{も}って きて ください",
   "en": "Everyone please bring your own lunch",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "各自で"
+   ],
+   [
+    "O",
+    "昼ご飯を"
+   ],
+   [
+    "V",
+    "持ってきてください"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Everyone"
+   ],
+   [
+    "V",
+    "please bring"
+   ],
+   [
+    "H",
+    "your own"
+   ],
+   [
+    "O",
+    "lunch"
+   ]
+  ]
  },
  {
   "id": "L2-90",
   "topic": "t3",
   "n": "この 店{みせ} は 夜{よる} 十時{じゅうじ} まで 営業{えいぎょう} して います",
   "en": "This shop is open until 10 p.m.",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この店は"
+   ],
+   [
+    "T",
+    "夜十時まで"
+   ],
+   [
+    "V",
+    "営業しています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This shop"
+   ],
+   [
+    "V",
+    "is open"
+   ],
+   [
+    "T",
+    "until 10 p.m."
+   ]
+  ]
  },
  {
   "id": "L2-91",
   "topic": "t3",
   "n": "領収書{りょうしゅうしょ} を ください",
   "en": "A receipt, please",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "領収書を"
+   ],
+   [
+    "V",
+    "ください"
+   ]
+  ],
+  "er": [
+   [
+    "O",
+    "A receipt"
+   ],
+   [
+    "V",
+    "please"
+   ]
+  ]
  },
  {
   "id": "L2-92",
   "topic": "t7",
   "n": "副社長{ふくしゃちょう} が 説明{せつめい} しました",
   "en": "The vice-president explained",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "副社長が"
+   ],
+   [
+    "V",
+    "説明しました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The vice-president"
+   ],
+   [
+    "V",
+    "explained"
+   ]
+  ]
  },
  {
   "id": "L2-93",
   "topic": "t12",
   "n": "この 地域{ちいき} は 雪{ゆき} が 多{おお}い です",
   "en": "This area gets a lot of snow",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この地域は"
+   ],
+   [
+    "O",
+    "雪が"
+   ],
+   [
+    "V",
+    "多いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This area"
+   ],
+   [
+    "V",
+    "gets a lot of"
+   ],
+   [
+    "O",
+    "snow"
+   ]
+  ]
  },
  {
   "id": "L2-94",
   "topic": "t5",
   "n": "バス 停{てい} で 待{ま}って います",
   "en": "I'm waiting at the bus stop",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "バス停で"
+   ],
+   [
+    "V",
+    "待っています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm waiting"
+   ],
+   [
+    "P",
+    "at the bus stop"
+   ]
+  ]
  },
  {
   "id": "L2-95",
   "topic": "t3",
   "n": "革{かわ} の かばん を 買{か}いました",
   "en": "I bought a leather bag",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "革のかばんを"
+   ],
+   [
+    "V",
+    "買いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I bought"
+   ],
+   [
+    "O",
+    "a leather bag"
+   ]
+  ]
  },
  {
   "id": "L2-96",
   "topic": "t9",
   "n": "音楽{おんがく} の リズム と 旋律{せんりつ} が 好{す}き です",
   "en": "I like the rhythm and melody of the music",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "音楽のリズムと旋律が"
+   ],
+   [
+    "V",
+    "好きです"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I like"
+   ],
+   [
+    "O",
+    "the rhythm and melody of the music"
+   ]
+  ]
  },
  {
   "id": "L2-97",
   "topic": "t7",
   "n": "先生{せんせい} の 指導{しどう} で 上手{じょうず} に なりました",
   "en": "I improved with the teacher's guidance",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "先生の指導で"
+   ],
+   [
+    "V",
+    "上手になりました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I improved"
+   ],
+   [
+    "H",
+    "with the teacher's guidance"
+   ]
+  ]
  },
  {
   "id": "L2-98",
   "topic": "t12",
   "n": "姫路{ひめじ} 城{じょう} は とても きれい です",
   "en": "Himeji Castle is very beautiful",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "姫路城は"
+   ],
+   [
+    "H",
+    "とても"
+   ],
+   [
+    "V",
+    "きれいです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Himeji Castle"
+   ],
+   [
+    "V",
+    "is"
+   ],
+   [
+    "H",
+    "very"
+   ],
+   [
+    "V",
+    "beautiful"
+   ]
+  ]
  },
  {
   "id": "L2-99",
   "topic": "t7",
   "n": "私{わたし} は 営業{えいぎょう} を 担当{たんとう} して います",
   "en": "I'm in charge of sales",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "私は"
+   ],
+   [
+    "O",
+    "営業を"
+   ],
+   [
+    "V",
+    "担当しています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "I"
+   ],
+   [
+    "V",
+    "'m in charge of"
+   ],
+   [
+    "O",
+    "sales"
+   ]
+  ]
  },
  {
   "id": "L2-100",
   "topic": "t3",
   "n": "合計{ごうけい} 金額{きんがく} を 教{おし}えて ください",
   "en": "Please tell me the total amount",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "合計金額を"
+   ],
+   [
+    "V",
+    "教えてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please tell me"
+   ],
+   [
+    "O",
+    "the total amount"
+   ]
+  ]
  },
  {
   "id": "L2-101",
   "topic": "t13",
   "n": "日本{にほん} は 石油{せきゆ} を 輸入{ゆにゅう} して います",
   "en": "Japan imports oil",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "日本は"
+   ],
+   [
+    "O",
+    "石油を"
+   ],
+   [
+    "V",
+    "輸入しています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Japan"
+   ],
+   [
+    "V",
+    "imports"
+   ],
+   [
+    "O",
+    "oil"
+   ]
+  ]
  },
  {
   "id": "L2-102",
   "topic": "t6",
   "n": "燃{も}える ごみ は 火曜日{かようび} です",
   "en": "Burnable rubbish goes out on Tuesdays",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "燃えるごみは"
+   ],
+   [
+    "T",
+    "火曜日"
+   ],
+   [
+    "V",
+    "です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Burnable rubbish"
+   ],
+   [
+    "V",
+    "goes out"
+   ],
+   [
+    "T",
+    "on Tuesdays"
+   ]
+  ]
  },
  {
   "id": "L2-103",
   "topic": "t8",
   "n": "友達{ともだち} の 誕生日{たんじょうび} を 祝{いわ}いました",
   "en": "We celebrated a friend's birthday",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "友達の誕生日を"
+   ],
+   [
+    "V",
+    "祝いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We celebrated"
+   ],
+   [
+    "O",
+    "a friend's birthday"
+   ]
+  ]
  },
  {
   "id": "L2-104",
   "topic": "t3",
   "n": "荷物{にもつ} が 届{とど}きました",
   "en": "The parcel has arrived",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "荷物が"
+   ],
+   [
+    "V",
+    "届きました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The parcel"
+   ],
+   [
+    "V",
+    "has arrived"
+   ]
+  ]
  },
  {
   "id": "L2-105",
   "topic": "t4",
   "n": "腕{うで} が 痛{いた}い です",
   "en": "My arm hurts",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "腕が"
+   ],
+   [
+    "V",
+    "痛いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My arm"
+   ],
+   [
+    "V",
+    "hurts"
+   ]
+  ]
  },
  {
   "id": "L2-106",
   "topic": "t4",
   "n": "重{おも}い 物{もの} を 持{も}って 腰{こし} を 痛{いた}めました",
   "en": "I hurt my back lifting something heavy",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "重い物を持って"
+   ],
+   [
+    "O",
+    "腰を"
+   ],
+   [
+    "V",
+    "痛めました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I hurt"
+   ],
+   [
+    "O",
+    "my back"
+   ],
+   [
+    "H",
+    "lifting something heavy"
+   ]
+  ]
  },
  {
   "id": "L2-107",
   "topic": "t12",
   "n": "作品{さくひん} に 触{さわ}らないで ください",
   "en": "Please don't touch the exhibits",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "作品に"
+   ],
+   [
+    "V",
+    "触らないでください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please don't touch"
+   ],
+   [
+    "P",
+    "the exhibits"
+   ]
+  ]
  },
  {
   "id": "L2-108",
   "topic": "t13",
   "n": "高{たか}い 建物{たてもの} の 上層{じょうそう} 階{かい} から 富士山{ふじさん} が 見{み}えます",
   "en": "You can see Mount Fuji from the upper floors of tall buildings",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "高い建物の上層階から"
+   ],
+   [
+    "W",
+    "富士山が"
+   ],
+   [
+    "V",
+    "見えます"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "You can see"
+   ],
+   [
+    "W",
+    "Mount Fuji"
+   ],
+   [
+    "P",
+    "from the upper floors of tall buildings"
+   ]
+  ]
  },
  {
   "id": "L2-109",
   "topic": "t12",
   "n": "気象庁{きしょうちょう} が 大雨{おおあめ} の 警報{けいほう} を 出{だ}しました",
   "en": "The Meteorological Agency issued a heavy rain warning",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "気象庁が"
+   ],
+   [
+    "O",
+    "大雨の警報を"
+   ],
+   [
+    "V",
+    "出しました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The Meteorological Agency"
+   ],
+   [
+    "V",
+    "issued"
+   ],
+   [
+    "O",
+    "a heavy rain warning"
+   ]
+  ]
  },
  {
   "id": "L2-110",
   "topic": "t6",
   "n": "水道管{すいどうかん} が 壊{こわ}れました",
   "en": "A water pipe has burst",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "水道管が"
+   ],
+   [
+    "V",
+    "壊れました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "A water pipe"
+   ],
+   [
+    "V",
+    "has burst"
+   ]
+  ]
  },
  {
   "id": "L2-111",
   "topic": "t9",
   "n": "日本{にほん} の 印象{いんしょう} は どう ですか",
   "en": "What's your impression of Japan?",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "日本の印象は"
+   ],
+   [
+    "H",
+    "どう"
+   ],
+   [
+    "V",
+    "ですか"
+   ]
+  ],
+  "er": [
+   [
+    "H",
+    "What"
+   ],
+   [
+    "V",
+    "'s"
+   ],
+   [
+    "W",
+    "your impression of Japan"
+   ]
+  ]
  },
  {
   "id": "L2-112",
   "topic": "t1",
   "n": "ご飯{はん} の 量{りょう} を 少{すく}なく して ください",
   "en": "Please give me a smaller portion of rice",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "ご飯の量を"
+   ],
+   [
+    "H",
+    "少なく"
+   ],
+   [
+    "V",
+    "してください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please give me"
+   ],
+   [
+    "H",
+    "a smaller"
+   ],
+   [
+    "O",
+    "portion of rice"
+   ]
+  ]
  },
  {
   "id": "L2-113",
   "topic": "t12",
   "n": "県境{けんざかい} の トンネル を 抜{ぬ}けました",
   "en": "We came through the tunnel at the prefectural border",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "県境のトンネルを"
+   ],
+   [
+    "V",
+    "抜けました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We came through"
+   ],
+   [
+    "O",
+    "the tunnel at the prefectural border"
+   ]
+  ]
  },
  {
   "id": "L2-114",
   "topic": "t9",
   "n": "武道{ぶどう} を 習{なら}って います",
   "en": "I'm learning a martial art",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "武道を"
+   ],
+   [
+    "V",
+    "習っています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm learning"
+   ],
+   [
+    "O",
+    "a martial art"
+   ]
+  ]
  },
  {
   "id": "L2-115",
   "topic": "t9",
   "n": "自分{じぶん} の 意見{いけん} を 述{の}べて ください",
   "en": "Please state your opinion",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "自分の意見を"
+   ],
+   [
+    "V",
+    "述べてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please state"
+   ],
+   [
+    "O",
+    "your opinion"
+   ]
+  ]
  },
  {
   "id": "L2-116",
   "topic": "t3",
   "n": "自動{じどう} 販売機{はんばいき} で 飲{の}み物{もの} を 買{か}いました",
   "en": "I bought a drink from a vending machine",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "自動販売機で"
+   ],
+   [
+    "O",
+    "飲み物を"
+   ],
+   [
+    "V",
+    "買いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I bought"
+   ],
+   [
+    "O",
+    "a drink"
+   ],
+   [
+    "H",
+    "from a vending machine"
+   ]
+  ]
  },
  {
   "id": "L2-117",
   "topic": "t3",
   "n": "料金{りょうきん} に 税{ぜい} が 含{ふく}まれて います",
   "en": "Tax is included in the price",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "料金に"
+   ],
+   [
+    "W",
+    "税が"
+   ],
+   [
+    "V",
+    "含まれています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Tax"
+   ],
+   [
+    "V",
+    "is included"
+   ],
+   [
+    "P",
+    "in the price"
+   ]
+  ]
  },
  {
   "id": "L2-118",
   "topic": "t13",
   "n": "今{いま} の 状況{じょうきょう} を 説明{せつめい} して ください",
   "en": "Please explain the current situation",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "今の状況を"
+   ],
+   [
+    "V",
+    "説明してください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please explain"
+   ],
+   [
+    "O",
+    "the current situation"
+   ]
+  ]
  },
  {
   "id": "L2-119",
   "topic": "t4",
   "n": "野菜{やさい} で ビタミン を 補{おぎな}いましょう",
   "en": "Let's get vitamins from vegetables",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "野菜で"
+   ],
+   [
+    "O",
+    "ビタミンを"
+   ],
+   [
+    "V",
+    "補いましょう"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Let's get"
+   ],
+   [
+    "O",
+    "vitamins"
+   ],
+   [
+    "H",
+    "from vegetables"
+   ]
+  ]
  },
  {
   "id": "L2-120",
   "topic": "t4",
   "n": "この 薬{くすり} は よく 効{き}きます",
   "en": "This medicine works well",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この薬は"
+   ],
+   [
+    "H",
+    "よく"
+   ],
+   [
+    "V",
+    "効きます"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This medicine"
+   ],
+   [
+    "V",
+    "works"
+   ],
+   [
+    "H",
+    "well"
+   ]
+  ]
  },
  {
   "id": "L2-121",
   "topic": "t8",
   "n": "マフラー を 首{くび} に 巻{ま}きました",
   "en": "I wrapped a scarf around my neck",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "マフラーを"
+   ],
+   [
+    "P",
+    "首に"
+   ],
+   [
+    "V",
+    "巻きました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I wrapped"
+   ],
+   [
+    "O",
+    "a scarf"
+   ],
+   [
+    "P",
+    "around my neck"
+   ]
+  ]
  },
  {
   "id": "L2-122",
   "topic": "t12",
   "n": "警察{けいさつ} が 犯人{はんにん} を 捜{さが}して います",
   "en": "The police are searching for the culprit",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "警察が"
+   ],
+   [
+    "O",
+    "犯人を"
+   ],
+   [
+    "V",
+    "捜しています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The police"
+   ],
+   [
+    "V",
+    "are searching for"
+   ],
+   [
+    "O",
+    "the culprit"
+   ]
+  ]
  },
  {
   "id": "L2-123",
   "topic": "t7",
   "n": "大切{たいせつ} な ところ に 印{しるし} を 付{つ}けて ください",
   "en": "Please mark the important parts",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "大切なところに"
+   ],
+   [
+    "O",
+    "印を"
+   ],
+   [
+    "V",
+    "付けてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please mark"
+   ],
+   [
+    "P",
+    "the important parts"
+   ]
+  ]
  },
  {
   "id": "L2-124",
   "topic": "t7",
   "n": "毎日{まいにち} 復習{ふくしゅう} して います",
   "en": "I review every day",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "毎日"
+   ],
+   [
+    "V",
+    "復習しています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I review"
+   ],
+   [
+    "T",
+    "every day"
+   ]
+  ]
  },
  {
   "id": "L2-125",
   "topic": "t3",
   "n": "毎月{まいつき} 少{すこ}し ずつ 貯金{ちょきん} して います",
   "en": "I save a little every month",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "毎月"
+   ],
+   [
+    "H",
+    "少しずつ"
+   ],
+   [
+    "V",
+    "貯金しています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I save"
+   ],
+   [
+    "H",
+    "a little"
+   ],
+   [
+    "T",
+    "every month"
+   ]
+  ]
  },
  {
   "id": "L2-126",
   "topic": "t6",
   "n": "針{はり} と 糸{いと} で ボタン を 付{つ}けました",
   "en": "I sewed a button on with a needle and thread",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "針と糸で"
+   ],
+   [
+    "O",
+    "ボタンを"
+   ],
+   [
+    "V",
+    "付けました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I sewed"
+   ],
+   [
+    "O",
+    "a button"
+   ],
+   [
+    "V",
+    "on"
+   ],
+   [
+    "H",
+    "with a needle and thread"
+   ]
+  ]
  },
  {
   "id": "L2-127",
   "topic": "t1",
   "n": "和菓子{わがし} と お茶{ちゃ} を いただきました",
   "en": "I had Japanese sweets and tea",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "和菓子とお茶を"
+   ],
+   [
+    "V",
+    "いただきました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I had"
+   ],
+   [
+    "O",
+    "Japanese sweets and tea"
+   ]
+  ]
  },
  {
   "id": "L2-128",
   "topic": "t12",
   "n": "大{おお}きな 運河{うんが} を 船{ふね} で 渡{わた}りました",
   "en": "We crossed a big canal by boat",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "大きな運河を"
+   ],
+   [
+    "H",
+    "船で"
+   ],
+   [
+    "V",
+    "渡りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We crossed"
+   ],
+   [
+    "O",
+    "a big canal"
+   ],
+   [
+    "H",
+    "by boat"
+   ]
+  ]
  },
  {
   "id": "L2-129",
   "topic": "t4",
   "n": "暑{あつ}くて 汗{あせ} を かきました",
   "en": "It was hot and I sweated",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "暑くて"
+   ],
+   [
+    "O",
+    "汗を"
+   ],
+   [
+    "V",
+    "かきました"
+   ]
+  ],
+  "er": [
+   [
+    "H",
+    "It was hot"
+   ],
+   [
+    "V",
+    "and I sweated"
+   ]
+  ]
  },
  {
   "id": "L2-130",
   "topic": "t9",
   "n": "もう 一度{いちど} 再生{さいせい} して ください",
   "en": "Please play it again",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "もう一度"
+   ],
+   [
+    "V",
+    "再生してください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please play it"
+   ],
+   [
+    "H",
+    "again"
+   ]
+  ]
  },
  {
   "id": "L2-131",
   "topic": "t7",
   "n": "お客様{きゃくさま} に 丁寧{ていねい} に 接{せっ}して ください",
   "en": "Please treat customers politely",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "お客様に"
+   ],
+   [
+    "H",
+    "丁寧に"
+   ],
+   [
+    "V",
+    "接してください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please treat"
+   ],
+   [
+    "W",
+    "customers"
+   ],
+   [
+    "H",
+    "politely"
+   ]
+  ]
  },
  {
   "id": "L2-132",
   "topic": "t9",
   "n": "占{うらな}い を 信{しん}じますか",
   "en": "Do you believe in fortune-telling?",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "占いを"
+   ],
+   [
+    "V",
+    "信じますか"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Do you believe in"
+   ],
+   [
+    "O",
+    "fortune-telling"
+   ]
+  ]
  },
  {
   "id": "L2-133",
   "topic": "t4",
   "n": "胃{い} の 調子{ちょうし} が 悪{わる}い です",
   "en": "My stomach isn't right",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "胃の調子が"
+   ],
+   [
+    "V",
+    "悪いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My stomach"
+   ],
+   [
+    "V",
+    "isn't right"
+   ]
+  ]
  },
  {
   "id": "L2-134",
   "topic": "t9",
   "n": "仕事{しごと} の こと で 悩{なや}んで います",
   "en": "I'm worried about work",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "仕事のことで"
+   ],
+   [
+    "V",
+    "悩んでいます"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm worried"
+   ],
+   [
+    "O",
+    "about work"
+   ]
+  ]
  },
  {
   "id": "L2-135",
   "topic": "t11",
   "n": "太陽{たいよう} が 東{ひがし} から 昇{のぼ}ります",
   "en": "The sun rises in the east",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "太陽が"
+   ],
+   [
+    "P",
+    "東から"
+   ],
+   [
+    "V",
+    "昇ります"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The sun"
+   ],
+   [
+    "V",
+    "rises"
+   ],
+   [
+    "P",
+    "in the east"
+   ]
+  ]
  },
  {
   "id": "L2-136",
   "topic": "t1",
   "n": "この コーヒー は 濃{こ}すぎます",
   "en": "This coffee is too strong",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "このコーヒーは"
+   ],
+   [
+    "V",
+    "濃すぎます"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This coffee"
+   ],
+   [
+    "V",
+    "is too strong"
+   ]
+  ]
  },
  {
   "id": "L2-137",
   "topic": "t9",
   "n": "最高{さいこう} に 楽{たの}しかった です。 積極的{せっきょくてき} に 参加{さんか} しました",
   "en": "It was great fun. I took an active part",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "最高に"
+   ],
+   [
+    "V",
+    "楽しかったです。"
+   ],
+   [
+    "H",
+    "積極的に"
+   ],
+   [
+    "V",
+    "参加しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "It was"
+   ],
+   [
+    "H",
+    "great"
+   ],
+   [
+    "V",
+    "fun"
+   ],
+   [
+    "V",
+    "I took"
+   ],
+   [
+    "H",
+    "an active"
+   ],
+   [
+    "V",
+    "part"
+   ]
+  ]
  },
  {
   "id": "L2-138",
   "topic": "t5",
   "n": "道{みち} を 逆{ぎゃく} に 行{い}って しまいました",
   "en": "I went the wrong way",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "道を"
+   ],
+   [
+    "H",
+    "逆に"
+   ],
+   [
+    "V",
+    "行ってしまいました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I went"
+   ],
+   [
+    "H",
+    "the wrong"
+   ],
+   [
+    "O",
+    "way"
+   ]
+  ]
  },
  {
   "id": "L2-139",
   "topic": "t12",
   "n": "巨大{きょだい} な ビル が 建{た}ちました",
   "en": "A huge building has gone up",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "巨大なビルが"
+   ],
+   [
+    "V",
+    "建ちました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "A huge building"
+   ],
+   [
+    "V",
+    "has gone up"
+   ]
+  ]
  },
  {
   "id": "L2-140",
   "topic": "t6",
   "n": "冷蔵庫{れいぞうこ} に 牛乳{ぎゅうにゅう} が あります",
   "en": "There's milk in the fridge",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "冷蔵庫に"
+   ],
+   [
+    "W",
+    "牛乳が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There's"
+   ],
+   [
+    "W",
+    "milk"
+   ],
+   [
+    "P",
+    "in the fridge"
+   ]
+  ]
  },
  {
   "id": "L2-141",
   "topic": "t8",
   "n": "児童{じどう} が 公園{こうえん} で 遊{あそ}んで います",
   "en": "Children are playing in the park",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "児童が"
+   ],
+   [
+    "P",
+    "公園で"
+   ],
+   [
+    "V",
+    "遊んでいます"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Children"
+   ],
+   [
+    "V",
+    "are playing"
+   ],
+   [
+    "P",
+    "in the park"
+   ]
+  ]
  },
  {
   "id": "L2-142",
   "topic": "t11",
   "n": "寒{さむ}くて 池{いけ} が 凍{こお}りました",
   "en": "It was so cold the pond froze",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "寒くて"
+   ],
+   [
+    "W",
+    "池が"
+   ],
+   [
+    "V",
+    "凍りました"
+   ]
+  ],
+  "er": [
+   [
+    "H",
+    "It was so cold"
+   ],
+   [
+    "W",
+    "the pond"
+   ],
+   [
+    "V",
+    "froze"
+   ]
+  ]
  },
  {
   "id": "L2-143",
   "topic": "t8",
   "n": "幼{おさな}い ころ の 写真{しゃしん} です",
   "en": "It's a photo of when I was little",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "幼いころの"
+   ],
+   [
+    "V",
+    "写真です"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "It's a photo"
+   ],
+   [
+    "T",
+    "of when I was little"
+   ]
+  ]
  },
  {
   "id": "L2-144",
   "topic": "t11",
   "n": "山{やま} の 空気{くうき} は 清{きよ}らか です",
   "en": "The mountain air is pure",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "山の空気は"
+   ],
+   [
+    "V",
+    "清らかです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The mountain air"
+   ],
+   [
+    "V",
+    "is pure"
+   ]
+  ]
  },
  {
   "id": "L2-145",
   "topic": "t7",
   "n": "来月{らいげつ} 大阪{おおさか} へ 移{うつ}ります",
   "en": "I'm moving to Osaka next month",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "来月"
+   ],
+   [
+    "P",
+    "大阪へ"
+   ],
+   [
+    "V",
+    "移ります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm moving"
+   ],
+   [
+    "P",
+    "to Osaka"
+   ],
+   [
+    "T",
+    "next month"
+   ]
+  ]
  },
  {
   "id": "L2-146",
   "topic": "t12",
   "n": "店{みせ} の 前{まえ} に 人{ひと} が 並{なら}んで います",
   "en": "People are queuing in front of the shop",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "店の前に"
+   ],
+   [
+    "W",
+    "人が"
+   ],
+   [
+    "V",
+    "並んでいます"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "People"
+   ],
+   [
+    "V",
+    "are queuing"
+   ],
+   [
+    "P",
+    "in front of the shop"
+   ]
+  ]
  },
  {
   "id": "L2-147",
   "topic": "t13",
   "n": "欧米{おうべい} の 文化{ぶんか} に 興味{きょうみ} が あります",
   "en": "I'm interested in Western culture",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "欧米の文化に"
+   ],
+   [
+    "W",
+    "興味が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm"
+   ],
+   [
+    "W",
+    "interested"
+   ],
+   [
+    "P",
+    "in Western culture"
+   ]
+  ]
  },
  {
   "id": "L2-148",
   "topic": "t13",
   "n": "総理{そうり} 大臣{だいじん} が 記者{きしゃ} 会見{かいけん} を しました",
   "en": "The Prime Minister held a press conference",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "総理大臣が"
+   ],
+   [
+    "O",
+    "記者会見を"
+   ],
+   [
+    "V",
+    "しました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The Prime Minister"
+   ],
+   [
+    "V",
+    "held"
+   ],
+   [
+    "O",
+    "a press conference"
+   ]
+  ]
  },
  {
   "id": "L2-149",
   "topic": "t7",
   "n": "説明{せつめい} を 省略{しょうりゃく} します",
   "en": "I'll skip the explanation",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "説明を"
+   ],
+   [
+    "V",
+    "省略します"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'll skip"
+   ],
+   [
+    "O",
+    "the explanation"
+   ]
+  ]
  },
  {
   "id": "L2-150",
   "topic": "t5",
   "n": "この 航空会社{こうくうがいしゃ} は 安{やす}い です",
   "en": "This airline is cheap",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この航空会社は"
+   ],
+   [
+    "V",
+    "安いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This airline"
+   ],
+   [
+    "V",
+    "is cheap"
+   ]
+  ]
  },
  {
   "id": "L2-151",
   "topic": "t6",
   "n": "床{ゆか} に 板{いた} を 張{は}りました",
   "en": "I laid boards on the floor",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "床に"
+   ],
+   [
+    "O",
+    "板を"
+   ],
+   [
+    "V",
+    "張りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I laid"
+   ],
+   [
+    "O",
+    "boards"
+   ],
+   [
+    "P",
+    "on the floor"
+   ]
+  ]
  },
  {
   "id": "L2-152",
   "topic": "t3",
   "n": "箱{はこ} に 本{ほん} を 詰{つ}めました",
   "en": "I packed books into the box",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "箱に"
+   ],
+   [
+    "O",
+    "本を"
+   ],
+   [
+    "V",
+    "詰めました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I packed"
+   ],
+   [
+    "O",
+    "books"
+   ],
+   [
+    "P",
+    "into the box"
+   ]
+  ]
  },
  {
   "id": "L2-153",
   "topic": "t6",
   "n": "部屋{へや} の 照明{しょうめい} を 明{あか}るく しました",
   "en": "I made the room lighting brighter",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "部屋の照明を"
+   ],
+   [
+    "H",
+    "明るく"
+   ],
+   [
+    "V",
+    "しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I made"
+   ],
+   [
+    "O",
+    "the room lighting"
+   ],
+   [
+    "H",
+    "brighter"
+   ]
+  ]
  },
  {
   "id": "L2-154",
   "topic": "t8",
   "n": "快{こころよ}く 引{ひ}き受{う}けて くれました",
   "en": "He kindly agreed to do it",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "快く"
+   ],
+   [
+    "V",
+    "引き受けてくれました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "He"
+   ],
+   [
+    "H",
+    "kindly"
+   ],
+   [
+    "V",
+    "agreed to do it"
+   ]
+  ]
  },
  {
   "id": "L2-155",
   "topic": "t7",
   "n": "新{あたら}しい 版{はん} が 出{で}ました",
   "en": "A new edition has come out",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "新しい版が"
+   ],
+   [
+    "V",
+    "出ました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "A new edition"
+   ],
+   [
+    "V",
+    "has come out"
+   ]
+  ]
  },
  {
   "id": "L2-156",
   "topic": "t3",
   "n": "銀行{ぎんこう} に お金{かね} を 預{あず}けました",
   "en": "I deposited money in the bank",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "銀行に"
+   ],
+   [
+    "O",
+    "お金を"
+   ],
+   [
+    "V",
+    "預けました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I deposited"
+   ],
+   [
+    "O",
+    "money"
+   ],
+   [
+    "P",
+    "in the bank"
+   ]
+  ]
  },
  {
   "id": "L2-157",
   "topic": "t10",
   "n": "会議{かいぎ} が 来週{らいしゅう} に 延期{えんき} されました",
   "en": "The meeting has been postponed to next week",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "会議が"
+   ],
+   [
+    "T",
+    "来週に"
+   ],
+   [
+    "V",
+    "延期されました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The meeting"
+   ],
+   [
+    "V",
+    "has been postponed"
+   ],
+   [
+    "T",
+    "to next week"
+   ]
+  ]
  },
  {
   "id": "L2-158",
   "topic": "t10",
   "n": "翌日{よくじつ} は 雨{あめ} でした",
   "en": "It rained the next day",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "翌日は"
+   ],
+   [
+    "V",
+    "雨でした"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "It rained"
+   ],
+   [
+    "T",
+    "the next day"
+   ]
+  ]
  },
  {
   "id": "L2-159",
   "topic": "t7",
   "n": "雑誌{ざっし} の 編集{へんしゅう} を して います",
   "en": "I edit a magazine",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "雑誌の編集を"
+   ],
+   [
+    "V",
+    "しています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I edit"
+   ],
+   [
+    "O",
+    "a magazine"
+   ]
+  ]
  },
  {
   "id": "L2-160",
   "topic": "t13",
   "n": "普通{ふつう} の 生活{せいかつ} が 一番{いちばん} です",
   "en": "An ordinary life is best",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "普通の生活が"
+   ],
+   [
+    "V",
+    "一番です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "An ordinary life"
+   ],
+   [
+    "V",
+    "is best"
+   ]
+  ]
  },
  {
   "id": "L2-161",
   "topic": "t5",
   "n": "雨{あめ} で 道{みち} が 泥{どろ} だらけ です",
   "en": "The road is all muddy from the rain",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "雨で"
+   ],
+   [
+    "W",
+    "道が"
+   ],
+   [
+    "V",
+    "泥だらけです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The road"
+   ],
+   [
+    "V",
+    "is all muddy"
+   ],
+   [
+    "H",
+    "from the rain"
+   ]
+  ]
  },
  {
   "id": "L2-162",
   "topic": "t9",
   "n": "犬{いぬ} が 棒{ぼう} を くわえて います",
   "en": "The dog has a stick in its mouth",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "犬が"
+   ],
+   [
+    "O",
+    "棒を"
+   ],
+   [
+    "V",
+    "くわえています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The dog"
+   ],
+   [
+    "V",
+    "has"
+   ],
+   [
+    "O",
+    "a stick"
+   ],
+   [
+    "V",
+    "in its mouth"
+   ]
+  ]
  },
  {
   "id": "L2-163",
   "topic": "t8",
   "n": "孫{まご} が 三人{さんにん} います",
   "en": "I have three grandchildren",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "孫が"
+   ],
+   [
+    "V",
+    "三人います"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I have three"
+   ],
+   [
+    "W",
+    "grandchildren"
+   ]
+  ]
  },
  {
   "id": "L2-164",
   "topic": "t3",
   "n": "着物{きもの} の 帯{おび} を 締{し}めました",
   "en": "I tied the obi of my kimono",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "着物の帯を"
+   ],
+   [
+    "V",
+    "締めました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I tied"
+   ],
+   [
+    "O",
+    "the obi of my kimono"
+   ]
+  ]
  },
  {
   "id": "L2-165",
   "topic": "t1",
   "n": "小麦粉{こむぎこ} と 砂糖{さとう} で ケーキ を 作{つく}ります",
   "en": "I make cakes with flour and sugar",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "小麦粉と砂糖で"
+   ],
+   [
+    "O",
+    "ケーキを"
+   ],
+   [
+    "V",
+    "作ります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I make"
+   ],
+   [
+    "O",
+    "cakes"
+   ],
+   [
+    "H",
+    "with flour and sugar"
+   ]
+  ]
  },
  {
   "id": "L2-166",
   "topic": "t5",
   "n": "貨物{かもつ} 列車{れっしゃ} が 通{とお}りました",
   "en": "A goods train went past",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "貨物列車が"
+   ],
+   [
+    "V",
+    "通りました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "A goods train"
+   ],
+   [
+    "V",
+    "went past"
+   ]
+  ]
  },
  {
   "id": "L2-167",
   "topic": "t5",
   "n": "飛行機{ひこうき} が 着陸{ちゃくりく} しました",
   "en": "The plane has landed",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "飛行機が"
+   ],
+   [
+    "V",
+    "着陸しました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The plane"
+   ],
+   [
+    "V",
+    "has landed"
+   ]
+  ]
  },
  {
   "id": "L2-168",
   "topic": "t13",
   "n": "平均{へいきん} 点{てん} は 七十点{ななじゅってん} でした",
   "en": "The average mark was seventy",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "平均点は"
+   ],
+   [
+    "V",
+    "七十点でした"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The average mark"
+   ],
+   [
+    "V",
+    "was seventy"
+   ]
+  ]
  },
  {
   "id": "L2-169",
   "topic": "t7",
   "n": "新{あたら}しい 社員{しゃいん} を 採用{さいよう} しました",
   "en": "We've hired new staff",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "新しい社員を"
+   ],
+   [
+    "V",
+    "採用しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We've hired"
+   ],
+   [
+    "O",
+    "new staff"
+   ]
+  ]
  },
  {
   "id": "L2-170",
   "topic": "t9",
   "n": "永遠{えいえん} に 忘{わす}れません",
   "en": "I'll never forget it",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "永遠に"
+   ],
+   [
+    "V",
+    "忘れません"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'll"
+   ],
+   [
+    "H",
+    "never"
+   ],
+   [
+    "V",
+    "forget it"
+   ]
+  ]
  },
  {
   "id": "L2-171",
   "topic": "t4",
   "n": "この 液体{えきたい} は 飲{の}まないで ください",
   "en": "Please don't drink this liquid",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "この液体は"
+   ],
+   [
+    "V",
+    "飲まないでください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please don't drink"
+   ],
+   [
+    "O",
+    "this liquid"
+   ]
+  ]
  },
  {
   "id": "L2-172",
   "topic": "t13",
   "n": "どの 政党{せいとう} を 支持{しじ} して いますか",
   "en": "Which political party do you support?",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "どの政党を"
+   ],
+   [
+    "V",
+    "支持していますか"
+   ]
+  ],
+  "er": [
+   [
+    "O",
+    "Which political party"
+   ],
+   [
+    "V",
+    "do you support"
+   ]
+  ]
  },
  {
   "id": "L2-173",
   "topic": "t6",
   "n": "汚{よご}れた 服{ふく} を 洗{あら}います",
   "en": "I wash the dirty clothes",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "汚れた服を"
+   ],
+   [
+    "V",
+    "洗います"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I wash"
+   ],
+   [
+    "O",
+    "the dirty clothes"
+   ]
+  ]
  },
  {
   "id": "L2-174",
   "topic": "t8",
   "n": "両親{りょうしん} を 尊敬{そんけい} して います",
   "en": "I respect my parents",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "両親を"
+   ],
+   [
+    "V",
+    "尊敬しています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I respect"
+   ],
+   [
+    "O",
+    "my parents"
+   ]
+  ]
  },
  {
   "id": "L2-175",
   "topic": "t2",
   "n": "灰皿{はいざら} を ください",
   "en": "An ashtray, please",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "灰皿を"
+   ],
+   [
+    "V",
+    "ください"
+   ]
+  ],
+  "er": [
+   [
+    "O",
+    "An ashtray"
+   ],
+   [
+    "V",
+    "please"
+   ]
+  ]
  },
  {
   "id": "L2-176",
   "topic": "t7",
   "n": "有名{ゆうめい} な 著者{ちょしゃ} の 本{ほん} を 読{よ}みました",
   "en": "I read a book by a famous author",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "有名な著者の本を"
+   ],
+   [
+    "V",
+    "読みました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I read"
+   ],
+   [
+    "O",
+    "a book by a famous author"
+   ]
+  ]
  },
  {
   "id": "L2-177",
   "topic": "t11",
   "n": "夏{なつ} は 蒸{む}し暑{あつ}い です",
   "en": "Summers are hot and humid",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "夏は"
+   ],
+   [
+    "V",
+    "蒸し暑いです"
+   ]
+  ],
+  "er": [
+   [
+    "T",
+    "Summers"
+   ],
+   [
+    "V",
+    "are hot and humid"
+   ]
+  ]
  },
  {
   "id": "L2-178",
   "topic": "t12",
   "n": "古{ふる}い 蔵{くら} を 見学{けんがく} しました",
   "en": "We visited an old storehouse",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "古い蔵を"
+   ],
+   [
+    "V",
+    "見学しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We visited"
+   ],
+   [
+    "O",
+    "an old storehouse"
+   ]
+  ]
  },
  {
   "id": "L2-179",
   "topic": "t3",
   "n": "結婚式{けっこんしき} の 衣装{いしょう} を 選{えら}びました",
   "en": "I chose an outfit for the wedding",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "結婚式の衣装を"
+   ],
+   [
+    "V",
+    "選びました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I chose"
+   ],
+   [
+    "O",
+    "an outfit for the wedding"
+   ]
+  ]
  },
  {
   "id": "L2-180",
   "topic": "t6",
   "n": "紙{かみ} の 裏{うら} に 書{か}いて ください",
   "en": "Please write on the back of the paper",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "紙の裏に"
+   ],
+   [
+    "V",
+    "書いてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please write"
+   ],
+   [
+    "P",
+    "on the back of the paper"
+   ]
+  ]
  },
  {
   "id": "L2-181",
   "topic": "t13",
   "n": "諸国{しょこく} を 旅{たび} しました",
   "en": "I travelled through various countries",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "諸国を"
+   ],
+   [
+    "V",
+    "旅しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I travelled"
+   ],
+   [
+    "P",
+    "through various countries"
+   ]
+  ]
  },
  {
   "id": "L2-182",
   "topic": "t4",
   "n": "心臓{しんぞう} の 病気{びょうき} を 治療{ちりょう} して います",
   "en": "I'm being treated for a heart condition",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "心臓の病気を"
+   ],
+   [
+    "V",
+    "治療しています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm being treated"
+   ],
+   [
+    "O",
+    "for a heart condition"
+   ]
+  ]
  },
  {
   "id": "L2-183",
   "topic": "t8",
   "n": "純粋{じゅんすい} な 気持{きも}ち で 手伝{てつだ}いました",
   "en": "I helped out of pure goodwill",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "純粋な気持ちで"
+   ],
+   [
+    "V",
+    "手伝いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I helped"
+   ],
+   [
+    "H",
+    "out of pure goodwill"
+   ]
+  ]
  },
  {
   "id": "L2-184",
   "topic": "t8",
   "n": "お手紙{てがみ} を 拝見{はいけん} しました",
   "en": "I read your letter (humble)",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "お手紙を"
+   ],
+   [
+    "V",
+    "拝見しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I read"
+   ],
+   [
+    "O",
+    "your letter"
+   ]
+  ]
  },
  {
   "id": "L2-185",
   "topic": "t9",
   "n": "劇場{げきじょう} で 芝居{しばい} を 見{み}ました",
   "en": "I saw a play at the theatre",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "劇場で"
+   ],
+   [
+    "O",
+    "芝居を"
+   ],
+   [
+    "V",
+    "見ました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I saw"
+   ],
+   [
+    "O",
+    "a play"
+   ],
+   [
+    "P",
+    "at the theatre"
+   ]
+  ]
  },
  {
   "id": "L2-186",
   "topic": "t7",
   "n": "ご意見{いけん} を 承{うけたまわ}りました",
   "en": "We have received your comments (humble)",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "ご意見を"
+   ],
+   [
+    "V",
+    "承りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We have received"
+   ],
+   [
+    "O",
+    "your comments"
+   ]
+  ]
  },
  {
   "id": "L2-187",
   "topic": "t3",
   "n": "安{やす}い 株{かぶ} を 買{か}って 損{そん} を しました",
   "en": "I bought cheap shares and made a loss",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "安い株を買って"
+   ],
+   [
+    "O",
+    "損を"
+   ],
+   [
+    "V",
+    "しました"
+   ]
+  ],
+  "er": [
+   [
+    "H",
+    "I bought cheap shares"
+   ],
+   [
+    "V",
+    "and made"
+   ],
+   [
+    "O",
+    "a loss"
+   ]
+  ]
  },
  {
   "id": "L2-188",
   "topic": "t11",
   "n": "木{き} の 枝{えだ} が 折{お}れました",
   "en": "A branch has broken off the tree",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "木の枝が"
+   ],
+   [
+    "V",
+    "折れました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "A branch"
+   ],
+   [
+    "V",
+    "has broken off"
+   ],
+   [
+    "W",
+    "the tree"
+   ]
+  ]
  },
  {
   "id": "L2-189",
   "topic": "t4",
   "n": "熱{ねつ} を 測{はか}りましょう",
   "en": "Let's take your temperature",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "熱を"
+   ],
+   [
+    "V",
+    "測りましょう"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Let's take"
+   ],
+   [
+    "O",
+    "your temperature"
+   ]
+  ]
  },
  {
   "id": "L2-190",
   "topic": "t7",
   "n": "大学{だいがく} で 講義{こうぎ} を 受{う}けました",
   "en": "I attended a lecture at university",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "大学で"
+   ],
+   [
+    "O",
+    "講義を"
+   ],
+   [
+    "V",
+    "受けました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I attended"
+   ],
+   [
+    "O",
+    "a lecture"
+   ],
+   [
+    "P",
+    "at university"
+   ]
+  ]
  },
  {
   "id": "L2-191",
   "topic": "t8",
   "n": "友達{ともだち} を 家族{かぞく} に 紹介{しょうかい} しました",
   "en": "I introduced my friend to my family",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "友達を"
+   ],
+   [
+    "W",
+    "家族に"
+   ],
+   [
+    "V",
+    "紹介しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I introduced"
+   ],
+   [
+    "O",
+    "my friend"
+   ],
+   [
+    "W",
+    "to my family"
+   ]
+  ]
  },
  {
   "id": "L2-192",
   "topic": "t8",
   "n": "母{はは} が 病院{びょういん} で 介護{かいご} を して います",
   "en": "My mother is a care worker at a hospital",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "母が"
+   ],
+   [
+    "P",
+    "病院で"
+   ],
+   [
+    "O",
+    "介護を"
+   ],
+   [
+    "V",
+    "しています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My mother"
+   ],
+   [
+    "V",
+    "is a"
+   ],
+   [
+    "O",
+    "care worker"
+   ],
+   [
+    "P",
+    "at a hospital"
+   ]
+  ]
  },
  {
   "id": "L2-193",
   "topic": "t9",
   "n": "銅{どう} メダル を 取{と}りました",
   "en": "I won a bronze medal",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "銅メダルを"
+   ],
+   [
+    "V",
+    "取りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I won"
+   ],
+   [
+    "O",
+    "a bronze medal"
+   ]
+  ]
  },
  {
   "id": "L2-194",
   "topic": "t5",
   "n": "車{くるま} に 油{あぶら} を 差{さ}しました",
   "en": "I put oil in the car",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "車に"
+   ],
+   [
+    "O",
+    "油を"
+   ],
+   [
+    "V",
+    "差しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I put"
+   ],
+   [
+    "O",
+    "oil"
+   ],
+   [
+    "P",
+    "in the car"
+   ]
+  ]
  },
  {
   "id": "L2-195",
   "topic": "t12",
   "n": "旧市街{きゅうしがい} を 歩{ある}きました",
   "en": "I walked around the old town",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "旧市街を"
+   ],
+   [
+    "V",
+    "歩きました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I walked"
+   ],
+   [
+    "P",
+    "around the old town"
+   ]
+  ]
  },
  {
   "id": "L2-196",
   "topic": "t8",
   "n": "結婚{けっこん} して 姓{せい} が 変{か}わりました",
   "en": "My surname changed when I married",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "結婚して"
+   ],
+   [
+    "W",
+    "姓が"
+   ],
+   [
+    "V",
+    "変わりました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My surname"
+   ],
+   [
+    "V",
+    "changed"
+   ],
+   [
+    "H",
+    "when I married"
+   ]
+  ]
  },
  {
   "id": "L2-197",
   "topic": "t7",
   "n": "父{ちち} は 貿易会社{ぼうえきがいしゃ} で 働{はたら}いて います",
   "en": "My father works at a trading company",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "父は"
+   ],
+   [
+    "P",
+    "貿易会社で"
+   ],
+   [
+    "V",
+    "働いています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My father"
+   ],
+   [
+    "V",
+    "works"
+   ],
+   [
+    "P",
+    "at a trading company"
+   ]
+  ]
  },
  {
   "id": "L2-198",
   "topic": "t4",
   "n": "朝{あさ} 起{お}きて 体{からだ} を 伸{の}ばします",
   "en": "I stretch when I get up in the morning",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "朝起きて"
+   ],
+   [
+    "O",
+    "体を"
+   ],
+   [
+    "V",
+    "伸ばします"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I stretch"
+   ],
+   [
+    "T",
+    "when I get up in the morning"
+   ]
+  ]
  },
  {
   "id": "L2-199",
   "topic": "t5",
   "n": "この 道{みち} は 幅{はば} が 広{ひろ}い です",
   "en": "This road is wide",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この道は"
+   ],
+   [
+    "O",
+    "幅が"
+   ],
+   [
+    "V",
+    "広いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This road"
+   ],
+   [
+    "V",
+    "is wide"
+   ]
+  ]
  },
  {
   "id": "L2-200",
   "topic": "t1",
   "n": "この ケーキ は 甘{あま}すぎます",
   "en": "This cake is too sweet",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "このケーキは"
+   ],
+   [
+    "V",
+    "甘すぎます"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This cake"
+   ],
+   [
+    "V",
+    "is too sweet"
+   ]
+  ]
  },
  {
   "id": "L2-201",
   "topic": "t13",
   "n": "一般的{いっぱんてき} な 意見{いけん} を 聞{き}きました",
   "en": "I asked for general opinions",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "一般的な意見を"
+   ],
+   [
+    "V",
+    "聞きました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I asked for"
+   ],
+   [
+    "O",
+    "general opinions"
+   ]
+  ]
  },
  {
   "id": "L2-202",
   "topic": "t7",
   "n": "上司{じょうし} に 仕事{しごと} を 依頼{いらい} されました",
   "en": "My boss asked me to do a job",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "上司に"
+   ],
+   [
+    "O",
+    "仕事を"
+   ],
+   [
+    "V",
+    "依頼されました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My boss"
+   ],
+   [
+    "V",
+    "asked me to do"
+   ],
+   [
+    "O",
+    "a job"
+   ]
+  ]
  },
  {
   "id": "L2-203",
   "topic": "t11",
   "n": "この 町{まち} は 漁業{ぎょぎょう} が 盛{さか}ん です",
   "en": "Fishing is thriving in this town",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "この町は"
+   ],
+   [
+    "O",
+    "漁業が"
+   ],
+   [
+    "V",
+    "盛んです"
+   ]
+  ],
+  "er": [
+   [
+    "O",
+    "Fishing"
+   ],
+   [
+    "V",
+    "is thriving"
+   ],
+   [
+    "W",
+    "in this town"
+   ]
+  ]
  },
  {
   "id": "L2-204",
   "topic": "t7",
   "n": "ボランティア を 募集{ぼしゅう} して います",
   "en": "We're looking for volunteers",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "ボランティアを"
+   ],
+   [
+    "V",
+    "募集しています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We're looking for"
+   ],
+   [
+    "O",
+    "volunteers"
+   ]
+  ]
  },
  {
   "id": "L2-205",
   "topic": "t4",
   "n": "患者{かんじゃ} が 待合室{まちあいしつ} で 待{ま}って います",
   "en": "Patients are waiting in the waiting room",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "患者が"
+   ],
+   [
+    "P",
+    "待合室で"
+   ],
+   [
+    "V",
+    "待っています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Patients"
+   ],
+   [
+    "V",
+    "are waiting"
+   ],
+   [
+    "P",
+    "in the waiting room"
+   ]
+  ]
  },
  {
   "id": "L2-206",
   "topic": "t11",
   "n": "東京湾{とうきょうわん} で 花火{はなび} を 見{み}ました",
   "en": "I watched fireworks on Tokyo Bay",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "東京湾で"
+   ],
+   [
+    "O",
+    "花火を"
+   ],
+   [
+    "V",
+    "見ました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I watched"
+   ],
+   [
+    "O",
+    "fireworks"
+   ],
+   [
+    "P",
+    "on Tokyo Bay"
+   ]
+  ]
  },
  {
   "id": "L2-207",
   "topic": "t13",
   "n": "爆発{ばくはつ} 事故{じこ} が ありました",
   "en": "There was an explosion",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "爆発事故が"
+   ],
+   [
+    "V",
+    "ありました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There was"
+   ],
+   [
+    "W",
+    "an explosion"
+   ]
+  ]
  },
  {
   "id": "L2-208",
   "topic": "t12",
   "n": "古{ふる}い 城{しろ} の 跡{あと} が 残{のこ}って います",
   "en": "The ruins of an old castle remain",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "古い城の跡が"
+   ],
+   [
+    "V",
+    "残っています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The ruins of an old castle"
+   ],
+   [
+    "V",
+    "remain"
+   ]
+  ]
  },
  {
   "id": "L2-209",
   "topic": "t1",
   "n": "この お茶{ちゃ} は いい 香{かお}り が します",
   "en": "This tea smells lovely",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "このお茶は"
+   ],
+   [
+    "O",
+    "いい香りが"
+   ],
+   [
+    "V",
+    "します"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This tea"
+   ],
+   [
+    "V",
+    "smells"
+   ],
+   [
+    "O",
+    "lovely"
+   ]
+  ]
  },
  {
   "id": "L2-210",
   "topic": "t13",
   "n": "景気{けいき} 回復{かいふく} の 兆{きざ}し が あります",
   "en": "There are signs of economic recovery",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "景気回復の兆しが"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There are"
+   ],
+   [
+    "W",
+    "signs of economic recovery"
+   ]
+  ]
  },
  {
   "id": "L2-211",
   "topic": "t8",
   "n": "年齢{ねんれい} を 教{おし}えて ください",
   "en": "Please tell me your age",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "年齢を"
+   ],
+   [
+    "V",
+    "教えてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please tell me"
+   ],
+   [
+    "O",
+    "your age"
+   ]
+  ]
  },
  {
   "id": "L2-212",
   "topic": "t7",
   "n": "新{あたら}しい 雑誌{ざっし} が 創刊{そうかん} されました",
   "en": "A new magazine has been launched",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "新しい雑誌が"
+   ],
+   [
+    "V",
+    "創刊されました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "A new magazine"
+   ],
+   [
+    "V",
+    "has been launched"
+   ]
+  ]
  },
  {
   "id": "L2-213",
   "topic": "t12",
   "n": "古{ふる}い 塔{とう} が 少{すこ}し 傾{かたむ}いて います",
   "en": "The old tower leans a little",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "古い塔が"
+   ],
+   [
+    "H",
+    "少し"
+   ],
+   [
+    "V",
+    "傾いています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The old tower"
+   ],
+   [
+    "V",
+    "leans"
+   ],
+   [
+    "H",
+    "a little"
+   ]
+  ]
  },
  {
   "id": "L2-214",
   "topic": "t12",
   "n": "山{やま} の 奥{おく} に 小{ちい}さな 村{むら} が あります",
   "en": "There's a small village deep in the mountains",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "山の奥に"
+   ],
+   [
+    "W",
+    "小さな村が"
+   ],
+   [
+    "V",
+    "あります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There's"
+   ],
+   [
+    "W",
+    "a small village"
+   ],
+   [
+    "P",
+    "deep in the mountains"
+   ]
+  ]
  },
  {
   "id": "L2-215",
   "topic": "t8",
   "n": "先生{せんせい} に 花{はな} を 贈{おく}りました",
   "en": "We gave the teacher flowers",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "先生に"
+   ],
+   [
+    "O",
+    "花を"
+   ],
+   [
+    "V",
+    "贈りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We gave"
+   ],
+   [
+    "W",
+    "the teacher"
+   ],
+   [
+    "O",
+    "flowers"
+   ]
+  ]
  },
  {
   "id": "L2-216",
   "topic": "t9",
   "n": "超{ちょう} おいしい！",
   "en": "It's super tasty!",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "超"
+   ],
+   [
+    "V",
+    "おいしい！"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "It's"
+   ],
+   [
+    "H",
+    "super"
+   ],
+   [
+    "V",
+    "tasty"
+   ]
+  ]
  },
  {
   "id": "L2-217",
   "topic": "t7",
   "n": "アルバイト を 雇{やと}いました",
   "en": "We took on a part-timer",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "アルバイトを"
+   ],
+   [
+    "V",
+    "雇いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We took on"
+   ],
+   [
+    "O",
+    "a part-timer"
+   ]
+  ]
  },
  {
   "id": "L2-218",
   "topic": "t11",
   "n": "羊{ひつじ} の 群{む}れ が 見{み}えます",
   "en": "I can see a flock of sheep",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "羊の群れが"
+   ],
+   [
+    "V",
+    "見えます"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I can see"
+   ],
+   [
+    "W",
+    "a flock of sheep"
+   ]
+  ]
  },
  {
   "id": "L2-219",
   "topic": "t12",
   "n": "宝物{たからもの} を 庭{にわ} に 埋{う}めました",
   "en": "I buried treasure in the garden",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "宝物を"
+   ],
+   [
+    "P",
+    "庭に"
+   ],
+   [
+    "V",
+    "埋めました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I buried"
+   ],
+   [
+    "O",
+    "treasure"
+   ],
+   [
+    "P",
+    "in the garden"
+   ]
+  ]
  },
  {
   "id": "L2-220",
   "topic": "t6",
   "n": "柱{はしら} に 名前{なまえ} が 書{か}いて あります",
   "en": "There's a name written on the pillar",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "柱に"
+   ],
+   [
+    "W",
+    "名前が"
+   ],
+   [
+    "V",
+    "書いてあります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "There's"
+   ],
+   [
+    "W",
+    "a name"
+   ],
+   [
+    "V",
+    "written"
+   ],
+   [
+    "P",
+    "on the pillar"
+   ]
+  ]
  },
  {
   "id": "L2-221",
   "topic": "t6",
   "n": "鋭{するど}い ナイフ に 気{き}を つけて ください",
   "en": "Be careful with the sharp knife",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "鋭いナイフに"
+   ],
+   [
+    "V",
+    "気をつけてください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Be careful"
+   ],
+   [
+    "P",
+    "with the sharp knife"
+   ]
+  ]
  },
  {
   "id": "L2-222",
   "topic": "t12",
   "n": "お城{しろ} の 御殿{ごてん} を 見学{けんがく} しました",
   "en": "We toured the castle's palace",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "お城の御殿を"
+   ],
+   [
+    "V",
+    "見学しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We toured"
+   ],
+   [
+    "O",
+    "the castle's palace"
+   ]
+  ]
  },
  {
   "id": "L2-223",
   "topic": "t3",
   "n": "この シャツ は 生地{きじ} が 薄{うす}い です",
   "en": "This shirt's fabric is thin",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "このシャツは"
+   ],
+   [
+    "O",
+    "生地が"
+   ],
+   [
+    "V",
+    "薄いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This shirt's"
+   ],
+   [
+    "O",
+    "fabric"
+   ],
+   [
+    "V",
+    "is thin"
+   ]
+  ]
  },
  {
   "id": "L2-224",
   "topic": "t8",
   "n": "明日{あした} 三時{さんじ} に お伺{うかが}い します",
   "en": "I'll call on you at three tomorrow",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "明日三時に"
+   ],
+   [
+    "V",
+    "お伺いします"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'll call on you"
+   ],
+   [
+    "T",
+    "at three tomorrow"
+   ]
+  ]
  },
  {
   "id": "L2-225",
   "topic": "t11",
   "n": "炭{すみ} で 魚{さかな} を 焼{や}きました",
   "en": "I grilled fish over charcoal",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "炭で"
+   ],
+   [
+    "O",
+    "魚を"
+   ],
+   [
+    "V",
+    "焼きました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I grilled"
+   ],
+   [
+    "O",
+    "fish"
+   ],
+   [
+    "H",
+    "over charcoal"
+   ]
+  ]
  },
  {
   "id": "L2-226",
   "topic": "t3",
   "n": "プレゼント を きれい に 包{つつ}んで ください",
   "en": "Please gift-wrap it nicely",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "プレゼントを"
+   ],
+   [
+    "H",
+    "きれいに"
+   ],
+   [
+    "V",
+    "包んでください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please gift-wrap it"
+   ],
+   [
+    "H",
+    "nicely"
+   ]
+  ]
  },
  {
   "id": "L2-227",
   "topic": "t3",
   "n": "衣類{いるい} は 二階{にかい} で 売{う}って います",
   "en": "Clothing is sold on the first floor",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "衣類は"
+   ],
+   [
+    "P",
+    "二階で"
+   ],
+   [
+    "V",
+    "売っています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "Clothing"
+   ],
+   [
+    "V",
+    "is sold"
+   ],
+   [
+    "P",
+    "on the first floor"
+   ]
+  ]
  },
  {
   "id": "L2-228",
   "topic": "t12",
   "n": "鉱山{こうざん} の 町{まち} を 訪{たず}ねました",
   "en": "I visited a mining town",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "鉱山の町を"
+   ],
+   [
+    "V",
+    "訪ねました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I visited"
+   ],
+   [
+    "O",
+    "a mining town"
+   ]
+  ]
  },
  {
   "id": "L2-229",
   "topic": "t8",
   "n": "双子{ふたご} の 姉妹{しまい} です",
   "en": "They're twin sisters",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "V",
+    "双子の姉妹です"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "They're twin sisters"
+   ]
+  ]
  },
  {
   "id": "L2-230",
   "topic": "t6",
   "n": "床{ゆか} に 座{すわ}って ください",
   "en": "Please sit on the floor",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "床に"
+   ],
+   [
+    "V",
+    "座ってください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please sit"
+   ],
+   [
+    "P",
+    "on the floor"
+   ]
+  ]
  },
  {
   "id": "L2-231",
   "topic": "t11",
   "n": "畑{はたけ} で じゃがいも を 掘{ほ}りました",
   "en": "I dug potatoes in the field",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "畑で"
+   ],
+   [
+    "O",
+    "じゃがいもを"
+   ],
+   [
+    "V",
+    "掘りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I dug"
+   ],
+   [
+    "O",
+    "potatoes"
+   ],
+   [
+    "P",
+    "in the field"
+   ]
+  ]
  },
  {
   "id": "L2-232",
   "topic": "t11",
   "n": "台風{たいふう} で 海{うみ} が 荒{あ}れて います",
   "en": "The sea is rough because of the typhoon",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "台風で"
+   ],
+   [
+    "W",
+    "海が"
+   ],
+   [
+    "V",
+    "荒れています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The sea"
+   ],
+   [
+    "V",
+    "is rough"
+   ],
+   [
+    "H",
+    "because of the typhoon"
+   ]
+  ]
  },
  {
   "id": "L2-233",
   "topic": "t8",
   "n": "区役所{くやくしょ} で 戸籍{こせき} を 取{と}りました",
   "en": "I got a copy of my family register at the ward office",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "区役所で"
+   ],
+   [
+    "O",
+    "戸籍を"
+   ],
+   [
+    "V",
+    "取りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I got"
+   ],
+   [
+    "O",
+    "a copy of my family register"
+   ],
+   [
+    "P",
+    "at the ward office"
+   ]
+  ]
  },
  {
   "id": "L2-234",
   "topic": "t7",
   "n": "資料{しりょう} を 百部{ひゃくぶ} 印刷{いんさつ} して ください",
   "en": "Please print a hundred copies of the handout",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "資料を"
+   ],
+   [
+    "O",
+    "百部"
+   ],
+   [
+    "V",
+    "印刷してください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please print"
+   ],
+   [
+    "O",
+    "a hundred copies of the handout"
+   ]
+  ]
  },
  {
   "id": "L2-235",
   "topic": "t3",
   "n": "封筒{ふうとう} に 切手{きって} を 貼{は}って ください",
   "en": "Please put a stamp on the envelope",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "封筒に"
+   ],
+   [
+    "O",
+    "切手を"
+   ],
+   [
+    "V",
+    "貼ってください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please put"
+   ],
+   [
+    "O",
+    "a stamp"
+   ],
+   [
+    "P",
+    "on the envelope"
+   ]
+  ]
  },
  {
   "id": "L2-236",
   "topic": "t8",
   "n": "彼{かれ} は 柔道{じゅうどう} が 得意{とくい} です",
   "en": "He's good at judo",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "彼は"
+   ],
+   [
+    "O",
+    "柔道が"
+   ],
+   [
+    "V",
+    "得意です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "He"
+   ],
+   [
+    "V",
+    "'s good at"
+   ],
+   [
+    "O",
+    "judo"
+   ]
+  ]
  },
  {
   "id": "L2-237",
   "topic": "t11",
   "n": "夕日{ゆうひ} が 海{うみ} に 沈{しず}みます",
   "en": "The sun sets into the sea",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "夕日が"
+   ],
+   [
+    "P",
+    "海に"
+   ],
+   [
+    "V",
+    "沈みます"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The sun"
+   ],
+   [
+    "V",
+    "sets"
+   ],
+   [
+    "P",
+    "into the sea"
+   ]
+  ]
  },
  {
   "id": "L2-238",
   "topic": "t8",
   "n": "猫{ねこ} を 二匹{にひき} 飼{か}って います",
   "en": "I have two cats",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "猫を"
+   ],
+   [
+    "O",
+    "二匹"
+   ],
+   [
+    "V",
+    "飼っています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I have"
+   ],
+   [
+    "O",
+    "two cats"
+   ]
+  ]
  },
  {
   "id": "L2-239",
   "topic": "t9",
   "n": "子供{こども} が 大声{おおごえ} で 叫{さけ}びました",
   "en": "The child shouted loudly",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "子供が"
+   ],
+   [
+    "H",
+    "大声で"
+   ],
+   [
+    "V",
+    "叫びました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The child"
+   ],
+   [
+    "V",
+    "shouted"
+   ],
+   [
+    "H",
+    "loudly"
+   ]
+  ]
  },
  {
   "id": "L2-240",
   "topic": "t9",
   "n": "映画{えいが} を 見{み}て 涙{なみだ} が 出{で}ました",
   "en": "The film brought tears to my eyes",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "映画を見て"
+   ],
+   [
+    "W",
+    "涙が"
+   ],
+   [
+    "V",
+    "出ました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The film"
+   ],
+   [
+    "V",
+    "brought"
+   ],
+   [
+    "W",
+    "tears"
+   ],
+   [
+    "V",
+    "to my eyes"
+   ]
+  ]
  },
  {
   "id": "L2-241",
   "topic": "t6",
   "n": "空{あ}き缶{かん} は こちら に 捨{す}てて ください",
   "en": "Please throw empty cans away here",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "空き缶は"
+   ],
+   [
+    "P",
+    "こちらに"
+   ],
+   [
+    "V",
+    "捨ててください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please throw"
+   ],
+   [
+    "O",
+    "empty cans"
+   ],
+   [
+    "V",
+    "away"
+   ],
+   [
+    "P",
+    "here"
+   ]
+  ]
  },
  {
   "id": "L2-242",
   "topic": "t1",
   "n": "ご飯{はん} 一粒{ひとつぶ} も 残{のこ}さないで ください",
   "en": "Please don't leave a single grain of rice",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "ご飯一粒も"
+   ],
+   [
+    "V",
+    "残さないでください"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Please don't leave"
+   ],
+   [
+    "O",
+    "a single grain of rice"
+   ]
+  ]
  },
  {
   "id": "L2-243",
   "topic": "t4",
   "n": "乾燥{かんそう} で 肌{はだ} が 荒{あ}れて います",
   "en": "My skin is rough from the dry air",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "乾燥で"
+   ],
+   [
+    "W",
+    "肌が"
+   ],
+   [
+    "V",
+    "荒れています"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "My skin"
+   ],
+   [
+    "V",
+    "is rough"
+   ],
+   [
+    "H",
+    "from the dry air"
+   ]
+  ]
  },
  {
   "id": "L2-244",
   "topic": "t11",
   "n": "小{ちい}さな 舟{ふね} で 川{かわ} を 下{くだ}りました",
   "en": "We went down the river in a small boat",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "小さな舟で"
+   ],
+   [
+    "P",
+    "川を"
+   ],
+   [
+    "V",
+    "下りました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We went down"
+   ],
+   [
+    "P",
+    "the river"
+   ],
+   [
+    "H",
+    "in a small boat"
+   ]
+  ]
  },
  {
   "id": "L2-245",
   "topic": "t11",
   "n": "今日{きょう} は 曇{くも}り です",
   "en": "It's cloudy today",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "今日は"
+   ],
+   [
+    "V",
+    "曇りです"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "It's cloudy"
+   ],
+   [
+    "T",
+    "today"
+   ]
+  ]
  },
  {
   "id": "L2-246",
   "topic": "t4",
   "n": "毎晩{まいばん} 歯{は} を 磨{みが}きます",
   "en": "I brush my teeth every night",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "毎晩"
+   ],
+   [
+    "O",
+    "歯を"
+   ],
+   [
+    "V",
+    "磨きます"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I brush"
+   ],
+   [
+    "O",
+    "my teeth"
+   ],
+   [
+    "T",
+    "every night"
+   ]
+  ]
  },
  {
   "id": "L2-247",
   "topic": "t1",
   "n": "この パン は 少{すこ}し 硬{かた}い です",
   "en": "This bread is a little hard",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "このパンは"
+   ],
+   [
+    "H",
+    "少し"
+   ],
+   [
+    "V",
+    "硬いです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "This bread"
+   ],
+   [
+    "V",
+    "is"
+   ],
+   [
+    "H",
+    "a little"
+   ],
+   [
+    "V",
+    "hard"
+   ]
+  ]
  },
  {
   "id": "L2-248",
   "topic": "t9",
   "n": "最近{さいきん} 体{からだ} の 動{うご}き が 鈍{にぶ}く なりました",
   "en": "I've become slow on my feet lately",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "最近"
+   ],
+   [
+    "W",
+    "体の動きが"
+   ],
+   [
+    "V",
+    "鈍くなりました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I've become slow"
+   ],
+   [
+    "W",
+    "on my feet"
+   ],
+   [
+    "T",
+    "lately"
+   ]
+  ]
  },
  {
   "id": "L2-249",
   "topic": "t11",
   "n": "夕方{ゆうがた} は 涼{すず}しく なります",
   "en": "It gets cool in the evening",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "夕方は"
+   ],
+   [
+    "V",
+    "涼しくなります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "It gets cool"
+   ],
+   [
+    "T",
+    "in the evening"
+   ]
+  ]
  },
  {
   "id": "L2-250",
   "topic": "t11",
   "n": "気温{きおん} が 零度{れいど} まで 下{さ}がりました",
   "en": "The temperature fell to zero",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "気温が"
+   ],
+   [
+    "P",
+    "零度まで"
+   ],
+   [
+    "V",
+    "下がりました"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "The temperature"
+   ],
+   [
+    "V",
+    "fell"
+   ],
+   [
+    "P",
+    "to zero"
+   ]
+  ]
  },
  {
   "id": "L2-251",
   "topic": "t3",
   "n": "綿{めん} の シャツ が 好{す}き です",
   "en": "I like cotton shirts",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "綿のシャツが"
+   ],
+   [
+    "V",
+    "好きです"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I like"
+   ],
+   [
+    "O",
+    "cotton shirts"
+   ]
+  ]
  },
  {
   "id": "L2-252",
   "topic": "t9",
   "n": "人{ひと} を 憎{にく}んで は いけません",
   "en": "You mustn't hate people",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "人を"
+   ],
+   [
+    "V",
+    "憎んではいけません"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "You mustn't hate"
+   ],
+   [
+    "O",
+    "people"
+   ]
+  ]
  },
  {
   "id": "L2-253",
   "topic": "t11",
   "n": "葉{は} から 水{みず} が 一滴{いってき} 落{お}ちました",
   "en": "A drop of water fell from the leaf",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "葉から"
+   ],
+   [
+    "W",
+    "水が"
+   ],
+   [
+    "O",
+    "一滴"
+   ],
+   [
+    "V",
+    "落ちました"
+   ]
+  ],
+  "er": [
+   [
+    "O",
+    "A drop"
+   ],
+   [
+    "W",
+    "of water"
+   ],
+   [
+    "V",
+    "fell"
+   ],
+   [
+    "P",
+    "from the leaf"
+   ]
+  ]
  },
  {
   "id": "L2-254",
   "topic": "t6",
   "n": "畳{たたみ} の 部屋{へや} で 寝{ね}ます",
   "en": "I sleep in a tatami room",
-  "why": ""
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "畳の部屋で"
+   ],
+   [
+    "V",
+    "寝ます"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I sleep"
+   ],
+   [
+    "P",
+    "in a tatami room"
+   ]
+  ]
  },
  {
   "id": "L2-255",
