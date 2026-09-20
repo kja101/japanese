@@ -1,0 +1,3551 @@
+[
+ {
+  "id": "L2-0",
+  "topic": "t7",
+  "n": "作業{さぎょう} が 完了{かんりょう} しました",
+  "en": "The work has been completed",
+  "why": ""
+ },
+ {
+  "id": "L2-1",
+  "topic": "t13",
+  "n": "丸{まる} い テーブル を 囲{かこ}んで 座{すわ}りました",
+  "en": "We sat around a round table",
+  "why": ""
+ },
+ {
+  "id": "L2-2",
+  "topic": "t1",
+  "n": "玉{たま}ねぎ を 細{こま}かく 切{き}って ください",
+  "en": "Please chop the onion finely",
+  "why": ""
+ },
+ {
+  "id": "L2-3",
+  "topic": "t8",
+  "n": "久{ひさ}しぶり に 友達{ともだち} に 会{あ}いました",
+  "en": "I saw a friend for the first time in ages",
+  "why": ""
+ },
+ {
+  "id": "L2-4",
+  "topic": "t6",
+  "n": "雨戸{あまど} を 閉{し}めて ください",
+  "en": "Please close the storm shutters",
+  "why": ""
+ },
+ {
+  "id": "L2-5",
+  "topic": "t8",
+  "n": "猫{ねこ} の 毛{け} が 服{ふく} に 付{つ}きました",
+  "en": "Cat hair got on my clothes",
+  "why": ""
+ },
+ {
+  "id": "L2-6",
+  "topic": "t12",
+  "n": "町{まち} の 中央{ちゅうおう} に 広場{ひろば} が あります",
+  "en": "There's a square in the centre of the town",
+  "why": ""
+ },
+ {
+  "id": "L2-7",
+  "topic": "t1",
+  "n": "ジュース に 氷{こおり} を 入{い}れて ください",
+  "en": "Please put ice in the juice",
+  "why": ""
+ },
+ {
+  "id": "L2-8",
+  "topic": "t1",
+  "n": "りんご の 皮{かわ} を むきます",
+  "en": "I peel the apple",
+  "why": ""
+ },
+ {
+  "id": "L2-9",
+  "topic": "t11",
+  "n": "竹{たけ} の 林{はやし} を 歩{ある}きました",
+  "en": "I walked through a bamboo grove",
+  "why": ""
+ },
+ {
+  "id": "L2-10",
+  "topic": "t6",
+  "n": "針{はり} に 糸{いと} を 通{とお}して ください",
+  "en": "Please thread the needle",
+  "why": ""
+ },
+ {
+  "id": "L2-11",
+  "topic": "t11",
+  "n": "海岸{かいがん} で 貝{かい} を 拾{ひろ}いました",
+  "en": "I picked up shells on the beach",
+  "why": ""
+ },
+ {
+  "id": "L2-12",
+  "topic": "t11",
+  "n": "鳥{とり} の 羽{はね} が 落{お}ちて います",
+  "en": "A bird's feather has fallen",
+  "why": ""
+ },
+ {
+  "id": "L2-13",
+  "topic": "t12",
+  "n": "次{つぎ} の 角{かど} を 左{ひだり} に 曲{ま}がって ください",
+  "en": "Please turn left at the next corner",
+  "why": ""
+ },
+ {
+  "id": "L2-14",
+  "topic": "t11",
+  "n": "深{ふか}い 谷{たに} に 橋{はし} が かかって います",
+  "en": "A bridge spans the deep valley",
+  "why": ""
+ },
+ {
+  "id": "L2-15",
+  "topic": "t2",
+  "n": "麦茶{むぎちゃ} を 冷{つめ}たく して 飲{の}みます",
+  "en": "I drink barley tea chilled",
+  "why": ""
+ },
+ {
+  "id": "L2-16",
+  "topic": "t4",
+  "n": "指{ゆび} から 血{ち} が 出{で}て います",
+  "en": "My finger is bleeding",
+  "why": ""
+ },
+ {
+  "id": "L2-17",
+  "topic": "t3",
+  "n": "千円札{せんえんさつ} で 払{はら}います",
+  "en": "I'll pay with a thousand-yen note",
+  "why": ""
+ },
+ {
+  "id": "L2-18",
+  "topic": "t11",
+  "n": "秋{あき} に なる と 葉{は} が 黄色{きいろ} く なります",
+  "en": "The leaves turn yellow in autumn",
+  "why": ""
+ },
+ {
+  "id": "L2-19",
+  "topic": "t11",
+  "n": "空{そら} に 白{しろ}い 雲{くも} が 浮{う}かんで います",
+  "en": "White clouds are floating in the sky",
+  "why": ""
+ },
+ {
+  "id": "L2-20",
+  "topic": "t12",
+  "n": "この 村{むら} は 農業{のうぎょう} が 盛{さか}ん です",
+  "en": "Farming is thriving in this village",
+  "why": ""
+ },
+ {
+  "id": "L2-21",
+  "topic": "t5",
+  "n": "地下鉄{ちかてつ} で 行{い}きましょう",
+  "en": "Let's go by underground",
+  "why": ""
+ },
+ {
+  "id": "L2-22",
+  "topic": "t7",
+  "n": "計算{けいさん} を 間違{まちが}えました",
+  "en": "I made a mistake in the calculation",
+  "why": ""
+ },
+ {
+  "id": "L2-23",
+  "topic": "t11",
+  "n": "川岸{かわぎし} を 散歩{さんぽ} しました",
+  "en": "I took a walk along the riverbank",
+  "why": ""
+ },
+ {
+  "id": "L2-24",
+  "topic": "t11",
+  "n": "今日{きょう} は 波{なみ} が 高{たか}い です",
+  "en": "The waves are high today",
+  "why": ""
+ },
+ {
+  "id": "L2-25",
+  "topic": "t12",
+  "n": "道{みち} で 財布{さいふ} を 拾{ひろ}いました",
+  "en": "I picked up a wallet in the street",
+  "why": ""
+ },
+ {
+  "id": "L2-26",
+  "topic": "t10",
+  "n": "あと 十秒{じゅうびょう} で 始{はじ}まります",
+  "en": "It starts in ten seconds",
+  "why": ""
+ },
+ {
+  "id": "L2-27",
+  "topic": "t9",
+  "n": "百{ひゃく} メートル 競走{きょうそう} で 一位{いちい} に なりました",
+  "en": "I came first in the 100 metres",
+  "why": ""
+ },
+ {
+  "id": "L2-28",
+  "topic": "t13",
+  "n": "命令{めいれい} に 従{したが}って ください",
+  "en": "Please follow the orders",
+  "why": ""
+ },
+ {
+  "id": "L2-29",
+  "topic": "t11",
+  "n": "この 木{き} は 根{ね} が 深{ふか}い です",
+  "en": "This tree has deep roots",
+  "why": ""
+ },
+ {
+  "id": "L2-30",
+  "topic": "t3",
+  "n": "値段{ねだん} が 二倍{にばい} に なりました",
+  "en": "The price has doubled",
+  "why": ""
+ },
+ {
+  "id": "L2-31",
+  "topic": "t10",
+  "n": "夏{なつ} に は 町{まち} の お祭{まつ}り が あります",
+  "en": "The town has a festival in summer",
+  "why": ""
+ },
+ {
+  "id": "L2-32",
+  "topic": "t7",
+  "n": "第一章{だいいっしょう} を 読{よ}んで ください",
+  "en": "Please read chapter one",
+  "why": ""
+ },
+ {
+  "id": "L2-33",
+  "topic": "t8",
+  "n": "童話{どうわ} を 子供{こども} に 読{よ}んで あげました",
+  "en": "I read a fairy tale to the children",
+  "why": ""
+ },
+ {
+  "id": "L2-34",
+  "topic": "t11",
+  "n": "庭{にわ} に 花{はな} を 植{う}えました",
+  "en": "I planted flowers in the garden",
+  "why": ""
+ },
+ {
+  "id": "L2-35",
+  "topic": "t11",
+  "n": "山{やま} の 中{なか} に 温泉{おんせん} が あります",
+  "en": "There's a hot spring in the mountains",
+  "why": ""
+ },
+ {
+  "id": "L2-36",
+  "topic": "t11",
+  "n": "公園{こうえん} の 緑{みどり} が きれい です",
+  "en": "The greenery in the park is lovely",
+  "why": ""
+ },
+ {
+  "id": "L2-37",
+  "topic": "t13",
+  "n": "日本{にほん} の 人口{じんこう} は 約{やく} 一億{いちおく} 二千万人{にせんまんにん} です",
+  "en": "Japan's population is about 120 million",
+  "why": ""
+ },
+ {
+  "id": "L2-38",
+  "topic": "t7",
+  "n": "今日{きょう} の 課題{かだい} は 作文{さくぶん} です",
+  "en": "Today's assignment is an essay",
+  "why": ""
+ },
+ {
+  "id": "L2-39",
+  "topic": "t9",
+  "n": "コンテスト で 賞{しょう} を もらいました",
+  "en": "I won a prize in the contest",
+  "why": ""
+ },
+ {
+  "id": "L2-40",
+  "topic": "t8",
+  "n": "花{はな} を 一輪{いちりん} 買{か}いました",
+  "en": "I bought a single flower",
+  "why": ""
+ },
+ {
+  "id": "L2-41",
+  "topic": "t7",
+  "n": "来年{らいねん} 大学{だいがく} を 卒業{そつぎょう} します",
+  "en": "I graduate from university next year",
+  "why": ""
+ },
+ {
+  "id": "L2-42",
+  "topic": "t7",
+  "n": "皆{みな}さん の ご協力{きょうりょく} を お願{ねが}い します",
+  "en": "We ask for everyone's cooperation",
+  "why": ""
+ },
+ {
+  "id": "L2-43",
+  "topic": "t12",
+  "n": "湖{みずうみ} の 周{まわ}り を 歩{ある}きました",
+  "en": "I walked around the lake",
+  "why": ""
+ },
+ {
+  "id": "L2-44",
+  "topic": "t12",
+  "n": "この 町{まち} は 山{やま} に 囲{かこ}まれて います",
+  "en": "This town is surrounded by mountains",
+  "why": ""
+ },
+ {
+  "id": "L2-45",
+  "topic": "t1",
+  "n": "チョコレート が 冷{ひ}えて 固{かた}く なりました",
+  "en": "The chocolate has hardened in the cold",
+  "why": ""
+ },
+ {
+  "id": "L2-46",
+  "topic": "t1",
+  "n": "料理{りょうり} の 材料{ざいりょう} を 買{か}って きます",
+  "en": "I'll go and buy the ingredients",
+  "why": ""
+ },
+ {
+  "id": "L2-47",
+  "topic": "t9",
+  "n": "日本{にほん} の 伝統{でんとう} 芸能{げいのう} に 興味{きょうみ} が あります",
+  "en": "I'm interested in traditional Japanese performing arts",
+  "why": ""
+ },
+ {
+  "id": "L2-48",
+  "topic": "t4",
+  "n": "転{ころ}んで 足{あし} の 骨{ほね} を 折{お}りました",
+  "en": "I fell and broke a bone in my leg",
+  "why": ""
+ },
+ {
+  "id": "L2-49",
+  "topic": "t11",
+  "n": "海{うみ} に 大{おお}きな 岩{いわ} が あります",
+  "en": "There's a big rock in the sea",
+  "why": ""
+ },
+ {
+  "id": "L2-50",
+  "topic": "t12",
+  "n": "この 坂{さか} を 上{のぼ}る と 駅{えき} です",
+  "en": "The station is at the top of this slope",
+  "why": ""
+ },
+ {
+  "id": "L2-51",
+  "topic": "t9",
+  "n": "勇気{ゆうき} を 出{だ}して 話{はな}しかけました",
+  "en": "I plucked up the courage to speak to them",
+  "why": ""
+ },
+ {
+  "id": "L2-52",
+  "topic": "t11",
+  "n": "この きのこ に は 毒{どく} が あります",
+  "en": "This mushroom is poisonous",
+  "why": ""
+ },
+ {
+  "id": "L2-53",
+  "topic": "t11",
+  "n": "この 川{かわ} は 浅{あさ}い です",
+  "en": "This river is shallow",
+  "why": ""
+ },
+ {
+  "id": "L2-54",
+  "topic": "t13",
+  "n": "祖父{そふ} は 昔{むかし} 軍隊{ぐんたい} に いました",
+  "en": "My grandfather was in the army long ago",
+  "why": ""
+ },
+ {
+  "id": "L2-55",
+  "topic": "t12",
+  "n": "奈良{なら} で 大{おお}きな 仏像{ぶつぞう} を 見{み}ました",
+  "en": "I saw a big Buddha statue in Nara",
+  "why": ""
+ },
+ {
+  "id": "L2-56",
+  "topic": "t12",
+  "n": "この 家{いえ} は 築{ちく} 五十年{ごじゅうねん} です",
+  "en": "This house is fifty years old",
+  "why": ""
+ },
+ {
+  "id": "L2-57",
+  "topic": "t12",
+  "n": "大阪府{おおさかふ} に 住{す}んで います",
+  "en": "I live in Osaka Prefecture",
+  "why": ""
+ },
+ {
+  "id": "L2-58",
+  "topic": "t7",
+  "n": "大学{だいがく} の 専門{せんもん} は 経済{けいざい} でした",
+  "en": "I majored in economics at university",
+  "why": ""
+ },
+ {
+  "id": "L2-59",
+  "topic": "t8",
+  "n": "彼女{かのじょ} は 細{ほそ}くて 背{せ} が 高{たか}い です",
+  "en": "She's slim and tall",
+  "why": ""
+ },
+ {
+  "id": "L2-60",
+  "topic": "t4",
+  "n": "風邪{かぜ} で 鼻{はな} が 詰{つ}まって います",
+  "en": "My nose is blocked with a cold",
+  "why": ""
+ },
+ {
+  "id": "L2-61",
+  "topic": "t13",
+  "n": "兵士{へいし} が 町{まち} を 守{まも}って います",
+  "en": "Soldiers are guarding the town",
+  "why": ""
+ },
+ {
+  "id": "L2-62",
+  "topic": "t1",
+  "n": "少{すこ}し 塩{しお} を 入{い}れて ください",
+  "en": "Please add a little salt",
+  "why": ""
+ },
+ {
+  "id": "L2-63",
+  "topic": "t12",
+  "n": "この 町{まち} は 昔{むかし} 港{みなと} で 栄{さか}えました",
+  "en": "This town once prospered as a port",
+  "why": ""
+ },
+ {
+  "id": "L2-64",
+  "topic": "t11",
+  "n": "海{うみ} の 底{そこ} は 暗{くら}い です",
+  "en": "It's dark at the bottom of the sea",
+  "why": ""
+ },
+ {
+  "id": "L2-65",
+  "topic": "t12",
+  "n": "警察署{けいさつしょ} は 駅{えき} の 隣{となり} です",
+  "en": "The police station is next to the station",
+  "why": ""
+ },
+ {
+  "id": "L2-66",
+  "topic": "t8",
+  "n": "二人{ふたり} は 恋人{こいびと} 同士{どうし} です",
+  "en": "The two of them are sweethearts",
+  "why": ""
+ },
+ {
+  "id": "L2-67",
+  "topic": "t12",
+  "n": "地震{じしん} の 避難{ひなん} 訓練{くんれん} が ありました",
+  "en": "We had an earthquake drill",
+  "why": ""
+ },
+ {
+  "id": "L2-68",
+  "topic": "t12",
+  "n": "神社{じんじゃ} で 家族{かぞく} の 健康{けんこう} を 祈{いの}りました",
+  "en": "I prayed for my family's health at the shrine",
+  "why": ""
+ },
+ {
+  "id": "L2-69",
+  "topic": "t4",
+  "n": "胸{むね} が 苦{くる}しい です",
+  "en": "My chest feels tight",
+  "why": ""
+ },
+ {
+  "id": "L2-70",
+  "topic": "t4",
+  "n": "脳{のう} の 検査{けんさ} を 受{う}けました",
+  "en": "I had a brain scan",
+  "why": ""
+ },
+ {
+  "id": "L2-71",
+  "topic": "t2",
+  "n": "駅前{えきまえ} の 喫茶店{きっさてん} で 会{あ}いましょう",
+  "en": "Let's meet at the café by the station",
+  "why": ""
+ },
+ {
+  "id": "L2-72",
+  "topic": "t4",
+  "n": "体重{たいじゅう} が 三{さん}キロ 減{へ}りました",
+  "en": "I've lost three kilos",
+  "why": ""
+ },
+ {
+  "id": "L2-73",
+  "topic": "t12",
+  "n": "順番{じゅんばん} に 並{なら}んで ください",
+  "en": "Please queue in order",
+  "why": ""
+ },
+ {
+  "id": "L2-74",
+  "topic": "t7",
+  "n": "この 動詞{どうし} の 意味{いみ} を 教{おし}えて ください",
+  "en": "Please tell me what this verb means",
+  "why": ""
+ },
+ {
+  "id": "L2-75",
+  "topic": "t3",
+  "n": "本{ほん} を 三冊{さんさつ} 買{か}いました",
+  "en": "I bought three books",
+  "why": ""
+ },
+ {
+  "id": "L2-76",
+  "topic": "t2",
+  "n": "団体{だんたい} で 旅行{りょこう} しました",
+  "en": "We travelled as a group",
+  "why": ""
+ },
+ {
+  "id": "L2-77",
+  "topic": "t13",
+  "n": "暴力{ぼうりょく} は いけません",
+  "en": "Violence is wrong",
+  "why": ""
+ },
+ {
+  "id": "L2-78",
+  "topic": "t5",
+  "n": "朝{あさ} の 電車{でんしゃ} は とても 混{こ}んで います",
+  "en": "The morning trains are very crowded",
+  "why": ""
+ },
+ {
+  "id": "L2-79",
+  "topic": "t7",
+  "n": "規則{きそく} が 改正{かいせい} されました",
+  "en": "The rules have been revised",
+  "why": ""
+ },
+ {
+  "id": "L2-80",
+  "topic": "t3",
+  "n": "個人{こじん} 情報{じょうほう} に 気{き}を つけて ください",
+  "en": "Be careful with personal information",
+  "why": ""
+ },
+ {
+  "id": "L2-81",
+  "topic": "t4",
+  "n": "血圧{けつあつ} を 測{はか}りましょう",
+  "en": "Let's take your blood pressure",
+  "why": ""
+ },
+ {
+  "id": "L2-82",
+  "topic": "t3",
+  "n": "厚{あつ}い コート を 買{か}いました",
+  "en": "I bought a thick coat",
+  "why": ""
+ },
+ {
+  "id": "L2-83",
+  "topic": "t4",
+  "n": "病気{びょうき} を 予防{よぼう} しましょう",
+  "en": "Let's prevent illness",
+  "why": ""
+ },
+ {
+  "id": "L2-84",
+  "topic": "t7",
+  "n": "委員会{いいんかい} の 会議{かいぎ} が あります",
+  "en": "There's a committee meeting",
+  "why": ""
+ },
+ {
+  "id": "L2-85",
+  "topic": "t12",
+  "n": "空港{くうこう} で 荷物{にもつ} の 検査{けんさ} が あります",
+  "en": "There's a baggage check at the airport",
+  "why": ""
+ },
+ {
+  "id": "L2-86",
+  "topic": "t7",
+  "n": "総理{そうり} 大臣{だいじん} の 話{はなし} を 聞{き}きました",
+  "en": "I listened to the Prime Minister's speech",
+  "why": ""
+ },
+ {
+  "id": "L2-87",
+  "topic": "t12",
+  "n": "駅{えき} に エレベーター が 設置{せっち} されました",
+  "en": "A lift has been installed at the station",
+  "why": ""
+ },
+ {
+  "id": "L2-88",
+  "topic": "t13",
+  "n": "外務省{がいむしょう} で 働{はたら}いて います",
+  "en": "I work at the Foreign Ministry",
+  "why": ""
+ },
+ {
+  "id": "L2-89",
+  "topic": "t8",
+  "n": "各自{かくじ} で 昼{ひる}ご飯{はん} を 持{も}って きて ください",
+  "en": "Everyone please bring your own lunch",
+  "why": ""
+ },
+ {
+  "id": "L2-90",
+  "topic": "t3",
+  "n": "この 店{みせ} は 夜{よる} 十時{じゅうじ} まで 営業{えいぎょう} して います",
+  "en": "This shop is open until 10 p.m.",
+  "why": ""
+ },
+ {
+  "id": "L2-91",
+  "topic": "t3",
+  "n": "領収書{りょうしゅうしょ} を ください",
+  "en": "A receipt, please",
+  "why": ""
+ },
+ {
+  "id": "L2-92",
+  "topic": "t7",
+  "n": "副社長{ふくしゃちょう} が 説明{せつめい} しました",
+  "en": "The vice-president explained",
+  "why": ""
+ },
+ {
+  "id": "L2-93",
+  "topic": "t12",
+  "n": "この 地域{ちいき} は 雪{ゆき} が 多{おお}い です",
+  "en": "This area gets a lot of snow",
+  "why": ""
+ },
+ {
+  "id": "L2-94",
+  "topic": "t5",
+  "n": "バス 停{てい} で 待{ま}って います",
+  "en": "I'm waiting at the bus stop",
+  "why": ""
+ },
+ {
+  "id": "L2-95",
+  "topic": "t3",
+  "n": "革{かわ} の かばん を 買{か}いました",
+  "en": "I bought a leather bag",
+  "why": ""
+ },
+ {
+  "id": "L2-96",
+  "topic": "t9",
+  "n": "音楽{おんがく} の リズム と 旋律{せんりつ} が 好{す}き です",
+  "en": "I like the rhythm and melody of the music",
+  "why": ""
+ },
+ {
+  "id": "L2-97",
+  "topic": "t7",
+  "n": "先生{せんせい} の 指導{しどう} で 上手{じょうず} に なりました",
+  "en": "I improved with the teacher's guidance",
+  "why": ""
+ },
+ {
+  "id": "L2-98",
+  "topic": "t12",
+  "n": "姫路{ひめじ} 城{じょう} は とても きれい です",
+  "en": "Himeji Castle is very beautiful",
+  "why": ""
+ },
+ {
+  "id": "L2-99",
+  "topic": "t7",
+  "n": "私{わたし} は 営業{えいぎょう} を 担当{たんとう} して います",
+  "en": "I'm in charge of sales",
+  "why": ""
+ },
+ {
+  "id": "L2-100",
+  "topic": "t3",
+  "n": "合計{ごうけい} 金額{きんがく} を 教{おし}えて ください",
+  "en": "Please tell me the total amount",
+  "why": ""
+ },
+ {
+  "id": "L2-101",
+  "topic": "t13",
+  "n": "日本{にほん} は 石油{せきゆ} を 輸入{ゆにゅう} して います",
+  "en": "Japan imports oil",
+  "why": ""
+ },
+ {
+  "id": "L2-102",
+  "topic": "t6",
+  "n": "燃{も}える ごみ は 火曜日{かようび} です",
+  "en": "Burnable rubbish goes out on Tuesdays",
+  "why": ""
+ },
+ {
+  "id": "L2-103",
+  "topic": "t8",
+  "n": "友達{ともだち} の 誕生日{たんじょうび} を 祝{いわ}いました",
+  "en": "We celebrated a friend's birthday",
+  "why": ""
+ },
+ {
+  "id": "L2-104",
+  "topic": "t3",
+  "n": "荷物{にもつ} が 届{とど}きました",
+  "en": "The parcel has arrived",
+  "why": ""
+ },
+ {
+  "id": "L2-105",
+  "topic": "t4",
+  "n": "腕{うで} が 痛{いた}い です",
+  "en": "My arm hurts",
+  "why": ""
+ },
+ {
+  "id": "L2-106",
+  "topic": "t4",
+  "n": "重{おも}い 物{もの} を 持{も}って 腰{こし} を 痛{いた}めました",
+  "en": "I hurt my back lifting something heavy",
+  "why": ""
+ },
+ {
+  "id": "L2-107",
+  "topic": "t12",
+  "n": "作品{さくひん} に 触{さわ}らないで ください",
+  "en": "Please don't touch the exhibits",
+  "why": ""
+ },
+ {
+  "id": "L2-108",
+  "topic": "t13",
+  "n": "高{たか}い 建物{たてもの} の 上層{じょうそう} 階{かい} から 富士山{ふじさん} が 見{み}えます",
+  "en": "You can see Mount Fuji from the upper floors of tall buildings",
+  "why": ""
+ },
+ {
+  "id": "L2-109",
+  "topic": "t12",
+  "n": "気象庁{きしょうちょう} が 大雨{おおあめ} の 警報{けいほう} を 出{だ}しました",
+  "en": "The Meteorological Agency issued a heavy rain warning",
+  "why": ""
+ },
+ {
+  "id": "L2-110",
+  "topic": "t6",
+  "n": "水道管{すいどうかん} が 壊{こわ}れました",
+  "en": "A water pipe has burst",
+  "why": ""
+ },
+ {
+  "id": "L2-111",
+  "topic": "t9",
+  "n": "日本{にほん} の 印象{いんしょう} は どう ですか",
+  "en": "What's your impression of Japan?",
+  "why": ""
+ },
+ {
+  "id": "L2-112",
+  "topic": "t1",
+  "n": "ご飯{はん} の 量{りょう} を 少{すく}なく して ください",
+  "en": "Please give me a smaller portion of rice",
+  "why": ""
+ },
+ {
+  "id": "L2-113",
+  "topic": "t12",
+  "n": "県境{けんざかい} の トンネル を 抜{ぬ}けました",
+  "en": "We came through the tunnel at the prefectural border",
+  "why": ""
+ },
+ {
+  "id": "L2-114",
+  "topic": "t9",
+  "n": "武道{ぶどう} を 習{なら}って います",
+  "en": "I'm learning a martial art",
+  "why": ""
+ },
+ {
+  "id": "L2-115",
+  "topic": "t9",
+  "n": "自分{じぶん} の 意見{いけん} を 述{の}べて ください",
+  "en": "Please state your opinion",
+  "why": ""
+ },
+ {
+  "id": "L2-116",
+  "topic": "t3",
+  "n": "自動{じどう} 販売機{はんばいき} で 飲{の}み物{もの} を 買{か}いました",
+  "en": "I bought a drink from a vending machine",
+  "why": ""
+ },
+ {
+  "id": "L2-117",
+  "topic": "t3",
+  "n": "料金{りょうきん} に 税{ぜい} が 含{ふく}まれて います",
+  "en": "Tax is included in the price",
+  "why": ""
+ },
+ {
+  "id": "L2-118",
+  "topic": "t13",
+  "n": "今{いま} の 状況{じょうきょう} を 説明{せつめい} して ください",
+  "en": "Please explain the current situation",
+  "why": ""
+ },
+ {
+  "id": "L2-119",
+  "topic": "t4",
+  "n": "野菜{やさい} で ビタミン を 補{おぎな}いましょう",
+  "en": "Let's get vitamins from vegetables",
+  "why": ""
+ },
+ {
+  "id": "L2-120",
+  "topic": "t4",
+  "n": "この 薬{くすり} は よく 効{き}きます",
+  "en": "This medicine works well",
+  "why": ""
+ },
+ {
+  "id": "L2-121",
+  "topic": "t8",
+  "n": "マフラー を 首{くび} に 巻{ま}きました",
+  "en": "I wrapped a scarf around my neck",
+  "why": ""
+ },
+ {
+  "id": "L2-122",
+  "topic": "t12",
+  "n": "警察{けいさつ} が 犯人{はんにん} を 捜{さが}して います",
+  "en": "The police are searching for the culprit",
+  "why": ""
+ },
+ {
+  "id": "L2-123",
+  "topic": "t7",
+  "n": "大切{たいせつ} な ところ に 印{しるし} を 付{つ}けて ください",
+  "en": "Please mark the important parts",
+  "why": ""
+ },
+ {
+  "id": "L2-124",
+  "topic": "t7",
+  "n": "毎日{まいにち} 復習{ふくしゅう} して います",
+  "en": "I review every day",
+  "why": ""
+ },
+ {
+  "id": "L2-125",
+  "topic": "t3",
+  "n": "毎月{まいつき} 少{すこ}し ずつ 貯金{ちょきん} して います",
+  "en": "I save a little every month",
+  "why": ""
+ },
+ {
+  "id": "L2-126",
+  "topic": "t6",
+  "n": "針{はり} と 糸{いと} で ボタン を 付{つ}けました",
+  "en": "I sewed a button on with a needle and thread",
+  "why": ""
+ },
+ {
+  "id": "L2-127",
+  "topic": "t1",
+  "n": "和菓子{わがし} と お茶{ちゃ} を いただきました",
+  "en": "I had Japanese sweets and tea",
+  "why": ""
+ },
+ {
+  "id": "L2-128",
+  "topic": "t12",
+  "n": "大{おお}きな 運河{うんが} を 船{ふね} で 渡{わた}りました",
+  "en": "We crossed a big canal by boat",
+  "why": ""
+ },
+ {
+  "id": "L2-129",
+  "topic": "t4",
+  "n": "暑{あつ}くて 汗{あせ} を かきました",
+  "en": "It was hot and I sweated",
+  "why": ""
+ },
+ {
+  "id": "L2-130",
+  "topic": "t9",
+  "n": "もう 一度{いちど} 再生{さいせい} して ください",
+  "en": "Please play it again",
+  "why": ""
+ },
+ {
+  "id": "L2-131",
+  "topic": "t7",
+  "n": "お客様{きゃくさま} に 丁寧{ていねい} に 接{せっ}して ください",
+  "en": "Please treat customers politely",
+  "why": ""
+ },
+ {
+  "id": "L2-132",
+  "topic": "t9",
+  "n": "占{うらな}い を 信{しん}じますか",
+  "en": "Do you believe in fortune-telling?",
+  "why": ""
+ },
+ {
+  "id": "L2-133",
+  "topic": "t4",
+  "n": "胃{い} の 調子{ちょうし} が 悪{わる}い です",
+  "en": "My stomach isn't right",
+  "why": ""
+ },
+ {
+  "id": "L2-134",
+  "topic": "t9",
+  "n": "仕事{しごと} の こと で 悩{なや}んで います",
+  "en": "I'm worried about work",
+  "why": ""
+ },
+ {
+  "id": "L2-135",
+  "topic": "t11",
+  "n": "太陽{たいよう} が 東{ひがし} から 昇{のぼ}ります",
+  "en": "The sun rises in the east",
+  "why": ""
+ },
+ {
+  "id": "L2-136",
+  "topic": "t1",
+  "n": "この コーヒー は 濃{こ}すぎます",
+  "en": "This coffee is too strong",
+  "why": ""
+ },
+ {
+  "id": "L2-137",
+  "topic": "t9",
+  "n": "最高{さいこう} に 楽{たの}しかった です。 積極的{せっきょくてき} に 参加{さんか} しました",
+  "en": "It was great fun. I took an active part",
+  "why": ""
+ },
+ {
+  "id": "L2-138",
+  "topic": "t5",
+  "n": "道{みち} を 逆{ぎゃく} に 行{い}って しまいました",
+  "en": "I went the wrong way",
+  "why": ""
+ },
+ {
+  "id": "L2-139",
+  "topic": "t12",
+  "n": "巨大{きょだい} な ビル が 建{た}ちました",
+  "en": "A huge building has gone up",
+  "why": ""
+ },
+ {
+  "id": "L2-140",
+  "topic": "t6",
+  "n": "冷蔵庫{れいぞうこ} に 牛乳{ぎゅうにゅう} が あります",
+  "en": "There's milk in the fridge",
+  "why": ""
+ },
+ {
+  "id": "L2-141",
+  "topic": "t8",
+  "n": "児童{じどう} が 公園{こうえん} で 遊{あそ}んで います",
+  "en": "Children are playing in the park",
+  "why": ""
+ },
+ {
+  "id": "L2-142",
+  "topic": "t11",
+  "n": "寒{さむ}くて 池{いけ} が 凍{こお}りました",
+  "en": "It was so cold the pond froze",
+  "why": ""
+ },
+ {
+  "id": "L2-143",
+  "topic": "t8",
+  "n": "幼{おさな}い ころ の 写真{しゃしん} です",
+  "en": "It's a photo of when I was little",
+  "why": ""
+ },
+ {
+  "id": "L2-144",
+  "topic": "t11",
+  "n": "山{やま} の 空気{くうき} は 清{きよ}らか です",
+  "en": "The mountain air is pure",
+  "why": ""
+ },
+ {
+  "id": "L2-145",
+  "topic": "t7",
+  "n": "来月{らいげつ} 大阪{おおさか} へ 移{うつ}ります",
+  "en": "I'm moving to Osaka next month",
+  "why": ""
+ },
+ {
+  "id": "L2-146",
+  "topic": "t12",
+  "n": "店{みせ} の 前{まえ} に 人{ひと} が 並{なら}んで います",
+  "en": "People are queuing in front of the shop",
+  "why": ""
+ },
+ {
+  "id": "L2-147",
+  "topic": "t13",
+  "n": "欧米{おうべい} の 文化{ぶんか} に 興味{きょうみ} が あります",
+  "en": "I'm interested in Western culture",
+  "why": ""
+ },
+ {
+  "id": "L2-148",
+  "topic": "t13",
+  "n": "総理{そうり} 大臣{だいじん} が 記者{きしゃ} 会見{かいけん} を しました",
+  "en": "The Prime Minister held a press conference",
+  "why": ""
+ },
+ {
+  "id": "L2-149",
+  "topic": "t7",
+  "n": "説明{せつめい} を 省略{しょうりゃく} します",
+  "en": "I'll skip the explanation",
+  "why": ""
+ },
+ {
+  "id": "L2-150",
+  "topic": "t5",
+  "n": "この 航空会社{こうくうがいしゃ} は 安{やす}い です",
+  "en": "This airline is cheap",
+  "why": ""
+ },
+ {
+  "id": "L2-151",
+  "topic": "t6",
+  "n": "床{ゆか} に 板{いた} を 張{は}りました",
+  "en": "I laid boards on the floor",
+  "why": ""
+ },
+ {
+  "id": "L2-152",
+  "topic": "t3",
+  "n": "箱{はこ} に 本{ほん} を 詰{つ}めました",
+  "en": "I packed books into the box",
+  "why": ""
+ },
+ {
+  "id": "L2-153",
+  "topic": "t6",
+  "n": "部屋{へや} の 照明{しょうめい} を 明{あか}るく しました",
+  "en": "I made the room lighting brighter",
+  "why": ""
+ },
+ {
+  "id": "L2-154",
+  "topic": "t8",
+  "n": "快{こころよ}く 引{ひ}き受{う}けて くれました",
+  "en": "He kindly agreed to do it",
+  "why": ""
+ },
+ {
+  "id": "L2-155",
+  "topic": "t7",
+  "n": "新{あたら}しい 版{はん} が 出{で}ました",
+  "en": "A new edition has come out",
+  "why": ""
+ },
+ {
+  "id": "L2-156",
+  "topic": "t3",
+  "n": "銀行{ぎんこう} に お金{かね} を 預{あず}けました",
+  "en": "I deposited money in the bank",
+  "why": ""
+ },
+ {
+  "id": "L2-157",
+  "topic": "t10",
+  "n": "会議{かいぎ} が 来週{らいしゅう} に 延期{えんき} されました",
+  "en": "The meeting has been postponed to next week",
+  "why": ""
+ },
+ {
+  "id": "L2-158",
+  "topic": "t10",
+  "n": "翌日{よくじつ} は 雨{あめ} でした",
+  "en": "It rained the next day",
+  "why": ""
+ },
+ {
+  "id": "L2-159",
+  "topic": "t7",
+  "n": "雑誌{ざっし} の 編集{へんしゅう} を して います",
+  "en": "I edit a magazine",
+  "why": ""
+ },
+ {
+  "id": "L2-160",
+  "topic": "t13",
+  "n": "普通{ふつう} の 生活{せいかつ} が 一番{いちばん} です",
+  "en": "An ordinary life is best",
+  "why": ""
+ },
+ {
+  "id": "L2-161",
+  "topic": "t5",
+  "n": "雨{あめ} で 道{みち} が 泥{どろ} だらけ です",
+  "en": "The road is all muddy from the rain",
+  "why": ""
+ },
+ {
+  "id": "L2-162",
+  "topic": "t9",
+  "n": "犬{いぬ} が 棒{ぼう} を くわえて います",
+  "en": "The dog has a stick in its mouth",
+  "why": ""
+ },
+ {
+  "id": "L2-163",
+  "topic": "t8",
+  "n": "孫{まご} が 三人{さんにん} います",
+  "en": "I have three grandchildren",
+  "why": ""
+ },
+ {
+  "id": "L2-164",
+  "topic": "t3",
+  "n": "着物{きもの} の 帯{おび} を 締{し}めました",
+  "en": "I tied the obi of my kimono",
+  "why": ""
+ },
+ {
+  "id": "L2-165",
+  "topic": "t1",
+  "n": "小麦粉{こむぎこ} と 砂糖{さとう} で ケーキ を 作{つく}ります",
+  "en": "I make cakes with flour and sugar",
+  "why": ""
+ },
+ {
+  "id": "L2-166",
+  "topic": "t5",
+  "n": "貨物{かもつ} 列車{れっしゃ} が 通{とお}りました",
+  "en": "A goods train went past",
+  "why": ""
+ },
+ {
+  "id": "L2-167",
+  "topic": "t5",
+  "n": "飛行機{ひこうき} が 着陸{ちゃくりく} しました",
+  "en": "The plane has landed",
+  "why": ""
+ },
+ {
+  "id": "L2-168",
+  "topic": "t13",
+  "n": "平均{へいきん} 点{てん} は 七十点{ななじゅってん} でした",
+  "en": "The average mark was seventy",
+  "why": ""
+ },
+ {
+  "id": "L2-169",
+  "topic": "t7",
+  "n": "新{あたら}しい 社員{しゃいん} を 採用{さいよう} しました",
+  "en": "We've hired new staff",
+  "why": ""
+ },
+ {
+  "id": "L2-170",
+  "topic": "t9",
+  "n": "永遠{えいえん} に 忘{わす}れません",
+  "en": "I'll never forget it",
+  "why": ""
+ },
+ {
+  "id": "L2-171",
+  "topic": "t4",
+  "n": "この 液体{えきたい} は 飲{の}まないで ください",
+  "en": "Please don't drink this liquid",
+  "why": ""
+ },
+ {
+  "id": "L2-172",
+  "topic": "t13",
+  "n": "どの 政党{せいとう} を 支持{しじ} して いますか",
+  "en": "Which political party do you support?",
+  "why": ""
+ },
+ {
+  "id": "L2-173",
+  "topic": "t6",
+  "n": "汚{よご}れた 服{ふく} を 洗{あら}います",
+  "en": "I wash the dirty clothes",
+  "why": ""
+ },
+ {
+  "id": "L2-174",
+  "topic": "t8",
+  "n": "両親{りょうしん} を 尊敬{そんけい} して います",
+  "en": "I respect my parents",
+  "why": ""
+ },
+ {
+  "id": "L2-175",
+  "topic": "t2",
+  "n": "灰皿{はいざら} を ください",
+  "en": "An ashtray, please",
+  "why": ""
+ },
+ {
+  "id": "L2-176",
+  "topic": "t7",
+  "n": "有名{ゆうめい} な 著者{ちょしゃ} の 本{ほん} を 読{よ}みました",
+  "en": "I read a book by a famous author",
+  "why": ""
+ },
+ {
+  "id": "L2-177",
+  "topic": "t11",
+  "n": "夏{なつ} は 蒸{む}し暑{あつ}い です",
+  "en": "Summers are hot and humid",
+  "why": ""
+ },
+ {
+  "id": "L2-178",
+  "topic": "t12",
+  "n": "古{ふる}い 蔵{くら} を 見学{けんがく} しました",
+  "en": "We visited an old storehouse",
+  "why": ""
+ },
+ {
+  "id": "L2-179",
+  "topic": "t3",
+  "n": "結婚式{けっこんしき} の 衣装{いしょう} を 選{えら}びました",
+  "en": "I chose an outfit for the wedding",
+  "why": ""
+ },
+ {
+  "id": "L2-180",
+  "topic": "t6",
+  "n": "紙{かみ} の 裏{うら} に 書{か}いて ください",
+  "en": "Please write on the back of the paper",
+  "why": ""
+ },
+ {
+  "id": "L2-181",
+  "topic": "t13",
+  "n": "諸国{しょこく} を 旅{たび} しました",
+  "en": "I travelled through various countries",
+  "why": ""
+ },
+ {
+  "id": "L2-182",
+  "topic": "t4",
+  "n": "心臓{しんぞう} の 病気{びょうき} を 治療{ちりょう} して います",
+  "en": "I'm being treated for a heart condition",
+  "why": ""
+ },
+ {
+  "id": "L2-183",
+  "topic": "t8",
+  "n": "純粋{じゅんすい} な 気持{きも}ち で 手伝{てつだ}いました",
+  "en": "I helped out of pure goodwill",
+  "why": ""
+ },
+ {
+  "id": "L2-184",
+  "topic": "t8",
+  "n": "お手紙{てがみ} を 拝見{はいけん} しました",
+  "en": "I read your letter (humble)",
+  "why": ""
+ },
+ {
+  "id": "L2-185",
+  "topic": "t9",
+  "n": "劇場{げきじょう} で 芝居{しばい} を 見{み}ました",
+  "en": "I saw a play at the theatre",
+  "why": ""
+ },
+ {
+  "id": "L2-186",
+  "topic": "t7",
+  "n": "ご意見{いけん} を 承{うけたまわ}りました",
+  "en": "We have received your comments (humble)",
+  "why": ""
+ },
+ {
+  "id": "L2-187",
+  "topic": "t3",
+  "n": "安{やす}い 株{かぶ} を 買{か}って 損{そん} を しました",
+  "en": "I bought cheap shares and made a loss",
+  "why": ""
+ },
+ {
+  "id": "L2-188",
+  "topic": "t11",
+  "n": "木{き} の 枝{えだ} が 折{お}れました",
+  "en": "A branch has broken off the tree",
+  "why": ""
+ },
+ {
+  "id": "L2-189",
+  "topic": "t4",
+  "n": "熱{ねつ} を 測{はか}りましょう",
+  "en": "Let's take your temperature",
+  "why": ""
+ },
+ {
+  "id": "L2-190",
+  "topic": "t7",
+  "n": "大学{だいがく} で 講義{こうぎ} を 受{う}けました",
+  "en": "I attended a lecture at university",
+  "why": ""
+ },
+ {
+  "id": "L2-191",
+  "topic": "t8",
+  "n": "友達{ともだち} を 家族{かぞく} に 紹介{しょうかい} しました",
+  "en": "I introduced my friend to my family",
+  "why": ""
+ },
+ {
+  "id": "L2-192",
+  "topic": "t8",
+  "n": "母{はは} が 病院{びょういん} で 介護{かいご} を して います",
+  "en": "My mother is a care worker at a hospital",
+  "why": ""
+ },
+ {
+  "id": "L2-193",
+  "topic": "t9",
+  "n": "銅{どう} メダル を 取{と}りました",
+  "en": "I won a bronze medal",
+  "why": ""
+ },
+ {
+  "id": "L2-194",
+  "topic": "t5",
+  "n": "車{くるま} に 油{あぶら} を 差{さ}しました",
+  "en": "I put oil in the car",
+  "why": ""
+ },
+ {
+  "id": "L2-195",
+  "topic": "t12",
+  "n": "旧市街{きゅうしがい} を 歩{ある}きました",
+  "en": "I walked around the old town",
+  "why": ""
+ },
+ {
+  "id": "L2-196",
+  "topic": "t8",
+  "n": "結婚{けっこん} して 姓{せい} が 変{か}わりました",
+  "en": "My surname changed when I married",
+  "why": ""
+ },
+ {
+  "id": "L2-197",
+  "topic": "t7",
+  "n": "父{ちち} は 貿易会社{ぼうえきがいしゃ} で 働{はたら}いて います",
+  "en": "My father works at a trading company",
+  "why": ""
+ },
+ {
+  "id": "L2-198",
+  "topic": "t4",
+  "n": "朝{あさ} 起{お}きて 体{からだ} を 伸{の}ばします",
+  "en": "I stretch when I get up in the morning",
+  "why": ""
+ },
+ {
+  "id": "L2-199",
+  "topic": "t5",
+  "n": "この 道{みち} は 幅{はば} が 広{ひろ}い です",
+  "en": "This road is wide",
+  "why": ""
+ },
+ {
+  "id": "L2-200",
+  "topic": "t1",
+  "n": "この ケーキ は 甘{あま}すぎます",
+  "en": "This cake is too sweet",
+  "why": ""
+ },
+ {
+  "id": "L2-201",
+  "topic": "t13",
+  "n": "一般的{いっぱんてき} な 意見{いけん} を 聞{き}きました",
+  "en": "I asked for general opinions",
+  "why": ""
+ },
+ {
+  "id": "L2-202",
+  "topic": "t7",
+  "n": "上司{じょうし} に 仕事{しごと} を 依頼{いらい} されました",
+  "en": "My boss asked me to do a job",
+  "why": ""
+ },
+ {
+  "id": "L2-203",
+  "topic": "t11",
+  "n": "この 町{まち} は 漁業{ぎょぎょう} が 盛{さか}ん です",
+  "en": "Fishing is thriving in this town",
+  "why": ""
+ },
+ {
+  "id": "L2-204",
+  "topic": "t7",
+  "n": "ボランティア を 募集{ぼしゅう} して います",
+  "en": "We're looking for volunteers",
+  "why": ""
+ },
+ {
+  "id": "L2-205",
+  "topic": "t4",
+  "n": "患者{かんじゃ} が 待合室{まちあいしつ} で 待{ま}って います",
+  "en": "Patients are waiting in the waiting room",
+  "why": ""
+ },
+ {
+  "id": "L2-206",
+  "topic": "t11",
+  "n": "東京湾{とうきょうわん} で 花火{はなび} を 見{み}ました",
+  "en": "I watched fireworks on Tokyo Bay",
+  "why": ""
+ },
+ {
+  "id": "L2-207",
+  "topic": "t13",
+  "n": "爆発{ばくはつ} 事故{じこ} が ありました",
+  "en": "There was an explosion",
+  "why": ""
+ },
+ {
+  "id": "L2-208",
+  "topic": "t12",
+  "n": "古{ふる}い 城{しろ} の 跡{あと} が 残{のこ}って います",
+  "en": "The ruins of an old castle remain",
+  "why": ""
+ },
+ {
+  "id": "L2-209",
+  "topic": "t1",
+  "n": "この お茶{ちゃ} は いい 香{かお}り が します",
+  "en": "This tea smells lovely",
+  "why": ""
+ },
+ {
+  "id": "L2-210",
+  "topic": "t13",
+  "n": "景気{けいき} 回復{かいふく} の 兆{きざ}し が あります",
+  "en": "There are signs of economic recovery",
+  "why": ""
+ },
+ {
+  "id": "L2-211",
+  "topic": "t8",
+  "n": "年齢{ねんれい} を 教{おし}えて ください",
+  "en": "Please tell me your age",
+  "why": ""
+ },
+ {
+  "id": "L2-212",
+  "topic": "t7",
+  "n": "新{あたら}しい 雑誌{ざっし} が 創刊{そうかん} されました",
+  "en": "A new magazine has been launched",
+  "why": ""
+ },
+ {
+  "id": "L2-213",
+  "topic": "t12",
+  "n": "古{ふる}い 塔{とう} が 少{すこ}し 傾{かたむ}いて います",
+  "en": "The old tower leans a little",
+  "why": ""
+ },
+ {
+  "id": "L2-214",
+  "topic": "t12",
+  "n": "山{やま} の 奥{おく} に 小{ちい}さな 村{むら} が あります",
+  "en": "There's a small village deep in the mountains",
+  "why": ""
+ },
+ {
+  "id": "L2-215",
+  "topic": "t8",
+  "n": "先生{せんせい} に 花{はな} を 贈{おく}りました",
+  "en": "We gave the teacher flowers",
+  "why": ""
+ },
+ {
+  "id": "L2-216",
+  "topic": "t9",
+  "n": "超{ちょう} おいしい！",
+  "en": "It's super tasty!",
+  "why": ""
+ },
+ {
+  "id": "L2-217",
+  "topic": "t7",
+  "n": "アルバイト を 雇{やと}いました",
+  "en": "We took on a part-timer",
+  "why": ""
+ },
+ {
+  "id": "L2-218",
+  "topic": "t11",
+  "n": "羊{ひつじ} の 群{む}れ が 見{み}えます",
+  "en": "I can see a flock of sheep",
+  "why": ""
+ },
+ {
+  "id": "L2-219",
+  "topic": "t12",
+  "n": "宝物{たからもの} を 庭{にわ} に 埋{う}めました",
+  "en": "I buried treasure in the garden",
+  "why": ""
+ },
+ {
+  "id": "L2-220",
+  "topic": "t6",
+  "n": "柱{はしら} に 名前{なまえ} が 書{か}いて あります",
+  "en": "There's a name written on the pillar",
+  "why": ""
+ },
+ {
+  "id": "L2-221",
+  "topic": "t6",
+  "n": "鋭{するど}い ナイフ に 気{き}を つけて ください",
+  "en": "Be careful with the sharp knife",
+  "why": ""
+ },
+ {
+  "id": "L2-222",
+  "topic": "t12",
+  "n": "お城{しろ} の 御殿{ごてん} を 見学{けんがく} しました",
+  "en": "We toured the castle's palace",
+  "why": ""
+ },
+ {
+  "id": "L2-223",
+  "topic": "t3",
+  "n": "この シャツ は 生地{きじ} が 薄{うす}い です",
+  "en": "This shirt's fabric is thin",
+  "why": ""
+ },
+ {
+  "id": "L2-224",
+  "topic": "t8",
+  "n": "明日{あした} 三時{さんじ} に お伺{うかが}い します",
+  "en": "I'll call on you at three tomorrow",
+  "why": ""
+ },
+ {
+  "id": "L2-225",
+  "topic": "t11",
+  "n": "炭{すみ} で 魚{さかな} を 焼{や}きました",
+  "en": "I grilled fish over charcoal",
+  "why": ""
+ },
+ {
+  "id": "L2-226",
+  "topic": "t3",
+  "n": "プレゼント を きれい に 包{つつ}んで ください",
+  "en": "Please gift-wrap it nicely",
+  "why": ""
+ },
+ {
+  "id": "L2-227",
+  "topic": "t3",
+  "n": "衣類{いるい} は 二階{にかい} で 売{う}って います",
+  "en": "Clothing is sold on the first floor",
+  "why": ""
+ },
+ {
+  "id": "L2-228",
+  "topic": "t12",
+  "n": "鉱山{こうざん} の 町{まち} を 訪{たず}ねました",
+  "en": "I visited a mining town",
+  "why": ""
+ },
+ {
+  "id": "L2-229",
+  "topic": "t8",
+  "n": "双子{ふたご} の 姉妹{しまい} です",
+  "en": "They're twin sisters",
+  "why": ""
+ },
+ {
+  "id": "L2-230",
+  "topic": "t6",
+  "n": "床{ゆか} に 座{すわ}って ください",
+  "en": "Please sit on the floor",
+  "why": ""
+ },
+ {
+  "id": "L2-231",
+  "topic": "t11",
+  "n": "畑{はたけ} で じゃがいも を 掘{ほ}りました",
+  "en": "I dug potatoes in the field",
+  "why": ""
+ },
+ {
+  "id": "L2-232",
+  "topic": "t11",
+  "n": "台風{たいふう} で 海{うみ} が 荒{あ}れて います",
+  "en": "The sea is rough because of the typhoon",
+  "why": ""
+ },
+ {
+  "id": "L2-233",
+  "topic": "t8",
+  "n": "区役所{くやくしょ} で 戸籍{こせき} を 取{と}りました",
+  "en": "I got a copy of my family register at the ward office",
+  "why": ""
+ },
+ {
+  "id": "L2-234",
+  "topic": "t7",
+  "n": "資料{しりょう} を 百部{ひゃくぶ} 印刷{いんさつ} して ください",
+  "en": "Please print a hundred copies of the handout",
+  "why": ""
+ },
+ {
+  "id": "L2-235",
+  "topic": "t3",
+  "n": "封筒{ふうとう} に 切手{きって} を 貼{は}って ください",
+  "en": "Please put a stamp on the envelope",
+  "why": ""
+ },
+ {
+  "id": "L2-236",
+  "topic": "t8",
+  "n": "彼{かれ} は 柔道{じゅうどう} が 得意{とくい} です",
+  "en": "He's good at judo",
+  "why": ""
+ },
+ {
+  "id": "L2-237",
+  "topic": "t11",
+  "n": "夕日{ゆうひ} が 海{うみ} に 沈{しず}みます",
+  "en": "The sun sets into the sea",
+  "why": ""
+ },
+ {
+  "id": "L2-238",
+  "topic": "t8",
+  "n": "猫{ねこ} を 二匹{にひき} 飼{か}って います",
+  "en": "I have two cats",
+  "why": ""
+ },
+ {
+  "id": "L2-239",
+  "topic": "t9",
+  "n": "子供{こども} が 大声{おおごえ} で 叫{さけ}びました",
+  "en": "The child shouted loudly",
+  "why": ""
+ },
+ {
+  "id": "L2-240",
+  "topic": "t9",
+  "n": "映画{えいが} を 見{み}て 涙{なみだ} が 出{で}ました",
+  "en": "The film brought tears to my eyes",
+  "why": ""
+ },
+ {
+  "id": "L2-241",
+  "topic": "t6",
+  "n": "空{あ}き缶{かん} は こちら に 捨{す}てて ください",
+  "en": "Please throw empty cans away here",
+  "why": ""
+ },
+ {
+  "id": "L2-242",
+  "topic": "t1",
+  "n": "ご飯{はん} 一粒{ひとつぶ} も 残{のこ}さないで ください",
+  "en": "Please don't leave a single grain of rice",
+  "why": ""
+ },
+ {
+  "id": "L2-243",
+  "topic": "t4",
+  "n": "乾燥{かんそう} で 肌{はだ} が 荒{あ}れて います",
+  "en": "My skin is rough from the dry air",
+  "why": ""
+ },
+ {
+  "id": "L2-244",
+  "topic": "t11",
+  "n": "小{ちい}さな 舟{ふね} で 川{かわ} を 下{くだ}りました",
+  "en": "We went down the river in a small boat",
+  "why": ""
+ },
+ {
+  "id": "L2-245",
+  "topic": "t11",
+  "n": "今日{きょう} は 曇{くも}り です",
+  "en": "It's cloudy today",
+  "why": ""
+ },
+ {
+  "id": "L2-246",
+  "topic": "t4",
+  "n": "毎晩{まいばん} 歯{は} を 磨{みが}きます",
+  "en": "I brush my teeth every night",
+  "why": ""
+ },
+ {
+  "id": "L2-247",
+  "topic": "t1",
+  "n": "この パン は 少{すこ}し 硬{かた}い です",
+  "en": "This bread is a little hard",
+  "why": ""
+ },
+ {
+  "id": "L2-248",
+  "topic": "t9",
+  "n": "最近{さいきん} 体{からだ} の 動{うご}き が 鈍{にぶ}く なりました",
+  "en": "I've become slow on my feet lately",
+  "why": ""
+ },
+ {
+  "id": "L2-249",
+  "topic": "t11",
+  "n": "夕方{ゆうがた} は 涼{すず}しく なります",
+  "en": "It gets cool in the evening",
+  "why": ""
+ },
+ {
+  "id": "L2-250",
+  "topic": "t11",
+  "n": "気温{きおん} が 零度{れいど} まで 下{さ}がりました",
+  "en": "The temperature fell to zero",
+  "why": ""
+ },
+ {
+  "id": "L2-251",
+  "topic": "t3",
+  "n": "綿{めん} の シャツ が 好{す}き です",
+  "en": "I like cotton shirts",
+  "why": ""
+ },
+ {
+  "id": "L2-252",
+  "topic": "t9",
+  "n": "人{ひと} を 憎{にく}んで は いけません",
+  "en": "You mustn't hate people",
+  "why": ""
+ },
+ {
+  "id": "L2-253",
+  "topic": "t11",
+  "n": "葉{は} から 水{みず} が 一滴{いってき} 落{お}ちました",
+  "en": "A drop of water fell from the leaf",
+  "why": ""
+ },
+ {
+  "id": "L2-254",
+  "topic": "t6",
+  "n": "畳{たたみ} の 部屋{へや} で 寝{ね}ます",
+  "en": "I sleep in a tatami room",
+  "why": ""
+ },
+ {
+  "id": "L2-255",
+  "topic": "t11",
+  "n": "この 農家{のうか} は 家畜{かちく} を 飼{か}って います",
+  "en": "This farm keeps livestock",
+  "why": ""
+ },
+ {
+  "id": "L2-256",
+  "topic": "t1",
+  "n": "砂糖{さとう} は 水{みず} に 溶{と}けます",
+  "en": "Sugar dissolves in water",
+  "why": ""
+ },
+ {
+  "id": "L2-257",
+  "topic": "t9",
+  "n": "みんな で 盆{ぼん} 踊{おど}り を 踊{おど}りました",
+  "en": "We all danced the Bon dance",
+  "why": ""
+ },
+ {
+  "id": "L2-258",
+  "topic": "t8",
+  "n": "彼女{かのじょ} は とても 賢{かしこ}い です",
+  "en": "She's very clever",
+  "why": ""
+ },
+ {
+  "id": "L2-259",
+  "topic": "t6",
+  "n": "電灯{でんとう} を 消{け}して ください",
+  "en": "Please switch off the light",
+  "why": ""
+ },
+ {
+  "id": "L2-260",
+  "topic": "t8",
+  "n": "お召{め}し上{あ}がり ください",
+  "en": "Please help yourself (honorific)",
+  "why": ""
+ },
+ {
+  "id": "L2-261",
+  "topic": "t5",
+  "n": "ドア に 指{ゆび} を 挟{はさ}みました",
+  "en": "I caught my finger in the door",
+  "why": ""
+ },
+ {
+  "id": "L2-262",
+  "topic": "t11",
+  "n": "水{みず} を やらなかった ので 花{はな} が 枯{か}れました",
+  "en": "The flowers died because I didn't water them",
+  "why": ""
+ },
+ {
+  "id": "L2-263",
+  "topic": "t1",
+  "n": "お湯{ゆ} が 沸{わ}きました",
+  "en": "The water has boiled",
+  "why": ""
+ },
+ {
+  "id": "L2-264",
+  "topic": "t11",
+  "n": "冬{ふゆ} は 空気{くうき} が 乾燥{かんそう} します",
+  "en": "The air gets dry in winter",
+  "why": ""
+ },
+ {
+  "id": "L2-265",
+  "topic": "t1",
+  "n": "ワイン を 一本{いっぽん}、 瓶{びん} で ください",
+  "en": "A bottle of wine, please",
+  "why": ""
+ },
+ {
+  "id": "L2-266",
+  "topic": "t11",
+  "n": "祖父{そふ} は 畑{はたけ} を 耕{たがや}して います",
+  "en": "My grandfather is ploughing the field",
+  "why": ""
+ },
+ {
+  "id": "L2-267",
+  "topic": "t9",
+  "n": "彼{かれ} は その 案{あん} を 肯定{こうてい} しました",
+  "en": "He agreed to the proposal",
+  "why": ""
+ },
+ {
+  "id": "L2-268",
+  "topic": "t1",
+  "n": "脂{あぶら} の 多{おお}い 肉{にく} は 苦手{にがて} です",
+  "en": "I don't like fatty meat",
+  "why": ""
+ },
+ {
+  "id": "L2-269",
+  "topic": "t4",
+  "n": "皮膚{ひふ} が 弱{よわ}い です",
+  "en": "I have sensitive skin",
+  "why": ""
+ },
+ {
+  "id": "L2-270",
+  "topic": "t12",
+  "n": "この 通{とお}り に は 店{みせ} が 三軒{さんげん} あります",
+  "en": "There are three shops on this street",
+  "why": ""
+ },
+ {
+  "id": "L2-271",
+  "topic": "t1",
+  "n": "柔{やわ}らかく 煮{に}た 野菜{やさい} です",
+  "en": "These vegetables are simmered until soft",
+  "why": ""
+ },
+ {
+  "id": "L2-272",
+  "topic": "t12",
+  "n": "郊外{こうがい} に 家{いえ} を 買{か}いました",
+  "en": "I bought a house in the suburbs",
+  "why": ""
+ },
+ {
+  "id": "L2-273",
+  "topic": "t6",
+  "n": "部屋{へや} の 隅{すみ} に ごみ が あります",
+  "en": "There's rubbish in the corner of the room",
+  "why": ""
+ },
+ {
+  "id": "L2-274",
+  "topic": "t5",
+  "n": "港{みなと} に 船{ふね} が 三隻{さんせき} 止{と}まって います",
+  "en": "Three ships are moored in the harbour",
+  "why": ""
+ },
+ {
+  "id": "L2-275",
+  "topic": "t13",
+  "n": "これ は 絶対{ぜったい} に 秘密{ひみつ} です",
+  "en": "This is absolutely secret",
+  "why": ""
+ },
+ {
+  "id": "L2-276",
+  "topic": "t10",
+  "n": "ずうっと 待{ま}って いました",
+  "en": "I've been waiting all this time",
+  "why": ""
+ },
+ {
+  "id": "L2-277",
+  "topic": "t6",
+  "n": "部屋{へや} を 片付{かたづ}けて すっきり しました",
+  "en": "I tidied the room and it feels much better",
+  "why": ""
+ },
+ {
+  "id": "L2-278",
+  "topic": "t8",
+  "n": "遅{おく}れて すまない",
+  "en": "Sorry I'm late",
+  "why": ""
+ },
+ {
+  "id": "L2-279",
+  "topic": "t10",
+  "n": "会議{かいぎ} を 一時間{いちじかん} ずらしました",
+  "en": "We moved the meeting back an hour",
+  "why": ""
+ },
+ {
+  "id": "L2-280",
+  "topic": "t12",
+  "n": "店{みせ} の 前{まえ} に 自転車{じてんしゃ} が ずらり と 並{なら}んで います",
+  "en": "Bicycles are lined up in a row in front of the shop",
+  "why": ""
+ },
+ {
+  "id": "L2-281",
+  "topic": "t7",
+  "n": "母{はは} は 朝{あさ} から せっせと 働{はたら}いて います",
+  "en": "My mother has been working away since the morning",
+  "why": ""
+ },
+ {
+  "id": "L2-282",
+  "topic": "t9",
+  "n": "ぜひとも 来{き}て ください",
+  "en": "Please do come, by all means",
+  "why": ""
+ },
+ {
+  "id": "L2-283",
+  "topic": "t10",
+  "n": "せめて 一日{いちにち} 休{やす}みたい です",
+  "en": "I'd like at least one day off",
+  "why": ""
+ },
+ {
+  "id": "L2-284",
+  "topic": "t9",
+  "n": "そういえば、 昨日{きのう} 田中{たなか}さん に 会{あ}いました",
+  "en": "That reminds me, I saw Tanaka yesterday",
+  "why": ""
+ },
+ {
+  "id": "L2-285",
+  "topic": "t6",
+  "n": "赤{あか}ちゃん が 寝{ね}て いる ので、 そうっと 入{はい}って ください",
+  "en": "The baby's asleep, so please come in quietly",
+  "why": ""
+ },
+ {
+  "id": "L2-286",
+  "topic": "t8",
+  "n": "弟{おとうと} は そそっかしい です",
+  "en": "My younger brother is careless",
+  "why": ""
+ },
+ {
+  "id": "L2-287",
+  "topic": "t10",
+  "n": "そのころ 私{わたし} は 学生{がくせい} でした",
+  "en": "I was a student in those days",
+  "why": ""
+ },
+ {
+  "id": "L2-288",
+  "topic": "t13",
+  "n": "雨{あめ} が 降{ふ}りました。 そのため、 試合{しあい} は 中止{ちゅうし} です",
+  "en": "It rained. For that reason, the match is cancelled",
+  "why": ""
+ },
+ {
+  "id": "L2-289",
+  "topic": "t9",
+  "n": "練習{れんしゅう} しました。 それなのに、 負{ま}けました",
+  "en": "I practised. Even so, I lost",
+  "why": ""
+ },
+ {
+  "id": "L2-290",
+  "topic": "t9",
+  "n": "それなら、 私{わたし} が 行{い}きます",
+  "en": "In that case, I'll go",
+  "why": ""
+ },
+ {
+  "id": "L2-291",
+  "topic": "t10",
+  "n": "たちまち 空{そら} が 暗{くら}く なりました",
+  "en": "The sky went dark in an instant",
+  "why": ""
+ },
+ {
+  "id": "L2-292",
+  "topic": "t9",
+  "n": "言{い}う か どうか ためらいました",
+  "en": "I hesitated over whether to say it",
+  "why": ""
+ },
+ {
+  "id": "L2-293",
+  "topic": "t8",
+  "n": "そんな だらしない 格好{かっこう} で 出{で}かけないで",
+  "en": "Don't go out looking so sloppy",
+  "why": ""
+ },
+ {
+  "id": "L2-294",
+  "topic": "t8",
+  "n": "彼{かれ} は おおざっぱ な 性格{せいかく} です",
+  "en": "He's not one for details",
+  "why": ""
+ },
+ {
+  "id": "L2-295",
+  "topic": "t8",
+  "n": "どうぞ、 おかけください",
+  "en": "Please take a seat",
+  "why": ""
+ },
+ {
+  "id": "L2-296",
+  "topic": "t8",
+  "n": "おかげさまで 元気{げんき} です",
+  "en": "I'm well, thank you",
+  "why": ""
+ },
+ {
+  "id": "L2-297",
+  "topic": "t1",
+  "n": "今日{きょう} の おかず は 魚{さかな} です",
+  "en": "Today's side dish is fish",
+  "why": ""
+ },
+ {
+  "id": "L2-298",
+  "topic": "t8",
+  "n": "どうぞ おかまいなく",
+  "en": "Please don't go to any trouble",
+  "why": ""
+ },
+ {
+  "id": "L2-299",
+  "topic": "t1",
+  "n": "おまちどおさま でした",
+  "en": "Sorry to keep you waiting",
+  "why": ""
+ },
+ {
+  "id": "L2-300",
+  "topic": "t8",
+  "n": "おめでたい 話{はなし} を 聞{き}きました",
+  "en": "I heard some happy news",
+  "why": ""
+ },
+ {
+  "id": "L2-301",
+  "topic": "t1",
+  "n": "三時{さんじ} に おやつ を 食{た}べます",
+  "en": "I have a snack at three",
+  "why": ""
+ },
+ {
+  "id": "L2-302",
+  "topic": "t8",
+  "n": "かしこまりました、 少々{しょうしょう} お待{ま}ち ください",
+  "en": "Certainly, please wait a moment",
+  "why": ""
+ },
+ {
+  "id": "L2-303",
+  "topic": "t1",
+  "n": "りんご を かじりました",
+  "en": "I bit into an apple",
+  "why": ""
+ },
+ {
+  "id": "L2-304",
+  "topic": "t8",
+  "n": "人{ひと} を からかって は いけません",
+  "en": "You mustn't make fun of people",
+  "why": ""
+ },
+ {
+  "id": "L2-305",
+  "topic": "t9",
+  "n": "お正月{しょうがつ} に かるた を しました",
+  "en": "We played karuta at New Year",
+  "why": ""
+ },
+ {
+  "id": "L2-306",
+  "topic": "t9",
+  "n": "旅行{りょこう} が 日本語{にほんご} を 始{はじ}めた きっかけ です",
+  "en": "A trip was what got me started on Japanese",
+  "why": ""
+ },
+ {
+  "id": "L2-307",
+  "topic": "t3",
+  "n": "かばん に 本{ほん} が ぎっしり 入{はい}って います",
+  "en": "The bag is packed tight with books",
+  "why": ""
+ },
+ {
+  "id": "L2-308",
+  "topic": "t4",
+  "n": "くしゃみ が 止{と}まりません",
+  "en": "I can't stop sneezing",
+  "why": ""
+ },
+ {
+  "id": "L2-309",
+  "topic": "t4",
+  "n": "一日中{いちにちじゅう} 歩{ある}いて くたびれました",
+  "en": "I'm worn out after walking all day",
+  "why": ""
+ },
+ {
+  "id": "L2-310",
+  "topic": "t9",
+  "n": "くだらない 冗談{じょうだん} を 言{い}わないで",
+  "en": "Don't make stupid jokes",
+  "why": ""
+ },
+ {
+  "id": "L2-311",
+  "topic": "t8",
+  "n": "子供{こども} が 母親{ははおや} に くっついて います",
+  "en": "The child is clinging to its mother",
+  "why": ""
+ },
+ {
+  "id": "L2-312",
+  "topic": "t7",
+  "n": "写真{しゃしん} を 紙{かみ} に くっつけて ください",
+  "en": "Please stick the photo to the paper",
+  "why": ""
+ },
+ {
+  "id": "L2-313",
+  "topic": "t9",
+  "n": "先生{せんせい} の 説明{せつめい} は 少{すこ}し くどい です",
+  "en": "The teacher's explanations are a bit long-winded",
+  "why": ""
+ },
+ {
+  "id": "L2-314",
+  "topic": "t1",
+  "n": "赤{あか}ちゃん を 毛布{もうふ} で くるみました",
+  "en": "I wrapped the baby in a blanket",
+  "why": ""
+ },
+ {
+  "id": "L2-315",
+  "topic": "t8",
+  "n": "くれぐれも 体{からだ} に 気{き}を つけて ください",
+  "en": "Please do take good care of yourself",
+  "why": ""
+ },
+ {
+  "id": "L2-316",
+  "topic": "t7",
+  "n": "こうして 問題{もんだい} が 解決{かいけつ} しました",
+  "en": "And that's how the problem was solved",
+  "why": ""
+ },
+ {
+  "id": "L2-317",
+  "topic": "t1",
+  "n": "母{はは} が 料理{りょうり} を こしらえて くれました",
+  "en": "My mother made me a meal",
+  "why": ""
+ },
+ {
+  "id": "L2-318",
+  "topic": "t8",
+  "n": "こちらこそ よろしく お願{ねが}い します",
+  "en": "The pleasure is mine",
+  "why": ""
+ },
+ {
+  "id": "L2-319",
+  "topic": "t9",
+  "n": "こっそり 部屋{へや} を 出{で}ました",
+  "en": "I slipped out of the room",
+  "why": ""
+ },
+ {
+  "id": "L2-320",
+  "topic": "t10",
+  "n": "こないだ 駅{えき} で 先生{せんせい} に 会{あ}いました",
+  "en": "I met my teacher at the station the other day",
+  "why": ""
+ },
+ {
+  "id": "L2-321",
+  "topic": "t8",
+  "n": "ごめんください、 誰{だれ} か いますか",
+  "en": "Hello, is anyone home?",
+  "why": ""
+ },
+ {
+  "id": "L2-322",
+  "topic": "t7",
+  "n": "さっさと 宿題{しゅくだい} を 終{お}わらせましょう",
+  "en": "Let's get the homework done quickly",
+  "why": ""
+ },
+ {
+  "id": "L2-323",
+  "topic": "t11",
+  "n": "さわやか な 朝{あさ} です ね",
+  "en": "It's a lovely fresh morning",
+  "why": ""
+ },
+ {
+  "id": "L2-324",
+  "topic": "t8",
+  "n": "しつこい 人{ひと} は 苦手{にがて} です",
+  "en": "I don't get on with pushy people",
+  "why": ""
+ },
+ {
+  "id": "L2-325",
+  "topic": "t11",
+  "n": "犬{いぬ} が しっぽ を 振{ふ}って います",
+  "en": "The dog is wagging its tail",
+  "why": ""
+ },
+ {
+  "id": "L2-326",
+  "topic": "t4",
+  "n": "長{なが}く 座{すわ}って いて 足{あし} が しびれました",
+  "en": "My legs went numb from sitting so long",
+  "why": ""
+ },
+ {
+  "id": "L2-327",
+  "topic": "t11",
+  "n": "風船{ふうせん} が しぼんで しまいました",
+  "en": "The balloon has shrivelled up",
+  "why": ""
+ },
+ {
+  "id": "L2-328",
+  "topic": "t9",
+  "n": "親{おや} の ありがたさ を しみじみ 感{かん}じます",
+  "en": "I feel keenly how much I owe my parents",
+  "why": ""
+ },
+ {
+  "id": "L2-329",
+  "topic": "t4",
+  "n": "疲{つか}れて 道{みち} に しゃがみました",
+  "en": "I was so tired I squatted down by the road",
+  "why": ""
+ },
+ {
+  "id": "L2-330",
+  "topic": "t4",
+  "n": "しゃっくり が 止{と}まりません",
+  "en": "I can't get rid of my hiccups",
+  "why": ""
+ },
+ {
+  "id": "L2-331",
+  "topic": "t8",
+  "n": "赤{あか}ちゃん が 指{ゆび} を しゃぶって います",
+  "en": "The baby is sucking its fingers",
+  "why": ""
+ },
+ {
+  "id": "L2-332",
+  "topic": "t9",
+  "n": "じゃんけん で 決{き}めましょう",
+  "en": "Let's decide with rock, paper, scissors",
+  "why": ""
+ },
+ {
+  "id": "L2-333",
+  "topic": "t9",
+  "n": "あいまい な 返事{へんじ} を しないで ください",
+  "en": "Please don't give a vague answer",
+  "why": ""
+ },
+ {
+  "id": "L2-334",
+  "topic": "t4",
+  "n": "眠{ねむ}くて あくび が 出{で}ます",
+  "en": "I'm so sleepy I keep yawning",
+  "why": ""
+ },
+ {
+  "id": "L2-335",
+  "topic": "t12",
+  "n": "町{まち} の あちらこちら に ポスター が あります",
+  "en": "There are posters here and there around town",
+  "why": ""
+ },
+ {
+  "id": "L2-336",
+  "topic": "t1",
+  "n": "魚{さかな} を 火{ひ} で あぶりました",
+  "en": "I grilled the fish over the flame",
+  "why": ""
+ },
+ {
+  "id": "L2-337",
+  "topic": "t11",
+  "n": "雨{あめ} で 川{かわ} が あふれました",
+  "en": "The river overflowed with the rain",
+  "why": ""
+ },
+ {
+  "id": "L2-338",
+  "topic": "t9",
+  "n": "あれこれ 考{かんが}えて 眠{ねむ}れません でした",
+  "en": "I couldn't sleep for thinking about this and that",
+  "why": ""
+ },
+ {
+  "id": "L2-339",
+  "topic": "t9",
+  "n": "いきなり 質問{しつもん} されて 困{こま}りました",
+  "en": "I was stumped when asked out of the blue",
+  "why": ""
+ },
+ {
+  "id": "L2-340",
+  "topic": "t7",
+  "n": "いちいち 確認{かくにん} しなくて も いい です",
+  "en": "You don't have to check every single thing",
+  "why": ""
+ },
+ {
+  "id": "L2-341",
+  "topic": "t8",
+  "n": "いってまいります",
+  "en": "I'll be off now (humble)",
+  "why": ""
+ },
+ {
+  "id": "L2-342",
+  "topic": "t8",
+  "n": "いってきます",
+  "en": "I'm off now",
+  "why": ""
+ },
+ {
+  "id": "L2-343",
+  "topic": "t10",
+  "n": "いよいよ 明日{あした} は 試験{しけん} です",
+  "en": "The exam is finally tomorrow",
+  "why": ""
+ },
+ {
+  "id": "L2-344",
+  "topic": "t1",
+  "n": "昼{ひる} は うどん を 食{た}べました",
+  "en": "I had udon for lunch",
+  "why": ""
+ },
+ {
+  "id": "L2-345",
+  "topic": "t8",
+  "n": "彼{かれ} は 黙{だま}って うなずきました",
+  "en": "He nodded without a word",
+  "why": ""
+ },
+ {
+  "id": "L2-346",
+  "topic": "t12",
+  "n": "駅{えき} の 前{まえ} で 知{し}らない 人{ひと} が うろうろ して います",
+  "en": "A stranger is hanging around in front of the station",
+  "why": ""
+ },
+ {
+  "id": "L2-347",
+  "topic": "t9",
+  "n": "うんと 勉強{べんきょう} しました",
+  "en": "I studied really hard",
+  "why": ""
+ },
+ {
+  "id": "L2-348",
+  "topic": "t9",
+  "n": "ええと、 何{なん} でした っけ",
+  "en": "Er, what was it again?",
+  "why": ""
+ },
+ {
+  "id": "L2-349",
+  "topic": "t9",
+  "n": "どうせ 間{ま}に合{あ}いません",
+  "en": "We won't make it anyway",
+  "why": ""
+ },
+ {
+  "id": "L2-350",
+  "topic": "t10",
+  "n": "バス は とっくに 出{で}ました",
+  "en": "The bus left ages ago",
+  "why": ""
+ },
+ {
+  "id": "L2-351",
+  "topic": "t9",
+  "n": "みんな が どっと 笑{わら}いました",
+  "en": "Everyone burst out laughing",
+  "why": ""
+ },
+ {
+  "id": "L2-352",
+  "topic": "t9",
+  "n": "ともかく 行{い}って みましょう",
+  "en": "Anyway, let's go and see",
+  "why": ""
+ },
+ {
+  "id": "L2-353",
+  "topic": "t9",
+  "n": "なにしろ 時間{じかん} が ありません",
+  "en": "At any rate, there's no time",
+  "why": ""
+ },
+ {
+  "id": "L2-354",
+  "topic": "t9",
+  "n": "なんとなく 分{わ}かります",
+  "en": "I sort of understand",
+  "why": ""
+ },
+ {
+  "id": "L2-355",
+  "topic": "t9",
+  "n": "なんとも 言{い}えません",
+  "en": "I can't really say",
+  "why": ""
+ },
+ {
+  "id": "L2-356",
+  "topic": "t6",
+  "n": "ねじ を しっかり 締{し}めて ください",
+  "en": "Please tighten the screw firmly",
+  "why": ""
+ },
+ {
+  "id": "L2-357",
+  "topic": "t6",
+  "n": "のこぎり で 木{き} を 切{き}りました",
+  "en": "I cut the wood with a saw",
+  "why": ""
+ },
+ {
+  "id": "L2-358",
+  "topic": "t5",
+  "n": "前{まえ} の 車{くるま} が のろのろ 走{はし}って います",
+  "en": "The car in front is crawling along",
+  "why": ""
+ },
+ {
+  "id": "L2-359",
+  "topic": "t9",
+  "n": "そんな ばからしい 話{はなし} は 信{しん}じません",
+  "en": "I don't believe such an absurd story",
+  "why": ""
+ },
+ {
+  "id": "L2-360",
+  "topic": "t8",
+  "n": "彼女{かのじょ} は はきはき 話{はな}します",
+  "en": "She speaks clearly and briskly",
+  "why": ""
+ },
+ {
+  "id": "L2-361",
+  "topic": "t6",
+  "n": "この ベッド は ばね が 強{つよ}い です",
+  "en": "This bed has strong springs",
+  "why": ""
+ },
+ {
+  "id": "L2-362",
+  "topic": "t3",
+  "n": "指輪{ゆびわ} を はめました",
+  "en": "I put on a ring",
+  "why": ""
+ },
+ {
+  "id": "L2-363",
+  "topic": "t6",
+  "n": "窓{まど} を ぴかぴか に 磨{みが}きました",
+  "en": "I polished the windows till they shone",
+  "why": ""
+ },
+ {
+  "id": "L2-364",
+  "topic": "t10",
+  "n": "時計{とけい} が 十二時{じゅうにじ} ぴたり に 鳴{な}りました",
+  "en": "The clock struck exactly twelve",
+  "why": ""
+ },
+ {
+  "id": "L2-365",
+  "topic": "t7",
+  "n": "ひとまず 休憩{きゅうけい} しましょう",
+  "en": "Let's take a break for now",
+  "why": ""
+ },
+ {
+  "id": "L2-366",
+  "topic": "t6",
+  "n": "ドア が ひとりでに 開{あ}きました",
+  "en": "The door opened by itself",
+  "why": ""
+ },
+ {
+  "id": "L2-367",
+  "topic": "t7",
+  "n": "ひゃっかじてん で 調{しら}べました",
+  "en": "I looked it up in an encyclopedia",
+  "why": ""
+ },
+ {
+  "id": "L2-368",
+  "topic": "t8",
+  "n": "子供{こども} たち が ふざけて います",
+  "en": "The children are messing about",
+  "why": ""
+ },
+ {
+  "id": "L2-369",
+  "topic": "t8",
+  "n": "父{ちち} は いつも ぶつぶつ 言{い}って います",
+  "en": "My father is always grumbling",
+  "why": ""
+ },
+ {
+  "id": "L2-370",
+  "topic": "t3",
+  "n": "首{くび} から カメラ を ぶらさげて います",
+  "en": "I've got a camera hanging round my neck",
+  "why": ""
+ },
+ {
+  "id": "L2-371",
+  "topic": "t1",
+  "n": "ふわふわ の パンケーキ が 好{す}き です",
+  "en": "I like fluffy pancakes",
+  "why": ""
+ },
+ {
+  "id": "L2-372",
+  "topic": "t4",
+  "n": "おなか の へそ",
+  "en": "Your belly button",
+  "why": ""
+ },
+ {
+  "id": "L2-373",
+  "topic": "t3",
+  "n": "古{ふる}い シャツ は ぼろ に なりました",
+  "en": "The old shirt has turned to rags",
+  "why": ""
+ },
+ {
+  "id": "L2-374",
+  "topic": "t9",
+  "n": "試験{しけん} は まあまあ でした",
+  "en": "The exam went so-so",
+  "why": ""
+ },
+ {
+  "id": "L2-375",
+  "topic": "t5",
+  "n": "道{みち} が 分{わ}からなくて まごまご しました",
+  "en": "I didn't know the way and got flustered",
+  "why": ""
+ },
+ {
+  "id": "L2-376",
+  "topic": "t5",
+  "n": "水{みず} たまり を またぎました",
+  "en": "I stepped over the puddle",
+  "why": ""
+ },
+ {
+  "id": "L2-377",
+  "topic": "t4",
+  "n": "まぶた が 重{おも}い です",
+  "en": "My eyelids are heavy",
+  "why": ""
+ },
+ {
+  "id": "L2-378",
+  "topic": "t9",
+  "n": "みじめ な 気持{きも}ち に なりました",
+  "en": "I felt miserable",
+  "why": ""
+ },
+ {
+  "id": "L2-379",
+  "topic": "t8",
+  "n": "そんな 服{ふく} は みっともない です",
+  "en": "Those clothes are embarrassing",
+  "why": ""
+ },
+ {
+  "id": "L2-380",
+  "topic": "t6",
+  "n": "部屋{へや} が めちゃくちゃ です",
+  "en": "The room is a complete mess",
+  "why": ""
+ },
+ {
+  "id": "L2-381",
+  "topic": "t11",
+  "n": "最近{さいきん} めっきり 寒{さむ}く なりました",
+  "en": "It's got noticeably colder lately",
+  "why": ""
+ },
+ {
+  "id": "L2-382",
+  "topic": "t8",
+  "n": "めでたく 結婚{けっこん} しました",
+  "en": "They happily got married",
+  "why": ""
+ },
+ {
+  "id": "L2-383",
+  "topic": "t4",
+  "n": "めまい が します",
+  "en": "I feel dizzy",
+  "why": ""
+ },
+ {
+  "id": "L2-384",
+  "topic": "t9",
+  "n": "もしかしたら 雨{あめ} が 降{ふ}る かもしれません",
+  "en": "It might rain, for all I know",
+  "why": ""
+ },
+ {
+  "id": "L2-385",
+  "topic": "t6",
+  "n": "壁{かべ} に もたれて 立{た}って います",
+  "en": "I'm leaning against the wall",
+  "why": ""
+ },
+ {
+  "id": "L2-386",
+  "topic": "t8",
+  "n": "父{ちち} は 時間{じかん} に やかましい です",
+  "en": "My father is fussy about time",
+  "why": ""
+ },
+ {
+  "id": "L2-387",
+  "topic": "t1",
+  "n": "やかん で お湯{ゆ} を 沸{わ}かします",
+  "en": "I boil water in the kettle",
+  "why": ""
+ },
+ {
+  "id": "L2-388",
+  "topic": "t3",
+  "n": "やたらに 物{もの} を 買{か}わないで",
+  "en": "Don't buy things on impulse",
+  "why": ""
+ },
+ {
+  "id": "L2-389",
+  "topic": "t9",
+  "n": "敵{てき} を やっつけました",
+  "en": "We beat the enemy",
+  "why": ""
+ },
+ {
+  "id": "L2-390",
+  "topic": "t9",
+  "n": "やっぱり 家{いえ} が 一番{いちばん} です",
+  "en": "Home is best after all",
+  "why": ""
+ },
+ {
+  "id": "L2-391",
+  "topic": "t9",
+  "n": "病気{びょうき} なら やむをえない です",
+  "en": "If you're ill, it can't be helped",
+  "why": ""
+ },
+ {
+  "id": "L2-392",
+  "topic": "t8",
+  "n": "母{はは} が 手紙{てがみ} を よこしました",
+  "en": "My mother sent me a letter",
+  "why": ""
+ },
+ {
+  "id": "L2-393",
+  "topic": "t6",
+  "n": "たんす に 服{ふく} を しまいました",
+  "en": "I put my clothes away in the chest of drawers",
+  "why": ""
+ },
+ {
+  "id": "L2-394",
+  "topic": "t1",
+  "n": "パン を ちぎって 食{た}べます",
+  "en": "I tear off bits of bread to eat",
+  "why": ""
+ },
+ {
+  "id": "L2-395",
+  "topic": "t12",
+  "n": "買{か}い物{もの} の ついで に 郵便局{ゆうびんきょく} へ 寄{よ}りました",
+  "en": "I stopped at the post office while I was out shopping",
+  "why": ""
+ },
+ {
+  "id": "L2-396",
+  "topic": "t5",
+  "n": "石{いし} に つまずいて 転{ころ}びました",
+  "en": "I tripped on a stone and fell",
+  "why": ""
+ },
+ {
+  "id": "L2-397",
+  "topic": "t9",
+  "n": "でたらめ を 言{い}わないで ください",
+  "en": "Please don't talk nonsense",
+  "why": ""
+ },
+ {
+  "id": "L2-398",
+  "topic": "t12",
+  "n": "駅前{えきまえ} の ショップ で 買{か}いました",
+  "en": "I bought it at a shop by the station",
+  "why": ""
+ },
+ {
+  "id": "L2-399",
+  "topic": "t9",
+  "n": "この シリーズ の 本{ほん} が 好{す}き です",
+  "en": "I like this series of books",
+  "why": ""
+ },
+ {
+  "id": "L2-400",
+  "topic": "t3",
+  "n": "首{くび} に スカーフ を 巻{ま}きました",
+  "en": "I tied a scarf round my neck",
+  "why": ""
+ },
+ {
+  "id": "L2-401",
+  "topic": "t7",
+  "n": "英会話{えいかいわ} の スクール に 通{かよ}って います",
+  "en": "I go to an English conversation school",
+  "why": ""
+ },
+ {
+  "id": "L2-402",
+  "topic": "t10",
+  "n": "工事{こうじ} は 来月{らいげつ} スタート します",
+  "en": "Construction starts next month",
+  "why": ""
+ },
+ {
+  "id": "L2-403",
+  "topic": "t5",
+  "n": "昔{むかし} は スチュワーデス と 呼{よ}びました",
+  "en": "They used to be called stewardesses",
+  "why": ""
+ },
+ {
+  "id": "L2-404",
+  "topic": "t9",
+  "n": "ステージ で 歌{うた}いました",
+  "en": "I sang on stage",
+  "why": ""
+ },
+ {
+  "id": "L2-405",
+  "topic": "t3",
+  "n": "ストッキング が 破{やぶ}れました",
+  "en": "My stockings have a ladder",
+  "why": ""
+ },
+ {
+  "id": "L2-406",
+  "topic": "t5",
+  "n": "工事{こうじ} で 電車{でんしゃ} が ストップ しました",
+  "en": "The trains stopped because of the works",
+  "why": ""
+ },
+ {
+  "id": "L2-407",
+  "topic": "t9",
+  "n": "新{あたら}しい スピーカー で 音楽{おんがく} を 聞{き}きます",
+  "en": "I listen to music on new speakers",
+  "why": ""
+ },
+ {
+  "id": "L2-408",
+  "topic": "t8",
+  "n": "彼女{かのじょ} は スマート な 人{ひと} です",
+  "en": "She's a slim, stylish woman",
+  "why": ""
+ },
+ {
+  "id": "L2-409",
+  "topic": "t7",
+  "n": "スライド を 使{つか}って 説明{せつめい} します",
+  "en": "I'll explain using slides",
+  "why": ""
+ },
+ {
+  "id": "L2-410",
+  "topic": "t6",
+  "n": "玄関{げんかん} で スリッパ に はき替{か}えて ください",
+  "en": "Please change into slippers at the entrance",
+  "why": ""
+ },
+ {
+  "id": "L2-411",
+  "topic": "t7",
+  "n": "大学{だいがく} の ゼミ で 発表{はっぴょう} しました",
+  "en": "I gave a presentation in my university seminar",
+  "why": ""
+ },
+ {
+  "id": "L2-412",
+  "topic": "t12",
+  "n": "この 建物{たてもの} は セメント と コンクリート で できて います",
+  "en": "This building is made of cement and concrete",
+  "why": ""
+ },
+ {
+  "id": "L2-413",
+  "topic": "t3",
+  "n": "身長{しんちょう} は 百七十{ひゃくななじゅう} センチ です",
+  "en": "I'm 170 centimetres tall",
+  "why": ""
+ },
+ {
+  "id": "L2-414",
+  "topic": "t5",
+  "n": "タイア が パンク しました",
+  "en": "I've got a flat tyre",
+  "why": ""
+ },
+ {
+  "id": "L2-415",
+  "topic": "t7",
+  "n": "ダイヤグラム で 説明{せつめい} します",
+  "en": "I'll explain with a diagram",
+  "why": ""
+ },
+ {
+  "id": "L2-416",
+  "topic": "t3",
+  "n": "ダイヤモンド の 指輪{ゆびわ} を もらいました",
+  "en": "I was given a diamond ring",
+  "why": ""
+ },
+ {
+  "id": "L2-417",
+  "topic": "t6",
+  "n": "昔{むかし} の 電話{でんわ} は ダイヤル 式{しき} でした",
+  "en": "Old phones had dials",
+  "why": ""
+ },
+ {
+  "id": "L2-418",
+  "topic": "t6",
+  "n": "ダブル の 部屋{へや} を 予約{よやく} しました",
+  "en": "I booked a double room",
+  "why": ""
+ },
+ {
+  "id": "L2-419",
+  "topic": "t11",
+  "n": "山{やま} の 上{うえ} に 大{おお}きな ダム が あります",
+  "en": "There's a big dam up in the mountains",
+  "why": ""
+ },
+ {
+  "id": "L2-420",
+  "topic": "t9",
+  "n": "オーケストラ の 演奏{えんそう} を 聞{き}きました",
+  "en": "I listened to an orchestra",
+  "why": ""
+ },
+ {
+  "id": "L2-421",
+  "topic": "t7",
+  "n": "工場{こうじょう} は オートメーション 化{か} されて います",
+  "en": "The factory is automated",
+  "why": ""
+ },
+ {
+  "id": "L2-422",
+  "topic": "t9",
+  "n": "教会{きょうかい} で オルガン を 弾{ひ}きました",
+  "en": "I played the organ at church",
+  "why": ""
+ },
+ {
+  "id": "L2-423",
+  "topic": "t5",
+  "n": "この 先{さき} に 急{きゅう} な カーブ が あります",
+  "en": "There's a sharp bend ahead",
+  "why": ""
+ },
+ {
+  "id": "L2-424",
+  "topic": "t9",
+  "n": "古{ふる}い カセット テープ を 見{み}つけました",
+  "en": "I found an old cassette tape",
+  "why": ""
+ },
+ {
+  "id": "L2-425",
+  "topic": "t3",
+  "n": "本{ほん} に カバー を かけて ください",
+  "en": "Please put a cover on the book",
+  "why": ""
+ },
+ {
+  "id": "L2-426",
+  "topic": "t1",
+  "n": "ガム を かみます",
+  "en": "I chew gum",
+  "why": ""
+ },
+ {
+  "id": "L2-427",
+  "topic": "t3",
+  "n": "この シャツ の カラー は 何色{なにいろ} ありますか",
+  "en": "What colours does this shirt come in?",
+  "why": ""
+ },
+ {
+  "id": "L2-428",
+  "topic": "t1",
+  "n": "カロリー の 高{たか}い 物{もの} は 控{ひか}えて います",
+  "en": "I avoid high-calorie food",
+  "why": ""
+ },
+ {
+  "id": "L2-429",
+  "topic": "t9",
+  "n": "ギャング 映画{えいが} が 好{す}き です",
+  "en": "I like gangster films",
+  "why": ""
+ },
+ {
+  "id": "L2-430",
+  "topic": "t7",
+  "n": "大学{だいがく} の キャンパス は 広{ひろ}い です",
+  "en": "The university campus is big",
+  "why": ""
+ },
+ {
+  "id": "L2-431",
+  "topic": "t6",
+  "n": "暑{あつ}い ので クーラー を つけました",
+  "en": "It was hot, so I turned the air conditioner on",
+  "why": ""
+ },
+ {
+  "id": "L2-432",
+  "topic": "t3",
+  "n": "スーツ を クリーニング に 出{だ}しました",
+  "en": "I took my suit to the dry cleaner's",
+  "why": ""
+ },
+ {
+  "id": "L2-433",
+  "topic": "t1",
+  "n": "コース 料理{りょうり} を 注文{ちゅうもん} しました",
+  "en": "I ordered the set course",
+  "why": ""
+ },
+ {
+  "id": "L2-434",
+  "topic": "t9",
+  "n": "学校{がっこう} の コーラス 部{ぶ} に 入{はい}りました",
+  "en": "I joined the school choir",
+  "why": ""
+ },
+ {
+  "id": "L2-435",
+  "topic": "t1",
+  "n": "兄{あに} は レストラン の コック です",
+  "en": "My older brother is a cook in a restaurant",
+  "why": ""
+ },
+ {
+  "id": "L2-436",
+  "topic": "t6",
+  "n": "ゴム で 髪{かみ} を 結{むす}びます",
+  "en": "I tie my hair back with an elastic band",
+  "why": ""
+ },
+ {
+  "id": "L2-437",
+  "topic": "t9",
+  "n": "切手{きって} の コレクション を して います",
+  "en": "I collect stamps",
+  "why": ""
+ },
+ {
+  "id": "L2-438",
+  "topic": "t9",
+  "n": "ピアノ の コンクール に 出{で}ました",
+  "en": "I entered a piano competition",
+  "why": ""
+ },
+ {
+  "id": "L2-439",
+  "topic": "t7",
+  "n": "大学{だいがく} で テニス の サークル に 入{はい}って います",
+  "en": "I'm in a tennis club at university",
+  "why": ""
+ },
+ {
+  "id": "L2-440",
+  "topic": "t12",
+  "n": "救急車{きゅうきゅうしゃ} の サイレン が 聞{き}こえます",
+  "en": "I can hear an ambulance siren",
+  "why": ""
+ },
+ {
+  "id": "L2-441",
+  "topic": "t3",
+  "n": "化粧品{けしょうひん} の サンプル を もらいました",
+  "en": "I got a cosmetics sample",
+  "why": ""
+ },
+ {
+  "id": "L2-442",
+  "topic": "t11",
+  "n": "今{いま} は 桜{さくら} の シーズン です",
+  "en": "It's cherry blossom season now",
+  "why": ""
+ },
+ {
+  "id": "L2-443",
+  "topic": "t7",
+  "n": "姉{あね} は ジャーナリスト です",
+  "en": "My older sister is a journalist",
+  "why": ""
+ },
+ {
+  "id": "L2-444",
+  "topic": "t3",
+  "n": "店{みせ} の シャッター が 閉{し}まって います",
+  "en": "The shop's shutters are down",
+  "why": ""
+ },
+ {
+  "id": "L2-445",
+  "topic": "t9",
+  "n": "この 曲{きょく} は リズム が いい です",
+  "en": "This song has a good rhythm",
+  "why": ""
+ },
+ {
+  "id": "L2-446",
+  "topic": "t1",
+  "n": "水{みず} を 一{いち} リットル 飲{の}みました",
+  "en": "I drank a litre of water",
+  "why": ""
+ },
+ {
+  "id": "L2-447",
+  "topic": "t3",
+  "n": "プレゼント に リボン を 付{つ}けて ください",
+  "en": "Please put a ribbon on the present",
+  "why": ""
+ },
+ {
+  "id": "L2-448",
+  "topic": "t3",
+  "n": "雨{あめ} なので レインコート を 着{き}ました",
+  "en": "It was raining, so I wore a raincoat",
+  "why": ""
+ },
+ {
+  "id": "L2-449",
+  "topic": "t9",
+  "n": "会社{かいしゃ} の レクリェーション に 参加{さんか} しました",
+  "en": "I took part in the company's recreation day",
+  "why": ""
+ },
+ {
+  "id": "L2-450",
+  "topic": "t9",
+  "n": "週末{しゅうまつ} は レジャー を 楽{たの}しみます",
+  "en": "I enjoy leisure activities at the weekend",
+  "why": ""
+ },
+ {
+  "id": "L2-451",
+  "topic": "t7",
+  "n": "来週{らいしゅう} まで に リポート を 出{だ}して ください",
+  "en": "Please hand in your report by next week",
+  "why": ""
+ },
+ {
+  "id": "L2-452",
+  "topic": "t9",
+  "n": "カメラ の レンズ を 拭{ふ}きました",
+  "en": "I wiped the camera lens",
+  "why": ""
+ },
+ {
+  "id": "L2-453",
+  "topic": "t12",
+  "n": "駅{えき} の ロッカー に 荷物{にもつ} を 入{い}れました",
+  "en": "I put my bags in a station locker",
+  "why": ""
+ },
+ {
+  "id": "L2-454",
+  "topic": "t3",
+  "n": "赤{あか}い ワンピース を 着{き}て います",
+  "en": "She's wearing a red dress",
+  "why": ""
+ },
+ {
+  "id": "L2-455",
+  "topic": "t9",
+  "n": "関西{かんさい} の アクセント が あります",
+  "en": "I have a Kansai accent",
+  "why": ""
+ },
+ {
+  "id": "L2-456",
+  "topic": "t6",
+  "n": "屋根{やね} に アンテナ が あります",
+  "en": "There's an aerial on the roof",
+  "why": ""
+ },
+ {
+  "id": "L2-457",
+  "topic": "t13",
+  "n": "二{に} 足{た}す 三{さん} イコール 五{ご}",
+  "en": "Two plus three equals five",
+  "why": ""
+ },
+ {
+  "id": "L2-458",
+  "topic": "t7",
+  "n": "ペン に インキ を 入{い}れました",
+  "en": "I filled the pen with ink",
+  "why": ""
+ },
+ {
+  "id": "L2-459",
+  "topic": "t13",
+  "n": "キャリア ウーマン と して 働{はたら}いて います",
+  "en": "She works as a career woman",
+  "why": ""
+ },
+ {
+  "id": "L2-460",
+  "topic": "t3",
+  "n": "ウール の セーター は 暖{あたた}かい です",
+  "en": "Wool sweaters are warm",
+  "why": ""
+ },
+ {
+  "id": "L2-461",
+  "topic": "t1",
+  "n": "ウエートレス に 水{みず} を 頼{たの}みました",
+  "en": "I asked the waitress for water",
+  "why": ""
+ },
+ {
+  "id": "L2-462",
+  "topic": "t13",
+  "n": "日本{にほん} の エチケット を 学{まな}びました",
+  "en": "I learned Japanese etiquette",
+  "why": ""
+ },
+ {
+  "id": "L2-463",
+  "topic": "t1",
+  "n": "エプロン を して 料理{りょうり} を します",
+  "en": "I put on an apron and cook",
+  "why": ""
+ },
+ {
+  "id": "L2-464",
+  "topic": "t5",
+  "n": "車{くるま} の オイル を 交換{こうかん} しました",
+  "en": "I had the car's oil changed",
+  "why": ""
+ },
+ {
+  "id": "L2-465",
+  "topic": "t9",
+  "n": "この 曲{きょく} は テンポ が 速{はや}い です",
+  "en": "This song has a fast tempo",
+  "why": ""
+ },
+ {
+  "id": "L2-466",
+  "topic": "t3",
+  "n": "ナイロン の かばん は 軽{かる}い です",
+  "en": "Nylon bags are light",
+  "why": ""
+ },
+ {
+  "id": "L2-467",
+  "topic": "t5",
+  "n": "車{くるま} の ナンバー を 覚{おぼ}えて いますか",
+  "en": "Do you remember the car's number plate?",
+  "why": ""
+ },
+ {
+  "id": "L2-468",
+  "topic": "t3",
+  "n": "金{きん} の ネックレス を もらいました",
+  "en": "I was given a gold necklace",
+  "why": ""
+ },
+ {
+  "id": "L2-469",
+  "topic": "t8",
+  "n": "子供{こども} が 手{て} を 振{ふ}って バイバイ と 言{い}いました",
+  "en": "The child waved and said bye-bye",
+  "why": ""
+ },
+ {
+  "id": "L2-470",
+  "topic": "t6",
+  "n": "バケツ に 水{みず} を 入{い}れて ください",
+  "en": "Please fill the bucket with water",
+  "why": ""
+ },
+ {
+  "id": "L2-471",
+  "topic": "t9",
+  "n": "いつも 同{おな}じ パターン です ね",
+  "en": "It's always the same pattern, isn't it?",
+  "why": ""
+ },
+ {
+  "id": "L2-472",
+  "topic": "t5",
+  "n": "車{くるま} を バック させて ください",
+  "en": "Please reverse the car",
+  "why": ""
+ },
+ {
+  "id": "L2-473",
+  "topic": "t3",
+  "n": "新{あたら}しい パンツ を 買{か}いました",
+  "en": "I bought new underpants",
+  "why": ""
+ },
+ {
+  "id": "L2-474",
+  "topic": "t9",
+  "n": "友達{ともだち} と バンド を 組{く}んで います",
+  "en": "I'm in a band with friends",
+  "why": ""
+ },
+ {
+  "id": "L2-475",
+  "topic": "t5",
+  "n": "ハンドル を 右{みぎ} に 切{き}って ください",
+  "en": "Please turn the steering wheel right",
+  "why": ""
+ },
+ {
+  "id": "L2-476",
+  "topic": "t13",
+  "n": "日本{にほん} で は ピストル は 禁止{きんし} です",
+  "en": "Pistols are banned in Japan",
+  "why": ""
+ },
+ {
+  "id": "L2-477",
+  "topic": "t4",
+  "n": "毎日{まいにち} ビタミン を 取{と}って います",
+  "en": "I take vitamins every day",
+  "why": ""
+ },
+ {
+  "id": "L2-478",
+  "topic": "t6",
+  "n": "ビニール 袋{ぶくろ} に 入{い}れて ください",
+  "en": "Please put it in a plastic bag",
+  "why": ""
+ },
+ {
+  "id": "L2-479",
+  "topic": "t12",
+  "n": "高{たか}い ビルディング が 並{なら}んで います",
+  "en": "Tall buildings stand in a row",
+  "why": ""
+ },
+ {
+  "id": "L2-480",
+  "topic": "t3",
+  "n": "ピンク の シャツ が 似合{にあ}います ね",
+  "en": "That pink shirt suits you",
+  "why": ""
+ },
+ {
+  "id": "L2-481",
+  "topic": "t3",
+  "n": "かばん の ファスナー が 壊{こわ}れました",
+  "en": "My bag's zip is broken",
+  "why": ""
+ },
+ {
+  "id": "L2-482",
+  "topic": "t1",
+  "n": "フライパン で 卵{たまご} を 焼{や}きます",
+  "en": "I fry eggs in a frying pan",
+  "why": ""
+ },
+ {
+  "id": "L2-483",
+  "topic": "t3",
+  "n": "白{しろ}い ブラウス を 着{き}て います",
+  "en": "She's wearing a white blouse",
+  "why": ""
+ },
+ {
+  "id": "L2-484",
+  "topic": "t6",
+  "n": "ブラシ で 靴{くつ} を 磨{みが}きます",
+  "en": "I brush my shoes",
+  "why": ""
+ },
+ {
+  "id": "L2-485",
+  "topic": "t5",
+  "n": "三番{さんばん} プラットホーム で 待{ま}って います",
+  "en": "I'm waiting on platform 3",
+  "why": ""
+ },
+ {
+  "id": "L2-486",
+  "topic": "t13",
+  "n": "この 雑誌{ざっし} は フリー です",
+  "en": "This magazine is free",
+  "why": ""
+ },
+ {
+  "id": "L2-487",
+  "topic": "t7",
+  "n": "先生{せんせい} が プリント を 配{くば}りました",
+  "en": "The teacher handed out worksheets",
+  "why": ""
+ },
+ {
+  "id": "L2-488",
+  "topic": "t3",
+  "n": "胸{むね} に ブローチ を 付{つ}けました",
+  "en": "I pinned a brooch to my chest",
+  "why": ""
+ },
+ {
+  "id": "L2-489",
+  "topic": "t9",
+  "n": "今日{きょう} の テレビ の プログラム を 見{み}ました",
+  "en": "I looked at today's TV programme listings",
+  "why": ""
+ },
+ {
+  "id": "L2-490",
+  "topic": "t7",
+  "n": "彼{かれ} は 仕事{しごと} の ベテラン です",
+  "en": "He's a veteran at his job",
+  "why": ""
+ },
+ {
+  "id": "L2-491",
+  "topic": "t5",
+  "n": "ヘリコプター が 空{そら} を 飛{と}んで います",
+  "en": "A helicopter is flying in the sky",
+  "why": ""
+ },
+ {
+  "id": "L2-492",
+  "topic": "t6",
+  "n": "ペンチ で 針金{はりがね} を 切{き}りました",
+  "en": "I cut the wire with pliers",
+  "why": ""
+ },
+ {
+  "id": "L2-493",
+  "topic": "t7",
+  "n": "夏{なつ} の ボーナス で 旅行{りょこう} します",
+  "en": "I'll travel with my summer bonus",
+  "why": ""
+ },
+ {
+  "id": "L2-494",
+  "topic": "t12",
+  "n": "駅{えき} に 映画{えいが} の ポスター が あります",
+  "en": "There's a film poster at the station",
+  "why": ""
+ },
+ {
+  "id": "L2-495",
+  "topic": "t4",
+  "n": "風邪{かぜ} を ひいた ので マスク を します",
+  "en": "I've got a cold, so I'm wearing a mask",
+  "why": ""
+ },
+ {
+  "id": "L2-496",
+  "topic": "t3",
+  "n": "寒{さむ}い ので マフラー を して います",
+  "en": "It's cold, so I'm wearing a scarf",
+  "why": ""
+ },
+ {
+  "id": "L2-497",
+  "topic": "t6",
+  "n": "母{はは} は ミシン で 服{ふく} を 作{つく}ります",
+  "en": "My mother makes clothes on a sewing machine",
+  "why": ""
+ },
+ {
+  "id": "L2-498",
+  "topic": "t5",
+  "n": "この 車{くるま} は モーター で 動{うご}きます",
+  "en": "This car runs on an electric motor",
+  "why": ""
+ },
+ {
+  "id": "L2-499",
+  "topic": "t12",
+  "n": "モダン な 建物{たてもの} です ね",
+  "en": "It's a modern building, isn't it?",
+  "why": ""
+ },
+ {
+  "id": "L2-500",
+  "topic": "t9",
+  "n": "姉{あね} は ファッション モデル です",
+  "en": "My older sister is a fashion model",
+  "why": ""
+ },
+ {
+  "id": "L2-501",
+  "topic": "t5",
+  "n": "空港{くうこう} まで モノレール で 行{い}きます",
+  "en": "I take the monorail to the airport",
+  "why": ""
+ },
+ {
+  "id": "L2-502",
+  "topic": "t5",
+  "n": "ラッシュアワー の 電車{でんしゃ} は 大変{たいへん} です",
+  "en": "Rush-hour trains are awful",
+  "why": ""
+ },
+ {
+  "id": "L2-503",
+  "topic": "t13",
+  "n": "日本{にほん} で は チップ は 要{い}りません",
+  "en": "You don't need to tip in Japan",
+  "why": ""
+ },
+ {
+  "id": "L2-504",
+  "topic": "t7",
+  "n": "黒板{こくばん} に チョーク で 書{か}きます",
+  "en": "I write on the blackboard in chalk",
+  "why": ""
+ },
+ {
+  "id": "L2-505",
+  "topic": "t9",
+  "n": "テニスコート を 予約{よやく} しました",
+  "en": "I booked a tennis court",
+  "why": ""
+ },
+ {
+  "id": "L2-506",
+  "topic": "t1",
+  "n": "この パン は 軟{やわ}らかい です",
+  "en": "This bread is soft",
+  "why": ""
+ }
+]

@@ -110,7 +110,7 @@ GODAN = {"う": ("い", "わ", "っ"), "く": ("き", "か", "い"), "ぐ": ("�
          "ぬ": ("に", "な", "ん"), "ぶ": ("び", "ば", "ん"), "む": ("み", "ま", "ん"), "る": ("り", "ら", "っ")}
 END = r"(?![\u3041-\u309f])|(?=[はがをにでへともかやねよの][^\u3041-\u309f]|です|でした|ので|のに|と)"
 
-GODAN_RU = {"しゃべる", "かえる", "はいる", "しる", "きる", "はしる", "いる", "へる", "すべる", "ける", "にぎる"}   # look like る-verbs but aren't
+GODAN_RU = {"かじる", "ちぎる", "しゃべる", "かえる", "はいる", "しる", "きる", "はしる", "いる", "へる", "すべる", "ける", "にぎる"}   # look like る-verbs but aren't
 HONORIFIC_I = {"いらっしゃる", "なさる", "くださる", "おっしゃる"}   # ます-stem in い: いらっしゃいます
 
 def word_pattern(key, group):
@@ -147,7 +147,7 @@ def word_regex(key, group):
             forms = forms.replace("いて", "って").replace("いた", "った")
         return (before + stem + forms)
     if group == "desc" and key.endswith("い") and len(key) >= 3:        # い-adjective
-        return (before + spaced(key[:-1]) + r"(?:くな|かっ|くて|ければ|い(?:" + END + "))")
+        return (before + spaced(key[:-1]) + r"(?:くな|かっ|くて|ければ|く(?![\u3041-\u309f])|い(?:" + END + "))")
     if len(key) <= 2:                                                   # short words: must stand alone
         return (before + spaced(key) + r"(?:" + END + ")")
     if len(key) >= 3:
