@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Japanese phrasebook: phrases and sentences by situation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F5F1; --sheet:#FFFFFF; --ink:#1D2433; --muted:#646B78; --rule:#DCDFE5;
+  --seal:#B3261E; --seal-wash:#FBEDEC; --chip:#E7E9EF; --indigo:#2C3E73; --indigo-wash:#E9EDF7; --gold:#C8961E;
+  --rW:#e8384f; --rT:#12a5c9; --rP:#22a36b; --rH:#d99a00; --rO:#ef7020; --rV:#7b3fa0; --rQ:#dd3b8c;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --en:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+    --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40; --gold:#E8B84A;
+    --rW:#ff6b7d; --rT:#4fc6e6; --rP:#4fcf92; --rH:#f0c040; --rO:#ff9a52; --rV:#b184d6; --rQ:#f06db0;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom,0px)}
+header.top{max-width:960px;margin:0 auto;padding:calc(2.2rem + env(safe-area-inset-top,0px)) 1.25rem .8rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2.1rem,6.5vw,3.4rem);margin:0;line-height:1.15}
+.sub{margin:.6rem 0 0;color:var(--muted);max-width:66ch}
+.controls{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);padding-top:env(safe-area-inset-top,0px)}
+.controls-inner{max-width:960px;margin:0 auto;padding:.6rem 1.25rem .4rem;display:flex;flex-wrap:wrap;gap:.5rem .7rem;align-items:center}
+.search{flex:1 1 220px;min-width:0;font:inherit;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;background:var(--sheet);color:var(--ink)}
+.segs{display:flex;flex-wrap:wrap;gap:.5rem .7rem}
+.seg{display:flex;background:var(--chip);border-radius:8px;padding:3px;flex:0 0 auto}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.9rem;padding:.3rem .6rem;border-radius:6px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);font-weight:600;box-shadow:0 0 0 1px var(--rule)}
+nav.topics{max-width:960px;margin:0 auto;padding:0 1.25rem .6rem;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+nav.topics a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.86rem;padding:.25rem .65rem;border:1px solid var(--rule);border-radius:999px;background:var(--sheet)}
+nav.topics a .j{font-family:var(--jp);margin-right:.3rem}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+main{max-width:960px;margin:0 auto;padding:.5rem 1.25rem 4rem}
+section.ch{margin:2.4rem 0 0;scroll-margin-top:150px}
+.chead{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;align-items:center;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:1rem 1.2rem}
+.cnum{grid-row:span 3;width:3.2rem;height:3.2rem;border-radius:8px;border:2px solid var(--seal);color:var(--seal);display:grid;place-items:center;font-weight:600;font-size:1.3rem}
+.chead h2{margin:0;font-size:1.35rem;display:flex;gap:.7rem;align-items:baseline;flex-wrap:wrap}
+.chead h2 .jp{font-family:var(--jp);font-size:1.6rem}
+.chead .cnt{color:var(--muted);font-size:.9rem}
+.chead p{margin:.2rem 0 0;max-width:70ch}
+.blk{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;margin:.8rem 0 0;padding:.8rem 1.1rem}
+.blk h3{margin:0 0 .2rem;font-size:1.05rem;display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap}
+.blk h3 .jp{font-family:var(--jp);font-weight:600}
+.blk h3 small{color:var(--muted);font-weight:400}
+.note{margin:.2rem 0 .3rem;color:var(--muted);font-size:.92rem;max-width:66ch}
+.it{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) auto;gap:.2rem 1.2rem;padding:.6rem 0;border-top:1px solid var(--rule);align-items:center}
+.it:first-of-type{border-top:0}
+.jpl{font-family:var(--jp);font-size:1.3rem;line-height:1.95}
+.jpl rt{font-size:.5em}
+.rom{display:block;font-style:italic;color:var(--muted);font-size:.9rem;line-height:1.3}
+.no-romaji .rom,.no-romaji .cr{display:none}
+.enl{font-size:1rem}
+.tagl{display:block;font-size:.8rem;color:var(--muted);margin-top:.1rem}
+.tagl.hear{color:var(--indigo)}
+.why{display:block;font-size:.85rem;color:var(--muted);margin-top:.15rem}
+.star{border:0;background:none;font-size:1.3rem;line-height:1;color:var(--rule);cursor:pointer;padding:.2rem .3rem;align-self:start}
+.star[aria-pressed="true"]{color:var(--gold)}
+.slot{display:inline-block;min-width:2.4em;border:1.5px dashed var(--seal);border-radius:4px;padding:0 .25em;line-height:1.45;text-align:center;color:var(--seal)}
+.slot.filled{border-style:solid;background:var(--seal-wash)}
+.rom .slot,.enl .slot{min-width:1.6em;line-height:1.2;font-style:normal;border-width:1px}
+.words{margin-top:.7rem;padding-top:.6rem;border-top:2px solid var(--ink)}
+.words h4{margin:0 0 .5rem;font-size:.9rem}
+.words h4 span{font-weight:400;color:var(--muted)}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.45rem}
+.chip{font:inherit;text-align:left;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:.4rem .55rem;cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--seal);box-shadow:inset 0 0 0 1px var(--seal);background:var(--seal-wash)}
+.chip.static{cursor:default}
+.chip .cw{display:block;font-family:var(--jp);font-size:1.1rem;line-height:1.8}
+.chip .cr{display:block;font-style:italic;color:var(--muted);font-size:.8rem}
+.chip .ce{display:block;font-size:.84rem;color:var(--muted)}
+.ck{margin-right:.35em}
+.blocks .ck[data-r]{color:var(--c)}
+.enc .ck{margin-right:.3em}
+.blocks .enc .ck[data-r]{color:var(--c);font-weight:600}
+.legend-b{display:none!important;flex-wrap:wrap;gap:.3rem .8rem;margin:.5rem 0 .2rem;font-size:.78rem;font-weight:600}
+.blocks .legend-b{display:flex}
+.legend-b span{color:var(--c)}
+.hidden-en .enl .hx,.hidden-jp .jpl .hx,.hidden-jp .rom{background:var(--chip);color:transparent!important;border-radius:4px;cursor:pointer}
+.hidden-jp .jpl rt{visibility:hidden}
+.it.shown .hx,.it.shown .rom{background:none!important;color:inherit!important}
+.it.shown .jpl rt{visibility:visible}
+.empty{padding:2rem;text-align:center;color:var(--muted);background:var(--sheet);border:1px solid var(--rule);border-radius:10px;margin-top:1.5rem}
+footer{max-width:960px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);font-size:.85rem}
+@media (max-width:640px){
+  .search{flex-basis:100%}
+  .segs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}
+  .it{grid-template-columns:minmax(0,1fr) auto}
+  .it>div:first-child{grid-column:1;grid-row:1}
+  .it>.star{grid-column:2;grid-row:1}
+  .it>.enl{grid-column:1 / -1;grid-row:2}
+  .chead{grid-template-columns:1fr} .cnum{grid-row:auto}
+  section.ch{scroll-margin-top:170px}
+  .chips{grid-template-columns:repeat(auto-fill,minmax(125px,1fr))}
+}
+
+.keybar{display:none;gap:5px;max-width:960px;margin:0 auto;padding:0 1.25rem .5rem;overflow-x:auto;scrollbar-width:none}
+.blocks .keybar{display:flex}
+.keybar span{flex:1 0 auto;background:var(--c);color:#fff;border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700;letter-spacing:.02em;text-align:center;white-space:nowrap}
+.keybar span small{font-weight:500;opacity:.9;margin-left:4px}
+.keybar span.kp{background:var(--chip);color:var(--ink)}
+.pt{font:inherit;font-weight:700;color:inherit;background:var(--chip);border:0;border-radius:4px;padding:0 .18em;margin:0 .04em;cursor:pointer;line-height:inherit}
+.pt:hover,.pt:focus-visible{background:var(--ink);color:var(--paper);outline:none}
+.pt.pr{font-style:normal}
+a.kl{color:inherit;text-decoration:none;cursor:pointer}
+a.kl:hover{background:var(--indigo-wash);border-radius:2px}
+.ppop{position:absolute;z-index:60;background:var(--sheet);color:var(--ink);border:1px solid var(--rule);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.2);padding:10px 12px;font-size:.92rem;line-height:1.5}
+.ppop[hidden]{display:none}
+.pp-h{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.pp-p{font-family:var(--jp);font-size:1.5rem;font-weight:700}
+.pp-r{font-style:italic;color:var(--muted)}
+.pp-n{font-weight:600}
+.pp-x{margin-left:auto;border:0;background:none;font-size:1.3rem;line-height:1;cursor:pointer;color:var(--muted)}
+.ppop p{margin:4px 0}
+.pp-c{background:var(--chip);border-radius:4px;padding:4px 8px}
+.pp-e{color:var(--muted);font-size:.85rem}
+@keyframes iflash{0%{box-shadow:0 0 0 3px var(--seal)}100%{box-shadow:0 0 0 3px transparent}}
+.iflash{animation:iflash 2.4s ease-out;border-radius:6px}
+:root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+:root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
+.rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
+body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
+body:not(.no-rdcol) .rd .rb,body:not(.no-rdcol) span.rd:not(.kana){text-decoration:underline 2px var(--rc);text-underline-offset:.22em;text-decoration-skip-ink:none}
+body:not(.no-rdcol) .rd-sp .rb,body:not(.no-rdcol) span.rd-sp:not(.kana){text-decoration-style:dotted}
+body:not(.no-rdcol) .rd.kana{color:var(--rc)}
+.rd-legend{max-width:var(--rd-max,980px);margin:0 auto;padding:0 1.25rem .55rem;display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.85rem;color:var(--muted)}
+.rd-legend .sw{font-family:var(--jp);font-size:1rem;margin-right:.25rem}
+.no-rdcol .rd-legend{display:none}
+.rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
+.no-rdcol .rdv-on,.no-rdcol .rdv-kun{color:inherit}
+
+.no-rdcol .rd-legend{display:none}
+@media (max-width:620px){.rd-legend .rdl{display:none}}
+.rd-legend{max-width:960px}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>旅の会話帳</h1>
+  <p class="sub">An interactive phrasebook: about 500 phrases and sentences in 14 situations, from greetings to emergencies. Colours show each part's job, as in the key. Tap a grey particle to see what it does, or a kanji to open it in the kanji deck (Back brings you straight back here). Phrases with a slot take a word: tap one of the words under them. Star anything you want to keep.</p>
+</header>
+<div class="controls">
+  <div class="controls-inner">
+    <input class="search" id="search" type="search" placeholder="Search Japanese, rōmaji or English" aria-label="Search">
+    <div class="segs">
+      <div class="seg" role="group" aria-label="View"><button data-view="all" aria-pressed="true">All</button><button data-view="mine" aria-pressed="false">★ My phrasebook</button></div>
+      <div class="seg" role="group" aria-label="Japanese script"><button data-script="ruby" aria-pressed="true">Kanji + furigana</button><button data-script="kanji" aria-pressed="false">Kanji</button><button data-script="kana" aria-pressed="false">Hiragana</button></div>
+      <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
+      <div class="seg" role="group" aria-label="Grammar blocks"><button data-blocks="on" aria-pressed="true">Grammar blocks</button><button data-blocks="off" aria-pressed="false">Off</button></div>
+      <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="en" aria-pressed="false">Hide English</button><button data-hide="jp" aria-pressed="false">Hide Japanese</button></div>
+      <div class="seg" role="group" aria-label="Reading colours"><button data-rdcol="on" aria-pressed="true">On/kun colours</button><button data-rdcol="off" aria-pressed="false">Off</button></div>
+    </div>
+  </div>
+  <div class="rd-legend"><span><span class="rd rd-on"><span class="rb sw">音</span></span>On<span class="rdl"> reading, from Chinese</span></span><span><span class="rd rd-kun"><span class="rb sw">訓</span></span>Kun<span class="rdl"> reading, native Japanese</span></span><span><span class="rd rd-sp"><span class="rb sw">特</span></span>Special<span class="rdl"> reading: learn the whole word</span></span></div>
+  <div class="keybar" aria-label="Block colours"><span style="--c:var(--rW)">WHO / TOPIC<small>は・が</small></span><span style="--c:var(--rT)">TIME<small>に</small></span><span style="--c:var(--rP)">PLACE<small>で・に・へ・から・まで</small></span><span style="--c:var(--rH)">HOW / WITH<small>と・で</small></span><span style="--c:var(--rO)">WHAT<small>を</small></span><span style="--c:var(--rV)">VERB / です</span><span style="--c:var(--rQ)">QUESTION<small>か</small></span><span class="kp">particle<small>tap one</small></span></div>
+  <nav class="topics" id="nav"></nav>
+</div>
+<main id="main"></main>
+<footer><p>Grammar blocks colour each part of a sentence by its job: <b style="color:var(--rW)">who or topic</b>, <b style="color:var(--rT)">time</b>, <b style="color:var(--rP)">place</b>, <b style="color:var(--rH)">how or with</b>, <b style="color:var(--rO)">what</b>, <b style="color:var(--rV)">verb</b> and <b style="color:var(--rQ)">question</b>. The same colours mark the English, so you can see how the order changes between the two languages. Stars and settings are saved in this browser only.</p></footer>
+<script src="../assets/common.js"></script>
+<script>
+
+
+const CH = __DATA__;
+const BASE={あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",や:"ya",ゆ:"yu",よ:"yo",ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po",ゔ:"vu","、":", ","。":". "};
+const SY={ゃ:"a",ゅ:"u",ょ:"o"}, SV={ぁ:"a",ぃ:"i",ぅ:"u",ぇ:"e",ぉ:"o"};
+const toH=s=>s.replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
+function romaji(k){const s=toH(k);let o="",i=0;while(i<s.length){const c=s[i],n=s[i+1];
+ if(c==="っ"){const r=romaji(s.slice(i+1,i+3));o+=r.startsWith("ch")?"t":(r[0]||"");i++;continue;}
+ if(c==="ー"){o+=o.slice(-1);i++;continue;}
+ if(n&&SY[n]&&BASE[c]){const b=BASE[c];o+=(["shi","chi","ji"].includes(b)?b.slice(0,-1):b.slice(0,-1)+"y")+SY[n];i+=2;continue;}
+ if(n&&SV[n]&&BASE[c]){const b=BASE[c];o+=(b==="fu"?"f":b==="u"?"w":b==="te"?"t":b==="de"?"d":b==="shi"?"sh":b==="chi"?"ch":b==="ji"?"j":b.slice(0,-1))+SV[n];i+=2;continue;}
+ if(c==="ん"){o+=(n&&/[あいうえおやゆよ]/.test(n))?"n'":"n";i++;continue;}
+ o+=BASE[c]!==undefined?BASE[c]:(SV[c]||c);i++;}return o.trim();}
+const PARTICLE={"は":"wa","を":"o","へ":"e"}, SPECIAL={"こんにちは":"konnichiwa","こんばんは":"konbanwa"};
+const romajiToken=t=>{ if(PARTICLE[t]) return PARTICLE[t]; if(SPECIAL[t]) return SPECIAL[t]; if(t.length>2&&t.endsWith("か")&&/[すんた]/.test(t[t.length-2])) return romaji(t.slice(0,-1))+" ka"; return romaji(t); };
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NOTE=/([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}/g;
+const kanaOf=s=>s.replace(NOTE,"$2"), plainOf=s=>s.replace(NOTE,"$1");
+function form(tok,mode){ let o="",last=0; tok.replace(NOTE,(m,b,r,off)=>{ o+=esc(tok.slice(last,off))+(mode==="kana"?rdKana(b,r):mode==="kanji"?rdKanji(b,r):rdRuby(b,r)); last=off+m.length; return m; }); return o+esc(tok.slice(last)); }
+const ROLE={W:"--rW",T:"--rT",P:"--rP",H:"--rH",O:"--rO",V:"--rV",Q:"--rQ"};
+
+// ---------- blocks, particles and kanji links ----------
+const PINFO={
+ "は":["wa","Topic","Marks what the sentence is about: \"as for …\". Written は but said wa.","私は学生です: as for me, I'm a student."],
+ "が":["ga","Subject","Picks out who or what does something, or is new information. Also used with 好き, 分かる, 欲しい and ある.","頭が痛いです: my head hurts."],
+ "を":["o","Object","Marks the thing acted on by the verb. Written を, said o, and only ever a particle.","コーヒーを飲みます: I drink coffee."],
+ "に":["ni","Time, destination or target","A point in time (七時に), where something goes or exists (日本に), or who receives something.","六時に会いましょう: let's meet at six."],
+ "で":["de","Place of action, or means","Where an action happens (カフェで), or how it's done (電車で, カードで).","電車で行きます: I go by train."],
+ "へ":["e","Direction","Towards a place. Written へ but said e. Close to に for destinations.","日本へ行きます: I'm going to Japan."],
+ "と":["to","With, and, or a quote","With someone (友達と), and between nouns (パンと水), or before 思う and 言う to quote.","友達と行きます: I'll go with a friend."],
+ "から":["kara","From, or because","Starting point in place or time, or a reason after a sentence.","駅から歩きます: I'll walk from the station."],
+ "まで":["made","Until, as far as","The end point in place or time.","京都までお願いします: to Kyoto, please."],
+ "の":["no","Of, 's","Joins two nouns: the first describes or owns the second.","私の家: my house."],
+ "も":["mo","Also, too","Replaces は, が or を to add \"too\".","私も行きます: I'm going too."],
+ "か":["ka","Question","Turns the sentence into a question. No question mark needed in Japanese.","駅はどこですか: where is the station?"],
+ "ね":["ne","Isn't it?","Asks for agreement or softens a statement.","いい天気ですね: nice weather, isn't it?"],
+ "よ":["yo","You know","Tells the listener something new, with emphasis.","おいしいですよ: it's delicious, you know."],
+ "や":["ya","And (among others)","Lists examples, implying there are more.","パンや水: bread, water and so on."],
+ "には":["ni wa","に + は","に with extra focus or contrast: \"as for at / in …\".",""],"では":["de wa","で + は","で with extra focus or contrast.",""],
+ "にも":["ni mo","に + も","\"To … too\" or \"at … too\".",""],"でも":["de mo","で + も","\"At … too\", or \"even\".",""],"とは":["to wa","と + は","と with extra focus.",""],"へは":["e wa","へ + は","へ with extra focus.",""]
+};
+const ROLEHINT={W:"who or topic",T:"time",P:"place",H:"how or with",O:"what",V:"verb",Q:"question"};
+const PEND=/(から|まで|には|では|へは|とは|にも|でも|は|が|を|に|で|へ|と|も|の|か|ね|よ|や)$/;
+const isKK=c=>!!c&&/[\u4e00-\u9fff\u30a0-\u30ff々]/.test(c);
+function sbParts(k,kn,role){
+  // parts: {t, r (reading or null), p (particle flag)}
+  let a=/[\u4e00-\u9fff]/.test(k)?rdAlign(k,kn.replace(/ /g,"")):null;
+  if(!a) a=[{t:k,r:null}];
+  const out=[];
+  a.forEach((p,idx)=>{
+    if(p.r!=null){ out.push({t:p.t,r:p.r}); return; }
+    const s=p.t; let buf="";
+    for(let i=0;i<s.length;i++){
+      const c=s[i], prev=i>0?s[i-1]:(idx>0?a[idx-1].t.slice(-1):""), next=i<s.length-1?s[i+1]:(idx<a.length-1?a[idx+1].t[0]:"");
+      const before=(idx>0&&i===0?a[idx-1].t:"")+s.slice(0,i);
+      let isP=false;
+      if(c==="を") isP=true;
+      else if(c==="の"&&next&&isKK(next)&&(isKK(prev)||/(これ|それ|あれ|私|あなた)$/.test(before))) isP=true;
+      if(isP){ if(buf) out.push({t:buf,r:null}); buf=""; out.push({t:c,r:null,p:true}); }
+      else buf+=c;
+    }
+    if(buf) out.push({t:buf,r:null});
+  });
+  // trailing particle
+  const last=out[out.length-1];
+  if(last&&last.r==null&&!last.p&&role!=="V"){
+    const m=last.t.match(PEND);
+    if(m&&(last.t.length>m[1].length||out.length>1||role==="Q")){
+      const rest=last.t.slice(0,-m[1].length);
+      out.pop(); if(rest) out.push({t:rest,r:null}); out.push({t:m[1],r:null,p:true});
+    }
+  }
+  return out;
+}
+
+const KSET=new Set(__KANJI_SET__);
+const PARTS=new Set(["は","が","を","に","で","へ","と","も","の","か","から","まで","や","ね","よ","には","では","にも","でも"]);
+const TIMEW=/[時日週月年今朝夜晩曜昼]|いつ|何時|あした|きょう/;
+const PLACEW=/^(ここ|そこ|あそこ|どこ|この 近く|近く)$|[駅店家館院局港場所屋社]/;
+const QWORD={"どこ":"P","どちら":"P","いつ":"T","何時{なんじ}":"T","何{なに}":"O","何{なん}":"O","誰{だれ}":"W","どう":"H","どうして":"H","いくら":"O","どれ":"O","どの":"O","いくつ":"O","何人{なんにん}":"O","何名様{なんめいさま}":"O","何番線{なんばんせん}":"O","何分{なんぷん}":"T","何曜日{なんようび}":"T","何日{なんにち}":"T"};
+const ADV=new Set(["もう","少{すこ}し","ちょっと","ゆっくり","まっすぐ","もっと","とても","あまり","一緒{いっしょ}に","また","すぐ","まだ"]);
+function rolesFor(toks){
+  // returns [{t, r, p}] ; r role letter, p = particle flag
+  const out=[]; let buf=[];
+  const flush=(role)=>{ buf.forEach(t=>out.push({t,r:role})); buf=[]; };
+  toks.forEach((t,i)=>{
+    const bare=t.replace(/[、。]$/,"");
+    if(PARTS.has(bare)&&buf.length){
+      const txt=buf.join(" ");
+      let r="V";
+      if(bare==="も"&&/[てで]$/.test(kanaOf(buf[buf.length-1]))) r="V";
+      else if(["は","が","も"].includes(bare)) r="W";
+      else if(bare==="を") r="O";
+      else if(bare==="に"||bare==="には"||bare==="にも") r=TIMEW.test(txt)?"T":"P";
+      else if(bare==="で"||bare==="では"||bare==="でも") r=PLACEW.test(txt)?"P":"H";
+      else if(bare==="へ"||bare==="まで") r="P";
+      else if(bare==="から") r=TIMEW.test(txt)?"T":"P";
+      else if(bare==="と") r="H";
+      else if(bare==="の"){ buf.push(t); out.push(...[]); return; }
+      else if(bare==="か"){ flush("V"); out.push({t,r:"Q",p:true}); return; }
+      flush(r); out.push({t,r,p:true}); return;
+    }
+    if(bare==="か"&&i===toks.length-1){ flush("V"); out.push({t,r:"Q",p:true}); return; }
+    buf.push(t);
+  });
+  // tail: predicate, with question words and adverbs picked out
+  buf.forEach(t=>{ const b=t.replace(/[、。]$/,""); out.push({t,r:b==="___"?"O":/^[一二三四五六七八九十何]\{[^}]*\}つ$|^[一二三四五六七八九十]\{[^}]*\}(人|枚|本|杯)/.test(b)?"O":QWORD[b]||(ADV.has(b)?"H":"V")}); });
+  // mark の inside chunks as particle (keep chunk role)
+  return out.map(x=>x.t==="の"?{...x,p:true}:x);
+}
+const kl=c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=pb#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c;
+const linkK=html=>html.replace(/[\u4e00-\u9fff]/g,kl);
+const pbtn=(t,r)=>`<button type="button" class="pt" data-p="${esc(t)}" data-role="${r||""}">${esc(t)}</button>`;
+function tokHtml(x,mode,word){
+  if(x.t==="___") return word?`<span class="slot filled">${word.split(" ").map(w=>linkK(form(w,mode))).join(" ")}</span>`:`<span class="slot">&nbsp;</span>`;
+  if(x.p) return pbtn(x.t.replace(/[、。]$/,""),x.r)+(/[、。]$/.test(x.t)?x.t.slice(-1):"");
+  // split a trailing か off ですか / ますか / ませんか
+  const m=x.r==="V"&&x.t.match(/^(.*[すんた])か$/);
+  if(m&&x.t.length>2) return `<span class="ck" data-r="V" style="--c:var(--rV)">${linkK(form(m[1],mode))}</span><span class="ck" data-r="Q" style="--c:var(--rQ)">${pbtn("か","Q")}</span>`;
+  return linkK(form(x.t,mode));
+}
+function tokRom(x,word){
+  if(x.t==="___") return word?`<span class="slot filled">${esc(kanaOf(word).split(" ").map(romajiToken).join(" "))}</span>`:`<span class="slot">&nbsp;</span>`;
+  const r=romajiToken(kanaOf(x.t));
+  if(x.p) return `<button type="button" class="pt pr" data-p="${esc(x.t.replace(/[、。]$/,""))}" data-role="${x.r}">${esc(r.replace(/,\s*$/,""))}</button>${/、$/.test(x.t)?",":""}`;
+  const m=r.match(/^(.*) ka$/); if(m&&x.r==="V") return `<span class="ck" data-r="V" style="--c:var(--rV)">${esc(m[1])}</span> <span class="ck" data-r="Q" style="--c:var(--rQ)"><button type="button" class="pt pr" data-p="か" data-role="Q">ka</button></span>`;
+  return esc(r);
+}
+const wrapR=(r,inner)=>`<span class="ck" data-r="${r}" style="--c:var(${ROLE[r]})">${inner}</span>`;
+function tokenLine(ph,word,mode){ return rolesFor(ph.split(" ")).map(x=>wrapR(x.r,tokHtml(x,mode,word))).join(" "); }
+function tokenRom(ph,word){ return rolesFor(ph.split(" ")).map(x=>wrapR(x.r,tokRom(x,word))).join(" ").replace(/ ,/g,","); }
+
+// ---------- state ----------
+let state={view:"all",script:"ruby",romaji:"on",blocks:"on",hide:"none"};
+try{Object.assign(state,JSON.parse(localStorage.getItem("phrasebook")||"{}"));}catch(e){}
+let STARS=new Set(); try{STARS=new Set(JSON.parse(localStorage.getItem("phrasebook-stars")||"[]"));}catch(e){}
+const save=()=>{try{localStorage.setItem("phrasebook",JSON.stringify(state));localStorage.setItem("phrasebook-stars",JSON.stringify([...STARS]));}catch(e){}};
+const picked={};
+const spaced=()=>true;
+// ---------- render pieces ----------
+function jpFrame(ph,word,mode){ return tokenLine(ph,word,mode); }
+function jpFrameOld(ph,word,mode){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${word.split(" ").map(w=>form(w,mode)).join(" ")}</span>`:`<span class="slot">&nbsp;</span>`):form(t,mode)).join(" "); }
+function romFrame(ph,word){ return tokenRom(ph,word); }
+function romFrameOld(ph,word){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${esc(kanaOf(word).split(" ").map(romajiToken).join(" "))}</span>`:`<span class="slot">&nbsp;</span>`):esc(romajiToken(kanaOf(t)))).join(" ").replace(/ ,/g,","); }
+const enFill=(en,w)=>esc(en).replace("___",w?`<span class="slot filled">${esc(w)}</span>`:"___");
+const starBtn=id=>`<button class="star" data-star="${id}" aria-pressed="${STARS.has(id)}" aria-label="Star">★</button>`;
+function phraseItem(secId,i,p,word,wordEn){
+  const id=`p:${secId}:${i}`, tag=p.tag==="hear"?`<span class="tagl hear">You'll hear this</span>`:p.tag?`<span class="tagl">${esc(p.tag)}</span>`:"";
+  const s=(plainOf(p.jp)+kanaOf(p.jp)+p.jp.split(" ").map(t=>romajiToken(kanaOf(t))).join(" ")+p.en).toLowerCase();
+  return `<div class="it" data-id="${id}" data-s="${esc(s)}"><div><span class="jpl"><span class="hx">${jpFrame(p.jp,word,state.script)}</span></span><span class="rom">${romFrame(p.jp,word)}</span></div><div class="enl"><span class="hx">${enFill(p.en,wordEn)}</span>${tag}</div>${starBtn(id)}</div>`;
+}
+function sentItem(s){
+  let jp,rom,enc="";
+  if(s.kj){
+    const mode=state.script==="kana"?"kana":state.script==="kanji"?"kanji":"ruby";
+    jp=s.kj.map((k,i)=>{ const r=s.roles&&s.roles[i]; const parts=sbParts(k,s.kn[i],r); let vf=false;
+      const inner=parts.map(p=>{ if(p.p) return pbtn(p.t,r); if(p.r!=null){ const x=(mode==="kana"?rdKana(p.t,p.r,vf):mode==="kanji"?rdKanji(p.t,p.r,vf):rdRuby(p.t,p.r,vf)); vf=true; return linkK(x); } return esc(p.t); }).join("");
+      return `<span class="ck"${r?` data-r="${r}" style="--c:var(${ROLE[r]})"`:""}>${inner}</span>`; }).join("");
+    rom=s.rj.map((r,i)=>{ const ro=s.roles&&s.roles[i]; const want=sbParts(s.kj[i],s.kn[i],ro).filter(p=>p.p).map(p=>romajiToken(p.t)); let wi=0;
+      const inner=r.split(" ").map(t=>{ if(wi<want.length&&t===want[wi]){ const pt=sbParts(s.kj[i],s.kn[i],ro).filter(p=>p.p)[wi].t; wi++; return `<button type="button" class="pt pr" data-p="${pt}" data-role="${ro||""}">${esc(t)}</button>`; } return esc(t); }).join(" ");
+      return `<span class="ck"${ro?` data-r="${ro}" style="--c:var(${ROLE[ro]})"`:""}>${inner}</span>`; }).join("");
+    const punct=(s.en.match(/[?!.]$/)||[""])[0];
+    if(s.enc&&s.enc.length) enc=`<span class="enc">${s.enc.map(([c,r,t],j)=>(j===s.enc.length-1&&punct&&!/[?!.]$/.test(t)?[c,r,t+punct]:[c,r,t])).map(([c,r,t])=>`<span class="ck" data-r="${r}" style="--c:var(${ROLE[r]})">${esc(t)}</span>`).join("")}</span>`;
+  } else {
+    jp=tokenLine(s.n,null,state.script);
+    rom=tokenRom(s.n,null);
+  }
+  const id=s.id, str=((s.kj?s.kj.join("")+s.kn.join(""):plainOf(s.n)+kanaOf(s.n))+(s.rj?s.rj.join(" "):"")+s.en).toLowerCase();
+  const enHtml=state.blocks==="on"&&enc?enc:esc(s.en);
+  return `<div class="it" data-id="${id}" data-s="${esc(str)}"><div><span class="jpl"><span class="hx">${jp}</span></span><span class="rom">${rom}</span></div><div class="enl"><span class="hx">${enHtml}</span>${s.why?`<span class="why">${esc(s.why)}</span>`:""}</div>${starBtn(id)}</div>`;
+}
+function phraseBlock(sec){
+  const items=sec.items.trim().split("\n").map(l=>{ const [jp,en,tag=""]=l.split("|"); return {jp,en,tag}; });
+  const words=(sec.words||"").trim().split("\n").filter(Boolean).map(l=>{ const [w,en]=l.split("|"); return {w,en}; });
+  const hasSlot=items.some(p=>p.jp.split(" ").includes("___"));
+  const pi=picked[sec.id], word=pi!=null?words[pi].w:null, wordEn=pi!=null?words[pi].en.replace(/\s*\(.*?\)/g,""):null;
+  return `<div class="blk" data-sec="${sec.id}"><h3><span class="jp">${form(sec.jp,state.script)}</span>${esc(sec.en)} <small>${items.length} phrases</small></h3>${sec.note?`<p class="note">${esc(sec.note)}</p>`:""}
+    ${items.map((p,i)=>phraseItem(sec.id,i,p,word,wordEn)).join("")}
+    ${words.length?`<div class="words"><h4>${hasSlot?`Swap-in words <span>tap one to fill the slots</span>`:"Useful words"}</h4><div class="chips">${words.map((w,i)=>`<button class="chip${hasSlot?"":" static"}" ${hasSlot?`data-sec="${sec.id}" data-i="${i}" aria-pressed="${pi===i}"`:"tabindex=\"-1\""}><span class="cw">${w.w.split(" ").map(t=>form(t,state.script)).join(" ")}</span><span class="cr">${esc(kanaOf(w.w).split(" ").map(romajiToken).join(" "))}</span><span class="ce">${esc(w.en)}</span></button>`).join("")}</div></div>`:""}</div>`;
+}
+function sentBlock(c){
+  if(!c.sents.length) return "";
+  return `<div class="blk sents"><h3>Sentences <small>${c.sents.length}</small></h3><div class="legend-b"><span style="--c:var(--rW)">WHO / TOPIC</span><span style="--c:var(--rT)">TIME</span><span style="--c:var(--rP)">PLACE</span><span style="--c:var(--rH)">HOW / WITH</span><span style="--c:var(--rO)">WHAT</span><span style="--c:var(--rV)">VERB</span><span style="--c:var(--rQ)">QUESTION</span></div>${c.sents.map(sentItem).join("")}</div>`;
+}
+const main=document.getElementById("main");
+function allItems(){ const out=[]; CH.forEach(c=>{ c.phr.forEach(sec=>sec.items.trim().split("\n").forEach((l,i)=>{ const [jp,en,tag=""]=l.split("|"); out.push({kind:"p",sec,i,p:{jp,en,tag},id:`p:${sec.id}:${i}`,c}); })); c.sents.forEach(s=>out.push({kind:"s",s,id:s.id,c})); }); return out; }
+function render(){
+  if(state.view==="mine"){
+    const mine=allItems().filter(x=>STARS.has(x.id));
+    main.innerHTML=mine.length?CH.filter(c=>mine.some(x=>x.c===c)).map((c,i)=>`<section class="ch" id="ch-${c.id}"><div class="chead"><div class="cnum">★</div><h2><span class="jp">${esc(c.jp)}</span>${esc(c.en)}</h2><div class="cnt">${mine.filter(x=>x.c===c).length} starred</div></div><div class="blk">${mine.filter(x=>x.c===c).map(x=>x.kind==="p"?phraseItem(x.sec.id,x.i,x.p,null,null):sentItem(x.s)).join("")}</div></section>`).join("")
+      :`<div class="empty">Nothing starred yet. Tap the ★ next to any phrase or sentence to add it here.</div>`;
+  } else {
+    main.innerHTML=CH.map((c,i)=>{ const n=c.phr.reduce((a,s)=>a+s.items.trim().split("\n").length,0);
+      return `<section class="ch" id="ch-${c.id}"><div class="chead"><div class="cnum">${i+1}</div><h2><span class="jp">${esc(c.jp)}</span>${esc(c.en)}</h2><div class="cnt">${n?`${n} phrases`:""}${n&&c.sents.length?" · ":""}${c.sents.length?`${c.sents.length} sentences`:""}</div><p>${esc(c.blurb)}</p></div>${c.phr.map(phraseBlock).join("")}${sentBlock(c)}</section>`; }).join("");
+  }
+  document.getElementById("nav").innerHTML=CH.map(c=>`<a href="#ch-${c.id}"><span class="j">${esc(c.jp)}</span>${esc(c.en)}</a>`).join("");
+  apply(); doSearch();
+}
+function apply(){
+  document.body.classList.toggle("no-romaji",state.romaji==="off");
+  document.body.classList.toggle("blocks",state.blocks==="on");
+  document.body.classList.toggle("hidden-en",state.hide==="en");
+  document.body.classList.toggle("hidden-jp",state.hide==="jp");
+  document.querySelectorAll(".it.shown").forEach(x=>x.classList.remove("shown"));
+  ["view","script","romaji","blocks","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset[k]===state[k])));
+}
+function doSearch(){
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  document.querySelectorAll(".it").forEach(x=>x.style.display=!q||x.dataset.s.includes(q)?"":"none");
+  document.querySelectorAll(".blk").forEach(b=>{ const its=b.querySelectorAll(".it"); b.style.display=!q||[...its].some(x=>x.style.display!=="none")?"":"none"; });
+  document.querySelectorAll("section.ch").forEach(s=>s.style.display=!q||[...s.querySelectorAll(".it")].some(x=>x.style.display!=="none")?"":"none");
+}
+document.getElementById("search").addEventListener("input",doSearch);
+["view","script","blocks"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); const y=window.scrollY; render(); if(k!=="view") window.scrollTo(0,y); else window.scrollTo(0,0); }));
+["romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); apply(); }));
+main.addEventListener("click",e=>{
+  const st=e.target.closest("[data-star]"); if(st){ const id=st.dataset.star; STARS.has(id)?STARS.delete(id):STARS.add(id); save(); document.querySelectorAll(`[data-star="${CSS.escape(id)}"]`).forEach(b=>b.setAttribute("aria-pressed",STARS.has(id))); if(state.view==="mine") render(); return; }
+  const chip=e.target.closest(".chip[data-sec]"); if(chip){ const id=chip.dataset.sec, i=+chip.dataset.i; picked[id]=picked[id]===i?null:i;
+    const sec=CH.flatMap(c=>c.phr).find(s=>s.id===id); const el=document.querySelector(`.blk[data-sec="${id}"]`); const tmp=document.createElement("div"); tmp.innerHTML=phraseBlock(sec); el.replaceWith(tmp.firstElementChild); apply(); doSearch();
+    const again=document.querySelector(`.chip[data-sec="${id}"][data-i="${i}"]`); if(again) again.focus(); return; }
+  const it=e.target.closest(".it"); if(it&&state.hide!=="none") it.classList.add("shown");
+});
+document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
+render();
+// ---------- particle pop-up ----------
+(function(){
+  const pop=document.createElement("div"); pop.className="ppop"; pop.hidden=true; document.body.appendChild(pop);
+  let cur=null;
+  function show(b){
+    const p=b.dataset.p, info=PINFO[p]||[p,"Particle","",""], role=b.dataset.role;
+    let ctx="";
+    if(p==="に"&&role) ctx=role==="T"?"Here it marks a <b>time</b>.":role==="P"?"Here it marks a <b>destination or place</b>.":role==="H"?"Here it turns the word before it into an adverb (別々に, 一緒に).":"";
+    if(p==="で"&&role) ctx=role==="P"?"Here it marks <b>where the action happens</b>.":role==="H"?"Here it marks <b>how</b> it's done.":role==="T"?"Here it marks <b>when</b> (after dinner).":"";
+    if(p==="と"&&role==="H"&&/高いと/.test(b.parentElement.textContent)) ctx="Here it quotes a thought before 思います.";
+    if(!ctx&&role&&ROLEHINT[role]) ctx=`It closes the <b>${ROLEHINT[role]}</b> block of this sentence.`;
+    pop.innerHTML=`<div class="pp-h"><span class="pp-p">${esc(p)}</span><span class="pp-r">${esc(info[0])}</span><span class="pp-n">${esc(info[1])}</span><button class="pp-x" aria-label="Close">×</button></div><p>${esc(info[2])}</p>${ctx?`<p class="pp-c">${ctx}</p>`:""}${info[3]?`<p class="pp-e">${esc(info[3])}</p>`:""}`;
+    pop.hidden=false;
+    const r=b.getBoundingClientRect(), w=Math.min(320,window.innerWidth-24);
+    pop.style.width=w+"px";
+    let left=Math.max(12,Math.min(r.left+window.scrollX-w/2+r.width/2,window.scrollX+window.innerWidth-w-12));
+    pop.style.left=left+"px"; pop.style.top=(r.bottom+window.scrollY+8)+"px";
+    cur=b;
+  }
+  document.addEventListener("click",e=>{
+    const b=e.target.closest(".pt"); if(b){ e.preventDefault(); if(cur===b&&!pop.hidden){ pop.hidden=true; cur=null; } else show(b); return; }
+    if(!e.target.closest(".ppop")||e.target.closest(".pp-x")){ pop.hidden=true; cur=null; }
+  });
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ pop.hidden=true; cur=null; } });
+  window.addEventListener("resize",()=>{ pop.hidden=true; });
+})();
+
+// ---------- kanji links: remember the phrase, come back to it ----------
+(function(){
+  document.addEventListener("click",e=>{ const a=e.target.closest("a.kl"); if(!a) return; const it=a.closest(".it");
+    try{ sessionStorage.setItem("pb-return",JSON.stringify({id:it?it.dataset.id:null,y:window.scrollY})); }catch(err){} });
+  let ret=null; try{ ret=JSON.parse(sessionStorage.getItem("pb-return")||"null"); }catch(e){}
+  if(ret) window.addEventListener("pageshow",ev=>{ const nav=(performance.getEntriesByType&&performance.getEntriesByType("navigation")[0])||{};
+    if(ev.persisted||nav.type==="back_forward") setTimeout(()=>{ const el=ret.id?document.querySelector(`.it[data-id="${CSS.escape(ret.id)}"]`):null;
+      if(el){ const c=document.querySelector(".controls"); window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-16); el.classList.remove("iflash"); void el.offsetWidth; el.classList.add("iflash"); } else window.scrollTo(0,ret.y); },40);
+    try{ sessionStorage.removeItem("pb-return"); }catch(e){} },{once:true});
+})();
+(function(){ let v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
+  const set=x=>{ v=x; document.body.classList.toggle("no-rdcol",v==="off");
+    document.querySelectorAll("[data-rdcol]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rdcol===v));
+    try{ localStorage.setItem("rdcol",v); }catch(e){} };
+  document.querySelectorAll("[data-rdcol]").forEach(b=>b.addEventListener("click",()=>set(b.dataset.rdcol)));
+  set(v); })();
+</script>
+</body>
+</html>

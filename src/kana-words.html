@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kana words: the Japanese you write without kanji</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F5F1;--sheet:#FFFFFF;--ink:#1D2433;--muted:#646B78;--rule:#DCDFE5;--seal:#B3261E;--seal-wash:#FBEDEC;--chip:#E7E9EF;--indigo:#2C3E73;--indigo-wash:#E9EDF7;
+  --rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;--en:"Source Sans 3","Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#15181F;--sheet:#1C2029;--ink:#E6E8EE;--muted:#9AA1AD;--rule:#2E3340;--seal:#F2837B;--seal-wash:#3A2224;--chip:#262B36;--indigo:#8FA6E8;--indigo-wash:#232B40;--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom,0px)}
+header.top{max-width:1000px;margin:0 auto;padding:calc(2.2rem + env(safe-area-inset-top,0px)) 1.25rem .8rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2.1rem,6.5vw,3.4rem);margin:0;line-height:1.15}
+.sub{margin:.6rem 0 0;color:var(--muted);max-width:66ch}
+.controls{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);padding-top:env(safe-area-inset-top,0px)}
+.controls-inner{max-width:1000px;margin:0 auto;padding:.6rem 1.25rem .4rem;display:flex;flex-wrap:wrap;gap:.5rem .7rem;align-items:center}
+.search{flex:1 1 220px;min-width:0;font:inherit;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;background:var(--sheet);color:var(--ink)}
+.segs{display:flex;flex-wrap:wrap;gap:.5rem .7rem}
+.seg{display:flex;background:var(--chip);border-radius:8px;padding:3px;align-items:center;flex:0 0 auto}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.9rem;padding:.3rem .6rem;border-radius:6px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);font-weight:600;box-shadow:0 0 0 1px var(--rule)}
+.seglab{font-size:.8rem;color:var(--muted);padding:0 .35rem 0 .45rem}
+nav.topics{max-width:1000px;margin:0 auto;padding:0 1.25rem .6rem;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+nav.topics a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.86rem;padding:.25rem .65rem;border:1px solid var(--rule);border-radius:999px;background:var(--sheet)}
+nav.topics a .j{font-family:var(--jp);margin-right:.3rem}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+main{max-width:1000px;margin:0 auto;padding:.5rem 1.25rem 4rem}
+h2.part{font-size:1.05rem;color:var(--muted);margin:2.2rem 0 0;font-weight:600}
+section.grp{margin:1.2rem 0 0;scroll-margin-top:150px}
+.ghead{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.9rem 1.1rem}
+.ghead h3{margin:0;font-size:1.25rem;display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap}
+.ghead h3 .jp{font-family:var(--jp);font-size:1.5rem}
+.ghead h3 small{font-weight:400;color:var(--muted);font-size:.9rem}
+.ghead p{margin:.3rem 0 0;max-width:72ch}
+.koso{border-collapse:collapse;margin:.7rem 0 .1rem;font-size:.95rem;width:100%;max-width:620px}
+.koso th,.koso td{border:1px solid var(--rule);padding:.3rem .45rem;text-align:center}
+.koso th{font-size:.78rem;color:var(--muted);font-weight:600}
+.koso td{font-family:var(--jp);font-size:1.05rem;white-space:nowrap}
+.koso-wrap{overflow-x:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:.6rem;margin-top:.6rem}
+.wc{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.7rem .9rem}
+.wh{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+.ww{font-family:var(--jp);font-size:1.6rem;line-height:1.25}
+.rj{font-style:italic;color:var(--muted);font-size:.9rem}
+.no-romaji .rj{display:none}
+.lvb{margin-left:auto;font-size:.7rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted)}
+.we{margin-top:.1rem}
+.ex{margin-top:.45rem;padding-top:.4rem;border-top:1px dashed var(--rule);font-size:.92rem}
+.ex .j{font-family:var(--jp);font-size:1.05rem;line-height:1.95}
+.ex .j rt{font-size:.5em}
+.ex mark{background:var(--seal-wash);color:inherit;border-radius:3px;padding:0 .1em}
+.ex .t{color:var(--muted)}
+.hide-en .wc:not(.shown) .we,.hide-en .wc:not(.shown) .ex .t{background:var(--chip);color:transparent;border-radius:3px}
+.hide-kana .wc:not(.shown) .ww,.hide-kana .wc:not(.shown) .rj{background:var(--chip);color:transparent;border-radius:3px}
+.hide-en .wc,.hide-kana .wc{cursor:pointer}
+.noresult{display:none;text-align:center;color:var(--muted);padding:2rem}
+.noresult.show{display:block}
+body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
+.rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
+body:not(.no-rdcol) .rd .rb{text-decoration:underline 2px var(--rc);text-underline-offset:.22em;text-decoration-skip-ink:none}
+body:not(.no-rdcol) .rd-sp .rb{text-decoration-style:dotted}
+footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);font-size:.85rem}
+@media (max-width:640px){ .search{flex-basis:100%} .segs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%} .cards{grid-template-columns:1fr} section.grp{scroll-margin-top:170px} }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>かなの言葉</h1>
+  <p class="sub">The words you'll write in kana, not kanji: greetings, question words, pointing words, the little words that link sentences, adverbs, sound words, and everyday nouns and verbs. About 425 words from N5 to N2, grouped by what you use them for, each with a real example sentence where there is one.</p>
+</header>
+<div class="controls">
+  <div class="controls-inner">
+    <input class="search" id="search" type="search" placeholder="Search kana, rōmaji or English" aria-label="Search">
+    <div class="segs">
+      <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Words</span><button data-tier="5" aria-pressed="false">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3" aria-pressed="false">N3</button><button data-tier="2" aria-pressed="false">N2</button></div>
+      <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
+      <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="en" aria-pressed="false">Hide English</button><button data-hide="kana" aria-pressed="false">Hide Japanese</button></div>
+    </div>
+  </div>
+  <nav class="topics" id="nav"></nav>
+</div>
+<main id="main"></main>
+<footer><p>Word levels come from the open JLPT word lists (derived from tanos.co.uk); JLPT has not published official lists since 2010, so levels are a guide. Examples come from this site's phrasebook, sentence builder and situation page.</p></footer>
+<script src="../assets/common.js"></script>
+<script>
+const D = __DATA__;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let state={tier:"4",romaji:"on",hide:"none"};
+try{Object.assign(state,JSON.parse(localStorage.getItem("kana-words")||"{}"));}catch(e){}
+const save=()=>{try{localStorage.setItem("kana-words",JSON.stringify(state));}catch(e){}};
+const PARTS=[["Use","greet inter question point link"],["Adverbs","time degree manner sound"],["Describing and doing","desc verb expr"],["Nouns by topic","n-people n-food n-things n-body n-other"],["Building words","parts"]];
+const KOSO=`<div class="koso-wrap"><table class="koso"><tr><th></th><th>こ<br>near me</th><th>そ<br>near you</th><th>あ<br>over there</th><th>ど<br>which?</th></tr>
+<tr><th>thing</th><td>これ</td><td>それ</td><td>あれ</td><td>どれ</td></tr><tr><th>place</th><td>ここ</td><td>そこ</td><td>あそこ</td><td>どこ</td></tr>
+<tr><th>direction, polite</th><td>こちら</td><td>そちら</td><td>あちら</td><td>どちら</td></tr><tr><th>+ noun</th><td>この</td><td>その</td><td>あの</td><td>どの</td></tr><tr><th>this kind of</th><td>こんな</td><td>そんな</td><td>あんな</td><td>どんな</td></tr></table></div>`;
+function exHtml(x){
+  if(!x.ex) return "";
+  const key=x.w.replace(/[～〜]/g,"");
+  const j=x.ex.p.map(([k,kn])=>{ let h=/[\u4e00-\u9fff]/.test(k)?rdWord(k,kn,"ruby"):esc(k);
+    return h.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(key,`<mark>${key}</mark>`)).join(""); }).join(" ");
+  return `<div class="ex"><div class="j">${j}</div><div class="t">${esc(x.ex.en)}</div></div>`;
+}
+function render(){
+  const t=+state.tier, main=document.getElementById("main"), groups=D.groups;
+  let h="";
+  PARTS.forEach(([title,ids])=>{
+    const gs=ids.split(" ").map(id=>groups.find(g=>g[0]===id)).filter(Boolean);
+    const blocks=gs.map(([id,jp,en,blurb])=>{
+      const ws=D.words.filter(w=>w.g===id&&w.l>=t).sort((a,b)=>b.l-a.l);
+      if(!ws.length) return "";
+      return `<section class="grp" id="g-${id}"><div class="ghead"><h3><span class="jp">${esc(jp)}</span>${esc(en)} <small>${ws.length} words</small></h3>${blurb?`<p>${esc(blurb)}</p>`:""}${id==="point"?KOSO:""}</div>
+        <div class="cards">${ws.map(w=>`<article class="wc" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span><span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${exHtml(w)}</article>`).join("")}</div></section>`;
+    }).join("");
+    if(blocks) h+=`<h2 class="part">${title}</h2>`+blocks;
+  });
+  main.innerHTML=h+`<div class="noresult" id="noresult">Nothing matches that. Try kana, rōmaji or an English word.</div>`;
+  document.getElementById("nav").innerHTML=groups.filter(g=>document.getElementById("g-"+g[0])).map(([id,jp,en])=>`<a href="#g-${id}"><span class="j">${esc(jp)}</span>${esc(en)}</a>`).join("");
+  apply(); doSearch();
+}
+function apply(){
+  document.body.classList.toggle("no-romaji",state.romaji==="off");
+  document.body.classList.toggle("hide-en",state.hide==="en");
+  document.body.classList.toggle("hide-kana",state.hide==="kana");
+  document.querySelectorAll(".wc.shown").forEach(c=>c.classList.remove("shown"));
+  ["tier","romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset[k]===state[k])));
+}
+function doSearch(){
+  const q=document.getElementById("search").value.trim().toLowerCase(); let any=false;
+  document.querySelectorAll("section.grp").forEach(s=>{ let n=0; s.querySelectorAll(".wc").forEach(c=>{ const hit=!q||c.dataset.s.includes(q); c.style.display=hit?"":"none"; if(hit) n++; }); s.style.display=n?"":"none"; if(n) any=true; });
+  document.querySelectorAll("h2.part").forEach(p=>{ let n=p.nextElementSibling, vis=false; while(n&&n.tagName==="SECTION"){ if(n.style.display!=="none") vis=true; n=n.nextElementSibling; } p.style.display=vis?"":"none"; });
+  document.getElementById("noresult").classList.toggle("show",!!q&&!any);
+}
+document.getElementById("search").addEventListener("input",doSearch);
+document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{ const y=window.scrollY; state.tier=b.dataset.tier; save(); render(); window.scrollTo(0,y); });
+["romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); apply(); }));
+document.getElementById("main").addEventListener("click",e=>{ const c=e.target.closest(".wc"); if(c&&state.hide!=="none") c.classList.add("shown"); });
+document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
+try{ if(localStorage.getItem("rdcol")==="off") document.body.classList.add("no-rdcol"); }catch(e){}
+render();
+</script>
+</body>
+</html>

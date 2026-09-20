@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master Kanji Shapes: the complete N5 and N4 deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F5F1; --sheet:#FFFFFF; --ink:#1D2433; --muted:#646B78; --rule:#DCDFE5;
+  --seal:#B3261E; --seal-wash:#FBEDEC; --chip:#E7E9EF; --indigo:#2C3E73; --indigo-wash:#E9EDF7;
+  --green:#2F6B45; --green-wash:#EAF3EC;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --en:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+    --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+    --green:#7CC49A; --green-wash:#1F3328;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+  --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+  --green:#7CC49A; --green-wash:#1F3328;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5}
+header.top{max-width:980px;margin:0 auto;padding:2.5rem 1.25rem 1rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2.1rem,6.5vw,3.4rem);margin:0;line-height:1.15}
+.sub{margin:.6rem 0 0;color:var(--muted);max-width:66ch}
+.controls{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+.controls-inner{max-width:980px;margin:0 auto;padding:.6rem 1.25rem;display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:center}
+.seg{display:flex;background:var(--chip);border-radius:8px;padding:3px}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.9rem;padding:.3rem .65rem;border-radius:6px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);font-weight:600;box-shadow:0 0 0 1px var(--rule)}
+nav.chaps{max-width:980px;margin:0 auto;padding:0 1.25rem .6rem;display:flex;gap:.35rem;overflow-x:auto;scrollbar-width:none}
+nav.chaps a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-family:var(--jp);font-size:1rem;min-width:2.2rem;text-align:center;padding:.15rem .5rem;border:1px solid var(--rule);border-radius:6px;background:var(--sheet)}
+nav.chaps a.m{border-color:var(--indigo);color:var(--indigo)}
+button:focus-visible,a:focus-visible,select:focus-visible,.hideable:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+main{max-width:980px;margin:0 auto;padding:.5rem 1.25rem 4rem}
+.chapter{margin:2.2rem 0 0;scroll-margin-top:110px}
+.chead{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:.9rem}
+.seal{font-family:var(--jp);font-size:2.4rem;line-height:1;min-width:3.8rem;height:3.8rem;padding:0 .4rem;display:grid;place-items:center;border:2px solid var(--seal);color:var(--seal);border-radius:6px;white-space:nowrap}
+.chead .t b{display:block;font-size:1.3rem}
+.chead .t span{color:var(--muted);font-size:.92rem}
+.tier{font-size:.78rem;color:var(--indigo);background:var(--indigo-wash);border-radius:4px;padding:.05rem .45rem;margin-left:.4rem;font-weight:400;vertical-align:.15em}
+.intro,.kc{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;margin:0 0 .9rem;overflow:hidden}
+.step{display:grid;grid-template-columns:8.5rem 1fr;border-top:1px solid var(--rule)}
+.step:first-of-type{border-top:0}
+.stag{padding:.8rem 1rem;font-size:.85rem;font-weight:600;display:flex;gap:.5rem;align-items:flex-start}
+.stag i{font-style:normal;width:1.4rem;height:1.4rem;border-radius:50%;display:grid;place-items:center;color:var(--sheet);font-size:.78rem;flex:none}
+.s1 .stag{color:var(--indigo);background:var(--indigo-wash)} .s1 .stag i{background:var(--indigo)}
+.s2 .stag{color:var(--seal);background:var(--seal-wash)} .s2 .stag i{background:var(--seal)}
+.s3 .stag{color:var(--green);background:var(--green-wash)} .s3 .stag i{background:var(--green)}
+.sbody{padding:.8rem 1.1rem}
+/* intro card */
+.ihead{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:center;padding:1rem 1.1rem}
+.ihead .g{font-family:var(--jp);font-size:5rem;line-height:1}
+.ihead .kw{font-size:1.5rem;font-weight:600}
+.ihead .mv{color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem 1.4rem}
+.facts h4{margin:0 0 .2rem;font-size:.78rem;color:var(--muted);font-weight:600}
+.facts p{margin:0}
+.cousins{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.8rem}
+.cousin{border-left:3px solid var(--seal-wash);padding-left:.7rem}
+.cousin .g{font-family:var(--jp);font-size:2.4rem;line-height:1.15}
+.cousin .kw{font-weight:600;color:var(--seal)}
+.cousin p{margin:.2rem 0;font-size:.93rem}
+.word{font-family:var(--jp)} .word rt{font-size:.55em;color:var(--muted)}
+.word-line{font-size:.9rem;color:var(--muted);margin-top:.25rem}
+.word-line .word{color:var(--ink);font-size:1.05rem}
+.xnote{margin-top:.8rem;background:var(--seal-wash);border-radius:6px;padding:.6rem .8rem;font-size:.93rem}
+.xnote b{display:block;color:var(--seal)}
+.combo{display:grid;grid-template-columns:minmax(0,15rem) 1fr;gap:.3rem 1.2rem;padding:.7rem 0;border-top:1px dashed var(--rule)}
+.combo:first-child{border-top:0;padding-top:0}
+.eq{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem}
+.eq .part{display:inline-flex;flex-direction:column;align-items:center;min-width:2.2rem}
+.eq .part b{font-family:var(--jp);font-weight:400;font-size:1.7rem;line-height:1.2}
+.eq .part small{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.2}
+.eq .big b{font-size:2.3rem}
+.eq .op{color:var(--muted)}
+.lvb{font-size:.7rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted);margin-left:.35rem;vertical-align:.2em;font-family:var(--en)}
+.lvb.n3{border-color:var(--seal);color:var(--seal)}
+.roster{padding:.8rem 1.1rem;border-top:1px solid var(--rule);background:var(--paper)}
+.roster h4{margin:0 0 .3rem;font-size:.8rem;color:var(--muted);font-weight:600}
+.roster .r{font-family:var(--jp);font-size:1.4rem;letter-spacing:.18em;line-height:1.7}
+.roster .r a{color:var(--ink);text-decoration:none}
+.ifoot{padding:.7rem 1.1rem;border-top:1px solid var(--rule);color:var(--indigo);font-size:.93rem}
+/* kanji card */
+.khead{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;padding:.8rem 1.1rem}
+.khead .g{font-family:var(--jp);font-size:3.6rem;line-height:1}
+.khead .kw{font-size:1.2rem;font-weight:600}
+.khead .no{font-size:.8rem;color:var(--muted);text-align:right}
+.story{margin:.4rem 0 0}
+.starter{color:var(--ink)} .starter .sg{font-family:var(--jp);font-size:1.15rem}
+.starthint{margin:.3rem 0 0;font-size:.88rem;color:var(--muted)}
+.mystory{margin-top:.5rem}
+.mystory .my{margin:.2rem 0 .3rem;padding:.4rem .6rem;background:var(--indigo-wash);border-radius:6px}
+.mylab{display:block;font-size:.75rem;font-weight:600;color:var(--indigo)}
+.linkbtn{font:inherit;font-size:.88rem;background:none;border:0;padding:0;color:var(--indigo);text-decoration:underline;cursor:pointer}
+.storyedit{width:100%;font:inherit;padding:.5rem .6rem;border:1px solid var(--rule);border-radius:6px;background:var(--sheet);color:var(--ink);resize:vertical}
+.storybtns{display:flex;gap:.4rem;margin-top:.4rem}
+.storybtns .btn{padding:.35rem .8rem;font-size:.88rem}
+.btn.danger{color:var(--seal)}
+.trap a.g{text-decoration:none}
+.credits{font-size:.82rem}
+a.jk{color:inherit;text-decoration:none;border-radius:3px;background:linear-gradient(transparent 70%,var(--indigo-wash) 70%);cursor:pointer}
+a.jk:hover,a.jk:focus-visible{background:var(--indigo-wash);outline:none}
+.bd{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem;margin:.05rem 0 .35rem;line-height:1.3}
+.bdk{display:inline-flex;align-items:baseline;gap:.25rem;border:1px solid var(--rule);border-radius:5px;padding:.05rem .45rem;text-decoration:none;color:var(--ink);background:var(--paper);font-family:var(--jp);font-size:.9rem}
+a.bdk{cursor:pointer}
+a.bdk:hover,a.bdk:focus-visible{border-color:var(--indigo);outline:none}
+.bdk b{font-weight:400;font-size:1.05rem}
+.bd-on{border-left:3px solid var(--rd-on)} .bd-kun{border-left:3px solid var(--rd-kun)} .bd-sp{border-left:3px dotted var(--rd-sp)}
+.bdk.self{background:var(--indigo-wash)}
+.bd .op{font-size:.8rem}
+details.more summary{cursor:pointer;font-size:.85rem;color:var(--indigo);margin:.1rem 0 .3rem}
+.jhint{margin:.2rem 0 0;font-size:.82rem;color:var(--muted)}
+@keyframes flash{0%{background:var(--seal-wash)}100%{background:transparent}}
+.flash{animation:flash 2.2s ease-out}
+li.flash{border-radius:4px}
+button.btn.backbtn{position:fixed;right:1rem;bottom:1rem;z-index:30;box-shadow:0 4px 14px rgba(0,0,0,.18);font-weight:600;background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.backbtn[hidden]{display:none}
+.gcol{display:flex;flex-direction:column;align-items:center;gap:.15rem;min-width:4.2rem}
+.pron{display:flex;flex-direction:column;align-items:center;font-family:var(--jp);font-size:1rem;line-height:1.3;text-align:center}
+.pron .hw{font-size:.95rem;color:var(--ink)}
+.pron small{font-family:var(--en);font-size:.68rem;color:var(--muted)}
+.pron .rj{display:block;margin:0;font-size:.75rem}
+.part .pr{font-family:var(--jp);font-size:.8rem;line-height:1.2}
+.cpr{font-family:var(--jp);font-size:1rem;margin-left:.4rem}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.rcol h5{margin:0 0 .5rem;font-size:.95rem;display:flex;align-items:baseline;gap:.4rem;flex-wrap:wrap}
+.rcol.on h5{color:var(--rd-on)} .rcol.kun h5{color:var(--rd-kun)}
+.rcol h5 small{font-weight:400;color:var(--muted);font-size:.78rem}
+.jpm{font-family:var(--jp);font-size:1.15rem}
+.rblk{margin:0 0 .7rem;padding-left:.6rem;border-left:2px solid var(--rule)}
+.rcol.on .rblk{border-left-color:var(--rd-on)} .rcol.kun .rblk{border-left-color:var(--rd-kun)}
+.rlab{font-family:var(--jp);font-size:1.15rem;font-weight:600}
+.rlab .ok{opacity:.55;font-weight:400}
+.wl{list-style:none;margin:.2rem 0 0;padding:0}
+.wl li{margin:.15rem 0;line-height:1.9}
+.wl .word{font-size:1.15rem}
+.wl .e{color:var(--muted)}
+.spb{margin-top:.6rem;padding-left:.6rem;border-left:2px dotted var(--rd-sp)}
+.rdv-sp{color:var(--rd-sp)}
+.no-rdcol .rdv-sp{color:inherit}
+.spn{margin:.1rem 0 0;font-size:.85rem;color:var(--muted)}
+.rare{margin:.6rem 0 0;font-size:.85rem;color:var(--muted);font-family:var(--jp)}
+details.smap{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:.6rem 1rem;margin:0 0 .9rem}
+details.smap summary{cursor:pointer;font-weight:600;font-size:.95rem}
+.shared{margin:.6rem 0}
+.srow{display:flex;gap:.8rem;align-items:baseline;padding:.2rem 0}
+.so{font-family:var(--jp);font-size:1.15rem;font-weight:600;min-width:6rem}
+.sk a{font-family:var(--jp);font-size:1.4rem;color:var(--ink);text-decoration:none;margin-right:.3rem}
+.small{display:flex;flex-wrap:wrap;gap:.35rem;margin:.5rem 0}
+.sm{display:inline-flex;align-items:baseline;gap:.3rem;border:1px solid var(--rule);border-radius:5px;padding:.1rem .45rem;text-decoration:none;color:var(--ink);font-family:var(--jp)}
+.sm b{font-size:1.2rem;font-weight:400}
+.sm span{font-size:.85rem}
+.sm .sh{font-weight:700;text-decoration:underline}
+.smnote,.ixnote{font-size:.88rem;color:var(--muted);margin:.4rem 0 0;max-width:70ch}
+
+.ixrow{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.ixr{font-family:var(--jp);font-size:1.5rem;font-weight:600;line-height:1.2}
+.ixr small{display:block;font-family:var(--en);font-size:.78rem;color:var(--muted);font-weight:400}
+.ixr .rj{display:block;margin:0}
+.itiles{display:flex;flex-wrap:wrap;gap:.4rem}
+.itile{font:inherit;cursor:pointer;background:var(--sheet);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:.3rem .55rem;display:flex;flex-direction:column;align-items:center;min-width:4.5rem}
+.itile b{font-family:var(--jp);font-weight:400;font-size:1.6rem;line-height:1.2}
+.itile small{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.2}
+.itile .ich{opacity:.7}
+.itile .sp{color:var(--seal);font-family:var(--jp)}
+.itile.odd{border-color:var(--seal);border-style:dashed}
+.ixh{font-size:1.1rem;margin:1.8rem 0 .2rem}
+.seal.sm{font-size:1.1rem;min-width:2rem;height:2rem;margin-right:.4rem;display:inline-grid;vertical-align:middle}
+.none{color:var(--muted);font-size:.92rem}
+.traps{display:flex;flex-direction:column;gap:.3rem}
+.trap{display:flex;gap:.6rem;align-items:baseline}
+.trap .g{font-family:var(--jp);font-size:1.6rem;color:var(--seal);line-height:1.2;min-width:1.8rem}
+.reads{display:grid;grid-template-columns:auto 1fr;gap:.1rem .7rem;align-items:baseline}
+.reads .lab{font-size:.75rem;color:var(--muted)}
+.reads .v{font-family:var(--jp);font-size:1.05rem}
+.reads .ok{opacity:.55}
+.rj{font-family:var(--en);font-style:italic;color:var(--muted);font-size:.82rem;margin-left:.25rem}
+.no-romaji .rj{display:none}
+.exl{margin-top:.4rem}
+.exl .word{font-size:1.2rem}
+.exl .e{color:var(--muted);margin-left:.4rem}
+.testing .hideable:not(.shown){color:transparent !important;background:var(--chip);border-radius:4px;cursor:pointer;user-select:none}
+.testing .hideable:not(.shown) *{visibility:hidden}
+
+/* flashcards */
+.fc-bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1.2rem 0 .8rem}
+.fc-bar select{font:inherit;padding:.35rem .5rem;border:1px solid var(--rule);border-radius:6px;background:var(--sheet);color:var(--ink);max-width:100%}
+.fc-bar label{font-size:.9rem;color:var(--muted);display:flex;gap:.35rem;align-items:center}
+.btn{font:inherit;font-size:.95rem;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:6px;padding:.45rem .9rem;cursor:pointer}
+.btn.primary{background:var(--indigo);border-color:var(--indigo);color:var(--sheet)}
+.btn.known[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--sheet)}
+.fc-count{color:var(--muted);font-size:.9rem;margin-left:auto}
+.fc-front{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;min-height:18rem;display:grid;place-items:center;cursor:pointer;text-align:center;padding:1.5rem}
+.fc-front .g{font-family:var(--jp);font-size:9rem;line-height:1}
+.fc-front .hint{color:var(--muted);font-size:.9rem;margin-top:.8rem}
+.fc-nav{display:flex;gap:.6rem;justify-content:center;margin:1rem 0;flex-wrap:wrap}
+.empty{padding:2rem;text-align:center;color:var(--muted);background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.endnote{margin-top:2.5rem;color:var(--muted);font-size:.92rem}
+.endnote h3{color:var(--ink);font-size:1.05rem;margin:0 0 .4rem}
+.endnote p{max-width:70ch;margin:.4rem 0}
+@media (max-width:640px){
+  .step{grid-template-columns:1fr}
+  .stag{padding:.5rem .9rem}
+  .combo{grid-template-columns:1fr}
+  .ihead .g{font-size:4rem}
+  .khead .g{font-size:3rem}
+  .rgrid{grid-template-columns:1fr;gap:.6rem}
+  .ixrow{grid-template-columns:1fr;gap:.4rem}
+  .fc-front .g{font-size:7rem}
+  .chapter{scroll-margin-top:190px}
+}
+@media print{ .controls{display:none} body{background:#fff} .kc,.intro{break-inside:avoid} }
+:root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+:root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
+.rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
+body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
+body:not(.no-rdcol) .rd .rb,body:not(.no-rdcol) span.rd:not(.kana){text-decoration:underline 2px var(--rc);text-underline-offset:.22em;text-decoration-skip-ink:none}
+body:not(.no-rdcol) .rd-sp .rb,body:not(.no-rdcol) span.rd-sp:not(.kana){text-decoration-style:dotted}
+body:not(.no-rdcol) .rd.kana{color:var(--rc)}
+.rd-legend{max-width:var(--rd-max,980px);margin:0 auto;padding:0 1.25rem .55rem;display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.85rem;color:var(--muted)}
+.rd-legend .sw{font-family:var(--jp);font-size:1rem;margin-right:.25rem}
+.no-rdcol .rd-legend{display:none}
+.rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
+.no-rdcol .rdv-on,.no-rdcol .rdv-kun{color:inherit}
+
+.no-rdcol .rd-legend{display:none}
+@media (max-width:620px){.rd-legend .rdl{display:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>マスター漢字</h1>
+  <p class="sub">Master Kanji Shapes, from N5 to N2. All 981 kanji in 61 chapters, with a level switch that includes every easier level: N4 shows N5 and N4, N2 shows everything. Built Heisig's way: learn the shape, learn what it gets confused with, then learn its readings through real words. Four ways in: Course (shape families, starting with the twelve master shapes), Flashcards, Sound index (parts that give the sound, and shared readings) and By topic.</p>
+</header>
+<div class="controls">
+  <div class="controls-inner">
+    <div class="seg" role="group" aria-label="Mode">
+      <button data-mode="course" aria-pressed="true">Course</button>
+      <button data-mode="cards" aria-pressed="false">Flashcards</button>
+      <button data-mode="index" aria-pressed="false">Sound index</button>
+      <button data-mode="topics" aria-pressed="false">By topic</button>
+    </div>
+    <div class="seg" role="group" aria-label="Level, including all easier levels">
+      <button data-tier="5" aria-pressed="false">N5</button>
+      <button data-tier="4" aria-pressed="true">N4</button>
+      <button data-tier="3" aria-pressed="false">N3</button>
+      <button data-tier="2" aria-pressed="false">N2</button>
+    </div>
+    <div class="seg" role="group" aria-label="Romaji">
+      <button data-romaji="on" aria-pressed="true">Romaji on</button>
+      <button data-romaji="off" aria-pressed="false">Off</button>
+    </div>
+    <div class="seg" role="group" aria-label="Test yourself">
+      <button data-test="off" aria-pressed="true">Show all</button>
+      <button data-test="on" aria-pressed="false">Test me</button>
+    </div>
+    <div class="seg" role="group" aria-label="Reading colours">
+      <button data-rdcol="on" aria-pressed="true">On/kun colours</button>
+      <button data-rdcol="off" aria-pressed="false">Off</button>
+    </div>
+  </div>
+  <div class="rd-legend"><span><span class="rd rd-on"><span class="rb sw">音</span></span>On<span class="rdl"> reading, from Chinese</span></span><span><span class="rd rd-kun"><span class="rb sw">訓</span></span>Kun<span class="rdl"> reading, native Japanese</span></span><span><span class="rd rd-sp"><span class="rb sw">特</span></span>Special<span class="rdl"> reading: learn the whole word</span></span></div>
+  <nav class="chaps" id="nav"></nav>
+</div>
+<main id="main"></main>
+<script src="../assets/common.js"></script>
+<script>
+
+
+const D = __DATA__;
+const K = D.K, CH = D.CH, LV = D.LV;
+// ---------- helpers ----------
+const BASE={あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",や:"ya",ゆ:"yu",よ:"yo",ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po"};
+const SY={ゃ:"a",ゅ:"u",ょ:"o"};
+const toHira=s=>s.replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
+function romaji(k){const s=toHira(k);let o="",i=0;while(i<s.length){const c=s[i],n=s[i+1];
+ if(c==="っ"){const r=romaji(s.slice(i+1,i+3));o+=r.startsWith("ch")?"t":(r[0]||"");i++;continue;}
+ if(c==="ー"){o+=o.slice(-1);i++;continue;}
+ if(n&&SY[n]&&BASE[c]){const b=BASE[c];o+=(["shi","chi","ji"].includes(b)?b.slice(0,-1):b.slice(0,-1)+"y")+SY[n];i+=2;continue;}
+ if(c==="ん"){o+=(n&&/[あいうえおやゆよ]/.test(n))?"n'":"n";i++;continue;}
+ o+=BASE[c]!==undefined?BASE[c]:c;i++;}return o;}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const rubyNote=s=>{ let o="",last=0; s.replace(/([\u4e00-\u9fff々]+)\{([^}]+)\}/g,(m,b,r,off)=>{ o+=esc(s.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return o+esc(s.slice(last)); };
+const kanaOfNote=s=>s.replace(/([\u4e00-\u9fff々]+)\{([^}]+)\}/g,"$2");
+const wordHtml=(w,kana)=>/[\u4e00-\u9fff]/.test(w)?`<span class="word">${linkify(rdWord(w,kana,"ruby"),"",w)}</span>`:`<span class="word">${esc(w)}</span>`;
+const lvBadge=k=>{const l=LV[k];return l?`<span class="lvb">N${l}</span>`:`<span class="lvb n3">N1</span>`;};
+const T=()=>+state.tier; const vis=k=>!!K[k]&&K[k].l>=T(); const TN=()=>"N"+state.tier;
+const TIERTXT={5:"N5",4:"N5 and N4",3:"N5 to N3",2:"N5 to N2"};
+const H=(inner,tag="span",cls="")=>`<${tag} class="hideable ${cls}" tabindex="0">${inner}</${tag}>`;
+const kunHtml=r=>{const[a,b]=r.split(".");return `${a}${b?`<span class="ok">${b}</span>`:""}<span class="rj">${romaji(r.replace(".",""))}</span>`;};
+const onHtml=r=>`${r}<span class="rj">${romaji(r)}</span>`;
+// ---------- cards ----------
+const WD=D.W, PR=D.P;
+const partR=g=>{ const p=PR[g]||(RD[g]?{r:(RD[g][0][0]||RD[g][1][0]||""),t:RD[g][0].length?"on":"kun"}:null); return p&&p.r?`<small class="pr ${p.t==="on"?"rdv-on":"rdv-kun"}">${esc(p.r)}</small>`:""; };
+const partHtml=(g,m)=>`<span class="part"><b>${esc(g)}</b><small>${esc(m)}</small>${[...g].length===1?partR(g):""}</span>`;
+const labelHtml=r=>r.t==="on"?`${esc(r.label)}<span class="rj">${romaji(r.label)}</span>`:r.label.split("、").map(f=>{const[a,b]=f.split(".");return `${esc(a)}${b?`<span class="ok">${esc(b)}</span>`:""}`;}).join("、")+`<span class="rj">${romaji(r.label.split("、")[0].replace(".",""))}</span>`;
+const linkify=(html,self,w)=>html.replace(/[\u4e00-\u9fff]/g,c=>vis(c)?`<a class="jk" href="#k-${c}" data-jump="${c}" data-w="${esc(w)}" data-from="${self||""}" title="Open ${c}">${c}</a>`:c);
+const toKata=s=>s.replace(/[\u3041-\u3096]/g,c=>String.fromCharCode(c.charCodeAt(0)+0x60));
+function breakdown(w,r,self){
+  const a=rdAlign(w,String(r)); if(!a) return "";
+  let vf=false; const segs=[];
+  for(const p of a){ if(p.r==null) continue; const s=rdSeg(p.t,p.r,vf); vf=true;
+    if(!s){ segs.push({k:p.t,r:p.r,t:"sp"}); continue; } s.forEach(y=>segs.push({k:y.k,r:y.r,t:y.t})); }
+  if(segs.length<2) return "";
+  const cls=t=>t==="on"?"rdv-on":t==="kun"?"rdv-kun":"rdv-sp";
+  return `<span class="bd">${segs.map(s=>{ const inner=`<b>${esc(s.k)}</b><span class="${cls(s.t)}">${esc(s.t==="on"?toKata(s.r):s.r)}</span>`;
+    return [...s.k].length===1&&vis(s.k)?`<a class="bdk bd-${s.t}${s.k===self?" self":""}" href="#k-${s.k}" data-jump="${s.k}" data-w="${esc(w)}" data-from="${self||""}" title="${s.k===self?"This kanji":"Open "+s.k}">${inner}</a>`:`<span class="bdk bd-${s.t}">${inner}</span>`; }).join('<span class="op">+</span>')}</span>`;
+}
+const wordLi=(self)=>([w,r,en,l])=>`<li data-w="${esc(w)}"><span class="word">${linkify(rdWord(w,r,"ruby"),self,w)}</span><span class="rj">${romaji(r)}</span> ${H(esc(en),"span","e")}${l<5&&T()<4?`<span class="lvb wl${l}">N${l}</span>`:""}${breakdown(w,r,self)}</li>`;
+function readingsHtml(x){
+  const w0=WD[x.k], t=T();
+  const vw=r=>r.words.filter(z=>z[3]>=t).sort((a,b)=>b[3]-a[3]);
+  const rs=w0.readings.map(r=>({...r,vis:vw(r)}));
+  const w={sp:w0.sp.filter(z=>z[3]>=t)};
+  const on=rs.filter(r=>r.t==="on"&&r.vis.length), kun=rs.filter(r=>r.t==="kun"&&r.vis.length), rare=rs.filter(r=>!r.vis.length);
+  const later=r=>{ const m=Math.max(0,...r.words.map(z=>z[3]).filter(l=>l<t)); return m?` (from N${m})`:""; };
+  const blk=r=>`<div class="rblk"><div class="rlab ${r.t==="on"?"rdv-on":"rdv-kun"}">${H(labelHtml(r))}</div><ul class="wl">${r.vis.slice(0,5).map(wordLi(x.k)).join("")}</ul>${r.vis.length>5?`<details class="more"><summary>${r.vis.length-5} more word${r.vis.length-5>1?"s":""}</summary><ul class="wl">${r.vis.slice(5).map(wordLi(x.k)).join("")}</ul></details>`:""}</div>`;
+  const col=(cls,jp,title,sub,list)=>`<div class="rcol ${cls}"><h5><span class="jpm">${jp}</span>${title}<small>${sub}</small></h5>${list.length?list.map(blk).join(""):`<p class="none">${cls==="on"?`No on reading in common ${TIERTXT[t]} words.`:`No kun reading in common ${TIERTXT[t]} words. At this level it only appears in compounds.`}</p>`}</div>`;
+  return `<div class="rgrid">${col("on","音","On","from Chinese, mostly in compounds",on)}${col("kun","訓","Kun","native Japanese, mostly alone or with kana",kun)}</div>
+    ${w.sp.length?`<div class="spb"><div class="rlab rdv-sp">Special readings</div><ul class="wl">${w.sp.slice(0,5).map(z=>wordLi(x.k)(z)).join("")}</ul>${w.sp.length>5?`<details class="more"><summary>${w.sp.length-5} more</summary><ul class="wl">${w.sp.slice(5).map(z=>wordLi(x.k)(z)).join("")}</ul></details>`:""}<p class="spn">The whole word has its own reading, so learn it as one unit.</p></div>`:""}
+    <p class="jhint">Each compound is listed on the card of every kanji in it. The line under a word shows which reading each kanji takes; tap any kanji there, or in the word, to flip to that kanji's card at the same word.</p>
+    ${rare.length?`<p class="rare">Also: ${rare.slice(0,6).map(r=>`<span class="${r.t==="on"?"rdv-on":"rdv-kun"}">${esc(r.label)}</span>${later(r)}`).join("、")}${rare.some(r=>!later(r))?" (rare)":""}</p>`:""}`;
+}
+function headPron(x){
+  const a=WD[x.k].alone, p=PR[x.k]; const src=a||p; if(!src||!src.r) return "";
+  const cls=src.t==="on"?"rdv-on":"rdv-kun";
+  const word=a&&a.w&&a.w!==x.k?`<span class="hw">${esc(a.w)}</span>`:"";
+  return `<span class="pron">${word}${H(`<span class="${cls}">${esc(a?a.r:src.r)}</span><span class="rj">${romaji(a?a.r:src.r)}</span>`)}${a?"":`<small>in compounds</small>`}</span>`;
+}
+function storyHtml(x){
+  const mine=STORIES[x.k];
+  const base=x.story?H(esc(x.story),"p","story")
+    :`<p class="story starter">${x.parts.map(([g,m])=>`<span class="sg">${esc(g)}</span> ${esc(m||"shape")}`).join(" + ")} → <b>${esc(x.m)}</b></p><p class="starthint">No story yet. Picture these parts together in one vivid scene that means “${esc(x.m)}”, then save it below.</p>`;
+  return base+`<div class="mystory" data-k="${x.k}">${mine?`<p class="my"><span class="mylab">My story</span>${H(esc(mine))}</p>`:""}<button class="linkbtn" data-edit="${x.k}">${mine?"Edit my story":"Write my own story"}</button></div>`;
+}
+function kanjiSteps(x){
+  const eq=`<div class="eq">${x.parts.map(([g,m])=>partHtml(g,m)).join('<span class="op">+</span>')}</div>`;
+  return `
+  <div class="step s1"><div class="stag"><i>1</i>Shape</div><div class="sbody">${eq}${storyHtml(x)}</div></div>
+  <div class="step s2"><div class="stag"><i>2</i>Look-alikes</div><div class="sbody">${(()=>{ const tr=x.traps.filter(z=>(z[2]||5)>=T()); return tr.length?`<div class="traps">${tr.map(([g,n])=>`<div class="trap">${vis(g)?`<a class="g" href="#k-${g}" data-jump="${g}" data-from="${x.k}">${esc(g)}</a>`:`<span class="g">${esc(g)}</span>`}<span>${esc(n)}</span></div>`).join("")}</div>`:`<span class="none">No close look-alikes at this level.</span>`; })()}</div></div>
+  <div class="step s3"><div class="stag"><i>3</i>Readings and words</div><div class="sbody">${readingsHtml(x)}</div></div>`;
+}
+function kanjiCard(x){
+  return `<article class="kc" id="k-${x.k}" data-l="${x.l}">
+    <div class="khead"><div class="gcol"><span class="g">${x.k}</span>${headPron(x)}</div><div>${H(esc(x.m),"span","kw")}<span class="lvb">N${x.l}</span></div><span class="no">No. ${x.n}</span></div>
+    ${kanjiSteps(x)}</article>`;
+}
+const VARS={"人":"亻𠆢","水":"氵","手":"扌","心":"忄","言":"訁","糸":"糹","辶":"⻌⻍","門":"","力":"","口":"","日":"","木":""};
+function rosterFor(m){
+  const shp=m.shape, forms=shp+(VARS[shp]||"");
+  const set=new Set(m.roster.filter(vis));
+  Object.values(K).forEach(x=>{ if(!vis(x.k)||x.k===shp) return; const src=(x.leaves||"")+x.parts.map(p=>p[0]).join(""); if([...forms].some(f=>src.includes(f))) set.add(x.k); });
+  return [...set].sort((a,b)=>K[a].n-K[b].n);
+}
+function introCard(ch){
+  const m=ch.intro;
+  return `<article class="intro">
+   <div class="ihead"><span class="g">${esc(m.shape)}</span><div><div class="kw">${esc(m.keyword)}<span class="tier">Master shape</span></div><div class="mv">${esc(m.variants)}</div></div></div>
+   <div class="step s1"><div class="stag"><i>1</i>Master shape</div><div class="sbody"><div class="facts">
+     <div><h4>Meaning</h4>${H(esc(m.meaning),"p")}</div>
+     <div><h4>Variant forms</h4><p>${esc(m.variant)}</p></div>
+     <div><h4>Memory hook</h4>${H(esc(m.clue),"p")}</div>
+     <div><h4>Core vocabulary</h4>${m.vocab.map(([w,k,e])=>`<p>${wordHtml(w,k)}<span class="rj">${romaji(k)}</span> ${H(esc(e))}</p>`).join("")}</div>
+   </div></div></div>
+   <div class="step s2"><div class="stag"><i>2</i>${esc(m.s2t)}</div><div class="sbody"><div class="cousins">
+     ${m.s2.map(([g,kw,clue,[w,k,e]])=>`<div class="cousin"><div class="g">${esc(g)}${lvBadge(g)}${PR[g]?`<span class="cpr ${PR[g].t==="on"?"rdv-on":"rdv-kun"}">${esc(PR[g].r)}</span>`:""}</div>${H(esc(kw),"div","kw")}${H(esc(clue),"p")}<div class="word-line">${wordHtml(w,k)}<span class="rj">${romaji(k)}</span> ${esc(e)}</div></div>`).join("")}
+   </div><div class="xnote"><b>${esc(m.s2x[0])}</b>${esc(m.s2x[1])}</div></div></div>
+   <div class="step s3"><div class="stag"><i>3</i>Combinations with a story</div><div class="sbody">
+     ${m.s3.map(([g,parts,mean,story,[w,k,e]])=>`<div class="combo"><div class="eq"><span class="part big"><b>${esc(g)}</b><small>${lvBadge(g)}</small></span><span class="op">=</span>${parts.map(([p,l])=>partHtml(p,l)).join('<span class="op">+</span>')}</div>
+       <div><div><b>${H(esc(mean))}</b></div>${H(esc(story),"p","story")}<div class="word-line">${wordHtml(w,k)}<span class="rj">${romaji(k)}</span> ${esc(e)}</div></div></div>`).join("")}
+   </div></div>
+   <div class="roster"><h4>${TIERTXT[T()]} kanji that contain ${esc(m.shape)}</h4><div class="r">${rosterFor(m).map(k=>`<a href="#k-${k}" data-jump="${k}">${k}</a>`).join(" ")}</div></div>
+   <div class="ifoot">${esc(m.footer)}</div>
+  </article>`;
+}
+function chapterHead(ch,i){
+  return `<div class="chead"><span class="seal">${esc(ch.glyph||"字")}</span><div class="t"><b>Chapter ${i+1}: ${esc(ch.title)}${ch.master?`<span class="tier">Tier 1</span>`:""}</b><span>${ch.kanji.filter(vis).length} kanji</span></div></div>`;
+}
+function soundMap(ch){
+  const ks=ch.kanji.filter(vis);
+  const map={}; ks.forEach(k=>K[k].on.forEach(o=>(map[o]=map[o]||[]).push(k)));
+  const shared=Object.entries(map).filter(([,v])=>v.length>1).sort((a,b)=>b[1].length-a[1].length);
+  const all=ks.map(k=>`<a class="sm" href="#k-${k}" data-l="${K[k].l}"><b>${k}</b><span>${K[k].on.map(o=>`<span class="rdv-on${map[o].length>1?" sh":""}">${o}</span>`).join("・")||"<span class='muted'>—</span>"}</span></a>`).join("");
+  return `<details class="smap" open><summary>Sound map: on readings in this chapter${shared.length?`, ${shared.length} shared`:""}</summary>
+   ${shared.length?`<div class="shared">${shared.map(([o,v])=>`<div class="srow"><span class="so rdv-on">${o}<span class="rj">${romaji(o)}</span></span><span class="sk">${v.map(k=>`<a href="#k-${k}">${k}</a>`).join(" ")}</span></div>`).join("")}</div>`:""}
+   <div class="small">${all}</div>
+   <p class="smnote">${shared.length?"Underlined readings are shared by more than one kanji here. When kanji share a part, they often share its on reading, which is the sound logic of the family.":"No on readings are shared inside this chapter, so each kanji's sound has to be learned on its own."} Kun readings are native Japanese words, so they follow meaning rather than shape.</p></details>`;
+}
+const PHON = [
+ ["寺","ジ",["時","持"],["待","特"],"時 and 持 keep 寺's sound. 待 (タイ) and 特 (トク) use the same part but drifted: the sound part is a strong hint, not a law."],
+ ["主","シュ・ジュウ・チュウ",["主","住","注"],[],"Close cousins of one sound."],
+ ["可","カ",["何","歌"],[],"歌 has 可 twice."],
+ ["化","カ",["花"],[],""],["交","コウ",["校"],[],""],["反","ハン",["飯"],[],""],["羊","ヨウ",["洋"],[],""],
+ ["白","ハク・ヒャク",["白","百"],[],""],
+ ["門","モン",["門","問","聞"],[],"聞 is usually ブン, but モン also appears in some words."],
+ ["重","ドウ",["動","働"],[],"動 and 働 share ドウ; 重 itself is ジュウ."],
+ ["氏","シ",["紙"],[],""],["士","シ",["仕"],[],""],["占","テン",["店"],[],""],
+ ["者","シャ・ショ・ト",["者","暑","都"],[],"The sound shifts but stays recognisable."],
+ ["里","リ",["理"],["野"],"野 (ヤ) breaks the pattern."],
+ ["青","セイ",["青","晴","静","精","清"],[],"At N3 and N2 the family grows: 晴, 静, 精 and 清 all read セイ."]
+];
+const TOPICS=[["num","数とお金","Numbers & money"],["time","時間","Time & calendar"],["people","人","People & family"],["body","体","Body & health"],["nature","自然","Nature & weather"],["dir","方向","Directions & position"],["places","町","Town & buildings"],["travel","交通","Travel & transport"],["school","学校と仕事","School, work & language"],["food","食べ物","Food & drink"],["fun","趣味","Leisure & arts"],["talk","見る・話す","Seeing, speaking & thinking"],["move","行く・来る","Coming & going"],["do","動作","Everyday actions"],["desc","形容","Describing words"],["abstract","大事な言葉","Useful building blocks"]];
+function topicView(){
+  const tiles=v=>v.map(x=>`<button class="itile" data-open="${x.k}"><b>${x.k}</b><small>${esc(x.m)}</small><small class="ich">N${x.l}</small></button>`).join("");
+  return `<section class="chapter"><div class="chead"><span class="seal">話</span><div class="t"><b>By topic</b><span>The N5 and N4 kanji grouped by what they're about. Tap one to open its card.</span></div></div>
+   <p class="ixnote">Topics cover the 284 N5 and N4 kanji. For N3 and N2 kanji, and for kanji in real sentences, use the <a href="kanji-by-situation.html">kanji by situation</a> page.</p>
+   ${TOPICS.map(([id,jp,en])=>{ const v=Object.values(K).filter(x=>x.t===id&&vis(x.k)).sort((a,b)=>b.l-a.l||a.n-b.n); return v.length?`<div class="ixrow"><div class="ixr"><span style="font-family:var(--jp)">${jp}</span><small>${en}</small><small>${v.length} kanji</small></div><div class="itiles">${tiles(v)}</div></div>`:""; }).join("")}</section>`;
+}
+function soundIndex(){
+  const VK=Object.values(K).filter(x=>vis(x.k)).sort((a,b)=>a.n-b.n);
+  const map={}; VK.forEach(x=>x.on.forEach(o=>(map[o]=map[o]||[]).push(x)));
+  const groups=Object.entries(map).filter(([,v])=>v.length>1).sort((a,b)=>b[1].length-a[1].length||a[0].localeCompare(b[0],"ja"));
+  const kmap={}; VK.forEach(x=>WD[x.k].readings.filter(r=>r.t==="kun"&&r.words.some(z=>z[3]>=T())).forEach(r=>{const key=r.b;(kmap[key]=kmap[key]||[]).push(x);}));
+  const kg=Object.entries(kmap).filter(([,v])=>v.length>1).sort((a,b)=>a[0].localeCompare(b[0],"ja"));
+  const hira=s=>s.replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
+  if(!RD["氏"]) RD["氏"]=[["し"],["うじ"]];
+  const sp=(x,o)=>{ const g=x.parts.map(p=>p[0]).reverse().find(g=>g!==x.k&&RD[g]&&RD[g][0].includes(hira(o))); return g?`<small class="sp">sound part ${g}</small>`:""; };
+  const tiles=(v,o)=>v.map(x=>`<button class="itile" data-open="${x.k}" data-l="${x.l}"><b>${x.k}</b><small>${esc(x.m)}</small>${o?sp(x,o):""}<small class="ich">Ch ${CH.findIndex(c=>c.kanji.includes(x.k))+1}</small></button>`).join("");
+  return `<section class="chapter"><div class="chead"><span class="seal">音</span><div class="t"><b>Sound index</b><span>Every on reading shared by two or more ${TIERTXT[T()]} kanji</span></div></div>
+   <h3 class="ixh">Parts that give the sound</h3>
+   <p class="ixnote">Many kanji carry a part that hints at the on reading. Spot the part and you can often guess how a new kanji is read. Kanji with a dashed red border use the part but break the pattern.</p>
+   ${PHON.filter(([c,r,mem,odd])=>[...mem,...odd].some(vis)).map(([c,r,mem,odd,note])=>`<div class="ixrow"><div class="ixr rdv-on"><span class="seal sm">${c}</span>${esc(r)}<span class="rj">${r.split("・").map(romaji).join(" / ")}</span></div><div><div class="itiles">${tiles(mem.filter(vis).map(k=>K[k]))}${odd.filter(vis).map(k=>`<button class="itile odd" data-open="${k}"><b>${k}</b><small>${esc(K[k].m)}</small><small class="sp">${esc(K[k].on[0]||"")}</small></button>`).join("")}</div>${note?`<p class="ixnote">${esc(note)}</p>`:""}</div></div>`).join("")}
+   <h3 class="ixh">Same on reading, different shapes</h3>
+   <p class="ixnote">The same on reading across different shapes. Where kanji in a group also share a part (時 and 持 both contain 寺, and both read ジ), the part is carrying the sound. Everywhere else it's coincidence from the Chinese originals, and the other kanji in the word and the context tell them apart.</p>
+   ${groups.map(([o,v])=>`<div class="ixrow" data-n="${v.length}"><div class="ixr rdv-on">${o}<span class="rj">${romaji(o)}</span><small>${v.length} kanji</small></div><div class="itiles">${tiles(v,o)}</div></div>`).join("")}
+   <div class="chead" style="margin-top:2.5rem"><span class="seal" style="color:var(--rd-kun);border-color:var(--rd-kun)">訓</span><div class="t"><b>Shared kun readings</b><span>Native words that sound the same but are written with different kanji</span></div></div>
+   ${kg.map(([r,v])=>`<div class="ixrow"><div class="ixr rdv-kun">${r}<span class="rj">${romaji(r)}</span></div><div class="itiles">${tiles(v)}</div></div>`).join("")}</section>`;
+}
+function chapterBody(i){ const ch=CH[i]; return `${chapterHead(ch,i)}${soundMap(ch)}${ch.master?introCard(ch):""}${ch.kanji.filter(vis).map(k=>kanjiCard(K[k])).join("")}`; }
+function fillChapter(i){ const s=document.getElementById("ch-"+i); if(!s||s.dataset.filled) return; s.innerHTML=chapterBody(i); s.dataset.filled="1"; s.style.minHeight=""; }
+let io=null;
+function courseView(){
+  return CH.map((ch,i)=>{ const n=ch.kanji.filter(vis).length; return n?`<section class="chapter" id="ch-${i}" style="min-height:${n*460+200}px">${chapterHead(ch,i)}</section>`:""; }).join("")+
+  `<div class="endnote"><h3>How to use this deck</h3>
+   <p>Work one chapter at a time. Read the shape and the story, check the look-alikes, then say the example word out loud. The next day, switch to Flashcards for that chapter and mark the ones you know.</p>
+   <p>Heisig's own method has you write your own story for each kanji, because a story you invent sticks far harder than one you are handed. Treat every story here as a starting point and overwrite any that doesn't land. The stories are memory devices, not etymology.</p>
+   <p>Readings are included because this is a study aid for the JLPT, not a pure Heisig course; Heisig withholds readings in book one. For the strict version, use Test me and reveal only the keyword and story.</p>
+   <p>The N5 and N4 cards have hand-written stories and look-alikes. The N3 and N2 cards show the parts and a starter line instead, because the method works best with stories you write yourself: tap Write my own story on any card and it's saved in this browser. Look-alikes for N3 and N2 are found automatically from shared parts.</p>
+   <p><b>Your stories and progress</b> are stored in this browser only. <button class="linkbtn" id="expStories">Export them</button> to back them up or move them to another device, and <label class="linkbtn">import a file<input type="file" id="impStories" accept=".json,application/json" hidden></label> there.</p>
+   <p class="credits">Sources: N5 and N4 lists follow the community (tanos) lists; N3 and N2 kanji levels follow Jonathan Waller's JLPT lists. Readings and meanings for N3 and N2 kanji come from KANJIDIC2, © the Electronic Dictionary Research and Development Group, used under its CC BY-SA licence. Shape breakdowns come from the CHISE IDS database (cjkvi-ids). Vocabulary levels come from the open JLPT word lists derived from tanos.co.uk. JLPT has not published official lists since 2010, so every level here is a guide.</p></div>`;
+}
+// ---------- flashcards ----------
+let known=new Set(); try{known=new Set(JSON.parse(localStorage.getItem("heisig-known")||"[]"));}catch(e){}
+const saveKnown=()=>{try{localStorage.setItem("heisig-known",JSON.stringify([...known]));}catch(e){}};
+let fc={chap:"all",skip:false,order:[],i:0,flipped:false};
+function deckList(){
+  let list=fc.chap==="all"?Object.values(K).sort((a,b)=>a.n-b.n).map(x=>x.k):CH[+fc.chap].kanji.slice();
+  list=list.filter(vis);
+  if(fc.skip) list=list.filter(k=>!known.has(k));
+  return list;
+}
+function resetDeck(shuffle){ fc.order=deckList(); if(shuffle){ for(let i=fc.order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[fc.order[i],fc.order[j]]=[fc.order[j],fc.order[i]];} } fc.i=0; fc.flipped=false; }
+function cardsView(){
+  const opts=`<option value="all">All chapters, ${TIERTXT[T()]}</option>`+CH.map((c,i)=>c.kanji.some(vis)?`<option value="${i}" ${String(i)===fc.chap?"selected":""}>Chapter ${i+1}: ${esc(c.glyph||"")} ${esc(c.title)}</option>`:"").join("");
+  let body;
+  if(!fc.order.length) body=`<div class="empty">${fc.skip?"You've marked every card in this set as known. Untick Skip known to go through them again.":"No cards in this set."}</div>`;
+  else{
+    const x=K[fc.order[fc.i]];
+    body = fc.flipped
+      ? `<article class="kc" data-l="${x.l}"><div class="khead"><div class="gcol"><span class="g">${x.k}</span>${headPron(x)}</div><div><span class="kw">${esc(x.m)}</span><span class="lvb">N${x.l}</span></div><span class="no">No. ${x.n}</span></div>${kanjiSteps(x).replace(/class="hideable /g,'class="')}</article>`
+      : `<div class="fc-front" id="fcflip" role="button" tabindex="0" aria-label="Flip card"><div><div class="g">${x.k}</div><div class="hint">Recall the keyword and story, then tap to check</div></div></div>`;
+    body += `<div class="fc-nav"><button class="btn" id="fcprev">Previous</button><button class="btn primary" id="fcturn">${fc.flipped?"Show front":"Flip"}</button><button class="btn known" id="fcknown" aria-pressed="${known.has(x.k)}">${known.has(x.k)?"Known":"Mark as known"}</button><button class="btn" id="fcnext">Next</button></div>`;
+  }
+  return `<div class="fc-bar"><select id="fcchap" aria-label="Chapter">${opts}</select>
+    <button class="btn" id="fcshuffle">Shuffle</button>
+    <label><input type="checkbox" id="fcskip" ${fc.skip?"checked":""}> Skip known</label>
+    <span class="fc-count">${fc.order.length?`${fc.i+1} of ${fc.order.length}`:""} · ${known.size} known</span></div>${body}`;
+}
+function bindCards(){
+  const $=id=>document.getElementById(id);
+  $("fcchap").onchange=e=>{fc.chap=e.target.value;resetDeck(false);render();};
+  $("fcshuffle").onclick=()=>{resetDeck(true);render();};
+  $("fcskip").onchange=e=>{fc.skip=e.target.checked;resetDeck(false);render();};
+  if(!fc.order.length) return;
+  const flip=()=>{fc.flipped=!fc.flipped;render();};
+  if($("fcflip")) { $("fcflip").onclick=flip; }
+  $("fcturn").onclick=flip;
+  $("fcprev").onclick=()=>{fc.i=(fc.i-1+fc.order.length)%fc.order.length;fc.flipped=false;render();};
+  $("fcnext").onclick=()=>{fc.i=(fc.i+1)%fc.order.length;fc.flipped=false;render();};
+  $("fcknown").onclick=()=>{const k=fc.order[fc.i]; known.has(k)?known.delete(k):known.add(k); saveKnown(); render();};
+}
+document.addEventListener("keydown",e=>{
+  if(state.mode!=="cards"||!fc.order.length||/INPUT|SELECT/.test(e.target.tagName)) return;
+  if(e.key==="ArrowRight"){fc.i=(fc.i+1)%fc.order.length;fc.flipped=false;render();}
+  else if(e.key==="ArrowLeft"){fc.i=(fc.i-1+fc.order.length)%fc.order.length;fc.flipped=false;render();}
+  else if(e.key===" "&&!/BUTTON/.test(e.target.tagName)){e.preventDefault();fc.flipped=!fc.flipped;render();}
+});
+// ---------- state ----------
+let state={mode:"course",tier:"4",romaji:"on",test:"off"};
+try{Object.assign(state,JSON.parse(localStorage.getItem("heisig-deck")||"{}"));}catch(e){}
+if(!["5","4","3","2"].includes(state.tier)) state.tier=state.level==="n5"?"5":"4";
+let STORIES={}; try{STORIES=JSON.parse(localStorage.getItem("heisig-stories")||"{}");}catch(e){}
+const saveStories=()=>{try{localStorage.setItem("heisig-stories",JSON.stringify(STORIES));}catch(e){}};
+const save=()=>{try{localStorage.setItem("heisig-deck",JSON.stringify(state));}catch(e){}};
+const main=document.getElementById("main"), nav=document.getElementById("nav");
+function setupLazy(){
+  if(io) io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ fillChapter(+e.target.id.slice(3)); } }),{rootMargin:"1200px 0px"});
+  document.querySelectorAll("section.chapter[id^='ch-']").forEach(s=>io.observe(s));
+  buildNav();
+}
+function buildNav(){ nav.innerHTML=CH.map((c,i)=>c.kanji.some(vis)?`<a href="#ch-${i}" class="${c.master?"m":""}" title="Chapter ${i+1}: ${esc(c.title)}">${esc((c.glyph||"字").split(" ")[0])}</a>`:"").join(""); }
+function render(){
+  if(state.mode==="course"){
+    if(!main.dataset.course){ main.innerHTML=courseView(); main.dataset.course="1"; setupLazy(); }
+    nav.style.display="";
+  } else if(state.mode==="index"){
+    main.dataset.course=""; main.innerHTML=soundIndex(); nav.style.display="none";
+  } else if(state.mode==="topics"){
+    main.dataset.course=""; main.innerHTML=topicView(); nav.style.display="none";
+  } else {
+    main.dataset.course=""; main.innerHTML=cardsView(); bindCards(); nav.style.display="none";
+  }
+  apply();
+}
+function apply(){
+  document.body.classList.toggle("no-romaji",state.romaji==="off");
+
+  document.body.classList.toggle("testing",state.test==="on");
+  ["mode","tier","romaji","test"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset[k]===state[k])));
+}
+buildNav();
+nav.addEventListener("click",e=>{ const a=e.target.closest("a[href^='#ch-']"); if(!a) return; e.preventDefault(); const i=+a.getAttribute("href").slice(4); fillChapter(i); scrollToEl(document.getElementById("ch-"+i)); });
+document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{state.mode=b.dataset.mode;save();if(state.mode==="cards")resetDeck(false);render();window.scrollTo(0,0);});
+let pendingAnc=null;
+function topCard(){
+  const top=offsetTop();
+  for(const c of document.querySelectorAll('.kc[id^="k-"]')){ const r=c.getBoundingClientRect(); if(r.bottom>top+4) return {k:c.id.slice(2),off:Math.max(r.top-top,-r.height)}; }
+  return null;
+}
+function nearestVisible(k){
+  if(vis(k)) return k;
+  const ord=Object.values(K).sort((x,y)=>x.n-y.n), i=ord.findIndex(x=>x.k===k);
+  const f=ord.slice(i+1).find(x=>vis(x.k))||ord.slice(0,i).reverse().find(x=>vis(x.k));
+  return f?f.k:null;
+}
+document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{
+  if(b.dataset.tier===state.tier) return;
+  const anc=state.mode==="course"?topCard():null, fcK=state.mode==="cards"&&fc.order.length?fc.order[fc.i]:null, y=window.scrollY;
+  state.tier=b.dataset.tier; save(); main.dataset.course="";
+  if(state.mode==="cards"){ resetDeck(false); const i=fcK?fc.order.indexOf(fcK):-1; if(i>=0) fc.i=i; }
+  render();
+  if(anc&&pendingAnc&&anc.k===pendingAnc.fb&&vis(pendingAnc.orig)){ anc.k=pendingAnc.orig; anc.off=pendingAnc.off; }
+  pendingAnc=null;
+  if(anc){ const k=nearestVisible(anc.k); if(!k) return; if(k!==anc.k) pendingAnc={orig:anc.k,fb:k,off:anc.off}; fillChapter(chapterOf(k));
+    const el=document.getElementById("k-"+k); if(!el) return;
+    const off=k===anc.k?anc.off:0;
+    const place=()=>window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-offsetTop()-off);
+    place(); [80,250,600].forEach(t=>setTimeout(place,t));
+    if(k!==anc.k) flash(el.querySelector(".khead"));
+  } else if(state.mode!=="cards") window.scrollTo(0,y);
+});
+document.querySelectorAll("[data-romaji]").forEach(b=>b.onclick=()=>{state.romaji=b.dataset.romaji;save();apply();});
+document.querySelectorAll("[data-test]").forEach(b=>b.onclick=()=>{state.test=b.dataset.test;save();document.querySelectorAll(".hideable.shown").forEach(h=>h.classList.remove("shown"));apply();});
+const jumpStack=[];
+const backBtn=document.createElement("button"); backBtn.className="btn backbtn"; backBtn.hidden=true; document.body.appendChild(backBtn);
+function offsetTop(){ const c=document.querySelector(".controls"); return (c?c.offsetHeight:0)+12; }
+function scrollToEl(el){ const y=el.getBoundingClientRect().top+window.scrollY-offsetTop(); window.scrollTo({top:y,behavior:"auto"}); }
+function flash(el){ if(!el) return; el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
+function chapterOf(c){ return CH.findIndex(ch=>ch.kanji.includes(c)); }
+function jumpTo(c,w,from){
+  if(!K[c]) return;
+  if(!vis(c)){ state.tier=String(K[c].l); save(); main.dataset.course=""; }
+  if(state.mode!=="course"){ state.mode="course"; save(); }
+  if(!main.dataset.course) render();
+  fillChapter(chapterOf(c));
+  let card=document.getElementById("k-"+c);
+  if(!card) return;
+  jumpStack.push({y:window.scrollY,from,w});
+  const li=w?[...card.querySelectorAll("li[data-w]")].find(l=>l.dataset.w===w):null;
+  if(li){ const d=li.closest("details"); if(d) d.open=true; }
+  const tgt=li?(li.closest(".rblk,.spb")||li):card;
+  scrollToEl(tgt); flash(li||card.querySelector(".khead"));
+  [120,350,700].forEach(t=>setTimeout(()=>scrollToEl(tgt),t));
+  const prev=jumpStack[jumpStack.length-1];
+  backBtn.textContent=from?`← Back to ${from}`:"← Back"; backBtn.hidden=false;
+}
+backBtn.onclick=()=>{ const s=jumpStack.pop(); if(!s) return;
+  let done=false;
+  if(s.from){ fillChapter(chapterOf(s.from)); const card=document.getElementById("k-"+s.from); const li=card&&s.w?[...card.querySelectorAll("li[data-w]")].find(l=>l.dataset.w===s.w):null;
+    if(li||card){ scrollToEl(li?(li.closest(".rblk,.spb")||li):card); flash(li); done=true; } }
+  if(!done) window.scrollTo({top:s.y,behavior:"auto"});
+  const nx=jumpStack[jumpStack.length-1]; if(nx){ backBtn.textContent=nx.from?`← Back to ${nx.from}`:"← Back"; } else backBtn.hidden=true; };
+document.addEventListener("click",e=>{ const j=e.target.closest("[data-jump]"); if(!j) return; e.preventDefault(); e.stopPropagation(); jumpTo(j.dataset.jump,j.dataset.w,j.dataset.from); },true);
+main.addEventListener("click",e=>{const t=e.target.closest("[data-open]"); if(t){ jumpTo(t.dataset.open,null,null); return; }});
+// story editing
+main.addEventListener("click",e=>{
+  const ed=e.target.closest("[data-edit]"); if(ed){ const k=ed.dataset.edit, box=ed.closest(".mystory");
+    box.innerHTML=`<textarea class="storyedit" rows="3" placeholder="A short, vivid scene that joins the parts and means “${esc(K[k].m)}”">${esc(STORIES[k]||"")}</textarea><div class="storybtns"><button class="btn primary" data-save="${k}">Save</button><button class="btn" data-cancel="${k}">Cancel</button>${STORIES[k]?`<button class="btn danger" data-del="${k}">Delete</button>`:""}</div>`;
+    box.querySelector("textarea").focus(); return; }
+  const sv=e.target.closest("[data-save],[data-cancel],[data-del]"); if(sv){ const k=sv.dataset.save||sv.dataset.cancel||sv.dataset.del, box=sv.closest(".mystory");
+    if(sv.dataset.save){ const v=box.querySelector("textarea").value.trim(); if(v) STORIES[k]=v; else delete STORIES[k]; saveStories(); }
+    if(sv.dataset.del){ delete STORIES[k]; saveStories(); }
+    const x=K[k]; const tmp=document.createElement("div"); tmp.innerHTML=storyHtml(x); box.replaceWith(tmp.querySelector(".mystory")); return; }
+  if(e.target.id==="expStories"){ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([JSON.stringify({stories:STORIES,known:[...known]})],{type:"application/json"})); a.download="kanji-stories-and-progress.json"; a.click(); }
+});
+main.addEventListener("change",e=>{ if(e.target.id!=="impStories") return; const f=e.target.files[0]; if(!f) return;
+  f.text().then(t=>{ try{ const d=JSON.parse(t); Object.assign(STORIES,d.stories||{}); (d.known||[]).forEach(k=>known.add(k)); saveStories(); saveKnown(); main.dataset.course=""; render(); alert("Imported."); }catch(err){ alert("That file isn't an export from this deck."); } }); });
+main.addEventListener("click",e=>{const h=e.target.closest(".hideable");if(h&&state.test==="on")h.classList.add("shown");});
+main.addEventListener("keydown",e=>{const h=e.target.closest(".hideable");if(h&&state.test==="on"&&(e.key==="Enter"||e.key===" ")){e.preventDefault();h.classList.add("shown");}});
+if(state.mode==="cards") resetDeck(false);
+render();
+// open a card from a link such as master-kanji-shapes.html?from=sb#k-時
+(function(){
+  const m=location.hash.match(/^#k-(.+)$/); if(!m) return;
+  const k=decodeURIComponent(m[1]); const src=(location.search.match(/[?&]from=(\w+)/)||[])[1]; const fromSB=!!src;
+  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"]}[src]||["← Back","../index.html"];
+  setTimeout(()=>{
+    jumpTo(k,null,null);
+    if(!fromSB) return;
+    jumpStack.length=0;
+    const inner=backBtn.onclick;
+    const toSentence=()=>{ backBtn.textContent=SRC[0]; backBtn.hidden=false; };
+    toSentence();
+    backBtn.onclick=()=>{ if(jumpStack.length){ inner(); if(!jumpStack.length) toSentence(); return; }
+      if(history.length>1) history.back(); else location.href=SRC[1]; };
+  },0);
+})();
+
+(function(){ let v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
+  const set=x=>{ v=x; document.body.classList.toggle("no-rdcol",v==="off");
+    document.querySelectorAll("[data-rdcol]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rdcol===v));
+    try{ localStorage.setItem("rdcol",v); }catch(e){} };
+  document.querySelectorAll("[data-rdcol]").forEach(b=>b.addEventListener("click",()=>set(b.dataset.rdcol)));
+  set(v); })();
+</script>
+</body>
+</html>

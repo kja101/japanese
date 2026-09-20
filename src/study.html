@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn the N5 and N4 kanji: method and spaced-repetition flashcards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F5F1; --sheet:#FFFFFF; --ink:#1D2433; --muted:#646B78; --rule:#DCDFE5;
+  --seal:#B3261E; --seal-wash:#FBEDEC; --chip:#E7E9EF; --indigo:#2C3E73; --indigo-wash:#E9EDF7;
+  --green:#2F6B45; --green-wash:#EAF3EC; --amber:#9A6A12; --amber-wash:#FBF3E2;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --en:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+    --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+    --green:#7CC49A; --green-wash:#1F3328; --amber:#E0A548; --amber-wash:#3A3020;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5}
+header.top{max-width:820px;margin:0 auto;padding:2.2rem 1.25rem .8rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2rem,6vw,3.2rem);margin:0;line-height:1.15}
+.sub{margin:.6rem 0 0;color:var(--muted);max-width:64ch}
+.tabs{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;gap:.2rem;padding:.5rem max(1.25rem,calc((100% - 820px)/2 + 1.25rem));overflow-x:auto}
+.tabs button{font:inherit;border:0;background:transparent;color:var(--muted);padding:.45rem .8rem;border-radius:6px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper);font-weight:600}
+button:focus-visible,select:focus-visible,label.btn:focus-within{outline:2px solid var(--indigo);outline-offset:2px}
+main{max-width:820px;margin:0 auto;padding:1.2rem 1.25rem 4rem}
+h3{margin:1.8rem 0 .6rem;font-size:1.1rem}
+.muted{color:var(--muted);font-weight:400} .small{font-size:.9rem}
+.btn{font:inherit;font-size:.95rem;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:8px;padding:.55rem 1rem;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem}
+.btn.primary{background:var(--indigo);border-color:var(--indigo);color:var(--sheet);font-weight:600}
+.btn.wide{width:100%;justify-content:center;padding:.8rem 1rem;font-size:1.05rem}
+.btn.danger{color:var(--seal)}
+kbd{font-family:var(--en);font-size:.7rem;border:1px solid currentColor;border-radius:3px;padding:0 .3rem;opacity:.6}
+@media (hover:none){ kbd{display:none} }
+/* today */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem}
+.stats div{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:.7rem .6rem;text-align:center}
+.stats b{display:block;font-size:1.8rem;line-height:1.1}
+.stats span{font-size:.8rem;color:var(--muted)}
+.bar{position:relative;height:10px;background:var(--chip);border-radius:5px;margin:1rem 0 .4rem;overflow:hidden}
+.bar div{position:absolute;left:0;top:0;bottom:0;background:var(--indigo-wash);border-right:1px solid var(--indigo)}
+.bar div.k{background:var(--indigo);border:0}
+.barlab{color:var(--muted);font-size:.9rem;margin:0 0 1rem}
+.set{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center}
+.set label{display:flex;gap:.5rem;align-items:center}
+select{font:inherit;padding:.4rem .5rem;border:1px solid var(--rule);border-radius:6px;background:var(--sheet);color:var(--ink)}
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:.45rem}
+.tile{font:inherit;cursor:pointer;background:var(--sheet);color:var(--ink);border:1px solid var(--rule);border-radius:8px;padding:.45rem .3rem;display:flex;flex-direction:column;align-items:center;gap:.1rem}
+.tile .tg{font-family:var(--jp);font-size:1.9rem;line-height:1.15}
+.tile .tm{font-size:.75rem;color:var(--muted);text-align:center;line-height:1.2}
+.st-lrn{border-color:var(--amber);background:var(--amber-wash)}
+.st-rev{border-color:var(--indigo);background:var(--indigo-wash)}
+.st-mat{border-color:var(--green);background:var(--green-wash)}
+.key{display:inline-block;border:1px solid var(--rule);border-radius:4px;padding:0 .4rem;font-size:.85rem;margin:0 .15rem}
+.lesson h3 .fams{font-family:var(--jp);color:var(--muted);font-weight:400;margin-left:.4rem}
+/* study */
+.counts{display:flex;gap:1rem;justify-content:center;font-size:.9rem;margin-bottom:.8rem}
+.c-l{color:var(--amber)} .c-r{color:var(--indigo)} .c-n{color:var(--green)}
+.fc{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.front{text-align:center;padding:1.6rem 1rem 1.2rem;position:relative}
+.badge{position:absolute;left:.8rem;top:.7rem;font-size:.75rem;border-radius:4px;padding:.05rem .45rem}
+.badge.new{background:var(--green-wash);color:var(--green)} .badge.lrn{background:var(--amber-wash);color:var(--amber)} .badge.rev{background:var(--indigo-wash);color:var(--indigo)}
+.fg{font-family:var(--jp);font-size:8rem;line-height:1.1}
+.fw{font-family:var(--jp);font-size:3.4rem;line-height:1.3;padding:1rem 0}
+.prompt{color:var(--muted);margin:.4rem auto 0;max-width:40ch;font-size:.95rem}
+.back{border-top:1px solid var(--rule);padding:1rem 1.1rem}
+.actions{margin:1rem 0}
+.grades{display:grid;grid-template-columns:repeat(4,1fr);gap:.45rem}
+.grades .btn{flex-direction:column;gap:.05rem;justify-content:center;padding:.55rem .3rem}
+.grades small{font-size:.78rem;opacity:.8}
+.g1{border-color:var(--seal);color:var(--seal)} .g2{border-color:var(--amber);color:var(--amber)} .g3{border-color:var(--indigo);color:var(--indigo)} .g4{border-color:var(--green);color:var(--green)}
+.done{text-align:center;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:2rem 1.2rem}
+.done h2{margin:.2rem 0 .4rem} .done p{color:var(--muted);max-width:46ch;margin:0 auto 1rem}
+.done .btn{margin:.3rem}
+.wback{text-align:center;padding-bottom:.9rem;margin-bottom:.9rem;border-bottom:1px dashed var(--rule)}
+.ww{font-family:var(--jp);font-size:2.6rem;line-height:1.9}
+.ww rt{font-size:.45em}
+.wr{font-size:1rem}
+.we{font-size:1.1rem;font-weight:600}
+/* detail */
+.dhead{display:flex;gap:1rem;align-items:center;margin-bottom:.7rem}
+.dhead .g{font-family:var(--jp);font-size:3.6rem;line-height:1}
+.dhead .kw{font-size:1.4rem;font-weight:600}
+.meta{color:var(--muted);font-size:.88rem}
+.lvb{font-size:.72rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted)}
+.blk{border-left:3px solid var(--c);padding:.2rem 0 .2rem .8rem;margin:.7rem 0}
+.blk h4{margin:0 0 .25rem;font-size:.8rem;color:var(--c);font-weight:600}
+.s1{--c:var(--indigo)} .s2{--c:var(--seal)} .s3{--c:var(--green)}
+.eq{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem}
+.part{display:inline-flex;flex-direction:column;align-items:center;min-width:2.2rem}
+.part b{font-family:var(--jp);font-weight:400;font-size:1.7rem;line-height:1.2}
+.part small{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.2}
+.op{color:var(--muted)}
+.story{margin:.4rem 0 0;font-size:1.02rem}
+.trap{display:flex;gap:.6rem;align-items:baseline;margin:.15rem 0}
+.trap .tg{font-family:var(--jp);font-size:1.5rem;color:var(--seal);min-width:1.8rem}
+.none{color:var(--muted);margin:0;font-size:.93rem}
+.reads{display:grid;grid-template-columns:auto 1fr;gap:.1rem .7rem;align-items:baseline}
+.reads .lab{font-size:.75rem;color:var(--muted)}
+.reads .v{font-family:var(--jp);font-size:1.05rem}
+.reads .ok{opacity:.55}
+.rj{font-family:var(--en);font-style:italic;color:var(--muted);font-size:.85rem;margin-left:.3rem}
+.exw{margin:.5rem 0 0}
+.exw .w{font-family:var(--jp);font-size:1.3rem}
+.exw .e{color:var(--muted)}
+.rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(10,12,18,.5);z-index:20;display:grid;place-items:center;padding:1rem}
+.modal[hidden]{display:none}
+.mbox{background:var(--sheet);border-radius:10px;max-width:560px;width:100%;max-height:88vh;overflow:auto;padding:1rem 1.1rem;position:relative}
+.close{position:sticky;top:0;float:right;font-size:.85rem;padding:.3rem .7rem}
+/* doc */
+.doc{max-width:66ch}
+.doc h2{font-size:1.35rem;margin:2rem 0 .5rem}
+.doc h2:first-child{margin-top:.4rem}
+.doc h3{font-size:1.08rem;margin:1.3rem 0 .3rem}
+.doc p,.doc li{font-size:1.02rem}
+.doc ol{padding-left:1.3rem}
+.doc li{margin:.4rem 0}
+table{border-collapse:collapse;width:100%;font-size:.95rem;margin:.6rem 0}
+th,td{text-align:left;padding:.45rem .5rem;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.85rem;color:var(--muted);font-weight:600}
+.doc .rd .rb{font-weight:600}
+@media (max-width:620px){
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stats div:nth-child(n+4){grid-column:span 1}
+  .fg{font-size:6.5rem}
+  .fw{font-size:2.6rem}
+  .grades .btn{font-size:.9rem}
+}
+
+:root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+:root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
+.rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
+body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
+body:not(.no-rdcol) .rd .rb,body:not(.no-rdcol) span.rd:not(.kana){text-decoration:underline 2px var(--rc);text-underline-offset:.22em;text-decoration-skip-ink:none}
+body:not(.no-rdcol) .rd-sp .rb,body:not(.no-rdcol) span.rd-sp:not(.kana){text-decoration-style:dotted}
+body:not(.no-rdcol) .rd.kana{color:var(--rc)}
+.rd-legend{max-width:var(--rd-max,980px);margin:0 auto;padding:0 1.25rem .55rem;display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.85rem;color:var(--muted)}
+.rd-legend .sw{font-family:var(--jp);font-size:1rem;margin-right:.25rem}
+.no-rdcol .rd-legend{display:none}
+.rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
+.no-rdcol .rdv-on,.no-rdcol .rdv-kun{color:inherit}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>漢字 N5・N4 学習</h1>
+  <p class="sub">Learn all 284 N5 and N4 kanji the way the best teachers and the memory research agree on: building blocks first, one vivid story per kanji, one real word for the readings, and spaced-repetition flashcards that schedule every review for you.</p>
+</header>
+<nav class="tabs" role="tablist">
+  <button role="tab" data-tab="today" aria-selected="true">Today</button>
+  <button role="tab" data-tab="study" aria-selected="false">Study</button>
+  <button role="tab" data-tab="lessons" aria-selected="false">Lessons</button>
+  <button role="tab" data-tab="method" aria-selected="false">The method</button>
+</nav>
+<main>
+<section id="tab-today" class="tab"></section>
+<section id="tab-study" class="tab" hidden></section>
+<section id="tab-lessons" class="tab" hidden></section>
+<section id="tab-method" class="tab" hidden>
+<article class="doc">
+<h2>The short answer</h2>
+<p>The fastest reliable route to the N5 and N4 kanji is about <b>7 weeks at 25 to 35 minutes a day</b>: 10 new kanji a day for 29 days, with the flashcard reviews carrying on for another 3 to 4 weeks until they stick. You can halve the introduction phase by doing 20 a day, but the daily reviews roughly double, to about an hour. Going faster than that mostly buys forgetting.</p>
+<p>That pace works because it combines five things that teachers who get results (Heisig's <i>Remembering the Kanji</i>, WaniKani and Tofugu, and the Anki community) all share, and that the memory research backs up.</p>
+
+<h2>The five principles</h2>
+<h3>1. Learn the building blocks before the kanji</h3>
+<p>Kanji are not 284 separate pictures. Most are two or three familiar parts. Once 木 (tree) and 亻 (person) are known, 休 (rest) is "a person leaning on a tree" rather than seven random strokes. This deck orders every kanji so its parts always come first, starting with the twelve master shapes (人 口 日 木 水 手 心 言 糸 門 辶 力) that between them sit inside well over 100 of the 284.</p>
+<h3>2. One vivid story per kanji</h3>
+<p>Tie the parts together with a short, concrete, slightly odd image. This is the keyword method, and it's the best-supported mnemonic technique in the research (it goes back to Atkinson and Raugh's vocabulary studies in the 1970s). Every card has a story, but Heisig's advice stands: if yours is more vivid, overwrite it, because a story you invent sticks better than one you're handed.</p>
+<h3>3. Meaning first, then one real word for the readings</h3>
+<p>Don't memorise reading lists. Each kanji first gets a <b>meaning card</b> (kanji → keyword and story). Once you know the meaning, a <b>word card</b> unlocks: one common word that carries the kanji's main reading, such as 食堂 for しょく or 食べる for た. The JLPT tests words in sentences, never reading lists, and a word gives the reading something to hang on. The colours tell you which kind of reading you're looking at: <span class="rd rd-on"><span class="rb">indigo</span></span> for on (from Chinese, mostly in compounds), <span class="rd rd-kun"><span class="rb">green</span></span> for kun (native Japanese, mostly kanji plus hiragana), and <span class="rd rd-sp"><span class="rb">red dotted</span></span> for a special whole-word reading.</p>
+<h3>4. Test yourself instead of re-reading</h3>
+<p>Looking at a card and thinking "yes, I know that" does very little. Trying to recall the answer before you flip, even when you fail, is what builds the memory. This is the testing effect, one of the most replicated findings in learning science (Roediger and Karpicke, 2006). So always say the keyword, or the reading, out loud before you tap Show answer.</p>
+<h3>5. Space the reviews, and never skip a day's reviews</h3>
+<p>Each time you remember a card, the gap before you see it again grows: 1 day, 3 days, a week, three weeks and beyond. Reviewing just as you're about to forget is far more efficient than cramming (the spacing effect, first shown by Ebbinghaus and confirmed by large reviews such as Cepeda and colleagues in 2006). The scheduler here does the timing. Your only job is to clear what's due each day. If you miss a day, do your reviews before any new cards.</p>
+
+<h2>Your daily routine</h2>
+<ol>
+<li><b>Reviews first</b> (10 to 20 minutes). Open Study and clear everything due. Grade honestly: <b>Again</b> if you didn't get it, <b>Hard</b> if it took a real struggle, <b>Good</b> if you got it, <b>Easy</b> only if it was instant.</li>
+<li><b>New kanji</b> (10 to 15 minutes). The same session then brings in today's new cards in order. For each one, read the parts and story slowly, picture the scene, and check the look-alikes. Those are what cost marks.</li>
+<li><b>Use them</b> (5 minutes, optional but powerful). Read a few sentences in the sentence builder or the phrase guide and spot today's kanji. Seeing a kanji in real text is what turns "I recognise it" into "I can read it".</li>
+</ol>
+
+<h2>The timeline at 10 new kanji a day</h2>
+<table>
+<thead><tr><th>Weeks</th><th>What happens</th><th>Daily time</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>The twelve master shapes and their families. Reviews are light.</td><td>about 20 min</td></tr>
+<tr><td>2 to 4</td><td>The rest of the kanji arrive, 10 a day. Reviews build up as the word cards unlock.</td><td>25 to 35 min</td></tr>
+<tr><td>5 to 7</td><td>No new cards. Reviews thin out as intervals stretch to weeks.</td><td>15 to 20 min, falling</td></tr>
+<tr><td>After that</td><td>A few minutes of reviews a day keeps all 284 alive while you move on to N3.</td><td>5 to 10 min</td></tr>
+</tbody>
+</table>
+
+<h2>What to skip if speed matters</h2>
+<p><b>Handwriting.</b> Writing kanji by hand helps some people remember detail, but it's slow, and the JLPT only tests recognition. For the shortest route, trace a new kanji once with your finger to notice its parts, then move on. <b>Stroke order</b> can wait until you want to write. <b>Every reading of every kanji</b>: learn the one or two in the word card, and pick up the rest as you meet new words.</p>
+
+<h2>How the other files fit in</h2>
+<p>This file is the engine: the order, the stories and the scheduler. The others are for looking things up and for practice. Use the <b>Heisig deck</b> to read a whole family at once, the <b>kanji by shape, sound and topic</b> file to see patterns such as sound parts (寺 gives ジ in 時 and 持), the <b>kana sounds</b> file for the reading traps, and the <b>sentence builder</b> and <b>phrase guide</b> to see your kanji in real sentences.</p>
+
+<h2>A note on the evidence</h2>
+<p>Spacing, retrieval practice and keyword mnemonics are among the most reliable findings in the psychology of learning. The specific schedule here (1 and 10 minute learning steps, then intervals that grow by about 2.5 times each success) follows Anki's widely used version of the SM-2 algorithm, simplified. The time estimates are typical, not guaranteed. Your pace depends on your honesty with the grading buttons and on not skipping days.</p>
+</article>
+</section>
+</main>
+
+<script src="../assets/common.js"></script>
+<script>
+const DATA = __DATA__;
+
+
+// ---------- data ----------
+const K = DATA.K, CHT = DATA.CHT, ORD = {shape: DATA.order, n5: DATA.order_n5};
+const LESSON = 10;
+const MIN = 60e3, DAY = 864e5, STEPS = [1*MIN, 10*MIN];
+// ---------- helpers ----------
+const BASE={あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",や:"ya",ゆ:"yu",よ:"yo",ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po"};
+const SY={ゃ:"a",ゅ:"u",ょ:"o"};
+const toH=s=>s.replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
+function romaji(k){const s=toH(k);let o="",i=0;while(i<s.length){const c=s[i],n=s[i+1];
+ if(c==="っ"){const r=romaji(s.slice(i+1,i+3));o+=r.startsWith("ch")?"t":(r[0]||"");i++;continue;}
+ if(c==="ー"){o+=o.slice(-1);i++;continue;}
+ if(n&&SY[n]&&BASE[c]){const b=BASE[c];o+=(["shi","chi","ji"].includes(b)?b.slice(0,-1):b.slice(0,-1)+"y")+SY[n];i+=2;continue;}
+ if(c==="ん"){o+=(n&&/[あいうえおやゆよ]/.test(n))?"n'":"n";i++;continue;}
+ o+=BASE[c]!==undefined?BASE[c]:c;i++;}return o;}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NOTE=/([\u4e00-\u9fff々]+)\{([^}]+)\}/g;
+const plainOf=s=>s.replace(NOTE,"$1");
+const kanaOf=s=>s.replace(NOTE,"$2");
+const rubyOf=s=>{let o="",last=0;s.replace(NOTE,(m,b,r,off)=>{o+=esc(s.slice(last,off))+rdRuby(b,r);last=off+m.length;return m;});return o+esc(s.slice(last));};
+const kunHtml=r=>{const[a,b]=r.split(".");return `${a}${b?`<span class="ok">${b}</span>`:""}<span class="rj">${romaji(r.replace(".",""))}</span>`;};
+const onHtml=r=>`${r}<span class="rj">${romaji(r)}</span>`;
+// ---------- state ----------
+const KEY="kanji-srs-v1";
+let S={cards:{},day:{key:"",newDone:0},settings:{perDay:10,order:"shape"},log:{}};
+try{ const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s) S=Object.assign(S,s); }catch(e){}
+const save=()=>{ try{ localStorage.setItem(KEY,JSON.stringify(S)); }catch(e){} };
+const dayKey=(t=Date.now())=>{ const d=new Date(t-4*3600e3); return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); };
+function endOfDay(){ const d=new Date(Date.now()-4*3600e3); d.setHours(0,0,0,0); return d.getTime()+DAY+4*3600e3; }
+function rollDay(){ const k=dayKey(); if(S.day.key!==k){ S.day={key:k,newDone:0}; save(); } }
+const order=()=>ORD[S.settings.order]||ORD.shape;
+const cardOf=id=>S.cards[id];
+const started=k=>!!S.cards["m:"+k];
+const graduated=c=>c&&c.step===-1;
+// ---------- scheduler ----------
+function grade(c,g,t=Date.now()){
+  c=Object.assign({},c);
+  if(c.step>=0){
+    if(g===1){ c.step=0; c.due=t+STEPS[0]; }
+    else if(g===2){ c.due=t+(c.step===0?6*MIN:STEPS[c.step]); }
+    else if(g===3){ c.step++; if(c.step>=STEPS.length){ c.step=-1; c.ivl=c.rivl||1; c.due=t+c.ivl*DAY; } else c.due=t+STEPS[c.step]; }
+    else { c.step=-1; c.ivl=Math.max(c.rivl||0,4); c.due=t+c.ivl*DAY; }
+  } else {
+    if(g===1){ c.lapses++; c.ease=Math.max(1.3,c.ease-.2); c.rivl=Math.max(1,Math.round(c.ivl*.5)); c.step=1; c.due=t+STEPS[1]; }
+    else { const iv=g===2?c.ivl*1.2:g===3?c.ivl*c.ease:c.ivl*c.ease*1.3;
+      c.ivl=Math.max(c.ivl+1,Math.round(iv)); if(g===2)c.ease=Math.max(1.3,c.ease-.15); if(g===4)c.ease+=.15; c.due=t+c.ivl*DAY; }
+  }
+  c.reps++; return c;
+}
+const newCard=()=>({step:0,due:Date.now(),ivl:0,ease:2.5,reps:0,lapses:0,rivl:0});
+function fmt(ms){ if(ms<60*MIN) return Math.max(1,Math.round(ms/MIN))+"m"; if(ms<DAY) return Math.round(ms/3600e3)+"h"; const d=ms/DAY; return d<30?Math.round(d)+"d":d<365?(d/30).toFixed(1).replace(".0","")+"mo":(d/365).toFixed(1)+"y"; }
+function queue(){
+  rollDay(); const t=Date.now(), eod=endOfDay();
+  const learn=[], rev=[], wordNew=[];
+  for(const [id,c] of Object.entries(S.cards)){
+    if(c.step>=0){ if(c.due<=t) learn.push(id); }
+    else if(c.due<=eod) rev.push(id);
+  }
+  learn.sort((a,b)=>S.cards[a].due-S.cards[b].due);
+  rev.sort((a,b)=>S.cards[a].due-S.cards[b].due);
+  for(const k of order()){ const m=S.cards["m:"+k]; if(graduated(m)&&!S.cards["w:"+k]) wordNew.push("w:"+k); }
+  const left=Math.max(0,S.settings.perDay-S.day.newDone);
+  const meaningNew=order().filter(k=>!started(k)).slice(0,left).map(k=>"m:"+k);
+  return {learn,rev,wordNew,meaningNew};
+}
+function nextId(){
+  const q=queue();
+  if(q.learn.length) return q.learn[0];
+  if(q.rev.length) return q.rev[0];
+  if(q.wordNew.length) return q.wordNew[0];
+  if(q.meaningNew.length) return q.meaningNew[0];
+  return null;
+}
+function pendingLearning(){ const t=Date.now(); let min=Infinity; for(const c of Object.values(S.cards)) if(c.step>=0&&c.due>t) min=Math.min(min,c.due); return min===Infinity?null:min; }
+// ---------- card rendering ----------
+function detail(k){
+  const x=K[k];
+  const parts=x.parts.map(([g,m])=>`<span class="part"><b>${esc(g)}</b><small>${esc(m)}</small></span>`).join('<span class="op">+</span>');
+  return `<div class="det">
+   <div class="dhead"><span class="g">${k}</span><div><div class="kw">${esc(x.m)}</div><div class="meta"><span class="lvb">N${x.l}</span> ${esc(CHT[k]||"")}</div></div></div>
+   <div class="blk s1"><h4>Shape</h4><div class="eq">${parts}</div><p class="story">${esc(x.story)}</p></div>
+   <div class="blk s2"><h4>Look-alikes</h4>${x.traps.length?x.traps.map(([g,n])=>`<div class="trap"><span class="tg">${esc(g)}</span><span>${esc(n)}</span></div>`).join(""):`<p class="none">No close look-alikes at N5 or N4.</p>`}</div>
+   <div class="blk s3"><h4>Readings</h4><div class="reads">${x.on.length?`<span class="lab">On</span><span class="v rdv-on">${x.on.map(onHtml).join("、")}</span>`:""}${x.kun.length?`<span class="lab">Kun</span><span class="v rdv-kun">${x.kun.map(kunHtml).join("、")}</span>`:""}</div>
+     <p class="exw"><span class="w">${rubyOf(x.ex)}</span><span class="rj">${romaji(kanaOf(x.ex))}</span> <span class="e">${esc(x.exEn)}</span></p></div>
+  </div>`;
+}
+function front(id){
+  const [t,k]=id.split(":"), x=K[k], c=S.cards[id];
+  const isNew=!c;
+  const badge=isNew?`<span class="badge new">New ${t==="m"?"kanji":"word"}</span>`:c.step>=0?`<span class="badge lrn">Learning</span>`:`<span class="badge rev">Review</span>`;
+  if(t==="m") return `${badge}<div class="fg">${k}</div><p class="prompt">${isNew?"A new kanji. Tap Show answer and read the parts and story slowly, picturing the scene.":"What's the keyword? Picture the story before you flip."}</p>`;
+  return `${badge}<div class="fw">${esc(plainOf(x.ex))}</div><p class="prompt">How is it read, and what does it mean?</p>`;
+}
+function back(id){
+  const [t,k]=id.split(":"), x=K[k];
+  if(t==="m") return detail(k);
+  return `<div class="wback"><div class="ww">${rubyOf(x.ex)}</div><div class="wr rj">${romaji(kanaOf(x.ex))}</div><div class="we">${esc(x.exEn)}</div></div>${detail(k)}`;
+}
+// ---------- study view ----------
+let cur=null, shown=false;
+function renderStudy(){
+  const el=document.getElementById("tab-study");
+  const q=queue();
+  cur=nextId(); shown=false;
+  const counts=`<div class="counts"><span class="c-l">${q.learn.length} learning</span><span class="c-r">${q.rev.length} review</span><span class="c-n">${q.wordNew.length+q.meaningNew.length} new</span></div>`;
+  if(!cur){
+    const p=pendingLearning();
+    el.innerHTML=counts+`<div class="done"><h2>${p?"Nothing due right now":"Done for today"}</h2><p>${p?`Your next learning card comes back in ${fmt(p-Date.now())}. You can wait for it, or look at it now.`:"Every card due today is cleared. Come back tomorrow: the reviews are what make it stick."}</p>${p?`<button class="btn primary" id="ahead">Study it now</button>`:""}<button class="btn" data-go="today">Back to Today</button></div>`;
+    const a=document.getElementById("ahead"); if(a) a.onclick=()=>{ for(const c of Object.values(S.cards)) if(c.step>=0&&c.due>Date.now()) c.due=Date.now(); save(); renderStudy(); };
+    return;
+  }
+  el.innerHTML=counts+`<div class="fc" id="fc"><div class="front">${front(cur)}</div><div class="back" id="back" hidden></div></div>
+    <div class="actions" id="act"><button class="btn primary wide" id="show">Show answer <kbd>space</kbd></button></div>`;
+  document.getElementById("show").onclick=reveal;
+}
+function reveal(){
+  if(!cur||shown) return; shown=true;
+  const b=document.getElementById("back"); b.innerHTML=back(cur); b.hidden=false;
+  const c=S.cards[cur]||newCard();
+  const lab=["Again","Hard","Good","Easy"];
+  document.getElementById("act").innerHTML=`<div class="grades">${[1,2,3,4].map(g=>`<button class="btn g${g}" data-g="${g}"><b>${lab[g-1]}</b><small>${fmt(grade(c,g).due-Date.now())}</small><kbd>${g}</kbd></button>`).join("")}</div>`;
+  document.querySelectorAll("[data-g]").forEach(x=>x.onclick=()=>answer(+x.dataset.g));
+}
+function answer(g){
+  if(!cur||!shown) return;
+  const [t]=cur.split(":");
+  const isNew=!S.cards[cur];
+  const c=S.cards[cur]||newCard();
+  S.cards[cur]=grade(c,g);
+  if(isNew&&t==="m") S.day.newDone++;
+  const dk=dayKey(); S.log[dk]=(S.log[dk]||0)+1;
+  save(); renderStudy(); window.scrollTo(0,0);
+}
+document.addEventListener("keydown",e=>{
+  if(currentTab!=="study"||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+  if(e.key===" "&&!shown){ e.preventDefault(); reveal(); }
+  else if(shown&&/^[1-4]$/.test(e.key)) answer(+e.key);
+});
+// ---------- today view ----------
+function streak(){ let n=0; let t=Date.now(); if(!S.log[dayKey(t)]) t-=DAY; while(S.log[dayKey(t)]){ n++; t-=DAY; } return n; }
+function renderToday(){
+  const q=queue(), all=Object.keys(K).length;
+  const intro=order().filter(k=>started(k)).length;
+  const known=Object.keys(K).filter(k=>graduated(S.cards["m:"+k])).length;
+  const mature=Object.keys(K).filter(k=>{const c=S.cards["m:"+k];return c&&c.step===-1&&c.ivl>=21;}).length;
+  const due=q.learn.length+q.rev.length, nw=q.wordNew.length+q.meaningNew.length;
+  const leftToday=Math.max(0,S.settings.perDay-S.day.newDone);
+  const upcoming=order().filter(k=>!started(k));
+  const nextK=upcoming.slice(0,leftToday||S.settings.perDay);
+  const lessonNo=Math.floor(intro/LESSON)+1;
+  const daysLeft=Math.ceil((all-intro)/S.settings.perDay);
+  document.getElementById("tab-today").innerHTML=`
+   <div class="stats">
+     <div><b>${due}</b><span>due now</span></div><div><b>${nw}</b><span>new today</span></div>
+     <div><b>${intro}</b><span>of ${all} started</span></div><div><b>${mature}</b><span>well known</span></div><div><b>${streak()}</b><span>day streak</span></div>
+   </div>
+   <div class="bar"><div style="width:${intro/all*100}%"></div><div class="k" style="width:${known/all*100}%"></div></div>
+   <p class="barlab">${known} kanji past the learning stage, ${mature} with intervals of three weeks or more.${intro<all?` At ${S.settings.perDay} a day, the last new kanji arrives in ${daysLeft} day${daysLeft===1?"":"s"}.`:" Every kanji has been introduced."}</p>
+   <button class="btn primary wide" data-go="study">${due+nw?`Start: ${due} due, ${nw} new`:"Nothing due. Open Study"}</button>
+   ${nextK.length?`<h3>${leftToday?"Today's new kanji":"Tomorrow's new kanji"} ${S.day.newDone&&leftToday?`<span class="muted">(${S.day.newDone} already started)</span>`:""}</h3><div class="tiles">${nextK.map(k=>tile(k)).join("")}</div>`:""}
+   <h3>Settings</h3>
+   <div class="set"><label>New kanji a day <select id="perDay">${[5,10,15,20].map(n=>`<option ${n===S.settings.perDay?"selected":""}>${n}</option>`).join("")}</select></label>
+     <label>Order <select id="ord"><option value="shape" ${S.settings.order==="shape"?"selected":""}>Shape families (recommended)</option><option value="n5" ${S.settings.order==="n5"?"selected":""}>N5 first, then N4</option></select></label></div>
+   <p class="muted small">10 a day is the sweet spot for most people. The order only changes kanji you haven't started, and in both orders every kanji's parts come before it.</p>
+   <h3>Your progress file</h3>
+   <p class="muted small">Progress is saved in this browser on this device. To move it to another device or keep a backup, export it and import it there.</p>
+   <div class="set"><button class="btn" id="exp">Export progress</button><label class="btn">Import progress<input type="file" id="imp" accept=".json,application/json" hidden></label><button class="btn danger" id="rst">Reset everything</button></div>`;
+  document.getElementById("perDay").onchange=e=>{S.settings.perDay=+e.target.value;save();renderToday();};
+  document.getElementById("ord").onchange=e=>{S.settings.order=e.target.value;save();renderToday();};
+  document.getElementById("exp").onclick=()=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:"application/json"})); a.download="kanji-progress-"+dayKey()+".json"; a.click(); };
+  document.getElementById("imp").onchange=e=>{ const f=e.target.files[0]; if(!f) return; f.text().then(t=>{ try{ const s=JSON.parse(t); if(!s.cards) throw 0; S=Object.assign({cards:{},day:{key:"",newDone:0},settings:{perDay:10,order:"shape"},log:{}},s); save(); renderToday(); alert("Progress imported."); }catch(err){ alert("That file isn't a progress export from this deck."); } }); };
+  document.getElementById("rst").onclick=()=>{ if(confirm("Delete all progress and start again? This can't be undone.")){ S={cards:{},day:{key:"",newDone:0},settings:S.settings,log:{}}; save(); renderToday(); } };
+}
+// ---------- lessons view ----------
+function status(k){ const c=S.cards["m:"+k]; if(!c) return "new"; if(c.step>=0) return "lrn"; return c.ivl>=21?"mat":"rev"; }
+const tile=k=>`<button class="tile st-${status(k)}" data-k="${k}"><span class="tg">${k}</span><span class="tm">${esc(K[k].m)}</span></button>`;
+function renderLessons(){
+  const o=order(); let h=`<p class="muted">Lessons of ${LESSON}, in the order you'll meet them. Colours show progress: <span class="key st-new">not started</span> <span class="key st-lrn">learning</span> <span class="key st-rev">reviewing</span> <span class="key st-mat">well known</span>. Tap any kanji to read its card.</p>`;
+  for(let i=0;i<o.length;i+=LESSON){
+    const ks=o.slice(i,i+LESSON);
+    h+=`<section class="lesson"><h3>Lesson ${i/LESSON+1}<span class="fams"> ${ks.map(k=>DATA.FAM[k]).filter((v,j,a)=>v&&a.indexOf(v)===j).join(" ")}</span></h3><div class="tiles">${ks.map(tile).join("")}</div></section>`;
+  }
+  document.getElementById("tab-lessons").innerHTML=h;
+}
+// ---------- modal ----------
+const modal=document.createElement("div"); modal.className="modal"; modal.hidden=true;
+modal.innerHTML=`<div class="mbox" role="dialog" aria-modal="true"><button class="btn close" aria-label="Close">Close</button><div class="mbody"></div></div>`;
+document.body.appendChild(modal);
+modal.addEventListener("click",e=>{ if(e.target===modal||e.target.closest(".close")) modal.hidden=true; });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") modal.hidden=true; });
+document.addEventListener("click",e=>{
+  const t=e.target.closest(".tile"); if(t){ modal.querySelector(".mbody").innerHTML=detail(t.dataset.k); modal.hidden=false; return; }
+  const g=e.target.closest("[data-go]"); if(g) showTab(g.dataset.go);
+});
+// ---------- tabs ----------
+let currentTab="today";
+function showTab(t){
+  currentTab=t;
+  document.querySelectorAll("[data-tab]").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));
+  document.querySelectorAll(".tab").forEach(s=>s.hidden=s.id!=="tab-"+t);
+  if(t==="today") renderToday(); else if(t==="study") renderStudy(); else if(t==="lessons") renderLessons();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+showTab("today");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,2664 @@
+{
+ "groups": [
+  [
+   "greet",
+   "挨拶",
+   "Greetings and set phrases",
+   "Fixed phrases you say as a whole: hello, thank you, sorry, and the ones around meals and leaving. Most are written in hiragana even where a kanji form exists."
+  ],
+  [
+   "inter",
+   "相づち",
+   "Reactions and fillers",
+   "The small words that keep a conversation going: yes, I see, well, um. Japanese listeners use them far more often than English ones do."
+  ],
+  [
+   "question",
+   "疑問詞",
+   "Question words",
+   "Put the question word where the answer would go and end with か: 駅はどこですか (where is the station?)."
+  ],
+  [
+   "point",
+   "こそあど",
+   "Pointing words",
+   "One system covers this, that and which. こ is near me, そ is near you, あ is over there, and ど asks which. Add れ for a thing, こ for a place, ちら for a direction (or politely, a person), の before a noun, and んな for \"this kind of\"."
+  ],
+  [
+   "link",
+   "接続詞",
+   "Linking words",
+   "Words that join a sentence to the one before it: and then, but, so, by the way. They usually come first in the sentence."
+  ],
+  [
+   "time",
+   "いつ",
+   "When and how often",
+   "Always, still, already, soon, at last. They usually sit near the front of the sentence, before the verb."
+  ],
+  [
+   "degree",
+   "どのくらい",
+   "How much",
+   "Very, a little, almost, not at all. Watch the ones that need a negative verb: あまり and ちっとも mean \"not very\" and \"not at all\" only with ～ない."
+  ],
+  [
+   "manner",
+   "どうやって",
+   "How and in what spirit",
+   "Certainly, properly, on purpose, in any case: words that colour how something is done or how you feel about it."
+  ],
+  [
+   "sound",
+   "擬音語",
+   "Sound and feeling words",
+   "Japanese uses these where English uses adverbs or vivid verbs. Many take する (びっくりする, いらいらする) or と (にっこりと)."
+  ],
+  [
+   "desc",
+   "形容",
+   "Describing words",
+   "い-adjectives and な-adjectives usually written in kana. い-adjectives change their ending (うるさくない); な-adjectives take な before a noun (にぎやかな町)."
+  ],
+  [
+   "verb",
+   "動詞",
+   "Verbs written in kana",
+   "Everyday verbs usually written in hiragana, including the giving and receiving verbs (あげる, くれる, もらう) and polite forms such as いらっしゃる and おっしゃる."
+  ],
+  [
+   "expr",
+   "表現",
+   "Useful endings and expressions",
+   "Phrases that hang on the end of a sentence: かもしれない (might), しょうがない (it can't be helped), もったいない (what a waste)."
+  ],
+  [
+   "n-people",
+   "人",
+   "People",
+   ""
+  ],
+  [
+   "n-food",
+   "食べ物",
+   "Food",
+   ""
+  ],
+  [
+   "n-things",
+   "物",
+   "Things around you",
+   ""
+  ],
+  [
+   "n-body",
+   "体",
+   "Body and health",
+   ""
+  ],
+  [
+   "n-other",
+   "名詞",
+   "Everyday nouns",
+   ""
+  ],
+  [
+   "parts",
+   "接辞",
+   "Word parts",
+   "Prefixes and suffixes you attach to other words: お～ (polite), ～さん, ～たち (plural), ～やすい (easy to), ～すぎ (too much)."
+  ]
+ ],
+ "words": [
+  {
+   "w": "ああ",
+   "en": "Ah!, Oh!",
+   "l": 5,
+   "g": "inter"
+  },
+  {
+   "w": "あそこ",
+   "en": "there, over there, that place",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "あちら",
+   "en": "this way",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "あっち",
+   "en": "over there",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "あなた",
+   "en": "you",
+   "l": 5,
+   "g": "n-people"
+  },
+  {
+   "w": "あの",
+   "en": "that over there",
+   "l": 5,
+   "g": "inter"
+  },
+  {
+   "w": "あれ",
+   "en": "that one",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "いいえ",
+   "en": "no, not at all",
+   "l": 5,
+   "g": "inter"
+  },
+  {
+   "w": "いかが",
+   "en": "how, in what way",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "いくつ",
+   "en": "how many, how old",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "いくら",
+   "en": "how much, how many",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "いつ",
+   "en": "when",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "いつも",
+   "en": "always, usually, every time",
+   "l": 5,
+   "g": "time"
+  },
+  {
+   "w": "うち",
+   "en": "home",
+   "l": 5,
+   "g": "n-other"
+  },
+  {
+   "w": "うるさい",
+   "en": "noisy",
+   "l": 5,
+   "g": "desc"
+  },
+  {
+   "w": "ええ",
+   "en": "yes",
+   "l": 5,
+   "g": "inter"
+  },
+  {
+   "w": "お～",
+   "en": "honorable ~",
+   "l": 5,
+   "g": "parts"
+  },
+  {
+   "w": "おじいさん",
+   "en": "grandfather, male senior citizen",
+   "l": 5,
+   "g": "n-people"
+  },
+  {
+   "w": "おととし",
+   "en": "year before last",
+   "l": 5,
+   "g": "n-other"
+  },
+  {
+   "w": "おばあさん",
+   "en": "grandmother, female senior-citizen",
+   "l": 5,
+   "g": "n-people"
+  },
+  {
+   "w": "おまわりさん",
+   "en": "policeman",
+   "l": 5,
+   "g": "n-people"
+  },
+  {
+   "w": "かかる",
+   "en": "it takes",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "かける",
+   "en": "to dial/call",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "かばん",
+   "en": "bag, basket",
+   "l": 5,
+   "g": "n-things"
+  },
+  {
+   "w": "かぶる",
+   "en": "to wear, to put on",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "～がる",
+   "en": "feel",
+   "l": 5,
+   "g": "parts"
+  },
+  {
+   "w": "ここ",
+   "en": "here, this place",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "こちら",
+   "en": "this person",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "こっち",
+   "en": "this person",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "この",
+   "en": "this",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "これ",
+   "en": "this one",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "こんな",
+   "en": "such, like this",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "さあ",
+   "en": "come now, well",
+   "l": 5,
+   "g": "inter"
+  },
+  {
+   "w": "～さん",
+   "en": "Mr. ~, Ms. ~",
+   "l": 5,
+   "g": "parts"
+  },
+  {
+   "w": "しかし",
+   "en": "however",
+   "l": 5,
+   "g": "link"
+  },
+  {
+   "w": "～すぎ",
+   "en": "past",
+   "l": 5,
+   "g": "parts"
+  },
+  {
+   "w": "すぐに",
+   "en": "immediately, soon",
+   "l": 5,
+   "g": "time"
+  },
+  {
+   "w": "～ずつ",
+   "en": "at a time",
+   "l": 5,
+   "g": "parts"
+  },
+  {
+   "w": "する",
+   "en": "to do, to try",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "そこ",
+   "en": "that place, there",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "そちら",
+   "en": "over there",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "そっち",
+   "en": "over there",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "その",
+   "en": "that",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "そば",
+   "en": "near, close, beside",
+   "l": 5,
+   "g": "n-food"
+  },
+  {
+   "w": "それ",
+   "en": "that one",
+   "l": 5,
+   "g": "point"
+  },
+  {
+   "w": "それから",
+   "en": "and then, after that",
+   "l": 5,
+   "g": "link"
+  },
+  {
+   "w": "それでは",
+   "en": "in that situation, well then...",
+   "l": 5,
+   "g": "link"
+  },
+  {
+   "w": "～だけ",
+   "en": "only ~, just ~, as ~",
+   "l": 5,
+   "g": "parts"
+  },
+  {
+   "w": "～たち",
+   "en": "plural suffix",
+   "l": 5,
+   "g": "parts"
+  },
+  {
+   "w": "たて",
+   "en": "length, height",
+   "l": 5,
+   "g": "n-other"
+  },
+  {
+   "w": "たばこ",
+   "en": "tobacco, cigarettes",
+   "l": 5,
+   "g": "n-things"
+  },
+  {
+   "w": "ちょっと",
+   "en": "a little, somewhat",
+   "l": 5,
+   "g": "degree"
+  },
+  {
+   "w": "つける",
+   "en": "to turn on",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "つまらない",
+   "en": "boring, dull",
+   "l": 5,
+   "g": "desc"
+  },
+  {
+   "w": "できる",
+   "en": "to be able to",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "では",
+   "en": "then, well, so",
+   "l": 5,
+   "g": "inter"
+  },
+  {
+   "w": "でも",
+   "en": "but, however",
+   "l": 5,
+   "g": "link"
+  },
+  {
+   "w": "どう",
+   "en": "how, in what way",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "どうして",
+   "en": "why, for what reason",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "どうぞ",
+   "en": "please, kindly, by all means",
+   "l": 5,
+   "g": "greet"
+  },
+  {
+   "w": "どうも",
+   "en": "Thank you",
+   "l": 5,
+   "g": "greet"
+  },
+  {
+   "w": "どこ",
+   "en": "where, what place",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "どちら",
+   "en": "which",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "どっち",
+   "en": "which one, which way",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "とても",
+   "en": "very, greatly, exceedingly",
+   "l": 5,
+   "g": "degree"
+  },
+  {
+   "w": "どなた",
+   "en": "who",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "どの",
+   "en": "which",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "どれ",
+   "en": "which one",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "どんな",
+   "en": "what, what kind of",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "ない",
+   "en": "there isn't, doesn't have",
+   "l": 5,
+   "g": "expr"
+  },
+  {
+   "w": "なぜ",
+   "en": "why",
+   "l": 5,
+   "g": "question"
+  },
+  {
+   "w": "～など",
+   "en": "et cetera",
+   "l": 5,
+   "g": "parts"
+  },
+  {
+   "w": "なる",
+   "en": "to become",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "にぎやか",
+   "en": "bustling, busy",
+   "l": 5,
+   "g": "desc"
+  },
+  {
+   "w": "はい",
+   "en": "yes",
+   "l": 5,
+   "g": "inter"
+  },
+  {
+   "w": "はく",
+   "en": "to put on",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "まずい",
+   "en": "terrible, unappetizing, unpleasant",
+   "l": 5,
+   "g": "desc"
+  },
+  {
+   "w": "また",
+   "en": "and",
+   "l": 5,
+   "g": "time"
+  },
+  {
+   "w": "まだ",
+   "en": "yet, still, besides",
+   "l": 5,
+   "g": "time"
+  },
+  {
+   "w": "まっすぐ",
+   "en": "straight, direct",
+   "l": 5,
+   "g": "manner"
+  },
+  {
+   "w": "みんな",
+   "en": "all, everyone, everybody",
+   "l": 5,
+   "g": "n-people"
+  },
+  {
+   "w": "もう",
+   "en": "already",
+   "l": 5,
+   "g": "time"
+  },
+  {
+   "w": "もしもし",
+   "en": "Hello?",
+   "l": 5,
+   "g": "greet"
+  },
+  {
+   "w": "もっと",
+   "en": "more",
+   "l": 5,
+   "g": "degree"
+  },
+  {
+   "w": "やる",
+   "en": "to do",
+   "l": 5,
+   "g": "verb"
+  },
+  {
+   "w": "ゆっくりと",
+   "en": "slowly, at ease",
+   "l": 5,
+   "g": "manner"
+  },
+  {
+   "w": "よく",
+   "en": "frequently, often",
+   "l": 5,
+   "g": "time"
+  },
+  {
+   "w": "りっぱ",
+   "en": "splendid, fine",
+   "l": 5,
+   "g": "desc"
+  },
+  {
+   "w": "すっと",
+   "en": "straight, quickly",
+   "l": 4,
+   "g": "manner"
+  },
+  {
+   "w": "とうとう",
+   "en": "finally, at last",
+   "l": 4,
+   "g": "time"
+  },
+  {
+   "w": "しっかり",
+   "en": "firmly, steady",
+   "l": 4,
+   "g": "sound"
+  },
+  {
+   "w": "うかがう",
+   "en": "to ask",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "もし",
+   "en": "if",
+   "l": 4,
+   "g": "link"
+  },
+  {
+   "w": "～ございます",
+   "en": "to be, to exist",
+   "l": 4,
+   "g": "parts"
+  },
+  {
+   "w": "ほとんど",
+   "en": "mostly, almost",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "つもり",
+   "en": "intention, plan",
+   "l": 4,
+   "g": "n-other"
+  },
+  {
+   "w": "だめ",
+   "en": "useless, no good, hopeless",
+   "l": 4,
+   "g": "desc"
+  },
+  {
+   "w": "うん",
+   "en": "yes, all right",
+   "l": 4,
+   "g": "inter"
+  },
+  {
+   "w": "ごみ",
+   "en": "trash, garbage",
+   "l": 4,
+   "g": "n-things"
+  },
+  {
+   "w": "いらっしゃる",
+   "en": "-- honorific expression for いく, くる, and いる --",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "そう",
+   "en": "really, so",
+   "l": 4,
+   "g": "point"
+  },
+  {
+   "w": "すると",
+   "en": "and, then",
+   "l": 4,
+   "g": "link"
+  },
+  {
+   "w": "ちっとも",
+   "en": "not at all",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "できるだけ",
+   "en": "if at all possible, as much as possible",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "うそ",
+   "en": "lie",
+   "l": 4,
+   "g": "n-other"
+  },
+  {
+   "w": "それに",
+   "en": "moreover",
+   "l": 4,
+   "g": "link"
+  },
+  {
+   "w": "だから",
+   "en": "so",
+   "l": 4,
+   "g": "link"
+  },
+  {
+   "w": "さっき",
+   "en": "a little while ago",
+   "l": 4,
+   "g": "time"
+  },
+  {
+   "w": "なるべく",
+   "en": "if possible, as much as possible",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "いくら～ても",
+   "en": "however much one may ~",
+   "l": 4,
+   "g": "expr"
+  },
+  {
+   "w": "けんかする",
+   "en": "quarrel",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "そんな",
+   "en": "such, like that, that sort of",
+   "l": 4,
+   "g": "point"
+  },
+  {
+   "w": "やっと",
+   "en": "at last, finally",
+   "l": 4,
+   "g": "time"
+  },
+  {
+   "w": "ぶどう",
+   "en": "grapes",
+   "l": 4,
+   "g": "n-food"
+  },
+  {
+   "w": "なさる",
+   "en": "-- honorific expression for する --",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "どんどん",
+   "en": "quickly and steadily",
+   "l": 4,
+   "g": "sound"
+  },
+  {
+   "w": "もらう",
+   "en": "to receive",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "おかしい",
+   "en": "strange",
+   "l": 4,
+   "g": "desc"
+  },
+  {
+   "w": "くれる",
+   "en": "to give, to do for",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "いただく",
+   "en": "-- extra-modest expression for たべる and のむ",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "もちろん",
+   "en": "certainly, of course",
+   "l": 4,
+   "g": "manner"
+  },
+  {
+   "w": "または",
+   "en": "or, otherwise",
+   "l": 4,
+   "g": "link"
+  },
+  {
+   "w": "けがする",
+   "en": "injury, hurt",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "～ばかり",
+   "en": "just did ~, only",
+   "l": 4,
+   "g": "parts"
+  },
+  {
+   "w": "～だす",
+   "en": "to start doing ~",
+   "l": 4,
+   "g": "parts"
+  },
+  {
+   "w": "あいさつする",
+   "en": "greet",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "すっかり",
+   "en": "all, completely",
+   "l": 4,
+   "g": "sound"
+  },
+  {
+   "w": "はず",
+   "en": "it should be so",
+   "l": 4,
+   "g": "n-other"
+  },
+  {
+   "w": "おる",
+   "en": "-- extra-modest expression for いる --",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "ごらんになる",
+   "en": "-- honorific expression for みる --",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "よろしい",
+   "en": "good, OK, all right",
+   "l": 4,
+   "g": "expr"
+  },
+  {
+   "w": "おつり",
+   "en": "change",
+   "l": 4,
+   "g": "n-other"
+  },
+  {
+   "w": "ごちそう",
+   "en": "feast, treating",
+   "l": 4,
+   "g": "n-food"
+  },
+  {
+   "w": "はっきり",
+   "en": "clearly, distinctly",
+   "l": 4,
+   "g": "sound"
+  },
+  {
+   "w": "いっぱい",
+   "en": "full, to the utmost",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "おもちゃ",
+   "en": "a toy",
+   "l": 4,
+   "g": "n-things"
+  },
+  {
+   "w": "～ちゃん",
+   "en": "suffix for familiar person",
+   "l": 4,
+   "g": "parts"
+  },
+  {
+   "w": "あんな",
+   "en": "such, like that",
+   "l": 4,
+   "g": "point"
+  },
+  {
+   "w": "ひどい",
+   "en": "terrible, awful, unfair",
+   "l": 4,
+   "g": "desc"
+  },
+  {
+   "w": "～やすい",
+   "en": "easy to do ~",
+   "l": 4,
+   "g": "parts"
+  },
+  {
+   "w": "びっくりする",
+   "en": "to be surprised",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "うまい",
+   "en": "delicious",
+   "l": 4,
+   "g": "desc"
+  },
+  {
+   "w": "しばらく",
+   "en": "little while",
+   "l": 4,
+   "g": "time"
+  },
+  {
+   "w": "こう",
+   "en": "like this, this way",
+   "l": 4,
+   "g": "point"
+  },
+  {
+   "w": "おいでになる",
+   "en": "to be",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "きっと",
+   "en": "surely, definitely, undoubtedly",
+   "l": 4,
+   "g": "manner"
+  },
+  {
+   "w": "まず",
+   "en": "first, to start with",
+   "l": 4,
+   "g": "manner"
+  },
+  {
+   "w": "それほど",
+   "en": "to that degree",
+   "l": 4,
+   "g": "manner"
+  },
+  {
+   "w": "～まま",
+   "en": "as it is",
+   "l": 4,
+   "g": "parts"
+  },
+  {
+   "w": "それで",
+   "en": "and, thereupon, because of that",
+   "l": 4,
+   "g": "link"
+  },
+  {
+   "w": "そろそろ",
+   "en": "gradually, soon",
+   "l": 4,
+   "g": "sound"
+  },
+  {
+   "w": "あげる",
+   "en": "to give",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "そんなに",
+   "en": "so much, like that",
+   "l": 4,
+   "g": "point"
+  },
+  {
+   "w": "～おわる",
+   "en": "to finish doing ~",
+   "l": 4,
+   "g": "parts"
+  },
+  {
+   "w": "なるほど",
+   "en": "I see",
+   "l": 4,
+   "g": "inter"
+  },
+  {
+   "w": "くださる",
+   "en": "to give, to confer",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "あ",
+   "en": "Ah",
+   "l": 4,
+   "g": "inter"
+  },
+  {
+   "w": "～おき",
+   "en": "after every ~",
+   "l": 4,
+   "g": "parts"
+  },
+  {
+   "w": "かっこう",
+   "en": "appearance, manner, shape",
+   "l": 4,
+   "g": "n-other"
+  },
+  {
+   "w": "かまう",
+   "en": "to mind, to care about, to be concerned about",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "いじめる",
+   "en": "to bully, to torment",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "おっしゃる",
+   "en": "-- honorific expression for いう --",
+   "l": 4,
+   "g": "verb"
+  },
+  {
+   "w": "ひげ",
+   "en": "beard",
+   "l": 4,
+   "g": "n-body"
+  },
+  {
+   "w": "もうすぐ",
+   "en": "very soon",
+   "l": 4,
+   "g": "time"
+  },
+  {
+   "w": "おかげ",
+   "en": "thanks or owing to",
+   "l": 4,
+   "g": "n-other"
+  },
+  {
+   "w": "～にくい",
+   "en": "difficult to do ~",
+   "l": 4,
+   "g": "parts"
+  },
+  {
+   "w": "すり",
+   "en": "pickpocket",
+   "l": 4,
+   "g": "n-people"
+  },
+  {
+   "w": "うれしい",
+   "en": "to be happy",
+   "l": 4,
+   "g": "desc"
+  },
+  {
+   "w": "これから",
+   "en": "from now on, after this",
+   "l": 4,
+   "g": "time"
+  },
+  {
+   "w": "たまに",
+   "en": "occasionally",
+   "l": 4,
+   "g": "time"
+  },
+  {
+   "w": "しかも",
+   "en": "moreover, furthermore, besides",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "しきりに",
+   "en": "frequently, repeatedly, eagerly",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "したがって",
+   "en": "therefore, consequently",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "じっと",
+   "en": "patiently, quietly",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "しばしば",
+   "en": "often, again and again, frequently",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "しゃべる",
+   "en": "to talk, to chat, to chatter)",
+   "l": 3,
+   "g": "verb"
+  },
+  {
+   "w": "すくなくとも",
+   "en": "at least",
+   "l": 3,
+   "g": "degree"
+  },
+  {
+   "w": "ずっと",
+   "en": "for a long time",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "すっぱい",
+   "en": "sour, acid",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "すてき",
+   "en": "lovely, great",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "すなわち",
+   "en": "that is, namely, e.g.",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "ずれる",
+   "en": "move, off the point",
+   "l": 3,
+   "g": "verb"
+  },
+  {
+   "w": "あいにく",
+   "en": "unfortunately",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "あちこち",
+   "en": "here and there",
+   "l": 3,
+   "g": "point"
+  },
+  {
+   "w": "あらゆる",
+   "en": "all, every",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "ありがとう",
+   "en": "Thank you",
+   "l": 3,
+   "g": "greet"
+  },
+  {
+   "w": "あるいは",
+   "en": "or, perhaps",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "あんなに",
+   "en": "to that extent, to that degree",
+   "l": 3,
+   "g": "point"
+  },
+  {
+   "w": "あんまり",
+   "en": "not very, not much",
+   "l": 3,
+   "g": "degree"
+  },
+  {
+   "w": "いけない",
+   "en": "must not do, bad, wrong",
+   "l": 3,
+   "g": "expr"
+  },
+  {
+   "w": "いずれ",
+   "en": "where, which, who",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "いたずら",
+   "en": "trick, practical joke",
+   "l": 3,
+   "g": "n-other"
+  },
+  {
+   "w": "いただきます",
+   "en": "expression of gratitude before meals",
+   "l": 3,
+   "g": "greet"
+  },
+  {
+   "w": "いつか",
+   "en": "sometime, one day",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "いつでも",
+   "en": "any time, always",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "いつのまにか",
+   "en": "before one knows",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "いつまでも",
+   "en": "forever, for good, eternally",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "いらいら",
+   "en": "getting nervous, irritation",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "いらっしゃい",
+   "en": "welcome",
+   "l": 3,
+   "g": "greet"
+  },
+  {
+   "w": "いわゆる",
+   "en": "the so-called, so-to-speak",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "うがい",
+   "en": "gargling",
+   "l": 3,
+   "g": "n-body"
+  },
+  {
+   "w": "うっかり",
+   "en": "carelessly",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "うなる",
+   "en": "to groan, to moan",
+   "l": 3,
+   "g": "verb"
+  },
+  {
+   "w": "おめでとう",
+   "en": "Congratulations!, an auspicious occasion!",
+   "l": 3,
+   "g": "greet"
+  },
+  {
+   "w": "およそ",
+   "en": "about, roughly, approximately",
+   "l": 3,
+   "g": "degree"
+  },
+  {
+   "w": "がっかり",
+   "en": "feel disappointed, be dejected, lose heart",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "かなり",
+   "en": "considerably, fairly, quite",
+   "l": 3,
+   "g": "degree"
+  },
+  {
+   "w": "かもしれない",
+   "en": "maybe, perhaps",
+   "l": 3,
+   "g": "expr"
+  },
+  {
+   "w": "かゆい",
+   "en": "itchy, itching",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "きちんと",
+   "en": "precisely, accurately",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "きつい",
+   "en": "tight, close, intense",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "ぐっすり",
+   "en": "sound asleep, fast asleep",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "けち",
+   "en": "stinginess, miser",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "こぼす",
+   "en": "to spill",
+   "l": 3,
+   "g": "verb"
+  },
+  {
+   "w": "こぼれる",
+   "en": "to overflow, to spill",
+   "l": 3,
+   "g": "verb"
+  },
+  {
+   "w": "ごめんなさい",
+   "en": "I beg your pardon, excuse me, I'm sorry",
+   "l": 3,
+   "g": "greet"
+  },
+  {
+   "w": "これら",
+   "en": "these",
+   "l": 3,
+   "g": "point"
+  },
+  {
+   "w": "こんなに",
+   "en": "so, like this, in this way",
+   "l": 3,
+   "g": "point"
+  },
+  {
+   "w": "こんにちは",
+   "en": "hello, good day",
+   "l": 3,
+   "g": "greet"
+  },
+  {
+   "w": "ざっと",
+   "en": "roughly, in round numbers",
+   "l": 3,
+   "g": "degree"
+  },
+  {
+   "w": "さっぱり",
+   "en": "feeling refreshed, neat",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "さて",
+   "en": "well",
+   "l": 3,
+   "g": "inter"
+  },
+  {
+   "w": "まるで",
+   "en": "just like",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "もしかすると",
+   "en": "perhaps, maybe, by some chance",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "もしも",
+   "en": "if",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "もったいない",
+   "en": "wasteful",
+   "l": 3,
+   "g": "expr"
+  },
+  {
+   "w": "やがて",
+   "en": "before long, soon, at length",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "やや",
+   "en": "a little, partially, somewhat",
+   "l": 3,
+   "g": "degree"
+  },
+  {
+   "w": "わがまま",
+   "en": "selfishness, egoism, willfulness",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "わざと",
+   "en": "on purpose",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "ことによると",
+   "en": "",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "そこで",
+   "en": "so, accordingly",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "そして",
+   "en": "and then",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "そっくり",
+   "en": "the splitting image of",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "そっと",
+   "en": "softly, gently",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "そのうえ",
+   "en": "in addition, furthermore",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "そのうち",
+   "en": "before long, eventually, sooner or later",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "そのまま",
+   "en": "without change, as it is",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "それぞれ",
+   "en": "each, every, respectively",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "それでも",
+   "en": "but, and yet, nevertheless",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "それと",
+   "en": "and",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "それとも",
+   "en": "or, or else",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "だが",
+   "en": "but, however",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "だけど",
+   "en": "however",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "たしか",
+   "en": "certain, sure, if I remember correctly",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "ただ",
+   "en": "free of charge",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "だって",
+   "en": "but, because, even",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "たっぷり",
+   "en": "full, in plenty, ample",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "たとえ",
+   "en": "even if, no matter, though",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "たびたび",
+   "en": "often, repeatedly, frequently",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "たまらない",
+   "en": "intolerable, unbearable, unendurable",
+   "l": 3,
+   "g": "expr"
+  },
+  {
+   "w": "ちゃんと",
+   "en": "perfectly, properly, exactly",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "ちょうだい",
+   "en": "-- colloquial form of ください",
+   "l": 3,
+   "g": "greet"
+  },
+  {
+   "w": "つまり",
+   "en": "namely",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "できれば",
+   "en": "if possible…",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "ですから",
+   "en": "therefore",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "どうしても",
+   "en": "at any cost, no matter what, no matter how hard one tries",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "どうぞよろしく",
+   "en": "pleased to meet you",
+   "l": 3,
+   "g": "greet"
+  },
+  {
+   "w": "どこか",
+   "en": "somewhere, anywhere",
+   "l": 3,
+   "g": "question"
+  },
+  {
+   "w": "ところが",
+   "en": "however, while, even if",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "ところで",
+   "en": "by the way",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "とにかく",
+   "en": "anyhow, at any rate, anyway",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "とんでもない",
+   "en": "outrageous, No way!",
+   "l": 3,
+   "g": "expr"
+  },
+  {
+   "w": "どんなに",
+   "en": "how, how much",
+   "l": 3,
+   "g": "question"
+  },
+  {
+   "w": "なお",
+   "en": "still, yet",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "なぜなら",
+   "en": "because",
+   "l": 3,
+   "g": "link"
+  },
+  {
+   "w": "なにも",
+   "en": "nothing",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "にっこり",
+   "en": "smile sweetly, smile, grin",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "のんびり",
+   "en": "carefree, at leisure",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "はさみ",
+   "en": "scissors",
+   "l": 3,
+   "g": "n-things"
+  },
+  {
+   "w": "ばったり",
+   "en": "by chance",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "ぴったり",
+   "en": "exactly, neatly, sharp",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "ぶつかる",
+   "en": "to strike, to collide with",
+   "l": 3,
+   "g": "verb"
+  },
+  {
+   "w": "ぶつける",
+   "en": "to knock, to strike hard, to hit and attack",
+   "l": 3,
+   "g": "verb"
+  },
+  {
+   "w": "ふと",
+   "en": "suddenly, accidentally, incidentally",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "ほぼ",
+   "en": "almost, roughly",
+   "l": 3,
+   "g": "degree"
+  },
+  {
+   "w": "ぼんやり",
+   "en": "dim, faint, vague",
+   "l": 3,
+   "g": "sound"
+  },
+  {
+   "w": "まあ",
+   "en": "well",
+   "l": 3,
+   "g": "inter"
+  },
+  {
+   "w": "まさか",
+   "en": "by no means",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "まさに",
+   "en": "correctly, surely",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "ますます",
+   "en": "increasingly, more and more",
+   "l": 3,
+   "g": "time"
+  },
+  {
+   "w": "まとまる",
+   "en": "to be collected, to be settled, to be in order",
+   "l": 3,
+   "g": "verb"
+  },
+  {
+   "w": "まとめる",
+   "en": "to put in order, to collect, to bring to a conclusion",
+   "l": 3,
+   "g": "verb"
+  },
+  {
+   "w": "まぶしい",
+   "en": "dazzling, radiant",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "ほっと",
+   "en": "feel relieved",
+   "l": 3,
+   "g": "manner"
+  },
+  {
+   "w": "しょうがない",
+   "en": "It is not worth ~",
+   "l": 2,
+   "g": "expr"
+  },
+  {
+   "w": "ずうっと",
+   "en": "all the time, all the way",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "すっきり",
+   "en": "shapely, clear, neat",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "すまない",
+   "en": "sorry",
+   "l": 2,
+   "g": "expr"
+  },
+  {
+   "w": "ずらす",
+   "en": "to put off, to delay",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "ずらり",
+   "en": "in a line, in a row",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "せっせと",
+   "en": "busily, away",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "ぜひとも",
+   "en": "by all means",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "せめて",
+   "en": "at least",
+   "l": 2,
+   "g": "degree"
+  },
+  {
+   "w": "そういえば",
+   "en": "which reminds me ..",
+   "l": 2,
+   "g": "link"
+  },
+  {
+   "w": "そうっと",
+   "en": "softly, cautiously, gently",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "そそっかしい",
+   "en": "careless, thoughtless",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "そのころ",
+   "en": "in those days, at that time, then",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "そのため",
+   "en": "hence, for that reason",
+   "l": 2,
+   "g": "link"
+  },
+  {
+   "w": "それなのに",
+   "en": "though, although",
+   "l": 2,
+   "g": "link"
+  },
+  {
+   "w": "それなら",
+   "en": "If that's the case..., If so..., That being the case...",
+   "l": 2,
+   "g": "link"
+  },
+  {
+   "w": "ただいま",
+   "en": "Here I am, I'm home!",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "たちまち",
+   "en": "instantly, suddenly, all at once",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "ためらう",
+   "en": "to be hesitant",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "～だらけ",
+   "en": "be full of ~, be filled with ~",
+   "l": 2,
+   "g": "parts"
+  },
+  {
+   "w": "だらしない",
+   "en": "slovenly, loose, a slut",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "おおざっぱ",
+   "en": "rough, broad, sketchy",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "おかけください",
+   "en": "please sit down",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "おかげさまで",
+   "en": "Thanks to god, thanks to you",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "おかず",
+   "en": "side dish, accompaniment for rice dishes",
+   "l": 2,
+   "g": "n-food"
+  },
+  {
+   "w": "おかまいなく",
+   "en": "please don't fuss over me",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "おはよう",
+   "en": "Good morning",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "おまちどおさま",
+   "en": "Sorry to have kept you waiting",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "おめでたい",
+   "en": "happy event, matter for congratulation",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "おやつ",
+   "en": "between meal snack, afternoon refreshment",
+   "l": 2,
+   "g": "n-food"
+  },
+  {
+   "w": "かしこまりました",
+   "en": "Certainly",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "かじる",
+   "en": "to chew, to bite",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "～がち",
+   "en": "tend to do ~",
+   "l": 2,
+   "g": "parts"
+  },
+  {
+   "w": "からかう",
+   "en": "to ridicule, to make fun of",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "かるた",
+   "en": "playing cards",
+   "l": 2,
+   "g": "n-things"
+  },
+  {
+   "w": "きっかけ",
+   "en": "prompt, trigger, cue",
+   "l": 2,
+   "g": "n-other"
+  },
+  {
+   "w": "ぎっしり",
+   "en": "tightly, fully",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "～きる",
+   "en": "nevertheless, to carry through",
+   "l": 2,
+   "g": "parts"
+  },
+  {
+   "w": "くしゃみ",
+   "en": "sneeze",
+   "l": 2,
+   "g": "n-body"
+  },
+  {
+   "w": "くたびれる",
+   "en": "to get tired, to wear out",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "くだらない",
+   "en": "good-for-nothing, stupid, worthless",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "くっつく",
+   "en": "to adhere to, to keep close to",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "くっつける",
+   "en": "to attach",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "くどい",
+   "en": "verbose, importunate, heavy",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "くるむ",
+   "en": "to be enveloped by, to wrap up",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "くれぐれも",
+   "en": "repeatedly, sincerely, earnestly",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "こうして",
+   "en": "like this, with this",
+   "l": 2,
+   "g": "point"
+  },
+  {
+   "w": "こしらえる",
+   "en": "to make, to manufacture",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "ごちそうさま",
+   "en": "Thank you for the meal",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "こちらこそ",
+   "en": "it is I who should say so",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "こっそり",
+   "en": "stealthily, secretly",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "こないだ",
+   "en": "the other day, lately, recently",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "ごめんください",
+   "en": "May I come in, Is anyone here",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "こんばんは",
+   "en": "good evening",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "さっさと",
+   "en": "quickly",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "さようなら",
+   "en": "good-bye",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "さわやか",
+   "en": "fresh, refreshing",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "しつこい",
+   "en": "insistent, obstinate",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "しっぽ",
+   "en": "tail",
+   "l": 2,
+   "g": "n-body"
+  },
+  {
+   "w": "しびれる",
+   "en": "to become numb",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "しぼむ",
+   "en": "to wither, to shrivel",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "しみじみ",
+   "en": "keenly, deeply, heartily",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "しゃがむ",
+   "en": "to squat",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "しゃっくり",
+   "en": "hiccough, hiccup",
+   "l": 2,
+   "g": "n-body"
+  },
+  {
+   "w": "しゃぶる",
+   "en": "to suck, to chew",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "じゃんけん",
+   "en": "rock-scissors-paper game",
+   "l": 2,
+   "g": "n-other"
+  },
+  {
+   "w": "ろうそく",
+   "en": "candle",
+   "l": 2,
+   "g": "n-things"
+  },
+  {
+   "w": "あいまい",
+   "en": "vague, ambiguous",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "あくび",
+   "en": "yawn",
+   "l": 2,
+   "g": "n-body"
+  },
+  {
+   "w": "あちらこちら",
+   "en": "here and there",
+   "l": 2,
+   "g": "point"
+  },
+  {
+   "w": "あぶる",
+   "en": "to scorch, to roast",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "あふれる",
+   "en": "to flood, to overflow",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "あれこれ",
+   "en": "one thing or another, this and that",
+   "l": 2,
+   "g": "point"
+  },
+  {
+   "w": "いきなり",
+   "en": "all of a sudden",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "いちいち",
+   "en": "one by one, separately",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "いってまいります",
+   "en": "I'll go and come back, 'I'm going, see you later'",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "いってきます",
+   "en": "I'll go and come back, 'I'm going, see you later'",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "いよいよ",
+   "en": "more and more, increasingly, at last",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "うどん",
+   "en": "udon noodles",
+   "l": 2,
+   "g": "n-food"
+  },
+  {
+   "w": "うなずく",
+   "en": "to nod",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "うろうろ",
+   "en": "loitering, aimless wandering",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "うんと",
+   "en": "a great deal, very much",
+   "l": 2,
+   "g": "degree"
+  },
+  {
+   "w": "ええと",
+   "en": "let me see, well, er...",
+   "l": 2,
+   "g": "inter"
+  },
+  {
+   "w": "どうせ",
+   "en": "anyhow, in any case, at any rate",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "どきどき",
+   "en": "throb, beat",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "～ところ",
+   "en": "about to do ~",
+   "l": 2,
+   "g": "parts"
+  },
+  {
+   "w": "とっくに",
+   "en": "long ago, already, a long time ago",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "どっと",
+   "en": "suddenly",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "ともかく",
+   "en": "anyhow, at any rate, anyway",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "なにしろ",
+   "en": "at any rate, in any case",
+   "l": 2,
+   "g": "link"
+  },
+  {
+   "w": "なんとなく",
+   "en": "somehow or other, for some reason or another",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "なんとも",
+   "en": "nothing, quite, not a bit",
+   "l": 2,
+   "g": "degree"
+  },
+  {
+   "w": "にこにこ",
+   "en": "smile sweetly, smiley",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "ねじ",
+   "en": "screw",
+   "l": 2,
+   "g": "n-things"
+  },
+  {
+   "w": "のこぎり",
+   "en": "saw",
+   "l": 2,
+   "g": "n-things"
+  },
+  {
+   "w": "のろのろ",
+   "en": "slowly, sluggishly",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "ばからしい",
+   "en": "absurd",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "はきはき",
+   "en": "clearly",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "はじめまして",
+   "en": "How do you do, I am glad to meet you",
+   "l": 2,
+   "g": "greet"
+  },
+  {
+   "w": "ばね",
+   "en": "spring",
+   "l": 2,
+   "g": "n-things"
+  },
+  {
+   "w": "はめる",
+   "en": "to get in, to insert, to put on",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "ぴかぴか",
+   "en": "glitter, sparkle",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "ぴたり",
+   "en": "exactly",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "ひとまず",
+   "en": "for the present, once, for the time being",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "ひとりでに",
+   "en": "by itself, automatically, naturally",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "ひゃっかじてん",
+   "en": "encyclopedia",
+   "l": 2,
+   "g": "n-things"
+  },
+  {
+   "w": "ふざける",
+   "en": "to romp, to gambol, to frolic",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "ぶつぶつ",
+   "en": "grumbling, complaining in a small voice",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "ぶらさげる",
+   "en": "to hang, to suspend, to swing",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "ふわふわ",
+   "en": "light, soft",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "へそ",
+   "en": "navel, belly-button",
+   "l": 2,
+   "g": "n-body"
+  },
+  {
+   "w": "～ぽい",
+   "en": "~ish",
+   "l": 2,
+   "g": "parts"
+  },
+  {
+   "w": "ぼろ",
+   "en": "rag, tattered clothes",
+   "l": 2,
+   "g": "n-things"
+  },
+  {
+   "w": "ほんの～",
+   "en": "mere, just",
+   "l": 2,
+   "g": "parts"
+  },
+  {
+   "w": "まあまあ",
+   "en": "okay",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "まごまご",
+   "en": "confused, be at a loss",
+   "l": 2,
+   "g": "sound"
+  },
+  {
+   "w": "またぐ",
+   "en": "to straddle",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "まぶた",
+   "en": "eyelids",
+   "l": 2,
+   "g": "n-body"
+  },
+  {
+   "w": "みじめ",
+   "en": "sad, pitiful, wretched",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "～みたい",
+   "en": "looks like ~",
+   "l": 2,
+   "g": "parts"
+  },
+  {
+   "w": "みっともない",
+   "en": "shameful, indecent",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "めちゃくちゃ",
+   "en": "absurd, messed up, wrecked",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "めっきり",
+   "en": "remarkably",
+   "l": 2,
+   "g": "time"
+  },
+  {
+   "w": "めでたい",
+   "en": "happy, propitious, joyous",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "めまい",
+   "en": "dizziness, giddiness",
+   "l": 2,
+   "g": "n-body"
+  },
+  {
+   "w": "もしかしたら",
+   "en": "perhaps, maybe, by some chance",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "もたれる",
+   "en": "to lean against, to lean on",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "～もち",
+   "en": "person who has ~",
+   "l": 2,
+   "g": "parts"
+  },
+  {
+   "w": "やかましい",
+   "en": "to be fussy, to be overly critical",
+   "l": 2,
+   "g": "desc"
+  },
+  {
+   "w": "やかん",
+   "en": "kettle",
+   "l": 2,
+   "g": "n-things"
+  },
+  {
+   "w": "やたらに",
+   "en": "randomly, recklessly, blindly",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "やっつける",
+   "en": "to attack, to beat, to finish off",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "やっぱり",
+   "en": "after all, anyway",
+   "l": 2,
+   "g": "manner"
+  },
+  {
+   "w": "やむをえない",
+   "en": "cannot be helped, unavoidable",
+   "l": 2,
+   "g": "expr"
+  },
+  {
+   "w": "よこす",
+   "en": "to send, to forward",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "たんす",
+   "en": "chest of drawers",
+   "l": 2,
+   "g": "n-things"
+  },
+  {
+   "w": "ちぎる",
+   "en": "to cut up fine, to pick",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "ついで",
+   "en": "opportunity, occasion",
+   "l": 2,
+   "g": "n-other"
+  },
+  {
+   "w": "つまずく",
+   "en": "to stumble, to trip",
+   "l": 2,
+   "g": "verb"
+  },
+  {
+   "w": "でたらめ",
+   "en": "irresponsible utterance, nonsense",
+   "l": 2,
+   "g": "desc"
+  }
+ ]
+}

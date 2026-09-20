@@ -1,0 +1,716 @@
+[
+ {
+  "id": "n0",
+  "topic": "t1",
+  "n": "この 店{みせ} の 料理{りょうり} は 味{あじ} が いい です",
+  "en": "The food at this restaurant tastes good",
+  "why": ""
+ },
+ {
+  "id": "n1",
+  "topic": "t1",
+  "n": "魚{さかな} と 肉{にく}、どちら に しますか",
+  "en": "Fish or meat: which will you have?",
+  "why": ""
+ },
+ {
+  "id": "n2",
+  "topic": "t1",
+  "n": "食堂{しょくどう} で 昼{ひる}ご飯{はん} を 食{た}べました",
+  "en": "I had lunch in the canteen",
+  "why": ""
+ },
+ {
+  "id": "n3",
+  "topic": "t1",
+  "n": "番号{ばんごう} で 呼{よ}ばれる まで 待{ま}って ください",
+  "en": "Please wait until your number is called",
+  "why": ""
+ },
+ {
+  "id": "n4",
+  "topic": "t1",
+  "n": "お茶{ちゃ} を もう 少{すこ}し ください",
+  "en": "A little more tea, please",
+  "why": ""
+ },
+ {
+  "id": "n5",
+  "topic": "t1",
+  "n": "和食{わしょく} の 店{みせ} を 探{さが}して います",
+  "en": "I'm looking for a Japanese restaurant",
+  "why": ""
+ },
+ {
+  "id": "n6",
+  "topic": "t1",
+  "n": "この コーヒー は 少{すこ}し 苦{にが}い です",
+  "en": "This coffee is a little bitter",
+  "why": ""
+ },
+ {
+  "id": "n7",
+  "topic": "t1",
+  "n": "母{はは} が 作{つく}った 料理{りょうり} が 一番{いちばん} 好{す}き です",
+  "en": "I like my mother's cooking best",
+  "why": ""
+ },
+ {
+  "id": "n8",
+  "topic": "t1",
+  "n": "ラーメン屋{や} は 駅{えき} の 前{まえ} に あります",
+  "en": "The ramen shop is in front of the station",
+  "why": ""
+ },
+ {
+  "id": "n9",
+  "topic": "t1",
+  "n": "ご注文{ちゅうもん} は お決{き}まりですか",
+  "en": "Are you ready to order?",
+  "why": "You'll hear this from staff. お決まりですか is the polite form of 決まりましたか."
+ },
+ {
+  "id": "n10",
+  "topic": "t2",
+  "n": "今晩{こんばん}、映画{えいが} を 見{み}に 行{い}きませんか",
+  "en": "Shall we go and see a film this evening?",
+  "why": ""
+ },
+ {
+  "id": "n11",
+  "topic": "t2",
+  "n": "カラオケ で 好{す}きな 曲{きょく} を 歌{うた}いました",
+  "en": "I sang my favourite song at karaoke",
+  "why": ""
+ },
+ {
+  "id": "n12",
+  "topic": "t2",
+  "n": "音楽{おんがく} が 大{おお}きくて、声{こえ} が 聞{き}こえません",
+  "en": "The music is so loud I can't hear you",
+  "why": ""
+ },
+ {
+  "id": "n13",
+  "topic": "t2",
+  "n": "夜{よる} 遅{おそ}く まで 楽{たの}しかった です",
+  "en": "It was fun until late at night",
+  "why": ""
+ },
+ {
+  "id": "n14",
+  "topic": "t2",
+  "n": "終電{しゅうでん} の 前{まえ} に 帰{かえ}ります",
+  "en": "I'll head home before the last train",
+  "why": ""
+ },
+ {
+  "id": "n15",
+  "topic": "t2",
+  "n": "お酒{さけ} に 弱{よわ}い です",
+  "en": "I can't hold my drink",
+  "why": ""
+ },
+ {
+  "id": "n16",
+  "topic": "t2",
+  "n": "タクシー を 呼{よ}んで ください",
+  "en": "Please call a taxi",
+  "why": ""
+ },
+ {
+  "id": "n17",
+  "topic": "t2",
+  "n": "昨日{きのう} は 飲{の}みすぎて、気分{きぶん} が 悪{わる}い です",
+  "en": "I drank too much yesterday and feel awful",
+  "why": ""
+ },
+ {
+  "id": "n18",
+  "topic": "t3",
+  "n": "銀行{ぎんこう} で お金{かね} を 下{お}ろしました",
+  "en": "I took money out at the bank",
+  "why": ""
+ },
+ {
+  "id": "n19",
+  "topic": "t3",
+  "n": "この 服{ふく} は 軽{かる}くて 質{しつ} が いい です",
+  "en": "These clothes are light and good quality",
+  "why": ""
+ },
+ {
+  "id": "n20",
+  "topic": "t3",
+  "n": "荷物{にもつ} を ホテル に 送{おく}って ください",
+  "en": "Please send the luggage to the hotel",
+  "why": ""
+ },
+ {
+  "id": "n21",
+  "topic": "t3",
+  "n": "買{か}った 物{もの} を 返{かえ}したい です",
+  "en": "I'd like to return something I bought",
+  "why": ""
+ },
+ {
+  "id": "n22",
+  "topic": "t3",
+  "n": "傘{かさ} を 借{か}りても いい ですか",
+  "en": "May I borrow an umbrella?",
+  "why": ""
+ },
+ {
+  "id": "n23",
+  "topic": "t3",
+  "n": "特売{とくばい} の 品物{しなもの} は どこ ですか",
+  "en": "Where are the items on special offer?",
+  "why": ""
+ },
+ {
+  "id": "n24",
+  "topic": "t3",
+  "n": "カード は 使{つか}えますか",
+  "en": "Can I use a card?",
+  "why": ""
+ },
+ {
+  "id": "n25",
+  "topic": "t3",
+  "n": "重{おも}い 荷物{にもつ} を 持{も}ちましょうか",
+  "en": "Shall I carry the heavy bags?",
+  "why": ""
+ },
+ {
+  "id": "n26",
+  "topic": "t4",
+  "n": "頭{あたま} が 痛{いた}くて、熱{ねつ} も あります",
+  "en": "I have a headache and a fever too",
+  "why": ""
+ },
+ {
+  "id": "n27",
+  "topic": "t4",
+  "n": "近{ちか}く に 病院{びょういん} は ありますか",
+  "en": "Is there a hospital nearby?",
+  "why": ""
+ },
+ {
+  "id": "n28",
+  "topic": "t4",
+  "n": "この 薬{くすり} は 食後{しょくご} に 飲{の}んで ください",
+  "en": "Take this medicine after meals",
+  "why": "Medicine is 飲む (drunk), even tablets."
+ },
+ {
+  "id": "n29",
+  "topic": "t4",
+  "n": "医者{いしゃ} に 見{み}て もらいました",
+  "en": "I had a doctor look at me",
+  "why": ""
+ },
+ {
+  "id": "n30",
+  "topic": "t4",
+  "n": "顔{かお} を 洗{あら}って から 寝{ね}ます",
+  "en": "I wash my face before going to bed",
+  "why": ""
+ },
+ {
+  "id": "n31",
+  "topic": "t4",
+  "n": "足{あし} が 疲{つか}れました",
+  "en": "My feet are tired",
+  "why": ""
+ },
+ {
+  "id": "n32",
+  "topic": "t4",
+  "n": "体{からだ} に 気{き}を つけて ください",
+  "en": "Please look after yourself",
+  "why": ""
+ },
+ {
+  "id": "n33",
+  "topic": "t4",
+  "n": "助{たす}けて ください",
+  "en": "Please help me",
+  "why": ""
+ },
+ {
+  "id": "n34",
+  "topic": "t5",
+  "n": "駅{えき} まで 歩{ある}いて 十分{じゅっぷん} です",
+  "en": "It's a ten-minute walk to the station",
+  "why": ""
+ },
+ {
+  "id": "n35",
+  "topic": "t5",
+  "n": "地図{ちず} で 道{みち} を 教{おし}えて ください",
+  "en": "Please show me the way on the map",
+  "why": ""
+ },
+ {
+  "id": "n36",
+  "topic": "t5",
+  "n": "東京{とうきょう} 行{ゆ}き の 電車{でんしゃ} は 何番線{なんばんせん} ですか",
+  "en": "Which platform is the train for Tokyo?",
+  "why": "〜行き (ゆき) on a train or bus means \"bound for\"."
+ },
+ {
+  "id": "n37",
+  "topic": "t5",
+  "n": "急{いそ}いで ください、遅{おく}れて います",
+  "en": "Please hurry, we're late",
+  "why": ""
+ },
+ {
+  "id": "n38",
+  "topic": "t5",
+  "n": "空港{くうこう} まで 迎{むか}え に 行{い}きます",
+  "en": "I'll come and pick you up at the airport",
+  "why": ""
+ },
+ {
+  "id": "n39",
+  "topic": "t5",
+  "n": "電車{でんしゃ} が 遅{おく}れて、九時{くじ} に 着{つ}きました",
+  "en": "The train was late and got in at nine",
+  "why": ""
+ },
+ {
+  "id": "n40",
+  "topic": "t5",
+  "n": "ここ で 写真{しゃしん} を 撮{と}っても いい ですか",
+  "en": "May I take photos here?",
+  "why": ""
+ },
+ {
+  "id": "n41",
+  "topic": "t5",
+  "n": "自転車{じてんしゃ} で 通{かよ}って います",
+  "en": "I get there by bicycle",
+  "why": ""
+ },
+ {
+  "id": "n42",
+  "topic": "t6",
+  "n": "台所{だいどころ} は 広{ひろ}くて 明{あか}るい です",
+  "en": "The kitchen is spacious and bright",
+  "why": ""
+ },
+ {
+  "id": "n43",
+  "topic": "t6",
+  "n": "毎朝{まいあさ} 六時{ろくじ} に 起{お}きます",
+  "en": "I get up at six every morning",
+  "why": ""
+ },
+ {
+  "id": "n44",
+  "topic": "t6",
+  "n": "大阪{おおさか} に 住{す}んで います",
+  "en": "I live in Osaka",
+  "why": ""
+ },
+ {
+  "id": "n45",
+  "topic": "t6",
+  "n": "この 部屋{へや} は 少{すこ}し 暗{くら}い です",
+  "en": "This room is a bit dark",
+  "why": ""
+ },
+ {
+  "id": "n46",
+  "topic": "t6",
+  "n": "家{いえ} の 近{ちか}く に 池{いけ} が あります",
+  "en": "There's a pond near my house",
+  "why": ""
+ },
+ {
+  "id": "n47",
+  "topic": "t6",
+  "n": "新{あたら}しい 家{いえ} を 建{た}てました",
+  "en": "We built a new house",
+  "why": ""
+ },
+ {
+  "id": "n48",
+  "topic": "t7",
+  "n": "会社員{かいしゃいん} として 働{はたら}いて います",
+  "en": "I work as an office worker",
+  "why": ""
+ },
+ {
+  "id": "n49",
+  "topic": "t7",
+  "n": "会議{かいぎ} は 何時{なんじ} に 始{はじ}まりますか",
+  "en": "What time does the meeting start?",
+  "why": ""
+ },
+ {
+  "id": "n50",
+  "topic": "t7",
+  "n": "仕事{しごと} が 終{お}わったら 連絡{れんらく} します",
+  "en": "I'll get in touch when work finishes",
+  "why": ""
+ },
+ {
+  "id": "n51",
+  "topic": "t7",
+  "n": "来週{らいしゅう} 漢字{かんじ} の 試験{しけん} が あります",
+  "en": "I have a kanji test next week",
+  "why": ""
+ },
+ {
+  "id": "n52",
+  "topic": "t7",
+  "n": "この 問題{もんだい} の 答{こた}え が 分{わ}かりません",
+  "en": "I don't know the answer to this question",
+  "why": ""
+ },
+ {
+  "id": "n53",
+  "topic": "t7",
+  "n": "英語{えいご} で 説明{せつめい} して ください",
+  "en": "Please explain in English",
+  "why": ""
+ },
+ {
+  "id": "n54",
+  "topic": "t7",
+  "n": "毎日{まいにち} 日本語{にほんご} を 勉強{べんきょう} して います",
+  "en": "I study Japanese every day",
+  "why": ""
+ },
+ {
+  "id": "n55",
+  "topic": "t7",
+  "n": "正{ただ}しい 答{こた}え を 考{かんが}えて ください",
+  "en": "Please think of the correct answer",
+  "why": ""
+ },
+ {
+  "id": "n56",
+  "topic": "t8",
+  "n": "兄弟{きょうだい} は いますか",
+  "en": "Do you have any brothers or sisters?",
+  "why": ""
+ },
+ {
+  "id": "n57",
+  "topic": "t8",
+  "n": "姉{あね} が 一人{ひとり} と 弟{おとうと} が 二人{ふたり} います",
+  "en": "I have one older sister and two younger brothers",
+  "why": ""
+ },
+ {
+  "id": "n58",
+  "topic": "t8",
+  "n": "両親{りょうしん} は ロンドン に 住{す}んで います",
+  "en": "My parents live in London",
+  "why": ""
+ },
+ {
+  "id": "n59",
+  "topic": "t8",
+  "n": "家族{かぞく} で 旅行{りょこう} に 行{い}きました",
+  "en": "We went on a family trip",
+  "why": ""
+ },
+ {
+  "id": "n60",
+  "topic": "t8",
+  "n": "犬{いぬ} を 飼{か}って います",
+  "en": "I have a dog",
+  "why": ""
+ },
+ {
+  "id": "n61",
+  "topic": "t8",
+  "n": "主人{しゅじん} は 出張{しゅっちょう} 中{ちゅう} です",
+  "en": "My husband is away on business",
+  "why": ""
+ },
+ {
+  "id": "n62",
+  "topic": "t8",
+  "n": "他{ほか} の 人{ひと} に 聞{き}いて みます",
+  "en": "I'll ask someone else",
+  "why": ""
+ },
+ {
+  "id": "n63",
+  "topic": "t9",
+  "n": "私{わたし} も 同{おな}じ 意見{いけん} です",
+  "en": "I have the same opinion",
+  "why": ""
+ },
+ {
+  "id": "n64",
+  "topic": "t9",
+  "n": "それ は いい 考{かんが}え だ と 思{おも}います",
+  "en": "I think that's a good idea",
+  "why": ""
+ },
+ {
+  "id": "n65",
+  "topic": "t9",
+  "n": "冗談{じょうだん} です よ",
+  "en": "I'm only joking",
+  "why": ""
+ },
+ {
+  "id": "n66",
+  "topic": "t9",
+  "n": "別{べつ} の 方法{ほうほう} は ありますか",
+  "en": "Is there another way?",
+  "why": ""
+ },
+ {
+  "id": "n67",
+  "topic": "t9",
+  "n": "何{なに} を 言{い}って いる か 分{わ}かりません",
+  "en": "I don't understand what you're saying",
+  "why": ""
+ },
+ {
+  "id": "n68",
+  "topic": "t9",
+  "n": "ちょっと 不便{ふべん} だ と 思{おも}います",
+  "en": "I think it's a bit inconvenient",
+  "why": ""
+ },
+ {
+  "id": "n69",
+  "topic": "t10",
+  "n": "今日{きょう} は 何曜日{なんようび} ですか",
+  "en": "What day is it today?",
+  "why": ""
+ },
+ {
+  "id": "n70",
+  "topic": "t10",
+  "n": "来週{らいしゅう} の 月曜日{げつようび} に 会{あ}いましょう",
+  "en": "Let's meet next Monday",
+  "why": ""
+ },
+ {
+  "id": "n71",
+  "topic": "t10",
+  "n": "昨日{きのう} の 夕方{ゆうがた} に 雨{あめ} が 降{ふ}りました",
+  "en": "It rained yesterday evening",
+  "why": ""
+ },
+ {
+  "id": "n72",
+  "topic": "t10",
+  "n": "去年{きょねん} の 春{はる} に 日本{にほん} へ 行{い}きました",
+  "en": "I went to Japan last spring",
+  "why": ""
+ },
+ {
+  "id": "n73",
+  "topic": "t10",
+  "n": "朝{あさ} 早{はや}く 起{お}きる の は 苦手{にがて} です",
+  "en": "I'm not good at getting up early",
+  "why": ""
+ },
+ {
+  "id": "n74",
+  "topic": "t10",
+  "n": "今度{こんど} の 週末{しゅうまつ} は 忙{いそが}しい です",
+  "en": "I'm busy this coming weekend",
+  "why": ""
+ },
+ {
+  "id": "n75",
+  "topic": "t10",
+  "n": "秋{あき} は 一番{いちばん} 好{す}きな 季節{きせつ} です",
+  "en": "Autumn is my favourite season",
+  "why": ""
+ },
+ {
+  "id": "n76",
+  "topic": "t11",
+  "n": "今日{きょう} は 風{かぜ} が 強{つよ}い です",
+  "en": "It's windy today",
+  "why": ""
+ },
+ {
+  "id": "n77",
+  "topic": "t11",
+  "n": "明日{あした} は 雪{ゆき} が 降{ふ}る そう です",
+  "en": "They say it'll snow tomorrow",
+  "why": ""
+ },
+ {
+  "id": "n78",
+  "topic": "t11",
+  "n": "夏{なつ} は 暑{あつ}くて、冬{ふゆ} は 寒{さむ}い です",
+  "en": "Summers are hot and winters are cold",
+  "why": ""
+ },
+ {
+  "id": "n79",
+  "topic": "t11",
+  "n": "週末{しゅうまつ} に 海{うみ} へ 行{い}きたい です",
+  "en": "I want to go to the sea at the weekend",
+  "why": ""
+ },
+ {
+  "id": "n80",
+  "topic": "t11",
+  "n": "森{もり} の 中{なか} を 歩{ある}きました",
+  "en": "I walked through the forest",
+  "why": ""
+ },
+ {
+  "id": "n81",
+  "topic": "t11",
+  "n": "空{そら} が 青{あお}くて きれい です",
+  "en": "The sky is blue and beautiful",
+  "why": ""
+ },
+ {
+  "id": "n82",
+  "topic": "t11",
+  "n": "秋{あき} に なる と、葉{は} が 赤{あか}く なります",
+  "en": "In autumn the leaves turn red",
+  "why": ""
+ },
+ {
+  "id": "n83",
+  "topic": "t11",
+  "n": "雷{かみなり} が 鳴{な}って います",
+  "en": "There's thunder",
+  "why": ""
+ },
+ {
+  "id": "n84",
+  "topic": "t11",
+  "n": "この 湖{みずうみ} は とても 深{ふか}い です",
+  "en": "This lake is very deep",
+  "why": ""
+ },
+ {
+  "id": "n85",
+  "topic": "t11",
+  "n": "夜空{よぞら} に 星{ほし} が 光{ひか}って います",
+  "en": "Stars are shining in the night sky",
+  "why": ""
+ },
+ {
+  "id": "n86",
+  "topic": "t12",
+  "n": "図書館{としょかん} は 何時{なんじ} に 開{あ}きますか",
+  "en": "What time does the library open?",
+  "why": ""
+ },
+ {
+  "id": "n87",
+  "topic": "t12",
+  "n": "駐車場{ちゅうしゃじょう} は どこ ですか",
+  "en": "Where's the car park?",
+  "why": ""
+ },
+ {
+  "id": "n88",
+  "topic": "t12",
+  "n": "古{ふる}い お寺{てら} を 見{み}に 行{い}きました",
+  "en": "I went to see an old temple",
+  "why": ""
+ },
+ {
+  "id": "n89",
+  "topic": "t12",
+  "n": "この 町{まち} は 世界中{せかいじゅう} で 有名{ゆうめい} です",
+  "en": "This town is famous all over the world",
+  "why": ""
+ },
+ {
+  "id": "n90",
+  "topic": "t12",
+  "n": "電話番号{でんわばんごう} を 教{おし}えて ください",
+  "en": "Please tell me your phone number",
+  "why": ""
+ },
+ {
+  "id": "n91",
+  "topic": "t12",
+  "n": "次{つぎ} の バス は 何時{なんじ} に 出発{しゅっぱつ} しますか",
+  "en": "What time does the next bus leave?",
+  "why": ""
+ },
+ {
+  "id": "n92",
+  "topic": "t13",
+  "n": "どんな 色{いろ} が 好{す}き ですか",
+  "en": "What colours do you like?",
+  "why": ""
+ },
+ {
+  "id": "n93",
+  "topic": "t13",
+  "n": "お元気{げんき} ですか",
+  "en": "How are you?",
+  "why": ""
+ },
+ {
+  "id": "n94",
+  "topic": "t13",
+  "n": "実{じつ} は、明日{あした} 休{やす}みたい です",
+  "en": "Actually, I'd like tomorrow off",
+  "why": ""
+ },
+ {
+  "id": "n95",
+  "topic": "t13",
+  "n": "日本{にほん} の 文化{ぶんか} に 興味{きょうみ} が あります",
+  "en": "I'm interested in Japanese culture",
+  "why": ""
+ },
+ {
+  "id": "n96",
+  "topic": "t13",
+  "n": "理由{りゆう} を 教{おし}えて ください",
+  "en": "Please tell me the reason",
+  "why": ""
+ },
+ {
+  "id": "n97",
+  "topic": "t13",
+  "n": "用事{ようじ} が ある ので、先{さき} に 帰{かえ}ります",
+  "en": "I've got something to do, so I'll head off first",
+  "why": ""
+ },
+ {
+  "id": "n98",
+  "topic": "t13",
+  "n": "全部{ぜんぶ} で いくら ですか",
+  "en": "How much is it altogether?",
+  "why": ""
+ },
+ {
+  "id": "n99",
+  "topic": "t13",
+  "n": "三千円{さんぜんえん} 以上{いじょう} は 送料{そうりょう} 無料{むりょう} です",
+  "en": "Delivery is free on orders over 3,000 yen",
+  "why": "以上 includes the number: 3,000 yen or more."
+ },
+ {
+  "id": "n100",
+  "topic": "t13",
+  "n": "この 辺{へん} は 夜{よる} も 安全{あんぜん} です",
+  "en": "This area is safe even at night",
+  "why": ""
+ },
+ {
+  "id": "n101",
+  "topic": "t13",
+  "n": "安心{あんしん} して ください",
+  "en": "Don't worry",
+  "why": ""
+ }
+]

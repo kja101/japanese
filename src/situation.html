@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kanji by situation: where you meet them, with words and sentences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F5F1; --sheet:#FFFFFF; --ink:#1D2433; --muted:#646B78; --rule:#DCDFE5;
+  --seal:#B3261E; --seal-wash:#FBEDEC; --chip:#E7E9EF; --indigo:#2C3E73; --indigo-wash:#E9EDF7;
+  --green:#2F6B45; --green-wash:#EAF3EC; --amber:#9A6A12; --amber-wash:#FBF3E2;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --en:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+    --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+    --green:#7CC49A; --green-wash:#1F3328; --amber:#E0A548; --amber-wash:#3A3020;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom,0px)}
+header.top{max-width:1040px;margin:0 auto;padding:calc(2.2rem + env(safe-area-inset-top,0px)) 1.25rem .8rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2.1rem,6.5vw,3.4rem);margin:0;line-height:1.15}
+.sub{margin:.6rem 0 0;color:var(--muted);max-width:66ch}
+.controls{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);padding-top:env(safe-area-inset-top,0px)}
+.controls-inner{max-width:1040px;margin:0 auto;padding:.6rem 1.25rem .4rem;display:flex;flex-wrap:wrap;gap:.5rem .7rem;align-items:center}
+.search{flex:1 1 220px;min-width:0;font:inherit;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;background:var(--sheet);color:var(--ink)}
+.seg{display:flex;background:var(--chip);border-radius:8px;padding:3px;align-items:center}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.9rem;padding:.3rem .6rem;border-radius:6px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);font-weight:600;box-shadow:0 0 0 1px var(--rule)}
+.segs{display:flex;flex-wrap:wrap;gap:.5rem .7rem}
+.seg{flex:0 0 auto}
+.seglab{font-size:.8rem;color:var(--muted);padding:0 .35rem 0 .45rem}
+nav.topics{max-width:1040px;margin:0 auto;padding:0 1.25rem .6rem;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+nav.topics a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.86rem;padding:.25rem .65rem;border:1px solid var(--rule);border-radius:999px;background:var(--sheet)}
+nav.topics a .j{font-family:var(--jp);margin-right:.3rem}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+main{max-width:1040px;margin:0 auto;padding:.5rem 1.25rem 4rem}
+.guide{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:.7rem 1rem;margin:1rem 0}
+.guide summary{cursor:pointer;font-weight:600}
+.guide p{max-width:70ch;color:var(--muted);margin:.5rem 0}
+.tags{display:grid;grid-template-columns:auto 1fr;gap:.35rem .8rem;align-items:baseline;margin:.6rem 0}
+.tag{display:inline-block;font-size:.7rem;font-weight:600;border-radius:3px;padding:.05rem .4rem;white-space:nowrap}
+.tK{color:var(--green);background:var(--green-wash)} .tO{color:var(--amber);background:var(--amber-wash)} .tC{color:var(--indigo);background:var(--indigo-wash)} .tX{color:var(--muted);background:var(--chip)} .tR{color:var(--muted);background:transparent;border:1px dashed var(--rule)}
+/* topic */
+section.topic{margin:2.4rem 0 0;scroll-margin-top:150px}
+.thead{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;align-items:center;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:1rem 1.2rem}
+.tnum{grid-row:span 3;width:3.2rem;height:3.2rem;border-radius:8px;border:2px solid var(--seal);color:var(--seal);display:grid;place-items:center;font-weight:600;font-size:1.3rem}
+.thead h2{margin:0;font-size:1.35rem;display:flex;gap:.7rem;align-items:baseline;flex-wrap:wrap}
+.thead h2 .jp{font-family:var(--jp);font-size:1.6rem}
+.thead .cnt{color:var(--muted);font-size:.9rem}
+.thead .blurb{margin:.2rem 0 0;max-width:70ch}
+details.sents{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;margin:.8rem 0 0;padding:.6rem 1.1rem}
+details.sents>summary{cursor:pointer;font-weight:600;padding:.2rem 0}
+details.sents>summary span{font-weight:400;color:var(--muted);margin-left:.4rem}
+.sl{list-style:none;margin:.4rem 0 .2rem;padding:0;counter-reset:s}
+.sl li{padding:.55rem 0 .6rem 2.1rem;border-top:1px solid var(--rule);position:relative;counter-increment:s}
+.sl li:first-child{border-top:0}
+.sl li.extra{display:none}
+details.sents.all .sl li.extra{display:block}
+.moresents{font:inherit;font-size:.9rem;border:1px solid var(--rule);background:var(--paper);color:var(--indigo);border-radius:6px;padding:.35rem .8rem;margin:.2rem 0 .4rem;cursor:pointer}
+.sl li::before{content:counter(s);position:absolute;left:0;top:.8rem;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--chip);color:var(--muted);font-size:.75rem;display:grid;place-items:center}
+.sj{font-family:var(--jp);font-size:1.25rem;line-height:2.1}
+.sj rt{font-size:.5em}
+.sr{font-style:italic;color:var(--muted);font-size:.9rem}
+.se{font-size:.98rem}
+.sn{font-size:.85rem;color:var(--muted);margin-top:.15rem}
+.lvb{font-size:.68rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted);margin-left:.4rem;vertical-align:.15em;font-family:var(--en)}
+.grp{margin-top:1.3rem}
+.grp h3{margin:0 0 .5rem;font-size:1rem;display:flex;gap:.5rem;align-items:baseline}
+.grp h3 small{color:var(--muted);font-weight:400}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:.7rem}
+.kc{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.8rem .95rem;scroll-margin-top:150px}
+.kh{display:grid;grid-template-columns:auto 1fr auto;gap:.1rem .8rem;align-items:start}
+.gcol{display:flex;flex-direction:column;align-items:center;min-width:3.6rem}
+.gcol .g{font-family:var(--jp);font-size:3rem;line-height:1.05}
+.pron{font-family:var(--jp);font-size:.9rem;line-height:1.2;text-align:center}
+.pron .rj{display:block;font-size:.72rem;margin:0}
+.km{font-weight:600;font-size:1.05rem;line-height:1.3}
+.anchor{margin-top:.25rem;font-size:.95rem}
+.anchor .w{font-family:var(--jp);font-size:1.3rem}
+.anchor .e{color:var(--muted)}
+.rtag{font-size:.7rem;border-radius:3px;padding:0 .35rem;margin-left:.3rem;color:#fff;vertical-align:.15em}
+.rtag.on{background:var(--rd-on)} .rtag.kun{background:var(--rd-kun)} .rtag.sp{background:var(--rd-sp)}
+.parts{display:flex;flex-wrap:wrap;gap:.35rem;align-items:flex-end;margin:.6rem 0 .1rem}
+.part{display:inline-flex;flex-direction:column;align-items:center;border:1px solid var(--rule);border-radius:6px;padding:.2rem .4rem;background:var(--paper);min-width:3.2rem}
+.part b{font-family:var(--jp);font-weight:400;font-size:1.4rem;line-height:1.2}
+.part small{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.2}
+.part .tag{margin-top:.15rem}
+a.part{text-decoration:none;color:inherit}
+a.part:hover{border-color:var(--indigo)}
+.plus{color:var(--muted);align-self:center}
+.atom{font-size:.85rem;color:var(--muted);margin:.5rem 0 0}
+.story{margin:.5rem 0 0}
+.wild{margin:.4rem 0 0;font-size:.9rem}
+.wild b{font-size:.72rem;color:var(--seal);letter-spacing:.03em;margin-right:.4rem}
+.wstat{margin-top:.4rem}
+.words{margin-top:.6rem;border-top:1px dashed var(--rule);padding-top:.4rem}
+.rg{margin:.45rem 0 0;padding-left:.55rem;border-left:2px solid var(--rule)}
+.rg-on{border-left-color:var(--rd-on)} .rg-kun{border-left-color:var(--rd-kun)} .rg-sp{border-left:2px dotted var(--rd-sp)}
+.rl{font-family:var(--jp);font-size:1rem;font-weight:600}
+.rl .tp{font-family:var(--en);font-size:.68rem;font-weight:600;margin-right:.2rem}
+.rl .ok{opacity:.55;font-weight:400}
+.wl{list-style:none;margin:.1rem 0 0;padding:0}
+.wl li{margin:.05rem 0 .25rem;line-height:1.85}
+.wl .w{font-family:var(--jp);font-size:1.08rem}
+.wl .e{color:var(--muted);font-size:.9rem}
+.rj{font-family:var(--en);font-style:italic;color:var(--muted);font-size:.85rem;margin-left:.35rem}
+.no-romaji .rj,.no-romaji .sr{display:none}
+details.more summary{cursor:pointer;font-size:.82rem;color:var(--indigo);margin:.1rem 0 .2rem}
+.rare,.nowords{margin:.4rem 0 0;font-size:.8rem;color:var(--muted);font-family:var(--jp)}
+.bd{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem;margin:.05rem 0 .2rem;line-height:1.3}
+.bdk{display:inline-flex;align-items:baseline;gap:.25rem;border:1px solid var(--rule);border-radius:5px;padding:.05rem .45rem;text-decoration:none;color:var(--ink);background:var(--paper);font-family:var(--jp);font-size:.88rem}
+a.bdk:hover{border-color:var(--indigo)}
+.bdk b{font-weight:400;font-size:1rem}
+.bdk .rj{font-size:.7rem;margin-left:0}
+.bd-on{border-left:3px solid var(--rd-on)} .bd-kun{border-left:3px solid var(--rd-kun)} .bd-sp{border-left:3px dotted var(--rd-sp)}
+.bdk.self{background:var(--indigo-wash)}
+.bd .op{color:var(--muted);font-size:.8rem}
+a.jk{color:inherit;text-decoration:none;background:linear-gradient(transparent 70%,var(--indigo-wash) 70%);border-radius:2px}
+.tfoot{margin:.9rem 0 0;padding:.7rem 1rem;border-left:3px solid var(--seal);background:var(--seal-wash);border-radius:0 8px 8px 0;font-size:.95rem}
+/* test modes */
+.hide-meaning .kc:not(.revealed) .km,.hide-meaning .kc:not(.revealed) .e,.hide-meaning .kc:not(.revealed) .story,.hide-meaning .sents .se{background:var(--chip);color:transparent;border-radius:3px}
+.hide-readings .kc:not(.revealed) .rl,.hide-readings .kc:not(.revealed) .pron,.hide-readings .kc:not(.revealed) .rj,.hide-readings .kc:not(.revealed) .bdk .rr,.hide-readings .sents .sr{background:var(--chip);color:transparent;border-radius:3px}
+.hide-readings .kc:not(.revealed) rt,.hide-readings .sents rt{visibility:hidden}
+.hide-meaning .kc:not(.revealed),.hide-readings .kc:not(.revealed){cursor:pointer}
+/* appendix */
+.apx{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:1rem 1.2rem;margin-top:2.5rem}
+.apx h2{margin:0 0 .3rem;font-size:1.25rem}
+.apxsec h4{margin:1.1rem 0 .2rem}
+.apxsec p{margin:.1rem 0 .5rem;color:var(--muted);font-size:.9rem}
+.apxgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:.35rem}
+.apxgrid span{border:1px solid var(--rule);border-radius:6px;padding:.25rem .4rem;display:flex;gap:.4rem;align-items:baseline}
+.apxgrid b{font-family:var(--jp);font-weight:400;font-size:1.3rem}
+.apxgrid small{font-size:.72rem;color:var(--muted);font-family:var(--jp)}
+.noresult{display:none;text-align:center;color:var(--muted);padding:2rem}
+.searching .noresult.show{display:block}
+@keyframes flash{0%{box-shadow:0 0 0 3px var(--seal)}100%{box-shadow:0 0 0 3px transparent}}
+.flash{animation:flash 2.2s ease-out}
+.backbtn{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;font:inherit;font-weight:600;border:0;border-radius:8px;padding:.6rem 1rem;background:var(--ink);color:var(--paper);box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
+.backbtn[hidden]{display:none}
+footer{max-width:1040px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);font-size:.85rem}
+@media (max-width:640px){
+  .controls-inner{padding-bottom:.3rem}
+  .search{flex-basis:100%}
+  .segs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%;padding-bottom:2px}
+  .segs::-webkit-scrollbar{display:none}
+  .seg button{white-space:nowrap}
+  section.topic,.kc{scroll-margin-top:170px}
+  .cards{grid-template-columns:1fr}
+  .thead{grid-template-columns:1fr}
+  .tnum{grid-row:auto}
+  section.topic,.kc{scroll-margin-top:230px}
+  .sl li{padding-left:0} .sl li::before{position:static;display:inline-grid;margin-bottom:.2rem}
+}
+:root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+:root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
+.rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
+body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
+body:not(.no-rdcol) .rd .rb,body:not(.no-rdcol) span.rd:not(.kana){text-decoration:underline 2px var(--rc);text-underline-offset:.22em;text-decoration-skip-ink:none}
+body:not(.no-rdcol) .rd-sp .rb,body:not(.no-rdcol) span.rd-sp:not(.kana){text-decoration-style:dotted}
+body:not(.no-rdcol) .rd.kana{color:var(--rc)}
+.rd-legend{max-width:var(--rd-max,980px);margin:0 auto;padding:0 1.25rem .55rem;display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.85rem;color:var(--muted)}
+.rd-legend .sw{font-family:var(--jp);font-size:1rem;margin-right:.25rem}
+.no-rdcol .rd-legend{display:none}
+.rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
+.no-rdcol .rdv-on,.no-rdcol .rdv-kun{color:inherit}
+
+.no-rdcol .rd-legend{display:none}
+@media (max-width:620px){.rd-legend .rdl{display:none}}
+.rd-legend{max-width:1040px}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>場面の漢字</h1>
+  <p class="sub">The N4 kanji sorted by where you'll actually meet them: the restaurant, the bar, the pharmacy, the station, the office. Each situation has example sentences, then its kanji as cards with their parts, a story, where you'll see them, and every word that uses them from N5 up to N2.</p>
+</header>
+<div class="controls">
+  <div class="controls-inner">
+    <input class="search" id="search" type="search" placeholder="Search kanji, words, kana, rōmaji or English" aria-label="Search">
+    <div class="segs"><div class="seg" role="group" aria-label="Vocabulary level, including easier levels"><span class="seglab">Words</span>
+      <button data-vtier="5" aria-pressed="false">N5</button><button data-vtier="4" aria-pressed="true">N4</button><button data-vtier="3" aria-pressed="false">N3</button><button data-vtier="2" aria-pressed="false">N2</button></div>
+    <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
+    <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="meaning" aria-pressed="false">Hide meaning</button><button data-hide="readings" aria-pressed="false">Hide readings</button></div>
+    <div class="seg" role="group" aria-label="Reading colours"><button data-rdcol="on" aria-pressed="true">On/kun colours</button><button data-rdcol="off" aria-pressed="false">Off</button></div></div>
+  </div>
+  <div class="rd-legend"><span><span class="rd rd-on"><span class="rb sw">音</span></span>On<span class="rdl"> reading, from Chinese</span></span><span><span class="rd rd-kun"><span class="rb sw">訓</span></span>Kun<span class="rdl"> reading, native Japanese</span></span><span><span class="rd rd-sp"><span class="rb sw">特</span></span>Special<span class="rdl"> reading: learn the whole word</span></span></div>
+  <nav class="topics" id="nav"></nav>
+</div>
+<main id="main"></main>
+<footer><p>Sources: the kanji, stories and situations are this project's own. Word lists come from the open JLPT word lists (derived from tanos.co.uk), with readings from KANJIDIC2 (EDRDG, CC BY-SA 4.0). JLPT has not published official lists since 2010, so all levels are a guide.</p></footer>
+<script src="../assets/common.js"></script>
+<script>
+
+
+const D = __DATA__;
+// ---------- helpers ----------
+const BASE={あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",や:"ya",ゆ:"yu",よ:"yo",ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po","、":", ","。":". ","〜":"~","～":"~"};
+const SY={ゃ:"a",ゅ:"u",ょ:"o"}, SV={ぁ:"a",ぃ:"i",ぅ:"u",ぇ:"e",ぉ:"o"};
+const toH=s=>s.replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
+const toKata=s=>s.replace(/[\u3041-\u3096]/g,c=>String.fromCharCode(c.charCodeAt(0)+0x60));
+function romaji(k){const s=toH(k);let o="",i=0;while(i<s.length){const c=s[i],n=s[i+1];
+ if(c==="っ"){const r=romaji(s.slice(i+1,i+3));o+=r.startsWith("ch")?"t":(r[0]||"");i++;continue;}
+ if(c==="ー"){o+=o.slice(-1);i++;continue;}
+ if(n&&SY[n]&&BASE[c]){const b=BASE[c];o+=(["shi","chi","ji"].includes(b)?b.slice(0,-1):b.slice(0,-1)+"y")+SY[n];i+=2;continue;}
+ if(n&&SV[n]&&BASE[c]){const b=BASE[c];o+=(b==="fu"?"f":b==="u"?"w":b==="te"?"t":b==="de"?"d":b==="shi"?"sh":b==="chi"?"ch":b==="ji"?"j":b.slice(0,-1))+SV[n];i+=2;continue;}
+ if(c==="ん"){o+=(n&&/[あいうえおやゆよ]/.test(n))?"n'":"n";i++;continue;}
+ o+=BASE[c]!==undefined?BASE[c]:c;i++;}return o.trim();}
+const PARTICLE={"は":"wa","を":"o","へ":"e"};
+const romajiToken=t=>{ if(PARTICLE[t]) return PARTICLE[t]; if(t.length>2&&t.endsWith("か")&&/[すんた]/.test(t[t.length-2])) return romaji(t.slice(0,-1))+" ka"; return romaji(t); };
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NOTE=/([\u4e00-\u9fff々]+)\{([^}]+)\}/g;
+const K=D.K, WV=D.W, LV=D.LV, T=D.T;
+const VT=()=>+state.vtier;
+const jl=(c,self,w)=>K[c]&&c!==self?`<a class="jk" href="#k-${c}" data-jump="${c}" data-from="${self||""}" data-w="${esc(w||"")}">${c}</a>`:c;
+const linkify=(html,self,w)=>html.replace(/[\u4e00-\u9fff]/g,c=>jl(c,self,w));
+function chips(w,r,self){
+  const a=rdAlign(w,r); if(!a) return "";
+  let vf=false; const segs=[];
+  for(const p of a){ if(p.r==null) continue; const s=rdSeg(p.t,p.r,vf); vf=true; if(!s){ segs.push({k:p.t,r:p.r,t:"sp"}); continue; } s.forEach(y=>segs.push({k:y.k,r:y.r,t:y.t})); }
+  if(segs.length<2) return "";
+  const cls=t=>t==="on"?"rdv-on":t==="kun"?"rdv-kun":"rdv-sp";
+  return `<span class="bd">${segs.map(s=>{ const inner=`<b>${esc(s.k)}</b><span class="rr ${cls(s.t)}">${esc(s.t==="on"?toKata(s.r):s.r)}</span><span class="rj">${romaji(s.r)}</span>`;
+    return [...s.k].length===1&&K[s.k]&&s.k!==self?`<a class="bdk bd-${s.t}" href="#k-${s.k}" data-jump="${s.k}" data-from="${self}" data-w="${esc(w)}">${inner}</a>`:`<span class="bdk bd-${s.t}${s.k===self?" self":""}">${inner}</span>`; }).join('<span class="op">+</span>')}</span>`;
+}
+// ---------- sentences ----------
+function sentHtml(s,i){ if(i>=6) s={...s,extra:true};
+  let jp, rj;
+  if(s.kj){ jp=s.kj.map((k,i)=>/[\u4e00-\u9fff]/.test(k)?linkify(rdWord(k,s.kn[i],"ruby"),"",""):esc(k)).join(" "); rj=s.rj.join(" "); }
+  else { const toks=s.n.split(" ");
+    jp=toks.map(t=>{ let o="",last=0; t.replace(NOTE,(m,b,r,off)=>{ o+=esc(t.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return linkify(o+esc(t.slice(last)),"",""); }).join(" ");
+    rj=toks.map(t=>romajiToken(t.replace(NOTE,"$2"))).join(" ").replace(/ ,/g,","); }
+  const ks=[...(s.kj?s.kj.join(""):s.n)].filter(c=>/[\u4e00-\u9fff]/.test(c));
+  const lv=Math.min(5,...ks.map(c=>LV[c]||1));
+  return `<li${s.extra?' class="extra"':""}><div class="sj">${jp}${lv<4?`<span class="lvb">${lv<2?"N1 kanji":"N"+lv+" kanji"}</span>`:""}</div><div class="sr">${esc(rj)}</div><div class="se">${esc(s.en)}</div>${s.why?`<div class="sn">${esc(s.why)}</div>`:""}</li>`;
+}
+// ---------- cards ----------
+const TAGNAME={tK:"kanji",tO:"kanji + kana",tC:"compounds only",tX:"rare",tR:"radical"};
+function wordLi(k){ return ([w,r,en,l])=>{ const multi=[...w].filter(c=>/[\u4e00-\u9fff]/.test(c)).length>1;
+  return `<li data-w="${esc(w)}"><span class="w">${linkify(rdWord(w,r,"ruby"),k,w)}</span><span class="rj">${romaji(r)}</span> <span class="e">${esc(en)}</span>${l<5&&VT()<4?`<span class="lvb">N${l}</span>`:""}${multi?chips(w,r,k):""}</li>`; }; }
+function wordsBlock(k){
+  const t=VT(), d=WV[k]; if(!d) return "";
+  const rs=d.r.map(([tp,label,ws])=>({tp,label,v:ws.filter(z=>z[3]>=t).sort((a,b)=>b[3]-a[3])}));
+  const show=rs.filter(r=>r.v.length), rare=rs.filter(r=>!r.v.length), sp=d.sp.filter(z=>z[3]>=t);
+  const lab=r=>r.tp==="on"?`${esc(r.label)}<span class="rj">${romaji(r.label)}</span>`:r.label.split("、").map(f=>{const[a,b]=f.split(".");return `${esc(a)}${b?`<span class="ok">${esc(b)}</span>`:""}`;}).join("、")+`<span class="rj">${romaji(r.label.split("、")[0].replace(".",""))}</span>`;
+  const list=v=>`<ul class="wl">${v.slice(0,3).map(wordLi(k)).join("")}</ul>${v.length>3?`<details class="more"><summary>${v.length-3} more</summary><ul class="wl">${v.slice(3).map(wordLi(k)).join("")}</ul></details>`:""}`;
+  const grp=r=>`<div class="rg rg-${r.tp}"><div class="rl ${r.tp==="on"?"rdv-on":"rdv-kun"}"><span class="tp">${r.tp==="on"?"音 On":"訓 Kun"}</span> ${lab(r)}</div>${list(r.v)}</div>`;
+  let empty="";
+  if(!show.length&&!sp.length){ const all=[...d.r.flatMap(r=>r[2]),...d.sp]; const m=Math.max(0,...all.map(z=>z[3]).filter(l=>l<t)); empty=`<p class="nowords">${m?`No N${t} words use this kanji yet. Its words start at N${m}.`:"No common words at this level."}</p>`; }
+  return `<div class="words">${show.filter(r=>r.tp==="on").map(grp).join("")}${show.filter(r=>r.tp==="kun").map(grp).join("")}${sp.length?`<div class="rg rg-sp"><div class="rl rdv-sp"><span class="tp">特 Special</span> learn as a whole word</div>${list(sp)}</div>`:""}${empty}${rare.length?`<p class="rare">Also: ${rare.slice(0,5).map(r=>`<span class="${r.tp==="on"?"rdv-on":"rdv-kun"}">${esc(r.label)}</span>`).join("、")}</p>`:""}</div>`;
+}
+function card(x){
+  const t=rdTypeOf(x.w,x.r,x.k);
+  const al=WV[x.k]&&WV[x.k].al;
+  const pron=al?`<span class="pron ${al[2]==="on"?"rdv-on":"rdv-kun"}">${esc(al[1])}<span class="rj">${romaji(al[1])}</span></span>`:"";
+  const parts=x.atom?`<p class="atom">Indivisible: learn the shape whole.</p>`:`<div class="parts">${x.parts.map(([g,m,c,title,name])=>{ const inner=`<b>${esc(g)}</b><small>${esc(m)}</small><span class="tag ${c}" title="${esc(title)}">${esc(name)}</span>`; return K[g]&&g!==x.k?`<a class="part" href="#k-${g}" data-jump="${g}" data-from="${x.k}">${inner}</a>`:`<span class="part">${inner}</span>`; }).join('<span class="plus">+</span>')}</div>`;
+  const s=[x.k,x.w,x.r,romaji(x.r),x.en,x.m,...(WV[x.k]?WV[x.k].r.flatMap(r=>r[2].map(z=>z[0]+z[1]+romaji(z[1])+z[2])):[])].join(" ").toLowerCase();
+  return `<article class="kc" id="k-${x.k}" data-s="${esc(s)}" tabindex="-1">
+    <div class="kh"><div class="gcol"><span class="g">${x.k}</span>${pron}</div>
+      <div><div class="km">${esc(x.m)}</div>
+        <div class="anchor"><span class="w">${linkify(rdWord(x.w,x.r,"ruby"),x.k,x.w)}</span><span class="rj">${romaji(x.r)}</span> <span class="e">${esc(x.en)}</span>${t?`<span class="rtag ${t}">${t==="sp"?"special":t}</span>`:""}</div></div>
+      <span class="lvb">${LV[x.k]?"N"+LV[x.k]:"N1"}</span></div>
+    ${parts}
+    <p class="story">${esc(x.story)}</p>
+    ${x.wild?`<p class="wild"><b>WHERE YOU MEET IT</b>${linkify(esc(x.wild),x.k,"")}</p>`:""}
+    ${x.ws?`<div class="wstat"><span class="tag ${x.ws[0]}">${esc(x.ws[1])}</span></div>`:""}
+    ${wordsBlock(x.k)}
+  </article>`;
+}
+function topicHtml(tp,i){
+  const n=tp.groups.reduce((a,g)=>a+g.rows.length,0);
+  return `<section class="topic" id="${tp.id}"><div class="thead"><div class="tnum">${i+1}</div><h2><span class="jp">${esc(tp.jp)}</span>${esc(tp.en)}</h2><div class="cnt">${n} kanji · ${tp.sents.length} sentences</div><p class="blurb">${esc(tp.blurb)}</p></div>
+    <details class="sents" open><summary>Sentences<span>${tp.sents.length}, using this situation's kanji</span></summary><ol class="sl">${tp.sents.map(sentHtml).join("")}</ol>${tp.sents.length>6?`<button class="moresents" data-more="${tp.id}">Show all ${tp.sents.length} sentences</button>`:""}</details>
+    ${tp.groups.map(g=>`<div class="grp"><h3>${esc(g.name)} <small>${g.rows.length}</small></h3><div class="cards">${g.rows.map(card).join("")}</div></div>`).join("")}
+    ${tp.foot?`<p class="tfoot">${linkify(esc(tp.foot),"","")}</p>`:""}</section>`;
+}
+function guideHtml(){
+  const L=[["tK","A real kanji that is a word on its own. Learn it and you get a second character free."],["tO","A real kanji that only becomes a word with hiragana attached (高い, 占う). Learn the kanji and its tail together."],["tC","A real kanji you'll never see standing alone. It lives inside compounds such as 台所."],["tX","A genuine kanji, but well beyond N4. Recognise the shape as scaffolding and move on."],["tR","Not a kanji at all: a positional shape with no reading of its own, such as 广, 亻 and 氵. Recognise it, don't study it."]];
+  return `<details class="guide"><summary>How to read the cards</summary>${D.lede.map(p=>`<p>${esc(p)}</p>`).join("")}<p>Each part in a breakdown carries a tag saying what it actually is:</p><div class="tags">${L.map(([c,t])=>`<span class="tag ${c}">${TAGNAME[c]}</span><span>${esc(t)}</span>`).join("")}</div><p>Under each card, the words are grouped by reading: on readings first, then kun, then special whole-word readings. Tap any kanji in a word, or a chip, to flip to that kanji's card. The Words switch sets the vocabulary level, and each level includes the easier ones.</p></details>`;
+}
+function apxHtml(){
+  return `<section class="apx" id="appendix"><h2>Appendix: every component, classified</h2><p class="sub">All the parts used in the breakdowns, sorted by whether they're kanji worth learning, kanji that need hiragana, kanji that only live in compounds, rare kanji, or radicals.</p>
+   ${D.apx.map(a=>`<div class="apxsec"><h4><span class="tag ${a.cls}">${esc(a.name)}</span> <small>${a.items.length}</small></h4><p>${esc(a.note)}</p><div class="apxgrid">${a.items.map(([g,r])=>`<span><b>${esc(g)}</b><small>${esc(r)}</small></span>`).join("")}</div></div>`).join("")}</section>`;
+}
+// ---------- state ----------
+let state={vtier:"4",romaji:"on",hide:"none"};
+try{Object.assign(state,JSON.parse(localStorage.getItem("kanji-situation")||"{}"));}catch(e){}
+const save=()=>{try{localStorage.setItem("kanji-situation",JSON.stringify(state));}catch(e){}};
+const main=document.getElementById("main");
+function render(){
+  main.innerHTML=guideHtml()+T.map(topicHtml).join("")+`<div class="noresult" id="noresult">Nothing matches that. Try the kanji itself, a kana reading, rōmaji or an English word.</div>`+apxHtml();
+  document.getElementById("nav").innerHTML=T.map(t=>`<a href="#${t.id}"><span class="j">${esc(t.jp)}</span>${esc(t.en)}</a>`).join("")+`<a href="#appendix">Appendix</a>`;
+  apply(); doSearch();
+}
+function apply(){
+  document.body.classList.toggle("no-romaji",state.romaji==="off");
+  document.body.classList.toggle("hide-meaning",state.hide==="meaning");
+  document.body.classList.toggle("hide-readings",state.hide==="readings");
+  document.querySelectorAll(".kc").forEach(c=>c.classList.remove("revealed"));
+  ["vtier","romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset[k]===state[k])));
+}
+function doSearch(){
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  document.body.classList.toggle("searching",!!q);
+  let any=false;
+  document.querySelectorAll("section.topic").forEach(sec=>{ let n=0;
+    sec.querySelectorAll(".kc").forEach(c=>{ const hit=!q||c.dataset.s.includes(q); c.style.display=hit?"":"none"; if(hit) n++; });
+    sec.querySelectorAll(".grp").forEach(g=>g.style.display=[...g.querySelectorAll(".kc")].some(c=>c.style.display!=="none")?"":"none");
+    const sents=sec.querySelector("details.sents"); if(sents) sents.style.display=q?"none":"";
+    sec.style.display=n?"":"none"; if(n) any=true; });
+  document.getElementById("noresult").classList.toggle("show",!!q&&!any);
+}
+document.getElementById("search").addEventListener("input",doSearch);
+document.querySelectorAll("[data-vtier]").forEach(b=>b.onclick=()=>{const y=window.scrollY;state.vtier=b.dataset.vtier;save();render();window.scrollTo(0,y);});
+["romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{state[k]=b.dataset[k];save();apply();}));
+// ---------- jumps ----------
+const jumpStack=[];
+const backBtn=document.createElement("button"); backBtn.className="backbtn"; backBtn.hidden=true; document.body.appendChild(backBtn);
+const offsetTop=()=>{ const c=document.querySelector(".controls"); return (c?c.offsetHeight:0)+12; };
+const scrollToEl=el=>window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-offsetTop(),behavior:"auto"});
+const flash=el=>{ if(!el) return; el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); };
+function jumpTo(k,from,w){
+  const el=document.getElementById("k-"+k); if(!el) return;
+  if(el.style.display==="none"){ document.getElementById("search").value=""; doSearch(); }
+  jumpStack.push({y:window.scrollY,from});
+  const li=w?[...el.querySelectorAll("li[data-w]")].find(l=>l.dataset.w===w):null;
+  if(li){ const d=li.closest("details"); if(d) d.open=true; }
+  scrollToEl(el); flash(li||el);
+  backBtn.textContent=from?`← Back to ${from}`:"← Back"; backBtn.hidden=false;
+}
+backBtn.onclick=()=>{ const s=jumpStack.pop(); if(!s) return;
+  const el=s.from&&document.getElementById("k-"+s.from); if(el){ scrollToEl(el); flash(el); } else window.scrollTo({top:s.y});
+  const nx=jumpStack[jumpStack.length-1]; if(nx) backBtn.textContent=nx.from?`← Back to ${nx.from}`:"← Back"; else backBtn.hidden=true; };
+document.addEventListener("click",e=>{ const j=e.target.closest("[data-jump]"); if(!j) return; const c=j.closest(".kc");
+  if(c&&state.hide!=="none"&&!c.classList.contains("revealed")) return;
+  e.preventDefault(); e.stopPropagation(); jumpTo(j.dataset.jump,j.dataset.from||"",j.dataset.w||""); },true);
+main.addEventListener("click",e=>{ const m=e.target.closest("[data-more]"); if(m){ const d=m.closest("details"); const on=d.classList.toggle("all"); m.textContent=on?"Show fewer":`Show all ${d.querySelectorAll(".sl li").length} sentences`; return; } const c=e.target.closest(".kc"); if(c&&state.hide!=="none") c.classList.add("revealed"); });
+document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a[href^='#']"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); scrollToEl(el); });
+render();
+(function(){ let v="on"; try{ v=localStorage.getItem("rdcol")||"on"; }catch(e){}
+  const set=x=>{ v=x; document.body.classList.toggle("no-rdcol",v==="off");
+    document.querySelectorAll("[data-rdcol]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rdcol===v));
+    try{ localStorage.setItem("rdcol",v); }catch(e){} };
+  document.querySelectorAll("[data-rdcol]").forEach(b=>b.addEventListener("click",()=>set(b.dataset.rdcol)));
+  set(v); })();
+</script>
+</body>
+</html>

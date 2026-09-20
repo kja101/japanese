@@ -13,7 +13,8 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `kanji/kanji-by-situation.html` | **See them in use.** 200 N4 kanji in 13 real-life situations, with 222 example sentences, where you meet each kanji, and N5–N2 word lists. |
 | `words/phrasebook.html` | Interactive phrasebook: about 500 phrases and sentences in 14 situations, with swap-in words, grammar-block colouring and a starred personal list. |
 | `words/sentence-builder.html` | The grammar lesson behind the phrasebook: 120 sentences in colour-coded blocks, plus every N5/N4 verb and adjective by type with its main forms and traps. |
-| `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work. |
+| `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work; not part of the build. |
+| `kana/kana-words.html` | About 425 N5–N2 words written in kana, grouped by use (greetings, question and pointing words, linking words, adverbs, sound words, verbs, nouns by topic), with example sentences. |
 | `kana/kana-sounds.html` | Kana by sign family, by sound, and same-sound words with pitch patterns. |
 
 All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
@@ -28,6 +29,41 @@ Progress, flashcard status and the stories you write are saved in your browser's
 git clone https://github.com/kja101/japanese.git
 open japanese/index.html
 ```
+
+## How the site is built
+
+The pages in `kanji/`, `words/` and `kana/` are generated. Don't edit them directly: edit the templates or the data, then rebuild.
+
+```
+src/      page templates (HTML), plus src/common.js
+data/     the content, as JSON
+build/    build.py, which puts the two together
+assets/   common.js, the shared reading engine used by every page (generated)
+```
+
+To rebuild after a change (Python 3, no packages needed):
+
+```sh
+python3 build/build.py
+```
+
+Then commit both the source change and the rebuilt pages, because GitHub Pages serves the built files.
+
+### Where to edit what
+
+| To change | Edit |
+|---|---|
+| A kanji's story, keyword, parts or look-alikes | `data/kanji.json` (under `K`, by kanji) |
+| The words listed on kanji cards | `data/kanji-words.json` |
+| Readings used for the on/kun colours | `data/readings.json` |
+| The 120 sentence-builder sentences | `src/sentence-builder.html` (the page is their source; the phrasebook and situation page reuse them) |
+| Natural English for those sentences | `data/sentence-builder-english.json` |
+| The other example sentences | `data/sentences-extra.json` |
+| Phrasebook sections and swap-in words | `data/phrasebook.json` |
+| Situation topics, kanji rows and notes | `data/situation.json` |
+| Kana words and their groups | `data/kana-words.json` |
+| The daily study plan's data | `data/study.json` |
+| Page layout or behaviour | the matching file in `src/` |
 
 ## Sources and credits
 

@@ -1,0 +1,7256 @@
+{
+ "topics": [
+  {
+   "id": "t1",
+   "jp": "レストラン",
+   "en": "Eating out",
+   "blurb": "The kanji you read off a menu, a shop curtain or a set-meal board. Learn this chapter and you can order without pointing.",
+   "foot": "和 and 洋 divide almost everything in Japan: 和食/洋食, 和室/洋室, 和服/洋服.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "飯",
+       "m": "cooked rice, meal",
+       "w": "ご飯",
+       "r": "ごはん",
+       "en": "cooked rice; a meal",
+       "parts": [
+        [
+         "食",
+         "food",
+         "tO",
+         "kanji + kana · 食べる・たべる",
+         "kanji + kana"
+        ],
+        [
+         "反",
+         "reverse",
+         "tC",
+         "kanji, compounds only · 反対",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "The meal you turn back to every day.",
+       "wild": "Every set-meal board: 定食 comes with ご飯",
+       "ws": [
+        "tC",
+        "used in compounds: ご飯"
+       ]
+      },
+      {
+       "k": "肉",
+       "m": "meat",
+       "w": "肉",
+       "r": "にく",
+       "en": "meat",
+       "parts": [],
+       "atom": true,
+       "story": "A cut of meat with the grain drawn inside it.",
+       "wild": "Butcher counters, yakiniku menus, 肉料理 sections",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "魚",
+       "m": "fish",
+       "w": "魚",
+       "r": "さかな",
+       "en": "fish",
+       "parts": [],
+       "atom": true,
+       "story": "Head, scaled body, tail.",
+       "wild": "Fish-market signage and the 魚 section of any supermarket",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "茶",
+       "m": "tea",
+       "w": "お茶",
+       "r": "おちゃ",
+       "en": "tea",
+       "parts": [
+        [
+         "艹",
+         "grass",
+         "tR",
+         "radical · grass, on top",
+         "radical"
+        ],
+        [
+         "人",
+         "person",
+         "tK",
+         "kanji · 人・ひと",
+         "kanji"
+        ],
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A person between the leaf and the tree, picking.",
+       "wild": "Free with almost every meal; 喫茶店 is an old-style café",
+       "ws": [
+        "tC",
+        "used in compounds: お茶"
+       ]
+      },
+      {
+       "k": "料",
+       "m": "fee, material",
+       "w": "料理",
+       "r": "りょうり",
+       "en": "cooking, a dish",
+       "parts": [
+        [
+         "米",
+         "rice",
+         "tK",
+         "kanji · 米・こめ",
+         "kanji"
+        ],
+        [
+         "斗",
+         "ladle",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Rice measured by the ladle. What you pay, and what you cook with.",
+       "wild": "Also 料金, the charge — the same kanji does both",
+       "ws": [
+        "tC",
+        "used in compounds: 料理"
+       ]
+      },
+      {
+       "k": "味",
+       "m": "flavour",
+       "w": "味",
+       "r": "あじ",
+       "en": "taste, flavour",
+       "parts": [
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "未",
+         "not yet",
+         "tC",
+         "kanji, compounds only · 未来",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Something the mouth has not finished deciding about.",
+       "wild": "On packaging as 味付け, seasoned",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "店",
+       "m": "shop",
+       "w": "店",
+       "r": "みせ",
+       "en": "shop, restaurant",
+       "parts": [
+        [
+         "广",
+         "building",
+         "tR",
+         "radical · building, open on one side",
+         "radical"
+        ],
+        [
+         "占",
+         "occupy",
+         "tO",
+         "kanji + kana · 占う・うらなう",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "An open-fronted building someone has taken over.",
+       "wild": "店内 means eat-in; 店員 is the person serving you",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "堂",
+       "m": "hall",
+       "w": "食堂",
+       "r": "しょくどう",
+       "en": "canteen, dining hall",
+       "parts": [
+        [
+         "尚",
+         "esteemed",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ],
+        [
+         "土",
+         "earth",
+         "tK",
+         "kanji · 土・つち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A raised, respected building standing on the ground.",
+       "wild": "Cheap, fast, everywhere near stations",
+       "ws": [
+        "tC",
+        "used in compounds: 食堂"
+       ]
+      },
+      {
+       "k": "品",
+       "m": "goods, article",
+       "w": "一品",
+       "r": "いっぴん",
+       "en": "a single dish, an item",
+       "parts": [
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Three mouths talking about the same object. That is how goods get a reputation.",
+       "wild": "一品料理 on a menu means à la carte",
+       "ws": [
+        "tC",
+        "used in compounds: 一品"
+       ]
+      },
+      {
+       "k": "屋",
+       "m": "roof, shop",
+       "w": "居酒屋",
+       "r": "いざかや",
+       "en": "pub, tavern",
+       "parts": [
+        [
+         "尸",
+         "flag, corpse",
+         "tR",
+         "radical · a flag or a body",
+         "radical"
+        ],
+        [
+         "至",
+         "arrive",
+         "tO",
+         "kanji + kana · 至る・いたる",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "A flag over the place you arrive at. Japanese shop names all end in it.",
+       "wild": "The 屋 suffix names nearly every kind of shop",
+       "ws": [
+        "tC",
+        "used in compounds: 居酒屋"
+       ]
+      },
+      {
+       "k": "番",
+       "m": "number, turn",
+       "w": "番号",
+       "r": "ばんごう",
+       "en": "number",
+       "parts": [
+        [
+         "釆",
+         "scatter",
+         "tR",
+         "radical · scattering",
+         "radical"
+        ],
+        [
+         "田",
+         "field",
+         "tK",
+         "kanji · 田・た",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Seeds numbered field by field. Whose turn is it?",
+       "wild": "Your queue ticket and your table number",
+       "ws": [
+        "tC",
+        "used in compounds: 番号"
+       ]
+      },
+      {
+       "k": "和",
+       "m": "harmony, Japan",
+       "w": "和食",
+       "r": "わしょく",
+       "en": "Japanese food",
+       "parts": [
+        [
+         "禾",
+         "grain",
+         "tR",
+         "radical · a stalk of grain",
+         "radical"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Grain enough for every mouth. That is peace, and it is also the old word for Japan.",
+       "wild": "和 vs 洋 is the standard Japanese/Western split",
+       "ws": [
+        "tC",
+        "used in compounds: 和食"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "飲",
+       "m": "drink",
+       "w": "飲む",
+       "r": "のむ",
+       "en": "to drink",
+       "parts": [
+        [
+         "食",
+         "food",
+         "tO",
+         "kanji + kana · 食べる・たべる",
+         "kanji + kana"
+        ],
+        [
+         "欠",
+         "open mouth",
+         "tO",
+         "kanji + kana · 欠ける・かける",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "Food and an open mouth, tipped back.",
+       "wild": "飲み放題 — all you can drink",
+       "ws": [
+        "tO",
+        "needs hiragana: 飲む"
+       ]
+      },
+      {
+       "k": "注",
+       "m": "pour, pay attention",
+       "w": "注文",
+       "r": "ちゅうもん",
+       "en": "to order",
+       "parts": [
+        [
+         "氵",
+         "water",
+         "tR",
+         "radical · water, on the left",
+         "radical"
+        ],
+        [
+         "主",
+         "master, main",
+         "tO",
+         "kanji + kana · 主に・おもに",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "Water aimed at the main spot. Pour it there, and put your attention there.",
+       "wild": "ご注文は? — 'your order?'",
+       "ws": [
+        "tC",
+        "used in compounds: 注文"
+       ]
+      },
+      {
+       "k": "待",
+       "m": "wait",
+       "w": "待つ",
+       "r": "まつ",
+       "en": "to wait",
+       "parts": [
+        [
+         "彳",
+         "crossroads",
+         "tR",
+         "radical · a crossroads",
+         "radical"
+        ],
+        [
+         "寺",
+         "temple",
+         "tK",
+         "kanji · 寺・てら",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Standing at the crossroads by the temple, waiting.",
+       "wild": "待ち時間 on the board outside a queue",
+       "ws": [
+        "tO",
+        "needs hiragana: 待つ"
+       ]
+      },
+      {
+       "k": "作",
+       "m": "make",
+       "w": "作る",
+       "r": "つくる",
+       "en": "to make",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "乍",
+         "saw strokes",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "A person hacking a shape out of raw material.",
+       "wild": "手作り — handmade, on menus and packaging",
+       "ws": [
+        "tO",
+        "needs hiragana: 作る"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "苦",
+       "m": "bitter, painful",
+       "w": "苦い",
+       "r": "にがい",
+       "en": "bitter",
+       "parts": [
+        [
+         "艹",
+         "grass",
+         "tR",
+         "radical · grass, on top",
+         "radical"
+        ],
+        [
+         "古",
+         "old",
+         "tO",
+         "kanji + kana · 古い・ふるい",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "Old grass. Chew it and see.",
+       "wild": "Coffee, beer, and 苦手 meaning 'not my thing'",
+       "ws": [
+        "tO",
+        "needs hiragana: 苦い"
+       ]
+      },
+      {
+       "k": "少",
+       "m": "few, a little",
+       "w": "少し",
+       "r": "すこし",
+       "en": "a little",
+       "parts": [
+        [
+         "小",
+         "small",
+         "tO",
+         "kanji + kana · 小さい・ちいさい",
+         "kanji + kana"
+        ],
+        [
+         "丿",
+         "taken away",
+         "tR",
+         "radical · a slash",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Small, with a bit shaved off.",
+       "wild": "少なめ — 'less, please', useful for rice portions",
+       "ws": [
+        "tO",
+        "needs hiragana: 少し"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "jp": "夜遊び",
+   "en": "Going out at night",
+   "blurb": "Bars, music and cinema. Most of these turn up on a poster or a karaoke screen rather than in a textbook.",
+   "foot": "楽 has two readings and two lives: 楽しい (fun) and 音楽 (music). Same kanji, same underlying idea of ease.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "夜",
+       "m": "night",
+       "w": "夜",
+       "r": "よる",
+       "en": "night",
+       "parts": [
+        [
+         "亠",
+         "lid",
+         "tR",
+         "radical · a lid",
+         "radical"
+        ],
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "夕",
+         "evening",
+         "tC",
+         "kanji, compounds only · 夕方",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "A person under a lid with the evening already arrived outside.",
+       "wild": "夜行バス — the overnight coach",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "晩",
+       "m": "evening",
+       "w": "今晩",
+       "r": "こんばん",
+       "en": "this evening",
+       "parts": [
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ],
+        [
+         "免",
+         "escape",
+         "tC",
+         "kanji, compounds only · 免許",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "The sun making its escape below the roofline.",
+       "wild": "今晩は — the greeting, literally 'as for this evening'",
+       "ws": [
+        "tC",
+        "used in compounds: 今晩"
+       ]
+      },
+      {
+       "k": "声",
+       "m": "voice",
+       "w": "声",
+       "r": "こえ",
+       "en": "voice",
+       "parts": [
+        [
+         "士",
+         "samurai",
+         "tC",
+         "kanji, compounds only · 武士",
+         "compounds only"
+        ],
+        [
+         "尸",
+         "flag",
+         "tR",
+         "radical · a flag or a body",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A voice carrying over the top of a banner.",
+       "wild": "大きな声で — 'in a loud voice'",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "音",
+       "m": "sound",
+       "w": "音",
+       "r": "おと",
+       "en": "sound",
+       "parts": [
+        [
+         "立",
+         "stand",
+         "tO",
+         "kanji + kana · 立つ・たつ",
+         "kanji + kana"
+        ],
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Something standing over the sun and vibrating. Not words — just noise.",
+       "wild": "音楽 is music; 音 alone is any noise",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "曲",
+       "m": "tune, bend",
+       "w": "曲",
+       "r": "きょく",
+       "en": "tune, track",
+       "parts": [],
+       "atom": true,
+       "story": "A bent frame with slats in it. A tune is a line that bends.",
+       "wild": "Karaoke menus list everything by 曲名",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "映",
+       "m": "reflect, project",
+       "w": "映画",
+       "r": "えいが",
+       "en": "film",
+       "parts": [
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ],
+        [
+         "央",
+         "centre",
+         "tC",
+         "kanji, compounds only · 中央",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Sun striking dead centre and bouncing straight back at you.",
+       "wild": "映画館 — cinema",
+       "ws": [
+        "tC",
+        "used in compounds: 映画"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "歌",
+       "m": "song",
+       "w": "歌う",
+       "r": "うたう",
+       "en": "to sing",
+       "parts": [
+        [
+         "可",
+         "possible",
+         "tC",
+         "kanji, compounds only · 可能",
+         "compounds only"
+        ],
+        [
+         "可",
+         "possible",
+         "tC",
+         "kanji, compounds only · 可能",
+         "compounds only"
+        ],
+        [
+         "欠",
+         "lack of breath",
+         "tO",
+         "kanji + kana · 欠ける・かける",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "Sing until you run out of breath, then sing again.",
+       "wild": "歌 alone is the song; 歌手 is the singer",
+       "ws": [
+        "tO",
+        "needs hiragana: 歌う"
+       ]
+      },
+      {
+       "k": "帰",
+       "m": "return home",
+       "w": "帰る",
+       "r": "かえる",
+       "en": "to go home",
+       "parts": [
+        [
+         "刂",
+         "fragment",
+         "tR",
+         "radical · sword, on the right",
+         "radical"
+        ],
+        [
+         "帚",
+         "broom",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Sweeping up and going home.",
+       "wild": "終電で帰る — go home on the last train",
+       "ws": [
+        "tO",
+        "needs hiragana: 帰る"
+       ]
+      },
+      {
+       "k": "呼",
+       "m": "call",
+       "w": "呼ぶ",
+       "r": "よぶ",
+       "en": "to call",
+       "parts": [
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "乎",
+         "calling out",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "The mouth stretched long to reach someone at a distance.",
+       "wild": "呼び出し — calling staff over, or a tannoy page",
+       "ws": [
+        "tO",
+        "needs hiragana: 呼ぶ"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "楽",
+       "m": "fun, music, ease",
+       "w": "楽しい",
+       "r": "たのしい",
+       "en": "fun, enjoyable",
+       "parts": [
+        [
+         "幺",
+         "threads",
+         "tR",
+         "radical · a short thread",
+         "radical"
+        ],
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A wooden rattle strung with beads. Shake it and everything gets easier.",
+       "wild": "音楽 uses the same kanji: sound that is easy",
+       "ws": [
+        "tO",
+        "needs hiragana: 楽しい"
+       ]
+      },
+      {
+       "k": "悪",
+       "m": "bad, evil",
+       "w": "悪い",
+       "r": "わるい",
+       "en": "bad",
+       "parts": [
+        [
+         "亜",
+         "second-rate",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ],
+        [
+         "心",
+         "heart",
+         "tK",
+         "kanji · 心・こころ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A second-rate heart. Not broken, just not good.",
+       "wild": "気分が悪い — feeling ill, which you may need",
+       "ws": [
+        "tO",
+        "needs hiragana: 悪い"
+       ]
+      },
+      {
+       "k": "強",
+       "m": "strong",
+       "w": "強い",
+       "r": "つよい",
+       "en": "strong",
+       "parts": [
+        [
+         "弓",
+         "bow",
+         "tK",
+         "kanji · 弓・ゆみ",
+         "kanji"
+        ],
+        [
+         "厶",
+         "private",
+         "tR",
+         "radical · private, a cocoon",
+         "radical"
+        ],
+        [
+         "虫",
+         "insect",
+         "tK",
+         "kanji · 虫・むし",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A bow so strong an insect could not bend it.",
+       "wild": "お酒に強い — holds their drink",
+       "ws": [
+        "tO",
+        "needs hiragana: 強い"
+       ]
+      },
+      {
+       "k": "弱",
+       "m": "weak",
+       "w": "弱い",
+       "r": "よわい",
+       "en": "weak",
+       "parts": [
+        [
+         "弓",
+         "bow",
+         "tK",
+         "kanji · 弓・ゆみ",
+         "kanji"
+        ],
+        [
+         "弓",
+         "bow",
+         "tK",
+         "kanji · 弓・ゆみ",
+         "kanji"
+        ],
+        [
+         "羽",
+         "feathers",
+         "tK",
+         "kanji · 羽・はね",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Two bows with feathers instead of strings.",
+       "wild": "お酒に弱い — does not",
+       "ws": [
+        "tO",
+        "needs hiragana: 弱い"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "jp": "買い物",
+   "en": "Shopping, money and things",
+   "blurb": "Shops, prices, parcels and the clothes and objects you carry home. Heavy on verbs, because shopping is mostly transactions.",
+   "foot": "Notice how many shopping words are pairs of opposites: 売/買, 貸/借, 送/返. Learn them in pairs.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "銀",
+       "m": "silver",
+       "w": "銀行",
+       "r": "ぎんこう",
+       "en": "bank",
+       "parts": [
+        [
+         "金",
+         "metal",
+         "tK",
+         "kanji · 金・かね",
+         "kanji"
+        ],
+        [
+         "艮",
+         "stubborn",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "The metal that stubbornly refuses to be gold.",
+       "wild": "銀行 on every high street; ATMs are inside",
+       "ws": [
+        "tC",
+        "used in compounds: 銀行"
+       ]
+      },
+      {
+       "k": "代",
+       "m": "substitute, era",
+       "w": "代金",
+       "r": "だいきん",
+       "en": "the charge, payment",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "弋",
+         "stake",
+         "tR",
+         "radical · a stake",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A person standing in at a marked stake while the real one is away.",
+       "wild": "〜代 attaches to anything: 電気代, 食事代",
+       "ws": [
+        "tC",
+        "used in compounds: 代金"
+       ]
+      },
+      {
+       "k": "質",
+       "m": "quality, pawn",
+       "w": "質",
+       "r": "しつ",
+       "en": "quality",
+       "parts": [
+        [
+         "斦",
+         "two axes",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ],
+        [
+         "貝",
+         "money",
+         "tK",
+         "kanji · 貝・かい",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Money weighed against two axes. What is it actually worth?",
+       "wild": "質屋 is a pawn shop, using the older sense",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "具",
+       "m": "tool, ingredient",
+       "w": "道具",
+       "r": "どうぐ",
+       "en": "tool",
+       "parts": [
+        [
+         "目",
+         "eye",
+         "tK",
+         "kanji · 目・め",
+         "kanji"
+        ],
+        [
+         "一",
+         "table",
+         "tK",
+         "kanji · 一つ・ひとつ",
+         "kanji"
+        ],
+        [
+         "八",
+         "legs",
+         "tK",
+         "kanji · 八つ・やっつ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Something you keep an eye on, on a table, with legs. A tool.",
+       "wild": "家具 is furniture — household tools",
+       "ws": [
+        "tC",
+        "used in compounds: 道具"
+       ]
+      },
+      {
+       "k": "荷",
+       "m": "luggage, load",
+       "w": "荷物",
+       "r": "にもつ",
+       "en": "luggage, parcel",
+       "parts": [
+        [
+         "艹",
+         "grass",
+         "tR",
+         "radical · grass, on top",
+         "radical"
+        ],
+        [
+         "何",
+         "what",
+         "tK",
+         "kanji · 何・なに",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Grass bundled up and someone asking what on earth is inside it.",
+       "wild": "On every delivery slip and hotel front desk",
+       "ws": [
+        "tC",
+        "used in compounds: 荷物"
+       ]
+      },
+      {
+       "k": "服",
+       "m": "clothes",
+       "w": "服",
+       "r": "ふく",
+       "en": "clothes",
+       "parts": [
+        [
+         "月",
+         "flesh",
+         "tK",
+         "kanji · 月・つき",
+         "kanji"
+        ],
+        [
+         "卩",
+         "kneeling",
+         "tR",
+         "radical · a kneeling figure",
+         "radical"
+        ],
+        [
+         "又",
+         "hand",
+         "tC",
+         "kanji, compounds only · 又",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "A hand fitting cloth to a kneeling body.",
+       "wild": "制服 is a uniform",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "洋",
+       "m": "ocean, Western",
+       "w": "洋服",
+       "r": "ようふく",
+       "en": "Western clothes",
+       "parts": [
+        [
+         "氵",
+         "water",
+         "tR",
+         "radical · water, on the left",
+         "radical"
+        ],
+        [
+         "羊",
+         "sheep",
+         "tK",
+         "kanji · 羊・ひつじ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Water so wide there are sheep on the far side of it. Hence: foreign, Western.",
+       "wild": "洋 also means ocean — the far side of it",
+       "ws": [
+        "tC",
+        "used in compounds: 洋服"
+       ]
+      },
+      {
+       "k": "物",
+       "m": "thing, object",
+       "w": "物",
+       "r": "もの",
+       "en": "thing, object",
+       "parts": [
+        [
+         "牛",
+         "cow",
+         "tK",
+         "kanji · 牛・うし",
+         "kanji"
+        ],
+        [
+         "勿",
+         "banner",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "A cow with a banner on it: livestock, and by extension all goods.",
+       "wild": "買い物, 食べ物, 荷物 — 物 is everywhere",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "売",
+       "m": "sell",
+       "w": "売る",
+       "r": "うる",
+       "en": "to sell",
+       "parts": [
+        [
+         "士",
+         "samurai",
+         "tC",
+         "kanji, compounds only · 武士",
+         "compounds only"
+        ],
+        [
+         "冖",
+         "cover",
+         "tR",
+         "radical · a cover",
+         "radical"
+        ],
+        [
+         "儿",
+         "legs",
+         "tR",
+         "radical · legs",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A samurai covering the goods and walking off with the takings.",
+       "wild": "売り切れ — sold out, on vending machines",
+       "ws": [
+        "tO",
+        "needs hiragana: 売る"
+       ]
+      },
+      {
+       "k": "貸",
+       "m": "lend",
+       "w": "貸す",
+       "r": "かす",
+       "en": "to lend",
+       "parts": [
+        [
+         "代",
+         "substitute",
+         "tC",
+         "kanji, compounds only · 時代",
+         "compounds only"
+        ],
+        [
+         "貝",
+         "money",
+         "tK",
+         "kanji · 貝・かい",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Money that has been substituted for a promise.",
+       "wild": "貸出中 — currently on loan",
+       "ws": [
+        "tO",
+        "needs hiragana: 貸す"
+       ]
+      },
+      {
+       "k": "借",
+       "m": "borrow",
+       "w": "借りる",
+       "r": "かりる",
+       "en": "to borrow, to rent",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "昔",
+         "long ago",
+         "tK",
+         "kanji · 昔・むかし",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A person still holding what they took long ago. That is borrowing.",
+       "wild": "Renting a flat is 借りる, not 買う",
+       "ws": [
+        "tO",
+        "needs hiragana: 借りる"
+       ]
+      },
+      {
+       "k": "取",
+       "m": "take",
+       "w": "取る",
+       "r": "とる",
+       "en": "to take",
+       "parts": [
+        [
+         "耳",
+         "ear",
+         "tK",
+         "kanji · 耳・みみ",
+         "kanji"
+        ],
+        [
+         "又",
+         "hand",
+         "tC",
+         "kanji, compounds only · 又",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "A hand taking an ear. Grim, historical, and unforgettable.",
+       "wild": "お取り置き — holding an item for you",
+       "ws": [
+        "tO",
+        "needs hiragana: 取る"
+       ]
+      },
+      {
+       "k": "送",
+       "m": "send",
+       "w": "送る",
+       "r": "おくる",
+       "en": "to send",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "关",
+         "offering",
+         "tR",
+         "radical · a bolt",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Putting something on the road with a farewell attached.",
+       "wild": "送料 — postage",
+       "ws": [
+        "tO",
+        "needs hiragana: 送る"
+       ]
+      },
+      {
+       "k": "返",
+       "m": "return something",
+       "w": "返す",
+       "r": "かえす",
+       "en": "to give back",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "反",
+         "reverse",
+         "tC",
+         "kanji, compounds only · 反対",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Movement in reverse. Give it back.",
+       "wild": "返品 — a return",
+       "ws": [
+        "tO",
+        "needs hiragana: 返す"
+       ]
+      },
+      {
+       "k": "使",
+       "m": "use",
+       "w": "使う",
+       "r": "つかう",
+       "en": "to use",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "吏",
+         "official",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "An official using people. Cynical, but it sticks.",
+       "wild": "使用中 — in use, on toilet doors",
+       "ws": [
+        "tO",
+        "needs hiragana: 使う"
+       ]
+      },
+      {
+       "k": "持",
+       "m": "hold, carry",
+       "w": "持つ",
+       "r": "もつ",
+       "en": "to hold, carry",
+       "parts": [
+        [
+         "扌",
+         "hand",
+         "tR",
+         "radical · hand, on the left",
+         "radical"
+        ],
+        [
+         "寺",
+         "temple",
+         "tK",
+         "kanji · 寺・てら",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Carrying something all the way to the temple in your hands.",
+       "wild": "お持ち帰り — takeaway",
+       "ws": [
+        "tO",
+        "needs hiragana: 持つ"
+       ]
+      },
+      {
+       "k": "切",
+       "m": "cut, earnest",
+       "w": "切る",
+       "r": "きる",
+       "en": "to cut",
+       "parts": [
+        [
+         "七",
+         "seven",
+         "tK",
+         "kanji · 七つ・ななつ",
+         "kanji"
+        ],
+        [
+         "刀",
+         "sword",
+         "tK",
+         "kanji · 刀・かたな",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Seven cuts with one blade. Do it properly or not at all.",
+       "wild": "売り切れ again: sold through and cut off",
+       "ws": [
+        "tO",
+        "needs hiragana: 切る"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "軽",
+       "m": "light (weight)",
+       "w": "軽い",
+       "r": "かるい",
+       "en": "light in weight",
+       "parts": [
+        [
+         "車",
+         "vehicle",
+         "tK",
+         "kanji · 車・くるま",
+         "kanji"
+        ],
+        [
+         "圣",
+         "straight down",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "A cart that goes straight down the road because there is nothing in it.",
+       "wild": "軽自動車 — the small-engine car class",
+       "ws": [
+        "tO",
+        "needs hiragana: 軽い"
+       ]
+      },
+      {
+       "k": "重",
+       "m": "heavy",
+       "w": "重い",
+       "r": "おもい",
+       "en": "heavy",
+       "parts": [],
+       "atom": true,
+       "story": "A load with a person underneath, pressed down.",
+       "wild": "体重 is body weight",
+       "ws": [
+        "tO",
+        "needs hiragana: 重い"
+       ]
+      },
+      {
+       "k": "特",
+       "m": "special",
+       "w": "特に",
+       "r": "とくに",
+       "en": "especially",
+       "parts": [
+        [
+         "牛",
+         "cow",
+         "tK",
+         "kanji · 牛・うし",
+         "kanji"
+        ],
+        [
+         "寺",
+         "temple",
+         "tK",
+         "kanji · 寺・てら",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "The one cow reserved for the temple.",
+       "wild": "特売 — special offer; 特急 — limited express",
+       "ws": [
+        "tO",
+        "needs hiragana: 特に"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "jp": "薬局と病院",
+   "en": "Pharmacy, doctor and the body",
+   "blurb": "The vocabulary you need when something is wrong. Worth learning before you need it rather than after.",
+   "foot": "Japanese medical signage is unusually kanji-heavy. 内科, 外科, 歯科 on a clinic door tell you which department you want.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "医",
+       "m": "doctor, medicine",
+       "w": "医者",
+       "r": "いしゃ",
+       "en": "doctor",
+       "parts": [
+        [
+         "匚",
+         "box",
+         "tR",
+         "radical · a box on its side",
+         "radical"
+        ],
+        [
+         "矢",
+         "arrow",
+         "tK",
+         "kanji · 矢・や",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Arrows kept in a box, ready to be pulled back out of people.",
+       "wild": "医院 on a small clinic's sign",
+       "ws": [
+        "tC",
+        "used in compounds: 医者"
+       ]
+      },
+      {
+       "k": "院",
+       "m": "institution",
+       "w": "病院",
+       "r": "びょういん",
+       "en": "hospital",
+       "parts": [
+        [
+         "阝",
+         "hill",
+         "tR",
+         "radical · hill (left) or village (right)",
+         "radical"
+        ],
+        [
+         "完",
+         "complete",
+         "tC",
+         "kanji, compounds only · 完成",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "A walled compound up on a hill. Hospitals and temples both.",
+       "wild": "院 alone marks any walled institution",
+       "ws": [
+        "tC",
+        "used in compounds: 病院"
+       ]
+      },
+      {
+       "k": "病",
+       "m": "illness",
+       "w": "病気",
+       "r": "びょうき",
+       "en": "illness",
+       "parts": [
+        [
+         "疒",
+         "sickness",
+         "tR",
+         "radical · sickness, on top",
+         "radical"
+        ],
+        [
+         "丙",
+         "third",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Someone laid against the wall, third one this week.",
+       "wild": "急病 — sudden illness",
+       "ws": [
+        "tC",
+        "used in compounds: 病気"
+       ]
+      },
+      {
+       "k": "薬",
+       "m": "medicine",
+       "w": "薬",
+       "r": "くすり",
+       "en": "medicine",
+       "parts": [
+        [
+         "艹",
+         "grass",
+         "tR",
+         "radical · grass, on top",
+         "radical"
+        ],
+        [
+         "楽",
+         "ease",
+         "tO",
+         "kanji + kana · 楽しい・たのしい",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "The plant that makes things easier.",
+       "wild": "薬局 — pharmacy; 薬屋 — chemist's shop",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "体",
+       "m": "body",
+       "w": "体",
+       "r": "からだ",
+       "en": "body",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "本",
+         "origin",
+         "tK",
+         "kanji · 本・ほん",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A person's original issue, the thing they were born holding: the body.",
+       "wild": "体調 — physical condition",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "頭",
+       "m": "head",
+       "w": "頭",
+       "r": "あたま",
+       "en": "head",
+       "parts": [
+        [
+         "豆",
+         "bean",
+         "tK",
+         "kanji · 豆・まめ",
+         "kanji"
+        ],
+        [
+         "頁",
+         "head",
+         "tR",
+         "radical · a head",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A bean on top of a head. Anatomically fair.",
+       "wild": "頭痛 — headache",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "首",
+       "m": "neck, head",
+       "w": "首",
+       "r": "くび",
+       "en": "neck",
+       "parts": [
+        [
+         "丷",
+         "hair",
+         "tR",
+         "radical · two flecks",
+         "radical"
+        ],
+        [
+         "目",
+         "eye",
+         "tK",
+         "kanji · 目・め",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "An eye with hair above it and a neck below.",
+       "wild": "手首 is wrist, 足首 ankle",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "毛",
+       "m": "hair, fur",
+       "w": "毛",
+       "r": "け",
+       "en": "hair, fur",
+       "parts": [],
+       "atom": true,
+       "story": "A hand with the last stroke let loose to curl.",
+       "wild": "髪の毛 — the hair on your head",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "顔",
+       "m": "face",
+       "w": "顔",
+       "r": "かお",
+       "en": "face",
+       "parts": [
+        [
+         "彦",
+         "handsome",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ],
+        [
+         "頁",
+         "head",
+         "tR",
+         "radical · a head",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "The front of the head, and the part people judge.",
+       "wild": "洗顔 — face washing, on cosmetics",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "足",
+       "m": "foot, suffice",
+       "w": "足",
+       "r": "あし",
+       "en": "foot, leg",
+       "parts": [
+        [
+         "口",
+         "knee",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "龰",
+         "foot",
+         "tR",
+         "radical · a foot",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A knee above a foot. Enough leg to get you there — hence also 'sufficient'.",
+       "wild": "足りる, from the same kanji, means 'to suffice'",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "心",
+       "m": "heart, mind",
+       "w": "心",
+       "r": "こころ",
+       "en": "heart, mind",
+       "parts": [],
+       "atom": true,
+       "story": "A heart with three drops flying off it. Covers the mind as well as the feelings.",
+       "wild": "心配 — worry; 安心 — relief",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "死",
+       "m": "die",
+       "w": "死ぬ",
+       "r": "しぬ",
+       "en": "to die",
+       "parts": [
+        [
+         "歹",
+         "bones",
+         "tR",
+         "radical · bare bones",
+         "radical"
+        ],
+        [
+         "匕",
+         "person kneeling",
+         "tR",
+         "radical · a person bending",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A person kneeling beside bones.",
+       "wild": "Blunt in Japanese too; 亡くなる is the polite form",
+       "ws": [
+        "tO",
+        "needs hiragana: 死ぬ"
+       ]
+      },
+      {
+       "k": "育",
+       "m": "raise, bring up",
+       "w": "育てる",
+       "r": "そだてる",
+       "en": "to raise, bring up",
+       "parts": [
+        [
+         "𠫓",
+         "newborn",
+         "tR",
+         "radical · a newborn, inverted",
+         "radical"
+        ],
+        [
+         "月",
+         "flesh",
+         "tK",
+         "kanji · 月・つき",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A baby turned the right way up, being fed until it has flesh on it.",
+       "wild": "教育 — education",
+       "ws": [
+        "tO",
+        "needs hiragana: 育てる"
+       ]
+      },
+      {
+       "k": "助",
+       "m": "help",
+       "w": "助ける",
+       "r": "たすける",
+       "en": "to help, rescue",
+       "parts": [
+        [
+         "且",
+         "stack",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ],
+        [
+         "力",
+         "power",
+         "tK",
+         "kanji · 力・ちから",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Adding your strength to a pile someone else is already carrying.",
+       "wild": "助けて! is the shout for help",
+       "ws": [
+        "tO",
+        "needs hiragana: 助ける"
+       ]
+      },
+      {
+       "k": "洗",
+       "m": "wash",
+       "w": "洗う",
+       "r": "あらう",
+       "en": "to wash",
+       "parts": [
+        [
+         "氵",
+         "water",
+         "tR",
+         "radical · water, on the left",
+         "radical"
+        ],
+        [
+         "先",
+         "before, ahead",
+         "tK",
+         "kanji · 先・さき",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Water first, before anything else happens.",
+       "wild": "手を洗いましょう on every washroom sign",
+       "ws": [
+        "tO",
+        "needs hiragana: 洗う"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "悲",
+       "m": "sad",
+       "w": "悲しい",
+       "r": "かなしい",
+       "en": "sad",
+       "parts": [
+        [
+         "非",
+         "not",
+         "tC",
+         "kanji, compounds only · 非常",
+         "compounds only"
+        ],
+        [
+         "心",
+         "heart",
+         "tK",
+         "kanji · 心・こころ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A heart with a great NO written above it.",
+       "wild": "悲鳴 — a scream",
+       "ws": [
+        "tO",
+        "needs hiragana: 悲しい"
+       ]
+      },
+      {
+       "k": "短",
+       "m": "short",
+       "w": "短い",
+       "r": "みじかい",
+       "en": "short",
+       "parts": [
+        [
+         "矢",
+         "arrow",
+         "tK",
+         "kanji · 矢・や",
+         "kanji"
+        ],
+        [
+         "豆",
+         "bean",
+         "tK",
+         "kanji · 豆・まめ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Measuring with an arrow and finding only a bean's worth.",
+       "wild": "短気 — short-tempered",
+       "ws": [
+        "tO",
+        "needs hiragana: 短い"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "jp": "移動",
+   "en": "Getting around",
+   "blurb": "Stations, roads, timetables and the verbs of movement. The single most useful chapter if you are actually in Japan.",
+   "foot": "辶, the sweeping road element, appears in 道 通 進 迎 遅 近 遠 運 送 返 — ten of the movement kanji at this level.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "駅",
+       "m": "station",
+       "w": "駅",
+       "r": "えき",
+       "en": "station",
+       "parts": [
+        [
+         "馬",
+         "horse",
+         "tK",
+         "kanji · 馬・うま",
+         "kanji"
+        ],
+        [
+         "尺",
+         "measure",
+         "tC",
+         "kanji, compounds only · 尺",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "A measured stopping point on a horse route.",
+       "wild": "駅前 — in front of the station, the standard meeting point",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "道",
+       "m": "road, way",
+       "w": "道",
+       "r": "みち",
+       "en": "road, way",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "首",
+         "head, neck",
+         "tK",
+         "kanji · 首・くび",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Your head pointed down a path. The way you are heading is your way.",
+       "wild": "水道 is the water supply; 道 means route in every sense",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "京",
+       "m": "capital",
+       "w": "東京",
+       "r": "とうきょう",
+       "en": "Tokyo",
+       "parts": [
+        [
+         "亠",
+         "lid",
+         "tR",
+         "radical · a lid",
+         "radical"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "小",
+         "small",
+         "tO",
+         "kanji + kana · 小さい・ちいさい",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "A tall building on a hill with small ones below. A capital city.",
+       "wild": "京都 is Kyoto — literally the capital city",
+       "ws": [
+        "tC",
+        "used in compounds: 東京"
+       ]
+      },
+      {
+       "k": "図",
+       "m": "diagram, plan",
+       "w": "地図",
+       "r": "ちず",
+       "en": "map",
+       "parts": [
+        [
+         "囗",
+         "enclosure",
+         "tR",
+         "radical · a full enclosure, all four sides",
+         "radical"
+        ],
+        [
+         "冫",
+         "marks",
+         "tR",
+         "radical · ice",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A frame with marks inside it. That is what a diagram is.",
+       "wild": "案内図 — the layout map at every station",
+       "ws": [
+        "tC",
+        "used in compounds: 地図"
+       ]
+      },
+      {
+       "k": "地",
+       "m": "ground, land",
+       "w": "地下鉄",
+       "r": "ちかてつ",
+       "en": "subway",
+       "parts": [
+        [
+         "土",
+         "earth",
+         "tK",
+         "kanji · 土・つち",
+         "kanji"
+        ],
+        [
+         "也",
+         "that one",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "That particular piece of ground, the one under your feet.",
+       "wild": "地下 means underground",
+       "ws": [
+        "tC",
+        "used in compounds: 地下鉄"
+       ]
+      },
+      {
+       "k": "方",
+       "m": "direction, way, person",
+       "w": "〜方",
+       "r": "かた",
+       "en": "way of doing; direction",
+       "parts": [],
+       "atom": true,
+       "story": "A plough turning at the end of a furrow: which way it points.",
+       "wild": "読み方 — how to read it; also polite for 'person'",
+       "ws": [
+        "tC",
+        "used in compounds: 〜方"
+       ]
+      },
+      {
+       "k": "旅",
+       "m": "travel",
+       "w": "旅行",
+       "r": "りょこう",
+       "en": "travel, a trip",
+       "parts": [
+        [
+         "方",
+         "direction",
+         "tK",
+         "kanji · 方・かた",
+         "kanji"
+        ],
+        [
+         "氏",
+         "people",
+         "tC",
+         "kanji, compounds only · 氏名",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "People setting off in one direction together.",
+       "wild": "旅館 — traditional inn",
+       "ws": [
+        "tC",
+        "used in compounds: 旅行"
+       ]
+      },
+      {
+       "k": "転",
+       "m": "turn, roll",
+       "w": "自転車",
+       "r": "じてんしゃ",
+       "en": "bicycle",
+       "parts": [
+        [
+         "車",
+         "vehicle",
+         "tK",
+         "kanji · 車・くるま",
+         "kanji"
+        ],
+        [
+         "云",
+         "cloud",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Wheels turning over like clouds.",
+       "wild": "運転 — driving",
+       "ws": [
+        "tC",
+        "used in compounds: 自転車"
+       ]
+      },
+      {
+       "k": "急",
+       "m": "hurry, urgent",
+       "w": "急行",
+       "r": "きゅうこう",
+       "en": "express train",
+       "parts": [
+        [
+         "刍",
+         "grasping hand",
+         "tR",
+         "radical · a grasping hand",
+         "radical"
+        ],
+        [
+         "心",
+         "heart",
+         "tK",
+         "kanji · 心・こころ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A hand clutching at your heart. Something needs doing now.",
+       "wild": "特急 is faster still; check before boarding",
+       "ws": [
+        "tC",
+        "used in compounds: 急行"
+       ]
+      },
+      {
+       "k": "写",
+       "m": "copy, photograph",
+       "w": "写真",
+       "r": "しゃしん",
+       "en": "photograph",
+       "parts": [
+        [
+         "冖",
+         "cover",
+         "tR",
+         "radical · a cover",
+         "radical"
+        ],
+        [
+         "与",
+         "give",
+         "tO",
+         "kanji + kana · 与える・あたえる",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "Putting a cover over something and handing on a duplicate.",
+       "wild": "写真撮影禁止 — no photography",
+       "ws": [
+        "tC",
+        "used in compounds: 写真"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "走",
+       "m": "run",
+       "w": "走る",
+       "r": "はしる",
+       "en": "to run",
+       "parts": [
+        [
+         "土",
+         "earth",
+         "tK",
+         "kanji · 土・つち",
+         "kanji"
+        ],
+        [
+         "龰",
+         "foot",
+         "tR",
+         "radical · a foot",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A foot pushing off the earth.",
+       "wild": "Trains 走る too",
+       "ws": [
+        "tO",
+        "needs hiragana: 走る"
+       ]
+      },
+      {
+       "k": "歩",
+       "m": "walk",
+       "w": "歩く",
+       "r": "あるく",
+       "en": "to walk",
+       "parts": [
+        [
+         "止",
+         "stop",
+         "tO",
+         "kanji + kana · 止まる・とまる",
+         "kanji + kana"
+        ],
+        [
+         "少",
+         "few",
+         "tO",
+         "kanji + kana · 少ない・すくない",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "A footprint, then a few more. That is walking.",
+       "wild": "徒歩5分 — five minutes on foot, in every listing",
+       "ws": [
+        "tO",
+        "needs hiragana: 歩く"
+       ]
+      },
+      {
+       "k": "進",
+       "m": "advance",
+       "w": "進む",
+       "r": "すすむ",
+       "en": "to advance",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "隹",
+         "bird",
+         "tR",
+         "radical · a short-tailed bird",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A bird on the road, and birds only ever hop forward.",
+       "wild": "前へ進む — move forward",
+       "ws": [
+        "tO",
+        "needs hiragana: 進む"
+       ]
+      },
+      {
+       "k": "通",
+       "m": "pass through, commute",
+       "w": "通る",
+       "r": "とおる",
+       "en": "to pass through",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "甬",
+         "funnel",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Movement through a funnel: in one end, out the other.",
+       "wild": "通勤 — commuting",
+       "ws": [
+        "tO",
+        "needs hiragana: 通る"
+       ]
+      },
+      {
+       "k": "迎",
+       "m": "welcome, meet",
+       "w": "迎える",
+       "r": "むかえる",
+       "en": "to meet, collect",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "卬",
+         "look up",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Going out onto the road to meet someone coming in.",
+       "wild": "お迎え — picking someone up",
+       "ws": [
+        "tO",
+        "needs hiragana: 迎える"
+       ]
+      },
+      {
+       "k": "着",
+       "m": "wear, arrive",
+       "w": "着く",
+       "r": "つく",
+       "en": "to arrive",
+       "parts": [
+        [
+         "羊",
+         "sheep",
+         "tK",
+         "kanji · 羊・ひつじ",
+         "kanji"
+        ],
+        [
+         "目",
+         "eye",
+         "tK",
+         "kanji · 目・め",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Wool over your eyes. You are wearing it, and you have arrived.",
+       "wild": "到着 on the arrivals board",
+       "ws": [
+        "tO",
+        "needs hiragana: 着く"
+       ]
+      },
+      {
+       "k": "動",
+       "m": "move",
+       "w": "動く",
+       "r": "うごく",
+       "en": "to move",
+       "parts": [
+        [
+         "重",
+         "heavy",
+         "tO",
+         "kanji + kana · 重い・おもい",
+         "kanji + kana"
+        ],
+        [
+         "力",
+         "power",
+         "tK",
+         "kanji · 力・ちから",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Force applied to something heavy. Motion is what happens next.",
+       "wild": "運動 — exercise",
+       "ws": [
+        "tO",
+        "needs hiragana: 動く"
+       ]
+      },
+      {
+       "k": "運",
+       "m": "carry, luck",
+       "w": "運ぶ",
+       "r": "はこぶ",
+       "en": "to carry",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "軍",
+         "army",
+         "tC",
+         "kanji, compounds only · 軍隊",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "An army on the move. Whether it arrives is partly luck.",
+       "wild": "運転 — to drive; 運 alone means luck",
+       "ws": [
+        "tO",
+        "needs hiragana: 運ぶ"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "遅",
+       "m": "late, slow",
+       "w": "遅い",
+       "r": "おそい",
+       "en": "late, slow",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "犀",
+         "rhinoceros",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Travelling by rhinoceros. You will not be on time.",
+       "wild": "遅延 — delay, on the departure board",
+       "ws": [
+        "tO",
+        "needs hiragana: 遅い"
+       ]
+      },
+      {
+       "k": "近",
+       "m": "near",
+       "w": "近い",
+       "r": "ちかい",
+       "en": "near",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "斤",
+         "axe",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Within one axe-throw of here.",
+       "wild": "近く — nearby",
+       "ws": [
+        "tO",
+        "needs hiragana: 近い"
+       ]
+      },
+      {
+       "k": "遠",
+       "m": "far",
+       "w": "遠い",
+       "r": "とおい",
+       "en": "far",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "袁",
+         "long robe",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Walking so long your robe drags. That is far.",
+       "wild": "遠慮 — holding back, literally distant thought",
+       "ws": [
+        "tO",
+        "needs hiragana: 遠い"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "jp": "家",
+   "en": "Home and rooms",
+   "blurb": "Where you live, and what you do there. Short chapter, high daily frequency.",
+   "foot": "住所, 台所, 近所, 場所 — 所 turns almost any word into a place.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "家",
+       "m": "house, family",
+       "w": "家",
+       "r": "いえ",
+       "en": "house, home",
+       "parts": [
+        [
+         "宀",
+         "roof",
+         "tR",
+         "radical · a roof with walls, on top",
+         "radical"
+        ],
+        [
+         "豕",
+         "pig",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "A pig under the roof. Historically that is exactly what a house was.",
+       "wild": "家族 — family; 大家 — landlord",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "室",
+       "m": "room",
+       "w": "和室",
+       "r": "わしつ",
+       "en": "Japanese-style room",
+       "parts": [
+        [
+         "宀",
+         "roof",
+         "tR",
+         "radical · a roof with walls, on top",
+         "radical"
+        ],
+        [
+         "至",
+         "arrive",
+         "tO",
+         "kanji + kana · 至る・いたる",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "The place under the roof you finally arrive at.",
+       "wild": "洋室 is the Western-style alternative",
+       "ws": [
+        "tC",
+        "used in compounds: 和室"
+       ]
+      },
+      {
+       "k": "台",
+       "m": "stand, platform",
+       "w": "台所",
+       "r": "だいどころ",
+       "en": "kitchen",
+       "parts": [
+        [
+         "厶",
+         "private",
+         "tR",
+         "radical · private, a cocoon",
+         "radical"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A small raised mouth: something to stand on and speak from.",
+       "wild": "台 alone is any raised stand or platform",
+       "ws": [
+        "tC",
+        "used in compounds: 台所"
+       ]
+      },
+      {
+       "k": "所",
+       "m": "place",
+       "w": "場所",
+       "r": "ばしょ",
+       "en": "place",
+       "parts": [
+        [
+         "戸",
+         "door",
+         "tK",
+         "kanji · 戸・と",
+         "kanji"
+        ],
+        [
+         "斤",
+         "axe",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "A door and an axe: the spot where the work happens.",
+       "wild": "住所 — address; 台所, 近所 all use it",
+       "ws": [
+        "tC",
+        "used in compounds: 場所"
+       ]
+      },
+      {
+       "k": "池",
+       "m": "pond",
+       "w": "池",
+       "r": "いけ",
+       "en": "pond",
+       "parts": [
+        [
+         "氵",
+         "water",
+         "tR",
+         "radical · water, on the left",
+         "radical"
+        ],
+        [
+         "也",
+         "that one",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "That particular patch of water, the one that never goes anywhere.",
+       "wild": "電池 is a battery — a pond of electricity",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "住",
+       "m": "live, dwell",
+       "w": "住む",
+       "r": "すむ",
+       "en": "to live, reside",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "主",
+         "master",
+         "tO",
+         "kanji + kana · 主に・おもに",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "The person who is master of this address is the one who lives here.",
+       "wild": "住所 — where you live",
+       "ws": [
+        "tO",
+        "needs hiragana: 住む"
+       ]
+      },
+      {
+       "k": "建",
+       "m": "build",
+       "w": "建てる",
+       "r": "たてる",
+       "en": "to build",
+       "parts": [
+        [
+         "廴",
+         "stretch",
+         "tR",
+         "radical · a stretched stride",
+         "radical"
+        ],
+        [
+         "聿",
+         "brush",
+         "tR",
+         "radical · a brush in hand",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A brush drawing plans, stretched out across a plot of ground.",
+       "wild": "建物 — a building",
+       "ws": [
+        "tO",
+        "needs hiragana: 建てる"
+       ]
+      },
+      {
+       "k": "起",
+       "m": "get up, occur",
+       "w": "起きる",
+       "r": "おきる",
+       "en": "to get up, to occur",
+       "parts": [
+        [
+         "走",
+         "run",
+         "tO",
+         "kanji + kana · 走る・はしる",
+         "kanji + kana"
+        ],
+        [
+         "己",
+         "self",
+         "tC",
+         "kanji, compounds only · 自己",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Getting yourself off the ground and moving.",
+       "wild": "早起き — getting up early",
+       "ws": [
+        "tO",
+        "needs hiragana: 起きる"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "広",
+       "m": "wide, spacious",
+       "w": "広い",
+       "r": "ひろい",
+       "en": "spacious, wide",
+       "parts": [
+        [
+         "广",
+         "building",
+         "tR",
+         "radical · building, open on one side",
+         "radical"
+        ],
+        [
+         "厶",
+         "private",
+         "tR",
+         "radical · private, a cocoon",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A building with the walls taken out.",
+       "wild": "広告 — an advertisement, spread wide",
+       "ws": [
+        "tO",
+        "needs hiragana: 広い"
+       ]
+      },
+      {
+       "k": "暗",
+       "m": "dark",
+       "w": "暗い",
+       "r": "くらい",
+       "en": "dark",
+       "parts": [
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ],
+        [
+         "音",
+         "sound",
+         "tK",
+         "kanji · 音・おと",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "No sun, only sound. When you can hear but not see, it is dark.",
+       "wild": "暗証番号 — your PIN, a 'dark' number",
+       "ws": [
+        "tO",
+        "needs hiragana: 暗い"
+       ]
+      },
+      {
+       "k": "明",
+       "m": "bright",
+       "w": "明るい",
+       "r": "あかるい",
+       "en": "bright",
+       "parts": [
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ],
+        [
+         "月",
+         "moon",
+         "tK",
+         "kanji · 月・つき",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Sun and moon in the sky at once — the brightest thing you can draw.",
+       "wild": "説明 — explanation, making things bright",
+       "ws": [
+        "tO",
+        "needs hiragana: 明るい"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "jp": "仕事と学校",
+   "en": "Work and study",
+   "blurb": "The largest chapter, because most kanji you meet in print are work or study kanji.",
+   "foot": "習 and 勉 are not interchangeable: 習う is learning from someone, 勉強する is grinding at it yourself.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "仕",
+       "m": "serve, do",
+       "w": "仕事",
+       "r": "しごと",
+       "en": "work, job",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "士",
+         "samurai",
+         "tC",
+         "kanji, compounds only · 武士",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "A person in service to a samurai. The polite verb for doing.",
+       "wild": "仕方がない — 'nothing to be done'",
+       "ws": [
+        "tC",
+        "used in compounds: 仕事"
+       ]
+      },
+      {
+       "k": "事",
+       "m": "thing, matter",
+       "w": "事",
+       "r": "こと",
+       "en": "matter, thing (abstract)",
+       "parts": [],
+       "atom": true,
+       "story": "A hand holding a brush over a record. An affair, a matter.",
+       "wild": "用事 — an errand; 大事 — important",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "業",
+       "m": "business, industry",
+       "w": "授業",
+       "r": "じゅぎょう",
+       "en": "lesson, class",
+       "parts": [
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A rack of wooden tools, all in use. That is an industry.",
+       "wild": "営業中 — open for business",
+       "ws": [
+        "tC",
+        "used in compounds: 授業"
+       ]
+      },
+      {
+       "k": "社",
+       "m": "company, shrine",
+       "w": "会社",
+       "r": "かいしゃ",
+       "en": "company",
+       "parts": [
+        [
+         "礻",
+         "altar",
+         "tR",
+         "radical · altar, on the left",
+         "radical"
+        ],
+        [
+         "土",
+         "earth",
+         "tK",
+         "kanji · 土・つち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "An altar on the earth. Shrines first, then companies.",
+       "wild": "社会 reverses it: society",
+       "ws": [
+        "tC",
+        "used in compounds: 会社"
+       ]
+      },
+      {
+       "k": "員",
+       "m": "member, staff",
+       "w": "社員",
+       "r": "しゃいん",
+       "en": "employee",
+       "parts": [
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "貝",
+         "shell, money",
+         "tK",
+         "kanji · 貝・かい",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "One more mouth on the payroll.",
+       "wild": "店員, 駅員, 会員 — 員 is anyone on a roster",
+       "ws": [
+        "tC",
+        "used in compounds: 社員"
+       ]
+      },
+      {
+       "k": "者",
+       "m": "person, -ist",
+       "w": "医者",
+       "r": "いしゃ",
+       "en": "doctor",
+       "parts": [
+        [
+         "土",
+         "earth",
+         "tK",
+         "kanji · 土・つち",
+         "kanji"
+        ],
+        [
+         "丿",
+         "slash",
+         "tR",
+         "radical · a slash",
+         "radical"
+        ],
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Someone on this earth, under this sun. The generic person suffix.",
+       "wild": "〜者 marks the person who does it",
+       "ws": [
+        "tC",
+        "used in compounds: 医者"
+       ]
+      },
+      {
+       "k": "級",
+       "m": "class, grade",
+       "w": "一級",
+       "r": "いっきゅう",
+       "en": "first grade, class",
+       "parts": [
+        [
+         "糸",
+         "thread",
+         "tK",
+         "kanji · 糸・いと",
+         "kanji"
+        ],
+        [
+         "及",
+         "reach",
+         "tO",
+         "kanji + kana · 及ぶ・およぶ",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "How far up the thread you have reached.",
+       "wild": "JLPT levels were once called 級",
+       "ws": [
+        "tC",
+        "used in compounds: 一級"
+       ]
+      },
+      {
+       "k": "試",
+       "m": "try, test",
+       "w": "試験",
+       "r": "しけん",
+       "en": "exam",
+       "parts": [
+        [
+         "言",
+         "words",
+         "tO",
+         "kanji + kana · 言う・いう",
+         "kanji + kana"
+        ],
+        [
+         "式",
+         "ceremony",
+         "tC",
+         "kanji, compounds only · 形式",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "A formal set of words you have to get through.",
+       "wild": "試着 — trying clothes on",
+       "ws": [
+        "tC",
+        "used in compounds: 試験"
+       ]
+      },
+      {
+       "k": "験",
+       "m": "test, verify",
+       "w": "経験",
+       "r": "けいけん",
+       "en": "experience",
+       "parts": [
+        [
+         "馬",
+         "horse",
+         "tK",
+         "kanji · 馬・うま",
+         "kanji"
+        ],
+        [
+         "僉",
+         "inspect all",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Inspecting every horse before you buy one. Note: the right side is 僉, not 金.",
+       "wild": "The right side is 僉, not 金",
+       "ws": [
+        "tC",
+        "used in compounds: 経験"
+       ]
+      },
+      {
+       "k": "究",
+       "m": "research",
+       "w": "研究",
+       "r": "けんきゅう",
+       "en": "research",
+       "parts": [
+        [
+         "穴",
+         "cave",
+         "tK",
+         "kanji · 穴・あな",
+         "kanji"
+        ],
+        [
+         "九",
+         "nine",
+         "tK",
+         "kanji · 九つ・ここのつ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Digging nine holes to find one answer.",
+       "wild": "研究室 — a lab or academic office",
+       "ws": [
+        "tC",
+        "used in compounds: 研究"
+       ]
+      },
+      {
+       "k": "研",
+       "m": "polish, research",
+       "w": "研究所",
+       "r": "けんきゅうじょ",
+       "en": "research institute",
+       "parts": [
+        [
+         "石",
+         "stone",
+         "tK",
+         "kanji · 石・いし",
+         "kanji"
+        ],
+        [
+         "开",
+         "two hands",
+         "tR",
+         "radical · two hands lifting",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Two hands working a stone smooth. Research is the same job.",
+       "wild": "研修 — training",
+       "ws": [
+        "tC",
+        "used in compounds: 研究所"
+       ]
+      },
+      {
+       "k": "題",
+       "m": "topic, problem",
+       "w": "問題",
+       "r": "もんだい",
+       "en": "problem, question",
+       "parts": [
+        [
+         "是",
+         "correct",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ],
+        [
+         "頁",
+         "head",
+         "tR",
+         "radical · a head",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "What the head is supposed to be correct about.",
+       "wild": "話題 — a topic of conversation",
+       "ws": [
+        "tC",
+        "used in compounds: 問題"
+       ]
+      },
+      {
+       "k": "問",
+       "m": "question",
+       "w": "質問",
+       "r": "しつもん",
+       "en": "a question",
+       "parts": [
+        [
+         "門",
+         "gate",
+         "tK",
+         "kanji · 門・もん",
+         "kanji"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A mouth at the gate. You cannot come in until you have answered.",
+       "wild": "問い合わせ — an enquiry",
+       "ws": [
+        "tC",
+        "used in compounds: 質問"
+       ]
+      },
+      {
+       "k": "字",
+       "m": "character, letter",
+       "w": "漢字",
+       "r": "かんじ",
+       "en": "kanji, character",
+       "parts": [
+        [
+         "宀",
+         "roof",
+         "tR",
+         "radical · a roof with walls, on top",
+         "radical"
+        ],
+        [
+         "子",
+         "child",
+         "tK",
+         "kanji · 子・こ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A child under a roof, being made to write.",
+       "wild": "文字 — a written character",
+       "ws": [
+        "tC",
+        "used in compounds: 漢字"
+       ]
+      },
+      {
+       "k": "漢",
+       "m": "China, fellow",
+       "w": "漢字",
+       "r": "かんじ",
+       "en": "Chinese characters",
+       "parts": [
+        [
+         "氵",
+         "water",
+         "tR",
+         "radical · water, on the left",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "The great river culture. 漢字 are the characters that came down it.",
+       "wild": "漢 alone points at the Han dynasty",
+       "ws": [
+        "tC",
+        "used in compounds: 漢字"
+       ]
+      },
+      {
+       "k": "紙",
+       "m": "paper",
+       "w": "紙",
+       "r": "かみ",
+       "en": "paper",
+       "parts": [
+        [
+         "糸",
+         "thread",
+         "tK",
+         "kanji · 糸・いと",
+         "kanji"
+        ],
+        [
+         "氏",
+         "clan",
+         "tC",
+         "kanji, compounds only · 氏名",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Fibres pressed flat so a family can write its name on them.",
+       "wild": "手紙 is a letter — hand paper",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "文",
+       "m": "sentence, writing",
+       "w": "文",
+       "r": "ぶん",
+       "en": "sentence, writing",
+       "parts": [],
+       "atom": true,
+       "story": "Crossed strokes: the oldest mark that meant 'this is writing'.",
+       "wild": "文化 — culture; 作文 — composition",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "計",
+       "m": "measure, plan",
+       "w": "計画",
+       "r": "けいかく",
+       "en": "plan",
+       "parts": [
+        [
+         "言",
+         "words",
+         "tO",
+         "kanji + kana · 言う・いう",
+         "kanji + kana"
+        ],
+        [
+         "十",
+         "ten",
+         "tK",
+         "kanji · 十・じゅう",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Words and numbers together. Counting out loud.",
+       "wild": "時計 — clock, a thing that counts",
+       "ws": [
+        "tC",
+        "used in compounds: 計画"
+       ]
+      },
+      {
+       "k": "説",
+       "m": "explain, theory",
+       "w": "説明",
+       "r": "せつめい",
+       "en": "explanation",
+       "parts": [
+        [
+         "言",
+         "words",
+         "tO",
+         "kanji + kana · 言う・いう",
+         "kanji + kana"
+        ],
+        [
+         "兌",
+         "exchange",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Words traded until both sides understand.",
+       "wild": "小説 — a novel",
+       "ws": [
+        "tC",
+        "used in compounds: 説明"
+       ]
+      },
+      {
+       "k": "英",
+       "m": "England, brilliant",
+       "w": "英語",
+       "r": "えいご",
+       "en": "English",
+       "parts": [
+        [
+         "艹",
+         "grass",
+         "tR",
+         "radical · grass, on top",
+         "radical"
+        ],
+        [
+         "央",
+         "centre",
+         "tC",
+         "kanji, compounds only · 中央",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "The flower at the very centre. Also the standard kanji for England.",
+       "wild": "英国 — the United Kingdom",
+       "ws": [
+        "tC",
+        "used in compounds: 英語"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "働",
+       "m": "work",
+       "w": "働く",
+       "r": "はたらく",
+       "en": "to work",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "動",
+         "move",
+         "tO",
+         "kanji + kana · 動く・うごく",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "A person plus motion. Japan invented this kanji: moving people are working people.",
+       "wild": "労働 — labour",
+       "ws": [
+        "tO",
+        "needs hiragana: 働く"
+       ]
+      },
+      {
+       "k": "勉",
+       "m": "exertion, study",
+       "w": "勉強",
+       "r": "べんきょう",
+       "en": "to study",
+       "parts": [
+        [
+         "免",
+         "escape",
+         "tC",
+         "kanji, compounds only · 免許",
+         "compounds only"
+        ],
+        [
+         "力",
+         "power",
+         "tK",
+         "kanji · 力・ちから",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Effort spent escaping ignorance. Which is what you are doing now.",
+       "wild": "勉強中 — studying right now",
+       "ws": [
+        "tC",
+        "used in compounds: 勉強"
+       ]
+      },
+      {
+       "k": "教",
+       "m": "teach",
+       "w": "教える",
+       "r": "おしえる",
+       "en": "to teach",
+       "parts": [
+        [
+         "孝",
+         "filial",
+         "tC",
+         "kanji, compounds only · 孝行",
+         "compounds only"
+        ],
+        [
+         "攵",
+         "strike",
+         "tR",
+         "radical · a hand striking",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "An old-fashioned picture of instruction. Effective as a memory hook.",
+       "wild": "教室 — classroom",
+       "ws": [
+        "tO",
+        "needs hiragana: 教える"
+       ]
+      },
+      {
+       "k": "習",
+       "m": "learn, practise",
+       "w": "習う",
+       "r": "ならう",
+       "en": "to learn (from a teacher)",
+       "parts": [
+        [
+         "羽",
+         "wings",
+         "tK",
+         "kanji · 羽・はね",
+         "kanji"
+        ],
+        [
+         "白",
+         "white",
+         "tO",
+         "kanji + kana · 白い・しろい",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "A fledgling flapping white wings over and over until it can fly.",
+       "wild": "練習 — practice",
+       "ws": [
+        "tO",
+        "needs hiragana: 習う"
+       ]
+      },
+      {
+       "k": "考",
+       "m": "think it over",
+       "w": "考える",
+       "r": "かんがえる",
+       "en": "to think over",
+       "parts": [
+        [
+         "耂",
+         "old person",
+         "tR",
+         "radical · an old person",
+         "radical"
+        ],
+        [
+         "丂",
+         "bent breath",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "An old person with a bent back, taking their time over it.",
+       "wild": "考え方 — a way of thinking",
+       "ws": [
+        "tO",
+        "needs hiragana: 考える"
+       ]
+      },
+      {
+       "k": "知",
+       "m": "know",
+       "w": "知る",
+       "r": "しる",
+       "en": "to know",
+       "parts": [
+        [
+         "矢",
+         "arrow",
+         "tK",
+         "kanji · 矢・や",
+         "kanji"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "An answer that leaves the mouth as straight and fast as an arrow. You knew it.",
+       "wild": "お知らせ — a notice",
+       "ws": [
+        "tO",
+        "needs hiragana: 知る"
+       ]
+      },
+      {
+       "k": "始",
+       "m": "begin",
+       "w": "始まる",
+       "r": "はじまる",
+       "en": "to begin",
+       "parts": [
+        [
+         "女",
+         "woman",
+         "tK",
+         "kanji · 女・おんな",
+         "kanji"
+        ],
+        [
+         "台",
+         "platform",
+         "tC",
+         "kanji, compounds only · 台所",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "A woman stepping onto the platform. Everything starts here.",
+       "wild": "開始 — the start",
+       "ws": [
+        "tO",
+        "needs hiragana: 始まる"
+       ]
+      },
+      {
+       "k": "終",
+       "m": "end, finish",
+       "w": "終わる",
+       "r": "おわる",
+       "en": "to end",
+       "parts": [
+        [
+         "糸",
+         "thread",
+         "tK",
+         "kanji · 糸・いと",
+         "kanji"
+        ],
+        [
+         "冬",
+         "winter",
+         "tK",
+         "kanji · 冬・ふゆ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "The thread runs out in winter. Nothing comes after.",
+       "wild": "終電 — the last train",
+       "ws": [
+        "tO",
+        "needs hiragana: 終わる"
+       ]
+      },
+      {
+       "k": "集",
+       "m": "gather",
+       "w": "集める",
+       "r": "あつめる",
+       "en": "to collect",
+       "parts": [
+        [
+         "隹",
+         "bird",
+         "tR",
+         "radical · a short-tailed bird",
+         "radical"
+        ],
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Birds settling into one tree at dusk, all of them at once.",
+       "wild": "集合 — assembly, meeting up",
+       "ws": [
+        "tO",
+        "needs hiragana: 集める"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "正",
+       "m": "correct, exactly",
+       "w": "正しい",
+       "r": "ただしい",
+       "en": "correct",
+       "parts": [
+        [
+         "一",
+         "line",
+         "tK",
+         "kanji · 一つ・ひとつ",
+         "kanji"
+        ],
+        [
+         "止",
+         "stop",
+         "tO",
+         "kanji + kana · 止まる・とまる",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "Stop precisely on the line. That is correct.",
+       "wild": "正解 — the right answer",
+       "ws": [
+        "tO",
+        "needs hiragana: 正しい"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "jp": "人と家族",
+   "en": "People and family",
+   "blurb": "Almost all nouns, because relationships are things rather than actions. Note that Japanese uses different words for your own family and someone else's.",
+   "foot": "Japanese has two sets of family words: humble ones for your own family (兄, 姉, 父) and honorific ones for other people's (お兄さん, お姉さん, お父さん).",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "親",
+       "m": "parent, intimate",
+       "w": "親",
+       "r": "おや",
+       "en": "parent",
+       "parts": [
+        [
+         "立",
+         "stand",
+         "tO",
+         "kanji + kana · 立つ・たつ",
+         "kanji + kana"
+        ],
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ],
+        [
+         "見",
+         "see",
+         "tO",
+         "kanji + kana · 見る・みる",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "Standing on a tree to watch your child leave. That is a parent.",
+       "wild": "両親 — both parents; 親切 — kind",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "兄",
+       "m": "older brother",
+       "w": "兄",
+       "r": "あに",
+       "en": "older brother (mine)",
+       "parts": [
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "儿",
+         "legs",
+         "tR",
+         "radical · legs",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "The one with legs and a big mouth, who tells the younger ones what to do.",
+       "wild": "お兄さん for someone else's",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "弟",
+       "m": "younger brother",
+       "w": "弟",
+       "r": "おとうと",
+       "en": "younger brother",
+       "parts": [],
+       "atom": true,
+       "story": "A bow with the string wound down it. The one still being wound up.",
+       "wild": "弟子 — a disciple",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "姉",
+       "m": "older sister",
+       "w": "姉",
+       "r": "あね",
+       "en": "older sister (mine)",
+       "parts": [
+        [
+         "女",
+         "woman",
+         "tK",
+         "kanji · 女・おんな",
+         "kanji"
+        ],
+        [
+         "市",
+         "market",
+         "tK",
+         "kanji · 市・し",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "The sister old enough to be sent to market.",
+       "wild": "お姉さん for someone else's",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "妹",
+       "m": "younger sister",
+       "w": "妹",
+       "r": "いもうと",
+       "en": "younger sister",
+       "parts": [
+        [
+         "女",
+         "woman",
+         "tK",
+         "kanji · 女・おんな",
+         "kanji"
+        ],
+        [
+         "未",
+         "not yet",
+         "tC",
+         "kanji, compounds only · 未来",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "The sister who is not yet old enough.",
+       "wild": "No honorific version in common use",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "族",
+       "m": "family, tribe",
+       "w": "家族",
+       "r": "かぞく",
+       "en": "family",
+       "parts": [
+        [
+         "方",
+         "direction",
+         "tK",
+         "kanji · 方・かた",
+         "kanji"
+        ],
+        [
+         "矢",
+         "arrow",
+         "tK",
+         "kanji · 矢・や",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Everyone who marches under the same banner in the same direction.",
+       "wild": "民族 — an ethnic group",
+       "ws": [
+        "tC",
+        "used in compounds: 家族"
+       ]
+      },
+      {
+       "k": "主",
+       "m": "master, main",
+       "w": "主人",
+       "r": "しゅじん",
+       "en": "husband; proprietor",
+       "parts": [
+        [
+         "王",
+         "king",
+         "tK",
+         "kanji · 王・おう",
+         "kanji"
+        ],
+        [
+         "丶",
+         "lamp",
+         "tR",
+         "radical · a single drop",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A king with a lamp above him. The main one in the room.",
+       "wild": "ご主人 for someone else's husband",
+       "ws": [
+        "tC",
+        "used in compounds: 主人"
+       ]
+      },
+      {
+       "k": "民",
+       "m": "people, citizens",
+       "w": "国民",
+       "r": "こくみん",
+       "en": "citizens, the people",
+       "parts": [],
+       "atom": true,
+       "story": "An eye with a spike driven through it — the old, brutal picture for a subject population.",
+       "wild": "市民 — city residents",
+       "ws": [
+        "tC",
+        "used in compounds: 国民"
+       ]
+      },
+      {
+       "k": "他",
+       "m": "other",
+       "w": "他",
+       "r": "ほか",
+       "en": "other, else",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "也",
+         "that one",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Not this person — that one over there.",
+       "wild": "その他 — 'and others', on forms",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "犬",
+       "m": "dog",
+       "w": "犬",
+       "r": "いぬ",
+       "en": "dog",
+       "parts": [
+        [
+         "大",
+         "big",
+         "tO",
+         "kanji + kana · 大きい・おおきい",
+         "kanji + kana"
+        ],
+        [
+         "丶",
+         "ear",
+         "tR",
+         "radical · a single drop",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A big animal with one ear flicked up.",
+       "wild": "犬 with the dot; 大 without",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "鳥",
+       "m": "bird",
+       "w": "鳥",
+       "r": "とり",
+       "en": "bird",
+       "parts": [],
+       "atom": true,
+       "story": "A crest, a body, four tail ticks.",
+       "wild": "焼き鳥 — grilled chicken skewers",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "牛",
+       "m": "cow",
+       "w": "牛",
+       "r": "うし",
+       "en": "cow",
+       "parts": [],
+       "atom": true,
+       "story": "Horns lifting off a flat body.",
+       "wild": "牛肉 — beef; 牛乳 — milk",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "jp": "会話",
+   "en": "Conversation and opinions",
+   "blurb": "Small chapter, but these are the words you need to agree, disagree, or say what you meant.",
+   "foot": "別々にお願いします — 'separately, please' — is the single most useful phrase in this chapter.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "意",
+       "m": "idea, meaning",
+       "w": "意味",
+       "r": "いみ",
+       "en": "meaning",
+       "parts": [
+        [
+         "音",
+         "sound",
+         "tK",
+         "kanji · 音・おと",
+         "kanji"
+        ],
+        [
+         "心",
+         "heart",
+         "tK",
+         "kanji · 心・こころ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "The sound your heart makes before you say it out loud.",
+       "wild": "どういう意味? — 'what does that mean?'",
+       "ws": [
+        "tC",
+        "used in compounds: 意味"
+       ]
+      },
+      {
+       "k": "談",
+       "m": "discuss",
+       "w": "相談",
+       "r": "そうだん",
+       "en": "consultation, discussion",
+       "parts": [
+        [
+         "言",
+         "words",
+         "tO",
+         "kanji + kana · 言う・いう",
+         "kanji + kana"
+        ],
+        [
+         "炎",
+         "flame",
+         "tC",
+         "kanji, compounds only · 炎",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Words getting heated.",
+       "wild": "相談する — to talk something over",
+       "ws": [
+        "tC",
+        "used in compounds: 相談"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "言",
+       "m": "say, words",
+       "w": "言う",
+       "r": "いう",
+       "en": "to say",
+       "parts": [
+        [
+         "立",
+         "stand",
+         "tO",
+         "kanji + kana · 立つ・たつ",
+         "kanji + kana"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A mouth with sound waves stacked above it and a lid on top.",
+       "wild": "方言 — dialect",
+       "ws": [
+        "tO",
+        "needs hiragana: 言う"
+       ]
+      },
+      {
+       "k": "思",
+       "m": "think",
+       "w": "思う",
+       "r": "おもう",
+       "en": "to think, to feel",
+       "parts": [
+        [
+         "田",
+         "field",
+         "tK",
+         "kanji · 田・た",
+         "kanji"
+        ],
+        [
+         "心",
+         "heart",
+         "tK",
+         "kanji · 心・こころ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A heart with a field laid over it: the mind divided into neat plots.",
+       "wild": "〜と思います softens almost any opinion",
+       "ws": [
+        "tO",
+        "needs hiragana: 思う"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "同",
+       "m": "same",
+       "w": "同じ",
+       "r": "おなじ",
+       "en": "the same",
+       "parts": [
+        [
+         "冂",
+         "cover",
+         "tR",
+         "radical · an open box",
+         "radical"
+        ],
+        [
+         "一",
+         "one",
+         "tK",
+         "kanji · 一つ・ひとつ",
+         "kanji"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "One cover, one mouth, everybody underneath saying the same thing.",
+       "wild": "同時 — at the same time",
+       "ws": [
+        "tO",
+        "needs hiragana: 同じ"
+       ]
+      },
+      {
+       "k": "別",
+       "m": "separate, another",
+       "w": "別",
+       "r": "べつ",
+       "en": "different, separate",
+       "parts": [
+        [
+         "另",
+         "apart",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ],
+        [
+         "刂",
+         "sword",
+         "tR",
+         "radical · sword, on the right",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A sword coming down between two things.",
+       "wild": "別々に — separately, when splitting a bill",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "不",
+       "m": "not, un-",
+       "w": "不便",
+       "r": "ふべん",
+       "en": "inconvenient",
+       "parts": [],
+       "atom": true,
+       "story": "A bird flying up and hitting a ceiling. It does not get through.",
+       "wild": "不 negates whatever follows: 不安, 不足",
+       "ws": [
+        "tC",
+        "used in compounds: 不便"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "jp": "時",
+   "en": "Time and the calendar",
+   "blurb": "Days, seasons and the adjectives that go with them. Nearly all of these appear on a schedule or a shop's opening hours.",
+   "foot": "早い and 速い are both hayai. 早い is early in time; 速い is fast in speed.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "曜",
+       "m": "weekday",
+       "w": "曜日",
+       "r": "ようび",
+       "en": "day of the week",
+       "parts": [
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ],
+        [
+         "羽",
+         "wings",
+         "tK",
+         "kanji · 羽・はね",
+         "kanji"
+        ],
+        [
+         "隹",
+         "bird",
+         "tR",
+         "radical · a short-tailed bird",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Days flying past on wings, one bird after another.",
+       "wild": "月曜日 through 日曜日",
+       "ws": [
+        "tC",
+        "used in compounds: 曜日"
+       ]
+      },
+      {
+       "k": "週",
+       "m": "week",
+       "w": "今週",
+       "r": "こんしゅう",
+       "en": "this week",
+       "parts": [
+        [
+         "辶",
+         "road",
+         "tR",
+         "radical · road, sweeping underneath",
+         "radical"
+        ],
+        [
+         "周",
+         "circuit",
+         "tO",
+         "kanji + kana · 周り・まわり",
+         "kanji + kana"
+        ]
+       ],
+       "atom": false,
+       "story": "One full lap of the road. Seven days and you are back where you started.",
+       "wild": "週末 — weekend",
+       "ws": [
+        "tC",
+        "used in compounds: 今週"
+       ]
+      },
+      {
+       "k": "朝",
+       "m": "morning",
+       "w": "朝",
+       "r": "あさ",
+       "en": "morning",
+       "parts": [
+        [
+         "十",
+         "ten",
+         "tK",
+         "kanji · 十・じゅう",
+         "kanji"
+        ],
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ],
+        [
+         "十",
+         "ten",
+         "tK",
+         "kanji · 十・じゅう",
+         "kanji"
+        ],
+        [
+         "月",
+         "moon",
+         "tK",
+         "kanji · 月・つき",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "The sun already up but the moon still visible. That overlap is morning.",
+       "wild": "朝食 — breakfast",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "昼",
+       "m": "noon",
+       "w": "昼",
+       "r": "ひる",
+       "en": "noon, daytime",
+       "parts": [
+        [
+         "尺",
+         "measure",
+         "tC",
+         "kanji, compounds only · 尺",
+         "compounds only"
+        ],
+        [
+         "一",
+         "line",
+         "tK",
+         "kanji · 一つ・ひとつ",
+         "kanji"
+        ],
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "The sun measured and found to be exactly overhead.",
+       "wild": "昼休み — lunch break",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "夕",
+       "m": "evening",
+       "w": "夕方",
+       "r": "ゆうがた",
+       "en": "evening, dusk",
+       "parts": [],
+       "atom": true,
+       "story": "The moon with one stroke missing — the moon before it has properly come out.",
+       "wild": "夕食 — dinner",
+       "ws": [
+        "tC",
+        "used in compounds: 夕方"
+       ]
+      },
+      {
+       "k": "昨",
+       "m": "previous",
+       "w": "昨日",
+       "r": "きのう",
+       "en": "yesterday",
+       "parts": [
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ],
+        [
+         "乍",
+         "cut away",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "The day that has already been cut away behind you.",
+       "wild": "An irregular reading; learn the word whole",
+       "ws": [
+        "tC",
+        "used in compounds: 昨日"
+       ]
+      },
+      {
+       "k": "春",
+       "m": "spring",
+       "w": "春",
+       "r": "はる",
+       "en": "spring",
+       "parts": [
+        [
+         "三",
+         "three",
+         "tK",
+         "kanji · 三つ・みっつ",
+         "kanji"
+        ],
+        [
+         "人",
+         "person",
+         "tK",
+         "kanji · 人・ひと",
+         "kanji"
+        ],
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Three people out in the sun for the first time this year.",
+       "wild": "春休み — spring holiday",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "秋",
+       "m": "autumn",
+       "w": "秋",
+       "r": "あき",
+       "en": "autumn",
+       "parts": [
+        [
+         "禾",
+         "grain",
+         "tR",
+         "radical · a stalk of grain",
+         "radical"
+        ],
+        [
+         "火",
+         "fire",
+         "tK",
+         "kanji · 火・ひ",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Stubble burnt off after the harvest.",
+       "wild": "秋分の日 — the autumn equinox holiday",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "期",
+       "m": "period, term",
+       "w": "期間",
+       "r": "きかん",
+       "en": "period, term",
+       "parts": [
+        [
+         "其",
+         "that",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ],
+        [
+         "月",
+         "month",
+         "tK",
+         "kanji · 月・つき",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "That particular run of months. A term.",
+       "wild": "学期 — a school term",
+       "ws": [
+        "tC",
+        "used in compounds: 期間"
+       ]
+      },
+      {
+       "k": "度",
+       "m": "degree, occasion",
+       "w": "一度",
+       "r": "いちど",
+       "en": "once, one time",
+       "parts": [
+        [
+         "广",
+         "building",
+         "tR",
+         "radical · building, open on one side",
+         "radical"
+        ],
+        [
+         "廿",
+         "twenty",
+         "tR",
+         "radical · twenty",
+         "radical"
+        ],
+        [
+         "又",
+         "hand",
+         "tC",
+         "kanji, compounds only · 又",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Measuring a building twenty times over by hand.",
+       "wild": "温度 — temperature, also degrees",
+       "ws": [
+        "tC",
+        "used in compounds: 一度"
+       ]
+      },
+      {
+       "k": "去",
+       "m": "leave, past",
+       "w": "去年",
+       "r": "きょねん",
+       "en": "last year",
+       "parts": [
+        [
+         "土",
+         "earth",
+         "tK",
+         "kanji · 土・つち",
+         "kanji"
+        ],
+        [
+         "厶",
+         "private",
+         "tR",
+         "radical · private, a cocoon",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Walking off your own patch of ground. Once you have, it is the past.",
+       "wild": "過去 — the past",
+       "ws": [
+        "tC",
+        "used in compounds: 去年"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "早",
+       "m": "early",
+       "w": "早い",
+       "r": "はやい",
+       "en": "early",
+       "parts": [
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ],
+        [
+         "十",
+         "ten",
+         "tK",
+         "kanji · 十・じゅう",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "The sun already ten strokes above the horizon and you are still in bed.",
+       "wild": "早く! — 'quickly!'; distinct from 速い, fast",
+       "ws": [
+        "tO",
+        "needs hiragana: 早い"
+       ]
+      },
+      {
+       "k": "古",
+       "m": "old",
+       "w": "古い",
+       "r": "ふるい",
+       "en": "old (of things)",
+       "parts": [
+        [
+         "十",
+         "ten",
+         "tK",
+         "kanji · 十・じゅう",
+         "kanji"
+        ],
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Something ten mouths have already told the story of.",
+       "wild": "中古 — second-hand",
+       "ws": [
+        "tO",
+        "needs hiragana: 古い"
+       ]
+      },
+      {
+       "k": "新",
+       "m": "new",
+       "w": "新しい",
+       "r": "あたらしい",
+       "en": "new",
+       "parts": [
+        [
+         "立",
+         "stand",
+         "tO",
+         "kanji + kana · 立つ・たつ",
+         "kanji + kana"
+        ],
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ],
+        [
+         "斤",
+         "axe",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "A standing tree and an axe. Cut it and the wood is new.",
+       "wild": "新聞 — newspaper, literally new hearing",
+       "ws": [
+        "tO",
+        "needs hiragana: 新しい"
+       ]
+      },
+      {
+       "k": "多",
+       "m": "many",
+       "w": "多い",
+       "r": "おおい",
+       "en": "many, a lot of",
+       "parts": [
+        [
+         "夕",
+         "evening",
+         "tC",
+         "kanji, compounds only · 夕方",
+         "compounds only"
+        ],
+        [
+         "夕",
+         "evening",
+         "tC",
+         "kanji, compounds only · 夕方",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Evening after evening. It adds up.",
+       "wild": "多分 — probably",
+       "ws": [
+        "tO",
+        "needs hiragana: 多い"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "jp": "天気と自然",
+   "en": "Weather and nature",
+   "blurb": "Seasons, landscape and colour. The adjectives here are among the first you will actually use in conversation.",
+   "foot": "暑い and 熱い are both atsui. 暑い is the weather; 熱い is the soup.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "風",
+       "m": "wind",
+       "w": "風",
+       "r": "かぜ",
+       "en": "wind",
+       "parts": [
+        [
+         "几",
+         "frame",
+         "tR",
+         "radical · a small table",
+         "radical"
+        ],
+        [
+         "虫",
+         "insect",
+         "tK",
+         "kanji · 虫・むし",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Insects blown sideways past a window frame.",
+       "wild": "風邪 — a cold, confusingly written with the same sound",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "雪",
+       "m": "snow",
+       "w": "雪",
+       "r": "ゆき",
+       "en": "snow",
+       "parts": [
+        [
+         "雨",
+         "rain",
+         "tK",
+         "kanji · 雨・あめ",
+         "kanji"
+        ],
+        [
+         "彐",
+         "hand sweeping",
+         "tR",
+         "radical · a hand sweeping",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Rain you have to sweep.",
+       "wild": "大雪 — heavy snow, on weather warnings",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "海",
+       "m": "sea",
+       "w": "海",
+       "r": "うみ",
+       "en": "sea",
+       "parts": [
+        [
+         "氵",
+         "water",
+         "tR",
+         "radical · water, on the left",
+         "radical"
+        ],
+        [
+         "毎",
+         "every",
+         "tC",
+         "kanji, compounds only · 毎日",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Every water there is, poured into one place.",
+       "wild": "海外 — overseas, literally outside the sea",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "森",
+       "m": "forest",
+       "w": "森",
+       "r": "もり",
+       "en": "forest",
+       "parts": [
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ],
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ],
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Three trees. Now you cannot.",
+       "wild": "Three trees; 林 is two",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "林",
+       "m": "woods",
+       "w": "林",
+       "r": "はやし",
+       "en": "woods, grove",
+       "parts": [
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ],
+        [
+         "木",
+         "tree",
+         "tK",
+         "kanji · 木・き",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Two trees side by side. You can still walk between them.",
+       "wild": "Common as a surname",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "野",
+       "m": "field, plain",
+       "w": "野菜",
+       "r": "やさい",
+       "en": "vegetables",
+       "parts": [
+        [
+         "里",
+         "village",
+         "tK",
+         "kanji · 里・さと",
+         "kanji"
+        ],
+        [
+         "予",
+         "beforehand",
+         "tC",
+         "kanji, compounds only · 予定",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "The open ground the village was laid out on before anyone built anything.",
+       "wild": "野 alone is open plain; 野球 is baseball",
+       "ws": [
+        "tC",
+        "used in compounds: 野菜"
+       ]
+      },
+      {
+       "k": "石",
+       "m": "stone",
+       "w": "石",
+       "r": "いし",
+       "en": "stone",
+       "parts": [
+        [
+         "厂",
+         "cliff",
+         "tR",
+         "radical · a cliff",
+         "radical"
+        ],
+        [
+         "口",
+         "rock",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A rock that has come off a cliff.",
+       "wild": "石油 — petroleum",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "光",
+       "m": "light",
+       "w": "光",
+       "r": "ひかり",
+       "en": "light",
+       "parts": [
+        [
+         "小",
+         "small",
+         "tO",
+         "kanji + kana · 小さい・ちいさい",
+         "kanji + kana"
+        ],
+        [
+         "儿",
+         "legs",
+         "tR",
+         "radical · legs",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Small sparks that grew legs and walked off in every direction.",
+       "wild": "観光 — sightseeing, literally looking at the light",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "鳴",
+       "m": "chirp, ring",
+       "w": "鳴る",
+       "r": "なる",
+       "en": "to ring, to sound",
+       "parts": [
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "鳥",
+         "bird",
+         "tK",
+         "kanji · 鳥・とり",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "A bird's mouth. It also covers phones ringing.",
+       "wild": "Also 鳴く, the sound an animal makes",
+       "ws": [
+        "tO",
+        "needs hiragana: 鳴る"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "寒",
+       "m": "cold",
+       "w": "寒い",
+       "r": "さむい",
+       "en": "cold (weather)",
+       "parts": [
+        [
+         "宀",
+         "roof",
+         "tR",
+         "radical · a roof with walls, on top",
+         "radical"
+        ],
+        [
+         "冫",
+         "ice",
+         "tR",
+         "radical · ice",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Straw stuffed under the roof and ice underneath anyway.",
+       "wild": "寒気 — a chill",
+       "ws": [
+        "tO",
+        "needs hiragana: 寒い"
+       ]
+      },
+      {
+       "k": "暑",
+       "m": "hot (weather)",
+       "w": "暑い",
+       "r": "あつい",
+       "en": "hot (weather)",
+       "parts": [
+        [
+         "日",
+         "sun",
+         "tK",
+         "kanji · 日・ひ",
+         "kanji"
+        ],
+        [
+         "者",
+         "person",
+         "tC",
+         "kanji, compounds only · 医者",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Sun directly on a person, with nowhere to go.",
+       "wild": "Distinct from 熱い, hot to the touch",
+       "ws": [
+        "tO",
+        "needs hiragana: 暑い"
+       ]
+      },
+      {
+       "k": "深",
+       "m": "deep",
+       "w": "深い",
+       "r": "ふかい",
+       "en": "deep",
+       "parts": [
+        [
+         "氵",
+         "water",
+         "tR",
+         "radical · water, on the left",
+         "radical"
+        ],
+        [
+         "罙",
+         "down a hole",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Water going further down than you can see.",
+       "wild": "深夜 — the small hours",
+       "ws": [
+        "tO",
+        "needs hiragana: 深い"
+       ]
+      },
+      {
+       "k": "青",
+       "m": "blue, green",
+       "w": "青い",
+       "r": "あおい",
+       "en": "blue",
+       "parts": [
+        [
+         "龶",
+         "growth",
+         "tR",
+         "radical · growth",
+         "radical"
+        ],
+        [
+         "月",
+         "moon",
+         "tK",
+         "kanji · 月・つき",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "New growth under moonlight, which is neither blue nor green but both.",
+       "wild": "Also covers green traffic lights",
+       "ws": [
+        "tO",
+        "needs hiragana: 青い"
+       ]
+      },
+      {
+       "k": "赤",
+       "m": "red",
+       "w": "赤い",
+       "r": "あかい",
+       "en": "red",
+       "parts": [
+        [
+         "土",
+         "earth",
+         "tK",
+         "kanji · 土・つち",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Earth with a fire under it, glowing.",
+       "wild": "赤ちゃん — baby",
+       "ws": [
+        "tO",
+        "needs hiragana: 赤い"
+       ]
+      },
+      {
+       "k": "黒",
+       "m": "black",
+       "w": "黒い",
+       "r": "くろい",
+       "en": "black",
+       "parts": [
+        [
+         "里",
+         "village",
+         "tK",
+         "kanji · 里・さと",
+         "kanji"
+        ],
+        [
+         "灬",
+         "fire",
+         "tR",
+         "radical · fire, underneath",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A village burnt down. What is left is black.",
+       "wild": "黒板 — blackboard",
+       "ws": [
+        "tO",
+        "needs hiragana: 黒い"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "jp": "街",
+   "en": "The city and public places",
+   "blurb": "Signage kanji. You will read these off a street sign or a station exit long before you write them.",
+   "foot": "On a station board, 発 is departures and 着 is arrivals. Two kanji, and you can read the timetable.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "町",
+       "m": "town, block",
+       "w": "町",
+       "r": "まち",
+       "en": "town, neighbourhood",
+       "parts": [
+        [
+         "田",
+         "field",
+         "tK",
+         "kanji · 田・た",
+         "kanji"
+        ],
+        [
+         "丁",
+         "nail",
+         "tC",
+         "kanji, compounds only · 丁目",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Fields nailed down into blocks. That is a town.",
+       "wild": "Half of all Japanese addresses contain it",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "区",
+       "m": "ward, district",
+       "w": "区",
+       "r": "く",
+       "en": "ward, district",
+       "parts": [
+        [
+         "匚",
+         "box",
+         "tR",
+         "radical · a box on its side",
+         "radical"
+        ],
+        [
+         "乂",
+         "cut",
+         "tR",
+         "radical · a cut",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "A box with a cross cut through it: the city carved into wards.",
+       "wild": "Tokyo is divided into 23 区",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "市",
+       "m": "city, market",
+       "w": "市",
+       "r": "し",
+       "en": "city",
+       "parts": [
+        [
+         "亠",
+         "lid",
+         "tR",
+         "radical · a lid",
+         "radical"
+        ],
+        [
+         "巾",
+         "cloth",
+         "tR",
+         "radical · a hanging cloth",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Cloth hung under an awning. A market, and then a city.",
+       "wild": "市役所 — city hall",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "県",
+       "m": "prefecture",
+       "w": "県",
+       "r": "けん",
+       "en": "prefecture",
+       "parts": [],
+       "atom": true,
+       "story": "An administrative eye kept on a region.",
+       "wild": "The administrative level above 市",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "館",
+       "m": "large building",
+       "w": "図書館",
+       "r": "としょかん",
+       "en": "library",
+       "parts": [
+        [
+         "食",
+         "food",
+         "tO",
+         "kanji + kana · 食べる・たべる",
+         "kanji + kana"
+        ],
+        [
+         "官",
+         "official",
+         "tC",
+         "kanji, compounds only · 官庁",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "An official building where they feed you. Libraries and embassies both.",
+       "wild": "美術館, 大使館, 映画館 — 館 is any large public building",
+       "ws": [
+        "tC",
+        "used in compounds: 図書館"
+       ]
+      },
+      {
+       "k": "場",
+       "m": "place",
+       "w": "駐車場",
+       "r": "ちゅうしゃじょう",
+       "en": "car park",
+       "parts": [
+        [
+         "土",
+         "earth",
+         "tK",
+         "kanji · 土・つち",
+         "kanji"
+        ],
+        [
+         "昜",
+         "sun rising",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "Ground with the sun on it. Somewhere you can actually point to.",
+       "wild": "会場 — venue; 工場 — factory",
+       "ws": [
+        "tC",
+        "used in compounds: 駐車場"
+       ]
+      },
+      {
+       "k": "寺",
+       "m": "temple",
+       "w": "お寺",
+       "r": "おてら",
+       "en": "temple",
+       "parts": [
+        [
+         "土",
+         "earth",
+         "tK",
+         "kanji · 土・つち",
+         "kanji"
+        ],
+        [
+         "寸",
+         "measure",
+         "tC",
+         "kanji, compounds only · 寸法",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Land measured out and set aside. That is what a temple is.",
+       "wild": "Buddhist; 神社 is the Shinto equivalent",
+       "ws": [
+        "tC",
+        "used in compounds: お寺"
+       ]
+      },
+      {
+       "k": "界",
+       "m": "world, boundary",
+       "w": "世界",
+       "r": "せかい",
+       "en": "world",
+       "parts": [
+        [
+         "田",
+         "field",
+         "tK",
+         "kanji · 田・た",
+         "kanji"
+        ],
+        [
+         "介",
+         "between",
+         "tC",
+         "kanji, compounds only · 紹介",
+         "compounds only"
+        ]
+       ],
+       "atom": false,
+       "story": "Where one field stops and the next begins, extended until it means the world.",
+       "wild": "業界 — an industry",
+       "ws": [
+        "tC",
+        "used in compounds: 世界"
+       ]
+      },
+      {
+       "k": "世",
+       "m": "world, generation",
+       "w": "世界",
+       "r": "せかい",
+       "en": "world, generation",
+       "parts": [],
+       "atom": true,
+       "story": "Three tens joined: thirty years, which is one generation.",
+       "wild": "At this level 世 rarely appears alone",
+       "ws": [
+        "tC",
+        "used in compounds: 世界"
+       ]
+      },
+      {
+       "k": "号",
+       "m": "number, title",
+       "w": "信号",
+       "r": "しんごう",
+       "en": "traffic light",
+       "parts": [
+        [
+         "口",
+         "mouth",
+         "tK",
+         "kanji · 口・くち",
+         "kanji"
+        ],
+        [
+         "丂",
+         "breath",
+         "tX",
+         "rare kanji — recognise only",
+         "rare"
+        ]
+       ],
+       "atom": false,
+       "story": "A mouth calling out a number down a corridor.",
+       "wild": "番号, 記号 — 号 is any assigned marker",
+       "ws": [
+        "tC",
+        "used in compounds: 信号"
+       ]
+      },
+      {
+       "k": "発",
+       "m": "depart, emit",
+       "w": "出発",
+       "r": "しゅっぱつ",
+       "en": "departure",
+       "parts": [
+        [
+         "癶",
+         "two feet",
+         "tR",
+         "radical · two feet splayed",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Two feet splayed and something loosed from a bow. Departure.",
+       "wild": "発 on a timetable is the departure column",
+       "ws": [
+        "tC",
+        "used in compounds: 出発"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pv",
+     "name": "Verbs",
+     "rows": [
+      {
+       "k": "開",
+       "m": "open",
+       "w": "開ける",
+       "r": "あける",
+       "en": "to open",
+       "parts": [
+        [
+         "門",
+         "gate",
+         "tK",
+         "kanji · 門・もん",
+         "kanji"
+        ],
+        [
+         "开",
+         "two hands",
+         "tR",
+         "radical · two hands lifting",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Two hands lifting the bar out of the gate.",
+       "wild": "開店 — opening; 開いてる? — 'is it open?'",
+       "ws": [
+        "tO",
+        "needs hiragana: 開ける"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "t13",
+   "jp": "抽象",
+   "en": "Abstract and useful odds",
+   "blurb": "The kanji that do not belong to a place or a scene, but turn up constantly in compounds.",
+   "foot": "以上 and 以下 appear on almost every Japanese form, sign and price bracket. Learn the pair now.",
+   "groups": [
+    {
+     "cls": "pn",
+     "name": "Nouns",
+     "rows": [
+      {
+       "k": "色",
+       "m": "colour",
+       "w": "色",
+       "r": "いろ",
+       "en": "colour",
+       "parts": [],
+       "atom": true,
+       "story": "A kneeling figure with a marked face. Colour and complexion.",
+       "wild": "景色 — scenery, an irregular reading",
+       "ws": [
+        "tK",
+        "stands alone as a word"
+       ]
+      },
+      {
+       "k": "元",
+       "m": "origin, former",
+       "w": "元気",
+       "r": "げんき",
+       "en": "健康 and lively",
+       "parts": [
+        [
+         "二",
+         "two",
+         "tK",
+         "kanji · 二つ・ふたつ",
+         "kanji"
+        ],
+        [
+         "儿",
+         "legs",
+         "tR",
+         "radical · legs",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "Two lines over a pair of legs: where a person starts from.",
+       "wild": "元 alone means the origin or former state",
+       "ws": [
+        "tC",
+        "used in compounds: 元気"
+       ]
+      },
+      {
+       "k": "実",
+       "m": "reality, fruit",
+       "w": "実は",
+       "r": "じつは",
+       "en": "actually, in fact",
+       "parts": [
+        [
+         "宀",
+         "roof",
+         "tR",
+         "radical · a roof with walls, on top",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "What is actually under the roof when you lift it.",
+       "wild": "事実 — a fact",
+       "ws": [
+        "tO",
+        "needs hiragana: 実は"
+       ]
+      },
+      {
+       "k": "化",
+       "m": "change, -ise",
+       "w": "文化",
+       "r": "ぶんか",
+       "en": "culture",
+       "parts": [
+        [
+         "亻",
+         "person",
+         "tR",
+         "radical · person, on the left",
+         "radical"
+        ],
+        [
+         "匕",
+         "turned person",
+         "tR",
+         "radical · a person bending",
+         "radical"
+        ]
+       ],
+       "atom": false,
+       "story": "One person the right way up, one upside down. Transformation.",
+       "wild": "〜化 turns a noun into a process: 国際化",
+       "ws": [
+        "tC",
+        "used in compounds: 文化"
+       ]
+      },
+      {
+       "k": "理",
+       "m": "reason, logic",
+       "w": "理由",
+       "r": "りゆう",
+       "en": "reason",
+       "parts": [
+        [
+         "王",
+         "jewel",
+         "tK",
+         "kanji · 王・おう",
+         "kanji"
+        ],
+        [
+         "里",
+         "village",
+         "tK",
+         "kanji · 里・さと",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "The grain in a jewel, which tells you how it will split. Its underlying logic.",
+       "wild": "料理, 無理, 理科 all use it",
+       "ws": [
+        "tC",
+        "used in compounds: 理由"
+       ]
+      },
+      {
+       "k": "用",
+       "m": "use, business",
+       "w": "用事",
+       "r": "ようじ",
+       "en": "errand, business",
+       "parts": [],
+       "atom": true,
+       "story": "A fence panel with slats. Something with a use.",
+       "wild": "使用中 — in use",
+       "ws": [
+        "tC",
+        "used in compounds: 用事"
+       ]
+      }
+     ]
+    },
+    {
+     "cls": "pa",
+     "name": "Adjectives and describing words",
+     "rows": [
+      {
+       "k": "全",
+       "m": "whole, all",
+       "w": "全部",
+       "r": "ぜんぶ",
+       "en": "all, everything",
+       "parts": [
+        [
+         "𠆢",
+         "roof",
+         "tR",
+         "radical · a roof",
+         "radical"
+        ],
+        [
+         "王",
+         "king",
+         "tK",
+         "kanji · 王・おう",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Everything under the king's roof, without exception.",
+       "wild": "安全 — safety, literally wholly at ease",
+       "ws": [
+        "tC",
+        "used in compounds: 全部"
+       ]
+      },
+      {
+       "k": "以",
+       "m": "by means of",
+       "w": "以上",
+       "r": "いじょう",
+       "en": "more than; the above",
+       "parts": [],
+       "atom": true,
+       "story": "Two people either side of a tool. The way something gets done.",
+       "wild": "以下 — less than; used on every form",
+       "ws": [
+        "tC",
+        "used in compounds: 以上"
+       ]
+      },
+      {
+       "k": "安",
+       "m": "cheap, safe, peaceful",
+       "w": "安い",
+       "r": "やすい",
+       "en": "cheap",
+       "parts": [
+        [
+         "宀",
+         "roof",
+         "tR",
+         "radical · a roof with walls, on top",
+         "radical"
+        ],
+        [
+         "女",
+         "woman",
+         "tK",
+         "kanji · 女・おんな",
+         "kanji"
+        ]
+       ],
+       "atom": false,
+       "story": "Everyone under the roof and accounted for. Nothing to pay for.",
+       "wild": "安心 — relief; 安全 — safety",
+       "ws": [
+        "tO",
+        "needs hiragana: 安い"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "apx": [
+  {
+   "cls": "tK",
+   "name": "kanji",
+   "note": "Real kanji that work as words on their own. Every one of these is a free extra character.",
+   "items": [
+    [
+     "一",
+     "一つ・ひとつ"
+    ],
+    [
+     "七",
+     "七つ・ななつ"
+    ],
+    [
+     "三",
+     "三つ・みっつ"
+    ],
+    [
+     "九",
+     "九つ・ここのつ"
+    ],
+    [
+     "二",
+     "二つ・ふたつ"
+    ],
+    [
+     "人",
+     "人・ひと"
+    ],
+    [
+     "何",
+     "何・なに"
+    ],
+    [
+     "先",
+     "先・さき"
+    ],
+    [
+     "八",
+     "八つ・やっつ"
+    ],
+    [
+     "冬",
+     "冬・ふゆ"
+    ],
+    [
+     "刀",
+     "刀・かたな"
+    ],
+    [
+     "力",
+     "力・ちから"
+    ],
+    [
+     "十",
+     "十・じゅう"
+    ],
+    [
+     "口",
+     "口・くち"
+    ],
+    [
+     "右",
+     "右・みぎ"
+    ],
+    [
+     "土",
+     "土・つち"
+    ],
+    [
+     "女",
+     "女・おんな"
+    ],
+    [
+     "子",
+     "子・こ"
+    ],
+    [
+     "寺",
+     "寺・てら"
+    ],
+    [
+     "山",
+     "山・やま"
+    ],
+    [
+     "市",
+     "市・し"
+    ],
+    [
+     "弓",
+     "弓・ゆみ"
+    ],
+    [
+     "弟",
+     "弟・おとうと"
+    ],
+    [
+     "心",
+     "心・こころ"
+    ],
+    [
+     "戸",
+     "戸・と"
+    ],
+    [
+     "方",
+     "方・かた"
+    ],
+    [
+     "日",
+     "日・ひ"
+    ],
+    [
+     "昔",
+     "昔・むかし"
+    ],
+    [
+     "月",
+     "月・つき"
+    ],
+    [
+     "木",
+     "木・き"
+    ],
+    [
+     "本",
+     "本・ほん"
+    ],
+    [
+     "水",
+     "水・みず"
+    ],
+    [
+     "泉",
+     "泉・いずみ"
+    ],
+    [
+     "火",
+     "火・ひ"
+    ],
+    [
+     "牛",
+     "牛・うし"
+    ],
+    [
+     "玉",
+     "玉・たま"
+    ],
+    [
+     "王",
+     "王・おう"
+    ],
+    [
+     "田",
+     "田・た"
+    ],
+    [
+     "百",
+     "百・ひゃく"
+    ],
+    [
+     "目",
+     "目・め"
+    ],
+    [
+     "矢",
+     "矢・や"
+    ],
+    [
+     "石",
+     "石・いし"
+    ],
+    [
+     "穴",
+     "穴・あな"
+    ],
+    [
+     "米",
+     "米・こめ"
+    ],
+    [
+     "糸",
+     "糸・いと"
+    ],
+    [
+     "羊",
+     "羊・ひつじ"
+    ],
+    [
+     "羽",
+     "羽・はね"
+    ],
+    [
+     "耳",
+     "耳・みみ"
+    ],
+    [
+     "舌",
+     "舌・した"
+    ],
+    [
+     "虫",
+     "虫・むし"
+    ],
+    [
+     "豆",
+     "豆・まめ"
+    ],
+    [
+     "貝",
+     "貝・かい"
+    ],
+    [
+     "車",
+     "車・くるま"
+    ],
+    [
+     "里",
+     "里・さと"
+    ],
+    [
+     "金",
+     "金・かね"
+    ],
+    [
+     "門",
+     "門・もん"
+    ],
+    [
+     "雨",
+     "雨・あめ"
+    ],
+    [
+     "音",
+     "音・おと"
+    ],
+    [
+     "首",
+     "首・くび"
+    ],
+    [
+     "馬",
+     "馬・うま"
+    ],
+    [
+     "鳥",
+     "鳥・とり"
+    ]
+   ]
+  },
+  {
+   "cls": "tO",
+   "name": "kanji + kana",
+   "note": "Real kanji, but they only become words with a hiragana tail. Learn the kanji and its okurigana together — the tail is part of the word.",
+   "items": [
+    [
+     "与",
+     "与える・あたえる"
+    ],
+    [
+     "主",
+     "主に・おもに"
+    ],
+    [
+     "争",
+     "争う・あらそう"
+    ],
+    [
+     "亡",
+     "亡くなる・なくなる"
+    ],
+    [
+     "交",
+     "交ぜる・まぜる"
+    ],
+    [
+     "会",
+     "会う・あう"
+    ],
+    [
+     "入",
+     "入る・はいる"
+    ],
+    [
+     "動",
+     "動く・うごく"
+    ],
+    [
+     "占",
+     "占う・うらなう"
+    ],
+    [
+     "去",
+     "去る・さる"
+    ],
+    [
+     "及",
+     "及ぶ・およぶ"
+    ],
+    [
+     "古",
+     "古い・ふるい"
+    ],
+    [
+     "合",
+     "合う・あう"
+    ],
+    [
+     "周",
+     "周り・まわり"
+    ],
+    [
+     "売",
+     "売る・うる"
+    ],
+    [
+     "大",
+     "大きい・おおきい"
+    ],
+    [
+     "失",
+     "失う・うしなう"
+    ],
+    [
+     "安",
+     "安い・やすい"
+    ],
+    [
+     "小",
+     "小さい・ちいさい"
+    ],
+    [
+     "少",
+     "少ない・すくない"
+    ],
+    [
+     "早",
+     "早い・はやい"
+    ],
+    [
+     "楽",
+     "楽しい・たのしい"
+    ],
+    [
+     "欠",
+     "欠ける・かける"
+    ],
+    [
+     "止",
+     "止まる・とまる"
+    ],
+    [
+     "正",
+     "正しい・ただしい"
+    ],
+    [
+     "永",
+     "永い・ながい"
+    ],
+    [
+     "生",
+     "生きる・いきる"
+    ],
+    [
+     "白",
+     "白い・しろい"
+    ],
+    [
+     "直",
+     "直す・なおす"
+    ],
+    [
+     "立",
+     "立つ・たつ"
+    ],
+    [
+     "至",
+     "至る・いたる"
+    ],
+    [
+     "良",
+     "良い・よい"
+    ],
+    [
+     "見",
+     "見る・みる"
+    ],
+    [
+     "言",
+     "言う・いう"
+    ],
+    [
+     "走",
+     "走る・はしる"
+    ],
+    [
+     "重",
+     "重い・おもい"
+    ],
+    [
+     "青",
+     "青い・あおい"
+    ],
+    [
+     "食",
+     "食べる・たべる"
+    ]
+   ]
+  },
+  {
+   "cls": "tC",
+   "name": "compounds only",
+   "note": "Real kanji you will not meet standing alone. Learn them as parts of the compounds shown.",
+   "items": [
+    [
+     "丁",
+     "丁目"
+    ],
+    [
+     "予",
+     "予定"
+    ],
+    [
+     "介",
+     "紹介"
+    ],
+    [
+     "代",
+     "時代"
+    ],
+    [
+     "免",
+     "免許"
+    ],
+    [
+     "化",
+     "文化"
+    ],
+    [
+     "又",
+     "又"
+    ],
+    [
+     "反",
+     "反対"
+    ],
+    [
+     "召",
+     "召集"
+    ],
+    [
+     "可",
+     "可能"
+    ],
+    [
+     "台",
+     "台所"
+    ],
+    [
+     "各",
+     "各国"
+    ],
+    [
+     "吉",
+     "大吉"
+    ],
+    [
+     "告",
+     "報告"
+    ],
+    [
+     "士",
+     "武士"
+    ],
+    [
+     "夕",
+     "夕方"
+    ],
+    [
+     "央",
+     "中央"
+    ],
+    [
+     "孝",
+     "孝行"
+    ],
+    [
+     "完",
+     "完成"
+    ],
+    [
+     "官",
+     "官庁"
+    ],
+    [
+     "寸",
+     "寸法"
+    ],
+    [
+     "尺",
+     "尺"
+    ],
+    [
+     "工",
+     "工場"
+    ],
+    [
+     "己",
+     "自己"
+    ],
+    [
+     "式",
+     "形式"
+    ],
+    [
+     "才",
+     "才能"
+    ],
+    [
+     "未",
+     "未来"
+    ],
+    [
+     "束",
+     "約束"
+    ],
+    [
+     "果",
+     "果物"
+    ],
+    [
+     "毎",
+     "毎日"
+    ],
+    [
+     "氏",
+     "氏名"
+    ],
+    [
+     "炎",
+     "炎"
+    ],
+    [
+     "由",
+     "理由"
+    ],
+    [
+     "申",
+     "申請"
+    ],
+    [
+     "相",
+     "相談"
+    ],
+    [
+     "義",
+     "意義"
+    ],
+    [
+     "者",
+     "医者"
+    ],
+    [
+     "自",
+     "自分"
+    ],
+    [
+     "軍",
+     "軍隊"
+    ],
+    [
+     "非",
+     "非常"
+    ]
+   ]
+  },
+  {
+   "cls": "tR",
+   "name": "radical",
+   "note": "Not kanji. Positional shapes with no reading and no independent use. Recognise them so the breakdowns make sense; never try to learn them as characters.",
+   "items": [
+    [
+     "⺮",
+     "bamboo, on top"
+    ],
+    [
+     "ナ",
+     "a hand"
+    ],
+    [
+     "メ",
+     "a crossing mark"
+    ],
+    [
+     "䒑",
+     "horns, on top"
+    ],
+    [
+     "丶",
+     "a single drop"
+    ],
+    [
+     "丷",
+     "two flecks"
+    ],
+    [
+     "丿",
+     "a slash"
+    ],
+    [
+     "乂",
+     "a cut"
+    ],
+    [
+     "乚",
+     "a hook"
+    ],
+    [
+     "亍",
+     "a step"
+    ],
+    [
+     "亠",
+     "a lid"
+    ],
+    [
+     "亻",
+     "person, on the left"
+    ],
+    [
+     "儿",
+     "legs"
+    ],
+    [
+     "关",
+     "a bolt"
+    ],
+    [
+     "冂",
+     "an open box"
+    ],
+    [
+     "冖",
+     "a cover"
+    ],
+    [
+     "冫",
+     "ice"
+    ],
+    [
+     "几",
+     "a small table"
+    ],
+    [
+     "凵",
+     "an open container"
+    ],
+    [
+     "刂",
+     "sword, on the right"
+    ],
+    [
+     "刍",
+     "a grasping hand"
+    ],
+    [
+     "匕",
+     "a person bending"
+    ],
+    [
+     "匚",
+     "a box on its side"
+    ],
+    [
+     "卩",
+     "a kneeling figure"
+    ],
+    [
+     "厂",
+     "a cliff"
+    ],
+    [
+     "厶",
+     "private, a cocoon"
+    ],
+    [
+     "囗",
+     "a full enclosure, all four sides"
+    ],
+    [
+     "夂",
+     "a dragging leg"
+    ],
+    [
+     "宀",
+     "a roof with walls, on top"
+    ],
+    [
+     "尸",
+     "a flag or a body"
+    ],
+    [
+     "巾",
+     "a hanging cloth"
+    ],
+    [
+     "幺",
+     "a short thread"
+    ],
+    [
+     "广",
+     "building, open on one side"
+    ],
+    [
+     "廴",
+     "a stretched stride"
+    ],
+    [
+     "廾",
+     "two hands below"
+    ],
+    [
+     "廿",
+     "twenty"
+    ],
+    [
+     "开",
+     "two hands lifting"
+    ],
+    [
+     "弋",
+     "a stake"
+    ],
+    [
+     "彐",
+     "a hand sweeping"
+    ],
+    [
+     "彳",
+     "a crossroads"
+    ],
+    [
+     "忄",
+     "heart, on the left"
+    ],
+    [
+     "扌",
+     "hand, on the left"
+    ],
+    [
+     "攵",
+     "a hand striking"
+    ],
+    [
+     "歹",
+     "bare bones"
+    ],
+    [
+     "殳",
+     "a weapon in hand"
+    ],
+    [
+     "气",
+     "vapour"
+    ],
+    [
+     "氵",
+     "water, on the left"
+    ],
+    [
+     "氺",
+     "water, underneath"
+    ],
+    [
+     "灬",
+     "fire, underneath"
+    ],
+    [
+     "爫",
+     "a claw reaching down"
+    ],
+    [
+     "疒",
+     "sickness, on top"
+    ],
+    [
+     "癶",
+     "two feet splayed"
+    ],
+    [
+     "礻",
+     "altar, on the left"
+    ],
+    [
+     "禾",
+     "a stalk of grain"
+    ],
+    [
+     "罒",
+     "an eye on its side, or a net"
+    ],
+    [
+     "耂",
+     "an old person"
+    ],
+    [
+     "聿",
+     "a brush in hand"
+    ],
+    [
+     "艹",
+     "grass, on top"
+    ],
+    [
+     "衤",
+     "clothing, on the left"
+    ],
+    [
+     "覀",
+     "a cover, on top"
+    ],
+    [
+     "辶",
+     "road, sweeping underneath"
+    ],
+    [
+     "釆",
+     "scattering"
+    ],
+    [
+     "阝",
+     "hill (left) or village (right)"
+    ],
+    [
+     "隹",
+     "a short-tailed bird"
+    ],
+    [
+     "頁",
+     "a head"
+    ],
+    [
+     "龰",
+     "a foot"
+    ],
+    [
+     "龶",
+     "growth"
+    ],
+    [
+     "𠆢",
+     "a roof"
+    ],
+    [
+     "𠫓",
+     "a newborn, inverted"
+    ],
+    [
+     "𭕄",
+     "hands reaching down"
+    ]
+   ]
+  },
+  {
+   "cls": "tX",
+   "name": "rare",
+   "note": "Genuine kanji, but far beyond N4. Treat them as scaffolding inside the character you are actually learning.",
+   "items": [
+    [
+     "丂",
+     ""
+    ],
+    [
+     "且",
+     ""
+    ],
+    [
+     "丙",
+     ""
+    ],
+    [
+     "乍",
+     ""
+    ],
+    [
+     "乎",
+     ""
+    ],
+    [
+     "也",
+     ""
+    ],
+    [
+     "云",
+     ""
+    ],
+    [
+     "亜",
+     ""
+    ],
+    [
+     "侖",
+     ""
+    ],
+    [
+     "僉",
+     ""
+    ],
+    [
+     "兌",
+     ""
+    ],
+    [
+     "其",
+     ""
+    ],
+    [
+     "勺",
+     ""
+    ],
+    [
+     "勿",
+     ""
+    ],
+    [
+     "卜",
+     ""
+    ],
+    [
+     "卬",
+     ""
+    ],
+    [
+     "另",
+     ""
+    ],
+    [
+     "吏",
+     ""
+    ],
+    [
+     "吾",
+     ""
+    ],
+    [
+     "咅",
+     ""
+    ],
+    [
+     "咸",
+     ""
+    ],
+    [
+     "咼",
+     ""
+    ],
+    [
+     "喬",
+     ""
+    ],
+    [
+     "圣",
+     ""
+    ],
+    [
+     "埶",
+     ""
+    ],
+    [
+     "夬",
+     ""
+    ],
+    [
+     "夭",
+     ""
+    ],
+    [
+     "奴",
+     ""
+    ],
+    [
+     "尚",
+     ""
+    ],
+    [
+     "尭",
+     ""
+    ],
+    [
+     "巷",
+     ""
+    ],
+    [
+     "巽",
+     ""
+    ],
+    [
+     "帚",
+     ""
+    ],
+    [
+     "廷",
+     ""
+    ],
+    [
+     "弗",
+     ""
+    ],
+    [
+     "录",
+     ""
+    ],
+    [
+     "彦",
+     ""
+    ],
+    [
+     "斗",
+     ""
+    ],
+    [
+     "斤",
+     ""
+    ],
+    [
+     "斦",
+     ""
+    ],
+    [
+     "旨",
+     ""
+    ],
+    [
+     "昜",
+     ""
+    ],
+    [
+     "是",
+     ""
+    ],
+    [
+     "更",
+     ""
+    ],
+    [
+     "柬",
+     ""
+    ],
+    [
+     "氐",
+     ""
+    ],
+    [
+     "犀",
+     ""
+    ],
+    [
+     "甬",
+     ""
+    ],
+    [
+     "甲",
+     ""
+    ],
+    [
+     "罙",
+     ""
+    ],
+    [
+     "肖",
+     ""
+    ],
+    [
+     "肰",
+     ""
+    ],
+    [
+     "艮",
+     ""
+    ],
+    [
+     "蚤",
+     ""
+    ],
+    [
+     "袁",
+     ""
+    ],
+    [
+     "豕",
+     ""
+    ],
+    [
+     "酉",
+     ""
+    ]
+   ]
+  }
+ ],
+ "lede": [
+  "The same stories as the shape deck, resorted by where you will actually use them: the restaurant, the bar, the pharmacy, the station, the office. Within each topic, kanji are grouped by whether their anchor word is a noun, a verb or an adjective.",
+  "Every entry carries a real word rather than an abstract keyword, and a line saying where in Japan you will actually run into it — on a menu, a departure board, a shop curtain, a clinic door."
+ ],
+ "sb_map": {
+  "t1": "t2",
+  "t2": "t1",
+  "t3": "t3",
+  "t4": "t5",
+  "t5": "t6",
+  "t6": "t4",
+  "t7": "t8",
+  "t8": "t12",
+  "t9": "t10",
+  "t10": "t7",
+  "t11": "t6",
+  "t12": "t9"
+ }
+}
