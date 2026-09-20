@@ -197,5 +197,5 @@ write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
 
 # ---------------------------------------------------------------- kana
 write("kana/kana-sounds.html", (SRC / "kana-sounds.html").read_text(encoding="utf-8"))
-write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words())))
+write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words()), KANJI_SET=KANJI_SET))
 print("Done.")

@@ -58,6 +58,10 @@ section.grp{margin:1.2rem 0 0;scroll-margin-top:150px}
 .hide-en .wc:not(.shown) .we,.hide-en .wc:not(.shown) .ex .t{background:var(--chip);color:transparent;border-radius:3px}
 .hide-kana .wc:not(.shown) .ww,.hide-kana .wc:not(.shown) .rj{background:var(--chip);color:transparent;border-radius:3px}
 .hide-en .wc,.hide-kana .wc{cursor:pointer}
+a.kl{color:inherit;text-decoration:none;cursor:pointer}
+a.kl:hover{background:var(--indigo-wash);border-radius:2px}
+@keyframes iflash{0%{box-shadow:0 0 0 3px var(--seal)}100%{box-shadow:0 0 0 3px transparent}}
+.iflash{animation:iflash 2.4s ease-out}
 .noresult{display:none;text-align:center;color:var(--muted);padding:2rem}
 .noresult.show{display:block}
 body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
@@ -85,10 +89,12 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
   <nav class="topics" id="nav"></nav>
 </div>
 <main id="main"></main>
-<footer><p>Word levels come from the open JLPT word lists (derived from tanos.co.uk); JLPT has not published official lists since 2010, so levels are a guide. Examples come from this site's phrasebook, sentence builder and situation page.</p></footer>
+<footer><p>Word levels come from the open JLPT word lists (derived from tanos.co.uk); JLPT has not published official lists since 2010, so levels are a guide. Examples come from this site's phrasebook, sentence builder and situation page. Tap a kanji in an example to open it in the kanji deck; Back returns you here.</p></footer>
 <script src="../assets/common.js"></script>
 <script>
 const D = __DATA__;
+const KSET=new Set(__KANJI_SET__);
+const linkK=html=>html.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=kw#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c)).join("");
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let state={tier:"4",romaji:"on",hide:"none"};
 try{Object.assign(state,JSON.parse(localStorage.getItem("kana-words")||"{}"));}catch(e){}
@@ -101,7 +107,7 @@ function exHtml(x){
   if(!x.ex) return "";
   const key=x.w.replace(/[～〜]/g,"");
   const j=x.ex.p.map(([k,kn])=>{ let h=/[\u4e00-\u9fff]/.test(k)?rdWord(k,kn,"ruby"):esc(k);
-    return h.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(key,`<mark>${key}</mark>`)).join(""); }).join(" ");
+    return linkK(h.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(key,`<mark>${key}</mark>`)).join("")); }).join(" ");
   return `<div class="ex"><div class="j">${j}${sayBtn(x.ex.p.map(q=>q[0]).join(""))}</div><div class="t">${esc(x.ex.en)}</div></div>`;
 }
 function render(){
@@ -113,7 +119,7 @@ function render(){
       const ws=D.words.filter(w=>w.g===id&&w.l>=t).sort((a,b)=>b.l-a.l);
       if(!ws.length) return "";
       return `<section class="grp" id="g-${id}"><div class="ghead"><h3><span class="jp">${esc(jp)}</span>${esc(en)} <small>${ws.length} words</small></h3>${blurb?`<p>${esc(blurb)}</p>`:""}${id==="point"?KOSO:""}</div>
-        <div class="cards">${ws.map(w=>`<article class="wc" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span>${sayBtn(w.w.replace(/[～〜]/g,""))}<span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${exHtml(w)}</article>`).join("")}</div></section>`;
+        <div class="cards">${ws.map(w=>`<article class="wc" data-w="${esc(w.w)}" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span>${sayBtn(w.w.replace(/[～〜]/g,""))}<span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${exHtml(w)}</article>`).join("")}</div></section>`;
     }).join("");
     if(blocks) h+=`<h2 class="part">${title}</h2>`+blocks;
   });
@@ -141,6 +147,7 @@ document.getElementById("main").addEventListener("click",e=>{ const c=e.target.c
 document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
 try{ if(localStorage.getItem("rdcol")==="off") document.body.classList.add("no-rdcol"); }catch(e){}
 render();
+initReturnLinks("kw-return",".wc","data-w","iflash");
 </script>
 </body>
 </html>
