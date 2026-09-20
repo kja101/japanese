@@ -14,9 +14,8 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `kanji/kanji-by-shape-sound-topic.html` | The 284 N5/N4 kanji by shape family, by sound (including sound-giving parts) and by topic, each with N5–N2 words by reading. |
 | `kanji/master-kanji-shapes-n5-n4.html` | Classic edition of the shapes deck: N5/N4 kanji and words only. Superseded by the N5–N2 deck. |
 | `words/phrasebook.html` | Interactive phrasebook: about 500 phrases and sentences in 14 situations, with swap-in words, grammar-block colouring and a starred personal list. |
-| `words/sentence-builder.html` | The grammar lesson behind the phrasebook: 120 sentences in colour-coded blocks. |
+| `words/sentence-builder.html` | The grammar lesson behind the phrasebook: 120 sentences in colour-coded blocks, plus every N5/N4 verb and adjective by type with its main forms and traps. |
 | `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work. |
-| `words/vocab-sheets.html` | About 390 common words across 11 topics, grouped by shared kanji. |
 | `kana/kana-sounds.html` | Kana by sign family, by sound, and same-sound words with pitch patterns. |
 
 All pages share one colour code for readings: **indigo** for on readings (from Chinese), **green** for kun readings (native Japanese), **red dotted** for special whole-word readings.
