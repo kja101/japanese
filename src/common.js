@@ -231,10 +231,18 @@ function linkKanaWords(roots,words,base,from){
   const isHira=c=>c>="\u3041"&&c<="\u309f", isKata=c=>(c>="\u30a0"&&c<="\u30ff")||c==="ー", isKan=c=>/[\u4e00-\u9fff々]/.test(c);
   const re=new RegExp(list.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|"),"g");
   const set=new Set(list);
-  const ok=(text,i,w,prevCh,nextCh)=>{
+  const ok=(text,i,w,prevCh,nextCh,before)=>{
     const kata=isKata(w[0]);
     if(kata) return !isKata(prevCh||"")&&!isKata(nextCh||"");
-    if(prevCh&&isKan(prevCh)) return false;                     // okurigana: the tail of a kanji word
+    const base=baseOf(w), conjugated=base!==w;
+    if(base==="する"&&conjugated){   // 勉強します is する on a noun; 話します is the verb 話す
+      const pre=(before||"").replace(/[\s、。]+$/,"");
+      return isKan(pre.slice(-1))&&isKan(pre.slice(-2,-1));
+    }
+    // okurigana: the tail of a kanji word
+    if(prevCh&&isKan(prevCh)) return false;
+    // a conjugated form only counts at a real boundary, so the ます of ございます isn't いる
+    if(conjugated&&prevCh&&!isKan(prevCh)&&!(JP_PART_CHARS+"てで、。 ").includes(prevCh)) return false;
     for(let k=1;k<=3&&i-k>=0;k++){ if(set.has(text.slice(i-k,i+w.length))) return false; }   // inside a longer word
     if(nextCh&&isHira(nextCh)&&!JP_PART_CHARS.includes(nextCh)&&!/^(です|でした|ます|ました|ません|ください|だ|な|に|て|で)/.test(text.slice(i+w.length))) return false;
     return true;
@@ -244,11 +252,20 @@ function linkKanaWords(roots,words,base,from){
     const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
     nodes.forEach(n=>{
       const t=n.nodeValue; let m, last=0, out=[]; re.lastIndex=0;
-      const prevText=()=>{ let p=n.previousSibling; while(p&&!p.textContent) p=p.previousSibling; return p?p.textContent.slice(-1):""; };
+      const sibText=p=>{ if(p.nodeType!==1) return p.textContent||"";
+        const c=p.cloneNode(true); c.querySelectorAll("rt").forEach(r=>r.remove()); return c.textContent||""; };
+      const prevText=(full)=>{ let out="", node=n;
+        while(node&&out.length<6){
+          let p=node.previousSibling;
+          while(p&&out.length<6){ out=sibText(p)+out; p=p.previousSibling; }
+          node=node.parentElement;
+          if(!node||node===root||node===document.body) break;
+        }
+        return full?out:out.slice(-1); };
       const nextText=()=>{ let p=n.nextSibling; while(p&&!p.textContent) p=p.nextSibling; return p?p.textContent[0]:""; };
       while((m=re.exec(t))){ const i=m.index, w=m[0];
         const prevCh=i>0?t[i-1]:prevText(), nextCh=i+w.length<t.length?t[i+w.length]:nextText();
-        if(!ok(t,i,w,prevCh,nextCh)) { re.lastIndex=i+1; continue; }
+        if(!ok(t,i,w,prevCh,nextCh,prevText(true)+t.slice(0,i))) { re.lastIndex=i+1; continue; }
         out.push(document.createTextNode(t.slice(last,i)));
         const bw=baseOf(w), kata=tagOf(w)==="k";
         const a=document.createElement("a"); a.className="kw"; a.textContent=w;

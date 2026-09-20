@@ -68,24 +68,36 @@ GODAN_RU = {"かじる", "ちぎる", "しゃべる", "かえる", "はいる", 
 HONORIFIC_I = {"いらっしゃる", "なさる", "くださる", "おっしゃる"}   # ます-stem in い: いらっしゃいます
 
 def word_forms(key, group):
-    """The everyday written forms of a kana verb or adjective, so 食べて-style endings link to the dictionary word."""
+    """The written forms of a kana verb or adjective, so conjugated words link to the dictionary word."""
     if key.endswith("する"):
         s = key[:-2]
-        return [s + x for x in ("する", "します", "しました", "しません", "して", "した", "しない", "しよう")]
+        tails = ("する", "します", "しました", "しません", "しませんでした", "しましょう", "して", "した", "しない", "しなかった",
+                 "しよう", "すれば", "させ", "される", "できる", "できます", "しづらい", "しやすい", "しにくい", "しながら", "せず")
+        return [s + x for x in tails]
     if group == "verb" and key[-1] in GODAN:
-        if key[-1] == "る" and len(key) >= 2 and key[-2] in I_ROW + E_ROW and key not in GODAN_RU:
+        if key[-1] == "る" and len(key) >= 2 and key[-2] in I_ROW + E_ROW and key not in GODAN_RU:   # る-verb
             s = key[:-1]
-            return [s + x for x in ("る", "ます", "ました", "ません", "て", "た", "ない", "なかった", "られる", "よう", "れば")]
+            tails = ("る", "ます", "ました", "ません", "ませんでした", "ましょう", "て", "た", "ない", "なかった", "なくて",
+                     "られる", "られます", "させる", "よう", "れば", "たい", "たく", "ながら", "なさい", "ず", "やすい", "にくい", "すぎ")
+            return [s + x for x in tails]
         i, a, t = GODAN[key[-1]]
         if key in HONORIFIC_I:
             i = "い"
+        e = E_ROW[I_ROW.index(i)] if i in I_ROW else ""
+        o = {"い": "お", "き": "こ", "ぎ": "ご", "し": "そ", "ち": "と", "に": "の", "び": "ぼ", "み": "も", "り": "ろ"}.get(i, "")
         s, voiced = key[:-1], key[-1] in "ぐぬぶむ"
         te, ta = ("で", "だ") if voiced else ("て", "た")
-        return [key] + [s + x for x in (i + "ます", i + "ました", i + "ません", i + "たい", t + te, t + ta,
-                                        a + "ない", a + "なかった", a + "れる", a + "せる")]
-    if group == "desc" and key.endswith("い") and len(key) >= 3:
+        tails = [key, i + "ます", i + "ました", i + "ません", i + "ませんでした", i + "ましょう", i + "たい", i + "たく",
+                 i + "ながら", i + "なさい", i + "やすい", i + "にくい", i + "すぎ", t + te, t + ta,
+                 a + "ない", a + "なかった", a + "なくて", a + "れる", a + "せる", a + "ず"]
+        if e:
+            tails += [e + "ば", e + "る", e + "ます", e + "ません"]
+        if o:
+            tails += [o + "う"]
+        return [s + x for x in tails]
+    if group == "desc" and key.endswith("い") and len(key) >= 3:        # い-adjective
         s = key[:-1]
-        return [key] + [s + x for x in ("く", "くない", "かった", "くて", "ければ")]
+        return [key] + [s + x for x in ("く", "くない", "くなかった", "かった", "くて", "ければ", "さ", "そう", "すぎ")]
     return [key]
 
 def kana_word_map():
