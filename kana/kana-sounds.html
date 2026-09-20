@@ -121,6 +121,10 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 @media (max-width:620px){.rd-legend .rdl{display:none}.rd-legend{gap:.3rem .9rem}}
 .rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
 .no-rdcol .rdv-on,.no-rdcol .rdv-kun{color:inherit}
+a.kl{color:inherit;text-decoration:none;cursor:pointer}
+a.kl:hover{background:rgba(127,127,127,.15);border-radius:2px}
+@keyframes hflash{0%{box-shadow:0 0 0 3px #B3261E}100%{box-shadow:0 0 0 3px transparent}}
+.hflash{animation:hflash 2.4s ease-out;border-radius:6px}
 </style>
 <link rel="manifest" href="../manifest.webmanifest">
 <meta name="theme-color" content="#B3261E">
@@ -296,7 +300,7 @@ function exRow(line){
   const [k,kj,en] = line.split("|");
   const plain = k.replace(/[\[\]]/g,"");
   const marked = esc(k).replace(/\[(.+?)\]/g,"<mark>$1</mark>");
-  return `<div class="ex"><div class="k">${marked}${sayBtn(plain)}${kj!==plain?`<span class="kj">${rdWord(kj,plain,"kanji")}</span>`:""}</div>
+  return `<div class="ex"><div class="k">${marked}${sayBtn(plain)}${kj!==plain?`<span class="kj">${linkK(rdWord(kj,plain,"kanji"))}</span>`:""}</div>
     <div class="m">${esc(en)}<span class="rj">${esc(romajiPhrase(plain))}</span></div></div>`;
 }
 const PARTICLE = {"は":"wa","を":"o","へ":"e"};
@@ -351,9 +355,12 @@ function pitchHtml(k,a){
   const particleHi = a===0;
   return `<span class="pitch" aria-label="pitch pattern">${m.map((x,i)=>`<span class="m${hi(i)?" hi":""}">${x}</span>`).join("")}<span class="m pt${particleHi?" hi":""}">が</span></span>`;
 }
+const KSET=new Set("一二三四五六七八九十百千万円金銀買売借貸代品物服日月曜年時今午半分毎週間去早昼朝夕夜始終計人父母子女男友名会兄弟姉妹私者主親族民口目耳手足体顔頭首心医病薬死力山川田天気雨花空火水木土海池地森林野光風春夏秋冬暑寒犬鳥上下左右中外前後東西南北方国店社院屋家館京区県建市室住所場村町都堂門台車電道駅運旅乗通転発着学校先生本語読書英漢字文紙教習勉試験研究題問答質図仕業員働工理食飲魚牛肉菜茶飯味料洋映画音楽歌写見言話聞知思考説声行来出入帰急止走歩進動近遠送休立引開起作使持集切洗待大小高安長新古多少白悪暗明強弱軽重広好太短低青赤黒色何不以意回界元合産自事真正世注度同特別便有用了丸才王玉石久公内戸毛他号央平打氷申皮皿礼竹糸虫貝交当米羽形角谷麦草化両全向州曲次血直星活点科欠由札辺付失必未末記組船雪黄支助君対局役投決馬番絵雲数具受和定実泳苦表部客相美負談要勝速配酒落葉路農鉄算鳴線横調最争仲伝共成老位初利努労命岸放昔波育拾指神秒追戦競良令庭息根流消倍島祭章商深球童陽階悲期植歯温港湯登泉亡予反返宿想感様橋福緑練億殺然熱課賞輪選願像情疑皆例卒協参周囲固季完希念折望材束残求約芸性技格能術骨寺岩晴列坂式信勇単変夫昨毒法浅軍仏築晩猫園係取守幸箱荷面喜府治浴笑辞関政留険危存専原細鼻側兵塩席敗果栄因常識非干官察底愛署警恋覚訓告種達類報祈等焼座忘胸脳許枚静禁喫煙加減順容布易財若詞歴冊宇忙団暴混乱徒得改続連困絡比機飛害余難被震械確個圧在夢倒厚妻議犯罪防論経史済委判制務査総設資権件断任責省増税解際認過寝各置費勢営示領副観値吸域状収停革職規割演律師準則備導優宅現乳呼城担額違輸燃祝届肩腕腰触層型庁差管象量境武述供販限与含況渡景抜補候構捕効慣豊満巻捜掛替居造印復筆貯刺郵針突菓河汗再接占招段胃腹痛退悩迷訪怒昇眠靴濃極途給逆巨庫児冷凍幼処清録券婦移程精絶並杯乾欧積臣略航寄板娘怖恐詰婚遊照快版貧適預延翌押更浮符越背盗編普除幾掃泥棒孫帯散粉貨陸似均富探迎採永液祖績複雑賛党卵捨込汚欲机簡閉誌窓否宝尊敬暮灰砂著蒸蔵装裏諸誤臓降純紅拝劇勤承損枝刻遅測破講紹介互彼恥湖銅払油旧姓貿将伸幅甘換療舞般頼依漁募患戻湾爆跡香兆抱齢刊傾奥緒贈逃超雇片群埋御駐柱吹鋭殿薄伺炭包衣鉱到双床掘泊荒袋珍籍刷封筒柔沈辛匹叫髪涙缶粒塔肌舟曇疲磨湿硬鈍歳涼零綿帽憎滴畳畜溶踊賢灯咲塗偶偉頂召挟枯沸濯燥瓶耕肯脂膚軒軟郊隅隻");
+// link each kanji to its card in the kanji deck (text only, never inside tags)
+const linkK=html=>html.replace(/(<[^>]+>)|([^<]+)/g,(m,tag,text)=>tag?tag:text.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=ks#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c));
 function hsetHtml(x, showTopic){
-  return `<div class="hset"><div class="hkey">${x.k}${sayBtn(x.k)}<span class="rj">${romaji(x.k)}</span>${showTopic?`<span class="htopic">${TOPICS[x.t][1]}</span>`:""}</div>
-    <div class="hwords">${x.w.map(([kj,en,p])=>`<div class="hw"><span class="kj">${rdWord(kj,x.k,"kanji")}</span><span class="me">${esc(en)}</span>${p!=null?pitchHtml(x.k,p):""}</div>`).join("")}</div>
+  return `<div class="hset" data-hk="${esc(x.k)}"><div class="hkey">${x.k}${sayBtn(x.k)}<span class="rj">${romaji(x.k)}</span>${showTopic?`<span class="htopic">${TOPICS[x.t][1]}</span>`:""}</div>
+    <div class="hwords">${x.w.map(([kj,en,p])=>`<div class="hw"><span class="kj">${linkK(rdWord(kj,x.k,"kanji"))}</span><span class="me">${esc(en)}</span>${p!=null?pitchHtml(x.k,p):""}</div>`).join("")}</div>
     ${x.n?`<p class="hnote">${esc(x.n)}</p>`:""}</div>`;
 }
 function topicView(){
@@ -396,6 +403,8 @@ render();
     try{ localStorage.setItem("rdcol",v); }catch(e){} };
   document.querySelectorAll("[data-rdcol]").forEach(b=>b.addEventListener("click",()=>set(b.dataset.rdcol)));
   set(v); })();
+
+initReturnLinks("ks-return",".hset,.ex","data-hk","hflash");
 </script>
 </body>
 </html>

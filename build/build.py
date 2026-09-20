@@ -376,7 +376,7 @@ write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KAN
 write("kanji/learn-n5-n4.html", fill("study.html", DATA=dump(study_data())))
 
 # ---------------------------------------------------------------- kana
-write("kana/kana-sounds.html", (SRC / "kana-sounds.html").read_text(encoding="utf-8"))
+write("kana/kana-sounds.html", fill("kana-sounds.html", KANJI_SET=KANJI_SET))
 write("kana/kana-words.html", fill("kana-words.html", DATA=dump(kana_words("kana-words.json")), KANJI_SET=KANJI_SET,
       TITLE="Kana words: the Japanese you write without kanji", H1="かなの言葉", STORE="kana-words", FROM="kw",
       INTRO="The words you'll write in hiragana, not kanji: greetings, question words, pointing words, the little words that link sentences, adverbs, sound words, and everyday nouns and verbs. About 425 words from N5 to N2, grouped by what you use them for, each with a real example sentence where there is one. For loanwords, see <a href=\"katakana-words.html\">katakana words</a>."))
