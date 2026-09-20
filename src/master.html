@@ -245,6 +245,14 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 
 .no-rdcol .rd-legend{display:none}
 @media (max-width:620px){.rd-legend .rdl{display:none}}
+.search{flex:1 1 240px;min-width:0;font:inherit;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;background:var(--sheet);color:var(--ink)}
+@media (max-width:700px){.search{flex-basis:100%}}
+.results{max-width:1000px;margin:.6rem auto 0;padding:0 1.25rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.results[hidden]{display:none}
+.results button{display:flex;align-items:baseline;gap:.4rem;font:inherit;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:.3rem .6rem;cursor:pointer;color:inherit}
+.results button .g{font-family:var(--jp);font-size:1.25rem}
+.results button small{color:var(--muted)}
+.results .rnone{color:var(--muted);font-size:.9rem;padding:.3rem 0}
 </style>
 </head>
 <body class="jb-page">
@@ -254,6 +262,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 </header>
 <div class="controls">
   <div class="controls-inner">
+    <input class="search" id="search" type="search" placeholder="Search kanji, meaning, reading, rōmaji or a word" aria-label="Search">
     <div class="seg" role="group" aria-label="Mode">
       <button data-mode="course" aria-pressed="true">Course</button>
       <button data-mode="cards" aria-pressed="false">Flashcards</button>
@@ -284,6 +293,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
   <p class="testhint">Test me is on: meanings are hidden. Tap a grey box to reveal it, or press Show all.</p>
   <nav class="chaps" id="nav"></nav>
 </div>
+<div id="results" class="results" hidden></div>
 <main id="main"></main>
 <script src="../assets/common.js"></script>
 <script>
@@ -583,6 +593,31 @@ function offsetTop(){ const c=document.querySelector(".controls"); return (c?c.o
 function scrollToEl(el){ const y=el.getBoundingClientRect().top+window.scrollY-offsetTop(); window.scrollTo({top:y,behavior:"auto"}); }
 function flash(el){ if(!el) return; el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
 function chapterOf(c){ return CH.findIndex(ch=>ch.kanji.includes(c)); }
+// ---------- search: kanji, meanings, readings, rōmaji and the words on the cards ----------
+let SEARCH=null;
+function buildIndex(){
+  if(SEARCH) return SEARCH;
+  SEARCH=Object.keys(K).map(k=>{
+    const x=K[k], w=(D.W||{})[k]||{};
+    const words=(w.readings||[]).flatMap(r=>(r.words||[]).map(z=>z[0]+" "+z[1]+" "+romaji(z[1])+" "+z[2])).join(" ");
+    const sp=(w.sp||[]).map(z=>(z[0]||"")+" "+(z[1]||"")+" "+(z[2]||"")).join(" ");
+    const read=[...(x.on||[]),...(x.kun||[])].join(" ");
+    return {k, s:jpSearchKey(jpSearchable(k,x.m,read,romaji(read),(x.parts||[]).map(p=>p[1]).join(" "),words,sp))};
+  });
+  return SEARCH;
+}
+function doSearch(){
+  const box=document.getElementById("search"), res=document.getElementById("results");
+  const q=jpSearchKey(box.value).trim();
+  if(!q){ res.hidden=true; res.innerHTML=""; return; }
+  const hits=buildIndex().filter(x=>x.s.includes(q));
+  hits.sort((a,b)=>(K[b.k].l-K[a.k].l)||(K[a.k].n-K[b.k].n));
+  res.hidden=false;
+  res.innerHTML=hits.length
+    ? hits.slice(0,40).map(x=>`<button type="button" data-k="${x.k}"><span class="g">${x.k}</span><small>${esc(K[x.k].m.split(",")[0])} · N${K[x.k].l}</small></button>`).join("")
+      +(hits.length>40?`<span class="rnone">${hits.length-40} more — narrow the search</span>`:"")
+    : `<span class="rnone">No kanji matches that. Try a meaning, a reading, rōmaji or a word.</span>`;
+}
 function jumpTo(c,w,from){
   if(!K[c]) return;
   if(!vis(c)){ state.tier=String(K[c].l); save(); main.dataset.course=""; }
@@ -658,6 +693,9 @@ render();
     try{ localStorage.setItem("rdcol",v); }catch(e){} };
   document.querySelectorAll("[data-rdcol]").forEach(b=>b.addEventListener("click",()=>set(b.dataset.rdcol)));
   set(v); })();
+
+document.getElementById("search").addEventListener("input",doSearch);
+document.getElementById("results").addEventListener("click",e=>{ const b=e.target.closest("[data-k]"); if(b) jumpTo(b.dataset.k,null,null); });
 </script>
 </body>
 </html>

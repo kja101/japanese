@@ -261,6 +261,10 @@ function linkKanaWords(roots,words,base,from){
 }
 (function(){ const st=document.createElement("style"); st.textContent=`a.kw{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}a.kw:hover{background:rgba(127,127,127,.15);border-radius:2px}`; document.head.appendChild(st); })();
 
+// ---------- search: one key for kana, katakana, romaji, kanji and English ----------
+const jpSearchKey=s=>rdHira(String(s||"")).toLowerCase();
+function jpSearchable(){ return Array.prototype.map.call(arguments,x=>Array.isArray(x)?x.join(" "):(x==null?"":x)).join(" "); }
+
 // ---------- grammar blocks: colour each part of a sentence by its job ----------
 // One setting for every page (the phrasebook, sentence builder, grammar and situation pages).
 const JP_NOTE=/([\u4e00-\u9fff々ヶ]+)\{([^}]+)\}/g;

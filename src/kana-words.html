@@ -83,7 +83,7 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 </header>
 <div class="controls">
   <div class="controls-inner">
-    <input class="search" id="search" type="search" placeholder="Search kana, rōmaji or English" aria-label="Search">
+    <input class="search" id="search" type="search" placeholder="Search kana, kanji, rōmaji or English" aria-label="Search">
     <div class="segs">
       <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Words</span><button data-tier="5" aria-pressed="false">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3" aria-pressed="false">N3</button><button data-tier="2" aria-pressed="false">N2</button></div>
       <div class="seg" role="group" aria-label="Grammar blocks"><button data-jb="on" aria-pressed="true">Grammar blocks</button><button data-jb="off" aria-pressed="false">Off</button></div>
@@ -99,6 +99,7 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 <script src="../assets/common.js"></script>
 <script>
 const D = __DATA__;
+const jpBlocksRomText=ex=>ex.n?ex.n.split(" ").map(t=>jpRomajiToken(jpKanaOf(t))).join(" "):"";
 const KSET=new Set(__KANJI_SET__);
 const KANA_WORDS=__KANA_WORDS__;
 const linkK=html=>html.split(/(<rt>.*?<\/rt>)/).map(part=>part.startsWith("<rt>")?part:part.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=__FROM__#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c)).join("");
@@ -129,7 +130,9 @@ function render(){
       const ws=D.words.filter(w=>w.g===id&&w.l>=t).sort((a,b)=>b.l-a.l);
       if(!ws.length) return "";
       return `<section class="grp" id="g-${id}"><div class="ghead"><h3><span class="jp">${esc(jp)}</span>${esc(en)} <small>${ws.length} words</small></h3>${blurb?`<p>${esc(blurb)}</p>`:""}${id==="point"?KOSO:""}</div>
-        <div class="cards">${ws.map(w=>`<article class="wc" id="w-${esc(w.w)}" data-w="${esc(w.w)}" data-s="${esc((w.w+" "+krRomaji(w.w.replace(/[～〜]/g,""))+" "+w.en).toLowerCase())}"><div class="wh"><span class="ww">${esc(w.w)}</span>${sayBtn(w.w.replace(/[～〜]/g,""))}<span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${w.note?`<div class="wn">${esc(w.note)}</div>`:""}${exHtml(w)}</article>`).join("")}</div></section>`;
+        <div class="cards">${ws.map(w=>`<article class="wc" id="w-${esc(w.w)}" data-w="${esc(w.w)}" data-s="${esc(jpSearchKey(jpSearchable(w.w,krRomaji(w.w.replace(/[～〜]/g,"")),w.en,w.note,
+  w.ex?(w.ex.n?jpPlainOf(w.ex.n)+" "+jpKanaOf(w.ex.n)+" "+jpBlocksRomText(w.ex):(w.ex.kj||[]).join("")+" "+(w.ex.kn||[]).join("")+" "+(w.ex.rj||[]).join(" ")):"",
+  w.ex?w.ex.en:"")))}"><div class="wh"><span class="ww">${esc(w.w)}</span>${sayBtn(w.w.replace(/[～〜]/g,""))}<span class="rj">${esc(krRomaji(w.w))}</span><span class="lvb">N${w.l}</span></div><div class="we">${esc(w.en)}</div>${w.note?`<div class="wn">${esc(w.note)}</div>`:""}${exHtml(w)}</article>`).join("")}</div></section>`;
     }).join("");
     if(blocks) h+=`<h2 class="part">${title}</h2>`+blocks;
   });
@@ -146,7 +149,7 @@ function apply(){
   ["tier","romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset[k]===state[k])));
 }
 function doSearch(){
-  const q=document.getElementById("search").value.trim().toLowerCase(); let any=false;
+  const q=jpSearchKey(document.getElementById("search").value).trim(); let any=false;
   document.querySelectorAll("section.grp").forEach(s=>{ let n=0; s.querySelectorAll(".wc").forEach(c=>{ const hit=!q||c.dataset.s.includes(q); c.style.display=hit?"":"none"; if(hit) n++; }); s.style.display=n?"":"none"; if(n) any=true; });
   document.querySelectorAll("h2.part").forEach(p=>{ let n=p.nextElementSibling, vis=false; while(n&&n.tagName==="SECTION"){ if(n.style.display!=="none") vis=true; n=n.nextElementSibling; } p.style.display=vis?"":"none"; });
   document.getElementById("noresult").classList.toggle("show",!!q&&!any);

@@ -125,6 +125,8 @@ a.kl{color:inherit;text-decoration:none;cursor:pointer}
 a.kl:hover{background:rgba(127,127,127,.15);border-radius:2px}
 @keyframes hflash{0%{box-shadow:0 0 0 3px #B3261E}100%{box-shadow:0 0 0 3px transparent}}
 .hflash{animation:hflash 2.4s ease-out;border-radius:6px}
+.search{flex:1 1 220px;min-width:0;font:inherit;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;background:var(--sheet);color:var(--ink)}
+@media (max-width:640px){.search{flex-basis:100%}}
 </style>
 <link rel="manifest" href="../manifest.webmanifest">
 <meta name="theme-color" content="#B3261E">
@@ -138,6 +140,7 @@ a.kl:hover{background:rgba(127,127,127,.15);border-radius:2px}
 </header>
 <div class="controls">
   <div class="controls-inner">
+    <input class="search" id="search" type="search" placeholder="Search kana, kanji, rōmaji or English" aria-label="Search">
     <div class="seg" role="group" aria-label="View">
       <button data-view="sign" aria-pressed="true">By primary sign</button>
       <button data-view="sound" aria-pressed="false">By sound</button>
@@ -160,10 +163,11 @@ a.kl:hover{background:rgba(127,127,127,.15);border-radius:2px}
   <nav class="topics" id="nav"></nav>
 </div>
 <main id="main"></main>
+<p id="noresult" style="display:none;text-align:center;color:var(--muted);padding:2rem">Nothing matches that. Try kana, a kanji, rōmaji or an English word.</p>
 <footer>
   <p>Romaji uses Hepburn with long vowels written out. Pitch patterns are standard Tokyo Japanese: a line above a kana means a high note, a line below means low, and the faded が shows what happens to a particle after the word. Regional accents differ.</p>
 </footer>
-<script src="../assets/common.js?v=7c8c641257"></script>
+<script src="../assets/common.js?v=00eac1bd03"></script>
 <script>
 
 
@@ -222,7 +226,7 @@ function signView(){
         y = bases.map(b=>[..."ゃゅょ"].map(sm=>chip(b+sm)).join("")).join("");
       }
       const note = PNOTE[s] || (vd && SAME[vd] ? `${vd} ${SAME[vd]}` : "");
-      return `<div class="fam${note && (SAME[vd]||"はへをん".includes(s))?" flag":""}">
+      return `<div class="fam${note && (SAME[vd]||"はへをん".includes(s))?" flag":""}" data-s="${esc(jpSearchKey(jpSearchable(s,kata(s),romaji(s),vd,hf,note)))}">
         <div class="prime"><span class="hg">${s}</span><span class="kt">${kata(s)}</span><span class="rj">${romaji(s)}</span>${sayBtn(s)}</div>
         ${d?`<div class="dlabel">${hf?"Voiced, then p-sound":"Voiced"}</div><div class="derived">${d}</div>`:""}
         ${y?`<div class="dlabel">With small ゃ ゅ ょ</div><div class="derived">${y}</div>`:""}
@@ -300,7 +304,7 @@ function exRow(line){
   const [k,kj,en] = line.split("|");
   const plain = k.replace(/[\[\]]/g,"");
   const marked = esc(k).replace(/\[(.+?)\]/g,"<mark>$1</mark>");
-  return `<div class="ex"><div class="k">${marked}${sayBtn(plain)}${kj!==plain?`<span class="kj">${linkK(rdWord(kj,plain,"kanji"))}</span>`:""}</div>
+  return `<div class="ex" data-s="${esc(jpSearchKey(jpSearchable(plain,kj,en,romajiPhrase(plain))))}"><div class="k">${marked}${sayBtn(plain)}${kj!==plain?`<span class="kj">${linkK(rdWord(kj,plain,"kanji"))}</span>`:""}</div>
     <div class="m">${esc(en)}<span class="rj">${esc(romajiPhrase(plain))}</span></div></div>`;
 }
 const PARTICLE = {"は":"wa","を":"o","へ":"e"};
@@ -310,7 +314,7 @@ function romajiPhrase(p){
 }
 function soundView(){
   let h = `<section class="sheet" id="same-signs"><h2><span class="jp">同じ音</span><span class="en">Signs and spellings that sound the same</span></h2>`;
-  h += SOUNDS.map(g=>`<div class="sgroup">
+  h += SOUNDS.map(g=>`<div class="sgroup" data-s="${esc(jpSearchKey(jpSearchable(g.s,g.signs.map(x=>x[0]).join(""),g.why,g.ex)))}">
     <div><div class="sound">${esc(g.s)}</div><div class="signs">${g.signs.map(([c,l])=>`<span class="sign${l==="rare"?" rare":""}">${c}${l?`<small>${l}</small>`:""}</span>`).join("")}</div></div>
     <div><p class="why">${esc(g.why)}</p>${g.ex.trim().split("\n").map(exRow).join("")}</div>
   </div>`).join("") + `</section>`;
@@ -359,7 +363,7 @@ const KSET=new Set("一二三四五六七八九十百千万円金銀買売借貸
 // link each kanji to its card in the kanji deck (text only, never inside tags)
 const linkK=html=>html.replace(/(<[^>]+>)|([^<]+)/g,(m,tag,text)=>tag?tag:text.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=ks#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c));
 function hsetHtml(x, showTopic){
-  return `<div class="hset" data-hk="${esc(x.k)}"><div class="hkey">${x.k}${sayBtn(x.k)}<span class="rj">${romaji(x.k)}</span>${showTopic?`<span class="htopic">${TOPICS[x.t][1]}</span>`:""}</div>
+  return `<div class="hset" data-hk="${esc(x.k)}" data-s="${esc(jpSearchKey(jpSearchable(x.k,kata(x.k),romaji(x.k),x.w.map(w=>w[0]+" "+w[1]).join(" "),x.n)))}"><div class="hkey">${x.k}${sayBtn(x.k)}<span class="rj">${romaji(x.k)}</span>${showTopic?`<span class="htopic">${TOPICS[x.t][1]}</span>`:""}</div>
     <div class="hwords">${x.w.map(([kj,en,p])=>`<div class="hw"><span class="kj">${linkK(rdWord(kj,x.k,"kanji"))}</span><span class="me">${esc(en)}</span>${p!=null?pitchHtml(x.k,p):""}</div>`).join("")}</div>
     ${x.n?`<p class="hnote">${esc(x.n)}</p>`:""}</div>`;
 }
@@ -375,6 +379,27 @@ let state = {view:"sign", romaji:"on", kata:"on"};
 try{ const s = JSON.parse(localStorage.getItem("kana-sounds")||"null"); if(s) Object.assign(state,s); }catch(e){}
 const save = () => { try{ localStorage.setItem("kana-sounds", JSON.stringify(state)); }catch(e){} };
 const main = document.getElementById("main"), nav = document.getElementById("nav");
+function filterBy(q){
+  document.querySelectorAll("[data-s]").forEach(el=>{ el.style.display=!q||el.dataset.s.includes(q)?"":"none"; });
+  let any=false;
+  document.querySelectorAll("section.sheet").forEach(sec=>{
+    const hit=!q||[...sec.querySelectorAll("[data-s]")].some(x=>x.style.display!=="none");
+    sec.style.display=hit?"":"none"; if(hit) any=true; });
+  return any;
+}
+function doSearch(){
+  const q=jpSearchKey((document.getElementById("search")||{}).value||"").trim();
+  let any=filterBy(q);
+  if(q&&!any){                       // look in the other views: words live in "By sound" and "By topic"
+    for(const v of ["sound","topic","sign"]){
+      if(v===state.view) continue;
+      state.view=v; save(); render(); any=filterBy(q);
+      if(any) break;
+    }
+  }
+  const none=document.getElementById("noresult");
+  if(none) none.style.display=q&&!any?"block":"none";
+}
 function render(){
   if(state.view==="sign"){
     main.innerHTML = signView();
@@ -405,6 +430,8 @@ render();
   set(v); })();
 
 initReturnLinks("ks-return",".hset,.ex","data-hk","hflash");
+
+document.getElementById("search").addEventListener("input",doSearch);
 </script>
 </body>
 </html>
