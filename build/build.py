@@ -7,6 +7,7 @@ Reads:  src/*.html, src/common.js, data/*.json
 Writes: assets/common.js and the pages in kanji/, words/ and kana/.
 Standard library only. Run it from anywhere; paths are relative to the repo.
 """
+import hashlib
 import json, re, html as H
 from pathlib import Path
 
@@ -32,12 +33,13 @@ HEAD_EXTRA = ('<link rel="manifest" href="{r}manifest.webmanifest">\n<meta name=
               '<link rel="apple-touch-icon" href="{r}assets/icons/icon-180.png">\n<meta name="apple-mobile-web-app-capable" content="yes">\n')
 WRITTEN = []
 
+INDEX_VERSION = ""
 COMMON_VERSION = ""   # set once assets/common.js is written; pages load common.js?v=<version> so a page and its script always match
 
 def write(rel, text):
     if rel.endswith(".html") and 'id="search"' in text and "search-index.js" not in text:
         depth = "../" * rel.count("/")
-        text = text.replace('<script src="' + depth + 'assets/common.js', '<script src="' + depth + 'assets/search-index.js"></script>\n<script src="' + depth + 'assets/common.js', 1)
+        text = text.replace('<script src="' + depth + 'assets/common.js', '<script src="' + depth + 'assets/search-index.js?v=' + INDEX_VERSION + '"></script>\n<script src="' + depth + 'assets/common.js', 1)
     if rel.endswith(".html") and COMMON_VERSION:
         text = text.replace('assets/common.js"', 'assets/common.js?v=' + COMMON_VERSION + '"')
     if rel.endswith(".html") and 'rel="manifest"' not in text:
@@ -486,7 +488,9 @@ _verbs.append(["お願いする", "おねがいする", "vs"])
 _tailwords = [v["w"] for v in _voc if not v.get("c") and re.search(r"[\u4e00-\u9fff]", v["w"]) and re.search(r"[\u3041-\u309f]$", v["w"]) and not v["w"].startswith(("～", "〜"))]
 _common = (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings)).replace("__VERBS__", dump(_verbs)).replace("__TAILWORDS__", dump(_tailwords))
 write("assets/common.js", _common)
-write("assets/search-index.js", "// Where every word, kanji and pattern lives, for the cross-page search hints.\nconst JP_SEARCH_INDEX=" + dump(search_index()) + ";\n")
+_index = "// Where every word, kanji and pattern lives, for the cross-page search hints.\nconst JP_SEARCH_INDEX=" + dump(search_index()) + ";\n"
+write("assets/search-index.js", _index)
+INDEX_VERSION = hashlib.sha1(_index.encode("utf-8")).hexdigest()[:10]
 import hashlib as _h
 COMMON_VERSION = _h.sha1(_common.encode("utf-8")).hexdigest()[:10]
 
@@ -591,7 +595,7 @@ files = ["index.html", "manifest.webmanifest", "assets/icons/icon-192.png", "ass
 digest = hashlib.sha1()
 for f in files:
     digest.update((ROOT / f).read_bytes())
-sw = (SRC / "sw.js").read_text(encoding="utf-8").replace("__VERSION__", digest.hexdigest()[:10]).replace("__FILES__", dump(["./"] + ["./" + f for f in files]))
+sw = (SRC / "sw.js").read_text(encoding="utf-8").replace("__VERSION__", digest.hexdigest()[:10]).replace("__FILES__", dump(["./"] + ["./" + f for f in files] + ["./assets/common.js?v=" + COMMON_VERSION, "./assets/search-index.js?v=" + INDEX_VERSION]))
 (ROOT / "sw.js").write_text(sw, encoding="utf-8")
 print("  sw.js")
 print("Done.")
