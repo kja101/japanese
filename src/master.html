@@ -472,7 +472,11 @@ function soundIndex(){
    ${kg.map(([r,v])=>`<div class="ixrow"><div class="ixr rdv-kun">${r}<span class="rj">${romaji(r)}</span></div><div class="itiles">${tiles(v)}</div></div>`).join("")}</section>`;
 }
 function chapterBody(i){ const ch=CH[i]; return `${chapterHead(ch,i)}${soundMap(ch)}${ch.master?introCard(ch):""}${ch.kanji.filter(vis).map(k=>kanjiCard(K[k])).join("")}`; }
-function fillChapter(i){ const s=document.getElementById("ch-"+i); if(!s||s.dataset.filled) return; s.innerHTML=chapterBody(i); s.dataset.filled="1"; s.style.minHeight=""; }
+function fillChapter(i){ const s=document.getElementById("ch-"+i); if(!s||s.dataset.filled) return;
+  const r0=s.getBoundingClientRect(), above=r0.bottom<=1;          // entirely above what's on screen
+  s.innerHTML=chapterBody(i); s.dataset.filled="1"; s.style.minHeight="";
+  if(above){ const d=s.getBoundingClientRect().height-r0.height; if(d) window.scrollBy(0,d); }   // keep the view where it was
+}
 let io=null;
 function courseView(){
   return CH.map((ch,i)=>{ const n=ch.kanji.filter(vis).length; return n?`<section class="chapter" id="ch-${i}" style="min-height:${n*460+200}px">${chapterHead(ch,i)}</section>`:""; }).join("")+
@@ -601,6 +605,10 @@ document.querySelectorAll("[data-test]").forEach(b=>b.onclick=()=>{state.test=b.
 const jumpStack=[];
 const backBtn=document.createElement("button"); backBtn.className="btn backbtn"; backBtn.hidden=true; document.body.appendChild(backBtn);
 function offsetTop(){ const c=document.querySelector(".controls"); return (c?c.offsetHeight:0)+12; }
+let settleTimers=[];
+function cancelSettle(){ settleTimers.forEach(clearTimeout); settleTimers=[]; }
+["touchstart","wheel","keydown","mousedown"].forEach(ev=>window.addEventListener(ev,cancelSettle,{passive:true}));
+function settleTo(el){ cancelSettle(); settleTimers=[120,350,700].map(t=>setTimeout(()=>scrollToEl(el),t)); }
 function scrollToEl(el){ const y=el.getBoundingClientRect().top+window.scrollY-offsetTop(); window.scrollTo({top:y,behavior:"auto"}); }
 function flash(el){ if(!el) return; el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
 function chapterOf(c){ return CH.findIndex(ch=>ch.kanji.includes(c)); }
@@ -660,7 +668,7 @@ function jumpTo(c,w,from){
   if(li){ const d=li.closest("details"); if(d) d.open=true; }
   const tgt=li?(li.closest(".rblk,.spb")||li):card;
   scrollToEl(tgt); flash(li||card.querySelector(".khead"));
-  [120,350,700].forEach(t=>setTimeout(()=>scrollToEl(tgt),t));
+  settleTo(tgt);
   const prev=jumpStack[jumpStack.length-1];
   backBtn.textContent=from?`← Back to ${from}`:"← Back"; backBtn.hidden=false;
 }

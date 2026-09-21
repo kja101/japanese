@@ -2,9 +2,9 @@
 // Cache first: every page and script is saved on the device when this version installs, and served
 // from there instantly, online or off. A new version of the site arrives as a new worker, which saves
 // the new files together and then takes over, so a page and its scripts always match.
-const VERSION = "1edb016cd6";
+const VERSION = "1955096202";
 const CACHE = "japanese-" + VERSION;
-const FILES = ["./","./index.html","./manifest.webmanifest","./assets/icons/icon-192.png","./assets/icons/icon-512.png","./assets/icons/icon-180.png","./assets/common.js","./assets/search-index.js","./kanji/master-kanji-shapes.html","./kanji/kanji-by-situation.html","./words/phrasebook.html","./words/sentence-builder.html","./kanji/learn.html","./kanji/learn-n5-n4.html","./words/vocabulary.html","./kana/kana-sounds.html","./kana/kana-words.html","./kana/katakana-words.html","./words/grammar.html","./assets/common.js?v=a40cdf911d","./assets/search-index.js?v=5f94a769e2"];
+const FILES = ["./","./index.html","./manifest.webmanifest","./assets/icons/icon-192.png","./assets/icons/icon-512.png","./assets/icons/icon-180.png","./assets/common.js","./assets/search-index.js","./kanji/master-kanji-shapes.html","./kanji/kanji-by-situation.html","./words/phrasebook.html","./words/sentence-builder.html","./kanji/learn.html","./kanji/learn-n5-n4.html","./words/vocabulary.html","./kana/kana-sounds.html","./kana/kana-words.html","./kana/katakana-words.html","./words/grammar.html","./assets/common.js?v=26824f87aa","./assets/search-index.js?v=5f94a769e2"];
 self.addEventListener("install", e => {
   // one by one, so one failure can't stop the rest from being saved
   e.waitUntil(caches.open(CACHE).then(c => Promise.all(FILES.map(f => c.add(new Request(f, { cache: "reload" })).catch(() => null)))).then(() => self.skipWaiting()));
@@ -29,6 +29,19 @@ self.addEventListener("fetch", e => {
   const url = new URL(req.url);
   const font = /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname);
   if (url.origin !== location.origin && !font) return;
+  if (font) {   // saved fonts come straight back; an unsaved one gets 1.5 seconds, never a long offline wait
+    e.respondWith((async () => {
+      const c = await caches.open(CACHE);
+      const hit = await c.match(req);
+      if (hit) return hit;
+      try {
+        const res = await Promise.race([fetch(req), new Promise((_, no) => setTimeout(() => no(new Error("slow")), 1500))]);
+        if (res && (res.ok || res.type === "opaque")) c.put(req, res.clone());
+        return res;
+      } catch (err) { return new Response("", { status: 504 }); }
+    })());
+    return;
+  }
   e.respondWith((async () => {
     const c = await caches.open(CACHE);
     const hit = await lookup(c, req, url);

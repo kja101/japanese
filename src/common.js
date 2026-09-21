@@ -457,8 +457,7 @@ function linkEndings(roots,root,from){
     });
   });
 }
-(function(){ const st=document.createElement("style"); st.textContent=`.kc,.wc,.sent,.gc,.vgrp .cards>article{content-visibility:auto;contain-intrinsic-size:auto 320px}
-a.vf,a.gl{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}   /* dotted = tappable kana, like a.kw */
+(function(){ const st=document.createElement("style"); st.textContent=`a.vf,a.gl{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer}   /* dotted = tappable kana, like a.kw */
 a.vf:hover,a.vf:focus-visible,a.vf:active,a.gl:hover,a.gl:focus-visible,a.gl:active{background:rgba(127,127,127,.18)}`; document.head.appendChild(st); })();
 
 // ---------- grammar blocks: colour each part of a sentence by its job ----------

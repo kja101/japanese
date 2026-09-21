@@ -29,6 +29,19 @@ self.addEventListener("fetch", e => {
   const url = new URL(req.url);
   const font = /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname);
   if (url.origin !== location.origin && !font) return;
+  if (font) {   // saved fonts come straight back; an unsaved one gets 1.5 seconds, never a long offline wait
+    e.respondWith((async () => {
+      const c = await caches.open(CACHE);
+      const hit = await c.match(req);
+      if (hit) return hit;
+      try {
+        const res = await Promise.race([fetch(req), new Promise((_, no) => setTimeout(() => no(new Error("slow")), 1500))]);
+        if (res && (res.ok || res.type === "opaque")) c.put(req, res.clone());
+        return res;
+      } catch (err) { return new Response("", { status: 504 }); }
+    })());
+    return;
+  }
   e.respondWith((async () => {
     const c = await caches.open(CACHE);
     const hit = await lookup(c, req, url);

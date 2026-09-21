@@ -40,6 +40,10 @@ def write(rel, text):
     if rel.endswith(".html") and 'id="search"' in text and "search-index.js" not in text:
         depth = "../" * rel.count("/")
         text = text.replace('<script src="' + depth + 'assets/common.js', '<script src="' + depth + 'assets/search-index.js?v=' + INDEX_VERSION + '"></script>\n<script src="' + depth + 'assets/common.js', 1)
+    if rel.endswith(".html"):
+        # the web font must never hold the page up (offline it can't load): load its stylesheet without blocking
+        text = re.sub(r'<link href="(https://fonts\.googleapis\.com/css2\?[^"]+)" rel="stylesheet">',
+                      lambda m: '<link href="' + m.group(1) + '" rel="stylesheet" media="print" onload="this.media=' + "'all'" + '">', text)
     if rel.endswith(".html") and COMMON_VERSION:
         text = text.replace('assets/common.js"', 'assets/common.js?v=' + COMMON_VERSION + '"')
     if rel.endswith(".html") and 'rel="manifest"' not in text:
