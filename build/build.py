@@ -76,7 +76,8 @@ def word_forms(key, group):
     if key.endswith("する"):
         s = key[:-2]
         tails = ("する", "します", "しました", "しません", "しませんでした", "しましょう", "して", "した", "しない", "しなかった",
-                 "しよう", "すれば", "させ", "される", "できる", "できます", "しづらい", "しやすい", "しにくい", "しながら", "せず")
+                 "しよう", "すれば", "させ", "される", "できる", "できます", "しづらい", "しやすい", "しにくい", "しながら", "せず",
+                 "されます", "されました", "されて", "された", "させて", "させます", "させました", "させる")
         return [s + x for x in tails]
     if group == "verb" and key[-1] in GODAN:
         if key[-1] == "る" and len(key) >= 2 and key[-2] in I_ROW + E_ROW and key not in GODAN_RU:   # る-verb
@@ -121,6 +122,10 @@ def kana_word_map():
             for form in word_forms(key, w.get("g", "")):
                 if len(form) >= 2:
                     out.setdefault(form, [tag, key])
+    for form, base in (("かもしれません", "かもしれない"), ("いけません", "いけない"), ("いけない", "いけない"),
+                       ("ございません", "ございます"), ("ありがとうございます", "ありがとう")):
+        if base in out:
+            out.setdefault(form, out[base])
     return dump(out)
 KANA_WORDS = kana_word_map()
 
@@ -475,8 +480,11 @@ def krRomaji(kana):
             out.append(BASE.get(ch, ""))
     return "".join(out)
 
-_verbs = [[v["w"], v["r"], v["c"]] for v in vocabulary() if v.get("c")]
-_common = (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings)).replace("__VERBS__", dump(_verbs))
+_voc = vocabulary()
+_verbs = [[v["w"], v["r"], v["c"]] for v in _voc if v.get("c")]
+_verbs.append(["お願いする", "おねがいする", "vs"])
+_tailwords = [v["w"] for v in _voc if not v.get("c") and re.search(r"[\u4e00-\u9fff]", v["w"]) and re.search(r"[\u3041-\u309f]$", v["w"]) and not v["w"].startswith(("～", "〜"))]
+_common = (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings)).replace("__VERBS__", dump(_verbs)).replace("__TAILWORDS__", dump(_tailwords))
 write("assets/common.js", _common)
 write("assets/search-index.js", "// Where every word, kanji and pattern lives, for the cross-page search hints.\nconst JP_SEARCH_INDEX=" + dump(search_index()) + ";\n")
 import hashlib as _h

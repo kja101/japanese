@@ -242,9 +242,11 @@ function linkKanaWordsOnly(roots,words,base,from){
     const kata=isKata(w[0]);
     if(kata) return !isKata(prevCh||"")&&!isKata(nextCh||"");
     const base=baseOf(w), conjugated=base!==w;
-    if(base==="する"&&conjugated){   // 勉強します is する on a noun; 話します is the verb 話す
-      const pre=(before||"").replace(/[\s、。]+$/,"");
-      return isKan(pre.slice(-1))&&isKan(pre.slice(-2,-1));
+    if(base==="する"&&conjugated){   // 勉強します, 弱くします, コピーして, をして are する; 話します is the verb 話す
+      const pre=(before||"").replace(/[\s、。]+$/,""), p1=pre.slice(-1);
+      if(!pre) return true;
+      if(isKan(p1)) return isKan(pre.slice(-2,-1));
+      return JP_PART_CHARS.includes(p1)||p1==="く"||isKata(p1);
     }
     // okurigana: the tail of a kanji word
     if(prevCh&&isKan(prevCh)) return false;
@@ -315,6 +317,7 @@ function jpElsewhere(query,exclude,root,from){
 // ---------- verb and adjective forms ----------
 // [word, reading, class]: v1 る-verb, v5 う-verb, v5i 行く, vs する, vk 来る, ai い-adjective, aii いい, an な-adjective
 const JP_VERBS=__VERBS__;
+const JP_TAILWORDS=__TAILWORDS__;   // kanji words with a kana tail: 赤ちゃん, 少し
 const JP_GODAN={"う":["い","わ","っ","え","お"],"く":["き","か","い","け","こ"],"ぐ":["ぎ","が","い","げ","ご"],"す":["し","さ","し","せ","そ"],
   "つ":["ち","た","っ","て","と"],"ぬ":["に","な","ん","ね","の"],"ぶ":["び","ば","ん","べ","ぼ"],"む":["み","ま","ん","め","も"],"る":["り","ら","っ","れ","ろ"]};
 // an る-verb stem conjugated: used for る-verbs and for the can/passive/make forms of every verb
@@ -393,9 +396,12 @@ function jpForms(){
   // a verb's own forms win over another verb's can/passive/make forms: 抜けて is 抜ける before it is "can pull out"
   const derived=l=>/^(can|passive|make\/let)/.test(l);
   [false,true].forEach(pass=>JP_VERBS.forEach(([w,r,cls])=>{
-    if(cls==="an"||!/[\u4e00-\u9fff]/.test(w)) return;
+    if(!/[\u4e00-\u9fff]/.test(w)) return;
     jpConjugate(w,r,cls).forEach(([label,fw])=>{ if(derived(label)===pass&&!JP_FORMS.has(fw)) JP_FORMS.set(fw,[w,label]); });
   }));
+  // お願いします: the お prefix sits before the kanji, so register the forms without it too
+  [...JP_FORMS.entries()].forEach(([f,v])=>{ if(f.startsWith("お")&&/[\u4e00-\u9fff]/.test(f[1])&&!JP_FORMS.has(f.slice(1))) JP_FORMS.set(f.slice(1),v); });
+  (typeof JP_TAILWORDS!=="undefined"?JP_TAILWORDS:[]).forEach(w=>{ if(!JP_FORMS.has(w)) JP_FORMS.set(w,[w,"word"]); });
   return JP_FORMS;
 }
 // the kana ending of a conjugated kanji word links to its forms table in the word list
@@ -432,7 +438,7 @@ function linkVerbEndings(roots,root,from){
   });
 }
 // です and ます endings left over link to their grammar pattern
-const JP_ENDINGS=[["ませんでした","masu"],["ましょう","masu"],["ました","masu"],["ません","masu"],["ます","masu"],["でした","desu"],["です","desu"],["じゃないです","desu"]];
+const JP_ENDINGS=[["ので","node"],["ませんでした","masu"],["ましょう","masu"],["ました","masu"],["ません","masu"],["ます","masu"],["でした","desu"],["です","desu"],["じゃないです","desu"]];
 function linkEndings(roots,root,from){
   const re=new RegExp(JP_ENDINGS.map(x=>x[0]).join("|"),"g"), map=Object.fromEntries(JP_ENDINGS);
   roots.forEach(el=>{

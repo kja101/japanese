@@ -2737,6 +2737,204 @@
    "en": "want (a thing)",
    "l": 5,
    "g": "desc"
+  },
+  {
+   "w": "ゆっくり",
+   "en": "slowly; take your time",
+   "l": 5,
+   "g": "manner"
+  },
+  {
+   "w": "びっくり",
+   "en": "surprised, startled",
+   "l": 4,
+   "g": "sound"
+  },
+  {
+   "w": "おいしい",
+   "en": "delicious (美味しい)",
+   "l": 5,
+   "g": "desc"
+  },
+  {
+   "w": "きれい",
+   "en": "pretty, clean (綺麗)",
+   "l": 5,
+   "g": "desc"
+  },
+  {
+   "w": "すばらしい",
+   "en": "wonderful (素晴らしい)",
+   "l": 3,
+   "g": "desc"
+  },
+  {
+   "w": "りんご",
+   "en": "apple",
+   "l": 5,
+   "g": "n-food"
+  },
+  {
+   "w": "みかん",
+   "en": "mandarin orange",
+   "l": 4,
+   "g": "n-food"
+  },
+  {
+   "w": "すし",
+   "en": "sushi",
+   "l": 5,
+   "g": "n-food"
+  },
+  {
+   "w": "ねぎ",
+   "en": "spring onion",
+   "l": 3,
+   "g": "n-food"
+  },
+  {
+   "w": "きのこ",
+   "en": "mushroom",
+   "l": 3,
+   "g": "n-food"
+  },
+  {
+   "w": "じゃがいも",
+   "en": "potato",
+   "l": 3,
+   "g": "n-food"
+  },
+  {
+   "w": "よろしく",
+   "en": "please (treat me well); regards",
+   "l": 5,
+   "g": "greet"
+  },
+  {
+   "w": "ございます",
+   "en": "to be (very polite): ありがとうございます",
+   "l": 5,
+   "g": "greet"
+  },
+  {
+   "w": "あいさつ",
+   "en": "greeting (挨拶)",
+   "l": 4,
+   "g": "n-other"
+  },
+  {
+   "w": "おすすめ",
+   "en": "recommendation",
+   "l": 3,
+   "g": "n-other"
+  },
+  {
+   "w": "えさ",
+   "en": "animal feed, bait",
+   "l": 2,
+   "g": "n-other"
+  },
+  {
+   "w": "こと",
+   "en": "thing, matter (abstract)",
+   "l": 5,
+   "g": "n-other"
+  },
+  {
+   "w": "とき",
+   "en": "time, when",
+   "l": 5,
+   "g": "n-other"
+  },
+  {
+   "w": "ところ",
+   "en": "place; just when",
+   "l": 5,
+   "g": "n-other"
+  },
+  {
+   "w": "ため",
+   "en": "for the sake of; because of",
+   "l": 4,
+   "g": "n-other"
+  },
+  {
+   "w": "まま",
+   "en": "as it is, unchanged",
+   "l": 3,
+   "g": "n-other"
+  },
+  {
+   "w": "おなか",
+   "en": "stomach, belly",
+   "l": 5,
+   "g": "n-body"
+  },
+  {
+   "w": "どのくらい",
+   "en": "how much, how long",
+   "l": 4,
+   "g": "question"
+  },
+  {
+   "w": "あまり",
+   "en": "not very (with a negative); too much",
+   "l": 5,
+   "g": "degree"
+  },
+  {
+   "w": "だけ",
+   "en": "only, just",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "くらい",
+   "en": "about, roughly",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "ずつ",
+   "en": "each, at a time",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "しか",
+   "en": "only (with a negative)",
+   "l": 4,
+   "g": "degree"
+  },
+  {
+   "w": "たとえば",
+   "en": "for example (例えば)",
+   "l": 4,
+   "g": "link"
+  },
+  {
+   "w": "より",
+   "en": "than",
+   "l": 4,
+   "g": "link"
+  },
+  {
+   "w": "でしょう",
+   "en": "probably; right?",
+   "l": 5,
+   "g": "expr"
+  },
+  {
+   "w": "なさい",
+   "en": "do (a firm command)",
+   "l": 4,
+   "g": "expr"
+  },
+  {
+   "w": "しまう",
+   "en": "to finish; to end up doing (～てしまう)",
+   "l": 4,
+   "g": "verb"
   }
  ],
  "parts": [
