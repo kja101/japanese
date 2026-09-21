@@ -8875,5 +8875,740 @@
     "That's a good opportunity"
    ]
   ]
+ },
+ {
+  "id": "love0",
+  "topic": "love",
+  "n": "彼女{かのじょ} は とても すてき な 人{ひと} です",
+  "en": "She's a really lovely person",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "彼女は"
+   ],
+   [
+    "V",
+    "とてもすてきな人です"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "She"
+   ],
+   [
+    "V",
+    "'s a really lovely person"
+   ]
+  ]
+ },
+ {
+  "id": "love1",
+  "topic": "love",
+  "n": "彼{かれ} は いつも 優{やさ}しい です",
+  "en": "He's always kind",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "彼は"
+   ],
+   [
+    "H",
+    "いつも"
+   ],
+   [
+    "V",
+    "優しいです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "He"
+   ],
+   [
+    "V",
+    "'s"
+   ],
+   [
+    "H",
+    "always"
+   ],
+   [
+    "V",
+    "kind"
+   ]
+  ]
+ },
+ {
+  "id": "love2",
+  "topic": "love",
+  "n": "昨日{きのう} カフェ で デート を しました",
+  "en": "We went on a date at a café yesterday",
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "昨日"
+   ],
+   [
+    "P",
+    "カフェで"
+   ],
+   [
+    "O",
+    "デートを"
+   ],
+   [
+    "V",
+    "しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We went on"
+   ],
+   [
+    "O",
+    "a date"
+   ],
+   [
+    "P",
+    "at a café"
+   ],
+   [
+    "T",
+    "yesterday"
+   ]
+  ]
+ },
+ {
+  "id": "love3",
+  "topic": "love",
+  "n": "好{す}き な タイプ は 何{なん} ですか",
+  "en": "What's your type?",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "好きなタイプは"
+   ],
+   [
+    "V",
+    "何ですか"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "What's"
+   ],
+   [
+    "O",
+    "your type"
+   ]
+  ]
+ },
+ {
+  "id": "love4",
+  "topic": "love",
+  "n": "私{わたし} は 面白{おもしろ}い 人{ひと} が 好{す}き です",
+  "en": "I like people who are funny",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "私は"
+   ],
+   [
+    "O",
+    "面白い人が"
+   ],
+   [
+    "V",
+    "好きです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "I"
+   ],
+   [
+    "V",
+    "like"
+   ],
+   [
+    "O",
+    "people who are funny"
+   ]
+  ]
+ },
+ {
+  "id": "love5",
+  "topic": "love",
+  "n": "彼氏{かれし} は いますか",
+  "en": "Do you have a boyfriend?",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "彼氏は"
+   ],
+   [
+    "V",
+    "いますか"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Do you have"
+   ],
+   [
+    "O",
+    "a boyfriend"
+   ]
+  ]
+ },
+ {
+  "id": "love6",
+  "topic": "love",
+  "n": "彼女{かのじょ} は いますか",
+  "en": "Do you have a girlfriend?",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "彼女は"
+   ],
+   [
+    "V",
+    "いますか"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Do you have"
+   ],
+   [
+    "O",
+    "a girlfriend"
+   ]
+  ]
+ },
+ {
+  "id": "love7",
+  "topic": "love",
+  "n": "初{はじ}めて 会{あ}った とき、 どきどき しました",
+  "en": "My heart was pounding when we first met",
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "初めて会ったとき、"
+   ],
+   [
+    "V",
+    "どきどきしました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "My heart was pounding"
+   ],
+   [
+    "H",
+    "when we first met"
+   ]
+  ]
+ },
+ {
+  "id": "love8",
+  "topic": "love",
+  "n": "デート の 前{まえ} は 緊張{きんちょう} します",
+  "en": "I get nervous before a date",
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "デートの前は"
+   ],
+   [
+    "V",
+    "緊張します"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I get nervous"
+   ],
+   [
+    "T",
+    "before a date"
+   ]
+  ]
+ },
+ {
+  "id": "love9",
+  "topic": "love",
+  "n": "デート に 誘{さそ}われました",
+  "en": "I was asked out on a date",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "デートに"
+   ],
+   [
+    "V",
+    "誘われました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I was asked out"
+   ],
+   [
+    "O",
+    "on a date"
+   ]
+  ]
+ },
+ {
+  "id": "love10",
+  "topic": "love",
+  "n": "友達{ともだち} の 紹介{しょうかい} で 知{し}り合{あ}いました",
+  "en": "We met through a friend",
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "友達の紹介で"
+   ],
+   [
+    "V",
+    "知り合いました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We met"
+   ],
+   [
+    "H",
+    "through a friend"
+   ]
+  ]
+ },
+ {
+  "id": "love11",
+  "topic": "love",
+  "n": "三年{さんねん} 付{つ}き合{あ}って います",
+  "en": "We've been together for three years",
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "三年"
+   ],
+   [
+    "V",
+    "付き合っています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We've been together"
+   ],
+   [
+    "T",
+    "for three years"
+   ]
+  ]
+ },
+ {
+  "id": "love12",
+  "topic": "love",
+  "n": "来年{らいねん} 結婚{けっこん} する 予定{よてい} です",
+  "en": "We're planning to get married next year",
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "来年"
+   ],
+   [
+    "V",
+    "結婚する予定です"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We're planning to get married"
+   ],
+   [
+    "T",
+    "next year"
+   ]
+  ]
+ },
+ {
+  "id": "love13",
+  "topic": "love",
+  "n": "彼女{かのじょ} に 花{はな} を あげました",
+  "en": "I gave her flowers",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "彼女に"
+   ],
+   [
+    "O",
+    "花を"
+   ],
+   [
+    "V",
+    "あげました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I gave"
+   ],
+   [
+    "O",
+    "her"
+   ],
+   [
+    "O",
+    "flowers"
+   ]
+  ]
+ },
+ {
+  "id": "love14",
+  "topic": "love",
+  "n": "夜景{やけい} の きれい な レストラン を 予約{よやく} しました",
+  "en": "I booked a restaurant with a beautiful night view",
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "夜景のきれいなレストランを"
+   ],
+   [
+    "V",
+    "予約しました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I booked"
+   ],
+   [
+    "P",
+    "a restaurant with a beautiful night view"
+   ]
+  ]
+ },
+ {
+  "id": "love15",
+  "topic": "love",
+  "n": "毎晩{まいばん} LINE で 話{はな}して います",
+  "en": "We talk on LINE every night",
+  "why": "",
+  "jr": [
+   [
+    "T",
+    "毎晩"
+   ],
+   [
+    "P",
+    "LINEで"
+   ],
+   [
+    "V",
+    "話しています"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "We talk"
+   ],
+   [
+    "P",
+    "on LINE"
+   ],
+   [
+    "T",
+    "every night"
+   ]
+  ]
+ },
+ {
+  "id": "love16",
+  "topic": "love",
+  "n": "あなた と いる と 時間{じかん} が 早{はや}く 感{かん}じます",
+  "en": "Time flies when I'm with you",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "あなたといると"
+   ],
+   [
+    "V",
+    "時間が早く感じます"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "When I'm with you"
+   ],
+   [
+    "V",
+    "time flies"
+   ]
+  ]
+ },
+ {
+  "id": "love17",
+  "topic": "love",
+  "n": "一目{ひとめ} で 好{す}き に なりました",
+  "en": "It was love at first sight",
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "一目で"
+   ],
+   [
+    "V",
+    "好きになりました"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "It was love"
+   ],
+   [
+    "H",
+    "at first sight"
+   ]
+  ]
+ },
+ {
+  "id": "love18",
+  "topic": "love",
+  "n": "会{あ}え なくて 寂{さび}しい です",
+  "en": "I miss you when we can't meet",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "会えなくて"
+   ],
+   [
+    "V",
+    "寂しいです"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I miss you"
+   ],
+   [
+    "W",
+    "when we can't meet"
+   ]
+  ]
+ },
+ {
+  "id": "love19",
+  "topic": "love",
+  "n": "返事{へんじ} が 来{こ}なくて 心配{しんぱい} です",
+  "en": "I'm worried because there's been no reply",
+  "why": "",
+  "jr": [
+   [
+    "O",
+    "返事が"
+   ],
+   [
+    "V",
+    "来なくて心配です"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'm worried because there's been"
+   ],
+   [
+    "O",
+    "no reply"
+   ]
+  ]
+ },
+ {
+  "id": "love20",
+  "topic": "love",
+  "n": "正直{しょうじき} に 言{い}う と、 あなた が 好{す}き です",
+  "en": "To be honest, I like you",
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "正直に"
+   ],
+   [
+    "V",
+    "言うと、"
+   ],
+   [
+    "O",
+    "あなたが好きです"
+   ]
+  ],
+  "er": [
+   [
+    "H",
+    "To be honest"
+   ],
+   [
+    "V",
+    "I like"
+   ],
+   [
+    "O",
+    "you"
+   ]
+  ]
+ },
+ {
+  "id": "love21",
+  "topic": "love",
+  "n": "それ は ちょっと 恥{は}ずかしい です",
+  "en": "That's a bit embarrassing",
+  "why": "",
+  "jr": [
+   [
+    "W",
+    "それは"
+   ],
+   [
+    "V",
+    "ちょっと恥ずかしいです"
+   ]
+  ],
+  "er": [
+   [
+    "W",
+    "That"
+   ],
+   [
+    "V",
+    "'s a bit embarrassing"
+   ]
+  ]
+ },
+ {
+  "id": "love22",
+  "topic": "love",
+  "n": "もう 少{すこ}し 一緒{いっしょ} に いたい です",
+  "en": "I'd like to stay with you a little longer",
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "もう少し"
+   ],
+   [
+    "V",
+    "一緒にいたいです"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'd like to stay with you"
+   ],
+   [
+    "H",
+    "a little longer"
+   ]
+  ]
+ },
+ {
+  "id": "love23",
+  "topic": "love",
+  "n": "駅{えき} まで 送{おく}ります",
+  "en": "I'll walk you to the station",
+  "why": "",
+  "jr": [
+   [
+    "P",
+    "駅まで"
+   ],
+   [
+    "V",
+    "送ります"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "I'll walk you"
+   ],
+   [
+    "P",
+    "to the station"
+   ]
+  ]
+ },
+ {
+  "id": "love24",
+  "topic": "love",
+  "n": "気{き}を つけて 帰{かえ}って ね",
+  "en": "Get home safely",
+  "why": "",
+  "jr": [
+   [
+    "H",
+    "気をつけて"
+   ],
+   [
+    "V",
+    "帰ってね"
+   ]
+  ],
+  "er": [
+   [
+    "V",
+    "Get home"
+   ],
+   [
+    "H",
+    "safely"
+   ]
+  ]
  }
 ]

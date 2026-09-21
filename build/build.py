@@ -523,6 +523,8 @@ tix = {t["id"]: t for t in topics}
 for sb_topic, sents in SB.items():
     tix[sit["sb_map"][sb_topic]]["sents"] += [{k: s[k] for k in ("kj", "kn", "rj", "en", "why", "roles", "enb")} for s in sents]
 for topic, sents in EXTRA.items():
+    if topic not in tix:          # sentence-builder-only topics (dating) have no kanji chapter here
+        continue
     tix[topic]["sents"] += [{"n": s["n"], "en": s["en"], "why": s["why"]} for s in sents]
 K = {r["k"]: r for t in topics for g in t["groups"] for r in g["rows"]}
 W = {k: words_for(k) for k in K if words_for(k)}
@@ -566,7 +568,8 @@ def builder_sections():
     for s in extra:                                           # everything else, in the same topics
         r = mark({k: v for k, v in s.items() if k in ("id", "n", "en", "why", "jr", "er")})
         r["lv"] = level(NOTE.sub(r"\1", s["n"]))
-        topics.setdefault(s["topic"], {"id": s["topic"], "title": "More sentences", "jp": "", "blurb": "", "sents": []})["sents"].append(r)
+        extra_topic = {"love": ("Dating and romance", "恋愛", "Chatting someone up, asking them out, dates and relationships.")}.get(s["topic"], ("More sentences", "", ""))
+        topics.setdefault(s["topic"], {"id": s["topic"], "title": extra_topic[0], "jp": extra_topic[1], "blurb": extra_topic[2], "sents": []})["sents"].append(r)
     for t in topics.values():                                 # core sentences first, then the rest
         t["sents"].sort(key=lambda s: (not s.get("core"), -s["lv"]))
     return [topics[i] for i in order if topics[i]["sents"]] + [t for i, t in topics.items() if i not in order and t["sents"]]

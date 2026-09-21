@@ -38954,6 +38954,113 @@
    "traps": [],
    "leaves": "或心",
    "n": 1104
+  },
+  "誘": {
+   "k": "誘",
+   "m": "invite, tempt",
+   "on": [
+    "ユウ"
+   ],
+   "kun": [
+    "さそ.う"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "言",
+     "words"
+    ],
+    [
+     "秀",
+     "excel"
+    ]
+   ],
+   "story": "Your best words, used to draw someone in: to invite.",
+   "traps": [],
+   "leaves": "言秀",
+   "n": 1105
+  },
+  "寂": {
+   "k": "寂",
+   "m": "lonely, quiet",
+   "on": [
+    "ジャク",
+    "セキ"
+   ],
+   "kun": [
+    "さび.しい"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "宀",
+     "roof"
+    ],
+    [
+     "叔",
+     "uncle"
+    ]
+   ],
+   "story": "An old uncle alone under his roof: lonely.",
+   "traps": [],
+   "leaves": "宀叔",
+   "n": 1106
+  },
+  "氏": {
+   "k": "氏",
+   "m": "family name; Mr",
+   "on": [
+    "シ"
+   ],
+   "kun": [
+    "うじ"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "氏",
+     "clan"
+    ]
+   ],
+   "story": "A clan's name. In 彼氏 it means boyfriend.",
+   "traps": [],
+   "leaves": "氏",
+   "n": 1107
+  },
+  "緊": {
+   "k": "緊",
+   "m": "tense, tight",
+   "on": [
+    "キン"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "臤",
+     "firm"
+    ],
+    [
+     "糸",
+     "thread"
+    ]
+   ],
+   "story": "Thread pulled firm: tight, tense.",
+   "traps": [],
+   "leaves": "臤糸",
+   "n": 1108
   }
  },
  "CH": [
@@ -42150,7 +42257,11 @@
     "診",
     "携",
     "扱",
-    "惑"
+    "惑",
+    "誘",
+    "寂",
+    "氏",
+    "緊"
    ],
    "master": false,
    "intro": "Kanji that the site's sentences and words use but that sit outside the standard N5 to N2 lists, or were missing from them. Each has a card so that every kanji on every page opens somewhere."
@@ -43260,7 +43371,11 @@
   "診": 2,
   "携": 2,
   "扱": 2,
-  "惑": 2
+  "惑": 2,
+  "誘": 2,
+  "寂": 2,
+  "氏": 2,
+  "緊": 2
  },
  "P": {
   "一": {
@@ -48673,6 +48788,18 @@
   },
   "惑": {
    "r": "わく",
+   "t": "on"
+  },
+  "誘": {
+   "r": "さそ",
+   "t": "kun"
+  },
+  "寂": {
+   "r": "さび",
+   "t": "kun"
+  },
+  "緊": {
+   "r": "きん",
    "t": "on"
   }
  }

@@ -3482,6 +3482,747 @@
   "_count_check": 18
  },
  {
+  "id": "love",
+  "jp": "恋愛",
+  "en": "Dating and romance",
+  "blurb": "Starting a conversation, asking someone out, and what to say on a date and after. Kept friendly rather than forward, the way it works best in Japanese.",
+  "sb": [],
+  "extra": [
+   "love"
+  ],
+  "phr": [
+   {
+    "id": "approach",
+    "jp": "声{こえ}を かける",
+    "en": "Starting a conversation",
+    "note": "Japanese flirting is softer and more indirect than in English. A light question and a smile go further than a bold line, and a clear no should always be taken as no.",
+    "items": "すみません、 ちょっと いいですか|Excuse me, do you have a moment?\nここ は よく 来{き}ますか|Do you come here often?\nこの 席{せき} は 空{あ}いて いますか|Is this seat free?\n一人{ひとり} ですか|Are you on your own?\nお名前{なまえ} は 何{なん} ですか|What's your name?\nどこ から 来{き}ましたか|Where are you from?\n何{なに} を 飲{の}んで いますか|What are you drinking?\n一杯{いっぱい} おごらせて ください|Let me buy you a drink\nその 服{ふく} が よく 似合{にあ}って いますね|That outfit really suits you\n笑顔{えがお} が すてき ですね|You have a lovely smile\n話{はな}して いて 楽{たの}しい です|I'm enjoying talking with you",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "V",
+        "すみません、"
+       ],
+       [
+        "H",
+        "ちょっと"
+       ],
+       [
+        "V",
+        "いいですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Excuse me, do you have"
+       ],
+       [
+        "H",
+        "a moment"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "W",
+        "ここは"
+       ],
+       [
+        "V",
+        "よく来ますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you come"
+       ],
+       [
+        "W",
+        "here"
+       ],
+       [
+        "V",
+        "often"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "W",
+        "この席は"
+       ],
+       [
+        "V",
+        "空いていますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "this seat"
+       ],
+       [
+        "V",
+        "free"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "H",
+        "一人"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Are you"
+       ],
+       [
+        "H",
+        "on your own"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "W",
+        "お名前は"
+       ],
+       [
+        "V",
+        "何ですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "What's"
+       ],
+       [
+        "W",
+        "your name"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "P",
+        "どこから"
+       ],
+       [
+        "V",
+        "来ましたか"
+       ]
+      ],
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "are you from"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "O",
+        "何を"
+       ],
+       [
+        "V",
+        "飲んでいますか"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "are you drinking"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "O",
+        "一杯"
+       ],
+       [
+        "V",
+        "おごらせてください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Let me buy you"
+       ],
+       [
+        "O",
+        "a drink"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "O",
+        "その服が"
+       ],
+       [
+        "H",
+        "よく"
+       ],
+       [
+        "V",
+        "似合っていますね"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "That outfit"
+       ],
+       [
+        "H",
+        "really"
+       ],
+       [
+        "V",
+        "suits you"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "W",
+        "笑顔が"
+       ],
+       [
+        "V",
+        "すてきですね"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "You have a lovely"
+       ],
+       [
+        "W",
+        "smile"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "H",
+        "話していて"
+       ],
+       [
+        "V",
+        "楽しいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm enjoying"
+       ],
+       [
+        "H",
+        "talking with you"
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "id": "asking",
+    "jp": "誘{さそ}う",
+    "en": "Asking someone out",
+    "note": "Swapping LINE details is the usual next step rather than phone numbers. デート is used much as in English.",
+    "items": "LINE を 交換{こうかん} しませんか|Shall we swap LINE details?\n連絡先{れんらくさき} を 教{おし}えて もらえますか|Could I have your contact details?\n今度{こんど} 一緒{いっしょ} に ご飯{はん} に 行{い}きませんか|Would you like to go for a meal sometime?\n週末{しゅうまつ} 空{あ}いて いますか|Are you free this weekend?\nデート に 誘{さそ}っても いいですか|Can I ask you out on a date?\n映画{えいが} を 見{み}に 行{い}きませんか|Shall we go and see a film?\n二人{ふたり} で 会{あ}いたい です|I'd like to see you, just the two of us\nまた 会{あ}えますか|Can I see you again?\n返事{へんじ} を 待{ま}って います|I'll wait for your reply\nぜひ|I'd love to\nごめんなさい、 ちょっと 難{むずか}しい です|Sorry, that's a bit difficult (a polite no)",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "LINEを"
+       ],
+       [
+        "V",
+        "交換しませんか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Shall we swap"
+       ],
+       [
+        "O",
+        "LINE details"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "連絡先を"
+       ],
+       [
+        "V",
+        "教えてもらえますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could I have"
+       ],
+       [
+        "O",
+        "your contact details"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "T",
+        "今度"
+       ],
+       [
+        "H",
+        "一緒に"
+       ],
+       [
+        "P",
+        "ご飯に"
+       ],
+       [
+        "V",
+        "行きませんか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Would you like to go"
+       ],
+       [
+        "P",
+        "for a meal"
+       ],
+       [
+        "T",
+        "sometime"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "T",
+        "週末"
+       ],
+       [
+        "V",
+        "空いていますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Are you free"
+       ],
+       [
+        "T",
+        "this weekend"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "デートに"
+       ],
+       [
+        "V",
+        "誘ってもいいですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Can I ask you out"
+       ],
+       [
+        "O",
+        "on a date"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "O",
+        "映画を"
+       ],
+       [
+        "V",
+        "見に行きませんか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Shall we go and see"
+       ],
+       [
+        "O",
+        "a film"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "H",
+        "二人で"
+       ],
+       [
+        "V",
+        "会いたいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'd like to see you"
+       ],
+       [
+        "H",
+        "just the two of us"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "T",
+        "また"
+       ],
+       [
+        "V",
+        "会えますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Can I see you"
+       ],
+       [
+        "T",
+        "again"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "V",
+        "返事を待っています"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'll wait"
+       ],
+       [
+        "O",
+        "for your reply"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "V",
+        "ぜひ"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'd love to"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "V",
+        "ごめんなさい、"
+       ],
+       [
+        "H",
+        "ちょっと"
+       ],
+       [
+        "V",
+        "難しいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Sorry, that's"
+       ],
+       [
+        "H",
+        "a bit"
+       ],
+       [
+        "V",
+        "difficult"
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "id": "date",
+    "jp": "デート",
+    "en": "On a date and after",
+    "note": "好き is the everyday word for liking or loving someone. 愛してる is strong and rarely said out loud.",
+    "items": "今日{きょう} は すごく 楽{たの}しかった です|I had a really good time today\nまた 会{あ}いたい です|I'd like to see you again\nかわいい ですね|You're cute\nかっこいい ですね|You look cool\n優{やさ}しい 人{ひと} ですね|You're a kind person\n一緒{いっしょ} に いる と 落{お}ち着{つ}きます|I feel at ease with you\nあなた の こと が 好{す}き です|I like you\n付{つ}き合{あ}って ください|Will you go out with me?\n会{あ}いたかった|I missed you\n寂{さび}しかった|I missed you (I was lonely)\nおやすみ、 また 明日{あした}|Good night, see you tomorrow",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "T",
+        "今日は"
+       ],
+       [
+        "V",
+        "すごく楽しかったです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I had a really good time"
+       ],
+       [
+        "T",
+        "today"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "V",
+        "また会いたいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'd like to see you again"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "V",
+        "かわいいですね"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "You're cute"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "V",
+        "かっこいいですね"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "You look cool"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "W",
+        "優しい人"
+       ],
+       [
+        "V",
+        "ですね"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "You're"
+       ],
+       [
+        "W",
+        "a kind person"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "V",
+        "一緒にいると落ち着きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I feel at ease"
+       ],
+       [
+        "H",
+        "with you"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "O",
+        "あなたのことが"
+       ],
+       [
+        "V",
+        "好きです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I like"
+       ],
+       [
+        "O",
+        "you"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "V",
+        "付き合ってください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Will you go out with me"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "V",
+        "会いたかった"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I missed you"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "V",
+        "寂しかった"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I missed you (I was lonely)"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "T",
+        "おやすみ、"
+       ],
+       [
+        "V",
+        "また明日"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "Good night"
+       ],
+       [
+        "V",
+        "see you tomorrow"
+       ]
+      ]
+     }
+    }
+   }
+  ]
+ },
+ {
   "id": "shop",
   "jp": "買い物",
   "en": "Shopping and money",

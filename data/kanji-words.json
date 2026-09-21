@@ -62324,5 +62324,100 @@
   ],
   "sp": [],
   "alone": null
+ },
+ "誘": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "さそ.う",
+    "b": "さそ",
+    "words": [
+     [
+      "誘う",
+      "さそう",
+      "to invite, to ask out",
+      2
+     ]
+    ]
+   },
+   {
+    "t": "on",
+    "label": "ユウ",
+    "b": "ゆう",
+    "words": [
+     [
+      "誘惑",
+      "ゆうわく",
+      "temptation",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "寂": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "さび.しい",
+    "b": "さび",
+    "words": [
+     [
+      "寂しい",
+      "さびしい",
+      "lonely, to miss someone",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "氏": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "シ",
+    "b": "し",
+    "words": [
+     [
+      "彼氏",
+      "かれし",
+      "boyfriend",
+      2
+     ],
+     [
+      "氏名",
+      "しめい",
+      "full name",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "緊": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "キン",
+    "b": "きん",
+    "words": [
+     [
+      "緊張",
+      "きんちょう",
+      "nervousness, tension",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
  }
 }
