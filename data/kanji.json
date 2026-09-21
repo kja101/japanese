@@ -38512,6 +38512,448 @@
    "traps": [],
    "leaves": "木兆",
    "n": 1088
+  },
+  "寿": {
+   "k": "寿",
+   "m": "long life",
+   "on": [
+    "ジュ"
+   ],
+   "kun": [
+    "ことぶき"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "士",
+     "samurai"
+    ],
+    [
+     "寸",
+     "inch"
+    ]
+   ],
+   "story": "A samurai who lives inch by inch to a great age: long life. 寿司 borrows it for sushi.",
+   "traps": [],
+   "leaves": "士寸",
+   "n": 1089
+  },
+  "独": {
+   "k": "独",
+   "m": "alone",
+   "on": [
+    "ドク"
+   ],
+   "kun": [
+    "ひと.り"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "犭",
+     "dog"
+    ],
+    [
+     "虫",
+     "insect"
+    ]
+   ],
+   "story": "A dog left with only insects for company: alone.",
+   "traps": [],
+   "leaves": "犭虫",
+   "n": 1090
+  },
+  "幹": {
+   "k": "幹",
+   "m": "trunk; main part",
+   "on": [
+    "カン"
+   ],
+   "kun": [
+    "みき"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "𠦝",
+     "sunrise"
+    ],
+    [
+     "干",
+     "dry"
+    ]
+   ],
+   "story": "The dry trunk the sun rises behind: the main stem.",
+   "traps": [],
+   "leaves": "𠦝干",
+   "n": 1091
+  },
+  "往": {
+   "k": "往",
+   "m": "go; going",
+   "on": [
+    "オウ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "彳",
+     "going"
+    ],
+    [
+     "主",
+     "master"
+    ]
+   ],
+   "story": "The master setting off: to go.",
+   "traps": [],
+   "leaves": "彳主",
+   "n": 1092
+  },
+  "鶏": {
+   "k": "鶏",
+   "m": "chicken",
+   "on": [
+    "ケイ"
+   ],
+   "kun": [
+    "にわとり"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "奚",
+     "tied"
+    ],
+    [
+     "鳥",
+     "bird"
+    ]
+   ],
+   "story": "A bird kept on a tether: the chicken.",
+   "traps": [],
+   "leaves": "奚鳥",
+   "n": 1093
+  },
+  "製": {
+   "k": "製",
+   "m": "made in; manufacture",
+   "on": [
+    "セイ"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "制",
+     "system"
+    ],
+    [
+     "衣",
+     "cloth"
+    ]
+   ],
+   "story": "Cloth cut to a system: manufactured goods.",
+   "traps": [],
+   "leaves": "制衣",
+   "n": 1094
+  },
+  "膳": {
+   "k": "膳",
+   "m": "tray of food; pair (of chopsticks)",
+   "on": [
+    "ゼン"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "月",
+     "flesh"
+    ],
+    [
+     "善",
+     "good"
+    ]
+   ],
+   "story": "Good food set out on a tray. Also the counter for pairs of chopsticks.",
+   "traps": [],
+   "leaves": "月善",
+   "n": 1095
+  },
+  "酔": {
+   "k": "酔",
+   "m": "get drunk",
+   "on": [
+    "スイ"
+   ],
+   "kun": [
+    "よ.う"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "酉",
+     "sake jar"
+    ],
+    [
+     "卒",
+     "finish"
+    ]
+   ],
+   "story": "Finishing the sake jar: drunk.",
+   "traps": [],
+   "leaves": "酉卒",
+   "n": 1096
+  },
+  "鍵": {
+   "k": "鍵",
+   "m": "key",
+   "on": [
+    "ケン"
+   ],
+   "kun": [
+    "かぎ"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "金",
+     "metal"
+    ],
+    [
+     "建",
+     "build"
+    ]
+   ],
+   "story": "The metal piece that opens what you've built: a key.",
+   "traps": [],
+   "leaves": "金建",
+   "n": 1097
+  },
+  "脱": {
+   "k": "脱",
+   "m": "take off, remove",
+   "on": [
+    "ダツ"
+   ],
+   "kun": [
+    "ぬ.ぐ"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "月",
+     "body"
+    ],
+    [
+     "兌",
+     "exchange"
+    ]
+   ],
+   "story": "Changing what's on your body: to take off.",
+   "traps": [],
+   "leaves": "月兌",
+   "n": 1098
+  },
+  "保": {
+   "k": "保",
+   "m": "keep, protect",
+   "on": [
+    "ホ"
+   ],
+   "kun": [
+    "たも.つ"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "亻",
+     "person"
+    ],
+    [
+     "呆",
+     "swaddled baby"
+    ]
+   ],
+   "story": "A person holding a baby safe: to keep and protect.",
+   "traps": [],
+   "leaves": "亻呆",
+   "n": 1099
+  },
+  "証": {
+   "k": "証",
+   "m": "proof, certificate",
+   "on": [
+    "ショウ"
+   ],
+   "kun": [
+    "あかし"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "言",
+     "words"
+    ],
+    [
+     "正",
+     "correct"
+    ]
+   ],
+   "story": "Words that are correct: proof.",
+   "traps": [],
+   "leaves": "言正",
+   "n": 1100
+  },
+  "診": {
+   "k": "診",
+   "m": "examine (a patient)",
+   "on": [
+    "シン"
+   ],
+   "kun": [
+    "み.る"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "言",
+     "words"
+    ],
+    [
+     "㐱",
+     "dense hair"
+    ]
+   ],
+   "story": "A doctor's careful words over you: an examination.",
+   "traps": [],
+   "leaves": "言㐱",
+   "n": 1101
+  },
+  "携": {
+   "k": "携",
+   "m": "carry",
+   "on": [
+    "ケイ"
+   ],
+   "kun": [
+    "たずさ.える"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "扌",
+     "hand"
+    ],
+    [
+     "隽",
+     "bird in hand"
+    ]
+   ],
+   "story": "A bird carried in the hand: to carry.",
+   "traps": [],
+   "leaves": "扌隽",
+   "n": 1102
+  },
+  "扱": {
+   "k": "扱",
+   "m": "handle, deal with",
+   "on": [
+    "キュウ"
+   ],
+   "kun": [
+    "あつか.う"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "扌",
+     "hand"
+    ],
+    [
+     "及",
+     "reach"
+    ]
+   ],
+   "story": "A hand reaching for something: to handle it.",
+   "traps": [],
+   "leaves": "扌及",
+   "n": 1103
+  },
+  "惑": {
+   "k": "惑",
+   "m": "confused; trouble",
+   "on": [
+    "ワク"
+   ],
+   "kun": [
+    "まど.う"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "或",
+     "some"
+    ],
+    [
+     "心",
+     "heart"
+    ]
+   ],
+   "story": "A heart that's uncertain: confusion, and the trouble it causes.",
+   "traps": [],
+   "leaves": "或心",
+   "n": 1104
   }
  },
  "CH": [
@@ -41692,7 +42134,23 @@
     "慢",
     "魔",
     "紫",
-    "桃"
+    "桃",
+    "寿",
+    "独",
+    "幹",
+    "往",
+    "鶏",
+    "製",
+    "膳",
+    "酔",
+    "鍵",
+    "脱",
+    "保",
+    "証",
+    "診",
+    "携",
+    "扱",
+    "惑"
    ],
    "master": false,
    "intro": "Kanji that the site's sentences and words use but that sit outside the standard N5 to N2 lists, or were missing from them. Each has a card so that every kanji on every page opens somewhere."
@@ -42786,7 +43244,23 @@
   "慢": 2,
   "魔": 2,
   "紫": 2,
-  "桃": 2
+  "桃": 2,
+  "寿": 2,
+  "独": 3,
+  "幹": 2,
+  "往": 2,
+  "鶏": 2,
+  "製": 3,
+  "膳": 2,
+  "酔": 2,
+  "鍵": 2,
+  "脱": 2,
+  "保": 3,
+  "証": 3,
+  "診": 2,
+  "携": 2,
+  "扱": 2,
+  "惑": 2
  },
  "P": {
   "一": {
@@ -48136,6 +48610,70 @@
   "桃": {
    "r": "もも",
    "t": "kun"
+  },
+  "寿": {
+   "r": "じゅ",
+   "t": "on"
+  },
+  "独": {
+   "r": "どく",
+   "t": "on"
+  },
+  "幹": {
+   "r": "かん",
+   "t": "on"
+  },
+  "往": {
+   "r": "おう",
+   "t": "on"
+  },
+  "鶏": {
+   "r": "とりにく",
+   "t": "sp"
+  },
+  "製": {
+   "r": "せい",
+   "t": "on"
+  },
+  "膳": {
+   "r": "ぜん",
+   "t": "on"
+  },
+  "酔": {
+   "r": "よ",
+   "t": "kun"
+  },
+  "鍵": {
+   "r": "かぎ",
+   "t": "kun"
+  },
+  "脱": {
+   "r": "ぬ",
+   "t": "kun"
+  },
+  "保": {
+   "r": "ほ",
+   "t": "on"
+  },
+  "証": {
+   "r": "しょう",
+   "t": "on"
+  },
+  "診": {
+   "r": "しん",
+   "t": "on"
+  },
+  "携": {
+   "r": "けい",
+   "t": "on"
+  },
+  "扱": {
+   "r": "あつか",
+   "t": "kun"
+  },
+  "惑": {
+   "r": "わく",
+   "t": "on"
   }
  }
 }

@@ -178,11 +178,17 @@ body{background:var(--bg);color:var(--ink)}
   .pt:hover,.pt:focus-visible{background:var(--ink);color:var(--bg)!important}
   a.kl:hover{background:rgba(255,255,255,.08)}
 }
+.snum .star{display:block;border:0;background:none;font-size:1.1rem;line-height:1;color:var(--line);cursor:pointer;padding:.25rem 0 0;margin:0 auto}
+.snum .star[aria-pressed="true"]{color:#E0A800}
+.snum{display:flex;flex-direction:column;align-items:center;gap:.2rem;height:auto!important}
+#starbtn[aria-pressed="true"]{background:#E0A800;border-color:#E0A800;color:#1D2433}
+.backbtn{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;font:inherit;font-weight:600;border:0;border-radius:8px;padding:.6rem 1rem;background:var(--ink);color:var(--paper);box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
 </style></head><body>
 
 <div class="bar">
 <input id="q" type="search" placeholder="Search English, kanji, kana or rōmaji…" aria-label="Search">
 <div class="toggles"><button data-layer="kanji" aria-pressed="true">Kanji</button><button data-layer="kana" aria-pressed="true">Kana</button><button data-layer="romaji" aria-pressed="true">Rōmaji</button><button data-layer="en" aria-pressed="true">English</button><button data-layer="order" aria-pressed="true">Order</button><button data-layer="why" aria-pressed="true">Why</button><button id="colourbtn" aria-pressed="true">Colour</button><button id="ptbtn" aria-pressed="true">Particles</button><button id="rdbtn" aria-pressed="true">On/kun</button><button id="furibtn" aria-pressed="false">Furigana</button></div>
+<div class="toggles lv" role="group" aria-label="Starred sentences"><button id="starbtn" aria-pressed="false">★ Starred</button></div>
 <div class="toggles lv" role="group" aria-label="Level, including easier levels"><button data-tier="5">N5</button><button data-tier="4">N4</button><button data-tier="3">N3</button><button data-tier="2">N2</button></div><div class="keybar" aria-label="Block colours"><span style="--c:#e8384f">WHO / TOPIC<small>は・が</small></span><span style="--c:#12a5c9">TIME<small>に</small></span><span style="--c:#22a36b">PLACE<small>で・に・へ・から・まで</small></span><span style="--c:#e6a400">HOW / WITH<small>と・で</small></span><span style="--c:#ef7020">WHAT<small>を</small></span><span style="--c:#7b3fa0">VERB / です</span><span style="--c:#dd3b8c">QUESTION<small>か</small></span><span class="kp">particle<small>tap one</small></span></div><div class="rd-legend"><span><span class="rd rd-on"><span class="rb sw">音</span></span>On reading</span><span><span class="rd rd-kun"><span class="rb sw">訓</span></span>Kun reading</span><span><span class="rd rd-sp"><span class="rb sw">特</span></span>Special reading</span><span>Tap a particle for what it does, or a kanji to open it in the kanji deck.</span></div>
 </div>
 
@@ -281,7 +287,7 @@ function sentHtml(s,n){
   const plain=s.kj?s.kj.join(""):jpPlainOf(s.n).replace(/ /g,"");
   const kana=s.kj?s.kn.join(""):jpKanaOf(s.n).replace(/ /g,"");
   const search=(s.en+plain+kana+(s.rj?s.rj.join(" "):jpRomajiLineOf(s))).toLowerCase();
-  return `<div class="sent" data-lv="${s.lv}" data-s="${esc(search)}"><div class="snum">${n}</div><div class="sbody">
+  return `<div class="sent" data-lv="${s.lv}" data-id="${esc(s.id||"")}" data-s="${esc(search)}"><div class="snum">${n}${s.id?`<button class="star" data-star="${esc(s.id)}" aria-pressed="${STARS.has(s.id)}" aria-label="Star this sentence" title="Add to My phrasebook">★</button>`:""}</div><div class="sbody">
     <p class="line en lay-en">${enLine(s)}</p>
     <p class="line lay-kanji">${jp}${sayBtn(say)}</p>
     <p class="line lay-kana">${kanaLine(s)}</p>
@@ -292,10 +298,15 @@ function sentHtml(s,n){
 }
 const jpRomajiLineOf=s=>s.n?s.n.split(" ").map(t=>jpRomajiToken(jpKanaOf(t))).join(" "):"";
 let tier=4; try{ tier=+(localStorage.getItem("sb-tier")||4); }catch(e){}
+let STARS=new Set(); try{ STARS=new Set(JSON.parse(localStorage.getItem("phrasebook-stars")||"[]")); }catch(e){}
+const saveStars=()=>{ try{ localStorage.setItem("phrasebook-stars",JSON.stringify([...STARS])); }catch(e){} };
+const PARAMS=new URLSearchParams(location.search);
+let onlyStarred=PARAMS.get("starred")==="1";
+if(PARAMS.get("q")) tier=2;             // a search from the phrasebook looks at every level
 function render(){
   const out=[],toc=[];
   D.forEach(sec=>{
-    const ss=sec.sents.filter(s=>s.lv>=tier);
+    const ss=sec.sents.filter(s=>s.lv>=tier&&(!onlyStarred||STARS.has(s.id)));
     if(!ss.length) return;
     toc.push(`<a href="#${sec.id}">${esc(sec.title)}<span>${esc(sec.jp)} · ${ss.length}</span></a>`);
     out.push(`<section class="card" id="${sec.id}"><header class="card-head"><h2>${esc(sec.title)}<span class="jp">${esc(sec.jp)}</span></h2>${sec.blurb?`<p class="blurb">${esc(sec.blurb)}</p>`:""}</header>
@@ -310,7 +321,22 @@ function render(){
 document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{ tier=+b.dataset.tier; try{localStorage.setItem("sb-tier",tier);}catch(e){}
   document.querySelectorAll("[data-tier]").forEach(x=>x.setAttribute("aria-pressed",+x.dataset.tier===tier)); render(); });
 document.querySelectorAll("[data-tier]").forEach(x=>x.setAttribute("aria-pressed",+x.dataset.tier===tier));
+const starBtn=document.getElementById("starbtn");
+const syncStarBtn=()=>{ starBtn.setAttribute("aria-pressed",onlyStarred); starBtn.textContent=onlyStarred?`★ Starred (${[...STARS].filter(i=>!i.startsWith("p:")).length})`:"★ Starred"; };
+starBtn.onclick=()=>{ onlyStarred=!onlyStarred; syncStarBtn(); render(); };
+document.getElementById("sents").addEventListener("click",e=>{ const b=e.target.closest("[data-star]"); if(!b) return;
+  const id=b.dataset.star; STARS.has(id)?STARS.delete(id):STARS.add(id); saveStars(); b.setAttribute("aria-pressed",STARS.has(id)); syncStarBtn(); });
+if(PARAMS.get("q")){ const q=document.getElementById("q"); q.value=PARAMS.get("q"); }
+syncStarBtn();
 render();
+(function(){   // arriving from the phrasebook: a way back, and the right situation on screen
+  const src=PARAMS.get("from");
+  if(src==="pb"){ const b=document.createElement("button"); b.className="backbtn"; b.textContent="← Back to the phrasebook"; document.body.appendChild(b);
+    b.onclick=()=>{ if(history.length>1) history.back(); else location.href="phrasebook.html"; }; }
+  const id=location.hash.slice(1); if(!id) return;
+  const go=()=>{ const el=document.getElementById(id); if(!el) return; const bar=document.querySelector(".bar"); window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(bar?bar.offsetHeight:0)-8); };
+  setTimeout(go,60); setTimeout(go,400);
+})();
 initParticlePopup();
 
 initReturnLinks("sb-return",".sent","data-idx","sflash");

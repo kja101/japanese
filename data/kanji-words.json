@@ -61984,5 +61984,345 @@
    "t": "kun",
    "l": 2
   }
+ },
+ "寿": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ジュ",
+    "b": "じゅ",
+    "words": [
+     [
+      "寿司",
+      "すし",
+      "sushi",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "独": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ドク",
+    "b": "どく",
+    "words": [
+     [
+      "独身",
+      "どくしん",
+      "single, unmarried",
+      3
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "ひと.り",
+    "b": "ひと",
+    "words": [
+     [
+      "独り",
+      "ひとり",
+      "alone",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "幹": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "カン",
+    "b": "かん",
+    "words": [
+     [
+      "新幹線",
+      "しんかんせん",
+      "bullet train",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "往": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "オウ",
+    "b": "おう",
+    "words": [
+     [
+      "往復",
+      "おうふく",
+      "return trip",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "鶏": {
+  "readings": [],
+  "sp": [
+   [
+    "鶏肉",
+    "とりにく",
+    "chicken (meat)",
+    2
+   ]
+  ],
+  "alone": null
+ },
+ "製": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "セイ",
+    "b": "せい",
+    "words": [
+     [
+      "乳製品",
+      "にゅうせいひん",
+      "dairy products",
+      3
+     ],
+     [
+      "日本製",
+      "にほんせい",
+      "made in Japan",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "膳": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ゼン",
+    "b": "ぜん",
+    "words": [
+     [
+      "一膳",
+      "いちぜん",
+      "one pair (of chopsticks)",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "酔": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "よ.う",
+    "b": "よ",
+    "words": [
+     [
+      "酔う",
+      "よう",
+      "to get drunk",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "鍵": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "かぎ",
+    "b": "かぎ",
+    "words": [
+     [
+      "鍵",
+      "かぎ",
+      "key",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "脱": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ぬ.ぐ",
+    "b": "ぬ",
+    "words": [
+     [
+      "脱ぐ",
+      "ぬぐ",
+      "to take off (clothes, shoes)",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "保": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ホ",
+    "b": "ほ",
+    "words": [
+     [
+      "保険証",
+      "ほけんしょう",
+      "health insurance card",
+      3
+     ],
+     [
+      "保存",
+      "ほぞん",
+      "saving, preservation",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "証": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ショウ",
+    "b": "しょう",
+    "words": [
+     [
+      "保険証",
+      "ほけんしょう",
+      "health insurance card",
+      3
+     ],
+     [
+      "証明",
+      "しょうめい",
+      "proof",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "診": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "シン",
+    "b": "しん",
+    "words": [
+     [
+      "診断書",
+      "しんだんしょ",
+      "medical certificate",
+      2
+     ],
+     [
+      "診察",
+      "しんさつ",
+      "medical examination",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "携": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ケイ",
+    "b": "けい",
+    "words": [
+     [
+      "携帯",
+      "けいたい",
+      "mobile phone, portable",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "扱": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "あつか.う",
+    "b": "あつか",
+    "words": [
+     [
+      "取扱所",
+      "とりあつかいじょ",
+      "office that handles something",
+      2
+     ],
+     [
+      "扱う",
+      "あつかう",
+      "to handle",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "惑": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ワク",
+    "b": "わく",
+    "words": [
+     [
+      "迷惑",
+      "めいわく",
+      "trouble, nuisance",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
  }
 }

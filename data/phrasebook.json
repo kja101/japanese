@@ -1022,6 +1022,397 @@
       ]
      }
     }
+   },
+   {
+    "id": "family",
+    "jp": "家族{かぞく}",
+    "en": "Family and friends",
+    "note": "Your own family members have humble words (母, 父); other people's have polite ones (お母さん, お父さん).",
+    "items": "家族{かぞく} は 何人{なんにん} ですか|How many people are in your family?\n四人{よにん} 家族{かぞく} です|There are four of us\n兄弟{きょうだい} は いますか|Do you have brothers or sisters?\n姉{あね} が 一人{ひとり} います|I have one older sister\n弟{おとうと} が 一人{ひとり} います|I have one younger brother\n子供{こども} が 二人{ふたり} います|I have two children\n私{わたし} は 結婚{けっこん} して います|I'm married\n私{わたし} は 独身{どくしん} です|I'm single\nこちら は 妻{つま} です|This is my wife\nこちら は 夫{おっと} です|This is my husband\nこちら は 友達{ともだち} です|This is my friend\nお母{かあ}さん は お元気{げんき} ですか|Is your mother well?\n両親{りょうしん} は イギリス に 住{す}んで います|My parents live in Britain\n子供{こども} は 何歳{なんさい} ですか|How old are your children?\nどこ で 知{し}り合{あ}いましたか|Where did you meet?\n今度{こんど} 家{いえ} に 遊{あそ}びに 来{き}て ください|Come round to our place sometime\nよろしく お伝{つた}え ください|Please give them my regards",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "W",
+        "家族は"
+       ],
+       [
+        "V",
+        "何人ですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "How many people are in"
+       ],
+       [
+        "W",
+        "your family"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "W",
+        "四人家族"
+       ],
+       [
+        "V",
+        "です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "There are four of us"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "W",
+        "兄弟は"
+       ],
+       [
+        "V",
+        "いますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "W",
+        "brothers or sisters"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "W",
+        "姉が一人"
+       ],
+       [
+        "V",
+        "います"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "one older sister"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "W",
+        "弟が一人"
+       ],
+       [
+        "V",
+        "います"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "one younger brother"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "W",
+        "子供が二人"
+       ],
+       [
+        "V",
+        "います"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "two children"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "W",
+        "私は"
+       ],
+       [
+        "V",
+        "結婚しています"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "I"
+       ],
+       [
+        "V",
+        "'m married"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "W",
+        "私は"
+       ],
+       [
+        "V",
+        "独身です"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "I"
+       ],
+       [
+        "V",
+        "'m single"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "W",
+        "こちらは妻"
+       ],
+       [
+        "V",
+        "です"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "This"
+       ],
+       [
+        "V",
+        "is my wife"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "W",
+        "こちらは夫"
+       ],
+       [
+        "V",
+        "です"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "This"
+       ],
+       [
+        "V",
+        "is my husband"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "W",
+        "こちらは友達"
+       ],
+       [
+        "V",
+        "です"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "This"
+       ],
+       [
+        "V",
+        "is my friend"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "W",
+        "お母さんは"
+       ],
+       [
+        "V",
+        "お元気ですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "your mother"
+       ],
+       [
+        "V",
+        "well"
+       ]
+      ]
+     },
+     "12": {
+      "jr": [
+       [
+        "W",
+        "両親は"
+       ],
+       [
+        "P",
+        "イギリスに"
+       ],
+       [
+        "V",
+        "住んでいます"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "My parents"
+       ],
+       [
+        "V",
+        "live"
+       ],
+       [
+        "P",
+        "in Britain"
+       ]
+      ]
+     },
+     "13": {
+      "jr": [
+       [
+        "W",
+        "子供は"
+       ],
+       [
+        "V",
+        "何歳ですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "How old are"
+       ],
+       [
+        "W",
+        "your children"
+       ]
+      ]
+     },
+     "14": {
+      "jr": [
+       [
+        "P",
+        "どこで"
+       ],
+       [
+        "V",
+        "知り合いましたか"
+       ]
+      ],
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "did you meet"
+       ]
+      ]
+     },
+     "15": {
+      "jr": [
+       [
+        "T",
+        "今度家に"
+       ],
+       [
+        "V",
+        "遊びに来てください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Come round"
+       ],
+       [
+        "P",
+        "to our place"
+       ],
+       [
+        "T",
+        "sometime"
+       ]
+      ]
+     },
+     "16": {
+      "jr": [
+       [
+        "W",
+        "よろしくお伝えください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please give them"
+       ],
+       [
+        "W",
+        "my regards"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -1932,6 +2323,301 @@
       ]
      }
     }
+   },
+   {
+    "id": "ordering",
+    "jp": "注文{ちゅうもん}",
+    "en": "Ordering and eating",
+    "note": "Set meals (定食) and lunch sets are good value. Say いただきます before eating and ごちそうさまでした after.",
+    "items": "ランチセット を ください|The lunch set, please\n同{おな}じ もの を ください|The same, please\nこれ と これ を ください|This and this, please\n大盛{おおも}り で お願{ねが}い します|A large portion, please\n少{すく}なめ で お願{ねが}い します|A small portion, please\n辛{から}く しないで ください|Not spicy, please\n取{と}り皿{ざら} を ください|Some small plates for sharing, please\nお箸{はし} を もう 一膳{いちぜん} ください|Another pair of chopsticks, please\nいただきます|(said before eating)\nごちそうさま でした|Thank you for the meal\nこれ は すごく おいしい です|This is really delicious\n持{も}ち帰{かえ}り で お願{ねが}い します|To take away, please\n店内{てんない} で 食{た}べます|I'll eat in",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "ランチセットを"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "The lunch set"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "同じものを"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "The same"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "これとこれを"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "This and this"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "O",
+        "大盛りで"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "A large portion"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "少なめで"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "A small portion"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "H",
+        "辛くしないでください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Not"
+       ],
+       [
+        "H",
+        "spicy"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "O",
+        "取り皿を"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "Some small plates for sharing"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "O",
+        "お箸を"
+       ],
+       [
+        "V",
+        "もう一膳ください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Another pair of"
+       ],
+       [
+        "O",
+        "chopsticks"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "V",
+        "いただきます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "(said before eating)"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "V",
+        "ごちそうさまでした"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Thank you for the meal"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "W",
+        "これは"
+       ],
+       [
+        "H",
+        "すごく"
+       ],
+       [
+        "V",
+        "おいしいです"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "This"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "H",
+        "really"
+       ],
+       [
+        "V",
+        "delicious"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "O",
+        "持ち帰りで"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "To take away"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "12": {
+      "jr": [
+       [
+        "P",
+        "店内で"
+       ],
+       [
+        "V",
+        "食べます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'll eat"
+       ],
+       [
+        "P",
+        "in"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -1947,7 +2633,846 @@
   "jp": "夜",
   "en": "Bars and nights out",
   "blurb": "Ordering drinks, karaoke, films, and getting home afterwards.",
-  "phr": [],
+  "phr": [
+   {
+    "id": "drinks",
+    "jp": "飲{の}み物{もの}",
+    "en": "Ordering drinks",
+    "note": "Bars take your order, then bring a small snack (お通し) you pay for. 乾杯 before the first sip.",
+    "items": "ビール を ください|A beer, please\n生{なま}ビール を 二{ふた}つ ください|Two draught beers, please\n___ を もう 一{ひと}つ ください|Another ___, please\nお水{みず} を ください|Some water, please\nおすすめ の お酒{さけ} は ありますか|Do you have a sake you'd recommend?\nメニュー を 見{み}せて ください|Could I see the drinks menu?\n何{なに} が おすすめ ですか|What do you recommend?\nノンアルコール の 飲{の}み物{もの} は ありますか|Do you have anything non-alcoholic?\n乾杯{かんぱい}|Cheers!\n氷{こおり} なし で お願{ねが}い します|No ice, please\nロック で お願{ねが}い します|On the rocks, please\n水割{みずわ}り で お願{ねが}い します|With water, please\nラストオーダー は 何時{なんじ} ですか|What time is last orders?\nお会計{かいけい} を お願{ねが}い します|The bill, please\n別々{べつべつ} に 払{はら}えますか|Can we pay separately?\n私{わたし} が 払{はら}います|I'll pay\n今日{きょう} は 私{わたし} が おごります|Tonight's on me\nお通{とお}し は いりません|I don't want the table snack\n席{せき} は 空{あ}いて いますか|Are there any seats free?\nタバコ は 吸{す}えますか|Can I smoke here?",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "ビールを"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "A beer"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "生ビールを"
+       ],
+       [
+        "H",
+        "二つ"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "Two"
+       ],
+       [
+        "O",
+        "draught beers"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "___を"
+       ],
+       [
+        "H",
+        "もう一つ"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "Another"
+       ],
+       [
+        "O",
+        "___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "O",
+        "お水を"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "Some water"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "おすすめのお酒は"
+       ],
+       [
+        "V",
+        "ありますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "O",
+        "a sake you'd recommend"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "O",
+        "メニューを"
+       ],
+       [
+        "V",
+        "見せてください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could I see"
+       ],
+       [
+        "O",
+        "the drinks menu"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "O",
+        "何が"
+       ],
+       [
+        "V",
+        "おすすめですか"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "What"
+       ],
+       [
+        "V",
+        "do you recommend"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "H",
+        "ノンアルコールの"
+       ],
+       [
+        "O",
+        "飲み物は"
+       ],
+       [
+        "V",
+        "ありますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "O",
+        "anything"
+       ],
+       [
+        "H",
+        "non-alcoholic"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "V",
+        "乾杯"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Cheers!"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "O",
+        "氷なしで"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "No ice"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "H",
+        "ロックで"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "On the rocks"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "H",
+        "水割りで"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "With water"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "12": {
+      "jr": [
+       [
+        "O",
+        "ラストオーダーは"
+       ],
+       [
+        "T",
+        "何時"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "O",
+        "last orders"
+       ]
+      ]
+     },
+     "13": {
+      "jr": [
+       [
+        "O",
+        "お会計を"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "The bill"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "14": {
+      "jr": [
+       [
+        "H",
+        "別々に"
+       ],
+       [
+        "V",
+        "払えますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Can we pay"
+       ],
+       [
+        "H",
+        "separately"
+       ]
+      ]
+     },
+     "15": {
+      "jr": [
+       [
+        "W",
+        "私が"
+       ],
+       [
+        "V",
+        "払います"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "I"
+       ],
+       [
+        "V",
+        "'ll pay"
+       ]
+      ]
+     },
+     "16": {
+      "jr": [
+       [
+        "T",
+        "今日は"
+       ],
+       [
+        "W",
+        "私が"
+       ],
+       [
+        "V",
+        "おごります"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "Tonight"
+       ],
+       [
+        "V",
+        "'s on"
+       ],
+       [
+        "W",
+        "me"
+       ]
+      ]
+     },
+     "17": {
+      "jr": [
+       [
+        "O",
+        "お通しは"
+       ],
+       [
+        "V",
+        "いりません"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I don't want"
+       ],
+       [
+        "O",
+        "the table snack"
+       ]
+      ]
+     },
+     "18": {
+      "jr": [
+       [
+        "W",
+        "席は"
+       ],
+       [
+        "V",
+        "空いていますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Are there any"
+       ],
+       [
+        "W",
+        "seats"
+       ],
+       [
+        "V",
+        "free"
+       ]
+      ]
+     },
+     "19": {
+      "jr": [
+       [
+        "O",
+        "タバコは"
+       ],
+       [
+        "V",
+        "吸えますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Can I smoke"
+       ],
+       [
+        "P",
+        "here"
+       ]
+      ]
+     }
+    },
+    "words": "ビール|beer\n日本酒{にほんしゅ}|sake\nワイン|wine\nハイボール|whisky highball\nお茶{ちゃ}|tea"
+   },
+   {
+    "id": "out",
+    "jp": "夜遊{よあそ}び",
+    "en": "Going out and getting home",
+    "note": "For karaoke, you pay by the hour per person. The last trains run around midnight, earlier outside the big cities.",
+    "items": "カラオケ に 行{い}きませんか|Shall we go to karaoke?\n一時間{いちじかん} いくら ですか|How much is it for an hour?\nフリータイム で お願{ねが}い します|Unlimited time, please\nこの 歌{うた} を 知{し}って いますか|Do you know this song?\nもう 一曲{いっきょく} 歌{うた}いましょう|Let's sing one more\n終電{しゅうでん} は 何時{なんじ} ですか|What time is the last train?\nそろそろ 帰{かえ}ります|I'll be heading home soon\n終電{しゅうでん} に 間{ま}に合{あ}いますか|Will I make the last train?\nタクシー を 呼{よ}んで もらえますか|Could you call me a taxi?\n___ まで お願{ねが}い します|To ___, please\nちょっと 酔{よ}いました|I'm a little drunk\n今夜{こんや} は 楽{たの}しかった です|Tonight was fun\nまた 今度{こんど} 行{い}きましょう|Let's go again another time\n連絡先{れんらくさき} を 交換{こうかん} しませんか|Shall we swap contact details?\n明日{あした} も 仕事{しごと} な ので、 帰{かえ}ります|I've got work tomorrow, so I'll head home",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "P",
+        "カラオケに"
+       ],
+       [
+        "V",
+        "行きませんか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Shall we go"
+       ],
+       [
+        "P",
+        "to karaoke"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "T",
+        "一時間"
+       ],
+       [
+        "V",
+        "いくらですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "How much is it"
+       ],
+       [
+        "T",
+        "for an hour"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "H",
+        "フリータイムで"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "Unlimited time"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "O",
+        "この歌を"
+       ],
+       [
+        "V",
+        "知っていますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you know"
+       ],
+       [
+        "O",
+        "this song"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "H",
+        "もう一曲"
+       ],
+       [
+        "V",
+        "歌いましょう"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Let's sing"
+       ],
+       [
+        "H",
+        "one more"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "W",
+        "終電は"
+       ],
+       [
+        "T",
+        "何時"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "the last train"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "T",
+        "そろそろ"
+       ],
+       [
+        "V",
+        "帰ります"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'll be heading home"
+       ],
+       [
+        "T",
+        "soon"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "W",
+        "終電に"
+       ],
+       [
+        "V",
+        "間に合いますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Will I make"
+       ],
+       [
+        "W",
+        "the last train"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "O",
+        "タクシーを"
+       ],
+       [
+        "V",
+        "呼んでもらえますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could you call me"
+       ],
+       [
+        "O",
+        "a taxi"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "P",
+        "___まで"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "P",
+        "To ___"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "H",
+        "ちょっと"
+       ],
+       [
+        "V",
+        "酔いました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm"
+       ],
+       [
+        "H",
+        "a little"
+       ],
+       [
+        "V",
+        "drunk"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "T",
+        "今夜は"
+       ],
+       [
+        "V",
+        "楽しかったです"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "Tonight"
+       ],
+       [
+        "V",
+        "was fun"
+       ]
+      ]
+     },
+     "12": {
+      "jr": [
+       [
+        "T",
+        "また今度"
+       ],
+       [
+        "V",
+        "行きましょう"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Let's go"
+       ],
+       [
+        "T",
+        "again another time"
+       ]
+      ]
+     },
+     "13": {
+      "jr": [
+       [
+        "O",
+        "連絡先を"
+       ],
+       [
+        "V",
+        "交換しませんか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Shall we swap"
+       ],
+       [
+        "O",
+        "contact details"
+       ]
+      ]
+     },
+     "14": {
+      "jr": [
+       [
+        "T",
+        "明日も仕事なので、"
+       ],
+       [
+        "V",
+        "帰ります"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "I've got work tomorrow, so"
+       ],
+       [
+        "V",
+        "I'll head home"
+       ]
+      ]
+     }
+    },
+    "words": "駅{えき}|the station\nホテル|the hotel\n空港{くうこう}|the airport"
+   }
+  ],
   "sb": [
    "t1"
   ],
@@ -2554,6 +4079,538 @@
       ]
      }
     }
+   },
+   {
+    "id": "hotel2",
+    "jp": "ホテル で",
+    "en": "More at the hotel",
+    "note": "Check-in is often 3 p.m. and check-out 10 or 11 a.m. Most hotels will keep your bags either side.",
+    "items": "チェックイン を お願{ねが}い します|Check-in, please\n予約{よやく} して います|I have a booking\n荷物{にもつ} を 預{あず}かって もらえますか|Could you keep my luggage?\n朝食{ちょうしょく} は 何時{なんじ} から ですか|What time is breakfast from?\n部屋{へや} が 寒{さむ}い です|The room is cold\nお湯{ゆ} が 出{で}ません|There's no hot water\nエアコン が 動{うご}きません|The air conditioning isn't working\nタオル を もう 一枚{いちまい} ください|One more towel, please\n部屋{へや} を 替{か}えて もらえますか|Could I change rooms?\n静{しず}か な 部屋{へや} は ありますか|Do you have a quieter room?\n鍵{かぎ} を なくしました|I've lost my key\n部屋{へや} に 鍵{かぎ} を 忘{わす}れました|I left my key in the room\nコインランドリー は ありますか|Is there a coin laundry?\nもう 一泊{いっぱく} できますか|Can I stay one more night?\nチェックアウト を お願{ねが}い します|Check-out, please\nタクシー を 呼{よ}んで いただけますか|Could you call a taxi?",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "チェックインを"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "Check-in"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "V",
+        "予約しています"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have a booking"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "荷物を"
+       ],
+       [
+        "V",
+        "預かってもらえますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could you keep"
+       ],
+       [
+        "O",
+        "my luggage"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "T",
+        "朝食は"
+       ],
+       [
+        "T",
+        "何時から"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "T",
+        "breakfast from"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "W",
+        "部屋が"
+       ],
+       [
+        "V",
+        "寒いです"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "The room"
+       ],
+       [
+        "V",
+        "is cold"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "W",
+        "お湯が"
+       ],
+       [
+        "V",
+        "出ません"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "There's no"
+       ],
+       [
+        "W",
+        "hot water"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "W",
+        "エアコンが"
+       ],
+       [
+        "V",
+        "動きません"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "The air conditioning"
+       ],
+       [
+        "V",
+        "isn't working"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "O",
+        "タオルを"
+       ],
+       [
+        "H",
+        "もう一枚"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "One more"
+       ],
+       [
+        "O",
+        "towel"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "O",
+        "部屋を"
+       ],
+       [
+        "V",
+        "替えてもらえますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could I change"
+       ],
+       [
+        "O",
+        "rooms"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "W",
+        "静かな部屋は"
+       ],
+       [
+        "V",
+        "ありますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "W",
+        "a quieter room"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "O",
+        "鍵を"
+       ],
+       [
+        "V",
+        "なくしました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I've lost"
+       ],
+       [
+        "O",
+        "my key"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "P",
+        "部屋に"
+       ],
+       [
+        "O",
+        "鍵を"
+       ],
+       [
+        "V",
+        "忘れました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I left"
+       ],
+       [
+        "O",
+        "my key"
+       ],
+       [
+        "P",
+        "in the room"
+       ]
+      ]
+     },
+     "12": {
+      "jr": [
+       [
+        "O",
+        "コインランドリーは"
+       ],
+       [
+        "V",
+        "ありますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Is there"
+       ],
+       [
+        "O",
+        "a coin laundry"
+       ]
+      ]
+     },
+     "13": {
+      "jr": [
+       [
+        "T",
+        "もう一泊"
+       ],
+       [
+        "V",
+        "できますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Can I stay"
+       ],
+       [
+        "T",
+        "one more night"
+       ]
+      ]
+     },
+     "14": {
+      "jr": [
+       [
+        "O",
+        "チェックアウトを"
+       ],
+       [
+        "V",
+        "お願いします"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "Check-out"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "15": {
+      "jr": [
+       [
+        "O",
+        "タクシーを"
+       ],
+       [
+        "V",
+        "呼んでいただけますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could you call"
+       ],
+       [
+        "O",
+        "a taxi"
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "id": "home",
+    "jp": "家{いえ}",
+    "en": "At home and around the flat",
+    "note": "Rubbish goes out on set days by type. Shoes come off at the 玄関 without exception.",
+    "items": "ごみ は 何曜日{なんようび} に 出{だ}しますか|Which day does the rubbish go out?\n靴{くつ} を 脱{ぬ}いで ください|Please take your shoes off\nお邪魔{じゃま} します|Sorry to intrude (on entering a home)\nただいま|I'm home\nお帰{かえ}り なさい|Welcome home\nトイレ を 借{か}りても いいですか|May I use the toilet?\nお風呂{ふろ} が 沸{わ}きました|The bath is ready",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "ごみは"
+       ],
+       [
+        "T",
+        "何曜日に"
+       ],
+       [
+        "V",
+        "出しますか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "Which day"
+       ],
+       [
+        "V",
+        "does"
+       ],
+       [
+        "O",
+        "the rubbish"
+       ],
+       [
+        "V",
+        "go out"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "靴を"
+       ],
+       [
+        "V",
+        "脱いでください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please take"
+       ],
+       [
+        "O",
+        "your shoes"
+       ],
+       [
+        "V",
+        "off"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "V",
+        "お邪魔します"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Sorry to intrude (on entering a home)"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "V",
+        "ただいま"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm home"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "V",
+        "お帰りなさい"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Welcome home"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "O",
+        "トイレを"
+       ],
+       [
+        "V",
+        "借りてもいいですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "May I use"
+       ],
+       [
+        "O",
+        "the toilet"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "W",
+        "お風呂が"
+       ],
+       [
+        "V",
+        "沸きました"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "The bath"
+       ],
+       [
+        "V",
+        "is ready"
+       ]
+      ]
+     }
+    }
    }
   ],
   "sb": [
@@ -2686,6 +4743,641 @@
        [
         "P",
         "a doctor"
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "id": "symptoms",
+    "jp": "症状{しょうじょう}",
+    "en": "Describing symptoms",
+    "note": "Clinics ask where it hurts and since when. Point and say ここが痛いです if the words run out.",
+    "items": "ここ が 痛{いた}い です|It hurts here\n頭{あたま} が 痛{いた}い です|I have a headache\nお腹{なか} が 痛{いた}い です|I have a stomach ache\n喉{のど} が 痛{いた}い です|I have a sore throat\n熱{ねつ} が あります|I have a fever\nせき が 出{で}ます|I have a cough\n鼻水{はなみず} が 出{で}ます|I have a runny nose\n気持{きも}ち が 悪{わる}い です|I feel sick\nめまい が します|I feel dizzy\n昨日{きのう} から です|Since yesterday\n三日前{みっかまえ} から です|For three days\nアレルギー が あります|I have an allergy\n___ アレルギー が あります|I'm allergic to ___\nよく 眠{ねむ}れません|I can't sleep well\n足{あし} を ひねりました|I twisted my ankle\n血{ち} が 止{と}まりません|The bleeding won't stop",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "P",
+        "ここが"
+       ],
+       [
+        "V",
+        "痛いです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "It hurts"
+       ],
+       [
+        "P",
+        "here"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "W",
+        "頭が"
+       ],
+       [
+        "V",
+        "痛いです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "a headache"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "W",
+        "お腹が"
+       ],
+       [
+        "V",
+        "痛いです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "a stomach ache"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "W",
+        "喉が"
+       ],
+       [
+        "V",
+        "痛いです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "a sore throat"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "W",
+        "熱が"
+       ],
+       [
+        "V",
+        "あります"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "a fever"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "W",
+        "せきが"
+       ],
+       [
+        "V",
+        "出ます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "a cough"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "W",
+        "鼻水が"
+       ],
+       [
+        "V",
+        "出ます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "W",
+        "a runny nose"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "V",
+        "気持ちが悪いです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I feel sick"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "W",
+        "めまいが"
+       ],
+       [
+        "V",
+        "します"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I feel"
+       ],
+       [
+        "W",
+        "dizzy"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "T",
+        "昨日から"
+       ],
+       [
+        "V",
+        "です"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "Since yesterday"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "T",
+        "三日前から"
+       ],
+       [
+        "V",
+        "です"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "For three days"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "O",
+        "アレルギーが"
+       ],
+       [
+        "V",
+        "あります"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "O",
+        "an allergy"
+       ]
+      ]
+     },
+     "12": {
+      "jr": [
+       [
+        "O",
+        "___アレルギーが"
+       ],
+       [
+        "V",
+        "あります"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm allergic to"
+       ],
+       [
+        "O",
+        "___"
+       ]
+      ]
+     },
+     "13": {
+      "jr": [
+       [
+        "H",
+        "よく"
+       ],
+       [
+        "V",
+        "眠れません"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I can't sleep"
+       ],
+       [
+        "H",
+        "well"
+       ]
+      ]
+     },
+     "14": {
+      "jr": [
+       [
+        "O",
+        "足を"
+       ],
+       [
+        "V",
+        "ひねりました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I twisted"
+       ],
+       [
+        "O",
+        "my ankle"
+       ]
+      ]
+     },
+     "15": {
+      "jr": [
+       [
+        "W",
+        "血が"
+       ],
+       [
+        "V",
+        "止まりません"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "The bleeding"
+       ],
+       [
+        "V",
+        "won't stop"
+       ]
+      ]
+     }
+    },
+    "words": "卵{たまご}|egg\n小麦{こむぎ}|wheat\nそば|buckwheat\nナッツ|nut"
+   },
+   {
+    "id": "pharmacy",
+    "jp": "薬局{やっきょく}",
+    "en": "At the pharmacy and clinic",
+    "note": "Most medicines need no prescription at a 薬局 or ドラッグストア. Ask for the pharmacist (薬剤師) for anything stronger.",
+    "items": "風邪薬{かぜぐすり} は ありますか|Do you have cold medicine?\n頭痛薬{ずつうやく} を ください|Some headache tablets, please\n痛{いた}み止{ど}め は ありますか|Do you have painkillers?\nこの 薬{くすり} は どう 飲{の}みますか|How do I take this medicine?\n一日{いちにち} 何回{なんかい} 飲{の}みますか|How many times a day do I take it?\n副作用{ふくさよう} は ありますか|Are there side effects?\nばんそうこう を ください|Some plasters, please\n近{ちか}く に 病院{びょういん} は ありますか|Is there a hospital nearby?\n予約{よやく} を したい です|I'd like to make an appointment\n保険証{ほけんしょう} を 持{も}って います|I have my health insurance card\n英語{えいご} が 話{はな}せる 医者{いしゃ} は いますか|Is there a doctor who speaks English?\n診断書{しんだんしょ} を お願{ねが}い できますか|Could I have a medical certificate?",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "風邪薬は"
+       ],
+       [
+        "V",
+        "ありますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "O",
+        "cold medicine"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "頭痛薬を"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "Some headache tablets"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "痛み止めは"
+       ],
+       [
+        "V",
+        "ありますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you have"
+       ],
+       [
+        "O",
+        "painkillers"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "O",
+        "この薬は"
+       ],
+       [
+        "H",
+        "どう"
+       ],
+       [
+        "V",
+        "飲みますか"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "How"
+       ],
+       [
+        "V",
+        "do I take"
+       ],
+       [
+        "O",
+        "this medicine"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "T",
+        "一日何回"
+       ],
+       [
+        "V",
+        "飲みますか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "How many times a day"
+       ],
+       [
+        "V",
+        "do I take it"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "W",
+        "副作用は"
+       ],
+       [
+        "V",
+        "ありますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Are there"
+       ],
+       [
+        "W",
+        "side effects"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "O",
+        "ばんそうこうを"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "Some plasters"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "P",
+        "近くに"
+       ],
+       [
+        "W",
+        "病院は"
+       ],
+       [
+        "V",
+        "ありますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Is there"
+       ],
+       [
+        "W",
+        "a hospital"
+       ],
+       [
+        "P",
+        "nearby"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "O",
+        "予約を"
+       ],
+       [
+        "V",
+        "したいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'd like to make"
+       ],
+       [
+        "O",
+        "an appointment"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "O",
+        "保険証を"
+       ],
+       [
+        "V",
+        "持っています"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "O",
+        "my health insurance card"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "H",
+        "英語が話せる医者は"
+       ],
+       [
+        "V",
+        "いますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Is there"
+       ],
+       [
+        "H",
+        "a doctor who speaks English"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "O",
+        "診断書を"
+       ],
+       [
+        "V",
+        "お願いできますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could I have"
+       ],
+       [
+        "O",
+        "a medical certificate"
        ]
       ]
      }
@@ -2861,6 +5553,498 @@
        [
         "P",
         "the embassy"
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "id": "lost",
+    "jp": "なくし物{もの}",
+    "en": "Lost and stolen",
+    "note": "Japan hands in lost property to the 交番 (police box) or the station office. Report losses there first.",
+    "items": "財布{さいふ} を なくしました|I've lost my wallet\nパスポート を なくしました|I've lost my passport\n電車{でんしゃ} に かばん を 忘{わす}れました|I left my bag on the train\n忘{わす}れ物{もの} 取扱所{とりあつかいじょ} は どこ ですか|Where's the lost property office?\nスマホ を 盗{ぬす}まれました|My phone was stolen\n交番{こうばん} は どこ ですか|Where's the police box?\n黒{くろ}い かばん です|It's a black bag\nさっき まで ありました|I had it a moment ago\n届{とど}いて いませんか|Has it been handed in?\n見{み}つかったら 連絡{れんらく} して ください|Please contact me if it turns up\n大使館{たいしかん} に 連絡{れんらく} したい です|I'd like to contact my embassy",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "財布を"
+       ],
+       [
+        "V",
+        "なくしました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I've lost"
+       ],
+       [
+        "O",
+        "my wallet"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "パスポートを"
+       ],
+       [
+        "V",
+        "なくしました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I've lost"
+       ],
+       [
+        "O",
+        "my passport"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "P",
+        "電車に"
+       ],
+       [
+        "O",
+        "かばんを"
+       ],
+       [
+        "V",
+        "忘れました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I left"
+       ],
+       [
+        "O",
+        "my bag"
+       ],
+       [
+        "P",
+        "on the train"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "O",
+        "忘れ物取扱所は"
+       ],
+       [
+        "P",
+        "どこ"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "'s"
+       ],
+       [
+        "O",
+        "the lost property office"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "スマホを"
+       ],
+       [
+        "V",
+        "盗まれました"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "My phone"
+       ],
+       [
+        "V",
+        "was stolen"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "P",
+        "交番は"
+       ],
+       [
+        "P",
+        "どこ"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "'s"
+       ],
+       [
+        "P",
+        "the police box"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "O",
+        "黒いかばん"
+       ],
+       [
+        "V",
+        "です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "It's"
+       ],
+       [
+        "O",
+        "a black bag"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "T",
+        "さっきまで"
+       ],
+       [
+        "V",
+        "ありました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I had it"
+       ],
+       [
+        "T",
+        "a moment ago"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "O",
+        "届いて"
+       ],
+       [
+        "V",
+        "いませんか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Has it been handed in"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "O",
+        "見つかったら"
+       ],
+       [
+        "V",
+        "連絡してください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please contact me"
+       ],
+       [
+        "O",
+        "if it turns up"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "O",
+        "大使館に"
+       ],
+       [
+        "V",
+        "連絡したいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'd like to contact"
+       ],
+       [
+        "O",
+        "my embassy"
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "id": "help",
+    "jp": "助{たす}けて",
+    "en": "Asking for help",
+    "note": "In an emergency, dial 119 for fire or ambulance and 110 for the police.",
+    "items": "助{たす}けて ください|Help me, please\n救急車{きゅうきゅうしゃ} を 呼{よ}んで ください|Please call an ambulance\n警察{けいさつ} を 呼{よ}んで ください|Please call the police\n火事{かじ} です|Fire!\n道{みち} に 迷{まよ}いました|I'm lost (I've lost my way)\n具合{ぐあい} が 悪{わる}い 人{ひと} が います|Someone here is unwell\n事故{じこ} が ありました|There's been an accident\n英語{えいご} が 話{はな}せる 人{ひと} は いますか|Is there anyone who speaks English?\nゆっくり 言{い}って ください|Please say it slowly\n地震{じしん} の とき は どこ に 逃{に}げますか|Where do we go in an earthquake?",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "V",
+        "助けてください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Help me, please"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "救急車を"
+       ],
+       [
+        "V",
+        "呼んでください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please call"
+       ],
+       [
+        "O",
+        "an ambulance"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "O",
+        "警察を"
+       ],
+       [
+        "V",
+        "呼んでください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please call"
+       ],
+       [
+        "O",
+        "the police"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "V",
+        "火事です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Fire!"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "W",
+        "道に"
+       ],
+       [
+        "V",
+        "迷いました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I've lost"
+       ],
+       [
+        "W",
+        "my way"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "W",
+        "具合が"
+       ],
+       [
+        "V",
+        "悪い人がいます"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "Someone here"
+       ],
+       [
+        "V",
+        "is unwell"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "W",
+        "事故が"
+       ],
+       [
+        "V",
+        "ありました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "There's been"
+       ],
+       [
+        "W",
+        "an accident"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "H",
+        "英語が話せる人は"
+       ],
+       [
+        "V",
+        "いますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Is there anyone"
+       ],
+       [
+        "H",
+        "who speaks English"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "H",
+        "ゆっくり"
+       ],
+       [
+        "V",
+        "言ってください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please say it"
+       ],
+       [
+        "H",
+        "slowly"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "O",
+        "地震のときは"
+       ],
+       [
+        "P",
+        "どこに"
+       ],
+       [
+        "V",
+        "逃げますか"
+       ]
+      ],
+      "er": [
+       [
+        "P",
+        "Where"
+       ],
+       [
+        "V",
+        "do we go"
+       ],
+       [
+        "O",
+        "in an earthquake"
        ]
       ]
      }
@@ -3148,6 +6332,402 @@
       ]
      }
     }
+   },
+   {
+    "id": "dates",
+    "jp": "日付{ひづけ}",
+    "en": "Dates, days and appointments",
+    "note": "Japanese dates run year, month, day: 2026年9月21日. Many shops close one weekday rather than Sunday.",
+    "items": "今日{きょう} は 何日{なんにち} ですか|What's the date today?\n誕生日{たんじょうび} は いつ ですか|When is your birthday?\n明日{あした} は 空{あ}いて いますか|Are you free tomorrow?\n週末{しゅうまつ} は 何{なに} を しますか|What are you doing at the weekend?\n___時{じ} に 会{あ}いましょう|Let's meet at ___ o'clock\n何時{なんじ} が いい ですか|What time suits you?\n何時{なんじ} に 始{はじ}まりますか|What time does it start?\n何時{なんじ} に 終{お}わりますか|What time does it finish?\n何時{なんじ} まで 開{あ}いて いますか|How late are you open?\n定休日{ていきゅうび} は いつ ですか|Which day are you closed?\n来週{らいしゅう} の 月曜日{げつようび} は どう ですか|How about next Monday?\n予定{よてい} を 変{か}えても いいですか|Could we change the plan?\n少{すこ}し 遅{おく}れます|I'll be a little late\n五分{ごふん} ほど 待{ま}って ください|Please wait about five minutes\nもう 少{すこ}し で 着{つ}きます|I'm nearly there\n間{ま}に合{あ}いました|I made it in time\n毎週{まいしゅう} 何曜日{なんようび} ですか|Which day of the week is it?",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "T",
+        "今日は"
+       ],
+       [
+        "T",
+        "何日"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "What's the date"
+       ],
+       [
+        "T",
+        "today"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "T",
+        "誕生日は"
+       ],
+       [
+        "T",
+        "いつ"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "When"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "T",
+        "your birthday"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "T",
+        "明日は"
+       ],
+       [
+        "V",
+        "空いていますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Are you free"
+       ],
+       [
+        "T",
+        "tomorrow"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "T",
+        "週末は"
+       ],
+       [
+        "V",
+        "何をしますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "What are you doing"
+       ],
+       [
+        "T",
+        "at the weekend"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "T",
+        "___時に"
+       ],
+       [
+        "V",
+        "会いましょう"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Let's meet"
+       ],
+       [
+        "T",
+        "at ___ o'clock"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "H",
+        "何時が"
+       ],
+       [
+        "V",
+        "いいですか"
+       ]
+      ],
+      "er": [
+       [
+        "H",
+        "What time"
+       ],
+       [
+        "V",
+        "suits you"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "T",
+        "何時に"
+       ],
+       [
+        "V",
+        "始まりますか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "does it start"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "T",
+        "何時に"
+       ],
+       [
+        "V",
+        "終わりますか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "does it finish"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "T",
+        "何時まで"
+       ],
+       [
+        "V",
+        "開いていますか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "How late"
+       ],
+       [
+        "V",
+        "are you open"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "T",
+        "定休日は"
+       ],
+       [
+        "V",
+        "いつですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "Which day"
+       ],
+       [
+        "V",
+        "are you closed"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "T",
+        "来週の月曜日は"
+       ],
+       [
+        "V",
+        "どうですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "How about"
+       ],
+       [
+        "T",
+        "next Monday"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "O",
+        "予定を"
+       ],
+       [
+        "V",
+        "変えてもいいですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could we change"
+       ],
+       [
+        "O",
+        "the plan"
+       ]
+      ]
+     },
+     "12": {
+      "jr": [
+       [
+        "H",
+        "少し"
+       ],
+       [
+        "V",
+        "遅れます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'll be"
+       ],
+       [
+        "H",
+        "a little"
+       ],
+       [
+        "V",
+        "late"
+       ]
+      ]
+     },
+     "13": {
+      "jr": [
+       [
+        "T",
+        "五分ほど"
+       ],
+       [
+        "V",
+        "待ってください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please wait"
+       ],
+       [
+        "T",
+        "about five minutes"
+       ]
+      ]
+     },
+     "14": {
+      "jr": [
+       [
+        "T",
+        "もう少しで"
+       ],
+       [
+        "V",
+        "着きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm"
+       ],
+       [
+        "T",
+        "nearly"
+       ],
+       [
+        "V",
+        "there"
+       ]
+      ]
+     },
+     "15": {
+      "jr": [
+       [
+        "H",
+        "間に合いました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I made it in time"
+       ]
+      ]
+     },
+     "16": {
+      "jr": [
+       [
+        "T",
+        "毎週何曜日"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "Which day of the week"
+       ],
+       [
+        "V",
+        "is it"
+       ]
+      ]
+     }
+    },
+    "words": "六{ろく}|six\n七{しち}|seven\n八{はち}|eight"
    }
   ],
   "sb": [
@@ -3163,7 +6743,805 @@
   "jp": "仕事",
   "en": "Work and study",
   "blurb": "The office, meetings, tests and learning Japanese.",
-  "phr": [],
+  "phr": [
+   {
+    "id": "office",
+    "jp": "仕事{しごと}",
+    "en": "At work",
+    "note": "Business Japanese is polite by default. お疲れ様です works as hello, goodbye and thanks for your work.",
+    "items": "お疲{つか}れ様{さま} です|Thanks for your hard work (hello/goodbye at work)\nお先{さき} に 失礼{しつれい} します|Excuse me for leaving before you\n___ は いらっしゃいますか|Is ___ in?\nアレン と 申{もう}します|My name is Allen\n会議{かいぎ} は 何時{なんじ} から ですか|What time does the meeting start?\n資料{しりょう} を 送{おく}って いただけますか|Could you send me the documents?\n明日{あした} まで に できますか|Can it be done by tomorrow?\n少{すこ}し 遅{おく}れます|I'll be a little late\n確認{かくにん} して 折{お}り返{かえ}し ます|I'll check and call you back\n今{いま} よろしい ですか|Do you have a moment?\nもう 一度{いちど} 説明{せつめい} して いただけますか|Could you explain once more?\nメール で 連絡{れんらく} します|I'll get in touch by email\n私{わたし} が 担当{たんとう} します|I'll take care of it\nお名刺{めいし} を いただけますか|Could I have your business card?\n来週{らいしゅう} の 予定{よてい} は どう ですか|How's your schedule next week?\n今日{きょう} は 在宅勤務{ざいたくきんむ} です|I'm working from home today\nよろしく お願{ねが}い いたします|I look forward to working with you (formal)\nご迷惑{めいわく} を おかけ しました|I'm sorry for the trouble I caused",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "V",
+        "お疲れ様です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Thanks for your hard work (hello/goodbye at work)"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "V",
+        "お先に失礼します"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Excuse me for leaving before you"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "W",
+        "___は"
+       ],
+       [
+        "V",
+        "いらっしゃいますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "___"
+       ],
+       [
+        "V",
+        "in"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "W",
+        "アレンと"
+       ],
+       [
+        "V",
+        "申します"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "My name is"
+       ],
+       [
+        "W",
+        "Allen"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "会議は"
+       ],
+       [
+        "T",
+        "何時から"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "does"
+       ],
+       [
+        "O",
+        "the meeting"
+       ],
+       [
+        "V",
+        "start"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "O",
+        "資料を"
+       ],
+       [
+        "V",
+        "送っていただけますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could you send me"
+       ],
+       [
+        "O",
+        "the documents"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "T",
+        "明日までに"
+       ],
+       [
+        "V",
+        "できますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Can it be done"
+       ],
+       [
+        "T",
+        "by tomorrow"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "H",
+        "少し"
+       ],
+       [
+        "V",
+        "遅れます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'll be"
+       ],
+       [
+        "H",
+        "a little"
+       ],
+       [
+        "V",
+        "late"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "O",
+        "確認して"
+       ],
+       [
+        "V",
+        "折り返します"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "I'll check"
+       ],
+       [
+        "V",
+        "and call you back"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "T",
+        "今"
+       ],
+       [
+        "V",
+        "よろしいですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Do you have a moment"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "H",
+        "もう一度"
+       ],
+       [
+        "V",
+        "説明していただけますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could you explain"
+       ],
+       [
+        "H",
+        "once more"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "O",
+        "メールで"
+       ],
+       [
+        "V",
+        "連絡します"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'll get in touch"
+       ],
+       [
+        "O",
+        "by email"
+       ]
+      ]
+     },
+     "12": {
+      "jr": [
+       [
+        "W",
+        "私が"
+       ],
+       [
+        "V",
+        "担当します"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "I"
+       ],
+       [
+        "V",
+        "'ll take care of it"
+       ]
+      ]
+     },
+     "13": {
+      "jr": [
+       [
+        "O",
+        "お名刺を"
+       ],
+       [
+        "V",
+        "いただけますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could I have"
+       ],
+       [
+        "O",
+        "your business card"
+       ]
+      ]
+     },
+     "14": {
+      "jr": [
+       [
+        "T",
+        "来週の予定は"
+       ],
+       [
+        "V",
+        "どうですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "How's"
+       ],
+       [
+        "O",
+        "your schedule"
+       ],
+       [
+        "T",
+        "next week"
+       ]
+      ]
+     },
+     "15": {
+      "jr": [
+       [
+        "W",
+        "今日は"
+       ],
+       [
+        "V",
+        "在宅勤務です"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm working from home"
+       ],
+       [
+        "T",
+        "today"
+       ]
+      ]
+     },
+     "16": {
+      "jr": [
+       [
+        "V",
+        "よろしくお願いいたします"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I look forward to working with you (formal)"
+       ]
+      ]
+     },
+     "17": {
+      "jr": [
+       [
+        "H",
+        "ご迷惑を"
+       ],
+       [
+        "V",
+        "おかけしました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm sorry"
+       ],
+       [
+        "H",
+        "for the trouble I caused"
+       ]
+      ]
+     }
+    },
+    "words": "田中{たなか}さん|Mr or Ms Tanaka\n部長{ぶちょう}|the manager\n社長{しゃちょう}|the company president"
+   },
+   {
+    "id": "study",
+    "jp": "勉強{べんきょう}",
+    "en": "At school and studying",
+    "note": "Teachers are 先生 whatever the subject. Asking questions in class is welcome, but usually after the lesson.",
+    "items": "質問{しつもん} が あります|I have a question\nこの 言葉{ことば} の 意味{いみ} を 教{おし}えて ください|Please tell me what this word means\nゆっくり 話{はな}して いただけますか|Could you speak slowly?\nここ を 読{よ}んで ください|Please read this part\n宿題{しゅくだい} は 何{なん} ですか|What's the homework?\n試験{しけん} は いつ ですか|When is the exam?\nノート を 見{み}せて もらえますか|Could I see your notes?\nこの 漢字{かんじ} の 読{よ}み方{かた} が 分{わ}かりません|I don't know how to read this kanji\n毎日{まいにち} 日本語{にほんご} を 勉強{べんきょう} して います|I study Japanese every day\n日本語学校{にほんごがっこう} に 通{かよ}って います|I go to a Japanese language school\nJLPT の N4 を 受{う}けます|I'm taking the JLPT N4\n合格{ごうかく} し たい です|I want to pass\n間違{まちが}い を 直{なお}して ください|Please correct my mistakes\nもっと 例文{れいぶん} を ください|More example sentences, please\n図書館{としょかん} は 何時{なんじ} まで ですか|What time is the library open until?\nこの 本{ほん} を 借{か}りたい です|I'd like to borrow this book\n分{わ}かりました|I understand now",
+    "marks": {
+     "0": {
+      "jr": [
+       [
+        "O",
+        "質問が"
+       ],
+       [
+        "V",
+        "あります"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I have"
+       ],
+       [
+        "O",
+        "a question"
+       ]
+      ]
+     },
+     "1": {
+      "jr": [
+       [
+        "O",
+        "この言葉の意味を"
+       ],
+       [
+        "V",
+        "教えてください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please tell me"
+       ],
+       [
+        "O",
+        "what this word means"
+       ]
+      ]
+     },
+     "2": {
+      "jr": [
+       [
+        "H",
+        "ゆっくり"
+       ],
+       [
+        "V",
+        "話していただけますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could you speak"
+       ],
+       [
+        "H",
+        "slowly"
+       ]
+      ]
+     },
+     "3": {
+      "jr": [
+       [
+        "O",
+        "ここを"
+       ],
+       [
+        "V",
+        "読んでください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please read"
+       ],
+       [
+        "O",
+        "this part"
+       ]
+      ]
+     },
+     "4": {
+      "jr": [
+       [
+        "O",
+        "宿題は"
+       ],
+       [
+        "V",
+        "何ですか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "What's"
+       ],
+       [
+        "O",
+        "the homework"
+       ]
+      ]
+     },
+     "5": {
+      "jr": [
+       [
+        "W",
+        "試験は"
+       ],
+       [
+        "T",
+        "いつ"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "When"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "the exam"
+       ]
+      ]
+     },
+     "6": {
+      "jr": [
+       [
+        "O",
+        "ノートを"
+       ],
+       [
+        "V",
+        "見せてもらえますか"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Could I see"
+       ],
+       [
+        "O",
+        "your notes"
+       ]
+      ]
+     },
+     "7": {
+      "jr": [
+       [
+        "O",
+        "この漢字の読み方が"
+       ],
+       [
+        "V",
+        "分かりません"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I don't know how to read"
+       ],
+       [
+        "O",
+        "this kanji"
+       ]
+      ]
+     },
+     "8": {
+      "jr": [
+       [
+        "T",
+        "毎日"
+       ],
+       [
+        "O",
+        "日本語を"
+       ],
+       [
+        "V",
+        "勉強しています"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I study"
+       ],
+       [
+        "O",
+        "Japanese"
+       ],
+       [
+        "T",
+        "every day"
+       ]
+      ]
+     },
+     "9": {
+      "jr": [
+       [
+        "P",
+        "日本語学校に"
+       ],
+       [
+        "V",
+        "通っています"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I go"
+       ],
+       [
+        "P",
+        "to a Japanese language school"
+       ]
+      ]
+     },
+     "10": {
+      "jr": [
+       [
+        "W",
+        "JLPTのN4を"
+       ],
+       [
+        "V",
+        "受けます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm taking"
+       ],
+       [
+        "W",
+        "the JLPT N4"
+       ]
+      ]
+     },
+     "11": {
+      "jr": [
+       [
+        "V",
+        "合格したいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I want to pass"
+       ]
+      ]
+     },
+     "12": {
+      "jr": [
+       [
+        "O",
+        "間違いを"
+       ],
+       [
+        "V",
+        "直してください"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Please correct"
+       ],
+       [
+        "O",
+        "my mistakes"
+       ]
+      ]
+     },
+     "13": {
+      "jr": [
+       [
+        "O",
+        "もっと例文を"
+       ],
+       [
+        "V",
+        "ください"
+       ]
+      ],
+      "er": [
+       [
+        "O",
+        "More example sentences"
+       ],
+       [
+        "V",
+        "please"
+       ]
+      ]
+     },
+     "14": {
+      "jr": [
+       [
+        "W",
+        "図書館は"
+       ],
+       [
+        "T",
+        "何時まで"
+       ],
+       [
+        "V",
+        "ですか"
+       ]
+      ],
+      "er": [
+       [
+        "T",
+        "What time"
+       ],
+       [
+        "V",
+        "is"
+       ],
+       [
+        "W",
+        "the library"
+       ],
+       [
+        "V",
+        "open until"
+       ]
+      ]
+     },
+     "15": {
+      "jr": [
+       [
+        "O",
+        "この本を"
+       ],
+       [
+        "V",
+        "借りたいです"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'd like to borrow"
+       ],
+       [
+        "O",
+        "this book"
+       ]
+      ]
+     },
+     "16": {
+      "jr": [
+       [
+        "V",
+        "分かりました"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I understand now"
+       ]
+      ]
+     }
+    }
+   }
+  ],
   "sb": [
    "t10"
   ],

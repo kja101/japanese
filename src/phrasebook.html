@@ -146,12 +146,16 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 @media (max-width:620px){.rd-legend .rdl{display:none}}
 .rd-legend{max-width:960px}
 
+.tosb{max-width:1000px;margin:.8rem auto 0;padding:0 1.25rem}
+#main .tosb{padding:0;margin:.9rem 0 0}
+.tosb a{display:inline-block;color:var(--indigo);font-weight:600;text-decoration:none;border:1px solid var(--rule);border-radius:8px;padding:.5rem .8rem;background:var(--sheet)}
+.tosb:empty{display:none}
 </style>
 </head>
 <body>
 <header class="top">
   <h1>旅の会話帳</h1>
-  <p class="sub">An interactive phrasebook: 285 phrases and 1,465 sentences in 14 situations, from greetings to emergencies. Colours show each part's job, as in the key. Tap a grey particle to see what it does, or a kanji to open it in the kanji deck (Back brings you straight back here). Phrases with a slot take a word: tap one of the words under them. Star anything you want to keep.</p>
+  <p class="sub">An interactive phrasebook: __PHRASES__ phrases in 14 situations, each linked to its sentences in the sentence builder, from greetings to emergencies. Colours show each part's job, as in the key. Tap a grey particle to see what it does, or a kanji to open it in the kanji deck (Back brings you straight back here). Phrases with a slot take a word: tap one of the words under them. Star anything you want to keep.</p>
 </header>
 <div class="controls">
   <div class="controls-inner">
@@ -169,6 +173,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
   <div class="keybar" aria-label="Block colours"><span style="--c:var(--rW)">WHO / TOPIC<small>は・が</small></span><span style="--c:var(--rT)">TIME<small>に</small></span><span style="--c:var(--rP)">PLACE<small>で・に・へ・から・まで</small></span><span style="--c:var(--rH)">HOW / WITH<small>と・で</small></span><span style="--c:var(--rO)">WHAT<small>を</small></span><span style="--c:var(--rV)">VERB / です</span><span style="--c:var(--rQ)">QUESTION<small>か</small></span><span class="kp">particle<small>tap one</small></span></div>
   <nav class="topics" id="nav"></nav>
 </div>
+<div class="tosb" id="moresb"></div>
 <main id="main"></main>
 <footer><p>Grammar blocks colour each part of a sentence by its job: <b style="color:var(--rW)">who or topic</b>, <b style="color:var(--rT)">time</b>, <b style="color:var(--rP)">place</b>, <b style="color:var(--rH)">how or with</b>, <b style="color:var(--rO)">what</b>, <b style="color:var(--rV)">verb</b> and <b style="color:var(--rQ)">question</b>. The same colours mark the English, so you can see how the order changes between the two languages. Stars and settings are saved in this browser only.</p></footer>
 <script src="../assets/common.js"></script>
@@ -176,6 +181,10 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 
 
 const CH = __DATA__;
+const SENTS = __SENTS__;   // [situation, id, searchable text] for every sentence in the sentence builder
+let SENT_KEYS=null;
+const sentKeys=()=>SENT_KEYS||(SENT_KEYS=SENTS.map(([t,id,s])=>[t,id,jpSearchKey(s+" "+krRomaji(s.replace(/[^\u3041-\u30ff\s]/g,"")))]));
+const sbLink=(q,extra)=>`sentence-builder.html?from=pb${q?"&q="+encodeURIComponent(q):""}${extra||""}`;
 const BASE={あ:"a",い:"i",う:"u",え:"e",お:"o",か:"ka",き:"ki",く:"ku",け:"ke",こ:"ko",さ:"sa",し:"shi",す:"su",せ:"se",そ:"so",た:"ta",ち:"chi",つ:"tsu",て:"te",と:"to",な:"na",に:"ni",ぬ:"nu",ね:"ne",の:"no",は:"ha",ひ:"hi",ふ:"fu",へ:"he",ほ:"ho",ま:"ma",み:"mi",む:"mu",め:"me",も:"mo",や:"ya",ゆ:"yu",よ:"yo",ら:"ra",り:"ri",る:"ru",れ:"re",ろ:"ro",わ:"wa",を:"o",ん:"n",が:"ga",ぎ:"gi",ぐ:"gu",げ:"ge",ご:"go",ざ:"za",じ:"ji",ず:"zu",ぜ:"ze",ぞ:"zo",だ:"da",ぢ:"ji",づ:"zu",で:"de",ど:"do",ば:"ba",び:"bi",ぶ:"bu",べ:"be",ぼ:"bo",ぱ:"pa",ぴ:"pi",ぷ:"pu",ぺ:"pe",ぽ:"po",ゔ:"vu","、":", ","。":". "};
 const SY={ゃ:"a",ゅ:"u",ょ:"o"}, SV={ぁ:"a",ぃ:"i",ぅ:"u",ぇ:"e",ぉ:"o"};
 const toH=s=>s.replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
@@ -275,15 +284,18 @@ function sentBlock(c){
   return `<div class="blk sents"><h3>Sentences <small>${c.sents.length}</small></h3><div class="legend-b"><span style="--c:var(--rW)">WHO / TOPIC</span><span style="--c:var(--rT)">TIME</span><span style="--c:var(--rP)">PLACE</span><span style="--c:var(--rH)">HOW / WITH</span><span style="--c:var(--rO)">WHAT</span><span style="--c:var(--rV)">VERB</span><span style="--c:var(--rQ)">QUESTION</span></div>${c.sents.map((s,i)=>i<12?sentItem(s):sentItem(s).replace('<div class="it"','<div class="it extra"')).join("")}${c.sents.length>12?`<button class="moresents" data-moresents>Show all ${c.sents.length} sentences</button>`:""}</div>`;
 }
 const main=document.getElementById("main");
-function allItems(){ const out=[]; CH.forEach(c=>{ c.phr.forEach(sec=>sec.items.trim().split("\n").forEach((l,i)=>{ const [jp,en,tag=""]=l.split("|"); out.push({kind:"p",sec,i,p:{jp,en,tag},id:`p:${sec.id}:${i}`,c}); })); c.sents.forEach(s=>out.push({kind:"s",s,id:s.id,c})); }); return out; }
+function allItems(){ const out=[]; CH.forEach(c=>{ c.phr.forEach(sec=>sec.items.trim().split("\n").forEach((l,i)=>{ const [jp,en,tag=""]=l.split("|"); out.push({kind:"p",sec,i,p:{jp,en,tag},id:`p:${sec.id}:${i}`,c}); })); }); return out; }
 function render(){
   if(state.view==="mine"){
     const mine=allItems().filter(x=>STARS.has(x.id));
+    const starredSents=[...STARS].filter(id=>!id.startsWith("p:")).length;
+    const sentNote=starredSents?`<div class="tosb"><a href="${sbLink("","&starred=1")}">★ Your ${starredSents} starred sentence${starredSents>1?"s are":" is"} in the sentence builder →</a></div>`:"";
     main.innerHTML=mine.length?CH.filter(c=>mine.some(x=>x.c===c)).map((c,i)=>`<section class="ch" id="ch-${c.id}"><div class="chead"><div class="cnum">★</div><h2><span class="jp">${esc(c.jp)}</span>${esc(c.en)}</h2><div class="cnt">${mine.filter(x=>x.c===c).length} starred</div></div><div class="blk">${mine.filter(x=>x.c===c).map(x=>x.kind==="p"?phraseItem(x.sec.id,x.i,x.p,null,null):sentItem(x.s)).join("")}</div></section>`).join("")
-      :`<div class="empty">Nothing starred yet. Tap the ★ next to any phrase or sentence to add it here.</div>`;
+      :(sentNote?"":`<div class="empty">Nothing starred yet. Tap the ★ next to any phrase here, or any sentence in the sentence builder.</div>`);
+    main.innerHTML=sentNote+main.innerHTML;
   } else {
     main.innerHTML=CH.map((c,i)=>{ const n=c.phr.reduce((a,s)=>a+s.items.trim().split("\n").length,0);
-      return `<section class="ch" id="ch-${c.id}"><div class="chead"><div class="cnum">${i+1}</div><h2><span class="jp">${esc(c.jp)}</span>${esc(c.en)}</h2><div class="cnt">${n?`${n} phrases`:""}${n&&c.sents.length?" · ":""}${c.sents.length?`${c.sents.length} sentences`:""}</div><p>${esc(c.blurb)}</p></div>${c.phr.map(phraseBlock).join("")}${sentBlock(c)}</section>`; }).join("");
+      return `<section class="ch" id="ch-${c.id}"><div class="chead"><div class="cnum">${i+1}</div><h2><span class="jp">${esc(c.jp)}</span>${esc(c.en)}</h2><div class="cnt">${n?`${n} phrases`:""}</div><p>${esc(c.blurb)}</p></div>${c.phr.map(phraseBlock).join("")}${c.sn?`<div class="tosb"><a href="sentence-builder.html?from=pb#${c.sit[0]}">${c.sn} sentences about this in the sentence builder, by level and with the grammar explained →</a></div>`:""}</section>`; }).join("");
   }
   document.getElementById("nav").innerHTML=CH.map(c=>`<a href="#ch-${c.id}"><span class="j">${esc(c.jp)}</span>${esc(c.en)}</a>`).join("");
   apply(); doSearch(); linkKana(main);
@@ -297,7 +309,10 @@ function apply(){
   ["view","script","romaji","blocks","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset[k]===state[k])));
 }
 function doSearch(){
-  const q=document.getElementById("search").value.trim().toLowerCase();
+  const raw=document.getElementById("search").value.trim(), q=raw.toLowerCase();
+  const more=document.getElementById("moresb");
+  if(more){ if(!raw) more.innerHTML=""; else { const k=jpSearchKey(raw); const n=sentKeys().filter(x=>x[2].includes(k)).length;
+    more.innerHTML=n?`<a href="${sbLink(raw)}">${n} sentence${n>1?"s":""} with “${esc(raw)}” in the sentence builder →</a>`:""; } }
   document.body.classList.toggle("searching",!!q);
   document.querySelectorAll(".it").forEach(x=>x.style.display=!q||x.dataset.s.includes(q)?"":"none");
   document.querySelectorAll(".blk").forEach(b=>{ const its=b.querySelectorAll(".it"); b.style.display=!q||[...its].some(x=>x.style.display!=="none")?"":"none"; });

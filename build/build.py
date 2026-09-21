@@ -539,14 +539,17 @@ for c in chapters:
                         for i, m in sec.get("marks", {}).items()}
         for m in sec["marks"].values():
             m.pop("n", None); m.pop("en", None)
-for c in chapters:
-    c["sents"] = [s for t in c.pop("sb") for s in SB.get(t, [])] + [s for t in c.pop("extra") for s in EXTRA.get(t, [])]
+for c in chapters:                                   # sentences now live in the sentence builder; point at them
+    _sitmap = load("situation.json")["sb_map"]
+    c["sit"] = list(dict.fromkeys(list(c.pop("extra")) + [_sitmap.get(t, t) for t in c.pop("sb")]))
     c.pop("_count_check", None)
-write("words/phrasebook.html", fill("phrasebook.html", DATA=dump(chapters), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
+PB_CHAPTERS = chapters
+
 
 # ---------------------------------------------------------------- sentence builder
 def builder_sections():
-    """One set of topics: the builder's own sentences first in each, then every other marked sentence."""
+    """One set of topics: the builder's own sentences first in each, then every other marked sentence.
+    Every sentence keeps the id the phrasebook used, so stars carry over."""
     LV, NOTE = kanji["LV"], NOTE_RE
     def level(text):
         ks = [c for c in text if "\u4e00" <= c <= "\u9fff"]
@@ -554,21 +557,29 @@ def builder_sections():
     sit = load("situation.json")
     topics = {t["id"]: {"id": t["id"], "title": t["en"], "jp": t["jp"], "blurb": t["blurb"], "sents": []} for t in sit["topics"]}
     order = [t["id"] for t in sit["topics"]]
-    for t in load("sentences-builder.json"):                 # the 120 core sentences, in their topic's slot
-        tid = sit["sb_map"].get(t["id"], t["id"])
-        for s in t["sents"]:
-            s = dict(s); s["enb"] = english_blocks(" ".join(x[1] for x in s["enc"]), s["enc"]); s.pop("enc")
+    for btid, sents in SB.items():                            # the 120 core sentences, in their topic's slot
+        tid = sit["sb_map"].get(btid, btid)
+        for s in sents:
+            s = {k: s[k] for k in ("id", "kj", "kn", "rj", "roles", "en", "enb", "why") if k in s}
             s["lv"] = level("".join(s["kj"])); s["core"] = True
             topics[tid]["sents"].append(s)
     for s in extra:                                           # everything else, in the same topics
-        r = mark({k: v for k, v in s.items() if k in ("n", "en", "why", "jr", "er")})
+        r = mark({k: v for k, v in s.items() if k in ("id", "n", "en", "why", "jr", "er")})
         r["lv"] = level(NOTE.sub(r"\1", s["n"]))
         topics.setdefault(s["topic"], {"id": s["topic"], "title": "More sentences", "jp": "", "blurb": "", "sents": []})["sents"].append(r)
     for t in topics.values():                                 # core sentences first, then the rest
         t["sents"].sort(key=lambda s: (not s.get("core"), -s["lv"]))
     return [topics[i] for i in order if topics[i]["sents"]] + [t for i, t in topics.items() if i not in order and t["sents"]]
 
-write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, DATA=dump(builder_sections())))
+_sections = builder_sections()
+_by_sit = {t["id"]: t for t in _sections}
+for c in PB_CHAPTERS:
+    c["sn"] = sum(len(_by_sit[t]["sents"]) for t in c["sit"] if t in _by_sit)
+_sent_index = [[t["id"], s["id"], (" ".join(s["kj"]) + " " + " ".join(s["kn"]) if s.get("kj") else NOTE_RE.sub(r"\1", s["n"]) + " " + NOTE_RE.sub(r"\2", s["n"])) + " " + s["en"]]
+               for t in _sections for s in t["sents"]]
+_nphr = sum(len(s["items"].strip().split("\n")) for c in PB_CHAPTERS for s in c["phr"])
+write("words/phrasebook.html", fill("phrasebook.html", DATA=dump(PB_CHAPTERS), SENTS=dump(_sent_index), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, PHRASES=f"{_nphr:,}"))
+write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, DATA=dump(_sections)))
 
 # ---------------------------------------------------------------- study plan
 write("kanji/learn.html", fill("study.html", DATA=dump(study_data())))
