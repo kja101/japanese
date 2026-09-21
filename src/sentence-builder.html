@@ -237,18 +237,8 @@ body{background:var(--bg);color:var(--ink)}
   cb.setAttribute('aria-pressed',on?'true':'false');
   if(typeof setBlocks==="function") setBlocks(on);   // shared with the other sentence pages
  });
- window.doSearch=function(){
-  var v=q.value.trim().toLowerCase();
-  if(!v){b.classList.remove('filtering','empty');
-   [].forEach.call(document.querySelectorAll('.off'),function(e){e.classList.remove('off')});return;}
-  b.classList.add('filtering');var any=false;
-  [].forEach.call(document.querySelectorAll('.card:not(.key)'),function(c){
-   var hit=false;
-   [].forEach.call(c.querySelectorAll('.sent'),function(s){
-    var m=s.dataset.s.indexOf(v)>-1;s.classList.toggle('off',!m);if(m)hit=true;});
-   c.classList.toggle('off',!hit);if(hit)any=true;});
-  b.classList.toggle('empty',!any);
- };
+ var searchTimer=null;
+ window.doSearch=function(){ clearTimeout(searchTimer); searchTimer=setTimeout(function(){ if(window.render) window.render(); },180); };
  q.addEventListener('input',window.doSearch);
 })();
 </script><script src="../assets/common.js"></script>
@@ -303,21 +293,37 @@ const saveStars=()=>{ try{ localStorage.setItem("phrasebook-stars",JSON.stringif
 const PARAMS=new URLSearchParams(location.search);
 let onlyStarred=PARAMS.get("starred")==="1";
 if(PARAMS.get("q")) tier=2;             // a search from the phrasebook looks at every level
-function render(){
-  const out=[],toc=[];
-  D.forEach(sec=>{
-    const ss=sec.sents.filter(s=>s.lv>=tier&&(!onlyStarred||STARS.has(s.id)));
-    if(!ss.length) return;
-    toc.push(`<a href="#${sec.id}">${esc(sec.title)}<span>${esc(sec.jp)} · ${ss.length}</span></a>`);
-    out.push(`<section class="card" id="${sec.id}"><header class="card-head"><h2>${esc(sec.title)}<span class="jp">${esc(sec.jp)}</span></h2>${sec.blurb?`<p class="blurb">${esc(sec.blurb)}</p>`:""}</header>
-      <div class="sents">${ss.map((s,i)=>sentHtml(s,i+1)).join("")}</div></section>`);
-  });
-  document.getElementById("sents").innerHTML=out.join("");
-  document.getElementById("toc").innerHTML=toc.join("");
-  document.querySelectorAll(".sent").forEach((s,i)=>s.dataset.idx=i);
-  linkKanaWords(document.querySelectorAll(".lay-kanji"),KANA_WORDS,"../kana/","sb");
-  doSearch();
+// Pages with thousands of sentences are too much for a phone to lay out at once (iOS can crash when an option
+// changes). So each situation is drawn only as you approach it; searching filters the data, not the page.
+let SEC=[], io=null, idxBase=0;
+const sKey=s=>s._k||(s._k=jpSearchKey((s.en||"")+" "+(s.kj?s.kj.join("")+" "+s.kn.join("")+" "+(s.rj||[]).join(" "):jpPlainOf(s.n)+" "+jpKanaOf(s.n)+" "+jpRomajiLineOf(s))));
+function fillSection(i){
+  const box=document.querySelector(`.sents[data-i="${i}"]`); if(!box||box.dataset.filled) return;
+  const r0=box.getBoundingClientRect(), above=r0.bottom<=1;
+  box.innerHTML=SEC[i].ss.map((s,j)=>sentHtml(s,j+1)).join(""); box.dataset.filled="1"; box.style.minHeight="";
+  box.querySelectorAll(".sent").forEach((el,j)=>el.dataset.idx=i*10000+j);
+  linkKanaWords(box.querySelectorAll(".lay-kanji"),KANA_WORDS,"../kana/","sb");
+  if(above){ const d=box.getBoundingClientRect().height-r0.height; if(d) window.scrollBy(0,d); }
 }
+function render(){
+  const qv=(document.getElementById("q").value||"").trim(), qk=qv?jpSearchKey(qv):"";
+  SEC=[]; const toc=[];
+  D.forEach(sec=>{
+    const ss=sec.sents.filter(s=>s.lv>=tier&&(!onlyStarred||STARS.has(s.id))&&(!qk||sKey(s).includes(qk)));
+    if(!ss.length) return;
+    SEC.push({sec,ss});
+    toc.push(`<a href="#${sec.id}">${esc(sec.title)}<span>${esc(sec.jp)} · ${ss.length}</span></a>`);
+  });
+  document.getElementById("sents").innerHTML=SEC.map(({sec,ss},i)=>`<section class="card" id="${sec.id}"><header class="card-head"><h2>${esc(sec.title)}<span class="jp">${esc(sec.jp)}</span></h2>${sec.blurb?`<p class="blurb">${esc(sec.blurb)}</p>`:""}</header>
+      <div class="sents" data-i="${i}" style="min-height:${ss.length*210}px"></div></section>`).join("");
+  document.getElementById("toc").innerHTML=toc.join("");
+  document.body.classList.toggle("filtering",!!qk); document.body.classList.toggle("empty",!!qk&&!SEC.length);
+  if(io) io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) fillSection(+e.target.dataset.i); }),{rootMargin:"1500px 0px"});
+  document.querySelectorAll(".sents[data-i]").forEach(el=>io.observe(el));
+  if(SEC.length) fillSection(0);
+}
+window.render=render;
 document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{ tier=+b.dataset.tier; try{localStorage.setItem("sb-tier",tier);}catch(e){}
   document.querySelectorAll("[data-tier]").forEach(x=>x.setAttribute("aria-pressed",+x.dataset.tier===tier)); render(); });
 document.querySelectorAll("[data-tier]").forEach(x=>x.setAttribute("aria-pressed",+x.dataset.tier===tier));
@@ -331,11 +337,16 @@ syncStarBtn();
 render();
 (function(){   // arriving from the phrasebook: a way back, and the right situation on screen
   const src=PARAMS.get("from");
-  if(src==="pb"){ const b=document.createElement("button"); b.className="backbtn"; b.textContent="← Back to the phrasebook"; document.body.appendChild(b);
-    b.onclick=()=>{ if(history.length>1) history.back(); else location.href="phrasebook.html"; }; }
+  const back={pb:["← Back to the phrasebook","phrasebook.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src];
+  if(back){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=back[0]; document.body.appendChild(b);
+    b.onclick=()=>{ if(history.length>1) history.back(); else location.href=back[1]; }; }
   const id=location.hash.slice(1); if(!id) return;
-  const go=()=>{ const el=document.getElementById(id); if(!el) return; const bar=document.querySelector(".bar"); window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(bar?bar.offsetHeight:0)-8); };
-  setTimeout(go,60); setTimeout(go,400);
+  const go=()=>{ const el=document.getElementById(id); if(!el) return; const box=el.querySelector(".sents[data-i]"); if(box) fillSection(+box.dataset.i);
+    const bar=document.querySelector(".bar"); window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(bar?bar.offsetHeight:0)-8); };
+  // sections fill in as they come near, which moves things: settle a few times, and stop the moment you touch
+  const timers=[60,300,700,1200,2000].map(t=>setTimeout(go,t));
+  const stop=()=>timers.forEach(clearTimeout);
+  ["touchstart","wheel","keydown","mousedown"].forEach(ev=>window.addEventListener(ev,stop,{passive:true,once:true}));
 })();
 initParticlePopup();
 

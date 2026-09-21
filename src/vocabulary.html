@@ -162,22 +162,38 @@ function openForms(w,hi){
   const v=D.find(x=>x.w===w); if(!v) return;
   d.querySelector(".ftab").innerHTML=formsTable(v,hi); d.open=true; d.dataset.filled="1";
 }
+// 4,000+ cards are too much for a phone to lay out at once, so each group is drawn only as you reach it,
+// and the level and search filter the data rather than hiding thousands of cards.
+let GROUPS=[], io=null;
+const vKey=v=>v._k||(v._k=jpSearchKey(jpSearchable(v.w,v.r,krRomaji(v.r),v.en,v.ex?(v.ex.n?jpPlainOf(v.ex.n):(v.ex.kj||[]).join("")):"",v.ex?v.ex.en:"")));
+function fillGroup(i){
+  const box=document.querySelector(`.cards[data-g="${i}"]`); if(!box||box.dataset.filled) return;
+  const r0=box.getBoundingClientRect(), above=r0.bottom<=1;
+  box.innerHTML=GROUPS[i].items.map(card).join(""); box.dataset.filled="1"; box.style.minHeight="";
+  linkKanaWords(box.querySelectorAll(".ex .j"),KANA_WORDS,"../kana/","vo");
+  if(above){ const d=box.getBoundingClientRect().height-r0.height; if(d) window.scrollBy(0,d); }
+}
 function render(){
-  let list=D.slice();
+  const q=jpSearchKey(document.getElementById("search").value).trim(), t=+state.tier;
+  let list=D.filter(v=>q?vKey(v).includes(q):v.l>=t);            // a search looks at every level
   if(onlyKanji) list=list.filter(v=>v.w.includes(onlyKanji));
   const fb=document.getElementById("filterbar");
   if(onlyKanji){ fb.hidden=false; fb.innerHTML=`Words containing <b>${esc(onlyKanji)}</b> · <span class="count">${list.length}</span> · <a href="#" id="clearfilter">show all words</a>`; }
   else fb.hidden=true;
-  const groups=state.view==="type"
+  GROUPS=(state.view==="type"
     ? POS.map(([id,jp,en])=>({id,jp,en,items:list.filter(v=>v.pos===id)}))
-    : ROWS.map(([id,jp])=>({id,jp,en:"",items:list.filter(v=>v.row===id)}));
-  document.getElementById("main").innerHTML=groups.filter(g=>g.items.length).map(g=>
+    : ROWS.map(([id,jp])=>({id,jp,en:"",items:list.filter(v=>v.row===id)}))).filter(g=>g.items.length);
+  document.getElementById("main").innerHTML=GROUPS.map((g,i)=>
     `<section class="vgrp" id="g-${g.id}"><div class="ghead"><h3><span class="jp">${esc(g.jp)}</span>${esc(g.en)} <small class="gcount">${g.items.length} words</small></h3></div>
-     <div class="cards">${g.items.map(card).join("")}</div></section>`).join("")
-    +`<div class="noresult" id="noresult">Nothing matches that.</div>`;
-  document.getElementById("nav").innerHTML=groups.filter(g=>g.items.length&&document.getElementById("g-"+g.id)).map(g=>`<a href="#g-${g.id}"><span class="j">${esc(g.jp)}</span>${esc(g.en)}</a>`).join("");
-  apply(); doSearch();
-  linkKanaWords(document.querySelectorAll(".ex .j"),KANA_WORDS,"../kana/","vo");
+     <div class="cards" data-g="${i}" style="min-height:${Math.ceil(g.items.length/ (window.innerWidth>700?3:1))*190}px"></div></section>`).join("")
+    +`<div class="noresult${q&&!GROUPS.length?" show":""}" id="noresult">Nothing matches that.</div>`;
+  document.getElementById("nav").innerHTML=GROUPS.map(g=>`<a href="#g-${g.id}"><span class="j">${esc(g.jp)}</span>${esc(g.en)}</a>`).join("");
+  document.getElementById("elsewhere").innerHTML=jpElsewhere(document.getElementById("search").value,"vo","../","vo");
+  if(io) io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) fillGroup(+e.target.dataset.g); }),{rootMargin:"1500px 0px"});
+  document.querySelectorAll(".cards[data-g]").forEach(el=>io.observe(el));
+  if(GROUPS.length) fillGroup(0);
+  apply();
 }
 function apply(){
   document.body.classList.toggle("no-romaji",state.romaji==="off");
@@ -186,19 +202,11 @@ function apply(){
   document.querySelectorAll(".wc.shown").forEach(c=>c.classList.remove("shown"));
   ["view","tier","romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset[k]===state[k])));
 }
-function doSearch(){
-  const q=jpSearchKey(document.getElementById("search").value).trim(); let any=false;
-  const t=+state.tier;
-  document.querySelectorAll("section.vgrp").forEach(s=>{ let n=0;
-    s.querySelectorAll(".wc").forEach(c=>{ const hit=q?c.dataset.s.includes(q):+c.dataset.l>=t; c.style.display=hit?"":"none"; if(hit) n++; });
-    const gc=s.querySelector(".gcount"); if(gc) gc.textContent=n+" words";
-    s.style.display=n?"":"none"; if(n) any=true; });
-  document.getElementById("noresult").classList.toggle("show",!!q&&!any);
-  document.getElementById("elsewhere").innerHTML=jpElsewhere(document.getElementById("search").value,"vo","../","vo");
-}
+let searchTimer=null;
+function doSearch(){ clearTimeout(searchTimer); searchTimer=setTimeout(render,180); }
 document.getElementById("search").addEventListener("input",doSearch);
 document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{ state.view=b.dataset.view; save(); render(); window.scrollTo(0,0); });
-document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{ state.tier=b.dataset.tier; save(); apply(); doSearch(); });
+document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{ state.tier=b.dataset.tier; save(); render(); });
 ["romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); apply(); }));
 document.getElementById("main").addEventListener("click",e=>{ const c=e.target.closest(".wc"); if(c&&state.hide!=="none") c.classList.add("shown"); });
 document.getElementById("main").addEventListener("toggle",e=>{ const d=e.target; if(!d.matches||!d.matches("details.forms")||!d.open||d.dataset.filled) return;
@@ -220,7 +228,8 @@ initReturnLinks("vo-return",".wc","data-k","iflash");
   const w=decodeURIComponent(m[1]); const v=D.find(x=>x.w===w); if(!v) return;
   const hi=new URLSearchParams(location.search).get("f")||"";
   if(v.c) setTimeout(()=>openForms(w,hi),0);
-  if(v.l<+state.tier){ state.tier=String(v.l); save(); apply(); doSearch(); }
+  if(v.l<+state.tier){ state.tier=String(v.l); save(); render(); }
+  const gi=GROUPS.findIndex(g=>g.items.includes(v)); if(gi>=0) fillGroup(gi);
   const go=()=>{ const el=document.getElementById("w-"+w); if(!el) return; const c=document.querySelector(".controls");
     window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12); el.classList.remove("iflash"); void el.offsetWidth; el.classList.add("iflash"); };
   go(); setTimeout(go,150);

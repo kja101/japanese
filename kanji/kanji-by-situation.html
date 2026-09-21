@@ -179,6 +179,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 
 a.kl{color:inherit;text-decoration:none;cursor:pointer;border-radius:2px}
 a.kl:hover,a.kl:focus-visible,a.kl:active{background:rgba(127,127,127,.18)}
+a.moresents.tosb{display:inline-block;text-decoration:none;color:var(--indigo);font-weight:600}
 </style>
 <link rel="manifest" href="../manifest.webmanifest">
 <meta name="theme-color" content="#B3261E">
@@ -244,7 +245,7 @@ function chips(w,r,self){
     return [...s.k].length===1&&K[s.k]&&s.k!==self?`<a class="bdk bd-${s.t}" href="#k-${s.k}" data-jump="${s.k}" data-from="${self}" data-w="${esc(w)}">${inner}</a>`:`<span class="bdk bd-${s.t}${s.k===self?" self":""}">${inner}</span>`; }).join('<span class="op">+</span>')}</span>`;
 }
 // ---------- sentences ----------
-function sentHtml(s,i){ if(i>=6) s={...s,extra:true};
+function sentHtml(s,i){
   let jp, rj;
   const lk=linkDeck;   // every kanji in a sentence opens its card in the main deck
   const S=jpSentence(s,lk); jp=S.jp; rj=S.rom;
@@ -289,7 +290,7 @@ function card(x){
 function topicHtml(tp,i){
   const n=tp.groups.reduce((a,g)=>a+g.rows.length,0);
   return `<section class="topic" id="${tp.id}"><div class="thead"><div class="tnum">${i+1}</div><h2><span class="jp">${esc(tp.jp)}</span>${esc(tp.en)}</h2><div class="cnt">${n} kanji · ${tp.sents.length} sentences</div><p class="blurb">${esc(tp.blurb)}</p></div>
-    <details class="sents" open><summary>Sentences<span>${tp.sents.length}, using this situation's kanji</span></summary><ol class="sl">${tp.sents.map(sentHtml).join("")}</ol>${tp.sents.length>6?`<button class="moresents" data-more="${tp.id}">Show all ${tp.sents.length} sentences</button>`:""}</details>
+    <details class="sents" open><summary>Sentences<span>${tp.sents.length}, using this situation's kanji</span></summary><ol class="sl">${tp.sents.slice(0,8).map(sentHtml).join("")}</ol>${tp.sents.length>8?`<a class="moresents tosb" href="../words/sentence-builder.html?from=st#${tp.id}">All ${tp.sents.length} sentences in the sentence builder →</a>`:""}</details>
     ${tp.groups.map(g=>`<div class="grp"><h3>${esc(g.name)} <small>${g.rows.length}</small></h3><div class="cards">${g.rows.map(card).join("")}</div></div>`).join("")}
     ${tp.foot?`<p class="tfoot">${linkify(esc(tp.foot),"","")}</p>`:""}</section>`;
 }
