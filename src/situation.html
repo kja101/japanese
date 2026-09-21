@@ -237,7 +237,9 @@ function chips(w,r,self){
   if(segs.length<2) return "";
   const cls=t=>t==="on"?"rdv-on":t==="kun"?"rdv-kun":"rdv-sp";
   return `<span class="bd">${segs.map(s=>{ const inner=`<b>${esc(s.k)}</b><span class="rr ${cls(s.t)}">${esc(s.t==="on"?toKata(s.r):s.r)}</span><span class="rj">${romaji(s.r)}</span>`;
-    return [...s.k].length===1&&K[s.k]&&s.k!==self?`<a class="bdk bd-${s.t}" href="#k-${s.k}" data-jump="${s.k}" data-from="${self}" data-w="${esc(w)}">${inner}</a>`:`<span class="bdk bd-${s.t}${s.k===self?" self":""}">${inner}</span>`; }).join('<span class="op">+</span>')}</span>`;
+    return [...s.k].length===1&&K[s.k]&&s.k!==self?`<a class="bdk bd-${s.t}" href="#k-${s.k}" data-jump="${s.k}" data-from="${self}" data-w="${esc(w)}">${inner}</a>`
+      :([...s.k].length===1&&D.LV[s.k]&&s.k!==self?`<a class="bdk bd-${s.t}" href="master-kanji-shapes.html?from=st#k-${encodeURIComponent(s.k)}" title="Open ${s.k} in the kanji deck">${inner}</a>`
+      :`<span class="bdk bd-${s.t}${s.k===self?" self":""}">${inner}</span>`); }).join('<span class="op">+</span>')}</span>`;
 }
 // ---------- sentences ----------
 function sentHtml(s,i){
@@ -252,7 +254,7 @@ function sentHtml(s,i){
 // ---------- cards ----------
 const TAGNAME={tK:"kanji",tO:"kanji + kana",tC:"compounds only",tX:"rare",tR:"radical"};
 function wordLi(k){ return ([w,r,en,l])=>{ const multi=[...w].filter(c=>/[\u4e00-\u9fff]/.test(c)).length>1;
-  return `<li data-w="${esc(w)}"><span class="w">${linkify(rdWord(w,r,"ruby"),k,w)}</span>${sayBtn(r)}<span class="rj">${romaji(r)}</span> <span class="e">${esc(en)}</span>${l<5&&VT()<4?`<span class="lvb">N${l}</span>`:""}${multi?chips(w,r,k):""}</li>`; }; }
+  return `<li data-w="${esc(w)}"><span class="w">${linkify(rdWord(w,r,"ruby"),k,w)}</span>${sayBtn(r)}<span class="rj">${romaji(r)}</span> <span class="e">${linkify(esc(en),k,"")}</span>${l<5&&VT()<4?`<span class="lvb">N${l}</span>`:""}${multi?chips(w,r,k):""}</li>`; }; }
 function wordsBlock(k){
   const t=VT(), d=WV[k]; if(!d) return "";
   const rs=d.r.map(([tp,label,ws])=>({tp,label,v:ws.filter(z=>z[3]>=t).sort((a,b)=>b[3]-a[3])}));
@@ -268,17 +270,18 @@ function card(x){
   const t=rdTypeOf(x.w,x.r,x.k);
   const al=WV[x.k]&&WV[x.k].al;
   const pron=al?`<span class="pron ${al[2]==="on"?"rdv-on":"rdv-kun"}">${esc(al[1])}<span class="rj">${romaji(al[1])}</span></span>`:"";
-  const parts=x.atom?`<p class="atom">Indivisible: learn the shape whole.</p>`:`<div class="parts">${x.parts.map(([g,m,c,title,name])=>{ const inner=`<b>${esc(g)}</b><small>${esc(m)}</small><span class="tag ${c}" title="${esc(title)}">${esc(name)}</span>`; return K[g]&&g!==x.k?`<a class="part" href="#k-${g}" data-jump="${g}" data-from="${x.k}">${inner}</a>`:`<span class="part">${inner}</span>`; }).join('<span class="plus">+</span>')}</div>`;
+  const parts=x.atom?`<p class="atom">Indivisible: learn the shape whole.</p>`:`<div class="parts">${x.parts.map(([g,m,c,title,name])=>{ const inner=`<b>${esc(g)}</b><small>${esc(m)}</small><span class="tag ${c}" title="${esc(title)}">${esc(name)}</span>`; return K[g]&&g!==x.k?`<a class="part" href="#k-${g}" data-jump="${g}" data-from="${x.k}">${inner}</a>`
+      :(D.LV[g]&&g!==x.k?`<a class="part" href="master-kanji-shapes.html?from=st#k-${encodeURIComponent(g)}" title="Open ${g} in the kanji deck">${inner}</a>`:`<span class="part">${inner}</span>`); }).join('<span class="plus">+</span>')}</div>`;
   const s=[x.k,x.w,x.r,romaji(x.r),x.en,x.m,...(WV[x.k]?WV[x.k].r.flatMap(r=>r[2].map(z=>z[0]+z[1]+romaji(z[1])+z[2])):[])].join(" ").toLowerCase();
   return `<article class="kc" id="k-${x.k}" data-s="${esc(s)}" tabindex="-1">
     <div class="kh"><div class="gcol"><span class="g">${x.k}</span>${pron}</div>
       <div><div class="km">${esc(x.m)}</div>
-        <div class="anchor"><span class="w">${linkify(rdWord(x.w,x.r,"ruby"),x.k,x.w)}</span>${sayBtn(x.r)}<span class="rj">${romaji(x.r)}</span> <span class="e">${esc(x.en)}</span>${t?`<span class="rtag ${t}">${t==="sp"?"special":t}</span>`:""}</div></div>
+        <div class="anchor"><span class="w">${linkify(rdWord(x.w,x.r,"ruby"),x.k,x.w)}</span>${sayBtn(x.r)}<span class="rj">${romaji(x.r)}</span> <span class="e">${linkify(esc(x.en),x.k,"")}</span>${t?`<span class="rtag ${t}">${t==="sp"?"special":t}</span>`:""}</div></div>
       <span class="lvb">${LV[x.k]?"N"+LV[x.k]:"N1"}</span></div>
     ${parts}
-    <p class="story">${esc(x.story)}</p>
+    <p class="story">${linkify(esc(x.story),x.k,"")}</p>
     ${x.wild?`<p class="wild"><b>WHERE YOU MEET IT</b>${linkify(esc(x.wild),x.k,"")}</p>`:""}
-    ${x.ws?`<div class="wstat"><span class="tag ${x.ws[0]}">${esc(x.ws[1])}</span></div>`:""}
+    ${x.ws?`<div class="wstat"><span class="tag ${x.ws[0]}">${linkify(esc(x.ws[1]),x.k,"")}</span></div>`:""}
     ${wordsBlock(x.k)}
   </article>`;
 }

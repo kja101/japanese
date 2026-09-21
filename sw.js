@@ -2,7 +2,7 @@
 // Cache first: every page and script is saved on the device when this version installs, and served
 // from there instantly, online or off. A new version of the site arrives as a new worker, which saves
 // the new files together and then takes over, so a page and its scripts always match.
-const VERSION = "4a14f15e53";
+const VERSION = "74cf4cbbd2";
 const CACHE = "japanese-" + VERSION;
 const FILES = ["./","./index.html","./manifest.webmanifest","./assets/icons/icon-192.png","./assets/icons/icon-512.png","./assets/icons/icon-180.png","./assets/common.js","./assets/search-index.js","./kanji/master-kanji-shapes.html","./kanji/kanji-by-situation.html","./words/phrasebook.html","./words/sentence-builder.html","./kanji/learn.html","./kanji/learn-n5-n4.html","./words/vocabulary.html","./kana/kana-sounds.html","./kana/kana-words.html","./kana/katakana-words.html","./words/grammar.html","./assets/common.js?v=19d7a2d9ca","./assets/search-index.js?v=b277da361b"];
 self.addEventListener("install", e => {
