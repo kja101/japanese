@@ -59679,5 +59679,2238 @@
   ],
   "sp": [],
   "alone": null
+ },
+ "結": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ケツ",
+    "b": "けつ",
+    "words": [
+     [
+      "結婚",
+      "けっこん",
+      "marriage",
+      3
+     ],
+     [
+      "結果",
+      "けっか",
+      "result",
+      3
+     ],
+     [
+      "結婚式",
+      "けっこんしき",
+      "wedding",
+      3
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "むす.ぶ",
+    "b": "むす",
+    "words": [
+     [
+      "結ぶ",
+      "むすぶ",
+      "to tie",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "阪": {
+  "readings": [],
+  "sp": [
+   [
+    "大阪",
+    "おおさか",
+    "Osaka",
+    2
+   ]
+  ],
+  "alone": null
+ },
+ "張": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "チョウ",
+    "b": "ちょう",
+    "words": [
+     [
+      "出張",
+      "しゅっちょう",
+      "business trip",
+      3
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "は.る",
+    "b": "は",
+    "words": [
+     [
+      "頑張る",
+      "がんばる",
+      "to do your best",
+      3
+     ],
+     [
+      "張る",
+      "はる",
+      "to stretch, to put up",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "邪": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ジャ",
+    "b": "じゃ",
+    "words": [
+     [
+      "邪魔",
+      "じゃま",
+      "hindrance, in the way",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [
+   [
+    "風邪",
+    "かぜ",
+    "a cold",
+    2
+   ]
+  ],
+  "alone": null
+ },
+ "士": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "シ",
+    "b": "し",
+    "words": [
+     [
+      "兵士",
+      "へいし",
+      "soldier",
+      3
+     ],
+     [
+      "同士",
+      "どうし",
+      "fellow, companion",
+      3
+     ],
+     [
+      "富士山",
+      "ふじさん",
+      "Mount Fuji",
+      3
+     ],
+     [
+      "弁護士",
+      "べんごし",
+      "lawyer",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "丈": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ジョウ",
+    "b": "じょう",
+    "words": [
+     [
+      "大丈夫",
+      "だいじょうぶ",
+      "all right, OK",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "暇": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ひま",
+    "b": "ひま",
+    "words": [
+     [
+      "暇",
+      "ひま",
+      "free time",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "街": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ガイ",
+    "b": "がい",
+    "words": [
+     [
+      "商店街",
+      "しょうてんがい",
+      "shopping street",
+      3
+     ],
+     [
+      "旧市街",
+      "きゅうしがい",
+      "old town",
+      3
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "まち",
+    "b": "まち",
+    "words": [
+     [
+      "街",
+      "まち",
+      "town, streets",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "第": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ダイ",
+    "b": "だい",
+    "words": [
+     [
+      "第一章",
+      "だいいっしょう",
+      "chapter one",
+      3
+     ],
+     [
+      "次第",
+      "しだい",
+      "as soon as, depending on",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "的": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "テキ",
+    "b": "てき",
+    "words": [
+     [
+      "積極的",
+      "せっきょくてき",
+      "active, positive",
+      3
+     ],
+     [
+      "一般的",
+      "いっぱんてき",
+      "general, typical",
+      3
+     ],
+     [
+      "目的",
+      "もくてき",
+      "purpose",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "嬉": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "うれ.しい",
+    "b": "うれ",
+    "words": [
+     [
+      "嬉しい",
+      "うれしい",
+      "happy, glad",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "傘": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "かさ",
+    "b": "かさ",
+    "words": [
+     [
+      "傘",
+      "かさ",
+      "umbrella",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "撮": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "と.る",
+    "b": "と",
+    "words": [
+     [
+      "撮る",
+      "とる",
+      "to take (a photo)",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "飼": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "か.う",
+    "b": "か",
+    "words": [
+     [
+      "飼う",
+      "かう",
+      "to keep (a pet)",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "冗": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ジョウ",
+    "b": "じょう",
+    "words": [
+     [
+      "冗談",
+      "じょうだん",
+      "joke",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "節": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "セツ",
+    "b": "せつ",
+    "words": [
+     [
+      "季節",
+      "きせつ",
+      "season",
+      3
+     ],
+     [
+      "節約",
+      "せつやく",
+      "saving, economy",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "雷": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "かみなり",
+    "b": "かみなり",
+    "words": [
+     [
+      "雷",
+      "かみなり",
+      "thunder",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "興": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "キョウ",
+    "b": "きょう",
+    "words": [
+     [
+      "興味",
+      "きょうみ",
+      "interest",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "無": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ム",
+    "b": "む",
+    "words": [
+     [
+      "無料",
+      "むりょう",
+      "free of charge",
+      3
+     ],
+     [
+      "無理",
+      "むり",
+      "impossible, unreasonable",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "隣": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "となり",
+    "b": "となり",
+    "words": [
+     [
+      "隣",
+      "となり",
+      "next door, next to",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "釣": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "つ.る",
+    "b": "つ",
+    "words": [
+     [
+      "釣り",
+      "つり",
+      "fishing",
+      2
+     ],
+     [
+      "お釣り",
+      "おつり",
+      "change (money)",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "怪": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "あや.しい",
+    "b": "あや",
+    "words": [
+     [
+      "怪しい",
+      "あやしい",
+      "suspicious",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [
+   [
+    "怪我",
+    "けが",
+    "injury",
+    2
+   ]
+  ],
+  "alone": null
+ },
+ "我": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ガ",
+    "b": "が",
+    "words": [
+     [
+      "我慢",
+      "がまん",
+      "patience, putting up with",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [
+   [
+    "怪我",
+    "けが",
+    "injury",
+    2
+   ]
+  ],
+  "alone": null
+ },
+ "鮮": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "セン",
+    "b": "せん",
+    "words": [
+     [
+      "新鮮",
+      "しんせん",
+      "fresh",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "謝": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "シャ",
+    "b": "しゃ",
+    "words": [
+     [
+      "感謝",
+      "かんしゃ",
+      "gratitude",
+      3
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "あやま.る",
+    "b": "あやま",
+    "words": [
+     [
+      "謝る",
+      "あやまる",
+      "to apologise",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "弾": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ひ.く",
+    "b": "ひ",
+    "words": [
+     [
+      "弾く",
+      "ひく",
+      "to play (strings, piano)",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "誕": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "タン",
+    "b": "たん",
+    "words": [
+     [
+      "誕生日",
+      "たんじょうび",
+      "birthday",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "授": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ジュ",
+    "b": "じゅ",
+    "words": [
+     [
+      "授業",
+      "じゅぎょう",
+      "lesson, class",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "豚": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ぶた",
+    "b": "ぶた",
+    "words": [
+     [
+      "豚肉",
+      "ぶたにく",
+      "pork",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "壊": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "こわ.す",
+    "b": "こわ",
+    "words": [
+     [
+      "壊れる",
+      "こわれる",
+      "to break",
+      3
+     ],
+     [
+      "壊す",
+      "こわす",
+      "to break (something)",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "誰": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "だれ",
+    "b": "だれ",
+    "words": [
+     [
+      "誰",
+      "だれ",
+      "who",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "譲": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ゆず.る",
+    "b": "ゆず",
+    "words": [
+     [
+      "譲る",
+      "ゆずる",
+      "to give up (a seat), to hand over",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "岡": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "おか",
+    "b": "おか",
+    "words": [
+     [
+      "福岡",
+      "ふくおか",
+      "Fukuoka",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "挙": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "あ.げる",
+    "b": "あ",
+    "words": [
+     [
+      "挙げる",
+      "あげる",
+      "to raise, to give (an example)",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "故": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "コ",
+    "b": "こ",
+    "words": [
+     [
+      "事故",
+      "じこ",
+      "accident",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "鉛": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "エン",
+    "b": "えん",
+    "words": [
+     [
+      "鉛筆",
+      "えんぴつ",
+      "pencil",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "可": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "カ",
+    "b": "か",
+    "words": [
+     [
+      "許可",
+      "きょか",
+      "permission",
+      3
+     ],
+     [
+      "可能",
+      "かのう",
+      "possible",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "嫌": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "きら.う",
+    "b": "きら",
+    "words": [
+     [
+      "嫌い",
+      "きらい",
+      "dislike",
+      3
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "いや",
+    "b": "いや",
+    "words": [
+     [
+      "嫌",
+      "いや",
+      "unpleasant, no thanks",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "糖": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "トウ",
+    "b": "とう",
+    "words": [
+     [
+      "砂糖",
+      "さとう",
+      "sugar",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "態": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "タイ",
+    "b": "たい",
+    "words": [
+     [
+      "状態",
+      "じょうたい",
+      "condition, state",
+      2
+     ],
+     [
+      "態度",
+      "たいど",
+      "attitude",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "俳": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ハイ",
+    "b": "はい",
+    "words": [
+     [
+      "俳優",
+      "はいゆう",
+      "actor",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "壁": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "かべ",
+    "b": "かべ",
+    "words": [
+     [
+      "壁",
+      "かべ",
+      "wall",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "頑": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ガン",
+    "b": "がん",
+    "words": [
+     [
+      "頑張る",
+      "がんばる",
+      "to do your best",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "舎": {
+  "readings": [],
+  "sp": [
+   [
+    "田舎",
+    "いなか",
+    "the countryside",
+    2
+   ]
+  ],
+  "alone": null
+ },
+ "桜": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "さくら",
+    "b": "さくら",
+    "words": [
+     [
+      "桜",
+      "さくら",
+      "cherry blossom",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "眼": {
+  "readings": [],
+  "sp": [
+   [
+    "眼鏡",
+    "めがね",
+    "glasses",
+    2
+   ]
+  ],
+  "alone": null
+ },
+ "鏡": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "かがみ",
+    "b": "かがみ",
+    "words": [
+     [
+      "鏡",
+      "かがみ",
+      "mirror",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [
+   [
+    "眼鏡",
+    "めがね",
+    "glasses",
+    3
+   ]
+  ],
+  "alone": null
+ },
+ "宙": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "チュウ",
+    "b": "ちゅう",
+    "words": [
+     [
+      "宇宙",
+      "うちゅう",
+      "outer space",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "漏": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "も.れる",
+    "b": "も",
+    "words": [
+     [
+      "漏れる",
+      "もれる",
+      "to leak",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "盛": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "さか.ん",
+    "b": "さか",
+    "words": [
+     [
+      "盛ん",
+      "さかん",
+      "thriving, popular",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "従": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "したが.う",
+    "b": "したが",
+    "words": [
+     [
+      "従う",
+      "したがう",
+      "to follow, to obey",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "統": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "トウ",
+    "b": "とう",
+    "words": [
+     [
+      "伝統",
+      "でんとう",
+      "tradition",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "隊": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "タイ",
+    "b": "たい",
+    "words": [
+     [
+      "軍隊",
+      "ぐんたい",
+      "army",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "奈": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ナ",
+    "b": "な",
+    "words": [
+     [
+      "奈良",
+      "なら",
+      "Nara",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "避": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ヒ",
+    "b": "ひ",
+    "words": [
+     [
+      "避難",
+      "ひなん",
+      "evacuation, refuge",
+      2
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "さ.ける",
+    "b": "さ",
+    "words": [
+     [
+      "避ける",
+      "さける",
+      "to avoid",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "健": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ケン",
+    "b": "けん",
+    "words": [
+     [
+      "健康",
+      "けんこう",
+      "health",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "康": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "コウ",
+    "b": "こう",
+    "words": [
+     [
+      "健康",
+      "けんこう",
+      "health",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "検": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ケン",
+    "b": "けん",
+    "words": [
+     [
+      "検査",
+      "けんさ",
+      "inspection, test",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "旋": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "セン",
+    "b": "せん",
+    "words": [
+     [
+      "旋律",
+      "せんりつ",
+      "melody",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "姫": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ひめ",
+    "b": "ひめ",
+    "words": [
+     [
+      "姫路城",
+      "ひめじじょう",
+      "Himeji Castle",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "丁": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "テイ",
+    "b": "てい",
+    "words": [
+     [
+      "丁寧",
+      "ていねい",
+      "polite, careful",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "寧": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ネイ",
+    "b": "ねい",
+    "words": [
+     [
+      "丁寧",
+      "ていねい",
+      "polite, careful",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "締": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "し.める",
+    "b": "し",
+    "words": [
+     [
+      "締める",
+      "しめる",
+      "to tie, to fasten",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "粋": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "スイ",
+    "b": "すい",
+    "words": [
+     [
+      "純粋",
+      "じゅんすい",
+      "pure",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "芝": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "しば",
+    "b": "しば",
+    "words": [
+     [
+      "芝居",
+      "しばい",
+      "play, theatre",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "株": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "かぶ",
+    "b": "かぶ",
+    "words": [
+     [
+      "株",
+      "かぶ",
+      "shares, stock",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "義": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ギ",
+    "b": "ぎ",
+    "words": [
+     [
+      "講義",
+      "こうぎ",
+      "lecture",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "護": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ゴ",
+    "b": "ご",
+    "words": [
+     [
+      "介護",
+      "かいご",
+      "care, nursing",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "司": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "シ",
+    "b": "し",
+    "words": [
+     [
+      "上司",
+      "じょうし",
+      "boss",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "創": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ソウ",
+    "b": "そう",
+    "words": [
+     [
+      "創刊",
+      "そうかん",
+      "launch (a magazine)",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "羊": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ひつじ",
+    "b": "ひつじ",
+    "words": [
+     [
+      "羊",
+      "ひつじ",
+      "sheep",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "畑": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "はた",
+    "b": "はた",
+    "words": [
+     [
+      "畑",
+      "はたけ",
+      "field",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "貼": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "は.る",
+    "b": "は",
+    "words": [
+     [
+      "貼る",
+      "はる",
+      "to stick, to paste",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "盆": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ボン",
+    "b": "ぼん",
+    "words": [
+     [
+      "お盆",
+      "おぼん",
+      "tray, the Bon festival",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "案": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "アン",
+    "b": "あん",
+    "words": [
+     [
+      "案",
+      "あん",
+      "plan, idea",
+      3
+     ],
+     [
+      "案内",
+      "あんない",
+      "guidance",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "煮": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "に.る",
+    "b": "に",
+    "words": [
+     [
+      "煮る",
+      "にる",
+      "to simmer, to boil",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "秘": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ヒ",
+    "b": "ひ",
+    "words": [
+     [
+      "秘密",
+      "ひみつ",
+      "secret",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "密": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ミツ",
+    "b": "みつ",
+    "words": [
+     [
+      "秘密",
+      "ひみつ",
+      "secret",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "振": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ふ.る",
+    "b": "ふ",
+    "words": [
+     [
+      "振る",
+      "ふる",
+      "to wave, to shake",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "黙": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "だま.る",
+    "b": "だま",
+    "words": [
+     [
+      "黙る",
+      "だまる",
+      "to be silent",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "憩": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ケイ",
+    "b": "けい",
+    "words": [
+     [
+      "休憩",
+      "きゅうけい",
+      "a break",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "敵": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "テキ",
+    "b": "てき",
+    "words": [
+     [
+      "敵",
+      "てき",
+      "enemy",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "玄": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ゲン",
+    "b": "げん",
+    "words": [
+     [
+      "玄関",
+      "げんかん",
+      "entrance hall",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "身": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "シン",
+    "b": "しん",
+    "words": [
+     [
+      "身長",
+      "しんちょう",
+      "height",
+      3
+     ],
+     [
+      "自身",
+      "じしん",
+      "oneself",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "奏": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ソウ",
+    "b": "そう",
+    "words": [
+     [
+      "演奏",
+      "えんそう",
+      "performance (music)",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "控": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ひか.える",
+    "b": "ひか",
+    "words": [
+     [
+      "控える",
+      "ひかえる",
+      "to refrain, to cut down",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "救": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "キュウ",
+    "b": "きゅう",
+    "words": [
+     [
+      "救急車",
+      "きゅうきゅうしゃ",
+      "ambulance",
+      3
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "すく.う",
+    "b": "すく",
+    "words": [
+     [
+      "救う",
+      "すくう",
+      "to save",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "粧": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ショウ",
+    "b": "しょう",
+    "words": [
+     [
+      "化粧品",
+      "けしょうひん",
+      "cosmetics",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "拭": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ふ.く",
+    "b": "ふ",
+    "words": [
+     [
+      "拭く",
+      "ふく",
+      "to wipe",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "暖": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "あたた.かい",
+    "b": "あたた",
+    "words": [
+     [
+      "暖かい",
+      "あたたかい",
+      "warm",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "褒": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ほ.める",
+    "b": "ほ",
+    "words": [
+     [
+      "褒める",
+      "ほめる",
+      "to praise",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "踏": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "ふ.む",
+    "b": "ふ",
+    "words": [
+     [
+      "踏む",
+      "ふむ",
+      "to step on",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "訳": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ヤク",
+    "b": "やく",
+    "words": [
+     [
+      "通訳",
+      "つうやく",
+      "interpreter",
+      3
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "わけ",
+    "b": "わけ",
+    "words": [
+     [
+      "訳",
+      "わけ",
+      "reason",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "基": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "キ",
+    "b": "き",
+    "words": [
+     [
+      "基本",
+      "きほん",
+      "basics",
+      3
+     ]
+    ]
+   },
+   {
+    "t": "kun",
+    "label": "もと",
+    "b": "もと",
+    "words": [
+     [
+      "基づく",
+      "もとづく",
+      "to be based on",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "厳": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "きび.しい",
+    "b": "きび",
+    "words": [
+     [
+      "厳しい",
+      "きびしい",
+      "strict, severe",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "価": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "カ",
+    "b": "か",
+    "words": [
+     [
+      "物価",
+      "ぶっか",
+      "prices, cost of living",
+      3
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "趣": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "シュ",
+    "b": "しゅ",
+    "words": [
+     [
+      "趣味",
+      "しゅみ",
+      "hobby",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "免": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "メン",
+    "b": "めん",
+    "words": [
+     [
+      "免税",
+      "めんぜい",
+      "tax-free",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "箸": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "はし",
+    "b": "はし",
+    "words": [
+     [
+      "箸",
+      "はし",
+      "chopsticks",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "喉": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "のど",
+    "b": "のど",
+    "words": [
+     [
+      "喉",
+      "のど",
+      "throat",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "渇": {
+  "readings": [
+   {
+    "t": "kun",
+    "label": "かわ.く",
+    "b": "かわ",
+    "words": [
+     [
+      "渇く",
+      "かわく",
+      "to be thirsty",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "呂": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ロ",
+    "b": "ろ",
+    "words": [
+     [
+      "お風呂",
+      "おふろ",
+      "bath",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "弁": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "ベン",
+    "b": "べん",
+    "words": [
+     [
+      "弁護士",
+      "べんごし",
+      "lawyer",
+      2
+     ],
+     [
+      "弁当",
+      "べんとう",
+      "packed lunch",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "慢": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "マン",
+    "b": "まん",
+    "words": [
+     [
+      "我慢",
+      "がまん",
+      "patience, putting up with",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
+ },
+ "魔": {
+  "readings": [
+   {
+    "t": "on",
+    "label": "マ",
+    "b": "ま",
+    "words": [
+     [
+      "邪魔",
+      "じゃま",
+      "hindrance, in the way",
+      2
+     ]
+    ]
+   }
+  ],
+  "sp": [],
+  "alone": null
  }
 }

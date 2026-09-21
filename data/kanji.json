@@ -35548,6 +35548,2914 @@
    "traps": [],
    "leaves": "又隹",
    "n": 957
+  },
+  "結": {
+   "k": "結",
+   "m": "tie, bind; result",
+   "on": [
+    "ケツ",
+    "ケチ"
+   ],
+   "kun": [
+    "むす.ぶ",
+    "ゆ.う"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "糸",
+     "thread"
+    ],
+    [
+     "吉",
+     "good luck"
+    ]
+   ],
+   "story": "Thread tied round a lucky charm: to tie, and what the tie results in.",
+   "traps": [],
+   "leaves": "糸吉",
+   "n": 982
+  },
+  "阪": {
+   "k": "阪",
+   "m": "slope (Osaka)",
+   "on": [
+    "ハン"
+   ],
+   "kun": [
+    "さか"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "阝",
+     "hill"
+    ],
+    [
+     "反",
+     "against"
+    ]
+   ],
+   "story": "A hillside pushing against you: a slope. Mostly seen in 大阪.",
+   "traps": [],
+   "leaves": "阝反",
+   "n": 983
+  },
+  "張": {
+   "k": "張",
+   "m": "stretch; spread",
+   "on": [
+    "チョウ"
+   ],
+   "kun": [
+    "は.る"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "弓",
+     "bow"
+    ],
+    [
+     "長",
+     "long"
+    ]
+   ],
+   "story": "Pull a bow long: stretch it tight.",
+   "traps": [],
+   "leaves": "弓長",
+   "n": 984
+  },
+  "邪": {
+   "k": "邪",
+   "m": "wicked; harm",
+   "on": [
+    "ジャ"
+   ],
+   "kun": [
+    "よこしま"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "牙",
+     "fang"
+    ],
+    [
+     "阝",
+     "village"
+    ]
+   ],
+   "story": "A fang in the village: something wicked. 風邪 reads かぜ, a cold.",
+   "traps": [],
+   "leaves": "牙阝",
+   "n": 985
+  },
+  "士": {
+   "k": "士",
+   "m": "samurai; gentleman",
+   "on": [
+    "シ"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "十",
+     "ten"
+    ],
+    [
+     "一",
+     "one"
+    ]
+   ],
+   "story": "Ten over one: the one man worth ten. A samurai, a professional.",
+   "traps": [],
+   "leaves": "十一",
+   "n": 986
+  },
+  "丈": {
+   "k": "丈",
+   "m": "length; sturdy",
+   "on": [
+    "ジョウ"
+   ],
+   "kun": [
+    "たけ"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "一",
+     "one"
+    ],
+    [
+     "乂",
+     "crossed legs"
+    ]
+   ],
+   "story": "A measure laid across a standing figure: its length, and how sturdy it stands.",
+   "traps": [],
+   "leaves": "一乂",
+   "n": 987
+  },
+  "暇": {
+   "k": "暇",
+   "m": "free time",
+   "on": [
+    "カ"
+   ],
+   "kun": [
+    "ひま"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "日",
+     "day"
+    ],
+    [
+     "叚",
+     "borrowed"
+    ]
+   ],
+   "story": "A day borrowed back for yourself: free time.",
+   "traps": [],
+   "leaves": "日叚",
+   "n": 988
+  },
+  "街": {
+   "k": "街",
+   "m": "street; town",
+   "on": [
+    "ガイ",
+    "カイ"
+   ],
+   "kun": [
+    "まち"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "行",
+     "go"
+    ],
+    [
+     "圭",
+     "jewel mounds"
+    ]
+   ],
+   "story": "Walking between the mounds of houses: a street.",
+   "traps": [],
+   "leaves": "行圭",
+   "n": 989
+  },
+  "第": {
+   "k": "第",
+   "m": "ordinal prefix; No.",
+   "on": [
+    "ダイ"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "竹",
+     "bamboo"
+    ],
+    [
+     "弔",
+     "string"
+    ]
+   ],
+   "story": "Bamboo strips strung in order: first, second, third.",
+   "traps": [],
+   "leaves": "竹弔",
+   "n": 990
+  },
+  "的": {
+   "k": "的",
+   "m": "target; -like, -ic",
+   "on": [
+    "テキ"
+   ],
+   "kun": [
+    "まと"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "白",
+     "white"
+    ],
+    [
+     "勺",
+     "ladle"
+    ]
+   ],
+   "story": "A white spot scooped out on the board: the target.",
+   "traps": [],
+   "leaves": "白勺",
+   "n": 991
+  },
+  "嬉": {
+   "k": "嬉",
+   "m": "glad",
+   "on": [
+    "キ"
+   ],
+   "kun": [
+    "うれ.しい"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "女",
+     "woman"
+    ],
+    [
+     "喜",
+     "rejoice"
+    ]
+   ],
+   "story": "A woman rejoicing: glad.",
+   "traps": [],
+   "leaves": "女喜",
+   "n": 992
+  },
+  "傘": {
+   "k": "傘",
+   "m": "umbrella",
+   "on": [
+    "サン"
+   ],
+   "kun": [
+    "かさ"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "人",
+     "roof"
+    ],
+    [
+     "从",
+     "spokes"
+    ]
+   ],
+   "story": "An open roof over spokes: an umbrella.",
+   "traps": [],
+   "leaves": "人从",
+   "n": 993
+  },
+  "撮": {
+   "k": "撮",
+   "m": "take (a photo)",
+   "on": [
+    "サツ"
+   ],
+   "kun": [
+    "と.る"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "扌",
+     "hand"
+    ],
+    [
+     "最",
+     "most"
+    ]
+   ],
+   "story": "A hand grabbing the best moment: to take a photo.",
+   "traps": [],
+   "leaves": "扌最",
+   "n": 994
+  },
+  "飼": {
+   "k": "飼",
+   "m": "keep (an animal)",
+   "on": [
+    "シ"
+   ],
+   "kun": [
+    "か.う"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "食",
+     "food"
+    ],
+    [
+     "司",
+     "in charge"
+    ]
+   ],
+   "story": "The one in charge of the food: to keep an animal.",
+   "traps": [],
+   "leaves": "食司",
+   "n": 995
+  },
+  "冗": {
+   "k": "冗",
+   "m": "superfluous",
+   "on": [
+    "ジョウ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "冖",
+     "cover"
+    ],
+    [
+     "几",
+     "table"
+    ]
+   ],
+   "story": "A cover over an empty table: something extra, not needed.",
+   "traps": [],
+   "leaves": "冖几",
+   "n": 996
+  },
+  "節": {
+   "k": "節",
+   "m": "season; joint",
+   "on": [
+    "セツ",
+    "セチ"
+   ],
+   "kun": [
+    "ふし"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "竹",
+     "bamboo"
+    ],
+    [
+     "即",
+     "at once"
+    ]
+   ],
+   "story": "The joints on a bamboo stalk: sections, and seasons of the year.",
+   "traps": [],
+   "leaves": "竹即",
+   "n": 997
+  },
+  "雷": {
+   "k": "雷",
+   "m": "thunder",
+   "on": [
+    "ライ"
+   ],
+   "kun": [
+    "かみなり"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "雨",
+     "rain"
+    ],
+    [
+     "田",
+     "field"
+    ]
+   ],
+   "story": "Rain over the rice field and a crash overhead: thunder.",
+   "traps": [],
+   "leaves": "雨田",
+   "n": 998
+  },
+  "興": {
+   "k": "興",
+   "m": "interest; entertain",
+   "on": [
+    "コウ",
+    "キョウ"
+   ],
+   "kun": [
+    "おこ.る"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "同",
+     "same"
+    ],
+    [
+     "舁",
+     "lifting hands"
+    ]
+   ],
+   "story": "Many hands lifting together: things rise, interest stirs.",
+   "traps": [],
+   "leaves": "同舁",
+   "n": 999
+  },
+  "無": {
+   "k": "無",
+   "m": "nothing; without",
+   "on": [
+    "ム",
+    "ブ"
+   ],
+   "kun": [
+    "な.い"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "一",
+     "one"
+    ],
+    [
+     "灬",
+     "fire"
+    ]
+   ],
+   "story": "A tree burnt down to nothing by the fire.",
+   "traps": [],
+   "leaves": "一灬",
+   "n": 1000
+  },
+  "隣": {
+   "k": "隣",
+   "m": "next door",
+   "on": [
+    "リン"
+   ],
+   "kun": [
+    "となり"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "阝",
+     "village"
+    ],
+    [
+     "粦",
+     "will-o'-the-wisp"
+    ]
+   ],
+   "story": "The lights in the next village along: next door.",
+   "traps": [],
+   "leaves": "阝粦",
+   "n": 1001
+  },
+  "釣": {
+   "k": "釣",
+   "m": "fish (with a line)",
+   "on": [
+    "チョウ"
+   ],
+   "kun": [
+    "つ.る"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "金",
+     "metal"
+    ],
+    [
+     "勺",
+     "ladle"
+    ]
+   ],
+   "story": "A metal hook scooping a fish out: to fish.",
+   "traps": [],
+   "leaves": "金勺",
+   "n": 1002
+  },
+  "怪": {
+   "k": "怪",
+   "m": "suspicious; mystery",
+   "on": [
+    "カイ",
+    "ケ"
+   ],
+   "kun": [
+    "あや.しい"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "忄",
+     "heart"
+    ],
+    [
+     "圣",
+     "holy"
+    ]
+   ],
+   "story": "A holy thing that unsettles the heart: suspicious. 怪我 reads けが.",
+   "traps": [],
+   "leaves": "忄圣",
+   "n": 1003
+  },
+  "我": {
+   "k": "我",
+   "m": "I, self",
+   "on": [
+    "ガ"
+   ],
+   "kun": [
+    "われ",
+    "わ"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "手",
+     "hand"
+    ],
+    [
+     "戈",
+     "halberd"
+    ]
+   ],
+   "story": "A hand holding a halberd: me, defending myself. 怪我 reads けが.",
+   "traps": [],
+   "leaves": "手戈",
+   "n": 1004
+  },
+  "鮮": {
+   "k": "鮮",
+   "m": "fresh; vivid",
+   "on": [
+    "セン"
+   ],
+   "kun": [
+    "あざ.やか"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "魚",
+     "fish"
+    ],
+    [
+     "羊",
+     "sheep"
+    ]
+   ],
+   "story": "Fish and mutton straight from market: fresh.",
+   "traps": [],
+   "leaves": "魚羊",
+   "n": 1005
+  },
+  "謝": {
+   "k": "謝",
+   "m": "apologise; thank",
+   "on": [
+    "シャ"
+   ],
+   "kun": [
+    "あやま.る"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "言",
+     "words"
+    ],
+    [
+     "射",
+     "shoot"
+    ]
+   ],
+   "story": "Words fired straight at someone: an apology, or thanks.",
+   "traps": [],
+   "leaves": "言射",
+   "n": 1006
+  },
+  "弾": {
+   "k": "弾",
+   "m": "play (an instrument); bullet",
+   "on": [
+    "ダン"
+   ],
+   "kun": [
+    "ひ.く",
+    "たま"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "弓",
+     "bow"
+    ],
+    [
+     "単",
+     "single"
+    ]
+   ],
+   "story": "A single bowstring plucked: to play. Also a bullet.",
+   "traps": [],
+   "leaves": "弓単",
+   "n": 1007
+  },
+  "誕": {
+   "k": "誕",
+   "m": "birth",
+   "on": [
+    "タン"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "言",
+     "words"
+    ],
+    [
+     "延",
+     "extend"
+    ]
+   ],
+   "story": "Words stretched out in welcome: a birth.",
+   "traps": [],
+   "leaves": "言延",
+   "n": 1008
+  },
+  "授": {
+   "k": "授",
+   "m": "give; teach",
+   "on": [
+    "ジュ"
+   ],
+   "kun": [
+    "さず.ける"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "扌",
+     "hand"
+    ],
+    [
+     "受",
+     "receive"
+    ]
+   ],
+   "story": "A hand held out to be received: to give, to teach.",
+   "traps": [],
+   "leaves": "扌受",
+   "n": 1009
+  },
+  "豚": {
+   "k": "豚",
+   "m": "pig",
+   "on": [
+    "トン"
+   ],
+   "kun": [
+    "ぶた"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "月",
+     "meat"
+    ],
+    [
+     "豕",
+     "pig"
+    ]
+   ],
+   "story": "The meat animal: a pig.",
+   "traps": [],
+   "leaves": "月豕",
+   "n": 1010
+  },
+  "壊": {
+   "k": "壊",
+   "m": "break, destroy",
+   "on": [
+    "カイ"
+   ],
+   "kun": [
+    "こわ.す",
+    "こわ.れる"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "土",
+     "earth"
+    ],
+    [
+     "褱",
+     "bosom"
+    ]
+   ],
+   "story": "Earth crushing what you held close: to break.",
+   "traps": [],
+   "leaves": "土褱",
+   "n": 1011
+  },
+  "誰": {
+   "k": "誰",
+   "m": "who",
+   "on": [
+    "スイ"
+   ],
+   "kun": [
+    "だれ"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "言",
+     "words"
+    ],
+    [
+     "隹",
+     "bird"
+    ]
+   ],
+   "story": "Words chirped like a bird's call: who's there?",
+   "traps": [],
+   "leaves": "言隹",
+   "n": 1012
+  },
+  "譲": {
+   "k": "譲",
+   "m": "give way, hand over",
+   "on": [
+    "ジョウ"
+   ],
+   "kun": [
+    "ゆず.る"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "言",
+     "words"
+    ],
+    [
+     "襄",
+     "help"
+    ]
+   ],
+   "story": "Kind words and a helping hand: to give way.",
+   "traps": [],
+   "leaves": "言襄",
+   "n": 1013
+  },
+  "岡": {
+   "k": "岡",
+   "m": "hill",
+   "on": [
+    "コウ"
+   ],
+   "kun": [
+    "おか"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "冂",
+     "frame"
+    ],
+    [
+     "山",
+     "mountain"
+    ]
+   ],
+   "story": "A mountain inside a frame: a hill. Mostly in place names.",
+   "traps": [],
+   "leaves": "冂山",
+   "n": 1014
+  },
+  "挙": {
+   "k": "挙",
+   "m": "raise; hold (an event)",
+   "on": [
+    "キョ"
+   ],
+   "kun": [
+    "あ.げる"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "手",
+     "hand"
+    ],
+    [
+     "興",
+     "lift"
+    ]
+   ],
+   "story": "Hands lifted together: to raise.",
+   "traps": [],
+   "leaves": "手興",
+   "n": 1015
+  },
+  "故": {
+   "k": "故",
+   "m": "reason; the late",
+   "on": [
+    "コ"
+   ],
+   "kun": [
+    "ゆえ"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "古",
+     "old"
+    ],
+    [
+     "攵",
+     "strike"
+    ]
+   ],
+   "story": "An old blow still felt: the reason behind things.",
+   "traps": [],
+   "leaves": "古攵",
+   "n": 1016
+  },
+  "鉛": {
+   "k": "鉛",
+   "m": "lead (metal)",
+   "on": [
+    "エン"
+   ],
+   "kun": [
+    "なまり"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "金",
+     "metal"
+    ],
+    [
+     "㕣",
+     "marsh"
+    ]
+   ],
+   "story": "The dull metal from the marshes: lead.",
+   "traps": [],
+   "leaves": "金㕣",
+   "n": 1017
+  },
+  "可": {
+   "k": "可",
+   "m": "possible; approve",
+   "on": [
+    "カ"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "丁",
+     "nail"
+    ],
+    [
+     "口",
+     "mouth"
+    ]
+   ],
+   "story": "A mouth that nails down a yes: approved, possible.",
+   "traps": [],
+   "leaves": "丁口",
+   "n": 1018
+  },
+  "嫌": {
+   "k": "嫌",
+   "m": "dislike",
+   "on": [
+    "ケン",
+    "ゲン"
+   ],
+   "kun": [
+    "きら.う",
+    "いや"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "女",
+     "woman"
+    ],
+    [
+     "兼",
+     "both"
+    ]
+   ],
+   "story": "A woman made to do two things at once: dislike.",
+   "traps": [],
+   "leaves": "女兼",
+   "n": 1019
+  },
+  "糖": {
+   "k": "糖",
+   "m": "sugar",
+   "on": [
+    "トウ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "米",
+     "rice"
+    ],
+    [
+     "唐",
+     "Tang China"
+    ]
+   ],
+   "story": "Rice-sweet from far-off Tang: sugar.",
+   "traps": [],
+   "leaves": "米唐",
+   "n": 1020
+  },
+  "態": {
+   "k": "態",
+   "m": "condition; attitude",
+   "on": [
+    "タイ"
+   ],
+   "kun": [
+    "わざ"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "能",
+     "ability"
+    ],
+    [
+     "心",
+     "heart"
+    ]
+   ],
+   "story": "Ability plus heart: the state you're in.",
+   "traps": [],
+   "leaves": "能心",
+   "n": 1021
+  },
+  "俳": {
+   "k": "俳",
+   "m": "actor; haiku",
+   "on": [
+    "ハイ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "亻",
+     "person"
+    ],
+    [
+     "非",
+     "not"
+    ]
+   ],
+   "story": "A person who is not himself: an actor.",
+   "traps": [],
+   "leaves": "亻非",
+   "n": 1022
+  },
+  "壁": {
+   "k": "壁",
+   "m": "wall",
+   "on": [
+    "ヘキ"
+   ],
+   "kun": [
+    "かべ"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "辟",
+     "avoid"
+    ],
+    [
+     "土",
+     "earth"
+    ]
+   ],
+   "story": "Earth built up to keep things away: a wall.",
+   "traps": [],
+   "leaves": "辟土",
+   "n": 1023
+  },
+  "頑": {
+   "k": "頑",
+   "m": "stubborn",
+   "on": [
+    "ガン"
+   ],
+   "kun": [
+    "かたく"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "元",
+     "origin"
+    ],
+    [
+     "頁",
+     "head"
+    ]
+   ],
+   "story": "A head that sticks to its origins: stubborn. 頑張る: hang in there.",
+   "traps": [],
+   "leaves": "元頁",
+   "n": 1024
+  },
+  "舎": {
+   "k": "舎",
+   "m": "cottage",
+   "on": [
+    "シャ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "人",
+     "roof"
+    ],
+    [
+     "舌",
+     "tongue"
+    ]
+   ],
+   "story": "A roof over a talking household: a cottage. 田舎 reads いなか.",
+   "traps": [],
+   "leaves": "人舌",
+   "n": 1025
+  },
+  "桜": {
+   "k": "桜",
+   "m": "cherry tree",
+   "on": [
+    "オウ"
+   ],
+   "kun": [
+    "さくら"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "木",
+     "tree"
+    ],
+    [
+     "女",
+     "woman"
+    ]
+   ],
+   "story": "A tree dressed up like a woman: the cherry.",
+   "traps": [],
+   "leaves": "木女",
+   "n": 1026
+  },
+  "眼": {
+   "k": "眼",
+   "m": "eye",
+   "on": [
+    "ガン",
+    "ゲン"
+   ],
+   "kun": [
+    "まなこ"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "目",
+     "eye"
+    ],
+    [
+     "艮",
+     "stopping"
+    ]
+   ],
+   "story": "The eye stopped and staring. 眼鏡 reads めがね.",
+   "traps": [],
+   "leaves": "目艮",
+   "n": 1027
+  },
+  "鏡": {
+   "k": "鏡",
+   "m": "mirror",
+   "on": [
+    "キョウ"
+   ],
+   "kun": [
+    "かがみ"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "金",
+     "metal"
+    ],
+    [
+     "竟",
+     "finish"
+    ]
+   ],
+   "story": "Metal polished to a finish: a mirror.",
+   "traps": [],
+   "leaves": "金竟",
+   "n": 1028
+  },
+  "宙": {
+   "k": "宙",
+   "m": "mid-air; space",
+   "on": [
+    "チュウ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "宀",
+     "roof"
+    ],
+    [
+     "由",
+     "reason"
+    ]
+   ],
+   "story": "The roof over everything: space.",
+   "traps": [],
+   "leaves": "宀由",
+   "n": 1029
+  },
+  "漏": {
+   "k": "漏",
+   "m": "leak",
+   "on": [
+    "ロウ"
+   ],
+   "kun": [
+    "も.れる",
+    "も.る"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "氵",
+     "water"
+    ],
+    [
+     "屚",
+     "dripping roof"
+    ]
+   ],
+   "story": "Water from a dripping roof: to leak.",
+   "traps": [],
+   "leaves": "氵屚",
+   "n": 1030
+  },
+  "盛": {
+   "k": "盛",
+   "m": "heap up; flourish",
+   "on": [
+    "セイ",
+    "ジョウ"
+   ],
+   "kun": [
+    "も.る",
+    "さか.ん"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "成",
+     "become"
+    ],
+    [
+     "皿",
+     "dish"
+    ]
+   ],
+   "story": "A dish that becomes piled high: flourishing.",
+   "traps": [],
+   "leaves": "成皿",
+   "n": 1031
+  },
+  "従": {
+   "k": "従",
+   "m": "follow, obey",
+   "on": [
+    "ジュウ"
+   ],
+   "kun": [
+    "したが.う"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "彳",
+     "going"
+    ],
+    [
+     "从",
+     "two people"
+    ]
+   ],
+   "story": "One person walking after another: to follow.",
+   "traps": [],
+   "leaves": "彳从",
+   "n": 1032
+  },
+  "統": {
+   "k": "統",
+   "m": "unite; govern",
+   "on": [
+    "トウ"
+   ],
+   "kun": [
+    "す.べる"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "糸",
+     "thread"
+    ],
+    [
+     "充",
+     "fill"
+    ]
+   ],
+   "story": "Threads filling one bundle: to unite.",
+   "traps": [],
+   "leaves": "糸充",
+   "n": 1033
+  },
+  "隊": {
+   "k": "隊",
+   "m": "squad",
+   "on": [
+    "タイ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "阝",
+     "hill"
+    ],
+    [
+     "㒸",
+     "pig"
+    ]
+   ],
+   "story": "A pack moving over the hill: a squad.",
+   "traps": [],
+   "leaves": "阝㒸",
+   "n": 1034
+  },
+  "奈": {
+   "k": "奈",
+   "m": "what? (Nara)",
+   "on": [
+    "ナ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "大",
+     "big"
+    ],
+    [
+     "示",
+     "altar"
+    ]
+   ],
+   "story": "A big altar: used for Nara.",
+   "traps": [],
+   "leaves": "大示",
+   "n": 1035
+  },
+  "避": {
+   "k": "避",
+   "m": "avoid",
+   "on": [
+    "ヒ"
+   ],
+   "kun": [
+    "さ.ける"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "辶",
+     "road"
+    ],
+    [
+     "辟",
+     "avoid"
+    ]
+   ],
+   "story": "Turning off the road to avoid something.",
+   "traps": [],
+   "leaves": "辶辟",
+   "n": 1036
+  },
+  "健": {
+   "k": "健",
+   "m": "healthy",
+   "on": [
+    "ケン"
+   ],
+   "kun": [
+    "すこ.やか"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "亻",
+     "person"
+    ],
+    [
+     "建",
+     "build"
+    ]
+   ],
+   "story": "A person well built: healthy.",
+   "traps": [],
+   "leaves": "亻建",
+   "n": 1037
+  },
+  "康": {
+   "k": "康",
+   "m": "peace, health",
+   "on": [
+    "コウ"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "广",
+     "house"
+    ],
+    [
+     "隶",
+     "hand holding"
+    ]
+   ],
+   "story": "A house held in good order: at ease.",
+   "traps": [],
+   "leaves": "广隶",
+   "n": 1038
+  },
+  "検": {
+   "k": "検",
+   "m": "examine",
+   "on": [
+    "ケン"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "木",
+     "tree"
+    ],
+    [
+     "僉",
+     "all together"
+    ]
+   ],
+   "story": "All the timber checked together: to examine.",
+   "traps": [],
+   "leaves": "木僉",
+   "n": 1039
+  },
+  "旋": {
+   "k": "旋",
+   "m": "revolve",
+   "on": [
+    "セン"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "方",
+     "direction"
+    ],
+    [
+     "疋",
+     "foot"
+    ]
+   ],
+   "story": "Feet turning in every direction: to revolve.",
+   "traps": [],
+   "leaves": "方疋",
+   "n": 1040
+  },
+  "姫": {
+   "k": "姫",
+   "m": "princess",
+   "on": [
+    "キ"
+   ],
+   "kun": [
+    "ひめ"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "女",
+     "woman"
+    ],
+    [
+     "臣",
+     "retainer"
+    ]
+   ],
+   "story": "A woman with retainers: a princess.",
+   "traps": [],
+   "leaves": "女臣",
+   "n": 1041
+  },
+  "丁": {
+   "k": "丁",
+   "m": "polite; block; nail",
+   "on": [
+    "チョウ",
+    "テイ"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "一",
+     "one"
+    ],
+    [
+     "亅",
+     "hook"
+    ]
+   ],
+   "story": "A nail with a hooked tip. Also careful, as in 丁寧.",
+   "traps": [],
+   "leaves": "一亅",
+   "n": 1042
+  },
+  "寧": {
+   "k": "寧",
+   "m": "rather; courteous",
+   "on": [
+    "ネイ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "宀",
+     "roof"
+    ],
+    [
+     "丁",
+     "nail"
+    ]
+   ],
+   "story": "Peace under a roof, and everything nailed down neatly: courteous.",
+   "traps": [],
+   "leaves": "宀丁",
+   "n": 1043
+  },
+  "締": {
+   "k": "締",
+   "m": "tighten; close",
+   "on": [
+    "テイ"
+   ],
+   "kun": [
+    "し.める",
+    "し.まる"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "糸",
+     "thread"
+    ],
+    [
+     "帝",
+     "emperor"
+    ]
+   ],
+   "story": "Threads drawn tight by imperial order: to tighten.",
+   "traps": [],
+   "leaves": "糸帝",
+   "n": 1044
+  },
+  "粋": {
+   "k": "粋",
+   "m": "pure; stylish",
+   "on": [
+    "スイ"
+   ],
+   "kun": [
+    "いき"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "米",
+     "rice"
+    ],
+    [
+     "卆",
+     "nine-tenths"
+    ]
+   ],
+   "story": "Rice nine-tenths polished: pure.",
+   "traps": [],
+   "leaves": "米卆",
+   "n": 1045
+  },
+  "芝": {
+   "k": "芝",
+   "m": "lawn",
+   "on": [
+    "シ"
+   ],
+   "kun": [
+    "しば"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "艹",
+     "grass"
+    ],
+    [
+     "之",
+     "going"
+    ]
+   ],
+   "story": "Grass going everywhere: lawn. 芝居 is a play.",
+   "traps": [],
+   "leaves": "艹之",
+   "n": 1046
+  },
+  "株": {
+   "k": "株",
+   "m": "share (stock); stump",
+   "on": [
+    "シュ"
+   ],
+   "kun": [
+    "かぶ"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "木",
+     "tree"
+    ],
+    [
+     "朱",
+     "vermilion"
+    ]
+   ],
+   "story": "A red-cut tree stump: a stock, a share.",
+   "traps": [],
+   "leaves": "木朱",
+   "n": 1047
+  },
+  "義": {
+   "k": "義",
+   "m": "righteousness",
+   "on": [
+    "ギ"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "羊",
+     "sheep"
+    ],
+    [
+     "我",
+     "I"
+    ]
+   ],
+   "story": "I offering up the sheep: doing what is right.",
+   "traps": [],
+   "leaves": "羊我",
+   "n": 1048
+  },
+  "護": {
+   "k": "護",
+   "m": "protect",
+   "on": [
+    "ゴ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "言",
+     "words"
+    ],
+    [
+     "蒦",
+     "grasp"
+    ]
+   ],
+   "story": "Words holding tight to someone: protection.",
+   "traps": [],
+   "leaves": "言蒦",
+   "n": 1049
+  },
+  "司": {
+   "k": "司",
+   "m": "official; in charge",
+   "on": [
+    "シ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "丁",
+     "nail"
+    ],
+    [
+     "口",
+     "mouth"
+    ]
+   ],
+   "story": "The mouth that gives orders: the official in charge.",
+   "traps": [],
+   "leaves": "丁口",
+   "n": 1050
+  },
+  "創": {
+   "k": "創",
+   "m": "create",
+   "on": [
+    "ソウ"
+   ],
+   "kun": [
+    "つく.る"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "倉",
+     "storehouse"
+    ],
+    [
+     "刂",
+     "knife"
+    ]
+   ],
+   "story": "Cutting open the storehouse to make something new.",
+   "traps": [],
+   "leaves": "倉刂",
+   "n": 1051
+  },
+  "羊": {
+   "k": "羊",
+   "m": "sheep",
+   "on": [
+    "ヨウ"
+   ],
+   "kun": [
+    "ひつじ"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "丷",
+     "horns"
+    ],
+    [
+     "王",
+     "body"
+    ]
+   ],
+   "story": "Horns on a sturdy body: a sheep.",
+   "traps": [],
+   "leaves": "丷王",
+   "n": 1052
+  },
+  "畑": {
+   "k": "畑",
+   "m": "field (dry)",
+   "on": [],
+   "kun": [
+    "はた",
+    "はたけ"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "火",
+     "fire"
+    ],
+    [
+     "田",
+     "field"
+    ]
+   ],
+   "story": "A field cleared by fire: a dry field.",
+   "traps": [],
+   "leaves": "火田",
+   "n": 1053
+  },
+  "貼": {
+   "k": "貼",
+   "m": "stick, paste",
+   "on": [
+    "チョウ"
+   ],
+   "kun": [
+    "は.る"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "貝",
+     "shell"
+    ],
+    [
+     "占",
+     "fortune"
+    ]
+   ],
+   "story": "Sticking a fortune slip on a shell: to paste.",
+   "traps": [],
+   "leaves": "貝占",
+   "n": 1054
+  },
+  "盆": {
+   "k": "盆",
+   "m": "tray; Bon festival",
+   "on": [
+    "ボン"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "分",
+     "divide"
+    ],
+    [
+     "皿",
+     "dish"
+    ]
+   ],
+   "story": "A dish divided into portions: a tray. お盆 is the summer festival.",
+   "traps": [],
+   "leaves": "分皿",
+   "n": 1055
+  },
+  "案": {
+   "k": "案",
+   "m": "plan; idea",
+   "on": [
+    "アン"
+   ],
+   "kun": [],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "安",
+     "peace"
+    ],
+    [
+     "木",
+     "wood"
+    ]
+   ],
+   "story": "A calm wooden desk: where plans are drawn up.",
+   "traps": [],
+   "leaves": "安木",
+   "n": 1056
+  },
+  "煮": {
+   "k": "煮",
+   "m": "boil, simmer",
+   "on": [
+    "シャ"
+   ],
+   "kun": [
+    "に.る",
+    "に.える"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "者",
+     "person"
+    ],
+    [
+     "灬",
+     "fire"
+    ]
+   ],
+   "story": "Someone standing over a fire: to simmer.",
+   "traps": [],
+   "leaves": "者灬",
+   "n": 1057
+  },
+  "秘": {
+   "k": "秘",
+   "m": "secret",
+   "on": [
+    "ヒ"
+   ],
+   "kun": [
+    "ひ.める"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "禾",
+     "grain"
+    ],
+    [
+     "必",
+     "certain"
+    ]
+   ],
+   "story": "The grain kept back for certain: a secret store.",
+   "traps": [],
+   "leaves": "禾必",
+   "n": 1058
+  },
+  "密": {
+   "k": "密",
+   "m": "dense; secret",
+   "on": [
+    "ミツ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "宀",
+     "roof"
+    ],
+    [
+     "必",
+     "certain"
+    ],
+    [
+     "山",
+     "mountain"
+    ]
+   ],
+   "story": "Tucked under a roof in the mountains: dense, secret.",
+   "traps": [],
+   "leaves": "宀必山",
+   "n": 1059
+  },
+  "振": {
+   "k": "振",
+   "m": "shake, wave",
+   "on": [
+    "シン"
+   ],
+   "kun": [
+    "ふ.る"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "扌",
+     "hand"
+    ],
+    [
+     "辰",
+     "dragon"
+    ]
+   ],
+   "story": "A hand thrashing like a dragon: to wave.",
+   "traps": [],
+   "leaves": "扌辰",
+   "n": 1060
+  },
+  "黙": {
+   "k": "黙",
+   "m": "silent",
+   "on": [
+    "モク"
+   ],
+   "kun": [
+    "だま.る"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "黒",
+     "black"
+    ],
+    [
+     "犬",
+     "dog"
+    ]
+   ],
+   "story": "A black dog that doesn't bark: silent.",
+   "traps": [],
+   "leaves": "黒犬",
+   "n": 1061
+  },
+  "憩": {
+   "k": "憩",
+   "m": "rest",
+   "on": [
+    "ケイ"
+   ],
+   "kun": [
+    "いこ.い"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "舌",
+     "tongue"
+    ],
+    [
+     "自",
+     "self"
+    ],
+    [
+     "心",
+     "heart"
+    ]
+   ],
+   "story": "Tongue, self and heart at ease: a rest.",
+   "traps": [],
+   "leaves": "舌自心",
+   "n": 1062
+  },
+  "敵": {
+   "k": "敵",
+   "m": "enemy",
+   "on": [
+    "テキ"
+   ],
+   "kun": [
+    "かたき"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "啇",
+     "root"
+    ],
+    [
+     "攵",
+     "strike"
+    ]
+   ],
+   "story": "The one you strike at the root: the enemy.",
+   "traps": [],
+   "leaves": "啇攵",
+   "n": 1063
+  },
+  "玄": {
+   "k": "玄",
+   "m": "dark; profound",
+   "on": [
+    "ゲン"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "亠",
+     "lid"
+    ],
+    [
+     "幺",
+     "thread"
+    ]
+   ],
+   "story": "A thread under a lid, dim and deep. 玄関 is the entrance hall.",
+   "traps": [],
+   "leaves": "亠幺",
+   "n": 1064
+  },
+  "身": {
+   "k": "身",
+   "m": "body; oneself",
+   "on": [
+    "シン"
+   ],
+   "kun": [
+    "み"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "身",
+     "pregnant body"
+    ]
+   ],
+   "story": "A body with a big belly: the body, oneself.",
+   "traps": [],
+   "leaves": "身",
+   "n": 1065
+  },
+  "奏": {
+   "k": "奏",
+   "m": "play music",
+   "on": [
+    "ソウ"
+   ],
+   "kun": [
+    "かな.でる"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "𡗗",
+     "offering"
+    ],
+    [
+     "天",
+     "heaven"
+    ]
+   ],
+   "story": "Offering music up to heaven: to play.",
+   "traps": [],
+   "leaves": "𡗗天",
+   "n": 1066
+  },
+  "控": {
+   "k": "控",
+   "m": "refrain; note down",
+   "on": [
+    "コウ"
+   ],
+   "kun": [
+    "ひか.える"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "扌",
+     "hand"
+    ],
+    [
+     "空",
+     "empty"
+    ]
+   ],
+   "story": "Holding your hand empty: to hold back.",
+   "traps": [],
+   "leaves": "扌空",
+   "n": 1067
+  },
+  "救": {
+   "k": "救",
+   "m": "save, rescue",
+   "on": [
+    "キュウ"
+   ],
+   "kun": [
+    "すく.う"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "求",
+     "request"
+    ],
+    [
+     "攵",
+     "strike"
+    ]
+   ],
+   "story": "Answering a plea with action: to rescue.",
+   "traps": [],
+   "leaves": "求攵",
+   "n": 1068
+  },
+  "粧": {
+   "k": "粧",
+   "m": "make-up",
+   "on": [
+    "ショウ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "米",
+     "rice (powder)"
+    ],
+    [
+     "庄",
+     "village"
+    ]
+   ],
+   "story": "Rice powder for the face: make-up.",
+   "traps": [],
+   "leaves": "米庄",
+   "n": 1069
+  },
+  "拭": {
+   "k": "拭",
+   "m": "wipe",
+   "on": [
+    "ショク"
+   ],
+   "kun": [
+    "ふ.く"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "扌",
+     "hand"
+    ],
+    [
+     "式",
+     "ceremony"
+    ]
+   ],
+   "story": "A hand going over things before the ceremony: to wipe.",
+   "traps": [],
+   "leaves": "扌式",
+   "n": 1070
+  },
+  "暖": {
+   "k": "暖",
+   "m": "warm",
+   "on": [
+    "ダン"
+   ],
+   "kun": [
+    "あたた.かい"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "日",
+     "sun"
+    ],
+    [
+     "爰",
+     "pull"
+    ]
+   ],
+   "story": "The sun pulled close: warm.",
+   "traps": [],
+   "leaves": "日爰",
+   "n": 1071
+  },
+  "褒": {
+   "k": "褒",
+   "m": "praise",
+   "on": [
+    "ホウ"
+   ],
+   "kun": [
+    "ほ.める"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "衣",
+     "clothes"
+    ],
+    [
+     "保",
+     "protect"
+    ]
+   ],
+   "story": "Wrapping someone in fine clothes: to praise.",
+   "traps": [],
+   "leaves": "衣保",
+   "n": 1072
+  },
+  "踏": {
+   "k": "踏",
+   "m": "step on",
+   "on": [
+    "トウ"
+   ],
+   "kun": [
+    "ふ.む"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "足",
+     "foot"
+    ],
+    [
+     "沓",
+     "crowd"
+    ]
+   ],
+   "story": "A foot in a crowd: to step on.",
+   "traps": [],
+   "leaves": "足沓",
+   "n": 1073
+  },
+  "訳": {
+   "k": "訳",
+   "m": "translate; reason",
+   "on": [
+    "ヤク"
+   ],
+   "kun": [
+    "わけ"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "言",
+     "words"
+    ],
+    [
+     "尺",
+     "measure"
+    ]
+   ],
+   "story": "Words measured into another language: to translate. Also a reason.",
+   "traps": [],
+   "leaves": "言尺",
+   "n": 1074
+  },
+  "基": {
+   "k": "基",
+   "m": "base",
+   "on": [
+    "キ"
+   ],
+   "kun": [
+    "もと"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "其",
+     "that"
+    ],
+    [
+     "土",
+     "earth"
+    ]
+   ],
+   "story": "That which sits on the earth: the base.",
+   "traps": [],
+   "leaves": "其土",
+   "n": 1075
+  },
+  "厳": {
+   "k": "厳",
+   "m": "strict",
+   "on": [
+    "ゲン",
+    "ゴン"
+   ],
+   "kun": [
+    "きび.しい"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "⺍",
+     "sparks"
+    ],
+    [
+     "厂",
+     "cliff"
+    ],
+    [
+     "敢",
+     "daring"
+    ]
+   ],
+   "story": "Daring the cliff edge: stern and strict.",
+   "traps": [],
+   "leaves": "⺍厂敢",
+   "n": 1076
+  },
+  "価": {
+   "k": "価",
+   "m": "value",
+   "on": [
+    "カ"
+   ],
+   "kun": [
+    "あたい"
+   ],
+   "l": 3,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "亻",
+     "person"
+    ],
+    [
+     "西",
+     "west"
+    ]
+   ],
+   "story": "A person weighing goods from the west: value.",
+   "traps": [],
+   "leaves": "亻西",
+   "n": 1077
+  },
+  "趣": {
+   "k": "趣",
+   "m": "gist; taste",
+   "on": [
+    "シュ"
+   ],
+   "kun": [
+    "おもむき"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "走",
+     "run"
+    ],
+    [
+     "取",
+     "take"
+    ]
+   ],
+   "story": "Running off to take up something: a hobby, a taste.",
+   "traps": [],
+   "leaves": "走取",
+   "n": 1078
+  },
+  "免": {
+   "k": "免",
+   "m": "excuse; exemption",
+   "on": [
+    "メン"
+   ],
+   "kun": [
+    "まぬか.れる"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "免",
+     "rabbit escaping"
+    ]
+   ],
+   "story": "A rabbit slipping free: to be excused.",
+   "traps": [],
+   "leaves": "免",
+   "n": 1079
+  },
+  "箸": {
+   "k": "箸",
+   "m": "chopsticks",
+   "on": [
+    "チョ"
+   ],
+   "kun": [
+    "はし"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "竹",
+     "bamboo"
+    ],
+    [
+     "者",
+     "person"
+    ]
+   ],
+   "story": "Bamboo in a person's hand: chopsticks.",
+   "traps": [],
+   "leaves": "竹者",
+   "n": 1080
+  },
+  "喉": {
+   "k": "喉",
+   "m": "throat",
+   "on": [
+    "コウ"
+   ],
+   "kun": [
+    "のど"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "口",
+     "mouth"
+    ],
+    [
+     "侯",
+     "lord"
+    ]
+   ],
+   "story": "The lord of the mouth: the throat.",
+   "traps": [],
+   "leaves": "口侯",
+   "n": 1081
+  },
+  "渇": {
+   "k": "渇",
+   "m": "thirst",
+   "on": [
+    "カツ"
+   ],
+   "kun": [
+    "かわ.く"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "氵",
+     "water"
+    ],
+    [
+     "曷",
+     "why"
+    ]
+   ],
+   "story": "Asking why the water's gone: thirst.",
+   "traps": [],
+   "leaves": "氵曷",
+   "n": 1082
+  },
+  "呂": {
+   "k": "呂",
+   "m": "spine; bath",
+   "on": [
+    "ロ",
+    "リョ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "口",
+     "mouth"
+    ],
+    [
+     "口",
+     "mouth"
+    ]
+   ],
+   "story": "Two mouths, one above the other. In お風呂, the bath.",
+   "traps": [],
+   "leaves": "口口",
+   "n": 1083
+  },
+  "弁": {
+   "k": "弁",
+   "m": "speech; valve; lunch box",
+   "on": [
+    "ベン"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "厶",
+     "private"
+    ],
+    [
+     "廾",
+     "two hands"
+    ]
+   ],
+   "story": "Two hands holding something private: a packed lunch, or speaking up for someone.",
+   "traps": [],
+   "leaves": "厶廾",
+   "n": 1084
+  },
+  "慢": {
+   "k": "慢",
+   "m": "ridicule; lazy",
+   "on": [
+    "マン"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "忄",
+     "heart"
+    ],
+    [
+     "曼",
+     "long"
+    ]
+   ],
+   "story": "A heart that drags on and on: slack, and putting up with things.",
+   "traps": [],
+   "leaves": "忄曼",
+   "n": 1085
+  },
+  "魔": {
+   "k": "魔",
+   "m": "demon",
+   "on": [
+    "マ"
+   ],
+   "kun": [],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "麻",
+     "hemp"
+    ],
+    [
+     "鬼",
+     "demon"
+    ]
+   ],
+   "story": "A demon hiding in the hemp field: a devil, a nuisance.",
+   "traps": [],
+   "leaves": "麻鬼",
+   "n": 1086
   }
  },
  "CH": [
@@ -38616,6 +41524,120 @@
     "競"
    ],
    "master": false
+  },
+  {
+   "key": "extra",
+   "title": "Beyond the core lists",
+   "glyph": "",
+   "kanji": [
+    "結",
+    "阪",
+    "張",
+    "邪",
+    "士",
+    "丈",
+    "暇",
+    "街",
+    "第",
+    "的",
+    "嬉",
+    "傘",
+    "撮",
+    "飼",
+    "冗",
+    "節",
+    "雷",
+    "興",
+    "無",
+    "隣",
+    "釣",
+    "怪",
+    "我",
+    "鮮",
+    "謝",
+    "弾",
+    "誕",
+    "授",
+    "豚",
+    "壊",
+    "誰",
+    "譲",
+    "岡",
+    "挙",
+    "故",
+    "鉛",
+    "可",
+    "嫌",
+    "糖",
+    "態",
+    "俳",
+    "壁",
+    "頑",
+    "舎",
+    "桜",
+    "眼",
+    "鏡",
+    "宙",
+    "漏",
+    "盛",
+    "従",
+    "統",
+    "隊",
+    "奈",
+    "避",
+    "健",
+    "康",
+    "検",
+    "旋",
+    "姫",
+    "丁",
+    "寧",
+    "締",
+    "粋",
+    "芝",
+    "株",
+    "義",
+    "護",
+    "司",
+    "創",
+    "羊",
+    "畑",
+    "貼",
+    "盆",
+    "案",
+    "煮",
+    "秘",
+    "密",
+    "振",
+    "黙",
+    "憩",
+    "敵",
+    "玄",
+    "身",
+    "奏",
+    "控",
+    "救",
+    "粧",
+    "拭",
+    "暖",
+    "褒",
+    "踏",
+    "訳",
+    "基",
+    "厳",
+    "価",
+    "趣",
+    "免",
+    "箸",
+    "喉",
+    "渇",
+    "呂",
+    "弁",
+    "慢",
+    "魔"
+   ],
+   "master": false,
+   "intro": "Kanji that the site's sentences and words use but that sit outside the standard N5 to N2 lists, or were missing from them. Each has a card so that every kanji on every page opens somewhere."
   }
  ],
  "LV": {
@@ -39599,7 +42621,112 @@
   "軟": 2,
   "郊": 2,
   "隅": 2,
-  "隻": 2
+  "隻": 2,
+  "結": 3,
+  "阪": 2,
+  "張": 3,
+  "邪": 2,
+  "士": 3,
+  "丈": 2,
+  "暇": 3,
+  "街": 3,
+  "第": 3,
+  "的": 3,
+  "嬉": 2,
+  "傘": 3,
+  "撮": 2,
+  "飼": 3,
+  "冗": 2,
+  "節": 3,
+  "雷": 3,
+  "興": 3,
+  "無": 3,
+  "隣": 3,
+  "釣": 2,
+  "怪": 2,
+  "我": 2,
+  "鮮": 2,
+  "謝": 3,
+  "弾": 3,
+  "誕": 3,
+  "授": 3,
+  "豚": 3,
+  "壊": 3,
+  "誰": 3,
+  "譲": 2,
+  "岡": 2,
+  "挙": 3,
+  "故": 3,
+  "鉛": 2,
+  "可": 3,
+  "嫌": 3,
+  "糖": 2,
+  "態": 2,
+  "俳": 2,
+  "壁": 3,
+  "頑": 2,
+  "舎": 2,
+  "桜": 3,
+  "眼": 2,
+  "鏡": 3,
+  "宙": 2,
+  "漏": 2,
+  "盛": 2,
+  "従": 2,
+  "統": 2,
+  "隊": 2,
+  "奈": 2,
+  "避": 2,
+  "健": 3,
+  "康": 3,
+  "検": 3,
+  "旋": 2,
+  "姫": 2,
+  "丁": 3,
+  "寧": 2,
+  "締": 2,
+  "粋": 2,
+  "芝": 2,
+  "株": 2,
+  "義": 3,
+  "護": 2,
+  "司": 2,
+  "創": 2,
+  "羊": 3,
+  "畑": 3,
+  "貼": 2,
+  "盆": 2,
+  "案": 3,
+  "煮": 2,
+  "秘": 2,
+  "密": 2,
+  "振": 2,
+  "黙": 2,
+  "憩": 2,
+  "敵": 2,
+  "玄": 2,
+  "身": 3,
+  "奏": 2,
+  "控": 2,
+  "救": 3,
+  "粧": 2,
+  "拭": 2,
+  "暖": 3,
+  "褒": 2,
+  "踏": 2,
+  "訳": 3,
+  "基": 3,
+  "厳": 3,
+  "価": 3,
+  "趣": 2,
+  "免": 2,
+  "箸": 2,
+  "喉": 2,
+  "渇": 2,
+  "呂": 2,
+  "弁": 2,
+  "慢": 2,
+  "魔": 2
  },
  "P": {
   "一": {
@@ -43743,7 +46870,7 @@
    "t": "on"
   },
   "丁": {
-   "r": "ちょう",
+   "r": "てい",
    "t": "on"
   },
   "甬": {
@@ -43759,8 +46886,8 @@
    "t": "on"
   },
   "羊": {
-   "r": "よう",
-   "t": "on"
+   "r": "ひつじ",
+   "t": "kun"
   },
   "吾": {
    "r": "ご",
@@ -44375,8 +47502,8 @@
    "t": "on"
   },
   "舎": {
-   "r": "しゃ",
-   "t": "on"
+   "r": "いなか",
+   "t": "sp"
   },
   "志": {
    "r": "し",
@@ -44561,6 +47688,386 @@
   "素": {
    "r": "もと",
    "t": "kun"
+  },
+  "結": {
+   "r": "けつ",
+   "t": "on"
+  },
+  "阪": {
+   "r": "おおさか",
+   "t": "sp"
+  },
+  "張": {
+   "r": "ちょう",
+   "t": "on"
+  },
+  "邪": {
+   "r": "じゃ",
+   "t": "on"
+  },
+  "丈": {
+   "r": "じょう",
+   "t": "on"
+  },
+  "暇": {
+   "r": "ひま",
+   "t": "kun"
+  },
+  "街": {
+   "r": "がい",
+   "t": "on"
+  },
+  "第": {
+   "r": "だい",
+   "t": "on"
+  },
+  "的": {
+   "r": "てき",
+   "t": "on"
+  },
+  "嬉": {
+   "r": "うれ",
+   "t": "kun"
+  },
+  "傘": {
+   "r": "かさ",
+   "t": "kun"
+  },
+  "撮": {
+   "r": "と",
+   "t": "kun"
+  },
+  "飼": {
+   "r": "か",
+   "t": "kun"
+  },
+  "冗": {
+   "r": "じょう",
+   "t": "on"
+  },
+  "節": {
+   "r": "せつ",
+   "t": "on"
+  },
+  "雷": {
+   "r": "かみなり",
+   "t": "kun"
+  },
+  "興": {
+   "r": "きょう",
+   "t": "on"
+  },
+  "無": {
+   "r": "む",
+   "t": "on"
+  },
+  "隣": {
+   "r": "となり",
+   "t": "kun"
+  },
+  "釣": {
+   "r": "つ",
+   "t": "kun"
+  },
+  "怪": {
+   "r": "あや",
+   "t": "kun"
+  },
+  "我": {
+   "r": "が",
+   "t": "on"
+  },
+  "鮮": {
+   "r": "せん",
+   "t": "on"
+  },
+  "謝": {
+   "r": "しゃ",
+   "t": "on"
+  },
+  "弾": {
+   "r": "ひ",
+   "t": "kun"
+  },
+  "誕": {
+   "r": "たん",
+   "t": "on"
+  },
+  "授": {
+   "r": "じゅ",
+   "t": "on"
+  },
+  "豚": {
+   "r": "ぶた",
+   "t": "kun"
+  },
+  "壊": {
+   "r": "こわ",
+   "t": "kun"
+  },
+  "誰": {
+   "r": "だれ",
+   "t": "kun"
+  },
+  "譲": {
+   "r": "ゆず",
+   "t": "kun"
+  },
+  "岡": {
+   "r": "おか",
+   "t": "kun"
+  },
+  "挙": {
+   "r": "あ",
+   "t": "kun"
+  },
+  "故": {
+   "r": "こ",
+   "t": "on"
+  },
+  "鉛": {
+   "r": "えん",
+   "t": "on"
+  },
+  "嫌": {
+   "r": "きら",
+   "t": "kun"
+  },
+  "糖": {
+   "r": "とう",
+   "t": "on"
+  },
+  "態": {
+   "r": "たい",
+   "t": "on"
+  },
+  "俳": {
+   "r": "はい",
+   "t": "on"
+  },
+  "壁": {
+   "r": "かべ",
+   "t": "kun"
+  },
+  "頑": {
+   "r": "がん",
+   "t": "on"
+  },
+  "桜": {
+   "r": "さくら",
+   "t": "kun"
+  },
+  "眼": {
+   "r": "めがね",
+   "t": "sp"
+  },
+  "鏡": {
+   "r": "かがみ",
+   "t": "kun"
+  },
+  "宙": {
+   "r": "ちゅう",
+   "t": "on"
+  },
+  "漏": {
+   "r": "も",
+   "t": "kun"
+  },
+  "盛": {
+   "r": "さか",
+   "t": "kun"
+  },
+  "従": {
+   "r": "したが",
+   "t": "kun"
+  },
+  "統": {
+   "r": "とう",
+   "t": "on"
+  },
+  "隊": {
+   "r": "たい",
+   "t": "on"
+  },
+  "奈": {
+   "r": "な",
+   "t": "on"
+  },
+  "避": {
+   "r": "ひ",
+   "t": "on"
+  },
+  "健": {
+   "r": "けん",
+   "t": "on"
+  },
+  "康": {
+   "r": "こう",
+   "t": "on"
+  },
+  "検": {
+   "r": "けん",
+   "t": "on"
+  },
+  "旋": {
+   "r": "せん",
+   "t": "on"
+  },
+  "姫": {
+   "r": "ひめ",
+   "t": "kun"
+  },
+  "寧": {
+   "r": "ねい",
+   "t": "on"
+  },
+  "締": {
+   "r": "し",
+   "t": "kun"
+  },
+  "粋": {
+   "r": "すい",
+   "t": "on"
+  },
+  "芝": {
+   "r": "しば",
+   "t": "kun"
+  },
+  "株": {
+   "r": "かぶ",
+   "t": "kun"
+  },
+  "護": {
+   "r": "ご",
+   "t": "on"
+  },
+  "創": {
+   "r": "そう",
+   "t": "on"
+  },
+  "畑": {
+   "r": "はた",
+   "t": "kun"
+  },
+  "貼": {
+   "r": "は",
+   "t": "kun"
+  },
+  "盆": {
+   "r": "ぼん",
+   "t": "on"
+  },
+  "案": {
+   "r": "あん",
+   "t": "on"
+  },
+  "煮": {
+   "r": "に",
+   "t": "kun"
+  },
+  "秘": {
+   "r": "ひ",
+   "t": "on"
+  },
+  "密": {
+   "r": "みつ",
+   "t": "on"
+  },
+  "振": {
+   "r": "ふ",
+   "t": "kun"
+  },
+  "黙": {
+   "r": "だま",
+   "t": "kun"
+  },
+  "憩": {
+   "r": "けい",
+   "t": "on"
+  },
+  "敵": {
+   "r": "てき",
+   "t": "on"
+  },
+  "身": {
+   "r": "しん",
+   "t": "on"
+  },
+  "奏": {
+   "r": "そう",
+   "t": "on"
+  },
+  "控": {
+   "r": "ひか",
+   "t": "kun"
+  },
+  "救": {
+   "r": "きゅう",
+   "t": "on"
+  },
+  "粧": {
+   "r": "しょう",
+   "t": "on"
+  },
+  "拭": {
+   "r": "ふ",
+   "t": "kun"
+  },
+  "暖": {
+   "r": "あたた",
+   "t": "kun"
+  },
+  "褒": {
+   "r": "ほ",
+   "t": "kun"
+  },
+  "踏": {
+   "r": "ふ",
+   "t": "kun"
+  },
+  "訳": {
+   "r": "やく",
+   "t": "on"
+  },
+  "基": {
+   "r": "き",
+   "t": "on"
+  },
+  "厳": {
+   "r": "きび",
+   "t": "kun"
+  },
+  "価": {
+   "r": "か",
+   "t": "on"
+  },
+  "趣": {
+   "r": "しゅ",
+   "t": "on"
+  },
+  "箸": {
+   "r": "はし",
+   "t": "kun"
+  },
+  "喉": {
+   "r": "のど",
+   "t": "kun"
+  },
+  "渇": {
+   "r": "かわ",
+   "t": "kun"
+  },
+  "弁": {
+   "r": "べん",
+   "t": "on"
+  },
+  "慢": {
+   "r": "まん",
+   "t": "on"
+  },
+  "魔": {
+   "r": "ま",
+   "t": "on"
   }
  }
 }

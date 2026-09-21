@@ -2292,6 +2292,192 @@
    "en": "gold",
    "l": 2,
    "g": "colour"
+  },
+  {
+   "w": "ロンドン",
+   "en": "London",
+   "l": 5,
+   "g": "world"
+  },
+  {
+   "w": "イギリス",
+   "en": "Britain, the UK",
+   "l": 5,
+   "g": "world"
+  },
+  {
+   "w": "ラーメン",
+   "en": "ramen",
+   "l": 5,
+   "g": "food"
+  },
+  {
+   "w": "アレルギー",
+   "en": "allergy",
+   "l": 3,
+   "g": "health"
+  },
+  {
+   "w": "チェックイン",
+   "en": "check-in",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "チェックアウト",
+   "en": "check-out",
+   "l": 3,
+   "g": "travel"
+  },
+  {
+   "w": "ワイファイ",
+   "en": "Wi-Fi",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "サッカー",
+   "en": "football (soccer)",
+   "l": 4,
+   "g": "fun"
+  },
+  {
+   "w": "メール",
+   "en": "email",
+   "l": 4,
+   "g": "tech"
+  },
+  {
+   "w": "ゴルフ",
+   "en": "golf",
+   "l": 4,
+   "g": "fun"
+  },
+  {
+   "w": "パンク",
+   "en": "puncture, flat tyre",
+   "l": 2,
+   "g": "travel"
+  },
+  {
+   "w": "ベジタリアン",
+   "en": "vegetarian",
+   "l": 2,
+   "g": "food"
+  },
+  {
+   "w": "チョコレート",
+   "en": "chocolate",
+   "l": 4,
+   "g": "food"
+  },
+  {
+   "w": "パンケーキ",
+   "en": "pancake",
+   "l": 3,
+   "g": "food"
+  },
+  {
+   "w": "カラオケ",
+   "en": "karaoke",
+   "l": 4,
+   "g": "fun"
+  },
+  {
+   "w": "ポイントカード",
+   "en": "loyalty card",
+   "l": 2,
+   "g": "ideas"
+  },
+  {
+   "w": "レシート",
+   "en": "receipt",
+   "l": 4,
+   "g": "ideas"
+  },
+  {
+   "w": "チケット",
+   "en": "ticket",
+   "l": 4,
+   "g": "travel"
+  },
+  {
+   "w": "パスワード",
+   "en": "password",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "エアコン",
+   "en": "air conditioner",
+   "l": 4,
+   "g": "home"
+  },
+  {
+   "w": "カフェ",
+   "en": "café",
+   "l": 4,
+   "g": "places"
+  },
+  {
+   "w": "キロ",
+   "en": "kilo (gram or metre)",
+   "l": 4,
+   "g": "measure"
+  },
+  {
+   "w": "ショッピング",
+   "en": "shopping",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "プログラマー",
+   "en": "programmer",
+   "l": 2,
+   "g": "work"
+  },
+  {
+   "w": "プリンター",
+   "en": "printer",
+   "l": 3,
+   "g": "tech"
+  },
+  {
+   "w": "ボランティア",
+   "en": "volunteer",
+   "l": 3,
+   "g": "work"
+  },
+  {
+   "w": "サイズ",
+   "en": "size",
+   "l": 4,
+   "g": "clothes"
+  },
+  {
+   "w": "メダル",
+   "en": "medal",
+   "l": 3,
+   "g": "fun"
+  },
+  {
+   "w": "ファッション",
+   "en": "fashion",
+   "l": 3,
+   "g": "clothes"
+  },
+  {
+   "w": "キャリア",
+   "en": "career",
+   "l": 2,
+   "g": "work"
+  },
+  {
+   "w": "レンタカー",
+   "en": "hire car",
+   "l": 3,
+   "g": "travel"
   }
  ]
 }
