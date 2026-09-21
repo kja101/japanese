@@ -591,7 +591,7 @@ files = ["index.html", "manifest.webmanifest", "assets/icons/icon-192.png", "ass
 digest = hashlib.sha1()
 for f in files:
     digest.update((ROOT / f).read_bytes())
-sw = (SRC / "sw.js").read_text(encoding="utf-8").replace("__VERSION__", digest.hexdigest()[:10]).replace("__FILES__", dump(["./" + f for f in files]))
+sw = (SRC / "sw.js").read_text(encoding="utf-8").replace("__VERSION__", digest.hexdigest()[:10]).replace("__FILES__", dump(["./"] + ["./" + f for f in files]))
 (ROOT / "sw.js").write_text(sw, encoding="utf-8")
 print("  sw.js")
 print("Done.")

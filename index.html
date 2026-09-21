@@ -68,6 +68,25 @@ footer a{color:var(--indigo)}
 <footer>
   <p>Data sources and licences are in the <a href="https://github.com/kja101/japanese">repository README</a>. JLPT has not published official lists since 2010, so every level here is a guide.</p>
 </footer>
-<script>if("serviceWorker" in navigator&&location.protocol!=="file:")window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));</script>
+<p id="offline" style="max-width:1000px;margin:1rem auto 0;padding:0 1.25rem;font-size:.85rem;opacity:.75"></p>
+<script>
+if("serviceWorker" in navigator&&location.protocol!=="file:"){
+  window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+  // tell the user whether every page has been saved for offline use
+  const el=document.getElementById("offline");
+  const check=async()=>{
+    try{
+      const keys=(await caches.keys()).filter(k=>k.startsWith("japanese-"));
+      if(!keys.length){ el.textContent="Saving pages for offline use…"; return false; }
+      const c=await caches.open(keys[keys.length-1]);
+      const need=["index.html","kanji/master-kanji-shapes.html","kanji/learn.html","kanji/kanji-by-situation.html","words/vocabulary.html","words/phrasebook.html","words/sentence-builder.html","words/grammar.html","kana/kana-words.html","kana/katakana-words.html","kana/kana-sounds.html","assets/common.js"];
+      let n=0; for(const f of need){ if(await c.match(f,{ignoreSearch:true})) n++; }
+      el.textContent=n===need.length?"✓ Ready to use offline: every page is saved on this device.":`Saving pages for offline use… ${n} of ${need.length}. Keep this open for a moment.`;
+      return n===need.length;
+    }catch(e){ el.textContent=""; return true; }
+  };
+  let tries=0; const loop=async()=>{ if(!(await check())&&++tries<30) setTimeout(loop,2000); }; setTimeout(loop,1500);
+}
+</script>
 </body>
 </html>
