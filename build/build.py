@@ -322,6 +322,27 @@ def word_pos(word, kana, en, group=""):
         return "phrase"
     return "noun"
 
+NOT_ADJ_ENDINGS = ("ください", "なさい", "合い", "洗い", "互い", "舞い", "祝い", "住まい", "めまい", "違い", "勢い", "がい", "らっしゃい", "ちょうだい")
+NOT_ADJ = {"幸い", "あいまい", "かもしれない", "下さい"}
+
+def verb_class(w, r, pos):
+    """Conjugation class for the forms table: v1 る-verb, v5 う-verb, v5i 行く, vs する, vk 来る, ai/aii/an adjectives."""
+    if pos == "adj-i":
+        return "aii" if w in ("いい", "良い") else "ai"
+    if pos == "adj-na":
+        return "an"
+    if w.endswith("する") or pos == "suru":
+        return "vs" if w.endswith("する") else ""
+    if pos != "verb" or not r or r[-1] not in GODAN:
+        return ""
+    if r == "くる":
+        return "vk"
+    if w in ("行く", "いく"):
+        return "v5i"
+    if r[-1] == "る" and len(r) >= 2 and r[-2] in I_ROW + E_ROW and r not in GODAN_RU:
+        return "v1"
+    return "v5"
+
 def vocabulary():
     """Every word the site knows: the kanji words from the kanji cards, plus the kana word pages."""
     words = {}
@@ -339,8 +360,17 @@ def vocabulary():
             words.setdefault(key, {"w": key, "r": key, "en": z["en"], "l": z["l"], "kana": tag, "g": z.get("g", "")})
     corpus = sentence_records()
     allkeys = list(words)
+    # 願い, 違い, 思い: nouns made from a verb (願う), not い-adjectives
+    verbish = {w for w, v in words.items() if v["en"].lower().startswith("to ")}
     for v in words.values():
         v["pos"] = word_pos(v["w"], v["r"], v["en"], v.get("g", ""))
+        if v["pos"] == "adj-i" and (any(v["w"][:-1] + x in verbish for x in "うくぐすつぬぶむる")
+                                    or v["w"].startswith(("～", "〜"))
+                                    or v["w"].endswith(NOT_ADJ_ENDINGS) or v["w"] in NOT_ADJ):
+            v["pos"] = "phrase" if v["w"].endswith(("さい", "しゃい", "だい")) else "noun"
+        cls = verb_class(v["w"], v["r"], v["pos"])
+        if cls:
+            v["c"] = cls
         v.pop("g", None)
         v["row"] = next((row for row, chars in KANA_ROWS if v["r"] and rdhira(v["r"])[0] in chars), "わ")
         pat = word_pattern(v["w"], {"verb": "verb", "adj-i": "desc"}.get(v["pos"], ""))
@@ -445,7 +475,8 @@ def krRomaji(kana):
             out.append(BASE.get(ch, ""))
     return "".join(out)
 
-_common = (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings))
+_verbs = [[v["w"], v["r"], v["c"]] for v in vocabulary() if v.get("c")]
+_common = (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings)).replace("__VERBS__", dump(_verbs))
 write("assets/common.js", _common)
 write("assets/search-index.js", "// Where every word, kanji and pattern lives, for the cross-page search hints.\nconst JP_SEARCH_INDEX=" + dump(search_index()) + ";\n")
 import hashlib as _h

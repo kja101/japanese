@@ -84,6 +84,16 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 .filterbar a{color:var(--indigo)}
 .wc .lv{margin-left:auto;font-size:.7rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted)}
 .count{color:var(--muted);font-size:.85rem}
+details.forms{margin:.5rem 0 0;border-top:1px dashed var(--rule);padding-top:.4rem}
+details.forms summary{cursor:pointer;color:var(--indigo);font-weight:600;font-size:.9rem}
+details.forms table{border-collapse:collapse;margin:.4rem 0 0;font-size:.95rem}
+details.forms th{text-align:left;font-weight:400;color:var(--muted);padding:.15rem .8rem .15rem 0;white-space:nowrap;font-size:.85rem}
+details.forms td{padding:.15rem .6rem .15rem 0;font-family:var(--jp)}
+details.forms td.rj{font-family:inherit;font-style:italic;color:var(--muted);font-size:.85rem}
+details.forms tr.fhi{background:var(--indigo-wash)}
+details.forms tr.fhi th{color:var(--ink);font-weight:600}
+.fclass{margin:.3rem 0 0;font-size:.82rem;color:var(--muted)}
+.fnote{margin:.4rem 0 0;font-size:.82rem;color:var(--muted)}
 </style>
 </head>
 <body class="jb-page">
@@ -137,7 +147,20 @@ function card(v){
   const kana=v.kana?`<a class="kw" href="../kana/${v.kana==="kt"?"katakana-words":"kana-words"}.html?from=vo#w-${encodeURIComponent(v.w)}" title="Open ${v.w} in the kana word list">kana word</a>`:"";
   return `<article class="wc" data-l="${v.l}" id="w-${esc(v.w)}" data-s="${esc(jpSearchKey(jpSearchable(v.w,v.r,krRomaji(v.r),v.en,v.ex?(v.ex.n?jpPlainOf(v.ex.n):(v.ex.kj||[]).join("")):"",v.ex?v.ex.en:"")))}" data-k="${esc(v.w)}">
     <div class="wh">${wordHtml(v)}${sayBtn(v.r)}<span class="rj">${esc(krRomaji(v.r))}</span><span class="lv">N${v.l}</span></div>
-    <div class="we">${esc(v.en)}${kana?" · "+kana:""}</div>${exHtml(v)}</article>`;
+    <div class="we">${esc(v.en)}${kana?" · "+kana:""}</div>${exHtml(v)}
+    ${v.c?`<details class="forms" data-w="${esc(v.w)}"><summary>Forms</summary><div class="ftab"></div></details>`:""}</article>`;
+}
+const CLASSNAME={v1:"る-verb (ichidan)",v5:"う-verb (godan)",v5i:"う-verb, irregular て-form",vs:"する-verb",vk:"irregular (来る)",ai:"い-adjective",aii:"い-adjective (いい → よ-)",an:"な-adjective"};
+function formsTable(v,hi){
+  const fs=jpConjugate(v.w,v.r,v.c);
+  const rows=fs.filter(f=>f[3]||f[1]===hi);
+  const note=(v.c==="v1"||v.c==="vk")?`<p class="fnote">The can form doubles as the passive for this verb: 食べられる is both “can eat” and “is eaten”.</p>`:"";
+  return `<p class="fclass">${esc(CLASSNAME[v.c]||"")}</p><table>${rows.map(([l,fw,fr])=>`<tr class="${fw===hi?"fhi":""}"><th>${esc(l)}</th><td>${/[\u4e00-\u9fff]/.test(fw)?linkK(rdWord(fw,fr,"ruby")):esc(fw)}${sayBtn(fr)}</td><td class="rj">${esc(krRomaji(fr))}</td></tr>`).join("")}</table>${note}`;
+}
+function openForms(w,hi){
+  const d=document.querySelector(`details.forms[data-w="${CSS.escape(w)}"]`); if(!d) return;
+  const v=D.find(x=>x.w===w); if(!v) return;
+  d.querySelector(".ftab").innerHTML=formsTable(v,hi); d.open=true; d.dataset.filled="1";
 }
 function render(){
   let list=D.slice();
@@ -178,6 +201,8 @@ document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{ state.view=b
 document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{ state.tier=b.dataset.tier; save(); apply(); doSearch(); });
 ["romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); apply(); }));
 document.getElementById("main").addEventListener("click",e=>{ const c=e.target.closest(".wc"); if(c&&state.hide!=="none") c.classList.add("shown"); });
+document.getElementById("main").addEventListener("toggle",e=>{ const d=e.target; if(!d.matches||!d.matches("details.forms")||!d.open||d.dataset.filled) return;
+  const v=D.find(x=>x.w===d.dataset.w); if(v){ d.querySelector(".ftab").innerHTML=formsTable(v,""); d.dataset.filled="1"; } },true);
 document.getElementById("filterbar").addEventListener("click",e=>{ if(e.target.id==="clearfilter"){ e.preventDefault(); onlyKanji=""; history.replaceState(null,"","vocabulary.html"); render(); } });
 document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.closest("a"); if(!a) return; const el=document.querySelector(a.getAttribute("href")); if(!el) return; e.preventDefault(); const c=document.querySelector(".controls"); window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12}); });
 try{ if(localStorage.getItem("rdcol")==="off") document.body.classList.add("no-rdcol"); }catch(e){}
@@ -188,11 +213,13 @@ render(); applyBlocks(); initParticlePopup();
 initReturnLinks("vo-return",".wc","data-k","iflash");
 (function(){
   const src=(location.search.match(/[?&]from=(\w+)/)||[])[1];
-  const SRC={km:"← Back to the kanji deck",kw:"← Back to kana words",kt:"← Back to katakana words",gr:"← Back to grammar",sb:"← Back to the sentence",pb:"← Back to the phrasebook",st:"← Back to the situation"}[src];
+  const SRC={ks:"← Back to kana sounds",vo:"← Back",km:"← Back to the kanji deck",kw:"← Back to kana words",kt:"← Back to katakana words",gr:"← Back to grammar",sb:"← Back to the sentence",pb:"← Back to the phrasebook",st:"← Back to the situation"}[src];
   if(SRC){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=SRC; document.body.appendChild(b);
     b.onclick=()=>{ if(history.length>1) history.back(); else location.href="../index.html"; }; }
   const m=location.hash.match(/^#w-(.+)$/); if(!m) return;
   const w=decodeURIComponent(m[1]); const v=D.find(x=>x.w===w); if(!v) return;
+  const hi=new URLSearchParams(location.search).get("f")||"";
+  if(v.c) setTimeout(()=>openForms(w,hi),0);
   if(v.l<+state.tier){ state.tier=String(v.l); save(); apply(); doSearch(); }
   const go=()=>{ const el=document.getElementById("w-"+w); if(!el) return; const c=document.querySelector(".controls");
     window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12); el.classList.remove("iflash"); void el.offsetWidth; el.classList.add("iflash"); };

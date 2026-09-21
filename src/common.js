@@ -225,6 +225,13 @@ function jpRomajiToken(t){ if(JP_PARTICLE[t]) return JP_PARTICLE[t]; if(JP_SPECI
 // words: {word: "h" | "k"}; base: path to the kana folder; from: short name of this page for the back button.
 const JP_PART_CHARS="はがをにでへともかやねよの";
 function linkKanaWords(roots,words,base,from){
+  const root=base==="./"?"../":base.replace(/kana\/$/,"");
+  roots=[...roots];
+  try{ linkVerbEndings(roots,root,from); }catch(e){}
+  linkKanaWordsOnly(roots,words,base,from);
+  try{ linkEndings(roots,root,from); }catch(e){}
+}
+function linkKanaWordsOnly(roots,words,base,from){
   const baseOf=w=>Array.isArray(words[w])?words[w][1]:w, tagOf=w=>Array.isArray(words[w])?words[w][0]:words[w];
   const list=Object.keys(words).filter(w=>w.length>=2).sort((a,b)=>b.length-a.length);
   if(!list.length) return;
@@ -304,6 +311,148 @@ function jpElsewhere(query,exclude,root,from){
 (function(){ const st=document.createElement("style"); st.textContent=`.elsewhere{max-width:1000px;margin:.3rem auto 0;padding:.2rem 1.25rem .4rem;font-size:.9rem;opacity:.85}
 .elsewhere a{color:inherit;font-weight:600}
 .elsewhere small{opacity:.7;font-weight:400}`; document.head.appendChild(st); })();
+
+// ---------- verb and adjective forms ----------
+// [word, reading, class]: v1 る-verb, v5 う-verb, v5i 行く, vs する, vk 来る, ai い-adjective, aii いい, an な-adjective
+const JP_VERBS=__VERBS__;
+const JP_GODAN={"う":["い","わ","っ","え","お"],"く":["き","か","い","け","こ"],"ぐ":["ぎ","が","い","げ","ご"],"す":["し","さ","し","せ","そ"],
+  "つ":["ち","た","っ","て","と"],"ぬ":["に","な","ん","ね","の"],"ぶ":["び","ば","ん","べ","ぼ"],"む":["み","ま","ん","め","も"],"る":["り","ら","っ","れ","ろ"]};
+// an る-verb stem conjugated: used for る-verbs and for the can/passive/make forms of every verb
+function jpIchidan(sw,sr,base){
+  const L=(x)=>base?base+", "+x:x;
+  return [[L("polite"),sw+"ます",sr+"ます"],[L("polite, negative"),sw+"ません",sr+"ません"],[L("polite, past"),sw+"ました",sr+"ました"],
+    [L("polite, past negative"),sw+"ませんでした",sr+"ませんでした"],[L("て-form"),sw+"て",sr+"て"],[L("past"),sw+"た",sr+"た"],
+    [L("negative"),sw+"ない",sr+"ない"],[L("past, negative"),sw+"なかった",sr+"なかった"]];
+}
+function jpConjugate(w,r,cls){
+  const out=[], add=(label,fw,fr,main)=>out.push([label,fw,fr,main?1:0]);
+  if(cls==="ai"||cls==="aii"){
+    const sw=cls==="aii"?"よ":w.slice(0,-1), sr=cls==="aii"?"よ":r.slice(0,-1);
+    add("dictionary form",w,r,1); add("polite",w+"です",r+"です",1);
+    add("negative",sw+"くない",sr+"くない",1); add("polite, negative",sw+"くないです",sr+"くないです",0);
+    add("past",sw+"かった",sr+"かった",1); add("polite, past",sw+"かったです",sr+"かったです",0);
+    add("past, negative",sw+"くなかった",sr+"くなかった",1); add("て-form",sw+"くて",sr+"くて",1);
+    add("adverb",sw+"く",sr+"く",1); add("if",sw+"ければ",sr+"ければ",1); add("looks",sw+"そう",sr+"そう",0);
+    return out;
+  }
+  if(cls==="an"){
+    [["dictionary form",""],["polite","です"],["negative","じゃない"],["polite, negative","じゃありません"],["past","だった"],["polite, past","でした"],
+     ["before a noun","な"],["て-form","で"],["adverb","に"]].forEach(([l,e])=>add(l,w+e,r+e,1));
+    return out;
+  }
+  let stemW,stemR,te,ta,neg,pot,pas,cau,vol,cond,masu;
+  if(cls==="vs"){
+    const sw=w.slice(0,-2), sr=r.slice(0,-2);
+    add("dictionary form",w,r,1); jpIchidan(sw+"し",sr+"し","").forEach(f=>add(f[0],f[1],f[2],1));
+    add("let's",sw+"しよう",sr+"しよう",1); add("if",sw+"すれば",sr+"すれば",1); add("want to",sw+"したい",sr+"したい",0);
+    add("can",sw+"できる",sr+"できる",1); jpIchidan(sw+"でき",sr+"でき","can").forEach(f=>add(f[0],f[1],f[2],0));
+    add("passive",sw+"される",sr+"される",1); jpIchidan(sw+"され",sr+"され","passive").forEach(f=>add(f[0],f[1],f[2],0));
+    add("make/let",sw+"させる",sr+"させる",1); jpIchidan(sw+"させ",sr+"させ","make/let").forEach(f=>add(f[0],f[1],f[2],0));
+    return out;
+  }
+  if(cls==="vk"){
+    const kw=w.slice(0,-1), kr=r.slice(0,-2);   // 来 / (reading without くる)
+    add("dictionary form",w,r,1);
+    [["polite","ます","き"],["polite, negative","ません","き"],["polite, past","ました","き"],["polite, past negative","ませんでした","き"],
+     ["て-form","て","き"],["past","た","き"],["negative","ない","こ"],["past, negative","なかった","こ"],["let's","よう","こ"],["want to","たい","き"]]
+      .forEach(([l,e,k])=>add(l,kw+e,kr+k+e,1));
+    add("if",kw+"れば",kr+"くれば",1);
+    add("can",kw+"られる",kr+"こられる",1); jpIchidan(kw+"られ",kr+"こられ","can").forEach(f=>add(f[0],f[1],f[2],0));
+    add("make/let",kw+"させる",kr+"こさせる",1); jpIchidan(kw+"させ",kr+"こさせ","make/let").forEach(f=>add(f[0],f[1],f[2],0));
+    return out;
+  }
+  if(cls==="v1"){
+    const sw=w.slice(0,-1), sr=r.slice(0,-1);
+    add("dictionary form",w,r,1); jpIchidan(sw,sr,"").forEach(f=>add(f[0],f[1],f[2],1));
+    add("let's",sw+"よう",sr+"よう",1); add("if",sw+"れば",sr+"れば",1); add("want to",sw+"たい",sr+"たい",0);
+    add("can",sw+"られる",sr+"られる",1); jpIchidan(sw+"られ",sr+"られ","can").forEach(f=>add(f[0],f[1],f[2],0));
+    add("make/let",sw+"させる",sr+"させる",1); jpIchidan(sw+"させ",sr+"させ","make/let").forEach(f=>add(f[0],f[1],f[2],0));
+    return out;
+  }
+  // う-verbs
+  const last=r.slice(-1), g=JP_GODAN[last]; if(!g) return [["dictionary form",w,r,1]];
+  const sw=w.slice(0,-1), sr=r.slice(0,-1), [i,a,t,e,o]=g;
+  const voiced="ぐぬぶむ".includes(last), T=voiced?"で":"て", TA=voiced?"だ":"た";
+  const tt=cls==="v5i"?"っ":(last==="う"?"っ":t);
+  add("dictionary form",w,r,1);
+  [["polite",i+"ます"],["polite, negative",i+"ません"],["polite, past",i+"ました"],["polite, past negative",i+"ませんでした"],
+   ["て-form",tt+T],["past",tt+TA],["negative",(last==="う"?"わ":a)+"ない"],["past, negative",(last==="う"?"わ":a)+"なかった"],
+   ["let's",o+"う"],["if",e+"ば"]].forEach(([l,x])=>add(l,sw+x,sr+x,1));
+  add("want to",sw+i+"たい",sr+i+"たい",0);
+  add("can",sw+e+"る",sr+e+"る",1); jpIchidan(sw+e,sr+e,"can").forEach(f=>add(f[0],f[1],f[2],0));
+  const A=last==="う"?"わ":a;
+  add("passive",sw+A+"れる",sr+A+"れる",1); jpIchidan(sw+A+"れ",sr+A+"れ","passive").forEach(f=>add(f[0],f[1],f[2],0));
+  add("make/let",sw+A+"せる",sr+A+"せる",1); jpIchidan(sw+A+"せ",sr+A+"せ","make/let").forEach(f=>add(f[0],f[1],f[2],0));
+  return out;
+}
+// every written form of every kanji verb and い-adjective -> [dictionary word, label]
+let JP_FORMS=null;
+function jpForms(){
+  if(JP_FORMS) return JP_FORMS;
+  JP_FORMS=new Map();
+  // a verb's own forms win over another verb's can/passive/make forms: 抜けて is 抜ける before it is "can pull out"
+  const derived=l=>/^(can|passive|make\/let)/.test(l);
+  [false,true].forEach(pass=>JP_VERBS.forEach(([w,r,cls])=>{
+    if(cls==="an"||!/[\u4e00-\u9fff]/.test(w)) return;
+    jpConjugate(w,r,cls).forEach(([label,fw])=>{ if(derived(label)===pass&&!JP_FORMS.has(fw)) JP_FORMS.set(fw,[w,label]); });
+  }));
+  return JP_FORMS;
+}
+// the kana ending of a conjugated kanji word links to its forms table in the word list
+function linkVerbEndings(roots,root,from){
+  const F=jpForms();
+  const isKan=c=>/[\u4e00-\u9fff々]/.test(c);
+  const sibText=p=>{ if(p.nodeType!==1) return p.textContent||""; const c=p.cloneNode(true); c.querySelectorAll("rt").forEach(r=>r.remove()); return c.textContent||""; };
+  roots.forEach(el=>{
+    const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest("rt,a,button,.slot")?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
+    const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n=>{
+      const text=n.textContent; if(!text||isKan(text[0])||!/^[\u3041-\u309f]/.test(text)) return;
+      // the kanji right before this text, reading back through the ruby elements
+      let run="", node=n;
+      outer: while(node){
+        let p=node.previousSibling;
+        while(p){ const s=sibText(p); if(!s){ p=p.previousSibling; continue; }
+          let j=s.length-1; while(j>=0&&isKan(s[j])) j--;
+          run=s.slice(j+1)+run; if(j>=0) break outer; p=p.previousSibling; }
+        node=node.parentElement; if(!node||node===el) break;
+      }
+      if(!run) return;
+      // longest form that starts with this kanji and matches the start of the text
+      let best=null;
+      for(let k=Math.min(text.length,14);k>=1;k--){ const hit=F.get(run+text.slice(0,k)); if(hit){ best=[k,hit]; break; } }
+      if(!best) return;
+      const [k,[w,label]]=best, tail=text.slice(0,k);
+      const a=document.createElement("a"); a.className="vf"; a.textContent=tail;
+      a.href=`${root}words/vocabulary.html?from=${from}&f=${encodeURIComponent(run+tail)}#w-${encodeURIComponent(w)}`;
+      a.title=`${w}: ${label}`;
+      const rest=document.createTextNode(text.slice(k)); n.textContent="";
+      n.parentNode.insertBefore(a,n); n.parentNode.insertBefore(rest,n); n.remove();
+    });
+  });
+}
+// です and ます endings left over link to their grammar pattern
+const JP_ENDINGS=[["ませんでした","masu"],["ましょう","masu"],["ました","masu"],["ません","masu"],["ます","masu"],["でした","desu"],["です","desu"],["じゃないです","desu"]];
+function linkEndings(roots,root,from){
+  const re=new RegExp(JP_ENDINGS.map(x=>x[0]).join("|"),"g"), map=Object.fromEntries(JP_ENDINGS);
+  roots.forEach(el=>{
+    const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest("rt,a,button,.slot")?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
+    const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n=>{
+      const t=n.textContent; if(!re.test(t)) return; re.lastIndex=0;
+      const frag=document.createDocumentFragment(); let last=0, m;
+      while((m=re.exec(t))){
+        frag.appendChild(document.createTextNode(t.slice(last,m.index)));
+        const a=document.createElement("a"); a.className="gl"; a.textContent=m[0];
+        a.href=`${root}words/grammar.html?from=${from}#p-${map[m[0]]}`; a.title=`${m[0]}: see the grammar`;
+        frag.appendChild(a); last=m.index+m[0].length;
+      }
+      frag.appendChild(document.createTextNode(t.slice(last))); n.replaceWith(frag);
+    });
+  });
+}
+(function(){ const st=document.createElement("style"); st.textContent=`a.vf,a.gl{color:inherit;text-decoration:none;border-radius:2px}
+a.vf:hover,a.vf:focus-visible,a.vf:active,a.gl:hover,a.gl:focus-visible,a.gl:active{background:rgba(127,127,127,.18)}`; document.head.appendChild(st); })();
 
 // ---------- grammar blocks: colour each part of a sentence by its job ----------
 // One setting for every page (the phrasebook, sentence builder, grammar and situation pages).

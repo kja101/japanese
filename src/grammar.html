@@ -92,6 +92,9 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 .hide-kana .gx li:not(.shown) .j,.hide-kana .gx li:not(.shown) .r{background:var(--chip);color:transparent;border-radius:3px}
 .hide-kana .gx li:not(.shown) rt{visibility:hidden}
 .hide-en .gx li,.hide-kana .gx li{cursor:pointer}
+.backbtn{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;font:inherit;font-weight:600;border:0;border-radius:8px;padding:.6rem 1rem;background:var(--ink);color:var(--paper);box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
+@keyframes iflash{0%{box-shadow:0 0 0 3px #B3261E}100%{box-shadow:0 0 0 3px transparent}}
+.iflash{animation:iflash 2.4s ease-out}
 </style>
 </head>
 <body class="jb-page">
@@ -169,6 +172,17 @@ document.getElementById("kb").innerHTML=jpKeybar();
 document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.dataset.jb==="on"); applyBlocks(); });
 applyBlocks(); initParticlePopup();
 initReturnLinks("gr-return",".gx li","data-id","iflash");
+
+(function(){
+  const src=(location.search.match(/[?&]from=(\w+)/)||[])[1];
+  const L={pb:"← Back to the phrasebook",sb:"← Back to the sentence",st:"← Back to the situation",km:"← Back to the kanji deck",kw:"← Back to kana words",kt:"← Back to katakana words",vo:"← Back to the word list"}[src];
+  if(L){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=L; document.body.appendChild(b);
+    b.onclick=()=>{ if(history.length>1) history.back(); else location.href="../index.html"; }; }
+  const m=location.hash.match(/^#p-(.+)$/); if(!m) return;
+  const go=()=>{ const el=document.getElementById("p-"+m[1]); if(!el) return; const c=document.querySelector(".controls");
+    window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12); el.classList.remove("iflash"); void el.offsetWidth; el.classList.add("iflash"); };
+  setTimeout(go,50); setTimeout(go,300);
+})();
 </script>
 </body>
 </html>
