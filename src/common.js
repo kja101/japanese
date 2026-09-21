@@ -577,6 +577,37 @@ header.top,header.masthead,.masthead{padding-top:.6rem}`;
   });
 })();
 
+// ---------- options keep your place: switching a setting never moves what you're reading ----------
+(function(){
+  // anchor on the whole item you're reading (a sentence, a phrase, a card), never on a line that might be hidden
+  const ITEM=".sent,.it,.wc,.kc,.gc,.hset,.fam,.sgroup,.sl li,article,.blk,section,.card";
+  const topOffset=()=>{ let y=0; document.querySelectorAll(".controls,.bar").forEach(el=>{ const r=el.getBoundingClientRect(); if(getComputedStyle(el).position==="sticky"||getComputedStyle(el).position==="fixed") y=Math.max(y,r.bottom); }); return y; };
+  const keyOf=el=>{ if(el.id) return "#"+CSS.escape(el.id); for(const k of ["id","k","w","hk"]) if(el.dataset&&el.dataset[k]) return `[data-${k}="${CSS.escape(el.dataset[k])}"]`; return null; };
+  let saved=null;
+  document.addEventListener("click",e=>{
+    const b=e.target.closest("button"); if(!b) return;
+    if(!b.closest(".controls,.bar,.toggles,.segs,header")||b.closest("main,#main,#sents")) return;
+    if(b.dataset.view!==undefined||b.id==="starbtn") return;          // switching views starts from the top on purpose
+    if(window.scrollY<50) return;
+    const y=topOffset()+12, x=Math.round(window.innerWidth/2);
+    let el=document.elementFromPoint(x,y); if(!el) return;
+    el=el.closest(ITEM)||el;
+    const ITEMS=".sent,.it,.wc,.kc,.gc,.hset,.fam,.sgroup,.sl li,article";
+    if(el.getBoundingClientRect().height>window.innerHeight*0.6){        // a whole section: use the first item showing inside it
+      const small=[...el.querySelectorAll(ITEMS)].find(n=>n.getBoundingClientRect().bottom>y);
+      if(small) el=small;
+    }
+    { const r=el.getBoundingClientRect();                                  // mostly scrolled past: anchor on the next item instead
+      if(y-r.top>r.height*0.5){ const next=[...document.querySelectorAll(ITEMS)].find(n=>n.getBoundingClientRect().top>=y&&n.getClientRects().length); if(next) el=next; } }
+    saved={node:el,key:keyOf(el),top:el.getBoundingClientRect().top};
+    const restore=()=>{ if(!saved) return;
+      let t=saved.node&&saved.node.isConnected?saved.node:(saved.key?document.querySelector(saved.key):null);
+      if(!t||!t.getClientRects().length) return;
+      const d=t.getBoundingClientRect().top-saved.top; if(Math.abs(d)>1) window.scrollBy(0,d); };
+    requestAnimationFrame(()=>{ restore(); setTimeout(restore,60); setTimeout(()=>{ restore(); saved=null; },250); });
+  },true);
+})();
+
 // ---------- floating buttons: back to the top, and home ----------
 (function(){
   const me=document.currentScript&&document.currentScript.src; if(!me) return;
