@@ -107,12 +107,6 @@
    "接辞",
    "Word parts",
    "Prefixes and suffixes you attach to other words: お～ (polite), ～さん, ～たち (plural), ～やすい (easy to), ～すぎ (too much)."
-  ],
-  [
-   "colour",
-   "色",
-   "Colours",
-   "The Japanese colour words. Most have a kanji (赤, 青, 黄色, 緑, 紫), but they're often written in kana, and い-colours take い before a noun: 赤い車."
   ]
  ],
  "words": [
@@ -2743,102 +2737,6 @@
    "en": "want (a thing)",
    "l": 5,
    "g": "desc"
-  },
-  {
-   "w": "あか",
-   "en": "red (赤)",
-   "l": 5,
-   "g": "colour"
-  },
-  {
-   "w": "あかい",
-   "en": "red (赤い, before a noun)",
-   "l": 5,
-   "g": "colour"
-  },
-  {
-   "w": "あお",
-   "en": "blue, green-blue (青)",
-   "l": 5,
-   "g": "colour"
-  },
-  {
-   "w": "あおい",
-   "en": "blue (青い, before a noun)",
-   "l": 5,
-   "g": "colour"
-  },
-  {
-   "w": "しろ",
-   "en": "white (白)",
-   "l": 5,
-   "g": "colour"
-  },
-  {
-   "w": "しろい",
-   "en": "white (白い)",
-   "l": 5,
-   "g": "colour"
-  },
-  {
-   "w": "くろ",
-   "en": "black (黒)",
-   "l": 5,
-   "g": "colour"
-  },
-  {
-   "w": "くろい",
-   "en": "black (黒い)",
-   "l": 5,
-   "g": "colour"
-  },
-  {
-   "w": "きいろ",
-   "en": "yellow (黄色)",
-   "l": 5,
-   "g": "colour"
-  },
-  {
-   "w": "ちゃいろ",
-   "en": "brown (茶色)",
-   "l": 4,
-   "g": "colour"
-  },
-  {
-   "w": "みどり",
-   "en": "green (緑)",
-   "l": 4,
-   "g": "colour"
-  },
-  {
-   "w": "むらさき",
-   "en": "purple (紫)",
-   "l": 3,
-   "g": "colour"
-  },
-  {
-   "w": "はいいろ",
-   "en": "grey (灰色)",
-   "l": 3,
-   "g": "colour"
-  },
-  {
-   "w": "きんいろ",
-   "en": "gold (金色)",
-   "l": 3,
-   "g": "colour"
-  },
-  {
-   "w": "ぎんいろ",
-   "en": "silver (銀色)",
-   "l": 3,
-   "g": "colour"
-  },
-  {
-   "w": "ももいろ",
-   "en": "pink (桃色)",
-   "l": 3,
-   "g": "colour"
   }
  ],
  "parts": [
@@ -2861,10 +2759,6 @@
   [
    "Building words",
    "parts"
-  ],
-  [
-   "Colours",
-   "colour"
   ]
  ]
 }

@@ -38456,6 +38456,62 @@
    "traps": [],
    "leaves": "麻鬼",
    "n": 1086
+  },
+  "紫": {
+   "k": "紫",
+   "m": "purple",
+   "on": [
+    "シ"
+   ],
+   "kun": [
+    "むらさき"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "此",
+     "this"
+    ],
+    [
+     "糸",
+     "thread"
+    ]
+   ],
+   "story": "This thread, dyed the rarest colour: purple.",
+   "traps": [],
+   "leaves": "此糸",
+   "n": 1087
+  },
+  "桃": {
+   "k": "桃",
+   "m": "peach",
+   "on": [
+    "トウ"
+   ],
+   "kun": [
+    "もも"
+   ],
+   "l": 2,
+   "f": "extra",
+   "ex": "",
+   "exEn": "",
+   "parts": [
+    [
+     "木",
+     "tree"
+    ],
+    [
+     "兆",
+     "omen"
+    ]
+   ],
+   "story": "The tree whose fruit is a good omen: the peach.",
+   "traps": [],
+   "leaves": "木兆",
+   "n": 1088
   }
  },
  "CH": [
@@ -41634,7 +41690,9 @@
     "呂",
     "弁",
     "慢",
-    "魔"
+    "魔",
+    "紫",
+    "桃"
    ],
    "master": false,
    "intro": "Kanji that the site's sentences and words use but that sit outside the standard N5 to N2 lists, or were missing from them. Each has a card so that every kanji on every page opens somewhere."
@@ -42726,7 +42784,9 @@
   "呂": 2,
   "弁": 2,
   "慢": 2,
-  "魔": 2
+  "魔": 2,
+  "紫": 2,
+  "桃": 2
  },
  "P": {
   "一": {
@@ -48068,6 +48128,14 @@
   "魔": {
    "r": "ま",
    "t": "on"
+  },
+  "紫": {
+   "r": "むらさき",
+   "t": "kun"
+  },
+  "桃": {
+   "r": "もも",
+   "t": "kun"
   }
  }
 }

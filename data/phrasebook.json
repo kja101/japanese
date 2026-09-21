@@ -10,7 +10,7 @@
     "jp": "挨拶{あいさつ}",
     "en": "Greetings & politeness",
     "note": "",
-    "items": "\nおはよう ございます|Good morning\nこんにちは|Hello / good afternoon\nこんばんは|Good evening\nおやすみ なさい|Good night\nさようなら|Goodbye|Sounds final; friends say また ね\nありがとう ございます|Thank you very much\nどうも ありがとう|Thanks a lot|Casual\nどう いたしまして|You're welcome\nすみません|Excuse me / sorry / thanks for the trouble\nごめん なさい|I'm sorry\nお願{ねが}い します|Please\n初{はじ}めまして|Nice to meet you\nよろしく お願{ねが}い します|Pleased to meet you / thanks in advance\nお元気{げんき} ですか|How are you?\n元気{げんき} です|I'm well\n大丈夫{だいじょうぶ} です|It's okay / I'm fine\nいただきます|Said before eating\nごちそうさま でした|Thank you for the meal (after eating)\n失礼{しつれい} します|Excuse me (entering or leaving a room)\nお疲{つか}れ様{さま} でした|Thanks for your hard work\n行{い}って きます|I'm off (leaving home)\nいってらっしゃい|Have a good day (to someone leaving)\nただいま|I'm home\nお帰{かえ}り なさい|Welcome back\nまた ね|See you|Casual\nじゃあ また|See you later|Casual\n",
+    "items": "おはよう ございます|Good morning\nこんにちは|Hello / good afternoon\nこんばんは|Good evening\nおやすみ なさい|Good night\nさようなら|Goodbye|Sounds final; friends say また ね\nありがとう ございます|Thank you very much\nどうも ありがとう|Thanks a lot|Casual\nどう いたしまして|You're welcome\nすみません|Excuse me / sorry / thanks for the trouble\nごめん なさい|I'm sorry\nお願{ねが}い します|Please\n初{はじ}めまして|Nice to meet you\nよろしく お願{ねが}い します|Pleased to meet you / thanks in advance\nお元気{げんき} ですか|How are you?\n元気{げんき} です|I'm well\n大丈夫{だいじょうぶ} です|It's okay / I'm fine\nいただきます|Said before eating\nごちそうさま でした|Thank you for the meal (after eating)\n失礼{しつれい} します|Excuse me (entering or leaving a room)\nお疲{つか}れ様{さま} でした|Thanks for your hard work\n行{い}って きます|I'm off (leaving home)\nいってらっしゃい|Have a good day (to someone leaving)\nただいま|I'm home\nお帰{かえ}り なさい|Welcome back\nまた ね|See you|Casual\nじゃあ また|See you later|Casual",
     "words": "",
     "marks": {
      "0": {
@@ -259,7 +259,7 @@
     "jp": "基本{きほん}",
     "en": "Essential survival Japanese",
     "note": "",
-    "items": "\nはい|Yes\nいいえ|No\nそう です|That's right\n違{ちが}います|That's not right\n分{わ}かります|I understand\n分{わ}かりません|I don't understand\n分{わ}かりました|Understood / got it\n知{し}りません|I don't know\nもう 一度{いちど} お願{ねが}い します|One more time, please\nゆっくり 話{はな}して ください|Please speak slowly\nもっと 簡単{かんたん} に お願{ねが}い します|More simply, please\n日本語{にほんご} が 分{わ}かりません|I don't understand Japanese\n少{すこ}し 分{わ}かります|I understand a little\n英語{えいご} を 話{はな}せますか|Do you speak English?\nちょっと 待{ま}って ください|Please wait a moment\nここ に 書{か}いて ください|Please write it here\n大丈夫{だいじょうぶ} ですか|Are you okay? / Is that okay?\n",
+    "items": "はい|Yes\nいいえ|No\nそう です|That's right\n違{ちが}います|That's not right\n分{わ}かります|I understand\n分{わ}かりません|I don't understand\n分{わ}かりました|Understood / got it\n知{し}りません|I don't know\nもう 一度{いちど} お願{ねが}い します|One more time, please\nゆっくり 話{はな}して ください|Please speak slowly\nもっと 簡単{かんたん} に お願{ねが}い します|More simply, please\n日本語{にほんご} が 分{わ}かりません|I don't understand Japanese\n少{すこ}し 分{わ}かります|I understand a little\n英語{えいご} を 話{はな}せますか|Do you speak English?\nちょっと 待{ま}って ください|Please wait a moment\nここ に 書{か}いて ください|Please write it here\n大丈夫{だいじょうぶ} ですか|Are you okay? / Is that okay?",
     "words": "",
     "marks": {
      "0": {
@@ -467,7 +467,7 @@
     "jp": "言葉{ことば} の 勉強{べんきょう}",
     "en": "Language learning",
     "note": "",
-    "items": "\n___ が 分{わ}かります|I understand ___\n___ が 分{わ}かりません|I don't understand ___\n___ は どう いう 意味{いみ} ですか|What does ___ mean?\n___ は 日本語{にほんご} で 何{なん} ですか|What is ___ in Japanese?\n___ は 英語{えいご} で 何{なん} ですか|What is ___ in English?\nどう 読{よ}みますか|How do you read this?\nどう 言{い}いますか|How do you say it?\n漢字{かんじ} で どう 書{か}きますか|How do you write it in kanji?\n日本語{にほんご} を 勉強{べんきょう} して います|I'm studying Japanese\n日本語{にほんご} は まだ 下手{へた} です|My Japanese is still poor\n",
+    "items": "___ が 分{わ}かります|I understand ___\n___ が 分{わ}かりません|I don't understand ___\n___ は どう いう 意味{いみ} ですか|What does ___ mean?\n___ は 日本語{にほんご} で 何{なん} ですか|What is ___ in Japanese?\n___ は 英語{えいご} で 何{なん} ですか|What is ___ in English?\nどう 読{よ}みますか|How do you read this?\nどう 言{い}いますか|How do you say it?\n漢字{かんじ} で どう 書{か}きますか|How do you write it in kanji?\n日本語{にほんご} を 勉強{べんきょう} して います|I'm studying Japanese\n日本語{にほんご} は まだ 下手{へた} です|My Japanese is still poor",
     "words": "\n日本語{にほんご}|Japanese\n英語{えいご}|English\n言葉{ことば}|word\n意味{いみ}|meaning\n漢字{かんじ}|kanji\nひらがな|hiragana\nカタカナ|katakana\n",
     "marks": {
      "0": {
@@ -728,7 +728,7 @@
     "jp": "自己紹介{じこしょうかい}",
     "en": "Talking about yourself",
     "note": "Foreign names are written in katakana: Kevin becomes ケビン.",
-    "items": "\n私{わたし} は ___ です|I am ___\n私{わたし} の 名前{なまえ} は ___ です|My name is ___\n___ から 来{き}ました|I came from ___\n___ に 住{す}んで います|I live in ___\n___ を 勉強{べんきょう} して います|I'm studying ___\n___ の 仕事{しごと} を して います|I work in ___\n趣味{しゅみ} は ___ です|My hobby is ___\n___ が 好{す}き です|I like ___\n",
+    "items": "私{わたし} は ___ です|I am ___\n私{わたし} の 名前{なまえ} は ___ です|My name is ___\n___ から 来{き}ました|I came from ___\n___ に 住{す}んで います|I live in ___\n___ を 勉強{べんきょう} して います|I'm studying ___\n___ の 仕事{しごと} を して います|I work in ___\n趣味{しゅみ} は ___ です|My hobby is ___\n___ が 好{す}き です|I like ___",
     "words": "\nケビン|Kevin\nイギリス|Britain\nイギリス人{じん}|British (person)\nロンドン|London\n日本語{にほんご}|Japanese\n英語{えいご}|English\n音楽{おんがく}|music\n旅行{りょこう}|travel\n",
     "marks": {
      "0": {
@@ -870,7 +870,7 @@
     "jp": "会話{かいわ}",
     "en": "Social conversation",
     "note": "",
-    "items": "\n___ が 好{す}き ですか|Do you like ___?\n___ は どう ですか|What do you think of ___?\n___ を 食{た}べますか|Do you eat ___?\n___ を 飲{の}みますか|Do you drink ___?\n何{なに} が 好{す}き ですか|What do you like?\nどこ から 来{き}ましたか|Where are you from?\nお仕事{しごと} は 何{なん} ですか|What do you do for work?\n日本{にほん} は 初{はじ}めて ですか|Is this your first time in Japan?|hear\n趣味{しゅみ} は 何{なん} ですか|What are your hobbies?\n楽{たの}しかった です|That was fun\n",
+    "items": "___ が 好{す}き ですか|Do you like ___?\n___ は どう ですか|What do you think of ___?\n___ を 食{た}べますか|Do you eat ___?\n___ を 飲{の}みますか|Do you drink ___?\n何{なに} が 好{す}き ですか|What do you like?\nどこ から 来{き}ましたか|Where are you from?\nお仕事{しごと} は 何{なん} ですか|What do you do for work?\n日本{にほん} は 初{はじ}めて ですか|Is this your first time in Japan?|hear\n趣味{しゅみ} は 何{なん} ですか|What are your hobbies?\n楽{たの}しかった です|That was fun",
     "words": "\n音楽{おんがく}|music\n映画{えいが}|films\n旅行{りょこう}|travel\n日本{にほん}|Japan\nお酒{さけ}|alcohol\n寿司{すし}|sushi\nスポーツ|sport\n",
     "marks": {
      "0": {
@@ -1043,7 +1043,7 @@
     "jp": "場所{ばしょ}",
     "en": "Finding places",
     "note": "",
-    "items": "\n___ は どこ ですか|Where is ___?\n___ は 近{ちか}い ですか|Is ___ nearby?\n___ は 遠{とお}い ですか|Is ___ far?\nこの 近{ちか}く に ___ は ありますか|Is there a ___ near here?\n___ まで どう 行{い}きますか|How do I get to ___?\n___ まで 歩{ある}いて 行{い}けますか|Can I walk to ___?\nここ は ___ ですか|Is this ___?\n___ は どちら ですか|Which way is ___?\n地図{ちず} で 教{おし}えて ください|Please show me on the map\n道{みち} に 迷{まよ}いました|I'm lost\n",
+    "items": "___ は どこ ですか|Where is ___?\n___ は 近{ちか}い ですか|Is ___ nearby?\n___ は 遠{とお}い ですか|Is ___ far?\nこの 近{ちか}く に ___ は ありますか|Is there a ___ near here?\n___ まで どう 行{い}きますか|How do I get to ___?\n___ まで 歩{ある}いて 行{い}けますか|Can I walk to ___?\nここ は ___ ですか|Is this ___?\n___ は どちら ですか|Which way is ___?\n地図{ちず} で 教{おし}えて ください|Please show me on the map\n道{みち} に 迷{まよ}いました|I'm lost",
     "words": "\n駅{えき}|station\n入口{いりぐち}|entrance\n出口{でぐち}|exit\nお手洗{てあら}い|toilet (polite)\nトイレ|toilet\n店{みせ}|shop\n公園{こうえん}|park\n病院{びょういん}|hospital\n銀行{ぎんこう}|bank\n郵便局{ゆうびんきょく}|post office\n交番{こうばん}|police box\n空港{くうこう}|airport\nバス停{てい}|bus stop\nホテル|hotel\nレストラン|restaurant\nコンビニ|convenience store\n",
     "marks": {
      "0": {
@@ -1197,7 +1197,7 @@
     "jp": "道案内{みちあんない}",
     "en": "Directions",
     "note": "",
-    "items": "\nまっすぐ 行{い}って ください|Go straight on\n右{みぎ} に 曲{ま}がって ください|Turn right\n左{ひだり} に 曲{ま}がって ください|Turn left\n次{つぎ} の 角{かど} を 右{みぎ} です|Right at the next corner|hear\n信号{しんごう} を 渡{わた}って ください|Cross at the lights|hear\nここ から 遠{とお}い ですか|Is it far from here?\n歩{ある}いて 何分{なんぷん} ですか|How many minutes on foot?\nすぐ そこ です|It's just there|hear\n",
+    "items": "まっすぐ 行{い}って ください|Go straight on\n右{みぎ} に 曲{ま}がって ください|Turn right\n左{ひだり} に 曲{ま}がって ください|Turn left\n次{つぎ} の 角{かど} を 右{みぎ} です|Right at the next corner|hear\n信号{しんごう} を 渡{わた}って ください|Cross at the lights|hear\nここ から 遠{とお}い ですか|Is it far from here?\n歩{ある}いて 何分{なんぷん} ですか|How many minutes on foot?\nすぐ そこ です|It's just there|hear",
     "words": "\n右{みぎ}|right\n左{ひだり}|left\nまっすぐ|straight ahead\n前{まえ}|in front\n後{うし}ろ|behind\n隣{となり}|next to\n向{む}かい|opposite\n角{かど}|corner\n信号{しんごう}|traffic lights\n",
     "marks": {
      "0": {
@@ -1331,7 +1331,7 @@
     "jp": "行{い}き先{さき}",
     "en": "Going somewhere",
     "note": "",
-    "items": "\n___ に 行{い}きたい です|I want to go to ___\n___ に 行{い}きます|I'm going to ___\n___ まで お願{ねが}い します|To ___, please (taxi)\n___ に 行{い}きますか|Does this go to ___?\n次{つぎ} は ___ ですか|Is ___ next?\n___ まで どの くらい ですか|How long / far is it to ___?\n___ まで いくら ですか|How much is it to ___?\n",
+    "items": "___ に 行{い}きたい です|I want to go to ___\n___ に 行{い}きます|I'm going to ___\n___ まで お願{ねが}い します|To ___, please (taxi)\n___ に 行{い}きますか|Does this go to ___?\n次{つぎ} は ___ ですか|Is ___ next?\n___ まで どの くらい ですか|How long / far is it to ___?\n___ まで いくら ですか|How much is it to ___?",
     "words": "\n駅{えき}|station\n空港{くうこう}|airport\n町{まち}|town\n海{うみ}|sea\n山{やま}|mountain\n家{いえ}|home\nホテル|hotel\n東京{とうきょう}|Tokyo\n京都{きょうと}|Kyoto\n大阪{おおさか}|Osaka\n",
     "marks": {
      "0": {
@@ -1451,7 +1451,7 @@
     "jp": "交通{こうつう}",
     "en": "Transport",
     "note": "",
-    "items": "\nこれ は ___ に 行{い}きますか|Does this go to ___?\n___ は 何時{なんじ} に 出{で}ますか|What time does ___ leave?\n___ は 何時{なんじ} に 着{つ}きますか|What time does ___ arrive?\n次{つぎ} の ___ は 何時{なんじ} ですか|When is the next ___?\n乗{の}り場{ば} は どこ ですか|Where do I board?\n何番線{なんばんせん} ですか|Which platform number?\n乗{の}り換{か}え は どこ ですか|Where do I change?\n切符{きっぷ} は どこ で 買{か}えますか|Where can I buy a ticket?\nこの 席{せき} は 空{あ}いて いますか|Is this seat free?\nここ で 降{お}ります|I'll get off here\nここ で 止{と}めて ください|Please stop here (taxi)\n",
+    "items": "これ は ___ に 行{い}きますか|Does this go to ___?\n___ は 何時{なんじ} に 出{で}ますか|What time does ___ leave?\n___ は 何時{なんじ} に 着{つ}きますか|What time does ___ arrive?\n次{つぎ} の ___ は 何時{なんじ} ですか|When is the next ___?\n乗{の}り場{ば} は どこ ですか|Where do I board?\n何番線{なんばんせん} ですか|Which platform number?\n乗{の}り換{か}え は どこ ですか|Where do I change?\n切符{きっぷ} は どこ で 買{か}えますか|Where can I buy a ticket?\nこの 席{せき} は 空{あ}いて いますか|Is this seat free?\nここ で 降{お}ります|I'll get off here\nここ で 止{と}めて ください|Please stop here (taxi)",
     "words": "\n電車{でんしゃ}|train\n新幹線{しんかんせん}|bullet train\n地下鉄{ちかてつ}|subway\nバス|bus\nタクシー|taxi\n切符{きっぷ}|ticket\n乗{の}り場{ば}|boarding place\n片道{かたみち}|one-way\n往復{おうふく}|return\n席{せき}|seat\n",
     "marks": {
      "0": {
@@ -1640,7 +1640,7 @@
     "jp": "レストラン",
     "en": "Restaurants & ordering",
     "note": "",
-    "items": "\nいらっしゃいませ|Welcome (in shops and restaurants)|hear\n何名様{なんめいさま} ですか|How many people?|hear\n二人{ふたり} です|Two people\nメニュー を お願{ねが}い します|The menu, please\n英語{えいご} の メニュー は ありますか|Is there an English menu?\n___ を お願{ねが}い します|___, please\n___ を ください|Please give me ___\n___ を 食{た}べたい です|I want to eat ___\n___ を 飲{の}みたい です|I want to drink ___\nこれ に します|I'll have this\nおすすめ は 何{なん} ですか|What do you recommend?\nもう 一{ひと}つ ください|One more, please\nおいしい です|It's delicious\nお会計{かいけい} お願{ねが}い します|The bill, please\nごちそうさま でした|Thank you for the meal\n",
+    "items": "いらっしゃいませ|Welcome (in shops and restaurants)|hear\n何名様{なんめいさま} ですか|How many people?|hear\n二人{ふたり} です|Two people\nメニュー を お願{ねが}い します|The menu, please\n英語{えいご} の メニュー は ありますか|Is there an English menu?\n___ を お願{ねが}い します|___, please\n___ を ください|Please give me ___\n___ を 食{た}べたい です|I want to eat ___\n___ を 飲{の}みたい です|I want to drink ___\nこれ に します|I'll have this\nおすすめ は 何{なん} ですか|What do you recommend?\nもう 一{ひと}つ ください|One more, please\nおいしい です|It's delicious\nお会計{かいけい} お願{ねが}い します|The bill, please\nごちそうさま でした|Thank you for the meal",
     "words": "\nご飯{はん}|rice / meal\n肉{にく}|meat\n牛肉{ぎゅうにく}|beef\n豚肉{ぶたにく}|pork\n鶏肉{とりにく}|chicken\n魚{さかな}|fish\n卵{たまご}|egg\n野菜{やさい}|vegetables\n果物{くだもの}|fruit\n寿司{すし}|sushi\nラーメン|ramen\nパン|bread\n水{みず}|water\nお茶{ちゃ}|tea\nコーヒー|coffee\nジュース|juice\nビール|beer\n",
     "marks": {
      "0": {
@@ -1834,7 +1834,7 @@
     "jp": "食事{しょくじ} の 制限{せいげん}",
     "en": "Food requirements",
     "note": "",
-    "items": "\n___ なし で お願{ねが}い します|Without ___, please\n___ は 入{はい}って いますか|Does it contain ___?\n___ は 食{た}べません|I don't eat ___\n___ は 大丈夫{だいじょうぶ} です|___ is okay\n___ アレルギー が あります|I have a ___ allergy\nこれ は 辛{から}い ですか|Is this spicy?\nベジタリアン です|I'm vegetarian\n",
+    "items": "___ なし で お願{ねが}い します|Without ___, please\n___ は 入{はい}って いますか|Does it contain ___?\n___ は 食{た}べません|I don't eat ___\n___ は 大丈夫{だいじょうぶ} です|___ is okay\n___ アレルギー が あります|I have a ___ allergy\nこれ は 辛{から}い ですか|Is this spicy?\nベジタリアン です|I'm vegetarian",
     "words": "\n肉{にく}|meat\n魚{さかな}|fish\n卵{たまご}|egg\n牛肉{ぎゅうにく}|beef\n豚肉{ぶたにく}|pork\nえび|prawns\nナッツ|nuts\n小麦{こむぎ}|wheat\n乳製品{にゅうせいひん}|dairy\n",
     "marks": {
      "0": {
@@ -1967,7 +1967,7 @@
     "jp": "買{か}い物{もの}",
     "en": "Shopping",
     "note": "",
-    "items": "\n___ は いくら ですか|How much is ___?\nこれ は いくら ですか|How much is this?\n___ を 見{み}せて ください|Please show me ___\n___ は ありますか|Do you have ___?\nもっと 大{おお}きい ___ は ありますか|Do you have a bigger ___?\nもっと 小{ちい}さい ___ は ありますか|Do you have a smaller ___?\n他{ほか} の 色{いろ} は ありますか|Do you have other colours?\n試着{しちゃく} して も いい ですか|May I try it on?\n見{み}て いる だけ です|I'm just looking\nこれ が いい です|I'd like this one\nこれ を 買{か}います|I'll buy this\n免税{めんぜい} できますか|Can I buy this tax-free?\n",
+    "items": "___ は いくら ですか|How much is ___?\nこれ は いくら ですか|How much is this?\n___ を 見{み}せて ください|Please show me ___\n___ は ありますか|Do you have ___?\nもっと 大{おお}きい ___ は ありますか|Do you have a bigger ___?\nもっと 小{ちい}さい ___ は ありますか|Do you have a smaller ___?\n他{ほか} の 色{いろ} は ありますか|Do you have other colours?\n試着{しちゃく} して も いい ですか|May I try it on?\n見{み}て いる だけ です|I'm just looking\nこれ が いい です|I'd like this one\nこれ を 買{か}います|I'll buy this\n免税{めんぜい} できますか|Can I buy this tax-free?",
     "words": "\nかばん|bag\n靴{くつ}|shoes\n傘{かさ}|umbrella\n服{ふく}|clothes\n帽子{ぼうし}|hat\n財布{さいふ}|wallet\nお土産{みやげ}|souvenir\nプレゼント|gift\nシャツ|shirt\nジャケット|jacket\nサイズ|size\n",
     "marks": {
      "0": {
@@ -2127,7 +2127,7 @@
     "jp": "コンビニ",
     "en": "At the till & convenience store",
     "note": "",
-    "items": "\n温{あたた}めますか|Shall I heat it up?|hear\nはい、お願{ねが}い します|Yes, please\n袋{ふくろ} は ご利用{りよう} ですか|Do you need a bag?|hear\n袋{ふくろ} は 大丈夫{だいじょうぶ} です|No bag, thanks\nポイントカード は お持{も}ち ですか|Do you have a points card?|hear\nいいえ、ない です|No, I don't\nお箸{はし} を ください|Chopsticks, please\nレシート を ください|Receipt, please\n",
+    "items": "温{あたた}めますか|Shall I heat it up?|hear\nはい、お願{ねが}い します|Yes, please\n袋{ふくろ} は ご利用{りよう} ですか|Do you need a bag?|hear\n袋{ふくろ} は 大丈夫{だいじょうぶ} です|No bag, thanks\nポイントカード は お持{も}ち ですか|Do you have a points card?|hear\nいいえ、ない です|No, I don't\nお箸{はし} を ください|Chopsticks, please\nレシート を ください|Receipt, please",
     "words": "",
     "marks": {
      "0": {
@@ -2221,7 +2221,7 @@
     "jp": "お金{かね}",
     "en": "Paying & money",
     "note": "",
-    "items": "\n全部{ぜんぶ} で いくら ですか|How much altogether?\n___ は 使{つか}えますか|Can I use ___?\n___ で 払{はら}えますか|Can I pay by ___?\n現金{げんきん} だけ ですか|Is it cash only?\n領収書{りょうしゅうしょ} を ください|A receipt, please\n両替{りょうがえ} は どこ で できますか|Where can I change money?\n",
+    "items": "全部{ぜんぶ} で いくら ですか|How much altogether?\n___ は 使{つか}えますか|Can I use ___?\n___ で 払{はら}えますか|Can I pay by ___?\n現金{げんきん} だけ ですか|Is it cash only?\n領収書{りょうしゅうしょ} を ください|A receipt, please\n両替{りょうがえ} は どこ で できますか|Where can I change money?",
     "words": "\nカード|card\n現金{げんきん}|cash\nスマホ|smartphone\n円{えん}|yen\nお釣{つ}り|change\nレシート|receipt\n",
     "marks": {
      "0": {
@@ -2303,7 +2303,7 @@
     "jp": "数字{すうじ}",
     "en": "Numbers & counting",
     "note": "",
-    "items": "\nいくつ ですか|How many?\n何人{なんにん} ですか|How many people?\n___ ください|___, please (quantity)\n全部{ぜんぶ} で ___ です|That's ___ altogether\n",
+    "items": "いくつ ですか|How many?\n何人{なんにん} ですか|How many people?\n___ ください|___, please (quantity)\n全部{ぜんぶ} で ___ です|That's ___ altogether",
     "words": "\n一{ひと}つ|one (thing)\n二{ふた}つ|two (things)\n三{みっ}つ|three (things)\n四{よっ}つ|four (things)\n五{いつ}つ|five (things)\n一人{ひとり}|one person\n二人{ふたり}|two people\n三人{さんにん}|three people\n一{いち}|1\n二{に}|2\n三{さん}|3\n四{よん}|4\n五{ご}|5\n六{ろく}|6\n七{なな}|7\n八{はち}|8\n九{きゅう}|9\n十{じゅう}|10\n百{ひゃく}|100\n千{せん}|1,000\n一万{いちまん}|10,000\n",
     "marks": {
      "0": {
@@ -2372,7 +2372,7 @@
     "jp": "ホテル",
     "en": "Hotel",
     "note": "",
-    "items": "\n予約{よやく} が あります|I have a reservation\nチェックイン を お願{ねが}い します|Check-in, please\nチェックアウト は 何時{なんじ} ですか|What time is check-out?\n朝食{ちょうしょく} は 何時{なんじ} から ですか|What time is breakfast from?\n___ は どこ ですか|Where is ___?\n___ が 必要{ひつよう} です|I need ___\n___ を ください|Please give me ___\n___ が ありません|There's no ___\n___ が 動{うご}きません|___ isn't working\n___ を もう 一{ひと}つ ください|Another ___, please\n荷物{にもつ} を 預{あず}かって もらえますか|Could you keep my luggage?\nワイファイ の パスワード は 何{なん} ですか|What's the Wi-Fi password?\n",
+    "items": "予約{よやく} が あります|I have a reservation\nチェックイン を お願{ねが}い します|Check-in, please\nチェックアウト は 何時{なんじ} ですか|What time is check-out?\n朝食{ちょうしょく} は 何時{なんじ} から ですか|What time is breakfast from?\n___ は どこ ですか|Where is ___?\n___ が 必要{ひつよう} です|I need ___\n___ を ください|Please give me ___\n___ が ありません|There's no ___\n___ が 動{うご}きません|___ isn't working\n___ を もう 一{ひと}つ ください|Another ___, please\n荷物{にもつ} を 預{あず}かって もらえますか|Could you keep my luggage?\nワイファイ の パスワード は 何{なん} ですか|What's the Wi-Fi password?",
     "words": "\n部屋{へや}|room\n鍵{かぎ}|key\nフロント|front desk\n受付{うけつけ}|reception\nお手洗{てあら}い|toilet\nベッド|bed\nタオル|towel\nシャワー|shower\nエアコン|air conditioning\nエレベーター|lift\n",
     "marks": {
      "0": {
@@ -2576,7 +2576,7 @@
     "jp": "健康{けんこう}",
     "en": "Health",
     "note": "",
-    "items": "\n___ が 痛{いた}い です|My ___ hurts\n気分{きぶん} が 悪{わる}い です|I feel unwell\n熱{ねつ} が あります|I have a fever\n風邪{かぜ} を ひきました|I've caught a cold\n薬{くすり} が 必要{ひつよう} です|I need medicine\n薬局{やっきょく} は どこ ですか|Where's a pharmacy?\n病院{びょういん} は どこ ですか|Where is the hospital?\n医者{いしゃ} に 行{い}きたい です|I want to see a doctor\n",
+    "items": "___ が 痛{いた}い です|My ___ hurts\n気分{きぶん} が 悪{わる}い です|I feel unwell\n熱{ねつ} が あります|I have a fever\n風邪{かぜ} を ひきました|I've caught a cold\n薬{くすり} が 必要{ひつよう} です|I need medicine\n薬局{やっきょく} は どこ ですか|Where's a pharmacy?\n病院{びょういん} は どこ ですか|Where is the hospital?\n医者{いしゃ} に 行{い}きたい です|I want to see a doctor",
     "words": "\n頭{あたま}|head\n目{め}|eye\n耳{みみ}|ear\n鼻{はな}|nose\n口{くち}|mouth\n歯{は}|tooth\n喉{のど}|throat\nお腹{なか}|stomach\n背中{せなか}|back\n手{て}|hand\n足{あし}|leg / foot\n",
     "marks": {
      "0": {
@@ -2711,7 +2711,7 @@
     "jp": "トラブル",
     "en": "Problems",
     "note": "",
-    "items": "\n___ が ありません|I don't have ___ / ___ is missing\n___ が 動{うご}きません|___ doesn't work\n___ を なくしました|I've lost ___\n___ を 探{さが}して います|I'm looking for ___\n___ を 盗{ぬす}まれました|My ___ was stolen\n困{こま}って います|I'm in trouble\n助{たす}けて ください|Please help me\n",
+    "items": "___ が ありません|I don't have ___ / ___ is missing\n___ が 動{うご}きません|___ doesn't work\n___ を なくしました|I've lost ___\n___ を 探{さが}して います|I'm looking for ___\n___ を 盗{ぬす}まれました|My ___ was stolen\n困{こま}って います|I'm in trouble\n助{たす}けて ください|Please help me",
     "words": "\n鍵{かぎ}|key\n財布{さいふ}|wallet\nかばん|bag\n切符{きっぷ}|ticket\n携帯{けいたい}|mobile phone\nスマホ|smartphone\nパスポート|passport\n",
     "marks": {
      "0": {
@@ -2797,7 +2797,7 @@
     "jp": "緊急{きんきゅう}",
     "en": "Emergencies",
     "note": "",
-    "items": "\n救急車{きゅうきゅうしゃ} を 呼{よ}んで ください|Please call an ambulance\n警察{けいさつ} を 呼{よ}んで ください|Please call the police\n火事{かじ} です|Fire!\n危{あぶ}ない|Watch out!\n英語{えいご} が 話{はな}せる 人{ひと} は いますか|Is there anyone who speaks English?\n大使館{たいしかん} に 連絡{れんらく} したい です|I want to contact the embassy\n",
+    "items": "救急車{きゅうきゅうしゃ} を 呼{よ}んで ください|Please call an ambulance\n警察{けいさつ} を 呼{よ}んで ください|Please call the police\n火事{かじ} です|Fire!\n危{あぶ}ない|Watch out!\n英語{えいご} が 話{はな}せる 人{ひと} は いますか|Is there anyone who speaks English?\n大使館{たいしかん} に 連絡{れんらく} したい です|I want to contact the embassy",
     "words": "",
     "marks": {
      "0": {
@@ -2886,7 +2886,7 @@
     "jp": "時間{じかん}",
     "en": "Time",
     "note": "",
-    "items": "\n今{いま} 何時{なんじ} ですか|What time is it now?\n___ は 何時{なんじ} ですか|What time is ___?\n___ は いつ ですか|When is ___?\n今日{きょう} は 何曜日{なんようび} ですか|What day is it today?\n今日{きょう} は 何日{なんにち} ですか|What's the date today?\n明日{あした} です|It's tomorrow\n今日{きょう} です|It's today\n",
+    "items": "今{いま} 何時{なんじ} ですか|What time is it now?\n___ は 何時{なんじ} ですか|What time is ___?\n___ は いつ ですか|When is ___?\n今日{きょう} は 何曜日{なんようび} ですか|What day is it today?\n今日{きょう} は 何日{なんにち} ですか|What's the date today?\n明日{あした} です|It's tomorrow\n今日{きょう} です|It's today",
     "words": "\n今{いま}|now\n今日{きょう}|today\n明日{あした}|tomorrow\n昨日{きのう}|yesterday\n朝{あさ}|morning\n昼{ひる}|midday\n夜{よる}|night\n午前{ごぜん}|a.m.\n午後{ごご}|p.m.\n週末{しゅうまつ}|the weekend\n",
     "marks": {
      "0": {
@@ -3010,7 +3010,7 @@
     "jp": "予定{よてい}",
     "en": "Making plans",
     "note": "",
-    "items": "\n___ に 行{い}きませんか|Shall we go to ___?\n一緒{いっしょ} に 行{い}きませんか|Shall we go together?\n___ で 会{あ}いましょう|Let's meet at ___\n何時{なんじ} に 会{あ}いますか|What time shall we meet?\n___ は 大丈夫{だいじょうぶ} ですか|Is ___ okay for you?\n___ に しましょう|Let's make it ___\nいい です ね|Sounds good\nちょっと 難{むずか}しい です|That's a bit difficult (polite no)\nまた 明日{あした}|See you tomorrow\n",
+    "items": "___ に 行{い}きませんか|Shall we go to ___?\n一緒{いっしょ} に 行{い}きませんか|Shall we go together?\n___ で 会{あ}いましょう|Let's meet at ___\n何時{なんじ} に 会{あ}いますか|What time shall we meet?\n___ は 大丈夫{だいじょうぶ} ですか|Is ___ okay for you?\n___ に しましょう|Let's make it ___\nいい です ね|Sounds good\nちょっと 難{むずか}しい です|That's a bit difficult (polite no)\nまた 明日{あした}|See you tomorrow",
     "words": "\n駅{えき}|the station\nカフェ|a café\n明日{あした}|tomorrow\n今晩{こんばん}|this evening\n週末{しゅうまつ}|the weekend\n七時{しちじ}|7 o'clock\n",
     "marks": {
      "0": {
@@ -3183,7 +3183,7 @@
     "jp": "好{す}き 嫌{きら}い",
     "en": "Likes & dislikes",
     "note": "",
-    "items": "\n___ が 好{す}き です|I like ___\n___ が 大好{だいす}き です|I really like ___\n___ は 好{す}き ですか|Do you like ___?\n___ は あまり 好{す}き じゃ ない です|I don't really like ___\n___ が 嫌{きら}い です|I dislike ___\n___ に 興味{きょうみ} が あります|I'm interested in ___\n",
+    "items": "___ が 好{す}き です|I like ___\n___ が 大好{だいす}き です|I really like ___\n___ は 好{す}き ですか|Do you like ___?\n___ は あまり 好{す}き じゃ ない です|I don't really like ___\n___ が 嫌{きら}い です|I dislike ___\n___ に 興味{きょうみ} が あります|I'm interested in ___",
     "words": "\n音楽{おんがく}|music\n映画{えいが}|films\n旅行{りょこう}|travel\n料理{りょうり}|cooking\n食{た}べ物{もの}|food\n猫{ねこ}|cats\n犬{いぬ}|dogs\n日本{にほん}|Japan\n本{ほん}|books\nスポーツ|sport\n",
     "marks": {
      "0": {
@@ -3331,7 +3331,7 @@
     "jp": "気持{きも}ち",
     "en": "Feelings & reactions",
     "note": "",
-    "items": "\n嬉{うれ}しい です|I'm happy\n楽{たの}しい です|It's fun\n疲{つか}れました|I'm tired\nお腹{なか} が 空{す}きました|I'm hungry\n喉{のど} が 渇{かわ}きました|I'm thirsty\n眠{ねむ}い です|I'm sleepy\nすごい|Amazing!\nよかった|Great / what a relief\n残念{ざんねん} です|That's a shame\n",
+    "items": "嬉{うれ}しい です|I'm happy\n楽{たの}しい です|It's fun\n疲{つか}れました|I'm tired\nお腹{なか} が 空{す}きました|I'm hungry\n喉{のど} が 渇{かわ}きました|I'm thirsty\n眠{ねむ}い です|I'm sleepy\nすごい|Amazing!\nよかった|Great / what a relief\n残念{ざんねん} です|That's a shame",
     "words": "",
     "marks": {
      "0": {
@@ -3421,7 +3421,7 @@
     "jp": "天気{てんき}",
     "en": "Weather & small talk",
     "note": "",
-    "items": "\nいい 天気{てんき} です ね|Nice weather, isn't it?\n暑{あつ}い です ね|It's hot, isn't it?\n寒{さむ}い です ね|It's cold, isn't it?\n雨{あめ} です ね|It's raining, isn't it?\n明日{あした} は 雨{あめ} ですか|Will it rain tomorrow?\nそう です ね|Yes, it is (agreeing)\n",
+    "items": "いい 天気{てんき} です ね|Nice weather, isn't it?\n暑{あつ}い です ね|It's hot, isn't it?\n寒{さむ}い です ね|It's cold, isn't it?\n雨{あめ} です ね|It's raining, isn't it?\n明日{あした} は 雨{あめ} ですか|Will it rain tomorrow?\nそう です ね|Yes, it is (agreeing)",
     "words": "",
     "marks": {
      "0": {
@@ -3493,7 +3493,7 @@
     "jp": "描写{びょうしゃ}",
     "en": "Describing things",
     "note": "",
-    "items": "\n___ は 大{おお}きい です|___ is big\n___ は 小{ちい}さい です|___ is small\n___ は 高{たか}い です|___ is expensive / high\n___ は 安{やす}い です|___ is cheap\n___ は おいしい です|___ is delicious\n___ は 辛{から}い です|___ is spicy\n___ は 暑{あつ}い です|___ is hot (weather, room)\n___ は 熱{あつ}い です|___ is hot (to touch)\n___ は 寒{さむ}い です|___ is cold (weather, room)\n___ は 冷{つめ}たい です|___ is cold (to touch)\n___ は 新{あたら}しい です|___ is new\n___ は 静{しず}か です|___ is quiet\n___ は 便利{べんり} です|___ is convenient\n",
+    "items": "___ は 大{おお}きい です|___ is big\n___ は 小{ちい}さい です|___ is small\n___ は 高{たか}い です|___ is expensive / high\n___ は 安{やす}い です|___ is cheap\n___ は おいしい です|___ is delicious\n___ は 辛{から}い です|___ is spicy\n___ は 暑{あつ}い です|___ is hot (weather, room)\n___ は 熱{あつ}い です|___ is hot (to touch)\n___ は 寒{さむ}い です|___ is cold (weather, room)\n___ は 冷{つめ}たい です|___ is cold (to touch)\n___ は 新{あたら}しい です|___ is new\n___ は 静{しず}か です|___ is quiet\n___ は 便利{べんり} です|___ is convenient",
     "words": "\nこれ|this\n部屋{へや}|the room\nこの 店{みせ}|this shop\n料理{りょうり}|the food\nお茶{ちゃ}|the tea\n駅{えき}|the station\n",
     "marks": {
      "0": {
@@ -3675,7 +3675,7 @@
     "jp": "お願{ねが}い",
     "en": "Asking for something",
     "note": "",
-    "items": "\n___ お願{ねが}い します|___, please\n___ を ください|Please give me ___\n___ が 欲{ほ}しい です|I want ___\n___ が 必要{ひつよう} です|I need ___\n___ は ありますか|Do you have ___?\n___ を もう 一{ひと}つ ください|One more ___, please\n___ を 借{か}りて も いい ですか|May I borrow ___?\n",
+    "items": "___ お願{ねが}い します|___, please\n___ を ください|Please give me ___\n___ が 欲{ほ}しい です|I want ___\n___ が 必要{ひつよう} です|I need ___\n___ は ありますか|Do you have ___?\n___ を もう 一{ひと}つ ください|One more ___, please\n___ を 借{か}りて も いい ですか|May I borrow ___?",
     "words": "\n水{みず}|water\n傘{かさ}|umbrella\n鍵{かぎ}|key\nかばん|bag\n本{ほん}|book\n地図{ちず}|map\nタオル|towel\nペン|pen\nチケット|ticket\n",
     "marks": {
      "0": {
@@ -3793,7 +3793,7 @@
     "jp": "欲{ほ}しい 物{もの}",
     "en": "Wants & needs",
     "note": "",
-    "items": "\n___ が 欲{ほ}しい です|I want ___\n___ が 必要{ひつよう} です|I need ___\n___ が いい です|I'd prefer ___\n___ は いりません|I don't need ___\nもっと ___ が 欲{ほ}しい です|I want more ___\n",
+    "items": "___ が 欲{ほ}しい です|I want ___\n___ が 必要{ひつよう} です|I need ___\n___ が いい です|I'd prefer ___\n___ は いりません|I don't need ___\nもっと ___ が 欲{ほ}しい です|I want more ___",
     "words": "\n水{みず}|water\nご飯{はん}|meal\n部屋{へや}|room\n鍵{かぎ}|key\n傘{かさ}|umbrella\n時間{じかん}|time\nタオル|towel\n",
     "marks": {
      "0": {
@@ -3913,7 +3913,7 @@
     "jp": "質問{しつもん}",
     "en": "Asking questions",
     "note": "",
-    "items": "\n___ は 何{なん} ですか|What is ___?\n___ は 誰{だれ} ですか|Who is ___?\n___ は どこ ですか|Where is ___?\n___ は いつ ですか|When is ___?\n___ は 何時{なんじ} ですか|What time is ___?\n___ は どう ですか|How is ___?\nどれ ですか|Which one?\nどうして ですか|Why?\nどの くらい かかりますか|How long does it take?\n本当{ほんとう} ですか|Really?\nいい ですか|Is it okay?\n",
+    "items": "___ は 何{なん} ですか|What is ___?\n___ は 誰{だれ} ですか|Who is ___?\n___ は どこ ですか|Where is ___?\n___ は いつ ですか|When is ___?\n___ は 何時{なんじ} ですか|What time is ___?\n___ は どう ですか|How is ___?\nどれ ですか|Which one?\nどうして ですか|Why?\nどの くらい かかりますか|How long does it take?\n本当{ほんとう} ですか|Really?\nいい ですか|Is it okay?",
     "words": "\nこれ|this\nそれ|that\nあれ|that over there\nあの 人{ひと}|that person\n次{つぎ} の 電車{でんしゃ}|the next train\nパーティー|the party\n",
     "marks": {
      "0": {
@@ -4087,7 +4087,7 @@
     "jp": "指{ゆび}さし",
     "en": "Pointing at things",
     "note": "",
-    "items": "\n___ は 何{なん} ですか|What is ___?\n___ を ください|___, please\n___ が いい です|I'd like ___\n___ は いくら ですか|How much is ___?\n",
+    "items": "___ は 何{なん} ですか|What is ___?\n___ を ください|___, please\n___ が いい です|I'd like ___\n___ は いくら ですか|How much is ___?",
     "words": "\nこれ|this (near me)\nそれ|that (near you)\nあれ|that over there\nここ|here\nそこ|there\nあそこ|over there\nどれ|which one?\nどこ|where?\n",
     "marks": {
      "0": {
@@ -4163,7 +4163,7 @@
     "jp": "許可{きょか}",
     "en": "Asking permission",
     "note": "The slot takes the te-form of a verb (食べる becomes 食べて).",
-    "items": "\n___ も いい ですか|May I ___?\nここ で ___ も いい ですか|May I ___ here?\n___ は だめ ですか|Is ___ not allowed?\n",
+    "items": "___ も いい ですか|May I ___?\nここ で ___ も いい ですか|May I ___ here?\n___ は だめ ですか|Is ___ not allowed?",
     "words": "\n座{すわ}って|sit (座る)\n食{た}べて|eat (食べる)\n飲{の}んで|drink (飲む)\n見{み}て|look (見る)\n入{はい}って|enter (入る)\n使{つか}って|use (使う)\n写真{しゃしん} を 撮{と}って|take a photo (撮る)\n",
     "marks": {
      "0": {
@@ -4243,7 +4243,7 @@
     "jp": "頼{たの}み",
     "en": "Asking someone to do something",
     "note": "The slot takes the te-form of a verb.",
-    "items": "\n___ ください|Please ___\n___ いただけますか|Could you please ___? (more polite)\n",
+    "items": "___ ください|Please ___\n___ いただけますか|Could you please ___? (more polite)",
     "words": "\n待{ま}って|wait\n見{み}せて|show me\n教{おし}えて|tell me / teach me\n手伝{てつだ}って|help me\nゆっくり 話{はな}して|speak slowly\nここ に 書{か}いて|write it here\nもう 一度{いちど} 言{い}って|say it again\n写真{しゃしん} を 撮{と}って|take a photo\n",
     "marks": {
      "0": {
@@ -4289,7 +4289,7 @@
     "jp": "大事{だいじ} な 文型{ぶんけい}",
     "en": "Highest-value patterns",
     "note": "Learn the frame first, then swap words into it. Tap a word to try it in every frame.",
-    "items": "\n___ は どこ ですか|Where is ___?\n___ は ありますか|Do you have ___? / Is there ___?\n___ を ください|Please give me ___\n___ お願{ねが}い します|___, please\n___ が 欲{ほ}しい です|I want ___\n___ が 必要{ひつよう} です|I need ___\n___ は いくら ですか|How much is ___?\n___ は 何{なん} ですか|What is ___?\n___ が 好{す}き です|I like ___\n___ が 分{わ}かりません|I don't understand ___\n___ を 探{さが}して います|I'm looking for ___\n",
+    "items": "___ は どこ ですか|Where is ___?\n___ は ありますか|Do you have ___? / Is there ___?\n___ を ください|Please give me ___\n___ お願{ねが}い します|___, please\n___ が 欲{ほ}しい です|I want ___\n___ が 必要{ひつよう} です|I need ___\n___ は いくら ですか|How much is ___?\n___ は 何{なん} ですか|What is ___?\n___ が 好{す}き です|I like ___\n___ が 分{わ}かりません|I don't understand ___\n___ を 探{さが}して います|I'm looking for ___",
     "words": "\n駅{えき}|station\nお手洗{てあら}い|toilet\n水{みず}|water\n切符{きっぷ}|ticket\nこれ|this\nホテル|hotel\n",
     "marks": {
      "0": {
