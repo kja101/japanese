@@ -480,7 +480,8 @@ for topic, sents in EXTRA.items():
 K = {r["k"]: r for t in topics for g in t["groups"] for r in g["rows"]}
 W = {k: words_for(k) for k in K if words_for(k)}
 write("kanji/kanji-by-situation.html",
-      fill("situation.html", KANA_WORDS=KANA_WORDS, DATA=dump({"T": topics, "K": K, "W": W, "LV": kanji["LV"], "apx": sit["apx"], "lede": sit["lede"]})))
+      fill("situation.html", KANA_WORDS=KANA_WORDS, DATA=dump({"T": topics, "K": K, "W": W, "LV": kanji["LV"], "apx": sit["apx"], "lede": sit["lede"],
+                 "VK": "".join(sorted({c for v in vocabulary() for c in v["w"] if "\u4e00" <= c <= "\u9fff"}))})))
 
 # ---------------------------------------------------------------- phrasebook
 chapters = load("phrasebook.json")

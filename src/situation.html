@@ -177,6 +177,8 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 @media (max-width:620px){.rd-legend .rdl{display:none}}
 .rd-legend{max-width:1040px}
 
+a.kl{color:inherit;text-decoration:none;cursor:pointer;border-radius:2px}
+a.kl:hover,a.kl:focus-visible,a.kl:active{background:rgba(127,127,127,.18)}
 </style>
 </head>
 <body class="jb-page">
@@ -217,7 +219,15 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 const NOTE=/([\u4e00-\u9fff々]+)\{([^}]+)\}/g;
 const K=D.K, WV=D.W, LV=D.LV, T=D.T;
 const VT=()=>+state.vtier;
-const jl=(c,self,w)=>K[c]&&c!==self?`<a class="jk" href="#k-${c}" data-jump="${c}" data-from="${self||""}" data-w="${esc(w||"")}">${c}</a>`:c;
+// kanji in the main deck open its card there; on this page's own cards, a kanji from this page jumps to its card here
+const deckLink=c=>`<a class="kl" href="master-kanji-shapes.html?from=st#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`;
+const jl=(c,self,w)=>K[c]&&c!==self?`<a class="jk" href="#k-${c}" data-jump="${c}" data-from="${self||""}" data-w="${esc(w||"")}">${c}</a>`:(D.LV[c]&&c!==self?deckLink(c):c);
+// a kanji with no card in the deck (above N2) opens the word list filtered to it instead
+// a kanji with no card in the deck (above N2) opens the word list filtered to it, or a dictionary if no listed word uses it
+const wordsLink=c=>(D.VK||"").includes(c)
+  ?`<a class="kl" href="../words/vocabulary.html?k=${encodeURIComponent(c)}&from=st" title="${c} has no card in the deck: see the words that use it">${c}</a>`
+  :`<a class="kl" href="https://jisho.org/search/${encodeURIComponent(c)}%20%23kanji" target="_blank" rel="noopener" title="${c} is above N2: look it up on jisho.org">${c}</a>`;
+const linkDeck=html=>html.split(/(<rt>.*?<\/rt>)/).map(p=>p.startsWith("<rt>")?p:p.replace(/[\u4e00-\u9fff]/g,c=>D.LV[c]?deckLink(c):wordsLink(c))).join("");
 const linkify=(html,self,w)=>html.replace(/[\u4e00-\u9fff]/g,c=>jl(c,self,w));
 function chips(w,r,self){
   const a=rdAlign(w,r); if(!a) return "";
@@ -231,7 +241,7 @@ function chips(w,r,self){
 // ---------- sentences ----------
 function sentHtml(s,i){ if(i>=6) s={...s,extra:true};
   let jp, rj;
-  const lk=h=>linkify(h,"","");
+  const lk=linkDeck;   // every kanji in a sentence opens its card in the main deck
   const S=jpSentence(s,lk); jp=S.jp; rj=S.rom;
   const ks=[...(s.kj?s.kj.join(""):s.n)].filter(c=>/[\u4e00-\u9fff]/.test(c));
   const lv=Math.min(5,...ks.map(c=>LV[c]||1));
