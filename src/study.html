@@ -160,6 +160,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 .rdv-on{color:var(--rd-on)} .rdv-kun{color:var(--rd-kun)}
 .no-rdcol .rdv-on,.no-rdcol .rdv-kun{color:inherit}
 
+.fe{font-size:clamp(1.6rem,5vw,2.2rem);font-weight:600;line-height:1.25;margin:.2rem 0 .3rem;max-width:22ch}
 </style>
 </head>
 <body>
@@ -253,7 +254,7 @@ try{ const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s) S=Object.assig
 const save=()=>{ try{ localStorage.setItem(KEY,JSON.stringify(S)); }catch(e){} };
 const dayKey=(t=Date.now())=>{ const d=new Date(t-4*3600e3); return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); };
 function endOfDay(){ const d=new Date(Date.now()-4*3600e3); d.setHours(0,0,0,0); return d.getTime()+DAY+4*3600e3; }
-function rollDay(){ const k=dayKey(); if(S.day.key!==k){ S.day={key:k,newDone:0,vocDone:0}; save(); } }
+function rollDay(){ const k=dayKey(); if(S.day.key!==k){ S.day={key:k,newDone:0,vocDone:0,prodDone:0}; save(); } }
 const VOC=DATA.VOC||[];
 const vUpto=()=>+(S.settings.vUpto||S.settings.upto||4);
 const vocOrder=()=>VOC.map((v,i)=>i).filter(i=>VOC[i][3]>=vUpto());
@@ -295,7 +296,17 @@ function queue(){
   const vPer=+(S.settings.vPerDay||0);
   const vLeft=Math.max(0,vPer-(S.day.vocDone||0));
   const vocabNew=vPer?vocOrder().filter(i=>!S.cards["v:"+i]).slice(0,vLeft).map(i=>"v:"+i):[];
-  return {learn,rev,wordNew,meaningNew,vocabNew};
+  // production: English first, you produce the Japanese. Only for things you already recognise.
+  const prod=S.settings.prod||"off";
+  const pPer=+(S.settings.pPerDay||10), pLeft=Math.max(0,pPer-(S.day.prodDone||0));
+  const prodNew=[];
+  if(prod!=="off"&&pLeft>0){
+    for(const i of vocOrder()){ if(prodNew.length>=pLeft) break;
+      if(graduated(S.cards["v:"+i])&&!S.cards["pv:"+i]) prodNew.push("pv:"+i); }
+    if(prod==="both") for(const k of order()){ if(prodNew.length>=pLeft) break;
+      if(graduated(S.cards["m:"+k])&&!S.cards["pk:"+k]) prodNew.push("pk:"+k); }
+  }
+  return {learn,rev,wordNew,meaningNew,vocabNew,prodNew};
 }
 function nextId(){
   const q=queue();
@@ -304,6 +315,7 @@ function nextId(){
   if(q.wordNew.length) return q.wordNew[0];
   if(q.meaningNew.length) return q.meaningNew[0];
   if(q.vocabNew.length) return q.vocabNew[0];
+  if(q.prodNew.length) return q.prodNew[0];
   return null;
 }
 function pendingLearning(){ const t=Date.now(); let min=Infinity; for(const c of Object.values(S.cards)) if(c.step>=0&&c.due>t) min=Math.min(min,c.due); return min===Infinity?null:min; }
@@ -335,7 +347,22 @@ function vocBack(id){
   return `<div class="wback"><div class="ww">${jp}${sayBtn(v[1])}</div><div class="wr rj">${romaji(v[1])}</div><div class="we">${esc(v[2])}</div>
     <p class="muted small">N${v[3]} · <a href="../words/vocabulary.html?from=km#w-${encodeURIComponent(v[0])}">see it in the word list</a></p></div>`;
 }
+function prodFront(id){
+  const c=S.cards[id], badge=!c?`<span class="badge new">New, the other way</span>`:c.step>=0?`<span class="badge lrn">Learning</span>`:`<span class="badge rev">Review</span>`;
+  if(id.startsWith("pv:")){ const v=vWord(+id.slice(3));
+    return `${badge}<div class="fe">${esc(v[2])}</div><p class="prompt">Say it in Japanese, out loud, then check. N${v[3]}</p>`; }
+  const k=id.slice(3), x=K[k];
+  return `${badge}<div class="fe">${esc(x.m)}</div><p class="prompt">Write the kanji from memory, then check. Picture the story first.</p>`;
+}
+function prodBack(id){
+  if(id.startsWith("pv:")){ const v=vWord(+id.slice(3));
+    const jp=/[\u4e00-\u9fff]/.test(v[0])?rdWord(v[0],v[1],"ruby"):esc(v[0]);
+    return `<div class="wback"><div class="ww">${jp}${sayBtn(v[1])}</div><div class="wr rj">${romaji(v[1])}</div><div class="we">${esc(v[2])}</div>
+      <p class="muted small">N${v[3]} · <a href="../words/vocabulary.html?from=km#w-${encodeURIComponent(v[0])}">see it in the word list</a></p></div>`; }
+  return detail(id.slice(3));
+}
 function front(id){
+  if(id.startsWith("pv:")||id.startsWith("pk:")) return prodFront(id);
   if(id.startsWith("v:")) return vocFront(id,S.cards[id]);
   const [t,k]=id.split(":"), x=K[k], c=S.cards[id];
   const isNew=!c;
@@ -344,6 +371,7 @@ function front(id){
   return `${badge}<div class="fw">${esc(x.ex[0])}</div><p class="prompt">How is it read, and what does it mean?</p>`;
 }
 function back(id){
+  if(id.startsWith("pv:")||id.startsWith("pk:")) return prodBack(id);
   if(id.startsWith("v:")) return vocBack(id);
   const [t,k]=id.split(":"), x=K[k];
   if(t==="m") return detail(k);
@@ -355,7 +383,7 @@ function renderStudy(){
   const el=document.getElementById("tab-study");
   const q=queue();
   cur=nextId(); shown=false;
-  const counts=`<div class="counts"><span class="c-l">${q.learn.length} learning</span><span class="c-r">${q.rev.length} review</span><span class="c-n">${q.wordNew.length+q.meaningNew.length+q.vocabNew.length} new</span></div>`;
+  const counts=`<div class="counts"><span class="c-l">${q.learn.length} learning</span><span class="c-r">${q.rev.length} review</span><span class="c-n">${q.wordNew.length+q.meaningNew.length+q.vocabNew.length+q.prodNew.length} new</span></div>`;
   if(!cur){
     const p=pendingLearning();
     el.innerHTML=counts+`<div class="done"><h2>${p?"Nothing due right now":"Done for today"}</h2><p>${p?`Your next learning card comes back in ${fmt(p-Date.now())}. You can wait for it, or look at it now.`:"Every card due today is cleared. Come back tomorrow: the reviews are what make it stick."}</p>${p?`<button class="btn primary" id="ahead">Study it now</button>`:""}<button class="btn" data-go="today">Back to Today</button></div>`;
@@ -382,6 +410,7 @@ function answer(g){
   S.cards[cur]=grade(c,g);
   if(isNew&&t==="m") S.day.newDone++;
   if(isNew&&t==="v") S.day.vocDone=(S.day.vocDone||0)+1;
+  if(isNew&&(cur.startsWith("pv:")||cur.startsWith("pk:"))) S.day.prodDone=(S.day.prodDone||0)+1;
   const dk=dayKey(); S.log[dk]=(S.log[dk]||0)+1;
   save(); renderStudy(); window.scrollTo(0,0);
 }
@@ -395,6 +424,7 @@ function streak(){ let n=0; let t=Date.now(); if(!S.log[dayKey(t)]) t-=DAY; whil
 function renderToday(){
   const q=queue(), all=order().length;
   const vStarted=Object.keys(S.cards).filter(id=>id.startsWith("v:")).length;
+  const pStarted=Object.keys(S.cards).filter(id=>id.startsWith("pv:")||id.startsWith("pk:")).length;
   const intro=order().filter(k=>started(k)).length;
   const known=order().filter(k=>graduated(S.cards["m:"+k])).length;
   const mature=order().filter(k=>{const c=S.cards["m:"+k];return c&&c.step===-1&&c.ivl>=21;}).length;
@@ -409,6 +439,7 @@ function renderToday(){
      <div><b>${due}</b><span>due now</span></div><div><b>${nw}</b><span>new today</span></div>
      <div><b>${intro}</b><span>of ${all} started</span></div><div><b>${mature}</b><span>well known</span></div><div><b>${streak()}</b><span>day streak</span></div>
      ${+(S.settings.vPerDay||0)||vStarted?`<div><b>${vStarted}</b><span>of ${vocOrder().length} words</span></div>`:""}
+     ${pStarted?`<div><b>${pStarted}</b><span>the other way</span></div>`:""}
    </div>
    <div class="bar"><div style="width:${intro/all*100}%"></div><div class="k" style="width:${known/all*100}%"></div></div>
    <p class="barlab">${known} kanji past the learning stage, ${mature} with intervals of three weeks or more.${intro<all?` At ${S.settings.perDay} a day, the last new kanji arrives in ${daysLeft} day${daysLeft===1?"":"s"}.`:" Every kanji has been introduced."}</p>
@@ -416,9 +447,12 @@ function renderToday(){
    ${nextK.length?`<h3>${leftToday?"Today's new kanji":"Tomorrow's new kanji"} ${S.day.newDone&&leftToday?`<span class="muted">(${S.day.newDone} already started)</span>`:""}</h3><div class="tiles">${nextK.map(k=>tile(k)).join("")}</div>`:""}
    <h3>Settings</h3>
    <div class="set"><label>New kanji a day <select id="perDay">${[5,10,15,20].map(n=>`<option ${n===S.settings.perDay?"selected":""}>${n}</option>`).join("")}</select></label>
+     <label>Also ask the other way <select id="prod">${[["off","no"],["words","words only"],["both","words and kanji"]].map(([v,t])=>`<option value="${v}" ${(S.settings.prod||"off")===v?"selected":""}>${t}</option>`).join("")}</select></label>
+     <label>Those a day <select id="pPerDay">${[5,10,20].map(n=>`<option value="${n}" ${n===+(S.settings.pPerDay||10)?"selected":""}>${n}</option>`).join("")}</select></label>
      <label>New words a day <select id="vPerDay">${[0,5,10,20].map(n=>`<option value="${n}" ${n===+(S.settings.vPerDay||0)?"selected":""}>${n===0?"none":n}</option>`).join("")}</select></label>
      <label>Go up to <select id="upto">${[[4,"N4 (284 kanji)"],[3,"N3 (673 kanji)"],[2,"N2 (1,104 kanji)"]].map(([v,t])=>`<option value="${v}" ${upto()===v?"selected":""}>${t}</option>`).join("")}</select></label>
      <label>Order <select id="ord"><option value="shape" ${S.settings.order==="shape"?"selected":""}>Shape families (recommended)</option><option value="n5" ${S.settings.order==="n5"?"selected":""}>N5 first, then the rest level by level</option></select></label></div>
+   <p class="muted small"><b>Also ask the other way</b> adds production cards: the English is shown and you produce the Japanese out loud (or write the kanji) before checking. They only appear once you already recognise that word or kanji, and they are the practice that carries over into speaking.</p>
    <p class="muted small">10 a day is the sweet spot for most people. N5 and N4 come first; raising the level adds N3 and then N2 after them, still in shape families with every kanji's parts before it. Changing the order or level only affects kanji you haven't started.</p>
    <h3>Your progress file</h3>
    <p class="muted small">Progress is saved in this browser on this device. To move it to another device or keep a backup, export it and import it there.</p>
@@ -427,6 +461,8 @@ function renderToday(){
   document.getElementById("ord").onchange=e=>{S.settings.order=e.target.value;save();renderToday();};
   document.getElementById("upto").onchange=e=>{S.settings.upto=+e.target.value;save();renderToday();};
   document.getElementById("vPerDay").onchange=e=>{S.settings.vPerDay=+e.target.value;save();renderToday();};
+  document.getElementById("prod").onchange=e=>{S.settings.prod=e.target.value;save();renderToday();};
+  document.getElementById("pPerDay").onchange=e=>{S.settings.pPerDay=+e.target.value;save();renderToday();};
   document.getElementById("exp").onclick=()=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:"application/json"})); a.download="kanji-progress-"+dayKey()+".json"; a.click(); };
   document.getElementById("imp").onchange=e=>{ const f=e.target.files[0]; if(!f) return; f.text().then(t=>{ try{ const s=JSON.parse(t); if(!s.cards) throw 0; S=Object.assign({cards:{},day:{key:"",newDone:0},settings:{perDay:10,order:"shape"},log:{}},s); save(); renderToday(); alert("Progress imported."); }catch(err){ alert("That file isn't a progress export from this deck."); } }); };
   document.getElementById("rst").onclick=()=>{ if(confirm("Delete all progress and start again? This can't be undone.")){ S={cards:{},day:{key:"",newDone:0},settings:S.settings,log:{}}; save(); renderToday(); } };
