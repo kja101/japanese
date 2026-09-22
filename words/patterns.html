@@ -98,8 +98,12 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 .iflash{animation:iflash 2.4s ease-out}
 
 .frame{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.9rem 1.1rem;margin:.8rem 0 0}
-.frame h4{margin:0 0 .5rem;font-size:1.1rem;display:flex;gap:.55rem;align-items:baseline;flex-wrap:wrap}
-.frame h4 .jp{font-family:var(--jp);font-size:1.3rem}
+.frame h4{margin:0 0 .6rem;display:flex;flex-direction:column;gap:.1rem}
+.frame h4 .pat{font-family:var(--jp);font-size:1.4rem;font-weight:600;line-height:1.25;letter-spacing:.01em}
+.frame h4 .en{font-size:.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.ghead h3{font-size:1.15rem}
+.ghead h3 .jp{font-size:1.5rem;line-height:1.2}
+@media (min-width:700px){.ghead h3 small{margin-left:auto}}
 .sk{display:flex;flex-wrap:wrap;gap:.35rem;margin:.2rem 0 .7rem}
 .sk span{font-size:.82rem;font-weight:700;letter-spacing:.02em;color:#fff;background:var(--c);border-radius:999px;padding:.25rem .6rem}
 .sk span .p{font-family:var(--jp);font-weight:400;margin-left:.35rem;opacity:.9}
@@ -177,7 +181,7 @@ function formsHtml(v){
 function frameHtml(f){
   const search=jpSearchKey(jpSearchable(f.jp,f.en,f.note,f.ex.en,jpPlainOf(f.ex.n),jpKanaOf(f.ex.n),(f.q||[]).map(q=>q.en+" "+jpPlainOf(q.n)).join(" ")));
   return `<article class="frame" id="f-${f.id}" data-s="${esc(search)}">
-    <h4><span class="jp">${esc(f.jp)}</span>${esc(f.en)}</h4>
+    <h4><span class="pat">${esc(f.jp)}</span><span class="en">${esc(f.en)}</span></h4>
     <div class="sk">${f.sk.map(([r,t])=>`<span style="--c:${RCOL[r]||"var(--ink)"}">${esc(t.split(" ")[0])}${t.split(" ").slice(1).length?`<span class="p">${esc(t.split(" ").slice(1).join(" "))}</span>`:""}</span>`).join("")}</div>
     ${exHtml(f.ex)}
     ${f.verb?formsHtml(f.verb):""}
