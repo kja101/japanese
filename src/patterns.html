@@ -128,6 +128,22 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 .flinks{margin:.6rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem}
 .flinks a{font-size:.85rem;font-weight:600;color:var(--indigo);text-decoration:none;border:1px solid var(--rule);border-radius:8px;padding:.3rem .6rem}
 .backbtn{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;font:inherit;font-weight:600;border:0;border-radius:8px;padding:.6rem 1rem;background:var(--ink);color:var(--paper);box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
+.pmap .slot{display:grid;grid-template-columns:8.5rem 1fr;gap:.6rem;padding:.55rem 0;border-top:1px solid var(--rule)}
+.pmap .slot:first-child{border-top:0;padding-top:0}
+.slab{font-size:.78rem;font-weight:700;letter-spacing:.05em;color:#fff;background:var(--c);border-radius:8px;padding:.35rem .5rem;align-self:start;text-align:center}
+.slab .jp{display:block;font-family:var(--jp);font-weight:400;font-size:.95rem;letter-spacing:0}
+ul.marks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.45rem}
+ul.marks li{display:grid;grid-template-columns:3.2rem 1fr;gap:.5rem;align-items:start}
+a.pchip{font-family:var(--jp);font-size:1.15rem;font-weight:600;text-align:center;text-decoration:none;color:var(--ink);background:var(--chip);border-radius:8px;padding:.15rem .3rem}
+.gloss{display:block;font-size:.92rem}
+.mex{margin:.1rem 0 0;font-size:.95rem}
+.mex .j{font-family:var(--jp);font-size:1.15rem;margin-right:.25rem}
+.mex .t{color:var(--muted);margin-left:.4rem}
+.pairs{margin:.4rem 0 0}
+.pairs dt{font-weight:700;margin:.5rem 0 .1rem}
+.pairs dt a{color:var(--indigo);text-decoration:none}
+.pairs dd{margin:0;color:var(--muted)}
+@media (max-width:560px){.pmap .slot{grid-template-columns:1fr}.slab{text-align:left}.slab .jp{display:inline;margin-left:.4rem}}
 </style>
 </head>
 <body class="jb-page">
@@ -153,6 +169,7 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 <script src="../assets/common.js"></script>
 <script>
 const D = __DATA__;
+const PMAP = __PMAP__;
 const KSET=new Set(__KANJI_SET__);
 const KANA_WORDS=__KANA_WORDS__;
 const esc=jpEsc;
@@ -184,14 +201,31 @@ function frameHtml(f){
     <div class="flinks">${(f.g||[]).map(g=>`<a href="grammar.html?from=pt#p-${g}">Grammar: ${esc(g)} →</a>`).join("")}${f.b?`<a href="sentence-builder.html?from=pt#${f.b}">Sentences →</a>`:""}</div>
   </article>`;
 }
+function miniEx(e){ const S=jpSentence(e,linkK); return `<div class="mex"><span class="j">${S.jp}</span>${sayBtn(S.say)}<span class="t">${S.en}</span></div>`; }
+function mapHtml(){
+  return `<section class="grp" id="g-map"><div class="ghead"><h3><span class="jp">助詞</span>Particle map <small>start here</small></h3><p>${esc(PMAP.intro)}</p></div>
+  <article class="frame pmap" data-s="${esc(jpSearchKey("particle map slots "+PMAP.slots.map(s=>s.label+" "+s.jp+" "+s.markers.map(m=>m.p+" "+m.gloss).join(" ")).join(" ")))}">
+    ${PMAP.slots.map(s=>`<div class="slot"><div class="slab" style="--c:${RCOL[s.role]}">${esc(s.label)}<span class="jp">${esc(s.jp)}</span></div>
+      <ul class="marks">${s.markers.map(m=>`<li><a class="pchip" href="#f-${m.frame}">${esc(m.p)}</a><div class="mtext"><span class="gloss">${esc(m.gloss)}</span>${miniEx(m.ex)}</div></li>`).join("")}</ul></div>`).join("")}
+  </article>
+  <article class="frame pmap" data-s="${esc(jpSearchKey("overlays wa mo dake shika "+PMAP.overlays.map(o=>o.p+" "+o.rule).join(" ")))}">
+    <h4><span class="pat">は・も・だけ・しか</span><span class="en">The second layer</span></h4>
+    <p class="note">These sit on top of the slots above. They replace が and を, and stack onto the rest.</p>
+    <ul class="marks">${PMAP.overlays.map(o=>`<li><a class="pchip" href="#f-${o.frame}">${esc(o.p)}</a><div class="mtext"><span class="gloss">${esc(o.rule)}</span>${miniEx(o.ex)}</div></li>`).join("")}</ul>
+  </article>
+  <article class="frame pmap" data-s="${esc(jpSearchKey("which one "+PMAP.pairs.map(p=>p.q+" "+p.a).join(" ")))}">
+    <h4><span class="pat">どっち？</span><span class="en">Which one</span></h4>
+    <dl class="pairs">${PMAP.pairs.map(p=>`<dt><a href="#f-${p.frame}">${esc(p.q)}</a></dt><dd>${esc(p.a)}</dd>`).join("")}</dl>
+  </article></section>`;
+}
 function render(){
-  document.getElementById("main").innerHTML=D.sections.map(sec=>{
+  document.getElementById("main").innerHTML=mapHtml()+D.sections.map(sec=>{
     const fs=D.frames.filter(f=>f.sec===sec.id);
     if(!fs.length) return "";
     return `<section class="grp" id="g-${sec.id}"><div class="ghead"><h3><span class="jp">${esc(sec.jp)}</span>${esc(sec.en)} <small>${fs.length} frames</small></h3><p>${esc(sec.blurb)}</p></div>
       ${fs.map(frameHtml).join("")}</section>`;
   }).join("")+`<div class="noresult" id="noresult">Nothing matches that.</div>`;
-  document.getElementById("nav").innerHTML=D.sections.filter(s=>D.frames.some(f=>f.sec===s.id)).map(s=>`<a href="#g-${s.id}"><span class="j">${esc(s.jp)}</span>${esc(s.en)}</a>`).join("");
+  document.getElementById("nav").innerHTML=`<a href="#g-map"><span class="j">助詞</span>Particle map</a>`+D.sections.filter(s=>D.frames.some(f=>f.sec===s.id)).map(s=>`<a href="#g-${s.id}"><span class="j">${esc(s.jp)}</span>${esc(s.en)}</a>`).join("");
   apply(); doSearch();
   linkKanaWords(document.querySelectorAll(".ex .j"),KANA_WORDS,"../kana/","pt");
 }

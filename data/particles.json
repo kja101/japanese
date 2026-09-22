@@ -1,0 +1,317 @@
+{
+ "intro": "Every slot in a Japanese sentence takes one of two or three markers. Learn the slot first, then the short list that can follow it, and most particle mistakes disappear. は and も sit on top of this: they replace が and を, but stack onto the others.",
+ "slots": [
+  {
+   "role": "W",
+   "label": "WHO / TOPIC",
+   "jp": "は・が・も",
+   "markers": [
+    {
+     "p": "は",
+     "gloss": "the thing the sentence is about (the topic you have both agreed on)",
+     "ex": {
+      "n": "私{わたし} は 学生{がくせい} です",
+      "en": "I'm a student"
+     },
+     "frame": "desu"
+    },
+    {
+     "p": "が",
+     "gloss": "picks out which one: new information, and the answer to a question word",
+     "ex": {
+      "n": "だれ が 来{き}ます か",
+      "en": "Who is coming?"
+     },
+     "frame": "dare-ga"
+    },
+    {
+     "p": "も",
+     "gloss": "too, as well; with a negative, either",
+     "ex": {
+      "n": "私{わたし} も 行{い}きます",
+      "en": "I'm going too"
+     },
+     "frame": "mo"
+    }
+   ]
+  },
+  {
+   "role": "T",
+   "label": "TIME",
+   "jp": "に・から・まで・なし",
+   "markers": [
+    {
+     "p": "に",
+     "gloss": "a time you could point at on a clock or calendar",
+     "ex": {
+      "n": "七時{しちじ} に 起{お}きます",
+      "en": "I get up at seven"
+     },
+     "frame": "time-ni"
+    },
+    {
+     "p": "から",
+     "gloss": "from that time",
+     "ex": {
+      "n": "九時{くじ} から 働{はたら}きます",
+      "en": "I work from nine"
+     },
+     "frame": "from-to"
+    },
+    {
+     "p": "まで",
+     "gloss": "until that time",
+     "ex": {
+      "n": "五時{ごじ} まで 働{はたら}きます",
+      "en": "I work until five"
+     },
+     "frame": "from-to"
+    },
+    {
+     "p": "(none)",
+     "gloss": "today, tomorrow, every day, now, this week: no particle at all",
+     "ex": {
+      "n": "明日{あした} 行{い}きます",
+      "en": "I'm going tomorrow"
+     },
+     "frame": "time-ni"
+    }
+   ]
+  },
+  {
+   "role": "P",
+   "label": "PLACE",
+   "jp": "で・に・へ・から・まで",
+   "markers": [
+    {
+     "p": "で",
+     "gloss": "where an action happens",
+     "ex": {
+      "n": "図書館{としょかん} で 読{よ}みます",
+      "en": "I read in the library"
+     },
+     "frame": "place-de"
+    },
+    {
+     "p": "に",
+     "gloss": "where something is, or where you arrive",
+     "ex": {
+      "n": "東京{とうきょう} に 住{す}んでいます",
+      "en": "I live in Tokyo"
+     },
+     "frame": "ni-de"
+    },
+    {
+     "p": "へ",
+     "gloss": "the direction you set off in",
+     "ex": {
+      "n": "日本{にほん} へ 行{い}きます",
+      "en": "I'm going to Japan"
+     },
+     "frame": "direction"
+    },
+    {
+     "p": "から",
+     "gloss": "from there",
+     "ex": {
+      "n": "駅{えき} から 歩{ある}きます",
+      "en": "I walk from the station"
+     },
+     "frame": "from-to"
+    },
+    {
+     "p": "まで",
+     "gloss": "as far as there",
+     "ex": {
+      "n": "家{いえ} まで 歩{ある}きます",
+      "en": "I walk as far as home"
+     },
+     "frame": "from-to"
+    }
+   ]
+  },
+  {
+   "role": "O",
+   "label": "WHAT",
+   "jp": "を・が",
+   "markers": [
+    {
+     "p": "を",
+     "gloss": "the thing the verb acts on",
+     "ex": {
+      "n": "ご飯{はん} を 食{た}べます",
+      "en": "I eat a meal"
+     },
+     "frame": "verb-o"
+    },
+    {
+     "p": "が",
+     "gloss": "with can, like, good at, want: the thing is marked が, not を",
+     "ex": {
+      "n": "漢字{かんじ} が 読{よ}めます",
+      "en": "I can read kanji"
+     },
+     "frame": "o-ga"
+    }
+   ]
+  },
+  {
+   "role": "H",
+   "label": "HOW / WITH",
+   "jp": "で・と・に",
+   "markers": [
+    {
+     "p": "で",
+     "gloss": "by what means: transport, a tool, a language, an amount",
+     "ex": {
+      "n": "バス で 行{い}きます",
+      "en": "I go by bus"
+     },
+     "frame": "means-de"
+    },
+    {
+     "p": "と",
+     "gloss": "with a person",
+     "ex": {
+      "n": "友達{ともだち} と 話{はな}します",
+      "en": "I talk with a friend"
+     },
+     "frame": "with-to"
+    },
+    {
+     "p": "に",
+     "gloss": "the person on the receiving end of giving, telling or phoning",
+     "ex": {
+      "n": "母{はは} に 電話{でんわ}します",
+      "en": "I phone my mother"
+     },
+     "frame": "to-someone"
+    }
+   ]
+  },
+  {
+   "role": "V",
+   "label": "VERB / です",
+   "jp": "最後",
+   "markers": [
+    {
+     "p": "ます",
+     "gloss": "the polite ending; the verb always comes last",
+     "ex": {
+      "n": "毎日{まいにち} 走{はし}ります",
+      "en": "I run every day"
+     },
+     "frame": "masu-plain"
+    },
+    {
+     "p": "です",
+     "gloss": "finishes a noun or adjective sentence, politely",
+     "ex": {
+      "n": "この部屋{へや} は 広{ひろ}いです",
+      "en": "This room is big"
+     },
+     "frame": "adj-i"
+    }
+   ]
+  },
+  {
+   "role": "Q",
+   "label": "QUESTION",
+   "jp": "か・ね・よ",
+   "markers": [
+    {
+     "p": "か",
+     "gloss": "turns the sentence into a question; nothing else moves",
+     "ex": {
+      "n": "これ は 辛{から}いです か",
+      "en": "Is this spicy?"
+     },
+     "frame": "ka"
+    },
+    {
+     "p": "ね",
+     "gloss": "isn't it? invites the listener to agree",
+     "ex": {
+      "n": "今日{きょう} は 暑{あつ}いです ね",
+      "en": "It's hot today, isn't it?"
+     },
+     "frame": "ne"
+    },
+    {
+     "p": "よ",
+     "gloss": "telling the listener something they don't know yet",
+     "ex": {
+      "n": "電車{でんしゃ} が 来{き}ました よ",
+      "en": "The train's here"
+     },
+     "frame": "ne"
+    }
+   ]
+  }
+ ],
+ "overlays": [
+  {
+   "p": "は",
+   "rule": "Replaces が and を. Stacks onto the others: には, では, からは.",
+   "ex": {
+    "n": "コーヒー は 飲{の}みません",
+    "en": "Coffee, I don't drink"
+   },
+   "frame": "wa-ga"
+  },
+  {
+   "p": "も",
+   "rule": "Replaces が and を. Stacks onto the others: にも, でも.",
+   "ex": {
+    "n": "東京{とうきょう} に も 行{い}きました",
+    "en": "I went to Tokyo too"
+   },
+   "frame": "mo"
+  },
+  {
+   "p": "だけ",
+   "rule": "Only. Sits where the particle was; を and が usually drop away.",
+   "ex": {
+    "n": "水{みず} だけ 飲{の}みます",
+    "en": "I only drink water"
+   },
+   "frame": "dake"
+  },
+  {
+   "p": "しか",
+   "rule": "Only, with a negative verb after it. Sounds like a complaint.",
+   "ex": {
+    "n": "水{みず} しか 飲{の}みません",
+    "en": "I drink nothing but water"
+   },
+   "frame": "dake"
+  }
+ ],
+ "pairs": [
+  {
+   "q": "は or が?",
+   "a": "は sets up what you're talking about; が picks out which one. A question word and its answer both take が.",
+   "frame": "wa-ga"
+  },
+  {
+   "q": "に or で?",
+   "a": "で is the stage an action happens on; に is the point something sits at or arrives at.",
+   "frame": "ni-de"
+  },
+  {
+   "q": "を or が?",
+   "a": "Plain verbs take を. Potentials, 好き, 上手, ほしい and ある take が.",
+   "frame": "o-ga"
+  },
+  {
+   "q": "へ or に?",
+   "a": "Both work with going verbs. へ leans towards the direction, に towards the destination you reach.",
+   "frame": "direction"
+  },
+  {
+   "q": "と or や?",
+   "a": "と lists everything there is; や lists examples and implies more.",
+   "frame": "to-ya"
+  }
+ ]
+}

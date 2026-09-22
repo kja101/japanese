@@ -662,7 +662,7 @@ _patterns = load("patterns.json")
 for _f in _patterns["frames"]:
     _f["ex"] = mark(_f["ex"])
     _f["q"] = [mark(q) for q in _f.get("q", [])]
-write("words/patterns.html", fill("patterns.html", DATA=dump(_patterns), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
+write("words/patterns.html", fill("patterns.html", DATA=dump(_patterns), PMAP=dump(load("particles.json")), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 
 # ---------------------------------------------------------------- offline support
