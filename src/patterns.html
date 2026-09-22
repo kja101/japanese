@@ -47,7 +47,7 @@ section.grp{margin:1.2rem 0 0;scroll-margin-top:150px}
 .wh{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
 .ww{font-family:var(--jp);font-size:1.6rem;line-height:1.25}
 .rj{font-style:italic;color:var(--muted);font-size:.9rem}
-.no-romaji .rj{display:none}
+.no-romaji .rj,.no-romaji .mex .rj{display:none}
 .lvb{margin-left:auto;font-size:.7rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted)}
 .we{margin-top:.1rem}
 .ex{margin-top:.45rem;padding-top:.4rem;border-top:1px dashed var(--rule);font-size:.92rem}
@@ -137,8 +137,9 @@ ul.marks li{display:grid;grid-template-columns:3.2rem 1fr;gap:.5rem;align-items:
 a.pchip{font-family:var(--jp);font-size:1.15rem;font-weight:600;text-align:center;text-decoration:none;color:var(--ink);background:var(--chip);border-radius:8px;padding:.15rem .3rem}
 .gloss{display:block;font-size:.92rem}
 .mex{margin:.1rem 0 0;font-size:.95rem}
-.mex .j{font-family:var(--jp);font-size:1.15rem;margin-right:.25rem}
-.mex .t{color:var(--muted);margin-left:.4rem}
+.mex .j{font-family:var(--jp);font-size:1.15rem;line-height:1.9}
+.mex .rj{display:block;font-style:italic;color:var(--muted);font-size:.85rem}
+.mex .t{color:var(--ink)}
 .pairs{margin:.4rem 0 0}
 .pairs dt{font-weight:700;margin:.5rem 0 .1rem}
 .pairs dt a{color:var(--indigo);text-decoration:none}
@@ -201,7 +202,8 @@ function frameHtml(f){
     <div class="flinks">${(f.g||[]).map(g=>`<a href="grammar.html?from=pt#p-${g}">Grammar: ${esc(g)} →</a>`).join("")}${f.b?`<a href="sentence-builder.html?from=pt#${f.b}">Sentences →</a>`:""}</div>
   </article>`;
 }
-function miniEx(e){ const S=jpSentence(e,linkK); return `<div class="mex"><span class="j">${S.jp}</span>${sayBtn(S.say)}<span class="t">${S.en}</span></div>`; }
+function miniEx(e){ const S=jpSentence(e,linkK);
+  return `<div class="mex"><div class="j">${S.jp}${sayBtn(S.say)}</div><div class="rj">${S.rom}</div><div class="t">${S.en}</div></div>`; }
 function mapHtml(){
   return `<section class="grp" id="g-map"><div class="ghead"><h3><span class="jp">助詞</span>Particle map <small>start here</small></h3><p>${esc(PMAP.intro)}</p></div>
   <article class="frame pmap" data-s="${esc(jpSearchKey("particle map slots "+PMAP.slots.map(s=>s.label+" "+s.jp+" "+s.markers.map(m=>m.p+" "+m.gloss).join(" ")).join(" ")))}">

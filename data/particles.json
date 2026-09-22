@@ -11,7 +11,27 @@
      "gloss": "the thing the sentence is about (the topic you have both agreed on)",
      "ex": {
       "n": "私{わたし} は 学生{がくせい} です",
-      "en": "I'm a student"
+      "en": "I'm a student",
+      "jr": [
+       [
+        "W",
+        "私は"
+       ],
+       [
+        "V",
+        "学生です"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "I"
+       ],
+       [
+        "V",
+        "'m a student"
+       ]
+      ]
      },
      "frame": "desu"
     },
@@ -20,7 +40,35 @@
      "gloss": "picks out which one: new information, and the answer to a question word",
      "ex": {
       "n": "だれ が 来{き}ます か",
-      "en": "Who is coming?"
+      "en": "Who is coming?",
+      "jr": [
+       [
+        "W",
+        "だれが"
+       ],
+       [
+        "V",
+        "来ます"
+       ],
+       [
+        "Q",
+        "か"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "Who"
+       ],
+       [
+        "V",
+        "is coming"
+       ],
+       [
+        "Q",
+        "?"
+       ]
+      ]
      },
      "frame": "dare-ga"
     },
@@ -29,7 +77,27 @@
      "gloss": "too, as well; with a negative, either",
      "ex": {
       "n": "私{わたし} も 行{い}きます",
-      "en": "I'm going too"
+      "en": "I'm going too",
+      "jr": [
+       [
+        "W",
+        "私も"
+       ],
+       [
+        "V",
+        "行きます"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "I"
+       ],
+       [
+        "V",
+        "'m going too"
+       ]
+      ]
      },
      "frame": "mo"
     }
@@ -45,7 +113,27 @@
      "gloss": "a time you could point at on a clock or calendar",
      "ex": {
       "n": "七時{しちじ} に 起{お}きます",
-      "en": "I get up at seven"
+      "en": "I get up at seven",
+      "jr": [
+       [
+        "T",
+        "七時に"
+       ],
+       [
+        "V",
+        "起きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I get up"
+       ],
+       [
+        "T",
+        "at seven"
+       ]
+      ]
      },
      "frame": "time-ni"
     },
@@ -54,7 +142,27 @@
      "gloss": "from that time",
      "ex": {
       "n": "九時{くじ} から 働{はたら}きます",
-      "en": "I work from nine"
+      "en": "I work from nine",
+      "jr": [
+       [
+        "T",
+        "九時から"
+       ],
+       [
+        "V",
+        "働きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I work"
+       ],
+       [
+        "T",
+        "from nine"
+       ]
+      ]
      },
      "frame": "from-to"
     },
@@ -63,7 +171,27 @@
      "gloss": "until that time",
      "ex": {
       "n": "五時{ごじ} まで 働{はたら}きます",
-      "en": "I work until five"
+      "en": "I work until five",
+      "jr": [
+       [
+        "T",
+        "五時まで"
+       ],
+       [
+        "V",
+        "働きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I work"
+       ],
+       [
+        "T",
+        "until five"
+       ]
+      ]
      },
      "frame": "from-to"
     },
@@ -72,7 +200,27 @@
      "gloss": "today, tomorrow, every day, now, this week: no particle at all",
      "ex": {
       "n": "明日{あした} 行{い}きます",
-      "en": "I'm going tomorrow"
+      "en": "I'm going tomorrow",
+      "jr": [
+       [
+        "T",
+        "明日"
+       ],
+       [
+        "V",
+        "行きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm going"
+       ],
+       [
+        "T",
+        "tomorrow"
+       ]
+      ]
      },
      "frame": "time-ni"
     }
@@ -88,7 +236,27 @@
      "gloss": "where an action happens",
      "ex": {
       "n": "図書館{としょかん} で 読{よ}みます",
-      "en": "I read in the library"
+      "en": "I read in the library",
+      "jr": [
+       [
+        "P",
+        "図書館で"
+       ],
+       [
+        "V",
+        "読みます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I read"
+       ],
+       [
+        "P",
+        "in the library"
+       ]
+      ]
      },
      "frame": "place-de"
     },
@@ -97,7 +265,27 @@
      "gloss": "where something is, or where you arrive",
      "ex": {
       "n": "東京{とうきょう} に 住{す}んでいます",
-      "en": "I live in Tokyo"
+      "en": "I live in Tokyo",
+      "jr": [
+       [
+        "P",
+        "東京に"
+       ],
+       [
+        "V",
+        "住んでいます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I live"
+       ],
+       [
+        "P",
+        "in Tokyo"
+       ]
+      ]
      },
      "frame": "ni-de"
     },
@@ -106,7 +294,27 @@
      "gloss": "the direction you set off in",
      "ex": {
       "n": "日本{にほん} へ 行{い}きます",
-      "en": "I'm going to Japan"
+      "en": "I'm going to Japan",
+      "jr": [
+       [
+        "P",
+        "日本へ"
+       ],
+       [
+        "V",
+        "行きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I'm going"
+       ],
+       [
+        "P",
+        "to Japan"
+       ]
+      ]
      },
      "frame": "direction"
     },
@@ -115,7 +323,27 @@
      "gloss": "from there",
      "ex": {
       "n": "駅{えき} から 歩{ある}きます",
-      "en": "I walk from the station"
+      "en": "I walk from the station",
+      "jr": [
+       [
+        "P",
+        "駅から"
+       ],
+       [
+        "V",
+        "歩きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I walk"
+       ],
+       [
+        "P",
+        "from the station"
+       ]
+      ]
      },
      "frame": "from-to"
     },
@@ -124,7 +352,27 @@
      "gloss": "as far as there",
      "ex": {
       "n": "家{いえ} まで 歩{ある}きます",
-      "en": "I walk as far as home"
+      "en": "I walk as far as home",
+      "jr": [
+       [
+        "P",
+        "家まで"
+       ],
+       [
+        "V",
+        "歩きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I walk"
+       ],
+       [
+        "P",
+        "as far as home"
+       ]
+      ]
      },
      "frame": "from-to"
     }
@@ -140,7 +388,27 @@
      "gloss": "the thing the verb acts on",
      "ex": {
       "n": "ご飯{はん} を 食{た}べます",
-      "en": "I eat a meal"
+      "en": "I eat a meal",
+      "jr": [
+       [
+        "O",
+        "ご飯を"
+       ],
+       [
+        "V",
+        "食べます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I eat"
+       ],
+       [
+        "O",
+        "a meal"
+       ]
+      ]
      },
      "frame": "verb-o"
     },
@@ -149,7 +417,27 @@
      "gloss": "with can, like, good at, want: the thing is marked が, not を",
      "ex": {
       "n": "漢字{かんじ} が 読{よ}めます",
-      "en": "I can read kanji"
+      "en": "I can read kanji",
+      "jr": [
+       [
+        "O",
+        "漢字が"
+       ],
+       [
+        "V",
+        "読めます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I can read"
+       ],
+       [
+        "O",
+        "kanji"
+       ]
+      ]
      },
      "frame": "o-ga"
     }
@@ -165,7 +453,27 @@
      "gloss": "by what means: transport, a tool, a language, an amount",
      "ex": {
       "n": "バス で 行{い}きます",
-      "en": "I go by bus"
+      "en": "I go by bus",
+      "jr": [
+       [
+        "H",
+        "バスで"
+       ],
+       [
+        "V",
+        "行きます"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I go"
+       ],
+       [
+        "H",
+        "by bus"
+       ]
+      ]
      },
      "frame": "means-de"
     },
@@ -174,7 +482,27 @@
      "gloss": "with a person",
      "ex": {
       "n": "友達{ともだち} と 話{はな}します",
-      "en": "I talk with a friend"
+      "en": "I talk with a friend",
+      "jr": [
+       [
+        "H",
+        "友達と"
+       ],
+       [
+        "V",
+        "話します"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I talk"
+       ],
+       [
+        "H",
+        "with a friend"
+       ]
+      ]
      },
      "frame": "with-to"
     },
@@ -183,7 +511,27 @@
      "gloss": "the person on the receiving end of giving, telling or phoning",
      "ex": {
       "n": "母{はは} に 電話{でんわ}します",
-      "en": "I phone my mother"
+      "en": "I phone my mother",
+      "jr": [
+       [
+        "W",
+        "母に"
+       ],
+       [
+        "V",
+        "電話します"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I phone"
+       ],
+       [
+        "W",
+        "my mother"
+       ]
+      ]
      },
      "frame": "to-someone"
     }
@@ -199,7 +547,27 @@
      "gloss": "the polite ending; the verb always comes last",
      "ex": {
       "n": "毎日{まいにち} 走{はし}ります",
-      "en": "I run every day"
+      "en": "I run every day",
+      "jr": [
+       [
+        "T",
+        "毎日"
+       ],
+       [
+        "V",
+        "走ります"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I run"
+       ],
+       [
+        "T",
+        "every day"
+       ]
+      ]
      },
      "frame": "masu-plain"
     },
@@ -208,7 +576,27 @@
      "gloss": "finishes a noun or adjective sentence, politely",
      "ex": {
       "n": "この部屋{へや} は 広{ひろ}いです",
-      "en": "This room is big"
+      "en": "This room is big",
+      "jr": [
+       [
+        "W",
+        "この部屋は"
+       ],
+       [
+        "V",
+        "広いです"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "This room"
+       ],
+       [
+        "V",
+        "is big"
+       ]
+      ]
      },
      "frame": "adj-i"
     }
@@ -224,7 +612,39 @@
      "gloss": "turns the sentence into a question; nothing else moves",
      "ex": {
       "n": "これ は 辛{から}いです か",
-      "en": "Is this spicy?"
+      "en": "Is this spicy?",
+      "jr": [
+       [
+        "W",
+        "これは"
+       ],
+       [
+        "V",
+        "辛いです"
+       ],
+       [
+        "Q",
+        "か"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "Is"
+       ],
+       [
+        "W",
+        "this"
+       ],
+       [
+        "V",
+        "spicy"
+       ],
+       [
+        "Q",
+        "?"
+       ]
+      ]
      },
      "frame": "ka"
     },
@@ -233,7 +653,35 @@
      "gloss": "isn't it? invites the listener to agree",
      "ex": {
       "n": "今日{きょう} は 暑{あつ}いです ね",
-      "en": "It's hot today, isn't it?"
+      "en": "It's hot today, isn't it?",
+      "jr": [
+       [
+        "T",
+        "今日は"
+       ],
+       [
+        "V",
+        "暑いです"
+       ],
+       [
+        "Q",
+        "ね"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "It's hot"
+       ],
+       [
+        "T",
+        "today"
+       ],
+       [
+        "Q",
+        "isn't it"
+       ]
+      ]
      },
      "frame": "ne"
     },
@@ -242,7 +690,31 @@
      "gloss": "telling the listener something they don't know yet",
      "ex": {
       "n": "電車{でんしゃ} が 来{き}ました よ",
-      "en": "The train's here"
+      "en": "The train's here",
+      "jr": [
+       [
+        "W",
+        "電車が"
+       ],
+       [
+        "V",
+        "来ました"
+       ],
+       [
+        "Q",
+        "よ"
+       ]
+      ],
+      "er": [
+       [
+        "W",
+        "The train"
+       ],
+       [
+        "V",
+        "'s here"
+       ]
+      ]
      },
      "frame": "ne"
     }
@@ -255,7 +727,27 @@
    "rule": "Replaces が and を. Stacks onto the others: には, では, からは.",
    "ex": {
     "n": "コーヒー は 飲{の}みません",
-    "en": "Coffee, I don't drink"
+    "en": "Coffee, I don't drink",
+    "jr": [
+     [
+      "O",
+      "コーヒーは"
+     ],
+     [
+      "V",
+      "飲みません"
+     ]
+    ],
+    "er": [
+     [
+      "O",
+      "Coffee"
+     ],
+     [
+      "V",
+      "I don't drink"
+     ]
+    ]
    },
    "frame": "wa-ga"
   },
@@ -264,7 +756,31 @@
    "rule": "Replaces が and を. Stacks onto the others: にも, でも.",
    "ex": {
     "n": "東京{とうきょう} に も 行{い}きました",
-    "en": "I went to Tokyo too"
+    "en": "I went to Tokyo too",
+    "jr": [
+     [
+      "P",
+      "東京にも"
+     ],
+     [
+      "V",
+      "行きました"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I went"
+     ],
+     [
+      "P",
+      "to Tokyo"
+     ],
+     [
+      "V",
+      "too"
+     ]
+    ]
    },
    "frame": "mo"
   },
@@ -273,7 +789,27 @@
    "rule": "Only. Sits where the particle was; を and が usually drop away.",
    "ex": {
     "n": "水{みず} だけ 飲{の}みます",
-    "en": "I only drink water"
+    "en": "I only drink water",
+    "jr": [
+     [
+      "O",
+      "水だけ"
+     ],
+     [
+      "V",
+      "飲みます"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I only drink"
+     ],
+     [
+      "O",
+      "water"
+     ]
+    ]
    },
    "frame": "dake"
   },
@@ -282,7 +818,27 @@
    "rule": "Only, with a negative verb after it. Sounds like a complaint.",
    "ex": {
     "n": "水{みず} しか 飲{の}みません",
-    "en": "I drink nothing but water"
+    "en": "I drink nothing but water",
+    "jr": [
+     [
+      "O",
+      "水しか"
+     ],
+     [
+      "V",
+      "飲みません"
+     ]
+    ],
+    "er": [
+     [
+      "V",
+      "I drink nothing but"
+     ],
+     [
+      "O",
+      "water"
+     ]
+    ]
    },
    "frame": "dake"
   }
