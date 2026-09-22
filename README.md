@@ -13,6 +13,7 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `kanji/kanji-by-situation.html` | **See them in use.** 200 N4 kanji in 13 real-life situations, with 1,465 example sentences, where you meet each kanji, and N5–N2 word lists. |
 | `words/phrasebook.html` | Interactive phrasebook: 474 phrases in 14 situations, each linked to its sentences in the sentence builder, with swap-in words, grammar-block colouring and a starred personal list. |
 | `words/vocabulary.html` | **Every word.** 4,280 N5–N2 words (the kanji words plus the kana lists) by type or kana order, with examples, audio and links to the kanji deck. |
+| `words/patterns.html` | **Sentence frames.** 55 patterns by grammar type: particle slots, tense tables, question forms, with links to the grammar page and the builder. |
 | `words/grammar.html` | 112 grammar patterns from N5 to N2, with a cumulative level switch: meaning, how to form each, usage notes, and examples with audio. |
 | `words/sentence-builder.html` | **The grammar behind it.** 1,465 sentences in 13 situations, in colour-coded blocks with a level switch, the English order beside the Japanese, and all N5/N4 verbs and adjectives with their forms. |
 | `words/phrase-guide.html` | Earlier phrase guide, now included in the phrasebook. Kept so old links still work; not part of the build. |

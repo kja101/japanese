@@ -337,7 +337,7 @@ syncStarBtn();
 render();
 (function(){   // arriving from the phrasebook: a way back, and the right situation on screen
   const src=PARAMS.get("from");
-  const back={pb:["← Back to the phrasebook","phrasebook.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src];
+  const back={pt:["← Back to sentence patterns","patterns.html"],pb:["← Back to the phrasebook","phrasebook.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src];
   if(back){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=back[0]; document.body.appendChild(b);
     b.onclick=()=>{ if(history.length>1) history.back(); else location.href=back[1]; }; }
   const id=location.hash.slice(1); if(!id) return;

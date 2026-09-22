@@ -221,7 +221,7 @@ render(); applyBlocks(); initParticlePopup();
 initReturnLinks("vo-return",".wc","data-k","iflash");
 (function(){
   const src=(location.search.match(/[?&]from=(\w+)/)||[])[1];
-  const SRC={ks:"← Back to kana sounds",vo:"← Back",km:"← Back to the kanji deck",kw:"← Back to kana words",kt:"← Back to katakana words",gr:"← Back to grammar",sb:"← Back to the sentence",pb:"← Back to the phrasebook",st:"← Back to the situation"}[src];
+  const SRC={pt:"← Back to sentence patterns",ks:"← Back to kana sounds",vo:"← Back",km:"← Back to the kanji deck",kw:"← Back to kana words",kt:"← Back to katakana words",gr:"← Back to grammar",sb:"← Back to the sentence",pb:"← Back to the phrasebook",st:"← Back to the situation"}[src];
   if(SRC){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=SRC; document.body.appendChild(b);
     b.onclick=()=>{ if(history.length>1) history.back(); else location.href="../index.html"; }; }
   const m=location.hash.match(/^#w-(.+)$/); if(!m) return;

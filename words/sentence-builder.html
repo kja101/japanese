@@ -239,7 +239,7 @@ body{background:var(--bg);color:var(--ink)}
  window.doSearch=function(){ clearTimeout(searchTimer); searchTimer=setTimeout(function(){ if(window.render) window.render(); },180); };
  q.addEventListener('input',window.doSearch);
 })();
-</script><script src="../assets/common.js?v=682c53afaa"></script>
+</script><script src="../assets/common.js?v=7d74041523"></script>
 <script>
 
 
@@ -335,7 +335,7 @@ syncStarBtn();
 render();
 (function(){   // arriving from the phrasebook: a way back, and the right situation on screen
   const src=PARAMS.get("from");
-  const back={pb:["← Back to the phrasebook","phrasebook.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src];
+  const back={pt:["← Back to sentence patterns","patterns.html"],pb:["← Back to the phrasebook","phrasebook.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src];
   if(back){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=back[0]; document.body.appendChild(b);
     b.onclick=()=>{ if(history.length>1) history.back(); else location.href=back[1]; }; }
   const id=location.hash.slice(1); if(!id) return;

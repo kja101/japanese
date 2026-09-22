@@ -510,6 +510,8 @@ def search_index():
         out.append([key(k, x["m"], " ".join(x.get("on", []) + x.get("kun", [])), krRomaji(" ".join(x.get("on", []) + x.get("kun", [])))), "km", k, k + " " + x["m"].split(",")[0]])
     for g in load("grammar.json"):
         out.append([key(NOTE_RE.sub(r"\1", g["pat"]), g["mean"], g["group"]), "gr", g["id"], NOTE_RE.sub(r"\1", g["pat"])])
+    for f in load("patterns.json")["frames"]:
+        out.append([key(f["jp"], f["en"], f["note"]), "pt", f["id"], f["jp"]])
     for v in vocabulary():
         if v["kana"]:
             continue                                   # the kana pages already carry these
@@ -656,6 +658,11 @@ write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("
 _grammar = load("grammar.json")
 for _g in _grammar:
     _g["ex"] = [mark(e) for e in _g["ex"]]
+_patterns = load("patterns.json")
+for _f in _patterns["frames"]:
+    _f["ex"] = mark(_f["ex"])
+    _f["q"] = [mark(q) for q in _f.get("q", [])]
+write("words/patterns.html", fill("patterns.html", DATA=dump(_patterns), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 
 # ---------------------------------------------------------------- offline support

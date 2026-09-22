@@ -295,7 +295,7 @@ function jpSearchable(){ return Array.prototype.map.call(arguments,x=>Array.isAr
 // [key, page, anchor, label]; pages: kw kana words, kt katakana words, km kanji deck, gr grammar, ks kana sounds
 const jpIndex=()=>(typeof JP_SEARCH_INDEX!=="undefined"?JP_SEARCH_INDEX:[]);
 const JP_PAGES={kw:["kana words","kana/kana-words.html","w-"],kt:["katakana words","kana/katakana-words.html","w-"],
-  km:["the kanji deck","kanji/master-kanji-shapes.html","k-"],vo:["the word list","words/vocabulary.html","w-"],gr:["grammar","words/grammar.html","p-"],
+  km:["the kanji deck","kanji/master-kanji-shapes.html","k-"],pt:["sentence patterns","words/patterns.html","f-"],vo:["the word list","words/vocabulary.html","w-"],gr:["grammar","words/grammar.html","p-"],
   ks:["kana sounds","kana/kana-sounds.html",""]};
 function jpElsewhere(query,exclude,root,from){
   const q=jpSearchKey(query||"").trim();

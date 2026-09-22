@@ -711,7 +711,7 @@ render();
 (function(){
   const m=location.hash.match(/^#k-(.+)$/); if(!m) return;
   const k=decodeURIComponent(m[1]); const src=(location.search.match(/[?&]from=(\w+)/)||[])[1]; const fromSB=!!src;
-  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"],gr:["← Back to grammar","../words/grammar.html"],kt:["← Back to katakana words","../kana/katakana-words.html"],vo:["← Back to the word list","../words/vocabulary.html"],ks:["← Back to kana sounds","../kana/kana-sounds.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src]||["← Back","../index.html"];
+  const SRC={sb:["← Back to the sentence","../words/sentence-builder.html"],pb:["← Back to the phrasebook","../words/phrasebook.html"],kw:["← Back to kana words","../kana/kana-words.html"],gr:["← Back to grammar","../words/grammar.html"],kt:["← Back to katakana words","../kana/katakana-words.html"],vo:["← Back to the word list","../words/vocabulary.html"],ks:["← Back to kana sounds","../kana/kana-sounds.html"],pt:["← Back to sentence patterns","../words/patterns.html"],st:["← Back to the situation","../kanji/kanji-by-situation.html"]}[src]||["← Back","../index.html"];
   setTimeout(()=>{
     jumpTo(k,null,null);
     if(!fromSB) return;

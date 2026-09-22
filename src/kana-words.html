@@ -177,7 +177,7 @@ initReturnLinks("__FROM__-return",".wc","data-w","iflash");
     window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12); el.classList.remove("iflash"); void el.offsetWidth; el.classList.add("iflash"); };
   go(); setTimeout(go,150);
   const src=(location.search.match(/[?&]from=(\w+)/)||[])[1];
-  const SRC={pb:"← Back to the phrasebook",sb:"← Back to the sentence",gr:"← Back to grammar",st:"← Back to the situation",km:"← Back to the kanji deck",kw:"← Back to kana words",kt:"← Back to katakana words"}[src];
+  const SRC={pt:"← Back to sentence patterns",pb:"← Back to the phrasebook",sb:"← Back to the sentence",gr:"← Back to grammar",st:"← Back to the situation",km:"← Back to the kanji deck",kw:"← Back to kana words",kt:"← Back to katakana words"}[src];
   if(SRC){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=SRC; document.body.appendChild(b);
     b.onclick=()=>{ if(history.length>1) history.back(); else location.href={pb:"../words/phrasebook.html",sb:"../words/sentence-builder.html",gr:"../words/grammar.html",st:"../kanji/kanji-by-situation.html",km:"../kanji/master-kanji-shapes.html",kw:"kana-words.html",kt:"katakana-words.html"}[src]||"../index.html"; }; }
 })();
