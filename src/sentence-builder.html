@@ -183,6 +183,11 @@ body{background:var(--bg);color:var(--ink)}
 .snum{display:flex;flex-direction:column;align-items:center;gap:.2rem;height:auto!important}
 #starbtn[aria-pressed="true"]{background:#E0A800;border-color:#E0A800;color:#1D2433}
 .backbtn{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;font:inherit;font-weight:600;border:0;border-radius:8px;padding:.6rem 1rem;background:var(--ink);color:var(--paper);box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
+.patchip{display:inline-block;margin:.35rem 0 0;font-family:var(--jp);font-size:.9rem;color:var(--mute);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:.1rem .55rem}
+.patchip:hover,.patchip:focus-visible{color:var(--ink);border-color:var(--ink)}
+.patbar{max-width:1000px;margin:.6rem auto 0;padding:0 1.25rem;font-size:.92rem}
+.patbar b{font-family:var(--jp);font-size:1.05rem}
+.patbar a{color:var(--navy)}
 </style></head><body>
 
 <div class="bar">
@@ -204,6 +209,7 @@ body{background:var(--bg);color:var(--ink)}
 <div class="noresult">Nothing matches that. Try an English word, a kanji, or a rōmaji fragment like <b>onegai</b>.</div>
 
 
+<div class="patbar" id="patbar" hidden></div>
 <div id="sents"></div>
 <section class="card" id="forms"><header class="card-head"><h2>Verbs and adjectives: types and forms<span class="jp">動詞・形容詞</span></h2><p class="blurb">The block system tells you where the verb goes. This tells you what to do with it. Every N5 and N4 verb and adjective, sorted by type, with the forms you need most. Traps are listed first in each group.</p></header>
 <div class="fx-body">
@@ -248,6 +254,7 @@ body{background:var(--bg);color:var(--ink)}
 // ---------- particles, kanji links and reading colours for the sentence builder ----------
 const KSET=new Set(__KANJI_SET__);
 const D=__DATA__;
+const PAT=__PAT__;   // frame id → its name on the patterns page
 const esc=jpEsc;
 const linkK=html=>html.replace(/(<[^>]+>)|([^<]+)/g,(m,tag,text)=>tag?tag:text.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=sb#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c));
 const KANA_WORDS=__KANA_WORDS__;
@@ -284,6 +291,7 @@ function sentHtml(s,n){
     <p class="line lay-romaji">${rom}</p>
     ${orderHtml(s)}
     ${s.why?`<p class="why lay-why"><span class="wl">Why</span>${esc(s.why)}</p>`:""}
+    ${s.pat&&PAT[s.pat]?`<a class="patchip" href="patterns.html?from=sb#f-${s.pat}" title="See this pattern explained">${esc(PAT[s.pat])}</a>`:""}
   </div></div>`;
 }
 const jpRomajiLineOf=s=>s.n?s.n.split(" ").map(t=>jpRomajiToken(jpKanaOf(t))).join(" "):"";
@@ -292,6 +300,8 @@ let STARS=new Set(); try{ STARS=new Set(JSON.parse(localStorage.getItem("phraseb
 const saveStars=()=>{ try{ localStorage.setItem("phrasebook-stars",JSON.stringify([...STARS])); }catch(e){} };
 const PARAMS=new URLSearchParams(location.search);
 let onlyStarred=PARAMS.get("starred")==="1";
+let onlyPattern=PARAMS.get("pattern")||"";
+if(onlyPattern) tier=2;   // a pattern link shows every level
 if(PARAMS.get("q")) tier=2;             // a search from the phrasebook looks at every level
 // Pages with thousands of sentences are too much for a phone to lay out at once (iOS can crash when an option
 // changes). So each situation is drawn only as you approach it; searching filters the data, not the page.
@@ -309,7 +319,7 @@ function render(){
   const qv=(document.getElementById("q").value||"").trim(), qk=qv?jpSearchKey(qv):"";
   SEC=[]; const toc=[];
   D.forEach(sec=>{
-    const ss=sec.sents.filter(s=>s.lv>=tier&&(!onlyStarred||STARS.has(s.id))&&(!qk||sKey(s).includes(qk)));
+    const ss=sec.sents.filter(s=>s.lv>=tier&&(!onlyStarred||STARS.has(s.id))&&(!onlyPattern||s.pat===onlyPattern)&&(!qk||sKey(s).includes(qk)));
     if(!ss.length) return;
     SEC.push({sec,ss});
     toc.push(`<a href="#${sec.id}">${esc(sec.title)}<span>${esc(sec.jp)} · ${ss.length}</span></a>`);
@@ -317,6 +327,10 @@ function render(){
   document.getElementById("sents").innerHTML=SEC.map(({sec,ss},i)=>`<section class="card" id="${sec.id}"><header class="card-head"><h2>${esc(sec.title)}<span class="jp">${esc(sec.jp)}</span></h2>${sec.blurb?`<p class="blurb">${esc(sec.blurb)}</p>`:""}</header>
       <div class="sents" data-i="${i}" style="min-height:${ss.length*210}px"></div></section>`).join("");
   document.getElementById("toc").innerHTML=toc.join("");
+  const pb=document.getElementById("patbar");
+  if(onlyPattern&&PAT[onlyPattern]){ const n=SEC.reduce((a,x)=>a+x.ss.length,0);
+    pb.innerHTML=`Sentences with <b>${esc(PAT[onlyPattern])}</b> · ${n} · <a href="patterns.html?from=sb#f-${onlyPattern}">the pattern explained →</a> · <a href="#" id="clearpat">show all sentences</a>`; pb.hidden=false; }
+  else pb.hidden=true;
   document.body.classList.toggle("filtering",!!qk); document.body.classList.toggle("empty",!!qk&&!SEC.length);
   if(io) io.disconnect();
   io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) fillSection(+e.target.dataset.i); }),{rootMargin:"1500px 0px"});
@@ -330,6 +344,7 @@ document.querySelectorAll("[data-tier]").forEach(x=>x.setAttribute("aria-pressed
 const starBtn=document.getElementById("starbtn");
 const syncStarBtn=()=>{ starBtn.setAttribute("aria-pressed",onlyStarred); starBtn.textContent=onlyStarred?`★ Starred (${[...STARS].filter(i=>!i.startsWith("p:")).length})`:"★ Starred"; };
 starBtn.onclick=()=>{ onlyStarred=!onlyStarred; syncStarBtn(); render(); };
+document.getElementById("patbar").addEventListener("click",e=>{ if(e.target.id==="clearpat"){ e.preventDefault(); onlyPattern=""; history.replaceState(null,"","sentence-builder.html"); render(); } });
 document.getElementById("sents").addEventListener("click",e=>{ const b=e.target.closest("[data-star]"); if(!b) return;
   const id=b.dataset.star; STARS.has(id)?STARS.delete(id):STARS.add(id); saveStars(); b.setAttribute("aria-pressed",STARS.has(id)); syncStarBtn(); });
 if(PARAMS.get("q")){ const q=document.getElementById("q"); q.value=PARAMS.get("q"); }

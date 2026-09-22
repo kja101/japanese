@@ -602,6 +602,35 @@ PB_CHAPTERS = chapters
 
 
 # ---------------------------------------------------------------- sentence builder
+PATTERN_RULES = [   # ordered: the most specific ending wins, and nothing is tagged unless a rule is sure
+    ("kadouka", r"かどうか"), ("dekiru", r"ことができ"), ("nakereba", r"なければ|なきゃ"),
+    ("temoii", r"てもいい|でもいい"), ("dame", r"てはいけ|てはだめ|ては駄目"),
+    ("kudasai", r"てください|でください|ていただけ|て下さい"), ("mashou", r"ましょう|ませんか"),
+    ("tai", r"たいです|たくない|たかった"), ("hoshii", r"ほしい|欲しい"),
+    ("potential", r"られます|られません|られる|えます|えません|けます|けません|せます|めます|れます|げます"),
+    ("teita", r"ていました|でいました"), ("teiru", r"ています|でいます|ている|でいる"),
+    ("toki", r"とき|時に"), ("tara", r"たら|だら"), ("ba", r"ければ|えば|せば|けば|めば|べば"),
+    ("temo", r"ても、|でも、|ても$|でも$"), ("node", r"ので"), ("kara", r"から、|ですから|だから"),
+    ("ga", r"ですが|ますが|だが"), ("te-join", r"て、|で、"),
+    ("itsu", r"いつ"), ("doko-de", r"どこで"), ("nani-o", r"何を|なにを"), ("dare-ga", r"だれ|誰"),
+    ("doushite", r"どうして|なぜ"), ("ikura", r"いくら|いくつ|何人|何回|何枚"), ("dore", r"どれ|どの|どちら"),
+    ("ne", r"ですね|ますね"), ("ka", r"ですか|ますか"),
+    ("aru", r"があります|はありますか|がありました"), ("iru", r"がいます|はいますか|がいました"),
+    ("adj-past", r"かったです|かった"), ("desu-past", r"でした"),
+    ("o-ga", r"が(好き|上手|得意|嫌い)"), ("suru-noun", r"をします|をしました|を します"),
+    ("verb-o", r"を.{1,12}(ます|ました|ません)"), ("place-de", r"で.{1,12}(ます|ました|ません)"),
+    ("time-ni", r"時に|日に|曜日に"), ("direction", r"へ|に行|に来"),
+    ("adj-i", r"いです$"), ("masu-plain", r"ます$|ました$|ません$"), ("desu", r"です$"),
+]
+
+def sentence_pattern(text):
+    """Which frame on the patterns page does this sentence show? None when no rule is sure."""
+    t = text.replace(" ", "")
+    for fid, pat in PATTERN_RULES:
+        if re.search(pat, t):
+            return fid
+    return None
+
 def builder_sections():
     """One set of topics: the builder's own sentences first in each, then every other marked sentence.
     Every sentence keeps the id the phrasebook used, so stars carry over."""
@@ -617,10 +646,12 @@ def builder_sections():
         for s in sents:
             s = {k: s[k] for k in ("id", "kj", "kn", "rj", "roles", "en", "enb", "why") if k in s}
             s["lv"] = level("".join(s["kj"])); s["core"] = True
+            s["pat"] = sentence_pattern("".join(s["kj"]))
             topics[tid]["sents"].append(s)
     for s in extra:                                           # everything else, in the same topics
         r = mark({k: v for k, v in s.items() if k in ("id", "n", "en", "why", "jr", "er")})
         r["lv"] = level(NOTE.sub(r"\1", s["n"]))
+        r["pat"] = sentence_pattern(NOTE.sub(r"\1", s["n"]))
         extra_topic = {"love": ("Dating and romance", "恋愛", "Chatting someone up, asking them out, dates and relationships.")}.get(s["topic"], ("More sentences", "", ""))
         topics.setdefault(s["topic"], {"id": s["topic"], "title": extra_topic[0], "jp": extra_topic[1], "blurb": extra_topic[2], "sents": []})["sents"].append(r)
     for t in topics.values():                                 # core sentences first, then the rest
@@ -635,7 +666,24 @@ _sent_index = [[t["id"], s["id"], (" ".join(s["kj"]) + " " + " ".join(s["kn"]) i
                for t in _sections for s in t["sents"]]
 _nphr = sum(len(s["items"].strip().split("\n")) for c in PB_CHAPTERS for s in c["phr"])
 write("words/phrasebook.html", fill("phrasebook.html", DATA=dump(PB_CHAPTERS), SENTS=dump(_sent_index), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, PHRASES=f"{_nphr:,}"))
-write("words/sentence-builder.html", fill("sentence-builder.html", KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, DATA=dump(_sections)))
+_patterns = load("patterns.json")
+_pat_count = {}
+for _t in _sections:
+    for _s in _t["sents"]:
+        if _s.get("pat"):
+            _pat_count[_s["pat"]] = _pat_count.get(_s["pat"], 0) + 1
+for _f in _patterns["frames"]:
+    _f["n"] = _pat_count.get(_f["id"], 0)
+for _f in _patterns["frames"]:
+    _f["ex"] = mark(_f["ex"])
+    _f["q"] = [mark(q) for q in _f.get("q", [])]
+_pmap = load("particles.json")
+for _s in _pmap["slots"]:
+    for _m in _s["markers"]:
+        _m["ex"] = mark(_m["ex"])
+for _o in _pmap["overlays"]:
+    _o["ex"] = mark(_o["ex"])
+write("words/sentence-builder.html", fill("sentence-builder.html", PAT=dump({f["id"]: f["jp"] for f in _patterns["frames"]}), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, DATA=dump(_sections)))
 
 # ---------------------------------------------------------------- study plan
 write("kanji/learn.html", fill("study.html", DATA=dump(study_data())))
@@ -658,16 +706,6 @@ write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("
 _grammar = load("grammar.json")
 for _g in _grammar:
     _g["ex"] = [mark(e) for e in _g["ex"]]
-_patterns = load("patterns.json")
-for _f in _patterns["frames"]:
-    _f["ex"] = mark(_f["ex"])
-    _f["q"] = [mark(q) for q in _f.get("q", [])]
-_pmap = load("particles.json")
-for _s in _pmap["slots"]:
-    for _m in _s["markers"]:
-        _m["ex"] = mark(_m["ex"])
-for _o in _pmap["overlays"]:
-    _o["ex"] = mark(_o["ex"])
 write("words/patterns.html", fill("patterns.html", DATA=dump(_patterns), PMAP=dump(_pmap), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 
