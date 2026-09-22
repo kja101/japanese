@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kanji by situation: where you meet them, with words and sentences</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +16,15 @@
   --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
   --en:"Source Sans 3","Segoe UI",system-ui,sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+    --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+    --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+    --green:#7CC49A; --green-wash:#1F3328; --amber:#E0A548; --amber-wash:#3A3020;
+  }}/*theme-dark*/:root[data-theme="dark"]{
     --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
     --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
     --green:#7CC49A; --green-wash:#1F3328; --amber:#E0A548; --amber-wash:#3A3020;
   }
-}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -160,7 +163,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
   .sl li{padding-left:0} .sl li::before{position:static;display:inline-grid;margin-bottom:.2rem}
 }
 :root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}/*theme-dark*/:root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
 :root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
 .rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
 body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
@@ -207,7 +210,7 @@ a.moresents.tosb{display:inline-block;text-decoration:none;color:var(--indigo);f
 <main id="main"></main>
 <footer><p>Sources: the kanji, stories and situations are this project's own. Word lists come from the open JLPT word lists (derived from tanos.co.uk), with readings from KANJIDIC2 (EDRDG, CC BY-SA 4.0). JLPT has not published official lists since 2010, so all levels are a guide.</p></footer>
 <script src="../assets/search-index.js?v=b277da361b"></script>
-<script src="../assets/common.js?v=19d7a2d9ca"></script>
+<script src="../assets/common.js?v=682c53afaa"></script>
 <script>
 
 

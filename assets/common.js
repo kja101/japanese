@@ -538,7 +538,7 @@ function jpSentence(s,link){
 function jpKeybar(){ return `<div class="keybar" aria-label="Block colours"><span style="--c:var(--rW)">WHO / TOPIC<small>は・が</small></span><span style="--c:var(--rT)">TIME<small>に</small></span><span style="--c:var(--rP)">PLACE<small>で・に・へ・から・まで</small></span><span style="--c:var(--rH)">HOW / WITH<small>と・で</small></span><span style="--c:var(--rO)">WHAT<small>を</small></span><span style="--c:var(--rV)">VERB / です</span><span style="--c:var(--rQ)">QUESTION<small>か</small></span><span class="kp">particle<small>tap one</small></span></div>`; }
 (function(){ const st=document.createElement("style"); st.textContent=`
 :root{--rW:#e8384f;--rT:#12a5c9;--rP:#22a36b;--rH:#d99a00;--rO:#ef7020;--rV:#7b3fa0;--rQ:#dd3b8c}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rW:#ff6b7d;--rT:#4fc6e6;--rP:#4fcf92;--rH:#f0c040;--rO:#ff9a52;--rV:#b184d6;--rQ:#f06db0}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rW:#ff6b7d;--rT:#4fc6e6;--rP:#4fcf92;--rH:#f0c040;--rO:#ff9a52;--rV:#b184d6;--rQ:#f06db0}}/*theme-dark*/:root[data-theme="dark"]{--rW:#ff6b7d;--rT:#4fc6e6;--rP:#4fcf92;--rH:#f0c040;--rO:#ff9a52;--rV:#b184d6;--rQ:#f06db0}
 body.jb-on .ck[data-r]{color:var(--c)}
 body.jb-on .keybar{display:flex}
 .jb-page .keybar{display:none;gap:5px;overflow-x:auto;scrollbar-width:none;padding:0 1.25rem .5rem;margin:0 auto}
@@ -558,22 +558,40 @@ body.jb-on .keybar{display:flex}
 .jb-page .pp-c{background:rgba(127,127,127,.12);border-radius:4px;padding:4px 8px}
 .jb-page .pp-e{opacity:.75;font-size:.85rem}`; document.head.appendChild(st); })();
 
+// ---------- light or dark: follow the device, or choose ----------
+function jpTheme(){ try{ return localStorage.getItem("theme")||"auto"; }catch(e){ return "auto"; } }
+function jpSetTheme(t){
+  try{ if(t==="auto") localStorage.removeItem("theme"); else localStorage.setItem("theme",t); }catch(e){}
+  if(t==="auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme",t);
+  document.querySelectorAll(".themebtn").forEach(b=>jpThemeLabel(b));
+}
+function jpThemeLabel(b){ const t=jpTheme(); b.textContent={auto:"◐ Auto",light:"☀ Light",dark:"☾ Dark"}[t]; b.title="Theme: "+t+" (tap to change)"; b.setAttribute("aria-label","Colour theme: "+t); }
+function jpThemeButton(){ const b=document.createElement("button"); b.type="button"; b.className="themebtn"; jpThemeLabel(b);
+  b.onclick=()=>{ const next={auto:"light",light:"dark",dark:"auto"}[jpTheme()]; jpSetTheme(next); }; return b; }
+
 // ---------- a link back to the home page, on every page ----------
 (function(){
   const me=document.currentScript&&document.currentScript.src; if(!me) return;
   const root=me.replace(/assets\/common\.js.*$/,"");
   const st=document.createElement("style");
-  st.textContent=`.homelink{display:block;max-width:1000px;margin:0 auto;padding:calc(.6rem + env(safe-area-inset-top,0px)) 1.25rem .2rem;font:600 .85rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:inherit;opacity:.65;text-decoration:none;letter-spacing:.01em}
+  st.textContent=`.homebar{display:flex;align-items:center;justify-content:space-between;max-width:1000px;margin:0 auto;padding:calc(.6rem + env(safe-area-inset-top,0px)) 1.25rem .2rem}
+.homebar .homelink{padding:0;margin:0;max-width:none}
+.themebtn{font:600 .8rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;color:inherit;opacity:.75;background:none;border:1px solid rgba(127,127,127,.4);border-radius:999px;padding:.35rem .7rem;cursor:pointer}
+.themebtn:hover,.themebtn:focus-visible{opacity:1}
+:root[data-theme="dark"]{color-scheme:dark}:root[data-theme="light"]{color-scheme:light}
+.homelink{display:block;max-width:1000px;margin:0 auto;padding:calc(.6rem + env(safe-area-inset-top,0px)) 1.25rem .2rem;font:600 .85rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:inherit;opacity:.65;text-decoration:none;letter-spacing:.01em}
 .homelink:hover,.homelink:focus-visible{opacity:1;text-decoration:underline}
 .homelink .jp{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;margin-left:.3em}
 header.top,header.masthead,.masthead{padding-top:.6rem}`;
   document.head.appendChild(st);
   document.addEventListener("DOMContentLoaded",()=>{
     if(document.querySelector(".homelink")) return;
+    const bar=document.createElement("div"); bar.className="homebar";
     const a=document.createElement("a");
     a.className="homelink"; a.href=root+"index.html";
     a.innerHTML='← All pages<span class="jp">日本語</span>';
-    document.body.insertBefore(a,document.body.firstChild);
+    bar.appendChild(a); bar.appendChild(jpThemeButton());
+    document.body.insertBefore(bar,document.body.firstChild);
   });
 })();
 
@@ -617,7 +635,7 @@ header.top,header.masthead,.masthead{padding-top:.6rem}`;
 .floatnav.on{opacity:.92;visibility:visible}
 .floatnav a,.floatnav button{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;border:1px solid rgba(127,127,127,.35);background:var(--sheet,#fff);color:var(--ink,#1b2a3a);box-shadow:0 2px 10px rgba(0,0,0,.18);cursor:pointer;font:600 1rem/1 system-ui,sans-serif;text-decoration:none;padding:0}
 .floatnav a:hover,.floatnav button:hover,.floatnav a:focus-visible,.floatnav button:focus-visible{opacity:1;border-color:currentColor}
-@media (prefers-color-scheme: dark){.floatnav a,.floatnav button{background:#1C2029;color:#E6E8EE}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .floatnav a,:root:not([data-theme="light"]) .floatnav button{background:#1C2029;color:#E6E8EE}}/*theme-dark*/:root[data-theme="dark"] .floatnav a,:root[data-theme="dark"] .floatnav button{background:#1C2029;color:#E6E8EE}
 @media print{.floatnav{display:none}}`;
   document.head.appendChild(st);
   document.addEventListener("DOMContentLoaded",()=>{

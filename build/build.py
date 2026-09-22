@@ -36,7 +36,57 @@ WRITTEN = []
 INDEX_VERSION = ""
 COMMON_VERSION = ""   # set once assets/common.js is written; pages load common.js?v=<version> so a page and its script always match
 
+THEME_BOOT = ('<script>try{var t=localStorage.getItem("theme");'
+              'if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>')
+
+def _theme_rules(inner, prefix):
+    """Prefix every selector in a block of CSS rules, so a theme attribute on <html> can switch it on or off."""
+    out, i = [], 0
+    while True:
+        j = inner.find("{", i)
+        if j < 0:
+            break
+        k = inner.find("}", j)
+        sels, body = inner[i:j].strip(), inner[j:k + 1]
+        def pre(s):
+            s = s.strip()
+            if s.startswith(":root"):
+                return prefix + s[5:]            # ":root" or ":root body" both work
+            if s.startswith("html"):
+                return "html" + prefix[5:] + s[4:]
+            return prefix + " " + s
+        out.append(",".join(pre(s) for s in sels.split(",")) + body)
+        i = k + 1
+    return "".join(out)
+
+def theme_css(text):
+    """Every dark-mode block follows the device unless the reader has chosen light or dark by hand:
+    @media (dark){X} becomes @media (dark){:root:not([light]) X} plus :root[dark] X."""
+    pat = re.compile(r"@media\s*\(prefers-color-scheme:\s*dark\)\s*\{")
+    out, pos = [], 0
+    for m in pat.finditer(text):
+        if m.start() < pos:
+            continue
+        depth, k = 1, m.end()
+        while depth and k < len(text):
+            depth += {"{": 1, "}": -1}.get(text[k], 0); k += 1
+        inner = text[m.end():k - 1]
+        if text[k:k + 14] == "/*theme-dark*/":   # this block has been done already
+            continue
+        guard = ':root:not([data-theme="light"])'
+        raw = inner.replace(guard, ":root")          # some pages were written with the light guard already
+        out.append(text[pos:m.start()])
+        out.append("@media (prefers-color-scheme: dark){" + _theme_rules(raw, guard) + "}/*theme-dark*/"
+                   + _theme_rules(raw, ':root[data-theme="dark"]'))
+        pos = k
+    out.append(text[pos:])
+    return "".join(out)
+
 def write(rel, text):
+    if rel.endswith(".html") or rel.endswith(".js"):
+        text = theme_css(text)
+    if rel.endswith(".html") and "data-theme" not in text.split("</head>")[0].split("<style")[0]:
+        text = re.sub(r'(<meta charset="utf-8">)', lambda m: m.group(1) + "\n" + THEME_BOOT, text, count=1)
     if rel.endswith(".html") and 'id="search"' in text and "search-index.js" not in text:
         depth = "../" * rel.count("/")
         text = text.replace('<script src="' + depth + 'assets/common.js', '<script src="' + depth + 'assets/search-index.js?v=' + INDEX_VERSION + '"></script>\n<script src="' + depth + 'assets/common.js', 1)
@@ -492,6 +542,7 @@ _verbs.append(["お願いする", "おねがいする", "vs"])
 _tailwords = [v["w"] for v in _voc if not v.get("c") and re.search(r"[\u4e00-\u9fff]", v["w"]) and re.search(r"[\u3041-\u309f]$", v["w"]) and not v["w"].startswith(("～", "〜"))]
 _common = (SRC / "common.js").read_text(encoding="utf-8").replace("__READINGS__", dump(readings)).replace("__VERBS__", dump(_verbs)).replace("__TAILWORDS__", dump(_tailwords))
 write("assets/common.js", _common)
+write("index.html", (ROOT / "index.html").read_text(encoding="utf-8"))   # the home page gets the theme step too
 _index = "// Where every word, kanji and pattern lives, for the cross-page search hints.\nconst JP_SEARCH_INDEX=" + dump(search_index()) + ";\n"
 write("assets/search-index.js", _index)
 INDEX_VERSION = hashlib.sha1(_index.encode("utf-8")).hexdigest()[:10]

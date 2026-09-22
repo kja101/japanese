@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kana sounds: by sign, by sound, by topic</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +15,13 @@
   --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
   --en:"Source Sans 3","Segoe UI",system-ui,sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+    --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+    --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
+  }}/*theme-dark*/:root[data-theme="dark"]{
     --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
     --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
   }
-}
 :root[data-theme="dark"]{
   --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
   --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40;
@@ -108,7 +110,7 @@ footer p{max-width:70ch}
 }
 @media print{ .controls{display:none} body{background:#fff} section.sheet{border:0;padding:0;break-inside:avoid-page} }
 :root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}/*theme-dark*/:root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
 :root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
 .rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
 body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
@@ -169,7 +171,7 @@ a.kl:hover{background:rgba(127,127,127,.15);border-radius:2px}
   <p>Romaji uses Hepburn with long vowels written out. Pitch patterns are standard Tokyo Japanese: a line above a kana means a high note, a line below means low, and the faded が shows what happens to a particle after the word. Regional accents differ.</p>
 </footer>
 <script src="../assets/search-index.js?v=b277da361b"></script>
-<script src="../assets/common.js?v=19d7a2d9ca"></script>
+<script src="../assets/common.js?v=682c53afaa"></script>
 <script>
 
 

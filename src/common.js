@@ -558,22 +558,40 @@ body.jb-on .keybar{display:flex}
 .jb-page .pp-c{background:rgba(127,127,127,.12);border-radius:4px;padding:4px 8px}
 .jb-page .pp-e{opacity:.75;font-size:.85rem}`; document.head.appendChild(st); })();
 
+// ---------- light or dark: follow the device, or choose ----------
+function jpTheme(){ try{ return localStorage.getItem("theme")||"auto"; }catch(e){ return "auto"; } }
+function jpSetTheme(t){
+  try{ if(t==="auto") localStorage.removeItem("theme"); else localStorage.setItem("theme",t); }catch(e){}
+  if(t==="auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme",t);
+  document.querySelectorAll(".themebtn").forEach(b=>jpThemeLabel(b));
+}
+function jpThemeLabel(b){ const t=jpTheme(); b.textContent={auto:"◐ Auto",light:"☀ Light",dark:"☾ Dark"}[t]; b.title="Theme: "+t+" (tap to change)"; b.setAttribute("aria-label","Colour theme: "+t); }
+function jpThemeButton(){ const b=document.createElement("button"); b.type="button"; b.className="themebtn"; jpThemeLabel(b);
+  b.onclick=()=>{ const next={auto:"light",light:"dark",dark:"auto"}[jpTheme()]; jpSetTheme(next); }; return b; }
+
 // ---------- a link back to the home page, on every page ----------
 (function(){
   const me=document.currentScript&&document.currentScript.src; if(!me) return;
   const root=me.replace(/assets\/common\.js.*$/,"");
   const st=document.createElement("style");
-  st.textContent=`.homelink{display:block;max-width:1000px;margin:0 auto;padding:calc(.6rem + env(safe-area-inset-top,0px)) 1.25rem .2rem;font:600 .85rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:inherit;opacity:.65;text-decoration:none;letter-spacing:.01em}
+  st.textContent=`.homebar{display:flex;align-items:center;justify-content:space-between;max-width:1000px;margin:0 auto;padding:calc(.6rem + env(safe-area-inset-top,0px)) 1.25rem .2rem}
+.homebar .homelink{padding:0;margin:0;max-width:none}
+.themebtn{font:600 .8rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;color:inherit;opacity:.75;background:none;border:1px solid rgba(127,127,127,.4);border-radius:999px;padding:.35rem .7rem;cursor:pointer}
+.themebtn:hover,.themebtn:focus-visible{opacity:1}
+:root[data-theme="dark"]{color-scheme:dark}:root[data-theme="light"]{color-scheme:light}
+.homelink{display:block;max-width:1000px;margin:0 auto;padding:calc(.6rem + env(safe-area-inset-top,0px)) 1.25rem .2rem;font:600 .85rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:inherit;opacity:.65;text-decoration:none;letter-spacing:.01em}
 .homelink:hover,.homelink:focus-visible{opacity:1;text-decoration:underline}
 .homelink .jp{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;margin-left:.3em}
 header.top,header.masthead,.masthead{padding-top:.6rem}`;
   document.head.appendChild(st);
   document.addEventListener("DOMContentLoaded",()=>{
     if(document.querySelector(".homelink")) return;
+    const bar=document.createElement("div"); bar.className="homebar";
     const a=document.createElement("a");
     a.className="homelink"; a.href=root+"index.html";
     a.innerHTML='← All pages<span class="jp">日本語</span>';
-    document.body.insertBefore(a,document.body.firstChild);
+    bar.appendChild(a); bar.appendChild(jpThemeButton());
+    document.body.insertBefore(bar,document.body.firstChild);
   });
 })();
 

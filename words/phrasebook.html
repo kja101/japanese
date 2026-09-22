@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Japanese phrasebook: phrases and sentences by situation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +16,15 @@
   --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
   --en:"Source Sans 3","Segoe UI",system-ui,sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+    --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
+    --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40; --gold:#E8B84A;
+    --rW:#ff6b7d; --rT:#4fc6e6; --rP:#4fcf92; --rH:#f0c040; --rO:#ff9a52; --rV:#b184d6; --rQ:#f06db0;
+  }}/*theme-dark*/:root[data-theme="dark"]{
     --paper:#15181F; --sheet:#1C2029; --ink:#E6E8EE; --muted:#9AA1AD; --rule:#2E3340;
     --seal:#F2837B; --seal-wash:#3A2224; --chip:#262B36; --indigo:#8FA6E8; --indigo-wash:#232B40; --gold:#E8B84A;
     --rW:#ff6b7d; --rT:#4fc6e6; --rP:#4fcf92; --rH:#f0c040; --rO:#ff9a52; --rV:#b184d6; --rQ:#f06db0;
   }
-}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom,0px)}
 header.top{max-width:960px;margin:0 auto;padding:calc(2.2rem + env(safe-area-inset-top,0px)) 1.25rem .8rem}
@@ -129,7 +132,7 @@ a.kl:hover{background:var(--indigo-wash);border-radius:2px}
 @keyframes iflash{0%{box-shadow:0 0 0 3px var(--seal)}100%{box-shadow:0 0 0 3px transparent}}
 .iflash{animation:iflash 2.4s ease-out;border-radius:6px}
 :root{--rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}/*theme-dark*/:root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
 :root[data-theme="dark"]{--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}
 .rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
 body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
@@ -181,7 +184,7 @@ body:not(.no-rdcol) .rd.kana{color:var(--rc)}
 <main id="main"></main>
 <footer><p>Grammar blocks colour each part of a sentence by its job: <b style="color:var(--rW)">who or topic</b>, <b style="color:var(--rT)">time</b>, <b style="color:var(--rP)">place</b>, <b style="color:var(--rH)">how or with</b>, <b style="color:var(--rO)">what</b>, <b style="color:var(--rV)">verb</b> and <b style="color:var(--rQ)">question</b>. The same colours mark the English, so you can see how the order changes between the two languages. Stars and settings are saved in this browser only.</p></footer>
 <script src="../assets/search-index.js?v=b277da361b"></script>
-<script src="../assets/common.js?v=19d7a2d9ca"></script>
+<script src="../assets/common.js?v=682c53afaa"></script>
 <script>
 
 

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Japanese study tools: kanji, vocabulary and sentences</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,7 +11,7 @@
 <style>
 :root{--paper:#F4F5F1;--sheet:#FFFFFF;--ink:#1D2433;--muted:#646B78;--rule:#DCDFE5;--seal:#B3261E;--indigo:#2C3E73;--indigo-wash:#E9EDF7;
   --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;--en:"Source Sans 3","Segoe UI",system-ui,sans-serif}
-@media (prefers-color-scheme: dark){:root{--paper:#15181F;--sheet:#1C2029;--ink:#E6E8EE;--muted:#9AA1AD;--rule:#2E3340;--seal:#F2837B;--indigo:#8FA6E8;--indigo-wash:#232B40}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#15181F;--sheet:#1C2029;--ink:#E6E8EE;--muted:#9AA1AD;--rule:#2E3340;--seal:#F2837B;--indigo:#8FA6E8;--indigo-wash:#232B40}}/*theme-dark*/:root[data-theme="dark"]{--paper:#15181F;--sheet:#1C2029;--ink:#E6E8EE;--muted:#9AA1AD;--rule:#2E3340;--seal:#F2837B;--indigo:#8FA6E8;--indigo-wash:#232B40}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
 main{max-width:900px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
@@ -68,6 +69,14 @@ footer a{color:var(--indigo)}
 <footer>
   <p>Data sources and licences are in the <a href="https://github.com/kja101/japanese">repository README</a>. JLPT has not published official lists since 2010, so every level here is a guide.</p>
 </footer>
+<p style="max-width:1000px;margin:.6rem auto 0;padding:0 1.25rem;text-align:right"><button id="themebtn" type="button" style="font:600 .8rem/1 system-ui,sans-serif;color:inherit;opacity:.75;background:none;border:1px solid rgba(127,127,127,.4);border-radius:999px;padding:.35rem .7rem;cursor:pointer"></button></p>
+<script>(function(){ const b=document.getElementById("themebtn");
+  const get=()=>{ try{ return localStorage.getItem("theme")||"auto"; }catch(e){ return "auto"; } };
+  const label=()=>{ const t=get(); b.textContent={auto:"◐ Auto",light:"☀ Light",dark:"☾ Dark"}[t]; };
+  b.onclick=()=>{ const t={auto:"light",light:"dark",dark:"auto"}[get()];
+    try{ if(t==="auto") localStorage.removeItem("theme"); else localStorage.setItem("theme",t); }catch(e){}
+    if(t==="auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme",t); label(); };
+  label(); })();</script>
 <p id="offline" style="max-width:1000px;margin:1rem auto 0;padding:0 1.25rem;font-size:.85rem;opacity:.75"></p>
 <script>
 if("serviceWorker" in navigator&&location.protocol!=="file:"){
