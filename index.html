@@ -81,7 +81,11 @@ footer a{color:var(--indigo)}
 <p id="offline" style="max-width:1000px;margin:1rem auto 0;padding:0 1.25rem;font-size:.85rem;opacity:.75"></p>
 <script>
 if("serviceWorker" in navigator&&location.protocol!=="file:"){
-  window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+  // check for a new version on every launch, and take it as soon as it is ready
+  window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js",{updateViaCache:"none"})
+    .then(r=>{ r.update(); setInterval(()=>r.update(),60*60*1000); }).catch(()=>{}));
+  let swapped=false;
+  navigator.serviceWorker.addEventListener("controllerchange",()=>{ if(swapped) return; swapped=true; location.reload(); });
   // tell the user whether every page has been saved for offline use
   const el=document.getElementById("offline");
   const check=async()=>{

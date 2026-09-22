@@ -654,4 +654,8 @@ header.top,header.masthead,.masthead{padding-top:.6rem}`;
 (function(){ if(!("serviceWorker" in navigator)||location.protocol==="file:") return;
   const me=document.currentScript&&document.currentScript.src; if(!me) return;
   const root=me.replace(/assets\/common\.js.*$/,"");
-  window.addEventListener("load",()=>navigator.serviceWorker.register(root+"sw.js").catch(()=>{})); })();
+  window.addEventListener("load",()=>navigator.serviceWorker.register(root+"sw.js",{updateViaCache:"none"})
+    .then(r=>{ r.update(); }).catch(()=>{}));
+  let swapped=false;   // a new version has installed: take it now rather than next launch
+  navigator.serviceWorker.addEventListener("controllerchange",()=>{ if(swapped) return; swapped=true; location.reload(); });
+})();
