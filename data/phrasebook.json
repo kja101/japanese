@@ -1055,12 +1055,8 @@
      "1": {
       "jr": [
        [
-        "W",
-        "四人家族"
-       ],
-       [
         "V",
-        "です"
+        "四人家族です"
        ]
       ],
       "er": [
@@ -1372,7 +1368,11 @@
       "jr": [
        [
         "T",
-        "今度家に"
+        "今度"
+       ],
+       [
+        "P",
+        "家に"
        ],
        [
         "V",
@@ -1398,7 +1398,11 @@
       "jr": [
        [
         "W",
-        "よろしくお伝えください"
+        "よろしく"
+       ],
+       [
+        "V",
+        "お伝えください"
        ]
       ],
       "er": [
@@ -1579,6 +1583,12 @@
         "V",
         "I'm lost"
        ]
+      ],
+      "jr": [
+       [
+        "V",
+        "道に迷いました"
+       ]
       ]
      }
     }
@@ -1588,7 +1598,7 @@
     "jp": "道案内{みちあんない}",
     "en": "Directions",
     "note": "",
-    "items": "まっすぐ 行{い}って ください|Go straight on\n右{みぎ} に 曲{ま}がって ください|Turn right\n左{ひだり} に 曲{ま}がって ください|Turn left\n次{つぎ} の 角{かど} を 右{みぎ} です|Right at the next corner|hear\n信号{しんごう} を 渡{わた}って ください|Cross at the lights|hear\nここ から 遠{とお}い ですか|Is it far from here?\n歩{ある}いて 何分{なんぷん} ですか|How many minutes on foot?\nすぐ そこ です|It's just there|hear",
+    "items": "まっすぐ 行{い}って ください|Go straight on\n右{みぎ} に 曲{ま}がって ください|Turn right\n左{ひだり} に 曲{ま}がって ください|Turn left\n次{つぎ} の 角{かど} を 右{みぎ} です|Right at the next corner|hear\n信号{しんごう} を 渡{わた}って ください|Cross at the lights|hear\nここ から 遠{とお}い ですか|Is it far from here?\n歩{ある}いて 何分{なんぷん} ですか|How many minutes is it on foot?\nすぐ そこ です|It's just there|hear",
     "words": "\n右{みぎ}|right\n左{ひだり}|left\nまっすぐ|straight ahead\n前{まえ}|in front\n後{うし}ろ|behind\n隣{となり}|next to\n向{む}かい|opposite\n角{かど}|corner\n信号{しんごう}|traffic lights\n",
     "marks": {
      "0": {
@@ -1692,6 +1702,10 @@
        [
         "T",
         "How many minutes"
+       ],
+       [
+        "V",
+        "is it"
        ],
        [
         "H",
@@ -1929,7 +1943,11 @@
        ],
        [
         "V",
-        "do I board"
+        "do I"
+       ],
+       [
+        "W",
+        "board"
        ]
       ]
      },
@@ -1938,6 +1956,12 @@
        [
         "O",
         "Which platform number"
+       ]
+      ],
+      "jr": [
+       [
+        "O",
+        "何番線ですか"
        ]
       ]
      },
@@ -1949,7 +1973,11 @@
        ],
        [
         "V",
-        "do I change"
+        "do I"
+       ],
+       [
+        "W",
+        "change"
        ]
       ]
      },
@@ -2047,6 +2075,12 @@
        [
         "O",
         "How many people"
+       ]
+      ],
+      "jr": [
+       [
+        "O",
+        "何名様ですか"
        ]
       ]
      },
@@ -2160,7 +2194,11 @@
        ],
        [
         "V",
-        "do you recommend"
+        "do you"
+       ],
+       [
+        "W",
+        "recommend"
        ]
       ]
      },
@@ -2445,7 +2483,11 @@
       "jr": [
        [
         "H",
-        "辛くしないでください"
+        "辛く"
+       ],
+       [
+        "V",
+        "しないでください"
        ]
       ],
       "er": [
@@ -3098,22 +3140,14 @@
      "19": {
       "jr": [
        [
-        "O",
-        "タバコは"
-       ],
-       [
         "V",
-        "吸えますか"
+        "タバコは吸えますか"
        ]
       ],
       "er": [
        [
         "V",
         "Can I smoke"
-       ],
-       [
-        "P",
-        "here"
        ]
       ]
      }
@@ -3763,11 +3797,11 @@
     }
    },
    {
-    "id": "asking",
+    "id": "askout",
     "jp": "誘{さそ}う",
     "en": "Asking someone out",
     "note": "Swapping LINE details is the usual next step rather than phone numbers. デート is used much as in English.",
-    "items": "LINE を 交換{こうかん} しませんか|Shall we swap LINE details?\n連絡先{れんらくさき} を 教{おし}えて もらえますか|Could I have your contact details?\n今度{こんど} 一緒{いっしょ} に ご飯{はん} に 行{い}きませんか|Would you like to go for a meal sometime?\n週末{しゅうまつ} 空{あ}いて いますか|Are you free this weekend?\nデート に 誘{さそ}っても いいですか|Can I ask you out on a date?\n映画{えいが} を 見{み}に 行{い}きませんか|Shall we go and see a film?\n二人{ふたり} で 会{あ}いたい です|I'd like to see you, just the two of us\nまた 会{あ}えますか|Can I see you again?\n返事{へんじ} を 待{ま}って います|I'll wait for your reply\nぜひ|I'd love to\nごめんなさい、 ちょっと 難{むずか}しい です|Sorry, that's a bit difficult (a polite no)",
+    "items": "LINE を 交換{こうかん} しませんか|Shall we swap LINE details?\n連絡先{れんらくさき} を 教{おし}えて もらえますか|Could I have your contact details?\n今度{こんど} 一緒{いっしょ} に ご飯{はん} に 行{い}きませんか|Would you like to go for a meal together sometime?\n週末{しゅうまつ} 空{あ}いて いますか|Are you free this weekend?\nデート に 誘{さそ}っても いいですか|Can I ask you out on a date?\n映画{えいが} を 見{み}に 行{い}きませんか|Shall we go and see a film?\n二人{ふたり} で 会{あ}いたい です|I'd like to see you, just the two of us\nまた 会{あ}えますか|Can I see you again?\n返事{へんじ} を 待{ま}って います|I'll wait for your reply\nぜひ|I'd love to\nごめんなさい、 ちょっと 難{むずか}しい です|Sorry, that's a bit difficult (a polite no)",
     "marks": {
      "0": {
       "jr": [
@@ -3840,6 +3874,10 @@
        [
         "P",
         "for a meal"
+       ],
+       [
+        "H",
+        "together"
        ],
        [
         "T",
@@ -3960,8 +3998,12 @@
      "8": {
       "jr": [
        [
+        "O",
+        "返事を"
+       ],
+       [
         "V",
-        "返事を待っています"
+        "待っています"
        ]
       ],
       "er": [
@@ -4117,8 +4159,12 @@
      "5": {
       "jr": [
        [
+        "H",
+        "一緒にいると"
+       ],
+       [
         "V",
-        "一緒にいると落ち着きます"
+        "落ち着きます"
        ]
       ],
       "er": [
@@ -4500,6 +4546,16 @@
         "H",
         "altogether"
        ]
+      ],
+      "jr": [
+       [
+        "H",
+        "全部で"
+       ],
+       [
+        "O",
+        "いくらですか"
+       ]
       ]
      },
      "1": {
@@ -4578,6 +4634,12 @@
         "O",
         "How many"
        ]
+      ],
+      "jr": [
+       [
+        "O",
+        "いくつですか"
+       ]
       ]
      },
      "1": {
@@ -4585,6 +4647,12 @@
        [
         "O",
         "How many people"
+       ]
+      ],
+      "jr": [
+       [
+        "O",
+        "何人ですか"
        ]
       ]
      },
@@ -5395,6 +5463,12 @@
         "V",
         "I feel unwell"
        ]
+      ],
+      "jr": [
+       [
+        "V",
+        "気分が悪いです"
+       ]
       ]
      },
      "2": {
@@ -5690,11 +5764,7 @@
       "jr": [
        [
         "T",
-        "昨日から"
-       ],
-       [
-        "V",
-        "です"
+        "昨日からです"
        ]
       ],
       "er": [
@@ -5708,11 +5778,7 @@
       "jr": [
        [
         "T",
-        "三日前から"
-       ],
-       [
-        "V",
-        "です"
+        "三日前からです"
        ]
       ],
       "er": [
@@ -6509,12 +6575,8 @@
      "8": {
       "jr": [
        [
-        "O",
-        "届いて"
-       ],
-       [
         "V",
-        "いませんか"
+        "届いていませんか"
        ]
       ],
       "er": [
@@ -6896,11 +6958,29 @@
       "er": [
        [
         "T",
-        "What's the date"
+        "What"
        ],
        [
-        "W",
-        "today"
+        "V",
+        "'s"
+       ],
+       [
+        "T",
+        "the date today"
+       ]
+      ],
+      "jr": [
+       [
+        "T",
+        "今日は"
+       ],
+       [
+        "T",
+        "何日"
+       ],
+       [
+        "V",
+        "ですか"
        ]
       ]
      },
@@ -6914,6 +6994,16 @@
         "T",
         "tomorrow"
        ]
+      ],
+      "jr": [
+       [
+        "T",
+        "明日"
+       ],
+       [
+        "V",
+        "です"
+       ]
       ]
      },
      "6": {
@@ -6925,6 +7015,16 @@
        [
         "T",
         "today"
+       ]
+      ],
+      "jr": [
+       [
+        "T",
+        "今日"
+       ],
+       [
+        "V",
+        "です"
        ]
       ]
      }
@@ -7099,11 +7199,15 @@
       "er": [
        [
         "T",
-        "What's the date"
+        "What"
+       ],
+       [
+        "V",
+        "'s"
        ],
        [
         "T",
-        "today"
+        "the date today"
        ]
       ]
      },
@@ -7434,7 +7538,7 @@
      "15": {
       "jr": [
        [
-        "H",
+        "V",
         "間に合いました"
        ]
       ],
@@ -7490,7 +7594,7 @@
     "jp": "仕事{しごと}",
     "en": "At work",
     "note": "Business Japanese is polite by default. お疲れ様です works as hello, goodbye and thanks for your work.",
-    "items": "お疲{つか}れ様{さま} です|Thanks for your hard work (hello/goodbye at work)\nお先{さき} に 失礼{しつれい} します|Excuse me for leaving before you\n___ は いらっしゃいますか|Is ___ in?\nアレン と 申{もう}します|My name is Allen\n会議{かいぎ} は 何時{なんじ} から ですか|What time does the meeting start?\n資料{しりょう} を 送{おく}って いただけますか|Could you send me the documents?\n明日{あした} まで に できますか|Can it be done by tomorrow?\n少{すこ}し 遅{おく}れます|I'll be a little late\n確認{かくにん} して 折{お}り返{かえ}し ます|I'll check and call you back\n今{いま} よろしい ですか|Do you have a moment?\nもう 一度{いちど} 説明{せつめい} して いただけますか|Could you explain once more?\nメール で 連絡{れんらく} します|I'll get in touch by email\n私{わたし} が 担当{たんとう} します|I'll take care of it\nお名刺{めいし} を いただけますか|Could I have your business card?\n来週{らいしゅう} の 予定{よてい} は どう ですか|How's your schedule next week?\n今日{きょう} は 在宅勤務{ざいたくきんむ} です|I'm working from home today\nよろしく お願{ねが}い いたします|I look forward to working with you (formal)\nご迷惑{めいわく} を おかけ しました|I'm sorry for the trouble I caused",
+    "items": "お疲{つか}れ様{さま} です|Thanks for your hard work (hello/goodbye at work)\nお先{さき} に 失礼{しつれい} します|Excuse me for leaving before you\n___ は いらっしゃいますか|Is ___ in?\nアレン と 申{もう}します|My name is Allen\n会議{かいぎ} は 何時{なんじ} から ですか|What time does the meeting start?\n資料{しりょう} を 送{おく}って いただけますか|Could you send me the documents?\n明日{あした} まで に できますか|Can it be done by tomorrow?\n少{すこ}し 遅{おく}れます|I'll be a little late\n確認{かくにん} して 折{お}り返{かえ}し ます|I'll check and call you back\n今{いま} よろしい ですか|Do you have a moment now?\nもう 一度{いちど} 説明{せつめい} して いただけますか|Could you explain once more?\nメール で 連絡{れんらく} します|I'll get in touch by email\n私{わたし} が 担当{たんとう} します|I'll take care of it\nお名刺{めいし} を いただけますか|Could I have your business card?\n来週{らいしゅう} の 予定{よてい} は どう ですか|How's your schedule next week?\n今日{きょう} は 在宅勤務{ざいたくきんむ} です|I'm working from home today\nよろしく お願{ねが}い いたします|I look forward to working with you (formal)\nご迷惑{めいわく} を おかけ しました|I'm sorry for the trouble I caused",
     "marks": {
      "0": {
       "jr": [
@@ -7709,6 +7813,10 @@
        [
         "V",
         "Do you have a moment"
+       ],
+       [
+        "T",
+        "now"
        ]
       ]
      },
@@ -7804,7 +7912,11 @@
       "jr": [
        [
         "T",
-        "来週の予定は"
+        "来週の"
+       ],
+       [
+        "O",
+        "予定は"
        ],
        [
         "V",
@@ -7829,7 +7941,7 @@
      "15": {
       "jr": [
        [
-        "W",
+        "T",
         "今日は"
        ],
        [
@@ -9151,6 +9263,12 @@
         "O",
         "Which one"
        ]
+      ],
+      "jr": [
+       [
+        "O",
+        "どれですか"
+       ]
       ]
      },
      "7": {
@@ -9158,6 +9276,12 @@
        [
         "H",
         "Why?"
+       ]
+      ],
+      "jr": [
+       [
+        "H",
+        "どうしてですか"
        ]
       ]
      },

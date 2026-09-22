@@ -832,12 +832,8 @@
       "ここで"
      ],
      [
-      "O",
-      "たばこを"
-     ],
-     [
       "V",
-      "吸ってはいけません"
+      "たばこを吸ってはいけません"
      ]
     ],
     "er": [
@@ -934,7 +930,7 @@
   "ex": [
    {
     "n": "寝{ね}る 前{まえ} に 本{ほん} を 読{よ}みます",
-    "en": "I read before I go to sleep",
+    "en": "I read a book before I go to sleep",
     "jr": [
      [
       "T",
@@ -953,6 +949,10 @@
      [
       "V",
       "I read"
+     ],
+     [
+      "O",
+      "a book"
      ],
      [
       "T",
@@ -1664,7 +1664,7 @@
       "the hotel"
      ],
      [
-      "H",
+      "V",
       "in advance"
      ]
     ]
@@ -2329,7 +2329,7 @@
   "ex": [
    {
     "n": "今{いま} 出{で}かける ところ です",
-    "en": "I'm just about to go out",
+    "en": "I'm about to go out now",
     "jr": [
      [
       "T",
@@ -2343,13 +2343,17 @@
     "er": [
      [
       "V",
-      "I'm just about to go out"
+      "I'm about to go out"
+     ],
+     [
+      "T",
+      "now"
      ]
     ]
    },
    {
     "n": "今{いま} 晩{ばん}ご飯{はん} を 食{た}べて いる ところ です",
-    "en": "I'm in the middle of dinner",
+    "en": "I'm in the middle of dinner now",
     "jr": [
      [
       "T",
@@ -2372,6 +2376,10 @@
      [
       "O",
       "dinner"
+     ],
+     [
+      "T",
+      "now"
      ]
     ]
    }

@@ -158,7 +158,7 @@
   "id": "L5-5",
   "topic": "t10",
   "n": "今{いま} 四時{よじ} 半{はん} です",
-  "en": "It's half past four",
+  "en": "It's half past four now",
   "why": "",
   "jr": [
    [
@@ -174,6 +174,10 @@
    [
     "V",
     "It's half past four"
+   ],
+   [
+    "T",
+    "now"
    ]
   ]
  },
@@ -624,7 +628,7 @@
   "id": "L5-19",
   "topic": "t1",
   "n": "コーヒー は いかが ですか",
-  "en": "Would you like some coffee?",
+  "en": "How about some coffee?",
   "why": "",
   "jr": [
    [
@@ -633,21 +637,17 @@
    ],
    [
     "H",
-    "いかが"
-   ],
-   [
-    "V",
-    "ですか"
+    "いかがですか"
    ]
   ],
   "er": [
    [
-    "V",
-    "Would you like some"
+    "H",
+    "How about"
    ],
    [
     "W",
-    "coffee"
+    "some coffee"
    ]
   ]
  },
@@ -900,12 +900,8 @@
     "友達に"
    ],
    [
-    "O",
-    "電話を"
-   ],
-   [
     "V",
-    "かけました"
+    "電話をかけました"
    ]
   ],
   "er": [
@@ -1838,7 +1834,7 @@
   "id": "L5-57",
   "topic": "t9",
   "n": "昔{むかし} は テープレコーダー で 音楽{おんがく} を 聞{き}きました",
-  "en": "I used to listen to music on a tape recorder",
+  "en": "Back then I listened to music on a tape recorder",
   "why": "",
   "jr": [
    [
@@ -1860,8 +1856,12 @@
   ],
   "er": [
    [
+    "T",
+    "Back then"
+   ],
+   [
     "V",
-    "I used to listen to"
+    "I listened to"
    ],
    [
     "O",
@@ -2017,12 +2017,8 @@
     "ろうそくに"
    ],
    [
-    "O",
-    "火を"
-   ],
-   [
     "V",
-    "つけました"
+    "火をつけました"
    ]
   ],
   "er": [

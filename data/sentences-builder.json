@@ -515,12 +515,16 @@
     ],
     "enc": [
      [
+      "V",
+      "Does"
+     ],
+     [
       "W",
-      "This"
+      "this"
      ],
      [
       "V",
-      "contains"
+      "contain"
      ],
      [
       "O",
@@ -1157,12 +1161,16 @@
     ],
     "enc": [
      [
+      "V",
+      "Does"
+     ],
+     [
       "W",
-      "This train"
+      "this train"
      ],
      [
       "V",
-      "goes"
+      "go"
      ],
      [
       "P",
@@ -1206,12 +1214,16 @@
       "What time"
      ],
      [
+      "V",
+      "does"
+     ],
+     [
       "W",
       "the last train"
      ],
      [
       "V",
-      "leaves"
+      "leave"
      ],
      [
       "Q",
@@ -1745,12 +1757,16 @@
       "What time"
      ],
      [
+      "V",
+      "does"
+     ],
+     [
       "W",
       "the bath"
      ],
      [
       "V",
-      "closes"
+      "close"
      ],
      [
       "Q",
@@ -1979,17 +1995,13 @@
      "warui desu"
     ],
     "roles": [
-     "W",
+     "V",
      "V"
     ],
     "enc": [
      [
-      "W",
-      "My condition"
-     ],
-     [
       "V",
-      "is bad"
+      "I'm not feeling well"
      ]
     ],
     "why": "気分が悪い is feeling ill or nauseous, not being in a bad mood."
@@ -2027,6 +2039,10 @@
      [
       "T",
       "a day"
+     ],
+     [
+      "V",
+      "is it"
      ],
      [
       "Q",
@@ -2220,11 +2236,11 @@
      ],
      [
       "V",
-      "is"
+      "do you do"
      ],
      [
       "W",
-      "your work"
+      "for work"
      ],
      [
       "Q",
@@ -3702,21 +3718,17 @@
     ],
     "roles": [
      "T",
-     "O",
+     "V",
      "V"
     ],
     "enc": [
-     [
-      "T",
-      "Right now"
-     ],
      [
       "V",
       "I'm cooking"
      ],
      [
-      "O",
-      "food"
+      "T",
+      "right now"
      ]
     ],
     "why": "〜ています here is the true present continuous: happening at this moment."
@@ -3786,7 +3798,15 @@
      ],
      [
       "V",
-      "do you drink"
+      "do"
+     ],
+     [
+      "W",
+      "you"
+     ],
+     [
+      "V",
+      "drink"
      ],
      [
       "T",

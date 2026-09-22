@@ -1463,12 +1463,8 @@
     "もう"
    ],
    [
-    "W",
-    "お腹が"
-   ],
-   [
     "V",
-    "いっぱいです"
+    "お腹がいっぱいです"
    ]
   ],
   "er": [
@@ -2490,7 +2486,7 @@
   "id": "L4-77",
   "topic": "t7",
   "n": "昔{むかし} は ワープロ で 手紙{てがみ} を 書{か}きました",
-  "en": "I used to write letters on a word processor",
+  "en": "Back then I wrote letters on a word processor",
   "why": "",
   "jr": [
    [
@@ -2512,8 +2508,12 @@
   ],
   "er": [
    [
+    "T",
+    "Back then"
+   ],
+   [
     "V",
-    "I used to write"
+    "I wrote"
    ],
    [
     "O",
