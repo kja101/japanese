@@ -357,7 +357,7 @@ document.getElementById("nav").addEventListener("click",e=>{ const a=e.target.cl
 render();
 function applyBlocks(){ const on=blocksOn(); document.body.classList.toggle("jb-on",on); document.querySelectorAll("[data-jb]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.jb==="on")===on)); }
 document.getElementById("kb").innerHTML=jpKeybar();
-const linkKanaAll=()=>linkKanaWords(document.querySelectorAll(".sl .sj"),KANA_WORDS,"../kana/","st");
+const linkKanaAll=()=>linkKanaWords(document.querySelectorAll(".sl .sj, .kc .w"),KANA_WORDS,"../kana/","st");
 linkKanaAll(); document.addEventListener("click",e=>{ if(e.target.closest(".morebtn,.chip,[data-w]")) setTimeout(linkKanaAll,60); });
 document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.dataset.jb==="on"); applyBlocks(); });
 applyBlocks(); initParticlePopup();

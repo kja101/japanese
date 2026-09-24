@@ -2947,6 +2947,12 @@
    "en": "cool, good-looking",
    "l": 4,
    "g": "desc"
+  },
+  {
+   "w": "だれ",
+   "en": "who (誰)",
+   "l": 5,
+   "g": "question"
   }
  ],
  "parts": [
