@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Particle drill: choose the marker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F5F1;--sheet:#FFFFFF;--ink:#1D2433;--muted:#646B78;--rule:#DCDFE5;--seal:#B3261E;--seal-wash:#FBEDEC;--chip:#E7E9EF;--indigo:#2C3E73;--indigo-wash:#E9EDF7;
+  --rd-on:#2C3E73;--rd-kun:#2F6B45;--rd-sp:#B3261E;
+  --jp:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;--en:"Source Sans 3","Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#15181F;--sheet:#1C2029;--ink:#E6E8EE;--muted:#9AA1AD;--rule:#2E3340;--seal:#F2837B;--seal-wash:#3A2224;--chip:#262B36;--indigo:#8FA6E8;--indigo-wash:#232B40;--rd-on:#8FA6E8;--rd-kun:#7CC49A;--rd-sp:#F2837B}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--en);font-size:16px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom,0px)}
+header.top{max-width:1000px;margin:0 auto;padding:calc(2.2rem + env(safe-area-inset-top,0px)) 1.25rem .8rem}
+h1{font-family:var(--jp);font-weight:600;font-size:clamp(2.1rem,6.5vw,3.4rem);margin:0;line-height:1.15}
+.sub{margin:.6rem 0 0;color:var(--muted);max-width:66ch}
+.controls{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);padding-top:env(safe-area-inset-top,0px)}
+.controls-inner{max-width:1000px;margin:0 auto;padding:.6rem 1.25rem .4rem;display:flex;flex-wrap:wrap;gap:.5rem .7rem;align-items:center}
+.search{flex:1 1 220px;min-width:0;font:inherit;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:8px;background:var(--sheet);color:var(--ink)}
+.segs{display:flex;flex-wrap:wrap;gap:.5rem .7rem}
+.seg{display:flex;background:var(--chip);border-radius:8px;padding:3px;align-items:center;flex:0 0 auto}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.9rem;padding:.3rem .6rem;border-radius:6px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--sheet);color:var(--ink);font-weight:600;box-shadow:0 0 0 1px var(--rule)}
+.seglab{font-size:.8rem;color:var(--muted);padding:0 .35rem 0 .45rem}
+nav.topics{max-width:1000px;margin:0 auto;padding:0 1.25rem .6rem;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+nav.topics a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.86rem;padding:.25rem .65rem;border:1px solid var(--rule);border-radius:999px;background:var(--sheet)}
+nav.topics a .j{font-family:var(--jp);margin-right:.3rem}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+main{max-width:1000px;margin:0 auto;padding:.5rem 1.25rem 4rem}
+h2.part{font-size:1.05rem;color:var(--muted);margin:2.2rem 0 0;font-weight:600}
+section.grp{margin:1.2rem 0 0;scroll-margin-top:150px}
+.ghead{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.9rem 1.1rem}
+.ghead h3{margin:0;font-size:1.25rem;display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap}
+.ghead h3 .jp{font-family:var(--jp);font-size:1.5rem}
+.ghead h3 small{font-weight:400;color:var(--muted);font-size:.9rem}
+.ghead p{margin:.3rem 0 0;max-width:72ch}
+.koso{border-collapse:collapse;margin:.7rem 0 .1rem;font-size:.95rem;width:100%;max-width:620px}
+.koso th,.koso td{border:1px solid var(--rule);padding:.3rem .45rem;text-align:center}
+.koso th{font-size:.78rem;color:var(--muted);font-weight:600}
+.koso td{font-family:var(--jp);font-size:1.05rem;white-space:nowrap}
+.koso-wrap{overflow-x:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:.6rem;margin-top:.6rem}
+.wc{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.7rem .9rem}
+.wh{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+.ww{font-family:var(--jp);font-size:1.6rem;line-height:1.25}
+.rj{font-style:italic;color:var(--muted);font-size:.9rem}
+.no-romaji .rj{display:none}
+.lvb{margin-left:auto;font-size:.7rem;border:1px solid var(--rule);border-radius:3px;padding:0 .3rem;color:var(--muted)}
+.we{margin-top:.1rem}
+.ex{margin-top:.45rem;padding-top:.4rem;border-top:1px dashed var(--rule);font-size:.92rem}
+.ex .j{font-family:var(--jp);font-size:1.05rem;line-height:1.95}
+.ex .j rt{font-size:.5em}
+.ex mark{background:var(--seal-wash);color:inherit;border-radius:3px;padding:0 .1em}
+.ex .t{color:var(--muted)}
+.hide-en .wc:not(.shown) .we,.hide-en .wc:not(.shown) .ex .t{background:var(--chip);color:transparent;border-radius:3px}
+.hide-kana .wc:not(.shown) .ww,.hide-kana .wc:not(.shown) .rj{background:var(--chip);color:transparent;border-radius:3px}
+.hide-en .wc,.hide-kana .wc{cursor:pointer}
+a.kl{color:inherit;text-decoration:none;cursor:pointer}
+a.kl:hover{background:var(--indigo-wash);border-radius:2px}
+@keyframes iflash{0%{box-shadow:0 0 0 3px var(--seal)}100%{box-shadow:0 0 0 3px transparent}}
+.iflash{animation:iflash 2.4s ease-out}
+.noresult{display:none;text-align:center;color:var(--muted);padding:2rem}
+.noresult.show{display:block}
+body:not(.no-rdcol) ruby.rd rt{color:var(--rc)}
+.rd-on{--rc:var(--rd-on)} .rd-kun{--rc:var(--rd-kun)} .rd-sp{--rc:var(--rd-sp)}
+body:not(.no-rdcol) .rd .rb{text-decoration:underline 2px var(--rc);text-underline-offset:.22em;text-decoration-skip-ink:none}
+body:not(.no-rdcol) .rd-sp .rb{text-decoration-style:dotted}
+footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);font-size:.85rem}
+@media (max-width:640px){ .search{flex-basis:100%} .segs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%} .cards{grid-template-columns:1fr} section.grp{scroll-margin-top:170px} }
+
+.gc{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.9rem 1.05rem;margin-top:.6rem;scroll-margin-top:150px}
+.gh{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.gp{font-family:var(--jp);font-size:1.5rem;font-weight:600;line-height:1.5}
+.gp rt{font-size:.45em;font-weight:400}
+.gm{font-weight:600}
+.gf{margin:.4rem 0 0;font-size:.95rem}
+.gf b{font-size:.72rem;color:var(--seal);letter-spacing:.03em;margin-right:.4rem}
+.gf .j{font-family:var(--jp)}
+.gn{margin:.35rem 0 0;color:var(--muted);font-size:.93rem;max-width:70ch}
+.gx{list-style:none;margin:.5rem 0 0;padding:0;border-top:1px dashed var(--rule)}
+.gx li{padding:.45rem 0;border-bottom:1px dashed var(--rule)}
+.gx li:last-child{border-bottom:0}
+.gx .j{font-family:var(--jp);font-size:1.15rem;line-height:2}
+.gx .j rt{font-size:.5em}
+.gx .r{display:block;font-style:italic;color:var(--muted);font-size:.88rem}
+.no-romaji .gx .r{display:none}
+.gx .t{display:block}
+.hide-en .gx li:not(.shown) .t,.hide-en .gc:not(.shown) .gm{background:var(--chip);color:transparent;border-radius:3px}
+.hide-kana .gx li:not(.shown) .j,.hide-kana .gx li:not(.shown) .r{background:var(--chip);color:transparent;border-radius:3px}
+.hide-kana .gx li:not(.shown) rt{visibility:hidden}
+.hide-en .gx li,.hide-kana .gx li{cursor:pointer}
+.backbtn{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;font:inherit;font-weight:600;border:0;border-radius:8px;padding:.6rem 1rem;background:var(--ink);color:var(--paper);box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
+@keyframes iflash{0%{box-shadow:0 0 0 3px #B3261E}100%{box-shadow:0 0 0 3px transparent}}
+.iflash{animation:iflash 2.4s ease-out}
+
+.card{background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:1.1rem 1.1rem 1.2rem;max-width:1000px;margin:1rem auto 0}
+.scorebar{max-width:1000px;margin:.8rem auto 0;padding:0 1.25rem;display:flex;gap:1.2rem;font-size:.9rem;color:var(--muted)}
+.scorebar b{color:var(--ink);font-size:1.05rem}
+.qjp{font-family:var(--jp);font-size:1.6rem;line-height:2.4;margin:.2rem 0 .4rem}
+.qen{color:var(--muted);margin:.2rem 0 0}
+.opts{display:flex;flex-wrap:wrap;gap:.5rem;margin:.9rem 0 0}
+.opts button{font-family:var(--jp);font-size:1.3rem;font-weight:600;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:.5rem 1.1rem;cursor:pointer;color:inherit;min-width:4.2rem}
+.opts button:hover:not(:disabled){border-color:var(--ink)}
+.opts button.right{background:#1F8A54;border-color:#1F8A54;color:#fff}
+.opts button.wrong{background:#B3261E;border-color:#B3261E;color:#fff}
+.opts button:disabled{cursor:default;opacity:.85}
+.blank{display:inline-block;min-width:2.2rem;text-align:center;border-bottom:2px solid var(--seal);color:var(--seal)}
+.blank.done{border-bottom-color:var(--rule);color:inherit}
+.after{margin:.9rem 0 0;padding:.9rem 0 0;border-top:1px dashed var(--rule)}
+.after .rj{font-style:italic;color:var(--muted);font-size:.92rem}
+.nextrow{display:flex;gap:.6rem;flex-wrap:wrap;margin:.9rem 0 0}
+.nextrow button,.nextrow a{font:inherit;font-weight:600;border:1px solid var(--rule);border-radius:10px;padding:.55rem 1rem;background:var(--sheet);color:inherit;cursor:pointer;text-decoration:none}
+.nextrow button.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.hint{color:var(--muted);font-size:.9rem;margin:.6rem 0 0}
+.big{font-size:clamp(1.2rem,4vw,1.6rem);font-weight:600}
+</style>
+</head>
+<body class="jb-page">
+<header class="top">
+  <h1>助詞ドリル</h1>
+  <p class="sub">One particle is missing from a real sentence. Choose it. Every sentence here comes from the <a href="sentence-builder.html">sentence builder</a>, so you are drilling on language you will meet again, and the answer screen shows the whole sentence in colour with the slot it belongs to. The <a href="patterns.html#g-map">particle map</a> is the reference behind this.</p>
+</header>
+<div class="controls">
+  <div class="controls-inner">
+    <div class="segs">
+      <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Level</span><button data-tier="5">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3">N3</button><button data-tier="2">N2</button></div>
+      <div class="seg" role="group" aria-label="Which particles"><button data-set="all" aria-pressed="true">All</button><button data-set="wa-ga">は・が</button><button data-set="o">を</button><button data-set="ni-de">に・で</button><button data-set="place">へ・から・まで</button><button data-set="to-mo">と・も</button></div>
+    </div>
+  </div>
+  <div id="kb"></div>
+</div>
+<div class="scorebar" id="score"></div>
+<main id="main"></main>
+<script src="../assets/sentences.js"></script>
+<script src="../assets/common.js"></script>
+<script>
+const esc=jpEsc;
+const SET={all:["は","が","を","に","で","へ","と","も","から","まで"],"wa-ga":["は","が"],o:["を"],"ni-de":["に","で"],place:["へ","から","まで"],"to-mo":["と","も"]};
+let state={tier:"4",set:"all"};
+try{Object.assign(state,JSON.parse(localStorage.getItem("drill")||"{}"));}catch(e){}
+const save=()=>{try{localStorage.setItem("drill",JSON.stringify(state));}catch(e){}};
+let stats={seen:0,right:0,streak:0,best:0}, queue=[], cur=null, answered=false;
+const pool=()=>JP_SENTENCES.filter(s=>s.n&&s.lv>=+state.tier);
+function pickQuestion(){
+  const want=SET[state.set], p=pool();
+  for(let tries=0;tries<80;tries++){
+    const s=p[Math.floor(Math.random()*p.length)];
+    const parts=jpRolesWith(s.n,s.roles).map((x,i)=>({x,i})).filter(o=>o.x.p&&want.includes(o.x.t.replace(/[、。]$/,"")));
+    if(!parts.length) continue;
+    const hit=parts[Math.floor(Math.random()*parts.length)];
+    return {s,answer:hit.x.t.replace(/[、。]$/,""),role:hit.x.r,nth:jpRolesWith(s.n,s.roles).slice(0,hit.i).filter(x=>x.p).length};
+  }
+  return null;
+}
+function options(answer){
+  const all=["は","が","を","に","で","へ","と","も","から","まで"];
+  const set=new Set([answer]);
+  while(set.size<4){ const c=all[Math.floor(Math.random()*all.length)]; set.add(c); }
+  return [...set].sort(()=>Math.random()-0.5);
+}
+function render(){
+  if(!cur) cur=queue.shift()||pickQuestion();
+  if(!cur){ document.getElementById("main").innerHTML=`<div class="card"><p class="big">No sentences with those particles at this level.</p><p class="hint">Try another set, or a higher level.</p></div>`; return; }
+  const {s,answer,nth}=cur;
+  const S=jpSentence(s);
+  document.getElementById("main").innerHTML=`<div class="card">
+    <p class="qjp" id="qjp">${S.jp}</p>
+    <div class="opts" id="opts">${options(answer).map(o=>`<button type="button" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div>
+    <div id="after"></div>
+  </div>`;
+  const pts=document.querySelectorAll("#qjp .pt");
+  const blank=pts[nth];
+  if(blank){ blank.dataset.answer=answer; blank.outerHTML=`<span class="blank" id="blank">？</span>`; }
+  document.getElementById("opts").onclick=e=>{ const b=e.target.closest("[data-o]"); if(!b||answered) return; check(b.dataset.o); };
+  drawScore();
+}
+function check(choice){
+  answered=true;
+  const {s,answer,role}=cur, S=jpSentence(s);
+  document.querySelectorAll("#opts button").forEach(b=>{ b.disabled=true;
+    if(b.dataset.o===answer) b.classList.add("right");
+    else if(b.dataset.o===choice) b.classList.add("wrong"); });
+  const el=document.getElementById("blank"); if(el){ el.textContent=answer; el.classList.add("done"); }
+  stats.seen++;
+  if(choice===answer){ stats.right++; stats.streak++; stats.best=Math.max(stats.best,stats.streak); }
+  else { stats.streak=0; queue.push(cur); }
+  const slot={W:"who or topic",T:"time",P:"place",O:"what",H:"how or with",V:"verb",Q:"question"}[role]||"";
+  document.getElementById("after").innerHTML=`<div class="after">
+    <p class="qjp" style="font-size:1.35rem">${S.jp}${sayBtn(S.say)}</p>
+    <p class="rj">${S.rom}</p><p class="qen">${S.en}</p>
+    <p class="hint">${choice===answer?"Right":"The answer is "+esc(answer)}${slot?` — it marks the <b>${slot}</b> slot.`:"."} <a href="patterns.html?from=dr#g-map">particle map →</a>${s.pat?` <a href="patterns.html?from=dr#f-${s.pat}">this pattern →</a>`:""}</p>
+    <div class="nextrow"><button type="button" class="primary" id="next">Next sentence</button>
+      <a href="sentence-builder.html?from=dr#${s.sec}">See it in the builder →</a></div></div>`;
+  document.getElementById("next").onclick=nextQ;
+  linkKanaWords(document.querySelectorAll("#after .qjp"),KANA_WORDS,"../kana/","dr");
+  drawScore();
+}
+function nextQ(){ answered=false; cur=null; render(); }
+function drawScore(){
+  document.getElementById("score").innerHTML=`<span><b>${stats.right}</b> / ${stats.seen} right</span><span>streak <b>${stats.streak}</b></span><span>best <b>${stats.best}</b></span>`;
+}
+document.querySelectorAll("[data-tier],[data-set]").forEach(b=>b.onclick=()=>{
+  const k=b.dataset.tier?"tier":"set"; state[k]=b.dataset[k]; save();
+  document.querySelectorAll(`[data-${k}]`).forEach(x=>x.setAttribute("aria-pressed",x.dataset[k]===state[k]));
+  queue=[]; nextQ(); });
+document.querySelectorAll("[data-tier]").forEach(x=>x.setAttribute("aria-pressed",x.dataset.tier===state.tier));
+document.querySelectorAll("[data-set]").forEach(x=>x.setAttribute("aria-pressed",x.dataset.set===state.set));
+document.addEventListener("keydown",e=>{ if(/^[1-4]$/.test(e.key)){ const b=document.querySelectorAll("#opts button")[+e.key-1]; if(b&&!answered) b.click(); }
+  else if(e.key===" "&&answered){ e.preventDefault(); nextQ(); } });
+const KANA_WORDS=__KANA_WORDS__;
+document.getElementById("kb").innerHTML=jpKeybar();
+if(blocksOn()) document.body.classList.add("jb-on");
+render(); initParticlePopup();
+</script>
+</body>
+</html>

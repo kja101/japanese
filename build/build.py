@@ -34,6 +34,7 @@ HEAD_EXTRA = ('<link rel="manifest" href="{r}manifest.webmanifest">\n<meta name=
 WRITTEN = []
 
 INDEX_VERSION = ""
+SENTENCES_VERSION = ""
 COMMON_VERSION = ""   # set once assets/common.js is written; pages load common.js?v=<version> so a page and its script always match
 
 THEME_BOOT = ('<script>try{var t=localStorage.getItem("theme");'
@@ -87,6 +88,8 @@ def write(rel, text):
         text = theme_css(text)
     if rel.endswith(".html") and "data-theme" not in text.split("</head>")[0].split("<style")[0]:
         text = re.sub(r'(<meta charset="utf-8">)', lambda m: m.group(1) + "\n" + THEME_BOOT, text, count=1)
+    if rel.endswith(".html") and "assets/sentences.js" in text and SENTENCES_VERSION:
+        text = text.replace('assets/sentences.js"', 'assets/sentences.js?v=' + SENTENCES_VERSION + '"')
     if rel.endswith(".html") and 'id="search"' in text and "search-index.js" not in text:
         depth = "../" * rel.count("/")
         text = text.replace('<script src="' + depth + 'assets/common.js', '<script src="' + depth + 'assets/search-index.js?v=' + INDEX_VERSION + '"></script>\n<script src="' + depth + 'assets/common.js', 1)
@@ -683,6 +686,12 @@ for _s in _pmap["slots"]:
         _m["ex"] = mark(_m["ex"])
 for _o in _pmap["overlays"]:
     _o["ex"] = mark(_o["ex"])
+_flat = [{k: v for k, v in dict(s, sec=t["id"], sect=t["title"]).items()
+          if k in ("id", "n", "kj", "kn", "rj", "roles", "en", "enb", "lv", "pat", "why", "sec", "sect")}
+         for t in _sections for s in t["sents"]]
+_sjs = "// Every marked sentence, for the practice pages.\nconst JP_SENTENCES=" + dump(_flat) + ";\n"
+write("assets/sentences.js", _sjs)
+SENTENCES_VERSION = hashlib.sha1(_sjs.encode("utf-8")).hexdigest()[:10]
 write("words/sentence-builder.html", fill("sentence-builder.html", PAT=dump({f["id"]: f["jp"] for f in _patterns["frames"]}), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS, DATA=dump(_sections)))
 
 # ---------------------------------------------------------------- study plan
@@ -706,6 +715,8 @@ write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("
 _grammar = load("grammar.json")
 for _g in _grammar:
     _g["ex"] = [mark(e) for e in _g["ex"]]
+write("words/drill.html", fill("drill.html", KANA_WORDS=KANA_WORDS))
+write("words/listening.html", fill("listening.html", KANA_WORDS=KANA_WORDS))
 write("words/patterns.html", fill("patterns.html", DATA=dump(_patterns), PMAP=dump(_pmap), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 
@@ -715,7 +726,7 @@ files = ["index.html", "manifest.webmanifest", "assets/icons/icon-192.png", "ass
 digest = hashlib.sha1()
 for f in files:
     digest.update((ROOT / f).read_bytes())
-sw = (SRC / "sw.js").read_text(encoding="utf-8").replace("__VERSION__", digest.hexdigest()[:10]).replace("__FILES__", dump(["./"] + ["./" + f for f in files] + ["./assets/common.js?v=" + COMMON_VERSION, "./assets/search-index.js?v=" + INDEX_VERSION]))
+sw = (SRC / "sw.js").read_text(encoding="utf-8").replace("__VERSION__", digest.hexdigest()[:10]).replace("__FILES__", dump(["./"] + ["./" + f for f in files] + ["./assets/common.js?v=" + COMMON_VERSION, "./assets/search-index.js?v=" + INDEX_VERSION, "./assets/sentences.js?v=" + SENTENCES_VERSION]))
 (ROOT / "sw.js").write_text(sw, encoding="utf-8")
 print("  sw.js")
 print("Done.")

@@ -2,9 +2,9 @@
 // Cache first: every page and script is saved on the device when this version installs, and served
 // from there instantly, online or off. A new version of the site arrives as a new worker, which saves
 // the new files together and then takes over, so a page and its scripts always match.
-const VERSION = "6c41754aac";
+const VERSION = "2c8129d670";
 const CACHE = "japanese-" + VERSION;
-const FILES = ["./","./index.html","./manifest.webmanifest","./assets/icons/icon-192.png","./assets/icons/icon-512.png","./assets/icons/icon-180.png","./assets/common.js","./index.html","./assets/search-index.js","./kanji/master-kanji-shapes.html","./kanji/kanji-by-situation.html","./words/phrasebook.html","./words/sentence-builder.html","./kanji/learn.html","./kanji/learn-n5-n4.html","./words/vocabulary.html","./kana/kana-sounds.html","./kana/kana-words.html","./kana/katakana-words.html","./words/patterns.html","./words/grammar.html","./assets/common.js?v=e09031b852","./assets/search-index.js?v=c5fdf2163a"];
+const FILES = ["./","./index.html","./manifest.webmanifest","./assets/icons/icon-192.png","./assets/icons/icon-512.png","./assets/icons/icon-180.png","./assets/common.js","./index.html","./assets/search-index.js","./kanji/master-kanji-shapes.html","./kanji/kanji-by-situation.html","./words/phrasebook.html","./assets/sentences.js","./words/sentence-builder.html","./kanji/learn.html","./kanji/learn-n5-n4.html","./words/vocabulary.html","./kana/kana-sounds.html","./kana/kana-words.html","./kana/katakana-words.html","./words/drill.html","./words/listening.html","./words/patterns.html","./words/grammar.html","./assets/common.js?v=650914482f","./assets/search-index.js?v=c5fdf2163a","./assets/sentences.js?v=a0a0c60230"];
 self.addEventListener("install", e => {
   // one by one, so one failure can't stop the rest from being saved
   e.waitUntil(caches.open(CACHE).then(c => Promise.all(FILES.map(f => c.add(new Request(f, { cache: "reload" })).catch(() => null)))).then(() => self.skipWaiting()));
