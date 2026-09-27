@@ -13,6 +13,7 @@ Open `index.html` locally or visit the site: <https://kja101.github.io/japanese/
 | `kanji/kanji-by-situation.html` | **See them in use.** 200 N4 kanji in 13 real-life situations, with 1,465 example sentences, where you meet each kanji, and N5–N2 word lists. |
 | `words/phrasebook.html` | Interactive phrasebook: 474 phrases in 14 situations, each linked to its sentences in the sentence builder, with swap-in words, grammar-block colouring and a starred personal list. |
 | `words/vocabulary.html` | **Every word.** 4,280 N5–N2 words (the kanji words plus the kana lists) by type or kana order, with examples, audio and links to the kanji deck. |
+| `words/weakness.html` | **What keeps tripping you up.** Your worst cards from the study plan, with advice and links. |
 | `words/drill.html` | **Particle drill.** A particle blanked from a real sentence, four options, with the slot it marks revealed and the sentence spoken. |
 | `words/listening.html` | **Listening practice.** Sentences played with the text hidden; reveal to check; misses come round again. |
 | `words/patterns.html` | **Particle map and sentence frames.** The markers each slot can take, then 55 patterns by grammar type: particle slots, tense tables, question forms, with links to the grammar page and the builder. |

@@ -463,8 +463,30 @@ function renderToday(){
   document.getElementById("vPerDay").onchange=e=>{S.settings.vPerDay=+e.target.value;save();renderToday();};
   document.getElementById("prod").onchange=e=>{S.settings.prod=e.target.value;save();renderToday();};
   document.getElementById("pPerDay").onchange=e=>{S.settings.pPerDay=+e.target.value;save();renderToday();};
-  document.getElementById("exp").onclick=()=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:"application/json"})); a.download="kanji-progress-"+dayKey()+".json"; a.click(); };
-  document.getElementById("imp").onchange=e=>{ const f=e.target.files[0]; if(!f) return; f.text().then(t=>{ try{ const s=JSON.parse(t); if(!s.cards) throw 0; S=Object.assign({cards:{},day:{key:"",newDone:0},settings:{perDay:10,order:"shape"},log:{}},s); save(); renderToday(); alert("Progress imported."); }catch(err){ alert("That file isn't a progress export from this deck."); } }); };
+  // export: on a phone this opens the share sheet, so you can put the file in iCloud Drive and pick it up on the other device
+  document.getElementById("exp").onclick=async()=>{
+    const name="japanese-progress-"+dayKey()+".json", text=JSON.stringify(S);
+    try{
+      const file=new File([text],name,{type:"application/json"});
+      if(navigator.canShare&&navigator.canShare({files:[file]})){ await navigator.share({files:[file],title:name}); return; }
+    }catch(e){}
+    const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([text],{type:"application/json"})); a.download=name; a.click();
+  };
+  // import: merge by default, so the two devices end up with the best of both
+  document.getElementById("imp").onchange=e=>{ const f=e.target.files[0]; if(!f) return; e.target.value="";
+    f.text().then(t=>{ let s; try{ s=JSON.parse(t); if(!s.cards) throw 0; }catch(err){ alert("That file isn't a progress export from this site."); return; }
+      const theirs=Object.keys(s.cards).length, mine=Object.keys(S.cards).length;
+      const merge=confirm(`That file has ${theirs} cards; this device has ${mine}.\n\nOK to merge them (keeping whichever is further along for each card).\nCancel to replace this device's progress with the file.`);
+      if(merge){
+        const better=(a,b)=>{ if(!a) return b; if(!b) return a; const ra=(a.reps||0)+(a.ivl||0)/10, rb=(b.reps||0)+(b.ivl||0)/10; return rb>ra?b:a; };
+        Object.keys(s.cards).forEach(id=>{ S.cards[id]=better(S.cards[id],s.cards[id]); });
+        Object.keys(s.log||{}).forEach(d=>{ S.log[d]=Math.max(S.log[d]||0,s.log[d]); });
+        if(s.stories) S.stories=Object.assign({},s.stories,S.stories);
+      } else {
+        S=Object.assign({cards:{},day:{key:"",newDone:0},settings:S.settings,log:{}},s);
+      }
+      save(); renderToday(); alert(merge?"Merged. This device now has "+Object.keys(S.cards).length+" cards.":"Progress replaced.");
+    }); };
   document.getElementById("rst").onclick=()=>{ if(confirm("Delete all progress and start again? This can't be undone.")){ S={cards:{},day:{key:"",newDone:0},settings:S.settings,log:{}}; save(); renderToday(); } };
 }
 // ---------- lessons view ----------

@@ -259,7 +259,7 @@ document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.da
 render(); applyBlocks(); initParticlePopup();
 (function(){
   const src=(location.search.match(/[?&]from=(\w+)/)||[])[1];
-  const L={pb:"← Back to the phrasebook",sb:"← Back to the sentence builder",gr:"← Back to grammar",km:"← Back to the kanji deck",vo:"← Back to the word list"}[src];
+  const L={dr:"← Back to the particle drill",pb:"← Back to the phrasebook",sb:"← Back to the sentence builder",gr:"← Back to grammar",km:"← Back to the kanji deck",vo:"← Back to the word list"}[src];
   if(L){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=L; document.body.appendChild(b);
     b.onclick=()=>{ if(history.length>1) history.back(); else location.href="../index.html"; }; }
   const m=location.hash.match(/^#f-(.+)$/); if(!m) return;
