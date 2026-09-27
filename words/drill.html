@@ -155,7 +155,20 @@ const SET={all:["は","が","を","に","で","へ","と","も","から","まで
 let state={tier:"4",set:"all",romaji:"off",english:"off"};
 try{Object.assign(state,JSON.parse(localStorage.getItem("drill")||"{}"));}catch(e){}
 const save=()=>{try{localStorage.setItem("drill",JSON.stringify(state));}catch(e){}};
-let stats={seen:0,right:0,streak:0,best:0}, queue=[], cur=null, answered=false;
+let stats={seen:0,right:0,streak:0,best:0}, queue=[], cur=null, answered=false, chosen=null;
+// keep the question you are on, so coming back from the map or a kanji card puts you where you were
+const SKEY="drill-session";
+const byId=id=>JP_SENTENCES.find(x=>x.id===id);
+const packQ=q=>q?{id:q.s.id,answer:q.answer,role:q.role,nth:q.nth}:null;
+const unpackQ=o=>{ const s=o&&byId(o.id); return s?{s,answer:o.answer,role:o.role,nth:o.nth}:null; };
+function saveSession(){ try{ sessionStorage.setItem(SKEY,JSON.stringify({cur:packQ(cur),queue:queue.map(packQ),stats,answered,chosen})); }catch(e){} }
+function loadSession(){
+  try{ const s=JSON.parse(sessionStorage.getItem(SKEY)||"null"); if(!s) return false;
+    cur=unpackQ(s.cur); queue=(s.queue||[]).map(unpackQ).filter(Boolean); stats=s.stats||stats; chosen=s.chosen||null;
+    if(!cur) return false;
+    render(); if(s.answered) check(chosen,true); return true;
+  }catch(e){ return false; }
+}
 const pool=()=>JP_SENTENCES.filter(s=>s.n&&s.lv>=+state.tier);
 function pickQuestion(){
   const want=SET[state.set], p=pool();
@@ -192,10 +205,10 @@ function render(){
   if(rblank) rblank.outerHTML=`<span class="blank">？</span>`;
   linkKanaWords(document.querySelectorAll("#qjp"),KANA_WORDS,"../kana/","dr");
   document.getElementById("opts").onclick=e=>{ const b=e.target.closest("[data-o]"); if(!b||answered) return; check(b.dataset.o); };
-  drawScore();
+  drawScore(); saveSession();
 }
 function check(choice,again){
-  answered=true;
+  answered=true; chosen=choice;
   const {s,answer,role}=cur, S=jpSentence(s,linkK);
   document.querySelectorAll("#opts button").forEach(b=>{ b.disabled=true;
     if(b.dataset.o===answer) b.classList.add("right");
@@ -216,9 +229,9 @@ function check(choice,again){
       <a href="sentence-builder.html?from=dr#${s.sec}">See it in the builder →</a></div></div>`;
   document.getElementById("next").onclick=nextQ;
   linkKanaWords(document.querySelectorAll("#after .qjp"),KANA_WORDS,"../kana/","dr");
-  drawScore();
+  drawScore(); saveSession();
 }
-function nextQ(){ answered=false; cur=null; render(); }
+function nextQ(){ answered=false; chosen=null; cur=null; render(); }
 function drawScore(){
   document.getElementById("score").innerHTML=`<span><b>${stats.right}</b> / ${stats.seen} right</span><span>streak <b>${stats.streak}</b></span><span>best <b>${stats.best}</b></span>`;
 }
@@ -242,7 +255,8 @@ if(!blocksOn()) setBlocks(true);
 function applyBlocks(){ const on=blocksOn(); document.body.classList.toggle("jb-on",on); document.querySelectorAll("[data-jb]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.jb==="on")===on)); }
 document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.dataset.jb==="on"); applyBlocks(); });
 applyBlocks();
-render(); initParticlePopup();
+if(!loadSession()) render();
+initParticlePopup();
 </script>
 </body>
 </html>
