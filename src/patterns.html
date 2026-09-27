@@ -145,6 +145,8 @@ a.pchip{font-family:var(--jp);font-size:1.15rem;font-weight:600;text-align:cente
 .pairs dt a{color:var(--indigo);text-decoration:none}
 .pairs dd{margin:0;color:var(--muted)}
 @media (max-width:560px){.pmap .pslot{grid-template-columns:1fr}.slab{text-align:left}.slab .jp{display:inline;margin-left:.4rem}}
+@keyframes hit{0%{background:var(--indigo-wash)}100%{background:transparent}}
+.hit{animation:hit 2.4s ease-out;border-radius:8px}
 </style>
 </head>
 <body class="jb-page">
@@ -208,7 +210,7 @@ function mapHtml(){
   return `<section class="grp" id="g-map"><div class="ghead"><h3><span class="jp">助詞</span>Particle map <small>start here</small></h3><p>${esc(PMAP.intro)}</p></div>
   <article class="frame pmap" data-s="${esc(jpSearchKey("particle map slots "+PMAP.slots.map(s=>s.label+" "+s.jp+" "+s.markers.map(m=>m.p+" "+m.gloss).join(" ")).join(" ")))}">
     ${PMAP.slots.map(s=>`<div class="pslot"><div class="slab" style="--c:${RCOL[s.role]}">${esc(s.label)}<span class="jp">${esc(s.jp)}</span></div>
-      <ul class="marks">${s.markers.map(m=>`<li><a class="pchip" href="#f-${m.frame}">${esc(m.p)}</a><div class="mtext"><span class="gloss">${esc(m.gloss)}</span>${miniEx(m.ex)}</div></li>`).join("")}</ul></div>`).join("")}
+      <ul class="marks">${s.markers.map(m=>`<li id="pm-${s.role}-${m.p}"><a class="pchip" href="#f-${m.frame}">${esc(m.p)}</a><div class="mtext"><span class="gloss">${esc(m.gloss)}</span>${miniEx(m.ex)}</div></li>`).join("")}</ul></div>`).join("")}
   </article>
   <article class="frame pmap" data-s="${esc(jpSearchKey("overlays wa mo dake shika "+PMAP.overlays.map(o=>o.p+" "+o.rule).join(" ")))}">
     <h4><span class="pat">は・も・だけ・しか</span><span class="en">The second layer</span></h4>
@@ -256,9 +258,18 @@ render(); applyBlocks(); initParticlePopup();
   const L={dr:"← Back to the particle drill",pb:"← Back to the phrasebook",sb:"← Back to the sentence builder",gr:"← Back to grammar",km:"← Back to the kanji deck",vo:"← Back to the word list"}[src];
   if(L){ const b=document.createElement("button"); b.className="backbtn"; b.textContent=L; document.body.appendChild(b);
     b.onclick=()=>{ if(history.length>1) history.back(); else location.href="../index.html"; }; }
-  const m=location.hash.match(/^#f-(.+)$/); if(!m) return;
-  const go=()=>{ const el=document.getElementById("f-"+m[1]); if(!el) return; const c=document.querySelector(".controls");
-    window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12); };
+  // land on exactly what was linked: a frame, a slot, or one particle row in the map
+  const id=decodeURIComponent(location.hash.slice(1)); if(!id) return;
+  const go=()=>{ let el=document.getElementById(id)||document.getElementById(decodeURIComponent(id));
+    if(!el&&id.startsWith("pm-")){   // that particle isn't in that slot: show it in whichever slot has it
+      const par=id.split("-").slice(2).join("-");
+      el=[...document.querySelectorAll('#g-map li[id^="pm-"]')].find(n=>n.id.endsWith("-"+par))
+        ||document.getElementById("g-map");
+    }
+    if(!el) return;
+    const c=document.querySelector(".controls");
+    window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-(c?c.offsetHeight:0)-12);
+    el.classList.remove("hit"); void el.offsetWidth; el.classList.add("hit"); };
   setTimeout(go,60); setTimeout(go,300);
 })();
 </script>

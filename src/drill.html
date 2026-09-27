@@ -206,7 +206,7 @@ function check(choice,again){
   document.getElementById("after").innerHTML=`<div class="after">
     <p class="qjp" style="font-size:1.35rem">${S.jp}${sayBtn(S.say)}</p>
     <p class="rj">${S.rom}</p><p class="qen">${S.en}</p>
-    <p class="hint">${choice===answer?"Right":"The answer is "+esc(answer)}${slot?` — it marks the <b>${slot}</b> slot.`:"."} <a href="patterns.html?from=dr#g-map">particle map →</a>${s.pat?` <a href="patterns.html?from=dr#f-${s.pat}">this pattern →</a>`:""}</p>
+    <p class="hint">${choice===answer?"Right":"The answer is "+esc(answer)}${slot?` — it marks the <b>${slot}</b> slot.`:"."} <a href="patterns.html?from=dr#pm-${role}-${encodeURIComponent(answer)}">this particle on the map →</a>${s.pat?` <a href="patterns.html?from=dr#f-${s.pat}">this pattern →</a>`:""}</p>
     <div class="nextrow"><button type="button" class="primary" id="next">Next sentence</button>
       <a href="sentence-builder.html?from=dr#${s.sec}">See it in the builder →</a></div></div>`;
   document.getElementById("next").onclick=nextQ;
