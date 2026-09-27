@@ -95,6 +95,26 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 .backbtn{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;font:inherit;font-weight:600;border:0;border-radius:8px;padding:.6rem 1rem;background:var(--ink);color:var(--paper);box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
 @keyframes iflash{0%{box-shadow:0 0 0 3px #B3261E}100%{box-shadow:0 0 0 3px transparent}}
 .iflash{animation:iflash 2.4s ease-out}
+table.gt{width:100%;border-collapse:collapse;margin:.4rem 0 0}
+table.gt th{text-align:left;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:.3rem .6rem .3rem 0;border-bottom:1px solid var(--rule)}
+table.gt td{padding:.55rem .6rem .55rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
+td.c-en{width:26%;font-weight:600}
+td.c-en .lvb{display:inline-block;font-weight:400;margin-left:.45rem;vertical-align:.1em}
+td.c-pat{width:26%}
+td.c-pat .gp{font-family:var(--jp);font-size:1.2rem;display:block;line-height:1.7}
+td.c-pat .r,td.c-ex .r{display:block;font-style:italic;color:var(--muted);font-size:.85rem}
+td.c-ex .j{font-family:var(--jp);font-size:1.15rem;line-height:1.9}
+td.c-ex .t{display:block}
+a.more{display:inline-block;margin:.3rem 0 0;font-size:.82rem;font-weight:600;color:var(--indigo);text-decoration:none}
+tr.detail td{background:var(--chip)}
+@media (max-width:700px){
+  table.gt thead{display:none}
+  table.gt,table.gt tbody,table.gt tr,table.gt td{display:block;width:auto}
+  table.gt tr.grow{border-bottom:1px solid var(--rule);padding:.6rem 0}
+  table.gt td{border:0;padding:.1rem 0}
+  td.c-en{font-size:1rem}
+  td.c-en .lvb{display:inline-block;margin-left:.4rem}
+}
 </style>
 </head>
 <body class="jb-page">
@@ -108,6 +128,7 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
     <div class="segs">
       <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Level</span><button data-tier="5" aria-pressed="false">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3" aria-pressed="false">N3</button><button data-tier="2" aria-pressed="false">N2</button></div>
       <div class="seg" role="group" aria-label="Grammar blocks"><button data-jb="on" aria-pressed="true">Grammar blocks</button><button data-jb="off" aria-pressed="false">Off</button></div>
+      <div class="seg" role="group" aria-label="View"><button data-view="table" aria-pressed="true">Table</button><button data-view="cards" aria-pressed="false">Full cards</button></div>
       <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
       <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="en" aria-pressed="false">Hide English</button><button data-hide="kana" aria-pressed="false">Hide Japanese</button></div>
     </div>
@@ -129,19 +150,36 @@ const kanaOf=s=>s.replace(NOTE,"$2"), plainOf=s=>s.replace(NOTE,"$1");
 const linkK=html=>html.split(/(<rt>.*?<\/rt>)/).map(p=>p.startsWith("<rt>")?p:p.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=gr#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c)).join("");
 function ruby(s){ let o="",last=0; s.replace(NOTE,(m,b,r,off)=>{ o+=esc(s.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return linkK(o+esc(s.slice(last))); }
 const romLine=n=>n.split(" ").map(t=>jpRomajiToken(kanaOf(t))).join(" ").replace(/ ,/g,",");
-let state={tier:"4",romaji:"on",hide:"none"};
+let state={tier:"4",romaji:"on",hide:"none",view:"table"};
 try{Object.assign(state,JSON.parse(localStorage.getItem("grammar")||"{}"));}catch(e){}
 const save=()=>{try{localStorage.setItem("grammar",JSON.stringify(state));}catch(e){}};
+function rowHtml(g){
+  const s=esc((g.pat+" "+g.mean+" "+g.form+" "+g.ex.map(e=>e.en+" "+plainOf(e.n)+" "+kanaOf(e.n)).join(" ")).toLowerCase());
+  const e=g.ex[0];
+  return `<tr class="grow" id="p-${g.id}" data-s="${s}">
+    <td class="c-en">${esc(g.mean)}<span class="lvb">N${g.l}</span></td>
+    <td class="c-pat"><span class="gp">${ruby(g.pat)}</span><span class="r">${esc(romLine(g.pat.replace(/[～〜]/g,"")))}</span></td>
+    <td class="c-ex">${e?`<span class="j">${jpBlocksLine(e.n,linkK,e.roles)}</span>${sayBtn(plainOf(e.n).replace(/ /g,""))}
+      <span class="r">${jpBlocksRom(e.n,e.roles)}</span><span class="t">${jpEnHtml(e)}</span>`:""}
+      <a class="more" href="#p-${g.id}" data-more="${g.id}">how to form it →</a></td></tr>`;
+}
 function render(){
   const t=+state.tier, groups=[...new Set(D.map(g=>g.group))];
   D.sort((a,b)=>b.l-a.l);
   let h="";
   groups.forEach(gr=>{ const list=D.filter(g=>g.group===gr&&g.l>=t); if(!list.length) return;
-    h+=`<section class="grp" id="g-${gr.replace(/\W+/g,"-")}"><h2 class="part">${esc(gr)}</h2>${list.map(g=>`<article class="gc" id="p-${g.id}" data-s="${esc((g.pat+" "+g.mean+" "+g.form+" "+g.ex.map(e=>plainOf(e.n)+kanaOf(e.n)+romLine(e.n)+e.en).join(" ")).toLowerCase())}">
+    const id="g-"+gr.replace(/\W+/g,"-");
+    if(state.view==="table"){
+      h+=`<section class="grp" id="${id}"><h2 class="part">${esc(gr)}</h2>
+        <table class="gt"><thead><tr><th>Means</th><th>Pattern</th><th>Example</th></tr></thead><tbody>${list.map(rowHtml).join("")}</tbody></table></section>`;
+    } else {
+      h+=`<section class="grp" id="${id}"><h2 class="part">${esc(gr)}</h2>${list.map(g=>`<article class="gc" id="p-${g.id}" data-s="${esc((g.pat+" "+g.mean+" "+g.form+" "+g.ex.map(e=>e.en+" "+plainOf(e.n)+" "+kanaOf(e.n)).join(" ")).toLowerCase())}">
       <div class="gh"><span class="gp">${ruby(g.pat)}</span><span class="gm">${esc(g.mean)}</span><span class="lvb">N${g.l}</span></div>
       <p class="gf"><b>HOW TO FORM IT</b><span class="j">${ruby(g.form)}</span></p>
       ${g.note?`<p class="gn">${ruby(g.note)}</p>`:""}
-      <ul class="gx">${g.ex.map((e,i)=>`<li data-id="${g.id}-${i}"><span class="j">${jpBlocksLine(e.n,linkK,e.roles)}</span>${sayBtn(plainOf(e.n).replace(/ /g,""))}<span class="r">${jpBlocksRom(e.n,e.roles)}</span><span class="t">${jpEnHtml(e)}</span></li>`).join("")}</ul></article>`).join("")}</section>`; });
+      <ul class="gx">${g.ex.map((e,i)=>`<li data-id="${g.id}-${i}"><span class="j">${jpBlocksLine(e.n,linkK,e.roles)}</span>${sayBtn(plainOf(e.n).replace(/ /g,""))}<span class="r">${jpBlocksRom(e.n,e.roles)}</span><span class="t">${jpEnHtml(e)}</span></li>`).join("")}</ul></article>`).join("")}</section>`;
+    }
+  });
   document.getElementById("main").innerHTML=h+`<div class="noresult" id="noresult">Nothing matches that.</div>`;
   document.getElementById("nav").innerHTML=groups.filter(gr=>document.getElementById("g-"+gr.replace(/\W+/g,"-"))).map(gr=>`<a href="#g-${gr.replace(/\W+/g,"-")}">${esc(gr)}</a>`).join("");
   apply(); doSearch();
@@ -156,11 +194,24 @@ function apply(){
 }
 function doSearch(){
   const q=document.getElementById("search").value.trim().toLowerCase(); let any=false;
-  document.querySelectorAll("section.grp").forEach(s=>{ let n=0; s.querySelectorAll(".gc").forEach(c=>{ const hit=!q||c.dataset.s.includes(q); c.style.display=hit?"":"none"; if(hit) n++; }); s.style.display=n?"":"none"; if(n) any=true; });
+  document.querySelectorAll("section.grp").forEach(s=>{ let n=0; s.querySelectorAll(".gc,.grow").forEach(c=>{ const hit=!q||c.dataset.s.includes(q); c.style.display=hit?"":"none"; if(hit) n++; }); s.style.display=n?"":"none"; if(n) any=true; });
   document.getElementById("noresult").classList.toggle("show",!!q&&!any);
   document.getElementById("elsewhere").innerHTML=jpElsewhere(document.getElementById("search").value,"gr","../","gr");
 }
+document.getElementById("main").addEventListener("click",e=>{
+  const m=e.target.closest("[data-more]"); if(!m) return; e.preventDefault();
+  const g=D.find(x=>x.id===m.dataset.more), row=m.closest("tr");
+  if(row.nextElementSibling&&row.nextElementSibling.classList.contains("detail")){ row.nextElementSibling.remove(); return; }
+  const tr=document.createElement("tr"); tr.className="detail";
+  tr.innerHTML=`<td colspan="3"><p class="gf"><b>HOW TO FORM IT</b><span class="j">${ruby(g.form)}</span></p>
+    ${g.note?`<p class="gn">${ruby(g.note)}</p>`:""}
+    ${g.ex.length>1?`<ul class="gx">${g.ex.slice(1).map(x=>`<li><span class="j">${jpBlocksLine(x.n,linkK,x.roles)}</span>${sayBtn(plainOf(x.n).replace(/ /g,""))}<span class="r">${jpBlocksRom(x.n,x.roles)}</span><span class="t">${jpEnHtml(x)}</span></li>`).join("")}</ul>`:""}</td>`;
+  row.after(tr);
+  linkKanaWords(tr.querySelectorAll(".j"),KANA_WORDS,"../kana/","gr");
+});
 document.getElementById("search").addEventListener("input",doSearch);
+document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{ state.view=b.dataset.view; save();
+  document.querySelectorAll("[data-view]").forEach(x=>x.setAttribute("aria-pressed",x.dataset.view===state.view)); render(); });
 document.querySelectorAll("[data-tier]").forEach(b=>b.onclick=()=>{ const y=window.scrollY; state.tier=b.dataset.tier; save(); render(); window.scrollTo(0,y); });
 ["romaji","hide"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(b=>b.onclick=()=>{ state[k]=b.dataset[k]; save(); apply(); }));
 document.getElementById("main").addEventListener("click",e=>{ const li=e.target.closest(".gx li"); if(li&&state.hide!=="none") li.classList.add("shown"); const gc=e.target.closest(".gc"); if(gc&&state.hide==="en") gc.classList.add("shown"); });
