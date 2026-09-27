@@ -129,6 +129,7 @@ a.kl:hover,a.kl:active{background:rgba(127,127,127,.18);border-radius:2px}
 <div class="controls">
   <div class="controls-inner">
     <div class="segs">
+      <div class="seg" role="group" aria-label="Grammar blocks"><button data-jb="on" aria-pressed="true">Grammar blocks</button><button data-jb="off" aria-pressed="false">Off</button></div>
       <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Level</span><button data-tier="5">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3">N3</button><button data-tier="2">N2</button></div>
       <div class="seg" role="group" aria-label="Rōmaji"><button data-romaji="on">Rōmaji on</button><button data-romaji="off" aria-pressed="true">Off</button></div>
       <div class="seg" role="group" aria-label="English hint"><button data-english="on">English hint</button><button data-english="off" aria-pressed="true">Off</button></div>
@@ -231,7 +232,11 @@ document.addEventListener("keydown",e=>{ if(/^[1-4]$/.test(e.key)){ const b=docu
   else if(e.key===" "&&answered){ e.preventDefault(); nextQ(); } });
 const KANA_WORDS=__KANA_WORDS__;
 document.getElementById("kb").innerHTML=jpKeybar();
-if(blocksOn()) document.body.classList.add("jb-on");
+// the colours are the point of this page, so turn them on the first time
+if(!blocksOn()) setBlocks(true);
+function applyBlocks(){ const on=blocksOn(); document.body.classList.toggle("jb-on",on); document.querySelectorAll("[data-jb]").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.jb==="on")===on)); }
+document.querySelectorAll("[data-jb]").forEach(b=>b.onclick=()=>{ setBlocks(b.dataset.jb==="on"); applyBlocks(); });
+applyBlocks();
 render(); initParticlePopup();
 </script>
 </body>
