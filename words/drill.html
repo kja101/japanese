@@ -181,7 +181,7 @@ function render(){
   document.getElementById("main").innerHTML=`<div class="card">
     <p class="qjp" id="qjp">${S.jp}</p>
     ${state.romaji==="on"?`<p class="rj" id="qrj">${S.rom}</p>`:""}
-    ${state.english==="on"?`<p class="qen">${esc(s.en)}</p>`:""}
+    ${state.english==="on"?`<p class="qen">${S.en}</p>`:""}
     <div class="opts" id="opts">${options(answer).map(o=>`<button type="button" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div>
     <div id="after"></div>
   </div>`;
