@@ -715,7 +715,7 @@ write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("
 _grammar = load("grammar.json")
 for _g in _grammar:
     _g["ex"] = [mark(e) for e in _g["ex"]]
-write("words/drill.html", fill("drill.html", KANA_WORDS=KANA_WORDS))
+write("words/drill.html", fill("drill.html", KANA_WORDS=KANA_WORDS, KANJI_SET=KANJI_SET))
 write("words/listening.html", fill("listening.html", KANA_WORDS=KANA_WORDS))
 write("words/patterns.html", fill("patterns.html", DATA=dump(_patterns), PMAP=dump(_pmap), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
 write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))

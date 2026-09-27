@@ -116,6 +116,9 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 .nextrow button.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .hint{color:var(--muted);font-size:.9rem;margin:.6rem 0 0}
 .big{font-size:clamp(1.2rem,4vw,1.6rem);font-weight:600}
+.qrj,.card .rj{font-style:italic;color:var(--muted);font-size:.95rem;margin:.1rem 0 0}
+a.kl{color:inherit;text-decoration:none}
+a.kl:hover,a.kl:active{background:rgba(127,127,127,.18);border-radius:2px}
 </style>
 </head>
 <body class="jb-page">
@@ -127,6 +130,8 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
   <div class="controls-inner">
     <div class="segs">
       <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Level</span><button data-tier="5">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3">N3</button><button data-tier="2">N2</button></div>
+      <div class="seg" role="group" aria-label="Rōmaji"><button data-romaji="on">Rōmaji on</button><button data-romaji="off" aria-pressed="true">Off</button></div>
+      <div class="seg" role="group" aria-label="English hint"><button data-english="on">English hint</button><button data-english="off" aria-pressed="true">Off</button></div>
       <div class="seg" role="group" aria-label="Which particles"><button data-set="all" aria-pressed="true">All</button><button data-set="wa-ga">は・が</button><button data-set="o">を</button><button data-set="ni-de">に・で</button><button data-set="place">へ・から・まで</button><button data-set="to-mo">と・も</button></div>
     </div>
   </div>
@@ -138,8 +143,10 @@ footer{max-width:1000px;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);
 <script src="../assets/common.js"></script>
 <script>
 const esc=jpEsc;
+const KSET=new Set(__KANJI_SET__);
+const linkK=html=>html.split(/(<rt>.*?<\/rt>)/).map(p=>p.startsWith("<rt>")?p:p.replace(/[\u4e00-\u9fff]/g,c=>KSET.has(c)?`<a class="kl" href="../kanji/master-kanji-shapes.html?from=dr#k-${encodeURIComponent(c)}" title="Open ${c} in the kanji deck">${c}</a>`:c)).join("");
 const SET={all:["は","が","を","に","で","へ","と","も","から","まで"],"wa-ga":["は","が"],o:["を"],"ni-de":["に","で"],place:["へ","から","まで"],"to-mo":["と","も"]};
-let state={tier:"4",set:"all"};
+let state={tier:"4",set:"all",romaji:"off",english:"off"};
 try{Object.assign(state,JSON.parse(localStorage.getItem("drill")||"{}"));}catch(e){}
 const save=()=>{try{localStorage.setItem("drill",JSON.stringify(state));}catch(e){}};
 let stats={seen:0,right:0,streak:0,best:0}, queue=[], cur=null, answered=false;
@@ -165,28 +172,35 @@ function render(){
   if(!cur) cur=queue.shift()||pickQuestion();
   if(!cur){ document.getElementById("main").innerHTML=`<div class="card"><p class="big">No sentences with those particles at this level.</p><p class="hint">Try another set, or a higher level.</p></div>`; return; }
   const {s,answer,nth}=cur;
-  const S=jpSentence(s);
+  const S=jpSentence(s,linkK);
   document.getElementById("main").innerHTML=`<div class="card">
     <p class="qjp" id="qjp">${S.jp}</p>
+    ${state.romaji==="on"?`<p class="rj" id="qrj">${S.rom}</p>`:""}
+    ${state.english==="on"?`<p class="qen">${esc(s.en)}</p>`:""}
     <div class="opts" id="opts">${options(answer).map(o=>`<button type="button" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div>
     <div id="after"></div>
   </div>`;
-  const pts=document.querySelectorAll("#qjp .pt");
-  const blank=pts[nth];
-  if(blank){ blank.dataset.answer=answer; blank.outerHTML=`<span class="blank" id="blank">？</span>`; }
+  const blank=document.querySelectorAll("#qjp .pt")[nth];
+  if(blank) blank.outerHTML=`<span class="blank" id="blank">？</span>`;
+  const rblank=document.querySelectorAll("#qrj .pt")[nth];      // hide it in the rōmaji line too
+  if(rblank) rblank.outerHTML=`<span class="blank">？</span>`;
+  linkKanaWords(document.querySelectorAll("#qjp"),KANA_WORDS,"../kana/","dr");
   document.getElementById("opts").onclick=e=>{ const b=e.target.closest("[data-o]"); if(!b||answered) return; check(b.dataset.o); };
   drawScore();
 }
-function check(choice){
+function check(choice,again){
   answered=true;
-  const {s,answer,role}=cur, S=jpSentence(s);
+  const {s,answer,role}=cur, S=jpSentence(s,linkK);
   document.querySelectorAll("#opts button").forEach(b=>{ b.disabled=true;
     if(b.dataset.o===answer) b.classList.add("right");
-    else if(b.dataset.o===choice) b.classList.add("wrong"); });
+    else if(choice&&b.dataset.o===choice) b.classList.add("wrong"); });
   const el=document.getElementById("blank"); if(el){ el.textContent=answer; el.classList.add("done"); }
-  stats.seen++;
-  if(choice===answer){ stats.right++; stats.streak++; stats.best=Math.max(stats.best,stats.streak); }
-  else { stats.streak=0; queue.push(cur); }
+  if(!again){
+    stats.seen++;
+    if(choice===answer){ stats.right++; stats.streak++; stats.best=Math.max(stats.best,stats.streak); }
+    else { stats.streak=0; queue.push(cur); }
+  }
+  document.querySelectorAll("#qrj .blank").forEach(el=>{ el.textContent=jpRomajiToken(jpKanaOf(answer)); el.classList.add("done"); });
   const slot={W:"who or topic",T:"time",P:"place",O:"what",H:"how or with",V:"verb",Q:"question"}[role]||"";
   document.getElementById("after").innerHTML=`<div class="after">
     <p class="qjp" style="font-size:1.35rem">${S.jp}${sayBtn(S.say)}</p>
@@ -202,12 +216,17 @@ function nextQ(){ answered=false; cur=null; render(); }
 function drawScore(){
   document.getElementById("score").innerHTML=`<span><b>${stats.right}</b> / ${stats.seen} right</span><span>streak <b>${stats.streak}</b></span><span>best <b>${stats.best}</b></span>`;
 }
+document.querySelectorAll("[data-romaji],[data-english]").forEach(b=>b.onclick=()=>{
+  const k=b.dataset.romaji?"romaji":"english"; state[k]=b.dataset[k]; save();
+  document.querySelectorAll(`[data-${k}]`).forEach(x=>x.setAttribute("aria-pressed",x.dataset[k]===state[k]));
+  const keep=cur, was=answered; cur=keep; render(); if(was) check(null,true); });
 document.querySelectorAll("[data-tier],[data-set]").forEach(b=>b.onclick=()=>{
   const k=b.dataset.tier?"tier":"set"; state[k]=b.dataset[k]; save();
   document.querySelectorAll(`[data-${k}]`).forEach(x=>x.setAttribute("aria-pressed",x.dataset[k]===state[k]));
   queue=[]; nextQ(); });
 document.querySelectorAll("[data-tier]").forEach(x=>x.setAttribute("aria-pressed",x.dataset.tier===state.tier));
 document.querySelectorAll("[data-set]").forEach(x=>x.setAttribute("aria-pressed",x.dataset.set===state.set));
+["romaji","english"].forEach(k=>document.querySelectorAll(`[data-${k}]`).forEach(x=>x.setAttribute("aria-pressed",x.dataset[k]===state[k])));
 document.addEventListener("keydown",e=>{ if(/^[1-4]$/.test(e.key)){ const b=document.querySelectorAll("#opts button")[+e.key-1]; if(b&&!answered) b.click(); }
   else if(e.key===" "&&answered){ e.preventDefault(); nextQ(); } });
 const KANA_WORDS=__KANA_WORDS__;
