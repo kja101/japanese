@@ -144,7 +144,8 @@ const KANA_WORDS=__KANA_WORDS__;
 let state={tier:"4",rate:"0.85",auto:"on"};
 try{Object.assign(state,JSON.parse(localStorage.getItem("listening")||"{}"));}catch(e){}
 const save=()=>{try{localStorage.setItem("listening",JSON.stringify(state));}catch(e){}};
-let stats={heard:0,got:0}, queue=[], cur=null, shown=false;
+let stats={heard:0,got:0}, queue=[], cur=null, shown=false, touched=false;
+document.addEventListener("click",()=>{ touched=true; },{once:true});
 function refill(){
   queue=JP_SENTENCES.filter(s=>s.lv>=+state.tier).sort(()=>Math.random()-0.5).slice(0,200);
 }
@@ -163,7 +164,7 @@ function render(){
                <a href="sentence-builder.html?from=li#${cur.sec}">See it in the builder →</a>`
              :`<button type="button" class="primary" id="reveal">Reveal</button>`}
     </div></div>`;
-  document.getElementById("play").onclick=say;
+  document.getElementById("play").onclick=()=>{ touched=true; say(); };
   document.getElementById("slow").onclick=()=>speak(S.say,0.55);
   if(shown){
     document.getElementById("got").onclick=()=>{ stats.heard++; stats.got++; next(true); };
@@ -171,7 +172,7 @@ function render(){
     linkKanaWords(document.querySelectorAll(".qjp"),KANA_WORDS,"../kana/","li");
   } else {
     document.getElementById("reveal").onclick=()=>{ shown=true; render(); };
-    if(state.auto==="on") setTimeout(say,250);
+    if(state.auto==="on"&&touched) setTimeout(say,250);   // never before you have tapped once: iOS blocks it and can leave the voice stuck
   }
   drawScore();
 }
