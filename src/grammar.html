@@ -115,6 +115,8 @@ tr.detail td{background:var(--chip)}
   td.c-en{font-size:1rem}
   td.c-en .lvb{display:inline-block;margin-left:.4rem}
 }
+span.att{display:block;font-size:.78rem;color:var(--muted);margin:.15rem 0 0}
+h2.part .jp{font-family:var(--jp);margin-right:.5rem}
 </style>
 </head>
 <body class="jb-page">
@@ -128,7 +130,7 @@ tr.detail td{background:var(--chip)}
     <div class="segs">
       <div class="seg" role="group" aria-label="Level, including easier levels"><span class="seglab">Level</span><button data-tier="5" aria-pressed="false">N5</button><button data-tier="4" aria-pressed="true">N4</button><button data-tier="3" aria-pressed="false">N3</button><button data-tier="2" aria-pressed="false">N2</button></div>
       <div class="seg" role="group" aria-label="Grammar blocks"><button data-jb="on" aria-pressed="true">Grammar blocks</button><button data-jb="off" aria-pressed="false">Off</button></div>
-      <div class="seg" role="group" aria-label="View"><button data-view="table" aria-pressed="true">Table</button><button data-view="cards" aria-pressed="false">Full cards</button></div>
+      <div class="seg" role="group" aria-label="View"><button data-view="table" aria-pressed="true">By topic</button><button data-view="att" aria-pressed="false">By what goes before</button><button data-view="end" aria-pressed="false">By ending</button><button data-view="cards" aria-pressed="false">Full cards</button></div>
       <div class="seg" role="group" aria-label="Romaji"><button data-romaji="on" aria-pressed="true">Romaji on</button><button data-romaji="off" aria-pressed="false">Off</button></div>
       <div class="seg" role="group" aria-label="Test yourself"><button data-hide="none" aria-pressed="true">Show all</button><button data-hide="en" aria-pressed="false">Hide English</button><button data-hide="kana" aria-pressed="false">Hide Japanese</button></div>
     </div>
@@ -142,6 +144,7 @@ tr.detail td{background:var(--chip)}
 <script src="../assets/common.js"></script>
 <script>
 const D = __DATA__;
+const ATT=__ATT__, END=__END__;   // what each pattern attaches to, and how it ends
 const KSET=new Set(__KANJI_SET__);
 const KANA_WORDS=__KANA_WORDS__;
 const esc=jpEsc;
@@ -158,22 +161,28 @@ function rowHtml(g){
   const e=g.ex[0];
   return `<tr class="grow" id="p-${g.id}" data-s="${s}">
     <td class="c-en">${esc(g.mean)}<span class="lvb">N${g.l}</span></td>
-    <td class="c-pat"><span class="gp">${ruby(g.pat)}</span><span class="r">${esc(romLine(g.pat.replace(/[～〜]/g,"")))}</span></td>
+    <td class="c-pat"><span class="gp">${ruby(g.pat)}</span><span class="r">${esc(romLine(g.pat.replace(/[～〜]/g,"")))}</span>
+      <span class="att">${esc(ATT[g.att][0])}</span></td>
     <td class="c-ex">${e?`<span class="j">${jpBlocksLine(e.n,linkK,e.roles)}</span>${sayBtn(plainOf(e.n).replace(/ /g,""))}
       <span class="r">${jpBlocksRom(e.n,e.roles)}</span><span class="t">${jpEnHtml(e)}</span>`:""}
       <a class="more" href="#p-${g.id}" data-more="${g.id}">how to form it →</a></td></tr>`;
 }
 function render(){
-  const t=+state.tier, groups=[...new Set(D.map(g=>g.group))];
+  const t=+state.tier;
   D.sort((a,b)=>b.l-a.l);
   let h="";
-  groups.forEach(gr=>{ const list=D.filter(g=>g.group===gr&&g.l>=t); if(!list.length) return;
-    const id="g-"+gr.replace(/\W+/g,"-");
-    if(state.view==="table"){
-      h+=`<section class="grp" id="${id}"><h2 class="part">${esc(gr)}</h2>
+  // three ways to group the same patterns: by topic, by what they attach to, or by how they end
+  const by=state.view==="att"?"att":state.view==="end"?"end":"group";
+  const names=state.view==="att"?ATT:state.view==="end"?END:null;
+  const order=names?[...Object.keys(names)]:[...new Set(D.map(g=>g.group))];
+  order.forEach(gr=>{ const list=D.filter(g=>g[by]===gr&&g.l>=t); if(!list.length) return;
+    const title=names?`<span class="jp">${esc(names[gr][1])}</span>${esc(names[gr][0])}`:esc(gr);
+    const id="g-"+String(gr).replace(/\W+/g,"-");
+    if(state.view!=="cards"){
+      h+=`<section class="grp" id="${id}"><h2 class="part">${title}</h2>
         <table class="gt"><thead><tr><th>Means</th><th>Pattern</th><th>Example</th></tr></thead><tbody>${list.map(rowHtml).join("")}</tbody></table></section>`;
     } else {
-      h+=`<section class="grp" id="${id}"><h2 class="part">${esc(gr)}</h2>${list.map(g=>`<article class="gc" id="p-${g.id}" data-s="${esc((g.pat+" "+g.mean+" "+g.form+" "+g.ex.map(e=>e.en+" "+plainOf(e.n)+" "+kanaOf(e.n)).join(" ")).toLowerCase())}">
+      h+=`<section class="grp" id="${id}"><h2 class="part">${title}</h2>${list.map(g=>`<article class="gc" id="p-${g.id}" data-s="${esc((g.pat+" "+g.mean+" "+g.form+" "+g.ex.map(e=>e.en+" "+plainOf(e.n)+" "+kanaOf(e.n)).join(" ")).toLowerCase())}">
       <div class="gh"><span class="gp">${ruby(g.pat)}</span><span class="gm">${esc(g.mean)}</span><span class="lvb">N${g.l}</span></div>
       <p class="gf"><b>HOW TO FORM IT</b><span class="j">${ruby(g.form)}</span></p>
       ${g.note?`<p class="gn">${ruby(g.note)}</p>`:""}
@@ -181,7 +190,8 @@ function render(){
     }
   });
   document.getElementById("main").innerHTML=h+`<div class="noresult" id="noresult">Nothing matches that.</div>`;
-  document.getElementById("nav").innerHTML=groups.filter(gr=>document.getElementById("g-"+gr.replace(/\W+/g,"-"))).map(gr=>`<a href="#g-${gr.replace(/\W+/g,"-")}">${esc(gr)}</a>`).join("");
+  document.getElementById("nav").innerHTML=order.filter(gr=>document.getElementById("g-"+String(gr).replace(/\W+/g,"-")))
+    .map(gr=>`<a href="#g-${String(gr).replace(/\W+/g,"-")}">${names?esc(names[gr][0]):esc(gr)}</a>`).join("");
   apply(); doSearch();
   linkKanaWords(document.querySelectorAll(".gx .j"),KANA_WORDS,"../kana/","gr");
 }

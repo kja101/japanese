@@ -712,14 +712,46 @@ write("kana/katakana-words.html", fill("kana-words.html", DATA=dump(kana_words("
       TITLE="Katakana words: loanwords by topic", H1="カタカナの言葉", STORE="katakana-words", FROM="kt",
       INTRO="353 loanwords from N5 to N2, grouped by topic, from コーヒー to パスポート. Red notes flag the ones that don't mean what English speakers expect (マンション, コンセント, スマート) and the ones borrowed from other languages (パン, アルバイト). Each has a real example sentence where there is one. For words written in hiragana, see <a href=\"kana-words.html\">kana words</a>."))
 # ---------------------------------------------------------------- grammar
+ATTACH_RULES = [   # what does this pattern attach to? read off the "how to form it" line
+    ("te",    r"て-form|で-form"),
+    ("stem",  r"[Vv]erb stem|ます-stem|Adjective stem"),
+    ("nai",   r"ない-form|ない form"),
+    ("ta",    r"た-form"),
+    ("plain", r"[Pp]lain form|Dictionary form|辞書"),
+    ("noun",  r"^Noun|noun \+|Thing \+|Reason \+|Sentence \+"),
+    ("adj",   r"い-adjective|な-adjective|Adjective"),
+]
+ATTACH_NAMES = {"te": ("て-form + …", "て"), "stem": ("ます-stem + …", "ます"), "nai": ("ない-form + …", "ない"),
+                "ta": ("た-form + …", "た"), "plain": ("plain form + …", "辞書"), "noun": ("a noun + …", "名詞"),
+                "adj": ("an adjective + …", "形容"), "other": ("everything else", "他")}
+ENDING_RULES = [   # and what do you attach after it? this is what decides how the whole sentence ends
+    ("join", r"(から|ので|のに|とき|たら|ば|ても|し|が|なら|ながら|うちに|たびに|ように|ずに|かどうか|ついでに|ものの|くせに|からには|まま|と|ために|おかげで|せいで|前\{まえ\}に|後\{あと\}で|とおりに|につれて|によって|に対\{たい\}して|に関\{かん\}して|にとって|に比\{くら\}べて|に基\{もと\}づいて|にもかかわらず|どころか|ばかりか|上\{うえ\}で)$"),
+    ("iadj", r"(たい|ほしい|やすい|にくい|ない|らしい|っぽい|がたい|いい|よい|多\{おお\}い)$"),
+    ("noun", r"(つもり|はず|ところ|ばかり|ため|よう|そう|みたい|わけ|限\{かぎ\}り|一方\{いっぽう\}|次第\{しだい\}| こと|もの|です|だ)$"),
+    ("verb", r"(ください|ませんか|なさい|る|う|く|ぐ|す|つ|ぬ|ぶ|む|ます|ません|ましょう|できる|なる|する|ある|いる|しまう|おく|みる|くれる|もらう|あげる)$"),
+]
+ENDING_NAMES = {"verb": ("ends in a verb → ます, ました, ません", "動詞"),
+                "iadj": ("ends in an い-adjective → です, かった, くない", "形容"),
+                "noun": ("ends in a noun or な-adjective → です, でした", "名詞"),
+                "join": ("joins two clauses, the ending comes later", "接続"),
+                "other": ("everything else", "他")}
+
+def classify(form, pat):
+    att = next((k for k, r in ATTACH_RULES if re.search(r, form)), "other")
+    tail = re.sub(r"\([^)]*\)|[A-Za-z]+|[～〜\s]", "", pat.split("/")[0]).strip()
+    end = next((k for k, r in ENDING_RULES if re.search(r, tail)), "other")
+    return att, end
+
 _grammar = load("grammar.json")
 for _g in _grammar:
     _g["ex"] = [mark(e) for e in _g["ex"]]
+    _g["att"], _g["end"] = classify(_g["form"], _g["pat"])
 write("words/weakness.html", fill("weakness.html", DATA=dump({"K": {k: {"m": x["m"], "l": x["l"]} for k, x in kanji["K"].items()}, "VOC": [[v["w"], v["r"], v["en"], v["l"]] for v in _voc]})))
 write("words/drill.html", fill("drill.html", KANA_WORDS=KANA_WORDS, KANJI_SET=KANJI_SET))
 write("words/listening.html", fill("listening.html", KANA_WORDS=KANA_WORDS))
 write("words/patterns.html", fill("patterns.html", DATA=dump(_patterns), PMAP=dump(_pmap), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
-write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS))
+write("words/grammar.html", fill("grammar.html", DATA=dump(_grammar), KANJI_SET=KANJI_SET, KANA_WORDS=KANA_WORDS,
+      ATT=dump({k: list(v) for k, v in ATTACH_NAMES.items()}), END=dump({k: list(v) for k, v in ENDING_NAMES.items()})))
 
 # ---------------------------------------------------------------- offline support
 import hashlib
