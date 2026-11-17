@@ -209,21 +209,33 @@ const pbtn=(t,r)=>`<button type="button" class="pt" data-p="${esc(t)}" data-role
 function tokHtml(x,mode,word){
   if(x.t==="___") return word?`<span class="slot filled">${word.split(" ").map(w=>linkK(form(w,mode))).join(" ")}</span>`:`<span class="slot">&nbsp;</span>`;
   if(x.p) return pbtn(x.t.replace(/[、。]$/,""),x.r)+(/[、。]$/.test(x.t)?x.t.slice(-1):"");
-  // split a trailing か off ですか / ますか / ませんか
-  const m=x.r==="V"&&x.t.match(/^(.*[すんた])か$/);
-  if(m&&x.t.length>2) return `<span class="ck" data-r="V" style="--c:var(--rV)">${linkK(form(m[1],mode))}</span><span class="ck" data-r="Q" style="--c:var(--rQ)">${pbtn("か","Q")}</span>`;
   return linkK(form(x.t,mode));
 }
 function tokRom(x,word){
   if(x.t==="___") return word?`<span class="slot filled">${esc(kanaOf(word).split(" ").map(romajiToken).join(" "))}</span>`:`<span class="slot">&nbsp;</span>`;
   const r=romajiToken(kanaOf(x.t));
   if(x.p) return `<button type="button" class="pt pr" data-p="${esc(x.t.replace(/[、。]$/,""))}" data-role="${x.r}">${esc(r.replace(/,\s*$/,""))}</button>${/、$/.test(x.t)?",":""}`;
-  const m=r.match(/^(.*) ka$/); if(m&&x.r==="V") return `<span class="ck" data-r="V" style="--c:var(--rV)">${esc(m[1])}</span> <span class="ck" data-r="Q" style="--c:var(--rQ)"><button type="button" class="pt pr" data-p="か" data-role="Q">ka</button></span>`;
   return esc(r);
 }
 const wrapR=(r,inner)=>`<span class="ck" data-r="${r}" style="--c:var(${ROLE[r]})">${inner}</span>`;
-function tokenLine(ph,word,mode,roles){ return jpRolesWith(ph,roles).map(x=>wrapR(x.r,tokHtml(x,mode,word))).join(" "); }
-function tokenRom(ph,word,roles){ return jpRolesWith(ph,roles).map(x=>wrapR(x.r,tokRom(x,word))).join(" ").replace(/ ,/g,","); }
+// the sentence-final か gets its own QUESTION block, so the English "?" has something to match
+const kaBtn=`<span class="ck" data-r="Q" style="--c:var(--rQ)">${pbtn("か","Q")}</span>`;
+const kaRom=`<span class="ck" data-r="Q" style="--c:var(--rQ)"><button type="button" class="pt pr" data-p="か" data-role="Q">ka</button></span>`;
+function tokenLine(ph,word,mode,roles){
+  return jpRolesWith(ph,roles).map((x,i,A)=>{
+    const ka=jpFinalKa(x.t,i===A.length-1);
+    if(ka==="") return kaBtn;
+    if(ka!==null) return wrapR(x.r,linkK(form(ka,mode)))+kaBtn;
+    return wrapR(x.r,tokHtml(x,mode,word)); }).join(" ");
+}
+function tokenRom(ph,word,roles){
+  return jpRolesWith(ph,roles).map((x,i,A)=>{
+    const ka=jpFinalKa(x.t,i===A.length-1);
+    if(ka==="") return kaRom;
+    if(ka!==null){ const m=romajiToken(kanaOf(x.t)).match(/^(.*) ?ka$/);
+      if(m) return wrapR(x.r,esc(m[1].trim()))+" "+kaRom; }
+    return wrapR(x.r,tokRom(x,word)); }).join(" ").replace(/ ,/g,",");
+}
 
 // ---------- state ----------
 let state={view:"all",script:"ruby",romaji:"on",blocks:"on",hide:"none"};

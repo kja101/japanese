@@ -4,7 +4,7 @@
   {
    "role": "W",
    "label": "WHO / TOPIC",
-   "jp": "は・が・も",
+   "jp": "は・が・も・に",
    "markers": [
     {
      "p": "は",
@@ -100,6 +100,35 @@
       ]
      },
      "frame": "mo"
+    },
+    {
+     "p": "に",
+     "gloss": "the person on the receiving end of giving, telling or phoning",
+     "ex": {
+      "n": "母{はは} に 電話{でんわ}します",
+      "en": "I phone my mother",
+      "jr": [
+       [
+        "W",
+        "母に"
+       ],
+       [
+        "V",
+        "電話します"
+       ]
+      ],
+      "er": [
+       [
+        "V",
+        "I phone"
+       ],
+       [
+        "W",
+        "my mother"
+       ]
+      ]
+     },
+     "frame": "to-someone"
     }
    ]
   },
@@ -446,7 +475,7 @@
   {
    "role": "H",
    "label": "HOW / WITH",
-   "jp": "で・と・に",
+   "jp": "で・と",
    "markers": [
     {
      "p": "で",
@@ -505,35 +534,6 @@
       ]
      },
      "frame": "with-to"
-    },
-    {
-     "p": "に",
-     "gloss": "the person on the receiving end of giving, telling or phoning",
-     "ex": {
-      "n": "母{はは} に 電話{でんわ}します",
-      "en": "I phone my mother",
-      "jr": [
-       [
-        "W",
-        "母に"
-       ],
-       [
-        "V",
-        "電話します"
-       ]
-      ],
-      "er": [
-       [
-        "V",
-        "I phone"
-       ],
-       [
-        "W",
-        "my mother"
-       ]
-      ]
-     },
-     "frame": "to-someone"
     }
    ]
   },
@@ -690,7 +690,7 @@
      "gloss": "telling the listener something they don't know yet",
      "ex": {
       "n": "電車{でんしゃ} が 来{き}ました よ",
-      "en": "The train's here",
+      "en": "The train's here, you know",
       "jr": [
        [
         "W",
@@ -713,6 +713,10 @@
        [
         "V",
         "'s here"
+       ],
+       [
+        "Q",
+        "you know"
        ]
       ]
      },

@@ -204,6 +204,10 @@ def token_roles(n, jr):
         bounds.append((pos, pos + len(t), r)); pos += len(t)
     out, pos = [], 0
     for p in plains:
+        inside = {r for a, z, r in bounds if a < pos + len(p) and z > pos}
+        if len(inside) > 1:                       # a token can only carry one colour
+            raise SystemExit("a block boundary falls inside a token (add a space):\n"
+                             f"  {' '.join(plains)}\n  token {p!r} spans {sorted(inside)}")
         out.append(next((r for a, z, r in bounds if a <= pos < z), "V")); pos += len(p)
     return out
 
@@ -238,13 +242,30 @@ def english_blocks(en, er):
             segs.append([r, ch])
     return segs
 
+QUESTION_KA = re.compile(r"^.*[すんたう]か$")
+
+def asks(n):
+    """Does this sentence end in the question particle か? That か is coloured as the
+    QUESTION block when the line is drawn, so the English '?' has to match it. This has
+    to agree exactly with jpFinalKa() in common.js, which decides the Japanese side."""
+    toks = (n or "").split(" ")
+    t = NOTE_RE.sub(r"\1", toks[-1]).rstrip("。、？?！!") if toks else ""
+    return t == "か" or (len(t) > 2 and bool(QUESTION_KA.match(t)))
+
 def mark(s):
     """Add token roles and coloured English to a sentence that has hand-marked blocks."""
     s = dict(s)
     if s.get("jr") and s.get("n"):
         s["roles"] = token_roles(s["n"], s["jr"])
     if s.get("er"):
-        s["enb"] = english_blocks(s["en"], s["er"])
+        er = list(s["er"])
+        if asks(s.get("n")) and "?" in s["en"] and not any(r == "Q" for r, _ in er):
+            for k in range(len(er) - 1, -1, -1):      # free the ? from whatever block swallowed it
+                if er[k][1].rstrip().endswith("?"):
+                    er[k] = [er[k][0], er[k][1].rstrip()[:-1].rstrip()]
+                    break
+            er.append(["Q", "?"])          # か is the question block on both sides
+        s["enb"] = english_blocks(s["en"], er)
     s.pop("jr", None); s.pop("er", None)
     return s
 
@@ -562,10 +583,10 @@ def kanji_sentences(limit=3):
     for r, text in sentence_records(include_phrases=False, include_grammar=True):
         ks = [c for c in text if "\u4e00" <= c <= "\u9fff"]
         lvl = min([LV.get(c, 1) for c in ks] or [5])
-        for c in set(ks):
+        for c in sorted(set(ks)):                  # sorted: the same build twice gives the same file
             if c in LV:
                 out.setdefault(c, []).append((lvl, len(text), r))
-    return {k: [dict(r, lv=lvl) for lvl, _, r in sorted(v, key=lambda x: (-x[0], x[1]))[:limit]] for k, v in out.items()}
+    return {k: [dict(r, lv=lvl) for lvl, _, r in sorted(v, key=lambda x: (-x[0], x[1]))[:limit]] for k, v in sorted(out.items())}
 
 write("kanji/master-kanji-shapes.html",
       fill("master.html", KANA_WORDS=KANA_WORDS, DATA=dump({"K": kanji["K"], "CH": kanji["CH"], "LV": kanji["LV"], "W": words, "P": kanji["P"], "S": kanji_sentences()})))
@@ -581,7 +602,9 @@ for sb_topic, sents in SB.items():
 for topic, sents in EXTRA.items():
     if topic not in tix:          # sentence-builder-only topics (dating) have no kanji chapter here
         continue
-    tix[topic]["sents"] += [{"n": s["n"], "en": s["en"], "why": s["why"]} for s in sents]
+    tix[topic]["sents"] += [dict({"n": s["n"], "en": s["en"], "why": s["why"]},
+                                 **{k: v for k, v in mark(s).items() if k in ("roles", "enb")})
+                            for s in sents]
 K = {r["k"]: r for t in topics for g in t["groups"] for r in g["rows"]}
 W = {k: words_for(k) for k in K if words_for(k)}
 write("kanji/kanji-by-situation.html",

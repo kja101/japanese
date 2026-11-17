@@ -905,11 +905,11 @@
    "note": "a drinking glass"
   },
   {
-   "w": "グランド",
-   "en": "gland, grand, ground",
+   "w": "グラウンド",
+   "en": "sports ground",
    "l": 3,
    "g": "fun",
-   "note": "a sports ground"
+   "note": "the older word lists write it グランド"
   },
   {
    "w": "クリーム",
@@ -1577,11 +1577,11 @@
    "g": "measure"
   },
   {
-   "w": "タイア",
-   "en": "tire, tyre",
+   "w": "タイヤ",
+   "en": "tyre",
    "l": 2,
    "g": "travel",
-   "note": "a tyre"
+   "note": "the older word lists write it タイア"
   },
   {
    "w": "ダイヤグラム",
@@ -1821,10 +1821,11 @@
    "g": "clothes"
   },
   {
-   "w": "レクリェーション",
+   "w": "レクリエーション",
    "en": "recreation",
    "l": 2,
-   "g": "fun"
+   "g": "fun",
+   "note": "the older word lists write it レクリェーション"
   },
   {
    "w": "レジャー",

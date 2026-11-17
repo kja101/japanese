@@ -59,6 +59,22 @@ python3 build/build.py
 ```
 
 Then commit both the source change and the rebuilt pages, because GitHub Pages serves the built files.
+The same data built twice gives the same files, so a diff only ever shows what actually changed.
+
+### Checking the colour blocks
+
+A sentence is well marked when the Japanese line and the English line carry the same set of
+block colours. `build.py` refuses to build if the marks don't add up; these check the rest:
+
+```sh
+python3 build/audit.py        # the Japanese and English blocks match, in the data
+python3 build/straddle.py     # no token straddles two blocks (usually a missing space after 、)
+python3 build/audit2.py       # every marked English phrase is really in the English, and nothing is left uncoloured
+python3 build/dump.py n2 0 50 # read the sentences themselves, blocks and all
+
+python3 -m http.server 8765 &     # and the same check on the pages as drawn
+node build/check_rendered.js
+```
 
 ### Where to edit what
 

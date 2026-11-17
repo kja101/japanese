@@ -504,6 +504,16 @@ function jpRolesFor(toks){
   return out.map(x=>x.t==="の"?{...x,p:true}:x);
 }
 
+// The sentence-final か is the QUESTION block. けんか in the middle of a sentence is not,
+// and neither is a か that something else follows — so only the last token can split.
+// Returns null for no split, "" when the token is か on its own, else the part before か.
+function jpFinalKa(t,last){
+  if(!last) return null;
+  const bare=String(t).replace(/[、。]$/,"");
+  if(bare==="か") return "";
+  const m=bare.length>2&&bare.match(/^(.*[すんたう])か$/);   // ですか・ませんか・ましたか・ましょうか
+  return m?m[1]:null;
+}
 const jpPbtn=(t,r,cls="")=>`<button type="button" class="pt${cls}" data-p="${jpEsc(t)}" data-role="${r||""}">${jpEsc(t)}</button>`;
 const jpWrap=(r,inner)=>`<span class="ck" data-r="${r}" style="--c:var(${JP_ROLE[r]})">${inner}</span>`;
 // a sentence written as space-separated tokens with 漢字{かんじ} readings
@@ -511,16 +521,20 @@ function jpRolesWith(n,roles){ const R=jpRolesFor(n.split(" ")); if(roles) R.for
 function jpBlocksLine(n,link,roles){
   const L=link||(h=>h);
   const ruby=t=>{ let o="",last=0; t.replace(JP_NOTE,(m,b,r,off)=>{ o+=jpEsc(t.slice(last,off))+rdRuby(b,r); last=off+m.length; return m; }); return L(o+jpEsc(t.slice(last))); };
-  return jpRolesWith(n,roles).map(x=>{
+  return jpRolesWith(n,roles).map((x,i,A)=>{
+    const ka=jpFinalKa(x.t,i===A.length-1);
+    if(ka==="") return jpWrap("Q",jpPbtn("か","Q"));
+    if(ka!==null) return jpWrap(x.r,ruby(ka))+jpWrap("Q",jpPbtn("か","Q"));
     if(x.p) return jpWrap(x.r,jpPbtn(x.t.replace(/[、。]$/,""),x.r)+(/[、。]$/.test(x.t)?x.t.slice(-1):""));
-    const m=x.r==="V"&&x.t.length>2&&x.t.match(/^(.*[すんた])か$/);
-    if(m) return jpWrap("V",ruby(m[1]))+jpWrap("Q",jpPbtn("か","Q"));
     return jpWrap(x.r,ruby(x.t)); }).join(" ");
 }
 function jpBlocksRom(n,roles){
-  return jpRolesWith(n,roles).map(x=>{ const r=jpRomajiToken(jpKanaOf(x.t));
+  return jpRolesWith(n,roles).map((x,i,A)=>{ const r=jpRomajiToken(jpKanaOf(x.t));
+    const kaRom='<button type="button" class="pt pr" data-p="か" data-role="Q">ka</button>';
+    const ka=jpFinalKa(x.t,i===A.length-1);
+    if(ka==="") return jpWrap("Q",kaRom);
+    if(ka!==null){ const m=r.match(/^(.*) ?ka$/); if(m) return jpWrap(x.r,jpEsc(m[1].trim()))+" "+jpWrap("Q",kaRom); }
     if(x.p) return jpWrap(x.r,jpPbtn(x.t.replace(/[、。]$/,""),x.r," pr").replace(/>[^<]*<\/button>/,">"+jpEsc(r.replace(/,\s*$/,""))+"</button>")+(/、$/.test(x.t)?",":""));
-    const m=x.r==="V"&&r.match(/^(.*) ka$/); if(m) return jpWrap("V",jpEsc(m[1]))+" "+jpWrap("Q",'<button type="button" class="pt pr" data-p="か" data-role="Q">ka</button>');
     return jpWrap(x.r,jpEsc(r)); }).join(" ").replace(/ ,/g,",");
 }
 // a sentence-builder sentence: chunks with their roles

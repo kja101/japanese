@@ -695,7 +695,11 @@
    ],
    [
     "V",
-    "上手ですね"
+    "上手です"
+   ],
+   [
+    "Q",
+    "ね"
    ]
   ],
   "er": [
@@ -706,6 +710,10 @@
    [
     "V",
     "are good"
+   ],
+   [
+    "Q",
+    "aren't they"
    ]
   ]
  },
@@ -3578,7 +3586,7 @@
   "id": "L3-117",
   "topic": "t7",
   "n": "事務所{じむしょ} は 三階{さんがい} に あります",
-  "en": "The office is on the second floor",
+  "en": "The office is on the third floor",
   "why": "",
   "jr": [
    [
@@ -3605,7 +3613,7 @@
    ],
    [
     "P",
-    "on the second floor"
+    "on the third floor"
    ]
   ]
  },
@@ -4034,16 +4042,16 @@
  {
   "id": "L3-132",
   "topic": "t7",
-  "n": "先生{せんせい} は 教師{きょうし} を 三十年{さんじゅうねん} して います",
-  "en": "The teacher has been teaching for thirty years",
+  "n": "父{ちち} は 教師{きょうし} を 三十年{さんじゅうねん} して います",
+  "en": "My father has been a teacher for thirty years",
   "why": "",
   "jr": [
    [
     "W",
-    "先生は"
+    "父は"
    ],
    [
-    "V",
+    "O",
     "教師を"
    ],
    [
@@ -4058,11 +4066,15 @@
   "er": [
    [
     "W",
-    "The teacher"
+    "My father"
    ],
    [
     "V",
-    "has been teaching"
+    "has been"
+   ],
+   [
+    "O",
+    "a teacher"
    ],
    [
     "T",
@@ -4360,39 +4372,27 @@
  {
   "id": "L3-142",
   "topic": "t6",
-  "n": "私{わたし} は 東京{とうきょう} に 住{す}んで いる 居住者{きょじゅうしゃ} です",
-  "en": "I'm a Tokyo resident",
+  "n": "この 建物{たてもの} の 居住者{きょじゅうしゃ} は 五十人{ごじゅうにん} です",
+  "en": "There are fifty residents in this building",
   "why": "",
   "jr": [
    [
     "W",
-    "私は"
-   ],
-   [
-    "P",
-    "東京に住んでいる"
+    "この建物の居住者は"
    ],
    [
     "V",
-    "居住者です"
+    "五十人です"
    ]
   ],
   "er": [
    [
+    "V",
+    "There are fifty"
+   ],
+   [
     "W",
-    "I"
-   ],
-   [
-    "V",
-    "'m a"
-   ],
-   [
-    "P",
-    "Tokyo"
-   ],
-   [
-    "V",
-    "resident"
+    "residents in this building"
    ]
   ]
  },
@@ -6264,6 +6264,10 @@
   ],
   "er": [
    [
+    "V",
+    "It was"
+   ],
+   [
     "H",
     "the first time"
    ],
@@ -6502,22 +6506,14 @@
     "いつまでも"
    ],
    [
-    "P",
-    "友達で"
-   ],
-   [
     "V",
-    "いましょう"
+    "友達でいましょう"
    ]
   ],
   "er": [
    [
     "V",
-    "Let's be"
-   ],
-   [
-    "P",
-    "friends"
+    "Let's be friends"
    ],
    [
     "T",
@@ -9363,13 +9359,13 @@
  {
   "id": "L3-299",
   "topic": "t9",
-  "n": "グランド で サッカー を しました",
+  "n": "グラウンド で サッカー を しました",
   "en": "We played football on the sports ground",
   "why": "",
   "jr": [
    [
     "P",
-    "グランドで"
+    "グラウンドで"
    ],
    [
     "O",

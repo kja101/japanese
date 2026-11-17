@@ -859,7 +859,7 @@
   "note": "The reason comes first, the opposite of English \"because\".",
   "ex": [
    {
-    "n": "雨{あめ} です から、家{いえ} に います",
+    "n": "雨{あめ} です から、 家{いえ} に います",
     "en": "It's raining, so I'm staying at home",
     "jr": [
      [
@@ -996,7 +996,7 @@
   "note": "A time clause that sits before the main sentence.",
   "ex": [
    {
-    "n": "子供{こども} の とき、ロンドン に 住{す}んで いました",
+    "n": "子供{こども} の とき、 ロンドン に 住{す}んで いました",
     "en": "When I was a child, I lived in London",
     "jr": [
      [
@@ -1157,8 +1157,8 @@
   "note": "Gives a couple of examples from a longer list.",
   "ex": [
    {
-    "n": "週末{しゅうまつ} は 本{ほん} を 読{よ}んだり、映画{えいが} を 見{み}たり します",
-    "en": "At weekends I do things like read and watch films",
+    "n": "週末{しゅうまつ} は 本{ほん} を 読{よ}んだり、 映画{えいが} を 見{み}たり します",
+    "en": "At weekends I do things like read books and watch films",
     "jr": [
      [
       "T",
@@ -1189,6 +1189,10 @@
      [
       "V",
       "I do things like read"
+     ],
+     [
+      "O",
+      "books"
      ],
      [
       "V",
@@ -1392,7 +1396,7 @@
   "note": "The most flexible \"if\": it also means \"when this has happened\".",
   "ex": [
    {
-    "n": "駅{えき} に 着{つ}いたら、電話{でんわ} して ください",
+    "n": "駅{えき} に 着{つ}いたら、 電話{でんわ} して ください",
     "en": "Call me when you get to the station",
     "jr": [
      [
@@ -1470,7 +1474,7 @@
   "note": "For things that always follow: directions, machines, nature.",
   "ex": [
    {
-    "n": "この ボタン を 押{お}す と、ドア が 開{あ}きます",
+    "n": "この ボタン を 押{お}す と、 ドア が 開{あ}きます",
     "en": "Press this button and the door opens",
     "jr": [
      [
@@ -2508,7 +2512,7 @@
   "note": "Shows disappointment that the result didn't follow.",
   "ex": [
    {
-    "n": "約束{やくそく} した のに、彼{かれ} は 来{き}ません でした",
+    "n": "約束{やくそく} した のに、 彼{かれ} は 来{き}ません でした",
     "en": "He didn't come, even though he promised",
     "jr": [
      [
@@ -2586,7 +2590,7 @@
   "note": "Sounds more polite and objective than から, so it's good for excuses.",
   "ex": [
    {
-    "n": "熱{ねつ} が ある ので、今日{きょう} は 休{やす}みます",
+    "n": "熱{ねつ} が ある ので、 今日{きょう} は 休{やす}みます",
     "en": "I have a fever, so I'll take today off",
     "jr": [
      [
@@ -2700,7 +2704,7 @@
   "note": "You've just understood the reason.",
   "ex": [
    {
-    "n": "十年{じゅうねん} も 住{す}んで いた の です か。日本語{にほんご} が 上手{じょうず} な わけ です ね",
+    "n": "十年{じゅうねん} も 住{す}んで いた の です か。 日本語{にほんご} が 上手{じょうず} な わけ です ね",
     "en": "You lived there ten years? No wonder your Japanese is good",
     "jr": [
      [
@@ -3155,7 +3159,7 @@
   "note": "Something you were made to do against your will.",
   "ex": [
    {
-    "n": "子供{こども} の とき、ピアノ を 習{なら}わされました",
+    "n": "子供{こども} の とき、 ピアノ を 習{なら}わされました",
     "en": "As a child I was made to take piano lessons",
     "jr": [
      [
@@ -3257,6 +3261,10 @@
      [
       "O",
       "a photo"
+     ],
+     [
+      "V",
+      "for us"
      ]
     ]
    }
@@ -3379,6 +3387,10 @@
      [
       "O",
       "your bag"
+     ],
+     [
+      "V",
+      "for you"
      ]
     ]
    }
@@ -3768,7 +3780,7 @@
   "note": "Social or moral reasons stop you, not ability.",
   "ex": [
    {
-    "n": "大事{だいじ} な 会議{かいぎ} なので、休{やす}む わけには いきません",
+    "n": "大事{だいじ} な 会議{かいぎ} なので、 休{やす}む わけには いきません",
     "en": "It's an important meeting, so I can't very well take the day off",
     "jr": [
      [
@@ -3803,7 +3815,7 @@
   "note": "Formal.",
   "ex": [
    {
-    "n": "雨{あめ} が ひどい ので、中止{ちゅうし} せざるを 得{え}ません",
+    "n": "雨{あめ} が ひどい ので、 中止{ちゅうし} せざるを 得{え}ません",
     "en": "The rain is so heavy we have no choice but to cancel",
     "jr": [
      [
@@ -3838,7 +3850,7 @@
   "note": "Strong conviction from evidence.",
   "ex": [
    {
-    "n": "電気{でんき} が ついて いる から、家{いえ} に いる に 違{ちが}いない",
+    "n": "電気{でんき} が ついて いる から、 家{いえ} に いる に 違{ちが}いない",
     "en": "The lights are on, so they must be at home",
     "jr": [
      [
@@ -3924,7 +3936,7 @@
   "note": "A warning.",
   "ex": [
    {
-    "n": "そんな に 飲{の}んだら、病気{びょうき} に なり かねません",
+    "n": "そんな に 飲{の}んだら、 病気{びょうき} に なり かねません",
     "en": "Drink like that and you could well get ill",
     "jr": [
      [
@@ -4029,7 +4041,7 @@
   "note": "",
   "ex": [
    {
-    "n": "連絡先{れんらくさき} が 分{わ}からない ので、連絡{れんらく} し ようが ありません",
+    "n": "連絡先{れんらくさき} が 分{わ}からない ので、 連絡{れんらく} し ようが ありません",
     "en": "I don't know their contact details, so there's no way to reach them",
     "jr": [
      [
@@ -4306,7 +4318,7 @@
   "note": "Formal ～のに without the emotion.",
   "ex": [
    {
-    "n": "雨{あめ} にも かかわらず、大勢{おおぜい} の 人{ひと} が 来{き}ました",
+    "n": "雨{あめ} にも かかわらず、 大勢{おおぜい} の 人{ひと} が 来{き}ました",
     "en": "Despite the rain, lots of people came",
     "jr": [
      [
@@ -4392,7 +4404,7 @@
   "note": "Critical of someone else; not for yourself.",
   "ex": [
    {
-    "n": "知{し}って いる くせに、教{おし}えて くれません",
+    "n": "知{し}って いる くせに、 教{おし}えて くれません",
     "en": "He knows, but he won't tell me",
     "jr": [
      [
@@ -4470,7 +4482,7 @@
   "note": "Followed by a duty or a resolve.",
   "ex": [
    {
-    "n": "約束{やくそく} した から には、守{まも}ります",
+    "n": "約束{やくそく} した から には、 守{まも}ります",
     "en": "Now that I've promised, I'll keep it",
     "jr": [
      [
@@ -4540,7 +4552,7 @@
   "note": "",
   "ex": [
    {
-    "n": "準備{じゅんび} が でき 次第{しだい}、出発{しゅっぱつ} します",
+    "n": "準備{じゅんび} が でき 次第{しだい}、 出発{しゅっぱつ} します",
     "en": "We'll set off as soon as we're ready",
     "jr": [
      [
@@ -4575,7 +4587,7 @@
   "note": "Something unexpected happened straight away.",
   "ex": [
    {
-    "n": "立{た}ち上{あ}がった とたん、めまい が しました",
+    "n": "立{た}ち上{あ}がった とたん、 めまい が しました",
     "en": "The moment I stood up, I felt dizzy",
     "jr": [
      [
@@ -4715,7 +4727,7 @@
   "note": "",
   "ex": [
    {
-    "n": "子供{こども} の ころ、よく この 川{かわ} で 遊{あそ}んだ もの です",
+    "n": "子供{こども} の ころ、 よく この 川{かわ} で 遊{あそ}んだ もの です",
     "en": "As a child I often used to play in this river",
     "jr": [
      [
@@ -4825,7 +4837,7 @@
   "note": "The reality is the opposite, or much worse.",
   "ex": [
    {
-    "n": "休{やす}む どころか、寝{ね}る 時間{じかん} も ありません",
+    "n": "休{やす}む どころか、 寝{ね}る 時間{じかん} も ありません",
     "en": "Far from resting, I don't even have time to sleep",
     "jr": [
      [
@@ -4989,7 +5001,7 @@
   "note": "The one condition that's needed.",
   "ex": [
    {
-    "n": "時間{じかん} さえ あれば、旅行{りょこう} に 行{い}けます",
+    "n": "時間{じかん} さえ あれば、 旅行{りょこう} に 行{い}けます",
     "en": "If only I had the time, I could go travelling",
     "jr": [
      [
@@ -5032,7 +5044,7 @@
   "note": "Casual.",
   "ex": [
    {
-    "n": "そんな 難{むずか}しい 問題{もんだい}、分{わ}かりっこない よ",
+    "n": "そんな 難{むずか}しい 問題{もんだい}、 分{わ}かりっこない よ",
     "en": "There's no way I can work out a problem that hard",
     "jr": [
      [
@@ -5067,7 +5079,7 @@
   "note": "Names the main example of a group.",
   "ex": [
    {
-    "n": "東京{とうきょう} を はじめ、大{おお}きな 町{まち} は 物価{ぶっか} が 高{たか}い です",
+    "n": "東京{とうきょう} を はじめ、 大{おお}きな 町{まち} は 物価{ぶっか} が 高{たか}い です",
     "en": "Big cities, starting with Tokyo, are expensive",
     "jr": [
      [

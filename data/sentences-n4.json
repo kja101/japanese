@@ -337,8 +337,8 @@
   "id": "L4-10",
   "topic": "t6",
   "n": "会議室{かいぎしつ} は 二階{にかい} です",
-  "en": "The meeting room is on the first floor",
-  "why": "",
+  "en": "The meeting room is on the second floor",
+  "why": "Japanese counts the ground floor as 一階, so 二階 is the British first floor.",
   "jr": [
    [
     "W",
@@ -356,7 +356,7 @@
    ],
    [
     "V",
-    "is on the first floor"
+    "is on the second floor"
    ]
   ]
  },
@@ -2238,7 +2238,7 @@
   "id": "L4-69",
   "topic": "t12",
   "n": "エスカレーター で 二階{にかい} へ 行{い}きます",
-  "en": "I'll take the escalator to the first floor",
+  "en": "I'll take the escalator to the second floor",
   "why": "",
   "jr": [
    [
@@ -2265,7 +2265,7 @@
    ],
    [
     "P",
-    "to the first floor"
+    "to the second floor"
    ]
   ]
  },
@@ -2727,7 +2727,7 @@
   "id": "L4-84",
   "topic": "t9",
   "n": "私{わたし} は 朝型{あさがた} の タイプ です",
-  "en": "I'm a morning type",
+  "en": "I'm a morning person",
   "why": "",
   "jr": [
    [
@@ -2746,7 +2746,7 @@
    ],
    [
     "V",
-    "'m a morning type"
+    "'m a morning person"
    ]
   ]
  },

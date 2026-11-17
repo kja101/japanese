@@ -4843,6 +4843,10 @@
   ],
   "er": [
    [
+    "V",
+    "He"
+   ],
+   [
     "H",
     "kindly"
    ],
@@ -7036,8 +7040,8 @@
   "id": "L2-227",
   "topic": "t3",
   "n": "衣類{いるい} は 二階{にかい} で 売{う}って います",
-  "en": "Clothing is sold on the first floor",
-  "why": "",
+  "en": "Clothing is sold on the second floor",
+  "why": "Japanese counts the ground floor as 一階, so 二階 is what British English calls the first floor.",
   "jr": [
    [
     "W",
@@ -7063,7 +7067,7 @@
    ],
    [
     "P",
-    "on the first floor"
+    "on the second floor"
    ]
   ]
  },
@@ -10024,11 +10028,11 @@
   "er": [
    [
     "V",
-    "The pleasure"
+    "The pleasure is"
    ],
    [
     "W",
-    "is mine"
+    "mine"
    ]
   ]
  },
@@ -11559,13 +11563,13 @@
  {
   "id": "L2-367",
   "topic": "t7",
-  "n": "ひゃっかじてん で 調{しら}べました",
-  "en": "I looked it up in an encyclopedia",
+  "n": "百科事典{ひゃっかじてん} で 調{しら}べました",
+  "en": "I looked it up in an encyclopaedia",
   "why": "",
   "jr": [
    [
     "H",
-    "ひゃっかじてんで"
+    "百科事典で"
    ],
    [
     "V",
@@ -11579,7 +11583,7 @@
    ],
    [
     "H",
-    "in an encyclopedia"
+    "in an encyclopaedia"
    ]
   ]
  },
@@ -11718,19 +11722,35 @@
  {
   "id": "L2-372",
   "topic": "t4",
-  "n": "おなか の へそ",
-  "en": "Your belly button",
+  "n": "へそ は おなか の 真{ま}ん中{なか} に あります",
+  "en": "Your belly button is in the middle of your tummy",
   "why": "",
   "jr": [
    [
     "W",
-    "おなかのへそ"
+    "へそは"
+   ],
+   [
+    "P",
+    "おなかの真ん中に"
+   ],
+   [
+    "V",
+    "あります"
    ]
   ],
   "er": [
    [
     "W",
     "Your belly button"
+   ],
+   [
+    "V",
+    "is"
+   ],
+   [
+    "P",
+    "in the middle of your tummy"
    ]
   ]
  },
@@ -12014,6 +12034,10 @@
    ]
   ],
   "er": [
+   [
+    "V",
+    "They"
+   ],
    [
     "H",
     "happily"
@@ -13000,13 +13024,13 @@
  {
   "id": "L2-414",
   "topic": "t5",
-  "n": "タイア が パンク しました",
+  "n": "タイヤ が パンク しました",
   "en": "I've got a flat tyre",
   "why": "",
   "jr": [
    [
     "W",
-    "タイアが"
+    "タイヤが"
    ],
    [
     "V",
@@ -14065,13 +14089,13 @@
  {
   "id": "L2-449",
   "topic": "t9",
-  "n": "会社{かいしゃ} の レクリェーション に 参加{さんか} しました",
+  "n": "会社{かいしゃ} の レクリエーション に 参加{さんか} しました",
   "en": "I took part in the company's recreation day",
   "why": "",
   "jr": [
    [
     "P",
-    "会社のレクリェーションに"
+    "会社のレクリエーションに"
    ],
    [
     "V",
@@ -14757,7 +14781,11 @@
    ],
    [
     "V",
-    "同じパターンですね"
+    "同じパターンです"
+   ],
+   [
+    "Q",
+    "ね"
    ]
   ],
   "er": [
@@ -14772,6 +14800,10 @@
    [
     "V",
     "the same pattern"
+   ],
+   [
+    "Q",
+    "isn't it"
    ]
   ]
  },
@@ -15641,13 +15673,21 @@
   "jr": [
    [
     "V",
-    "モダンな建物ですね"
+    "モダンな建物です"
+   ],
+   [
+    "Q",
+    "ね"
    ]
   ],
   "er": [
    [
     "V",
     "It's a modern building"
+   ],
+   [
+    "Q",
+    "isn't it"
    ]
   ]
  },

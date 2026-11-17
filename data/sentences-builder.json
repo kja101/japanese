@@ -997,8 +997,12 @@
     ],
     "enc": [
      [
+      "V",
+      "It's"
+     ],
+     [
       "H",
-      "A little"
+      "a little"
      ],
      [
       "V",
@@ -1318,7 +1322,7 @@
     "enc": [
      [
       "P",
-      "On the road"
+      "on the way"
      ],
      [
       "V",
@@ -1971,12 +1975,12 @@
     ],
     "enc": [
      [
-      "W",
-      "Here"
+      "V",
+      "It hurts"
      ],
      [
-      "V",
-      "hurts"
+      "W",
+      "here"
      ]
     ],
     "why": "Point as you say it. が marks the spot that is doing the hurting."
