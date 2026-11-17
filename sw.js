@@ -2,7 +2,7 @@
 // Cache first: every page and script is saved on the device when this version installs, and served
 // from there instantly, online or off. A new version of the site arrives as a new worker, which saves
 // the new files together and then takes over, so a page and its scripts always match.
-const VERSION = "7972de4b8c";
+const VERSION = "324695bc98";
 const CACHE = "japanese-" + VERSION;
 const FILES = ["./","./index.html","./manifest.webmanifest","./assets/icons/icon-192.png","./assets/icons/icon-512.png","./assets/icons/icon-180.png","./assets/common.js","./index.html","./assets/search-index.js","./kanji/master-kanji-shapes.html","./kanji/kanji-by-situation.html","./words/phrasebook.html","./assets/sentences.js","./words/sentence-builder.html","./kanji/learn.html","./kanji/learn-n5-n4.html","./words/vocabulary.html","./kana/kana-sounds.html","./kana/kana-words.html","./kana/katakana-words.html","./words/weakness.html","./words/drill.html","./words/listening.html","./words/patterns.html","./words/grammar.html","./assets/common.js?v=c7b1cad390","./assets/search-index.js?v=ba0f0ee682","./assets/sentences.js?v=58ecc9c786"];
 self.addEventListener("install", e => {
@@ -11,6 +11,14 @@ self.addEventListener("install", e => {
 });
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith("japanese-") && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+});
+// The home page asks which version is actually serving it, so it can say whether the
+// device is up to date rather than just "saved".
+self.addEventListener("message", e => {
+  if (e.data !== "version") return;
+  const reply = { version: VERSION };
+  if (e.ports && e.ports[0]) e.ports[0].postMessage(reply);   // asked down a channel
+  else if (e.source) e.source.postMessage(reply);
 });
 const scope = new URL(self.registration.scope);
 async function lookup(c, req, url) {
@@ -27,6 +35,10 @@ self.addEventListener("fetch", e => {
   const req = e.request;
   if (req.method !== "GET") return;
   const url = new URL(req.url);
+  // version.json is how the app asks GitHub what the newest version is, so it must never
+  // be answered from the cache. Letting it fall through means the browser fetches it,
+  // and nothing here stores it.
+  if (url.origin === location.origin && url.pathname.endsWith("/version.json")) return;
   const font = /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname);
   if (url.origin !== location.origin && !font) return;
   if (font) {   // saved fonts come straight back; an unsaved one gets 1.5 seconds, never a long offline wait

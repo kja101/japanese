@@ -81,6 +81,15 @@ there rather than on a phone. The workflow also rebuilds and fails if anything c
 which catches editing `data/` or `src/` and committing without the rebuilt pages. It
 publishes nothing: GitHub Pages still serves the built files straight from `main`.
 
+### How the app knows it is up to date
+
+`build.py` writes `version.json` holding the same digest the service worker is named
+after. It is the one file the worker never answers from its cache, so the home page can
+ask GitHub which version is published and compare it with the one on the device. The
+worker reports its own version when the page asks it down a message channel. The home
+page then says one of four things: up to date, a newer one is downloading, no connection
+so it could not check, or still saving pages for offline use.
+
 ### Where to edit what
 
 | To change | Edit |

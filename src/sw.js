@@ -12,6 +12,14 @@ self.addEventListener("install", e => {
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith("japanese-") && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim()));
 });
+// The home page asks which version is actually serving it, so it can say whether the
+// device is up to date rather than just "saved".
+self.addEventListener("message", e => {
+  if (e.data !== "version") return;
+  const reply = { version: VERSION };
+  if (e.ports && e.ports[0]) e.ports[0].postMessage(reply);   // asked down a channel
+  else if (e.source) e.source.postMessage(reply);
+});
 const scope = new URL(self.registration.scope);
 async function lookup(c, req, url) {
   let hit = await c.match(req);                                   // exact: versioned scripts, icons
@@ -27,6 +35,10 @@ self.addEventListener("fetch", e => {
   const req = e.request;
   if (req.method !== "GET") return;
   const url = new URL(req.url);
+  // version.json is how the app asks GitHub what the newest version is, so it must never
+  // be answered from the cache. Letting it fall through means the browser fetches it,
+  // and nothing here stores it.
+  if (url.origin === location.origin && url.pathname.endsWith("/version.json")) return;
   const font = /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname);
   if (url.origin !== location.origin && !font) return;
   if (font) {   // saved fonts come straight back; an unsaved one gets 1.5 seconds, never a long offline wait

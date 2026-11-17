@@ -785,4 +785,9 @@ for f in files:
 sw = (SRC / "sw.js").read_text(encoding="utf-8").replace("__VERSION__", digest.hexdigest()[:10]).replace("__FILES__", dump(["./"] + ["./" + f for f in files] + ["./assets/common.js?v=" + COMMON_VERSION, "./assets/search-index.js?v=" + INDEX_VERSION, "./assets/sentences.js?v=" + SENTENCES_VERSION]))
 (ROOT / "sw.js").write_text(sw, encoding="utf-8")
 print("  sw.js")
+# The one file the app is allowed to read past its own cache, so the home page can ask
+# GitHub which version is published and compare it with the one running on the device.
+# It is deliberately outside the digest above: it carries that digest.
+(ROOT / "version.json").write_text(dump({"v": digest.hexdigest()[:10]}) + "\n", encoding="utf-8")
+print("  version.json")
 print("Done.")
