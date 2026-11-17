@@ -29,6 +29,7 @@ def main():
                 print(f"    token {t!r} spans {sorted(inside)}   n={s['n']!r}")
             pos += len(t)
     print(f"\n{n} straddling tokens")
+    return 1 if n else 0
 
 
 if __name__ == "__main__":

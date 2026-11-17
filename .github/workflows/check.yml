@@ -1,0 +1,67 @@
+name: Check
+
+# Every push and pull request runs the same checks a person would run by hand, so a bad
+# edit fails here instead of landing on a phone. This does not publish anything: GitHub
+# Pages still serves the built files straight from main, exactly as before.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # build.py refuses to build when a sentence's blocks don't add up, so this is the
+      # first gate. It also rewrites every page: the same data twice gives the same files,
+      # so anything left changed means the committed pages were built from older data.
+      - name: Build
+        run: python3 build/build.py
+
+      - name: The committed pages match the data
+        run: |
+          if ! git diff --quiet; then
+            echo "::error::data/ or src/ was edited without rebuilding. Run python3 build/build.py and commit the result."
+            git diff --stat
+            exit 1
+          fi
+
+      - name: Japanese and English blocks match
+        run: python3 build/audit.py
+
+      - name: No token straddles two blocks
+        run: python3 build/straddle.py
+
+      - name: Every marked English phrase is really in the English
+        run: python3 build/audit2.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install a browser
+        run: |
+          npm install --no-save playwright@1.63.0
+          npx playwright install --with-deps chromium
+
+      # The data can be right while the page still draws it wrong, so check the pages as
+      # drawn: every sentence's Japanese line and English line carry the same block colours.
+      - name: The pages draw the same colours on both sides
+        run: |
+          python3 -m http.server 8765 >/dev/null 2>&1 &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:8765/index.html >/dev/null && break
+            sleep 1
+          done
+          node build/check_rendered.js

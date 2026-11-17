@@ -76,6 +76,11 @@ python3 -m http.server 8765 &     # and the same check on the pages as drawn
 node build/check_rendered.js
 ```
 
+All of these run on every push, from `.github/workflows/check.yml`, so a bad edit fails
+there rather than on a phone. The workflow also rebuilds and fails if anything changed,
+which catches editing `data/` or `src/` and committing without the rebuilt pages. It
+publishes nothing: GitHub Pages still serves the built files straight from `main`.
+
 ### Where to edit what
 
 | To change | Edit |

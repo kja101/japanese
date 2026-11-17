@@ -92,7 +92,10 @@ def main():
     print("counts:", counts, f"over {len(rows)} findings\n")
     for kind, src, sid, n, en, msg in rows:
         print(f"[{kind}] {src} {sid}  {n} / {en}\n     {msg}")
+    # "verbatim" means a marked English phrase isn't in the English at all, so the colours
+    # scatter across the line. That is always a fault. The rest are hints to read, not rules.
+    return 1 if counts.get("verbatim") else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

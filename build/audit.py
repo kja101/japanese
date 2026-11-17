@@ -93,7 +93,7 @@ def main():
             print(f"        only-JP {sorted(jp - enr)}  only-EN {sorted(enr - jp)}")
     for src, sid, n, marked in concat:
         print(f"CONCAT {src} [{sid}] {n} != {marked}")
-    return 0
+    return 1 if bad or concat else 0
 
 
 if __name__ == "__main__":
