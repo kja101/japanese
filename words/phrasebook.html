@@ -255,9 +255,7 @@ const picked={};
 const spaced=()=>true;
 // ---------- render pieces ----------
 function jpFrame(ph,word,mode,roles){ return tokenLine(ph,word,mode,roles); }
-function jpFrameOld(ph,word,mode){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${word.split(" ").map(w=>form(w,mode)).join(" ")}</span>`:`<span class="slot">&nbsp;</span>`):form(t,mode)).join(" "); }
 function romFrame(ph,word,roles){ return tokenRom(ph,word,roles); }
-function romFrameOld(ph,word){ return ph.split(" ").map(t=>t==="___"?(word?`<span class="slot filled">${esc(kanaOf(word).split(" ").map(romajiToken).join(" "))}</span>`:`<span class="slot">&nbsp;</span>`):esc(romajiToken(kanaOf(t)))).join(" ").replace(/ ,/g,","); }
 const enFill=(en,w,enb)=>{ const slot=w?`<span class="slot filled">${esc(w)}</span>`:"___";
   if(enb&&state.blocks==="on") return enb.map(([r,t])=>{ const h=esc(t).replace("___",slot); return r?`<span class="ck" data-r="${r}" style="--c:var(${ROLE[r]})">${h}</span>`:h; }).join("");
   return esc(en).replace("___",slot); };
